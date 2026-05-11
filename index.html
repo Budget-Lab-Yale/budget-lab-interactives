@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget Lab Interactives</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap">
+  <style>
+    :root {
+      --navy: #101F5B;
+      --blue: #0072B2;
+      --sky: #63AAFF;
+      --text-heading: #1A1A2E;
+      --text-body: #4A4A4A;
+      --text-muted: #6D6D6D;
+      --border: #E5E5E5;
+      --bg-subtle: #F6F7F9;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      font-family: 'Mallory', 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+      color: var(--text-body);
+      background: #fff;
+      line-height: 1.5;
+    }
+    .page {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+    .header img { height: 40px; width: auto; display: block; }
+    .header a { display: inline-block; }
+    h1 {
+      font-size: 32px;
+      color: var(--text-heading);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .lede {
+      font-size: 17px;
+      color: var(--text-body);
+      max-width: 620px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 20px;
+      color: var(--text-heading);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .tool-list { list-style: none; }
+    .tool-list li {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .tool-list li:hover {
+      border-color: var(--blue);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .tool-list a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 17px;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .tool-list a:hover { color: var(--blue); }
+    .tool-list .desc {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    footer a { color: var(--blue); }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <a href="https://budgetlab.yale.edu" target="_blank" rel="noopener">
+        <img src="assets/logo.svg" alt="The Budget Lab at Yale" />
+      </a>
+    </div>
+
+    <h1>Interactive tools</h1>
+    <p class="lede">Interactive web tools published by The Budget Lab at Yale. Each tool can be embedded on the Budget Lab website and other host pages.</p>
+
+    <h2>Tools</h2>
+    <ul class="tool-list">
+      <li>
+        <a href="tools/deficits-affordability/">Deficits and Affordability</a>
+        <div class="desc">How federal deficits raise borrowing costs on auto loans, mortgages, and small business loans &mdash; with a calculator for your own loan amount.</div>
+      </li>
+      <li>
+        <a href="tools/deficit-impact-calculator/">Deficit Impact Calculator</a>
+        <div class="desc">Calculator-only variant of the Deficits and Affordability tool. Estimate the impact of federal deficits on borrowing costs for a specific loan.</div>
+      </li>
+    </ul>
+
+    <footer>
+      Source code: <a href="https://github.com/Budget-Lab-Yale/budget-lab-interactives">github.com/Budget-Lab-Yale/budget-lab-interactives</a><br />
+      &copy; The Budget Lab at Yale University
+    </footer>
+  </div>
+</body>
+</html>

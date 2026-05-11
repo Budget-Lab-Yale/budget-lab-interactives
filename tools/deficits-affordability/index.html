@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deficits and Affordability &mdash; The Budget Lab at Yale</title>
+  <meta name="description" content="How federal deficits raise borrowing costs on auto loans, mortgages, and small business loans. An interactive tool from The Budget Lab at Yale." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;700;800;900&display=swap">
+
+  <script>
+    // Toggle html.iframed when this page is loaded inside an iframe so CSS
+    // can drop the standalone-view horizontal padding and let the host
+    // page control margins. Runs synchronously before content paints.
+    if (window.self !== window.top) document.documentElement.classList.add('iframed');
+  </script>
+
+  <style>
+    /* Map Mallory's bumped CSS weights to its actual installed variants so
+       it renders at the original-design weights when locally installed. The
+       +100 bump elsewhere in this file is calibrated for Figtree (Mallory's
+       public fallback), which reads lighter at the same nominal weight.
+       Without this remap, Mallory at the bumped weights reads heavier than
+       originally designed. If Mallory isn't installed, these rules silently
+       fail to resolve and the stack falls through to Figtree as intended. */
+    @font-face {
+      font-family: 'Mallory';
+      src: local('Mallory Book'), local('MalloryBook'), local('Mallory-Book');
+      font-weight: 500; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Mallory';
+      src: local('Mallory Medium'), local('MalloryMedium'), local('Mallory-Medium');
+      font-weight: 600; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Mallory';
+      src: local('Mallory Bold'), local('MalloryBold'), local('Mallory-Bold');
+      font-weight: 700; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Mallory';
+      src: local('Mallory Bold'), local('MalloryBold'), local('Mallory-Bold');
+      font-weight: 800; font-style: normal;
+    }
+    @font-face {
+      font-family: 'Mallory';
+      src: local('Mallory Black'), local('MalloryBlack'), local('Mallory-Black');
+      font-weight: 900; font-style: normal;
+    }
+    :root {
+      --tbl-navy: #101F5B;
+      --tbl-blue: #0072B2;
+      --tbl-sky: #63AAFF;
+      --tbl-text-heading: #1A1A2E;
+      --tbl-text-body: #4A4A4A;
+      --tbl-text-muted: #6D6D6D;
+      --tbl-border: #E5E5E5;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Mallory', 'Figtree', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+      font-weight: 500;
+      color: var(--tbl-text-body);
+      background: #fff;
+      line-height: 1.5;
+    }
+    .tbl-page {
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    /* When iframed, drop horizontal padding so the host page's container
+       controls margins. Standalone view keeps the padding for breathing
+       room from viewport edges. */
+    html.iframed .tbl-page { padding: 0; }
+    .tbl-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--tbl-border);
+      margin-bottom: 24px;
+    }
+    .tbl-title-block { flex: 1 1 auto; min-width: 0; }
+    .tbl-header a.tbl-logo-link { display: inline-block; line-height: 0; flex-shrink: 0; }
+    .tbl-header img.tbl-logo { height: 42px; width: auto; display: block; }
+    .tbl-title-block h1 {
+      font-size: 24px;
+      color: var(--tbl-navy);
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      margin: 0;
+    }
+    .tbl-title-block .tbl-eyebrow {
+      font-size: 11px;
+      color: var(--tbl-text-muted);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .tbl-source-line {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--tbl-border);
+      font-size: 12px;
+      color: var(--tbl-text-muted);
+      line-height: 1.5;
+    }
+    .tbl-source-line .tbl-source-prefix { font-weight: 700; }
+    .tbl-source-line a { color: var(--tbl-blue); text-decoration: none; }
+    .tbl-source-line a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .tbl-page { padding: 0 14px; }
+      .tbl-header { gap: 12px; }
+      .tbl-header img.tbl-logo { height: 36px; }
+      .tbl-title-block h1 { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="tbl-page">
+    <header class="tbl-header">
+      <div class="tbl-title-block">
+        <div class="tbl-eyebrow">Budget Lab Interactive</div>
+        <h1>Deficits and Affordability</h1>
+      </div>
+      <a class="tbl-logo-link" href="https://budgetlab.yale.edu" target="_blank" rel="noopener">
+        <img class="tbl-logo" src="../../assets/logo.svg" alt="The Budget Lab at Yale" />
+      </a>
+    </header>
+
+    <main>
+      <script src="tool.js"></script>
+    </main>
+
+    <footer class="tbl-source-line" data-iframe-height>
+      <span class="tbl-source-prefix">Source:</span> The Budget Lab at Yale University. See the <a href="https://budgetlab.yale.edu/research/impact-deficits-costs-households" target="_blank" rel="noopener">companion piece</a> for methodology and data sources.
+    </footer>
+  </div>
+
+  <script src="../../embed/v1/iframeResizer.contentWindow.min.js"></script>
+</body>
+</html>
