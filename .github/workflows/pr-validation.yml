@@ -1,0 +1,57 @@
+name: PR validation
+
+# Gate for branch-protection. Validates the static site on every PR (and on
+# pushes to main as a backstop) WITHOUT publishing: it does not deploy to
+# Pages. Publishing stays on the merge-to-main step. The job name "Validate
+# site" is the required status check in the "Protect main" ruleset.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check JS syntax (parse every .js)
+        run: |
+          find . -name '*.js' -not -path './.git/*' -print0 | xargs -0 -n1 node --check
+
+      - name: Check local references resolve
+        run: node .github/scripts/check-links.mjs
+
+      - name: Render smoke test (tools mount their calculator)
+        run: |
+          set -e
+          python3 -m http.server 8099 --bind 127.0.0.1 &>/dev/null &
+          SRV=$!
+          trap 'kill $SRV 2>/dev/null || true' EXIT
+          for i in $(seq 1 30); do
+            curl -sf http://127.0.0.1:8099/ >/dev/null && break || sleep 0.5
+          done
+          CHROME=$(command -v google-chrome || command -v chromium-browser || command -v chromium)
+          echo "Browser: $CHROME"
+          fail=0
+          for path in tools/deficit-impact-calculator/ tools/deficits-affordability/; do
+            dom=$("$CHROME" --headless=new --no-sandbox --disable-gpu \
+                    --virtual-time-budget=5000 --dump-dom "http://127.0.0.1:8099/$path" 2>/dev/null || true)
+            if echo "$dom" | grep -q 'class="calculator"'; then
+              echo "OK   $path  (calculator rendered)"
+            else
+              echo "::error::$path did not render a calculator"
+              fail=1
+            fi
+          done
+          exit $fail
