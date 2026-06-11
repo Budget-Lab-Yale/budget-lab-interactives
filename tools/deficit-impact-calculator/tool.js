@@ -104,6 +104,21 @@
     return 'rgba(' + r + ',' + g + ',' + b + ',' + alpha + ')';
   }
 
+  // Analytics: post a structured event up to the host page so its own
+  // tracking (e.g. GTM/GA4) can consume it. No-op on the standalone page
+  // (no parent), and wrapped in try/catch so tracking can never break the
+  // tool. The host filters on the `type` discriminator; see README.
+  function emitEvent(eventName, data) {
+    if (window.parent === window) return;
+    try {
+      window.parent.postMessage({
+        type:  'BUDGET_LAB_GTM_EVENT',
+        event: eventName,
+        data:  Object.assign({ tool_name: 'deficit-impact-calculator' }, data || {})
+      }, '*');
+    } catch (e) { /* tracking must never break the tool */ }
+  }
+
   // Colors and fonts per Budget-Lab-Yale/Style-Guide.
   var THEME = {
     fontFamily:     "'Mallory', 'Figtree', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif",
@@ -257,7 +272,10 @@
       if (e.target.classList.contains('calc-explain-btn')) {
         e.stopPropagation();
         var panel = document.getElementById(uid + '-explainPanel');
-        if (panel) panel.classList.toggle('open');
+        if (panel) {
+          panel.classList.toggle('open');
+          if (panel.classList.contains('open')) emitEvent('explainer_opened', {});
+        }
       }
     });
 
@@ -279,6 +297,16 @@
       var typeEl = document.querySelector('#' + uid + ' .loan-btn.active');
       var modeEl = document.querySelector('#' + uid + ' .calc-pill.active');
       var mode   = modeEl ? modeEl.dataset.mode : 'historical';
+
+      // Report the submission to the host page. Fires on each Calculate click
+      // (the "submission" interaction), before validation. Values mirror what
+      // the user sees/enters; 'None' marks an unset selection/field.
+      emitEvent('calculator_submission', {
+        loan_amount:          loanInput.value,
+        loan_type:            typeEl ? typeEl.innerText : 'None',
+        calculate_choice:     modeEl ? modeEl.innerText : 'None',
+        debt_increase_amount: (mode === 'debt-increase' && billInput.value) ? billInput.value : 'None'
+      });
 
       if (!amount || amount <= 0) { calcResult.innerHTML = '<span class="calc-error">Please enter a valid loan amount.</span>'; return; }
       if (!typeEl)                 { calcResult.innerHTML = '<span class="calc-error">Please select a loan type.</span>';        return; }
