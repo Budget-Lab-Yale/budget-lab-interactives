@@ -56,6 +56,42 @@ The directory `/embed/v1/` is **frozen as v1 behavior**. Any future breaking cha
 
 See [CHANGELOG.md](CHANGELOG.md) for what's in each version.
 
+### Analytics events
+
+Tools can report usage to the **host page** (the page embedding the iframe) via `window.postMessage`, leaving the widget itself analytics-agnostic. The host decides whether to listen and where to forward events (e.g. into its own Google Tag Manager / GA4). Events fire **only when the tool is embedded** — never on the standalone tool page.
+
+Each message uses this envelope:
+
+```js
+{
+  type: 'BUDGET_LAB_GTM_EVENT',   // discriminator the host filters on
+  event: '<event name>',          // GTM custom-event name
+  data: { tool_name: '<tool slug>', /* event-specific fields */ }
+}
+```
+
+Currently emitted by **deficit-impact-calculator**:
+
+| `event` | Fires when | `data` (besides `tool_name`) |
+|---|---|---|
+| `calculator_submission` | User clicks **Calculate** | `loan_amount` (string), `loan_type` (`Auto` / `Mortgage` / `Small Business` / `None`), `calculate_choice` (`Historical Deficits` / `One-Time Debt Increase`), `debt_increase_amount` (string, or `None`) |
+| `explainer_opened` | User opens the "How this estimate works" panel | _(none)_ |
+
+Host pages forward these into their own analytics with a small listener — e.g. a GTM Custom HTML tag firing on All Pages:
+
+```html
+<script>
+  window.addEventListener('message', function (e) {
+    var m = e.data;
+    if (!m || m.type !== 'BUDGET_LAB_GTM_EVENT') return;   // ignore everything else
+    // Optional: restrict to the widget origin
+    // if (e.origin !== 'https://budget-lab-yale.github.io') return;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({ event: m.event }, m.data));
+  });
+</script>
+```
+
 ## Tool versioning
 
 Each tool has a *canonical* URL (e.g. `/tools/deficits-affordability/`) that follows the latest published state — embedders default to this and get future updates automatically.
