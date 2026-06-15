@@ -1,0 +1,19 @@
+# Local build artifacts and caches — never commit to the public repo.
+
+# Standalone preview bundle embeds licensed Mallory OTFs; do not redistribute.
+dist/
+
+# Cached CDN downloads (d3, Plot UMD) used by build-standalone.py.
+scripts/_libs/
+
+# Cached WOFF2 font subsets used by the font-coverage/compare dev tooling.
+scripts/_fontcache/
+
+# Python build caches.
+__pycache__/
+*.pyc
+*.pyo
+
+# OS noise.
+.DS_Store
+Thumbs.db

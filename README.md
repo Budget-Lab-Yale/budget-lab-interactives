@@ -6,6 +6,7 @@ Interactive web tools published by [The Budget Lab at Yale](https://budgetlab.ya
 
 | Tool | URL | Source |
 |---|---|---|
+| AI Labor Market Tracker | https://budget-lab-yale.github.io/budget-lab-interactives/tools/ai-labor-market-tracker/ | [`tools/ai-labor-market-tracker/`](tools/ai-labor-market-tracker/) |
 | Deficits and Affordability | https://budget-lab-yale.github.io/budget-lab-interactives/tools/deficits-affordability/ | [`tools/deficits-affordability/`](tools/deficits-affordability/) |
 | Deficit Impact Calculator | https://budget-lab-yale.github.io/budget-lab-interactives/tools/deficit-impact-calculator/ | [`tools/deficit-impact-calculator/`](tools/deficit-impact-calculator/) |
 
@@ -113,6 +114,15 @@ Each tool has its own `CHANGELOG.md` (see [`tools/deficits-affordability/CHANGEL
 3. Near `</body>`, include the iframe-resizer child script: `<script src="../../embed/v1/iframeResizer.contentWindow.min.js"></script>`. This enables auto-resize when the tool is embedded.
 4. Add the tool to the table at the top of this README and to the root `index.html` landing page.
 5. Open a PR or push to `main` — Pages will redeploy automatically.
+
+### Per-tool validation (CI)
+
+The single required check (`Validate site`) runs three repo-wide gates — JS syntax (`node --check`), local-reference resolution (`check-links.mjs`), and a render smoke test — and then auto-discovers per-tool needs. A tool opts in by adding either:
+
+- **`tools/<slug>/ci/smoke.json`** — `{ "marker": "<string>", "budgetMs": <int> }`. The smoke step loads the tool in headless Chrome and asserts `marker` appears in the rendered DOM. Pick a marker that comes from local data (not a third-party CDN) so the check is deterministic. `budgetMs` (optional, default 5000) is the render budget for JS-heavy tools. **Every tool must have a `smoke.json`.**
+- **`tools/<slug>/ci/validate.sh`** — optional. Run automatically if present (any language; installs its own deps). Use for build/data gates — e.g. regenerating a generated artifact and failing if the committed copy is stale.
+
+Adding a tool requires **no edits to the workflow** and **no branch-protection changes** — drop the folder with its `ci/` descriptors. Tools whose `.js` uses ES-module `import`/`export` must include a `package.json` with `{"type": "module"}` so `node --check` parses them as modules.
 
 ## Support
 

@@ -1,0 +1,24 @@
+# Local commit-time gates, mirroring the CI in .github/workflows/pr-validation.yml
+# so problems surface before they reach a PR. Optional but recommended.
+#
+# Setup (once per clone):
+#   pip install pre-commit
+#   pre-commit install
+#
+# Convention: each tool with a generated artifact adds its own `files:`-scoped
+# hook here. Adding a tool appends an entry; it never restructures existing ones.
+
+repos:
+  - repo: local
+    hooks:
+      # AI Labor Market Tracker: data/manifest.json is generated from
+      # tracker.yaml + each figure's config.md. Rebuild on any data/config
+      # change; the commit fails if validation errors fire or the rebuilt
+      # manifest differs from what's staged (edited a config, forgot to rebuild).
+      - id: tracker-manifest
+        name: Rebuild & validate AI Labor Market Tracker manifest
+        entry: python tools/ai-labor-market-tracker/scripts/build-manifest.py
+        language: python
+        additional_dependencies: [pyyaml, markdown, jsonschema]
+        files: ^tools/ai-labor-market-tracker/(data/|scripts/build-manifest\.py$)
+        pass_filenames: false

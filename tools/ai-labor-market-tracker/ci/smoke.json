@@ -1,0 +1,5 @@
+{
+  "marker": "aria-selected",
+  "budgetMs": 9000,
+  "note": "Tab buttons render aria-selected from the local manifest before any esm.sh chart load, so the smoke assertion does not depend on CDN availability."
+}

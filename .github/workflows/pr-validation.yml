@@ -3,7 +3,18 @@ name: PR validation
 # Gate for branch-protection. Validates the static site on every PR (and on
 # pushes to main as a backstop) WITHOUT publishing: it does not deploy to
 # Pages. Publishing stays on the merge-to-main step. The job name "Validate
-# site" is the required status check in the "Protect main" ruleset.
+# site" is the required status check in the "Protect main" ruleset — do NOT
+# rename it without updating the ruleset, or protection silently stops working.
+#
+# Per-tool validation convention (scales to any number of tools without editing
+# this workflow):
+#   - tools/<slug>/ci/validate.sh  — optional. If present, it is run (any
+#     language; the script installs its own deps). Use for build/data gates,
+#     e.g. regenerating and diff-checking a generated manifest.
+#   - tools/<slug>/ci/smoke.json   — { "marker": "<string>", "budgetMs": <int> }.
+#     The render step loads the tool in headless Chrome and asserts the marker
+#     appears in the post-render DOM. Pick a marker that comes from local data
+#     so the check does not depend on third-party CDNs. budgetMs defaults to 5000.
 
 on:
   pull_request:
@@ -25,14 +36,37 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
       - name: Check JS syntax (parse every .js)
+        # Modules (top-level import/export) are parsed correctly because each
+        # such tool ships a package.json with "type": "module"; node resolves
+        # the nearest ancestor package.json per file.
         run: |
           find . -name '*.js' -not -path './.git/*' -print0 | xargs -0 -n1 node --check
 
       - name: Check local references resolve
         run: node .github/scripts/check-links.mjs
 
-      - name: Render smoke test (tools mount their calculator)
+      - name: Per-tool validation hooks
+        run: |
+          set -e
+          shopt -s nullglob
+          for d in tools/*/; do
+            hook="${d}ci/validate.sh"
+            if [ -f "$hook" ]; then
+              echo "== running $hook =="
+              bash "$hook"
+            fi
+          done
+
+      - name: Render smoke test (data-driven per tool)
         run: |
           set -e
           python3 -m http.server 8099 --bind 127.0.0.1 &>/dev/null &
@@ -44,13 +78,21 @@ jobs:
           CHROME=$(command -v google-chrome || command -v chromium-browser || command -v chromium)
           echo "Browser: $CHROME"
           fail=0
-          for path in tools/deficit-impact-calculator/ tools/deficits-affordability/; do
+          for d in tools/*/; do
+            smoke="${d}ci/smoke.json"
+            if [ ! -f "$smoke" ]; then
+              echo "::error::$d has no ci/smoke.json — every tool must declare a render marker"
+              fail=1
+              continue
+            fi
+            marker=$(node -e "process.stdout.write(JSON.parse(require('fs').readFileSync(process.argv[1],'utf8')).marker)" "$smoke")
+            budget=$(node -e "const j=JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'));process.stdout.write(String(j.budgetMs||5000))" "$smoke")
             dom=$("$CHROME" --headless=new --no-sandbox --disable-gpu \
-                    --virtual-time-budget=5000 --dump-dom "http://127.0.0.1:8099/$path" 2>/dev/null || true)
-            if echo "$dom" | grep -q 'class="calculator"'; then
-              echo "OK   $path  (calculator rendered)"
+                    --virtual-time-budget="$budget" --dump-dom "http://127.0.0.1:8099/$d" 2>/dev/null || true)
+            if echo "$dom" | grep -qF "$marker"; then
+              echo "OK   $d  (marker: $marker)"
             else
-              echo "::error::$path did not render a calculator"
+              echo "::error::$d did not render expected marker: $marker"
               fail=1
             fi
           done
