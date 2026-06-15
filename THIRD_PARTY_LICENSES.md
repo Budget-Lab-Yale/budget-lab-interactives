@@ -30,3 +30,18 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
+
+## Figtree (variable font)
+
+File: `tools/ai-labor-market-tracker/fonts/Figtree-variable.ttf`
+
+Copyright 2022 The Figtree Project Authors — https://github.com/erikdkennedy/figtree
+
+Licensed under the SIL Open Font License, Version 1.1. The full license text is distributed alongside the font at [`tools/ai-labor-market-tracker/fonts/Figtree-OFL.txt`](tools/ai-labor-market-tracker/fonts/Figtree-OFL.txt).
+
+## Runtime dependencies (loaded from CDN, not bundled)
+
+The AI Labor Market Tracker loads these libraries at runtime from `esm.sh`; their code is **not** vendored in this repository. Listed for attribution:
+
+- **D3** 7.9.0 — ISC License — Copyright Mike Bostock — https://github.com/d3/d3
+- **Observable Plot** 0.6.16 — ISC License — Copyright Observable, Inc. — https://github.com/observablehq/plot

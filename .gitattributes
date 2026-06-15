@@ -1,0 +1,6 @@
+# Shell scripts run on the Linux CI runner — CRLF would break the shebang and
+# parsing. Force LF regardless of a contributor's core.autocrlf setting.
+*.sh text eol=lf
+
+# Font binaries must never be treated as text / line-ending converted.
+*.ttf binary

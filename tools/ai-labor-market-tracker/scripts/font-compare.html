@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Labor Market Tracker — Font comparison</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Figtree:wght@400;500;600;700;800;900&family=Fira+Sans:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Karla:wght@400;500;600;700;800&family=Lato:wght@400;700;900&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&family=Mulish:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;500;600;700;800;900&family=Public+Sans:wght@400;500;600;700;800;900&family=Raleway:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+  /* Mallory via local() only — renders only on machines with Mallory installed.
+     Sylva will see Mallory here; other viewers will see the system fallback. */
+  @font-face {
+    font-family: 'Mallory';
+    src: local('Mallory Book'), local('MalloryBook'), local('Mallory-Book');
+    font-weight: 400; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Mallory';
+    src: local('Mallory Book'), local('MalloryBook'), local('Mallory-Book');
+    font-weight: 500; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Mallory';
+    src: local('Mallory Medium'), local('MalloryMedium'), local('Mallory-Medium');
+    font-weight: 600; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Mallory';
+    src: local('Mallory Bold'), local('MalloryBold'), local('Mallory-Bold');
+    font-weight: 700; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Mallory';
+    src: local('Mallory Bold'), local('MalloryBold'), local('Mallory-Bold');
+    font-weight: 800; font-style: normal;
+  }
+  @font-face {
+    font-family: 'Mallory';
+    src: local('Mallory Black'), local('MalloryBlack'), local('Mallory-Black');
+    font-weight: 900; font-style: normal;
+  }
+
+  :root {
+    --ink: #1f2937;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --border: #d1d5db;
+    --bg: #f9fafb;
+    --card-bg: #ffffff;
+    --accent: #00356b; /* Yale blue */
+    --highlight: #fef3c7;
+
+    /* Named weights used in tracker content. Fonts that read lighter than
+       Mallory at the same nominal weight get a +100 bump (Figtree, Nunito
+       Sans, Mulish) — calibration carried over from deficit-impact-calculator.
+       Mallory-rendered chrome (block labels, meta, section heads) keeps
+       literal weights and is unaffected. */
+    --w-body:   400;
+    --w-medium: 500;
+    --w-semi:   600;
+    --w-bold:   700;
+  }
+  .ff-figtree,
+  .ff-nunito,
+  .ff-mulish {
+    --w-body:   500;
+    --w-medium: 600;
+    --w-semi:   700;
+    --w-bold:   800;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--bg);
+    font-family: 'Mallory', 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.4;
+  }
+
+  /* ===== sticky control bar ===== */
+  header.controls {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 14px 28px 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+  header.controls .title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  .toggle-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    align-items: center;
+    font-size: 12px;
+  }
+  .toggle-bar label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    cursor: pointer;
+    user-select: none;
+    background: #fff;
+    transition: background 0.1s;
+  }
+  .toggle-bar label:hover { background: #f3f4f6; }
+  .toggle-bar input { margin: 0; }
+  .toggle-bar input:checked + span { font-weight: 600; }
+  .toggle-bar .actions { margin-left: auto; display: flex; gap: 6px; }
+  .toggle-bar button {
+    font: inherit;
+    padding: 3px 10px;
+    cursor: pointer;
+    background: #f3f4f6;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--ink);
+  }
+  .toggle-bar button:hover { background: #e5e7eb; }
+  .toggle-bar .view-tabs {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .toggle-bar .view-tabs button {
+    border: 0;
+    border-radius: 0;
+    background: white;
+    padding: 4px 12px;
+  }
+  .toggle-bar .view-tabs button.active {
+    background: var(--accent);
+    color: white;
+  }
+
+  /* ===== main content ===== */
+  main {
+    padding: 24px 28px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .intro {
+    background: var(--highlight);
+    border: 1px solid #f0d878;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 28px;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #78350f;
+  }
+  .intro strong { color: #451a03; }
+
+  h2.section-h {
+    font-family: 'Mallory', 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: var(--muted);
+    margin: 36px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  h2.section-h:first-of-type { margin-top: 4px; }
+  .section-intro {
+    font-family: 'Mallory', 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0 0 20px;
+  }
+
+  /* ===== specimen card ===== */
+  .specimen {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+  }
+  .specimen .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+    font-family: 'Mallory', 'Source Sans 3', sans-serif;
+  }
+  .specimen .name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .specimen .provenance {
+    font-size: 11px;
+    color: var(--muted);
+    text-align: right;
+    line-height: 1.4;
+  }
+  .specimen[data-font="mallory"] {
+    background: linear-gradient(0deg, #fafafa, #fff);
+    border-color: var(--accent);
+  }
+  .specimen[data-font="mallory"] .meta { border-bottom-color: rgba(0,53,107,0.2); }
+  .bump-badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 1px 7px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #92400e;
+    background: #fef3c7;
+    border: 1px solid #fcd34d;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    vertical-align: 2px;
+  }
+
+  .sample-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  @media (max-width: 800px) {
+    .sample-grid { grid-template-columns: 1fr; }
+  }
+
+  .block { margin-bottom: 18px; }
+  .block:last-child { margin-bottom: 0; }
+  .block-label {
+    font-family: 'Mallory', 'Source Sans 3', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: var(--muted);
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  /* type sizes mirror the real tracker styles where applicable */
+  .page-title  { font-size: 28px; font-weight: var(--w-bold); line-height: 1.15; letter-spacing: -0.3px; }
+  .supertitle  {
+    font-size: 11px; font-weight: var(--w-bold); text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--accent);
+  }
+  .fig-title   { font-size: 18px; font-weight: var(--w-bold); line-height: 1.25; }
+  .fig-sub     { font-size: 14px; font-weight: var(--w-medium); color: var(--muted); line-height: 1.4; }
+  .body-text   { font-size: 14px; font-weight: var(--w-body); line-height: 1.55; }
+  .axis-title  { font-size: 12px; font-weight: var(--w-medium); color: var(--muted); margin-bottom: 4px; }
+  .axis-ticks  {
+    font-size: 11px; color: var(--muted); font-weight: var(--w-body);
+    display: flex; gap: 18px;
+    font-variant-numeric: tabular-nums;
+  }
+  .tooltip {
+    display: inline-block;
+    background: rgba(17,24,39,0.92); color: white;
+    padding: 8px 10px; border-radius: 4px;
+    font-size: 12px; font-weight: var(--w-body); line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .tooltip .ttl { font-weight: var(--w-semi); }
+  .tooltip .val { font-variant-numeric: tabular-nums; }
+  .source-note { font-size: 11px; font-weight: var(--w-body); color: var(--muted); line-height: 1.55; }
+  .nav-list {
+    list-style: none; padding: 0; margin: 0;
+    border-left: 2px solid var(--line);
+  }
+  .nav-list li {
+    padding: 5px 12px;
+    font-size: 13px;
+    font-weight: var(--w-body);
+    border-left: 2px solid transparent;
+    margin-left: -2px;
+    color: var(--ink);
+  }
+  .nav-list li.active {
+    border-left-color: var(--accent);
+    font-weight: var(--w-semi);
+  }
+  .nav-list li small {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 400;
+  }
+  .num-stack {
+    font-variant-numeric: tabular-nums;
+    font-size: 14px; line-height: 1.5;
+    background: #f9fafb;
+    padding: 10px 14px;
+    border-radius: 4px;
+    border: 1px solid var(--line);
+    display: inline-block;
+    min-width: 180px;
+    text-align: right;
+  }
+  .math-block {
+    font-size: 14px;
+    line-height: 1.85;
+    background: #f9fafb;
+    padding: 12px 14px;
+    border-radius: 4px;
+    border: 1px solid var(--line);
+  }
+  .math-block > div { margin: 0; }
+  .math-block .lbl {
+    font-family: 'Mallory', 'Source Sans 3', sans-serif;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+    color: var(--muted); font-weight: 500;
+    margin-right: 8px;
+  }
+  .weight-row {
+    display: flex; gap: 14px; flex-wrap: wrap;
+    align-items: baseline;
+    font-size: 16px;
+  }
+  .weight-row span small {
+    display: block; font-size: 9px; color: var(--muted);
+    font-weight: 500; letter-spacing: 0.4px;
+    text-transform: uppercase; text-align: center;
+  }
+  .pangram {
+    font-size: 15px;
+    font-weight: var(--w-body);
+    padding: 8px 0;
+    line-height: 1.5;
+  }
+  .pangram-bold { font-weight: var(--w-bold); font-size: 16px; }
+
+  /* ===== iframe-context simulation ===== */
+  .iframe-sim {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+  .iframe-sim .sim-head {
+    background: #f3f4f6;
+    border-bottom: 1px solid var(--line);
+    padding: 8px 16px;
+    font-family: 'Mallory', 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    display: flex; justify-content: space-between;
+  }
+  .iframe-sim .sim-head .font-name {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .iframe-sim .host {
+    padding: 18px 24px;
+    font-family: 'Mallory', 'Source Sans 3', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #374151;
+  }
+  .iframe-sim .iframe-area {
+    margin: 4px 20px 16px;
+    border: 1px dashed #9ca3af;
+    border-radius: 4px;
+    background: #fcfcfc;
+    padding: 18px 20px;
+    position: relative;
+  }
+  .iframe-sim .iframe-area::before {
+    content: '↓ iframe boundary';
+    position: absolute;
+    top: -9px; left: 14px;
+    background: white;
+    padding: 0 6px;
+    font-family: 'Mallory', 'Source Sans 3', sans-serif;
+    font-size: 9px;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  .iframe-sim .iframe-area .super {
+    font-size: 10px; font-weight: var(--w-bold); text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--accent); margin-bottom: 4px;
+  }
+  .iframe-sim .iframe-area .ftitle {
+    font-size: 17px; font-weight: var(--w-bold); margin-bottom: 3px; line-height: 1.2;
+  }
+  .iframe-sim .iframe-area .fsub {
+    font-size: 13px; font-weight: var(--w-body); color: var(--muted); margin-bottom: 14px;
+  }
+  .iframe-sim .iframe-area .iframe-ticks { font-weight: var(--w-body); }
+  .iframe-sim .iframe-area .fsource { font-weight: var(--w-body); }
+  .iframe-sim .iframe-area .chart-mock {
+    height: 70px;
+    background: linear-gradient(180deg, #f3f4f6, #e5e7eb);
+    border-radius: 3px;
+    display: flex; align-items: center; justify-content: center;
+    color: #9ca3af; font-size: 10px; margin-bottom: 8px;
+    font-family: 'Mallory', 'Source Sans 3', sans-serif;
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+  .iframe-sim .iframe-area .iframe-ticks {
+    display: flex; justify-content: space-between;
+    font-size: 11px; color: var(--muted);
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 10px;
+  }
+  .iframe-sim .iframe-area .fsource {
+    font-size: 11px; color: var(--muted); line-height: 1.5;
+  }
+
+  /* font-family classes — applied to specimens & iframe areas */
+  .ff-mallory    { font-family: 'Mallory', sans-serif; }
+  .ff-figtree    { font-family: 'Figtree', sans-serif; }
+  .ff-inter      { font-family: 'Inter', sans-serif; }
+  .ff-sourcesans { font-family: 'Source Sans 3', sans-serif; }
+  .ff-publicsans { font-family: 'Public Sans', sans-serif; }
+  .ff-raleway    { font-family: 'Raleway', sans-serif; }
+  .ff-montserrat { font-family: 'Montserrat', sans-serif; }
+  .ff-manrope    { font-family: 'Manrope', sans-serif; }
+  .ff-dmsans     { font-family: 'DM Sans', sans-serif; }
+  .ff-lato       { font-family: 'Lato', sans-serif; }
+  .ff-mulish     { font-family: 'Mulish', sans-serif; }
+  .ff-nunito     { font-family: 'Nunito Sans', sans-serif; }
+  .ff-worksans   { font-family: 'Work Sans', sans-serif; }
+  .ff-ibmplex    { font-family: 'IBM Plex Sans', sans-serif; }
+  .ff-fira       { font-family: 'Fira Sans', sans-serif; }
+  .ff-hanken     { font-family: 'Hanken Grotesk', sans-serif; }
+  .ff-karla      { font-family: 'Karla', sans-serif; }
+
+  .hidden { display: none !important; }
+
+  /* ===== side-by-side compare ===== */
+  .compare-controls {
+    display: flex; flex-wrap: wrap; gap: 14px;
+    align-items: center;
+    margin-bottom: 18px;
+    font-family: 'Mallory', 'Source Sans 3', sans-serif;
+    font-size: 13px;
+  }
+  .compare-controls label {
+    display: inline-flex; gap: 6px; align-items: center;
+    color: var(--muted); font-weight: 500;
+  }
+  .compare-controls select {
+    font: inherit;
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: white;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .compare-controls button {
+    font: inherit;
+    padding: 4px 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: #f3f4f6;
+    cursor: pointer;
+    color: var(--ink);
+  }
+  .compare-controls button:hover { background: #e5e7eb; }
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  @media (max-width: 1100px) {
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+  /* In the compare grid, the internal 2-col specimen layout would be too cramped */
+  .compare-grid .sample-grid { grid-template-columns: 1fr; gap: 18px; }
+  .compare-grid .specimen { margin-bottom: 0; padding: 18px 20px; }
+  .compare-grid .iframe-sim { margin-bottom: 0; }
+</style>
+</head>
+<body>
+
+<header class="controls">
+  <div class="title">AI Labor Market Tracker — font comparison</div>
+  <div class="toggle-bar" id="toggles">
+    <!-- populated by JS -->
+  </div>
+</header>
+
+<main>
+  <div class="intro">
+    <strong>How to read this:</strong>
+    Each candidate font is rendered against the actual text contexts the tracker uses
+    (figure title, subtitle, axis ticks, tooltip, source line, sidebar nav, tabular numerals).
+    The iframe-context section above the specimens shows how each candidate looks
+    embedded inside a Mallory body page — the situation it'll actually be deployed into
+    on budgetlab.yale.edu. Toggle the chips above to narrow the comparison.
+    <br><br>
+    <strong>Mallory note:</strong> Mallory only renders if installed locally on your
+    machine. If you (Sylva) see Mallory render distinctively in its specimen, that's
+    the gold-standard. Other viewers will see the system fallback there.
+    <br><br>
+    <strong>Weight calibration:</strong> Figtree, Nunito Sans, and Mulish render
+    visibly lighter than Mallory at the same nominal weight. They are shown here
+    with a +100 weight bump (400→500, 500→600, 600→700, 700→800) — the same
+    calibration the deficit-impact-calculator uses for its Figtree fallback. The
+    "+100 weight" chip in each affected specimen header marks where the bump is
+    active. The weight-ladder demo (Aa 400…900) keeps literal weights so you can
+    still see the font's native ladder.
+  </div>
+
+  <h2 class="section-h">0 · Side-by-side comparison</h2>
+  <p class="section-intro">
+    Two candidates rendered in parallel — same iframe context and same type
+    specimens, aligned so the eye can A/B them directly. Change the dropdowns
+    to swap either side; the swap button flips left and right.
+  </p>
+  <div class="compare-controls">
+    <label>Left: <select id="cmpL"></select></label>
+    <label>Right: <select id="cmpR"></select></label>
+    <button id="cmpSwap">⇄ Swap</button>
+  </div>
+  <div class="compare-grid">
+    <div id="cmp-left"></div>
+    <div id="cmp-right"></div>
+  </div>
+
+  <h2 class="section-h">1 · Iframe context — embedded in Mallory body text</h2>
+  <p class="section-intro">
+    The boxed region renders the candidate font; the surrounding paragraphs render
+    Mallory (the budgetlab.yale.edu body font). This is the real visual question:
+    does the candidate sit comfortably next to Mallory, or does the transition feel
+    jarring?
+  </p>
+  <div id="iframe-sims"></div>
+
+  <h2 class="section-h">2 · Type specimens — all tracker contexts</h2>
+  <p class="section-intro">
+    Every text role the tracker uses, rendered in each candidate font at its real
+    on-page size. Pay particular attention to: figure-title bold weight, axis-tick
+    legibility at 11px, tooltip number alignment (tabular numerals), source-line
+    readability at 11px.
+  </p>
+  <div id="specimens"></div>
+</main>
+
+<script>
+  // bumped: true → render with weights bumped +100 to match Mallory's visual
+  // heaviness (these three read lighter than Mallory at the same nominal weight)
+  const FONTS = [
+    { id: 'mallory',    name: 'Mallory',       cls: 'ff-mallory',    note: 'Frere-Jones (proprietary)',
+      tag: 'Budget Lab brand — gold standard for comparison' },
+    { id: 'figtree',    name: 'Figtree',       cls: 'ff-figtree',    note: 'SIL OFL — Erik Demaine',
+      tag: 'Mallory-adjacent geometric; already used as Mallory fallback on deficit-impact-calculator',
+      bumped: true },
+    { id: 'ibmplex',    name: 'IBM Plex Sans', cls: 'ff-ibmplex',    note: 'SIL OFL — Mike Abbink / Bold Monday',
+      tag: 'Strong angled-ascender-terminal match for Mallory; clean humanist' },
+    { id: 'fira',       name: 'Fira Sans',     cls: 'ff-fira',       note: 'SIL OFL — Mozilla / Carrois',
+      tag: 'Humanist sans with angled terminals; more rectangular than Mallory' },
+    { id: 'hanken',     name: 'Hanken Grotesk', cls: 'ff-hanken',    note: 'SIL OFL — Hanken Design Co.',
+      tag: 'Modern grotesk with subtle angled-terminal influence' },
+    { id: 'karla',      name: 'Karla',         cls: 'ff-karla',      note: 'SIL OFL — Jonny Pinhorn',
+      tag: 'Slab-influenced; angled, almost sliced terminals on ascenders' },
+    { id: 'inter',      name: 'Inter',         cls: 'ff-inter',      note: 'SIL OFL — Rasmus Andersson',
+      tag: 'Neutral UI workhorse; very widely deployed' },
+    { id: 'publicsans', name: 'Public Sans',   cls: 'ff-publicsans', note: 'SIL OFL — US Web Design System',
+      tag: 'Neutral, accessibility-tuned; government-default feel' },
+    { id: 'sourcesans', name: 'Source Sans 3', cls: 'ff-sourcesans', note: 'SIL OFL — Adobe',
+      tag: 'Current tracker Google Fonts fallback' },
+    { id: 'manrope',    name: 'Manrope',       cls: 'ff-manrope',    note: 'SIL OFL — Mikhail Sharanda',
+      tag: 'Modern geometric, slightly semi-condensed' },
+    { id: 'worksans',   name: 'Work Sans',     cls: 'ff-worksans',   note: 'SIL OFL — Wei Huang',
+      tag: 'Optimized for on-screen body text at small sizes' },
+    { id: 'nunito',     name: 'Nunito Sans',   cls: 'ff-nunito',     note: 'SIL OFL — Vernon Adams',
+      tag: 'Soft humanist sans; rounded terminals',
+      bumped: true },
+    { id: 'mulish',     name: 'Mulish',        cls: 'ff-mulish',     note: 'SIL OFL — Vernon Adams',
+      tag: 'Cousin of Nunito, slightly more geometric',
+      bumped: true },
+    { id: 'dmsans',     name: 'DM Sans',       cls: 'ff-dmsans',     note: 'SIL OFL — Colophon Foundry',
+      tag: 'Geometric, slightly narrow' },
+    { id: 'montserrat', name: 'Montserrat',    cls: 'ff-montserrat', note: 'SIL OFL — Julieta Ulanovsky',
+      tag: 'Proxima Nova-adjacent open clone (medicine.yale.edu uses Proxima)' },
+    { id: 'raleway',    name: 'Raleway',       cls: 'ff-raleway',    note: 'SIL OFL — Matt McInerney',
+      tag: 'Thin/elegant; found on some Yale subdomains' },
+    { id: 'lato',       name: 'Lato',          cls: 'ff-lato',       note: 'SIL OFL — Łukasz Dziedzic',
+      tag: 'Humanist sans; one of the most-installed open fonts' }
+  ];
+
+  // The default visible set — Mallory + most-likely candidates
+  const DEFAULT_ON = new Set(['mallory', 'figtree', 'inter', 'publicsans', 'sourcesans']);
+
+  function specimenHTML(f) {
+    const badge = f.bumped ? `<span class="bump-badge">+100 weight</span>` : '';
+    return `
+      <div class="specimen" data-font="${f.id}">
+        <div class="meta">
+          <div class="name">${f.name}${badge}</div>
+          <div class="provenance">
+            ${f.note}<br>
+            <span style="color:#9ca3af;">${f.tag}</span>
+          </div>
+        </div>
+        <div class="${f.cls}">
+          <div class="sample-grid">
+            <div>
+              <div class="block">
+                <div class="block-label">Page title (28px / bold)</div>
+                <div class="page-title">AI Labor Market Tracker</div>
+              </div>
+              <div class="block">
+                <div class="block-label">Figure supertitle (11px / 700 caps)</div>
+                <div class="supertitle">Figure 2a — AI metrics</div>
+              </div>
+              <div class="block">
+                <div class="block-label">Figure title (18px / bold)</div>
+                <div class="fig-title">Generative AI use by workers, monthly</div>
+              </div>
+              <div class="block">
+                <div class="block-label">Figure subtitle (14px / medium)</div>
+                <div class="fig-sub">Share of employed workers using AI for any work tasks</div>
+              </div>
+              <div class="block">
+                <div class="block-label">Body description (14px / regular)</div>
+                <div class="body-text">
+                  Anthropic's Claude usage data shows AI penetration across occupations.
+                  Each line represents a different industry sector, indexed to its
+                  February 2024 baseline. Confidence bands reflect month-over-month
+                  variance in the underlying observation count.
+                </div>
+              </div>
+              <div class="block">
+                <div class="block-label">Weight ladder</div>
+                <div class="weight-row">
+                  <span style="font-weight:400">Aa<small>400</small></span>
+                  <span style="font-weight:500">Aa<small>500</small></span>
+                  <span style="font-weight:600">Aa<small>600</small></span>
+                  <span style="font-weight:700">Aa<small>700</small></span>
+                  <span style="font-weight:800">Aa<small>800</small></span>
+                  <span style="font-weight:900">Aa<small>900</small></span>
+                </div>
+              </div>
+              <div class="block">
+                <div class="block-label">Pangram (regular + bold)</div>
+                <div class="pangram">The quick brown fox jumps over the lazy dog.</div>
+                <div class="pangram pangram-bold">The quick brown fox jumps over the lazy dog.</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="block">
+                <div class="block-label">Axis title + tick row (12px / 11px)</div>
+                <div class="axis-title">Months from baseline</div>
+                <div class="axis-ticks">
+                  <span>0</span><span>3</span><span>6</span><span>9</span>
+                  <span>12</span><span>15</span><span>18</span><span>21</span><span>24</span>
+                </div>
+              </div>
+              <div class="block">
+                <div class="block-label">Tooltip (12px on dark)</div>
+                <div class="tooltip">
+                  <div class="ttl">Information services</div>
+                  <div>March 2025</div>
+                  <div class="val">128.4 (+28.4 vs baseline)</div>
+                  <div class="val" style="opacity:.7">95% CI: 121.8 – 135.0</div>
+                </div>
+              </div>
+              <div class="block">
+                <div class="block-label">Source / note line (11px / muted)</div>
+                <div class="source-note">
+                  <strong>Source:</strong> Anthropic Economic Index, accessed June 2026.<br>
+                  <strong>Note:</strong> industries with fewer than 1,000 monthly active
+                  users excluded; index baseline is monthly average over Feb 2024.
+                </div>
+              </div>
+              <div class="block">
+                <div class="block-label">Sidebar navigation</div>
+                <ul class="nav-list">
+                  <li>Labor market<small>Unemployment, JOLTS, separations</small></li>
+                  <li class="active">AI metrics<small>Adoption, intensity, exposure</small></li>
+                  <li>Productivity<small>Output per hour, multifactor</small></li>
+                  <li>SDID estimates<small>Synthetic difference-in-differences</small></li>
+                </ul>
+              </div>
+              <div class="block">
+                <div class="block-label">Tabular numerals (column alignment)</div>
+                <div class="num-stack">
+                  1,234,567.89<br>
+                  &nbsp;&nbsp;987,654.32<br>
+                  &nbsp;&nbsp;&nbsp;45,678.90<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;1,234.56<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.00
+                </div>
+              </div>
+              <div class="block">
+                <div class="block-label">Math expressions (future-use coverage test)</div>
+                <div class="math-block">
+                  <div><span class="lbl">regression</span>y = β₀ + β₁x₁ + β₂x₂ + ε</div>
+                  <div><span class="lbl">stats</span>x̄ = Σxᵢ / n,&nbsp; σ² = Σ(xᵢ − x̄)² / (n−1)</div>
+                  <div><span class="lbl">testing</span>α = 0.05,&nbsp; p ≤ 0.001,&nbsp; 95% CI: [121.8, 135.0]</div>
+                  <div><span class="lbl">deltas</span>Δ = +28.4 pp (≈ +28%),&nbsp; ±1.96 σ</div>
+                  <div><span class="lbl">sci</span>1.2 × 10⁻³,&nbsp; ¼ + ¾ = 1,&nbsp; E = mc²,&nbsp; √2 ≈ 1.41</div>
+                  <div><span class="lbl">ops</span>≤ ≥ ≠ ≈ ± × ÷ ∑ ∏ ∫ ∞ √ ∂ ∇ ∝ ∈ ∉ ⊂ ⊆ ∪ ∩</div>
+                  <div><span class="lbl">greek</span>α β γ δ ε ζ η θ ι κ λ μ ν ξ π ρ σ τ φ χ ψ ω</div>
+                  <div><span class="lbl">greek caps</span>Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Π Ρ Σ Τ Φ Χ Ψ Ω</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function iframeSimHTML(f) {
+    const badge = f.bumped ? ` <span class="bump-badge">+100 weight</span>` : '';
+    return `
+      <div class="iframe-sim" data-font="${f.id}">
+        <div class="sim-head">
+          <span>budgetlab.yale.edu &nbsp;·&nbsp; embedded interactive</span>
+          <span>candidate font: <span class="font-name">${f.name}</span>${badge}</span>
+        </div>
+        <div class="host">
+          The Budget Lab today released its AI Labor Market Tracker, a new
+          interactive that monitors how artificial intelligence adoption is
+          reshaping work across U.S. industries. The tracker draws on Anthropic
+          usage data and BLS employment statistics, updated monthly.
+        </div>
+        <div class="iframe-area ${f.cls}">
+          <div class="super">Figure 2a — AI metrics</div>
+          <div class="ftitle">Generative AI use by workers, monthly</div>
+          <div class="fsub">Share of employed workers using AI for any work tasks</div>
+          <div class="chart-mock">[ chart area ]</div>
+          <div class="iframe-ticks">
+            <span>2024</span><span>Q2</span><span>Q3</span><span>Q4</span>
+            <span>2025</span><span>Q2</span><span>Q3</span><span>Q4</span>
+          </div>
+          <div class="fsource">
+            Source: Anthropic Economic Index, June 2026. Note: industries with fewer
+            than 1,000 MAU excluded.
+          </div>
+        </div>
+        <div class="host">
+          The tracker complements the Budget Lab's existing work on labor market
+          dynamics and adds a new dimension to its productivity research portfolio.
+          For methodology, see the technical appendix below.
+        </div>
+      </div>
+    `;
+  }
+
+  const togglesEl   = document.getElementById('toggles');
+  const specimensEl = document.getElementById('specimens');
+  const iframesEl   = document.getElementById('iframe-sims');
+
+  togglesEl.innerHTML =
+    FONTS.map(f => `
+      <label>
+        <input type="checkbox" data-font="${f.id}" ${DEFAULT_ON.has(f.id) ? 'checked' : ''}>
+        <span>${f.name}</span>
+      </label>
+    `).join('') +
+    `<span class="actions">
+       <button id="all">All</button>
+       <button id="default">Default 5</button>
+       <button id="none">None</button>
+     </span>`;
+
+  specimensEl.innerHTML = FONTS.map(specimenHTML).join('');
+  iframesEl.innerHTML   = FONTS.map(iframeSimHTML).join('');
+
+  function update() {
+    const checked = new Set(
+      [...togglesEl.querySelectorAll('input:checked')].map(i => i.dataset.font)
+    );
+    document.querySelectorAll('.specimen[data-font], .iframe-sim[data-font]').forEach(el => {
+      el.classList.toggle('hidden', !checked.has(el.dataset.font));
+    });
+  }
+  togglesEl.addEventListener('change', update);
+  document.getElementById('all').addEventListener('click', () => {
+    togglesEl.querySelectorAll('input').forEach(i => i.checked = true);  update();
+  });
+  document.getElementById('none').addEventListener('click', () => {
+    togglesEl.querySelectorAll('input').forEach(i => i.checked = false); update();
+  });
+  document.getElementById('default').addEventListener('click', () => {
+    togglesEl.querySelectorAll('input').forEach(i => i.checked = DEFAULT_ON.has(i.dataset.font));
+    update();
+  });
+
+  update();
+
+  // ===== side-by-side compare =====
+  const cmpL = document.getElementById('cmpL');
+  const cmpR = document.getElementById('cmpR');
+  const optsHTML = FONTS.map(f => `<option value="${f.id}">${f.name}</option>`).join('');
+  cmpL.innerHTML = optsHTML;
+  cmpR.innerHTML = optsHTML;
+  cmpL.value = 'figtree';
+  cmpR.value = 'nunito';
+
+  function renderCompare() {
+    const L = FONTS.find(f => f.id === cmpL.value);
+    const R = FONTS.find(f => f.id === cmpR.value);
+    document.getElementById('cmp-left').innerHTML  = iframeSimHTML(L) + specimenHTML(L);
+    document.getElementById('cmp-right').innerHTML = iframeSimHTML(R) + specimenHTML(R);
+  }
+  cmpL.addEventListener('change', renderCompare);
+  cmpR.addEventListener('change', renderCompare);
+  document.getElementById('cmpSwap').addEventListener('click', () => {
+    const tmp = cmpL.value; cmpL.value = cmpR.value; cmpR.value = tmp;
+    renderCompare();
+  });
+  renderCompare();
+</script>
+
+</body>
+</html>
