@@ -13,8 +13,8 @@
  *   - Crosshair tooltip follows the cursor (position: fixed).
  * =========================================================================== */
 
-import * as Plot from "https://esm.sh/@observablehq/plot@0.6.16";
-import * as d3 from "https://esm.sh/d3@7.9.0";
+import * as Plot from "./vendor/plot-0.6.16.esm.min.js";
+import * as d3 from "./vendor/d3-7.9.0.esm.min.js";
 
 export { Plot, d3 };
 
