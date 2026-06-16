@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file. Format: [Ke
 - New tool: **AI Labor Market Tracker** (`tools/ai-labor-market-tracker/`), migrated from the staging repo. Launch snapshot frozen at `versions/2026-06-15/`.
 - Per-tool CI validation convention: the `Validate site` check now auto-discovers `tools/<slug>/ci/validate.sh` (build/data gates) and `tools/<slug>/ci/smoke.json` (render marker), so new tools need no workflow edits. Existing tools backfilled with `ci/smoke.json`.
 - Local `.pre-commit-config.yaml` mirrors the tracker's manifest gate.
+- AI Labor Market Tracker: d3 and Observable Plot are now self-hosted (vendored at `tools/ai-labor-market-tracker/vendor/`) instead of loaded from `esm.sh`, so charts render behind corporate firewalls that intercept third-party CDNs. Applied to the canonical tool and the `versions/2026-06-15/` snapshot.
 
 ## [1.0.0] — 2026-05-11
 

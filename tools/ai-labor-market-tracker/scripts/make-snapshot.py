@@ -32,7 +32,7 @@ INCLUDE_FILES = [
     "index.html", "app.js", "charts.js", "tbl-chart.js",
     "export-image.js", "download-all.js", "zip-store.js", "styles.css",
 ]
-INCLUDE_DIRS = ["fonts", "data"]
+INCLUDE_DIRS = ["fonts", "data", "vendor"]
 
 # Root-climbing prefixes valid at canonical depth (2) but wrong at snapshot
 # depth (4). Re-depth by adding two more "../" segments.
