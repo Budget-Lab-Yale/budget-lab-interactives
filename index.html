@@ -4,10 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Budget Lab Interactives</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap">
   <style>
+    @font-face {
+      font-family: 'Figtree';
+      src: url('assets/fonts/Figtree-variable.ttf') format('truetype');
+      font-weight: 300 900;
+      font-style: normal;
+      font-display: swap;
+    }
     :root {
       --navy: #101F5B;
       --blue: #0072B2;
@@ -20,7 +24,7 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
-      font-family: 'Mallory', 'Source Sans 3', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+      font-family: 'Figtree', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
       color: var(--text-body);
       background: #fff;
       line-height: 1.5;
@@ -103,28 +107,19 @@
       </a>
     </div>
 
-    <h1>Interactive tools</h1>
-    <p class="lede">Interactive web tools published by The Budget Lab at Yale. Each tool can be embedded on the Budget Lab website and other host pages.</p>
-
-    <h2>Tools</h2>
     <ul class="tool-list">
       <li>
         <a href="tools/ai-labor-market-tracker/">AI Labor Market Tracker</a>
         <div class="desc">Track how artificial intelligence is reshaping the U.S. labor market &mdash; occupational churn, AI exposure and usage metrics, and comparisons of AI-exposed and unexposed workers.</div>
       </li>
       <li>
-        <a href="tools/deficits-affordability/">Deficits and Affordability</a>
-        <div class="desc">How federal deficits raise borrowing costs on auto loans, mortgages, and small business loans &mdash; with a calculator for your own loan amount.</div>
-      </li>
-      <li>
         <a href="tools/deficit-impact-calculator/">Deficit Impact Calculator</a>
-        <div class="desc">Calculator-only variant of the Deficits and Affordability tool. Estimate the impact of federal deficits on borrowing costs for a specific loan.</div>
+        <div class="desc">Estimate the impact of federal deficits on borrowing costs for a specific loan.</div>
       </li>
     </ul>
 
     <footer>
-      Source code: <a href="https://github.com/Budget-Lab-Yale/budget-lab-interactives">github.com/Budget-Lab-Yale/budget-lab-interactives</a><br />
-      &copy; The Budget Lab at Yale University
+      Source code: <a href="https://github.com/Budget-Lab-Yale/budget-lab-interactives">github.com/Budget-Lab-Yale/budget-lab-interactives</a>
     </footer>
   </div>
 </body>
