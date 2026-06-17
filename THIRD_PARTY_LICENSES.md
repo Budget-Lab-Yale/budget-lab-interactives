@@ -33,11 +33,11 @@ THE SOFTWARE.
 
 ## Figtree (variable font)
 
-File: `tools/ai-labor-market-tracker/fonts/Figtree-variable.ttf`
+Files: `assets/fonts/Figtree-variable.ttf` (landing page), `tools/ai-labor-market-tracker/fonts/Figtree-variable.ttf`
 
 Copyright 2022 The Figtree Project Authors — https://github.com/erikdkennedy/figtree
 
-Licensed under the SIL Open Font License, Version 1.1. The full license text is distributed alongside the font at [`tools/ai-labor-market-tracker/fonts/Figtree-OFL.txt`](tools/ai-labor-market-tracker/fonts/Figtree-OFL.txt).
+Licensed under the SIL Open Font License, Version 1.1. The full license text is distributed alongside each font copy at [`assets/fonts/Figtree-OFL.txt`](assets/fonts/Figtree-OFL.txt) and [`tools/ai-labor-market-tracker/fonts/Figtree-OFL.txt`](tools/ai-labor-market-tracker/fonts/Figtree-OFL.txt).
 
 ## D3
 

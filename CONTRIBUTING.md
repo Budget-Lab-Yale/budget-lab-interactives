@@ -32,7 +32,7 @@ If unsure, snapshot. The cost of a needless snapshot is a few extra files; the c
 Before applying the change, copy the canonical files to a dated subfolder:
 
 ```bash
-TOOL=tools/deficits-affordability
+TOOL=tools/deficit-impact-calculator
 DATE=$(date +%F)
 mkdir -p "$TOOL/versions/$DATE"
 cp "$TOOL"/*.html "$TOOL"/*.js "$TOOL/versions/$DATE/"

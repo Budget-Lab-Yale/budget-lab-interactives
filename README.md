@@ -7,7 +7,6 @@ Interactive web tools published by [The Budget Lab at Yale](https://budgetlab.ya
 | Tool | URL | Source |
 |---|---|---|
 | AI Labor Market Tracker | https://budget-lab-yale.github.io/budget-lab-interactives/tools/ai-labor-market-tracker/ | [`tools/ai-labor-market-tracker/`](tools/ai-labor-market-tracker/) |
-| Deficits and Affordability | https://budget-lab-yale.github.io/budget-lab-interactives/tools/deficits-affordability/ | [`tools/deficits-affordability/`](tools/deficits-affordability/) |
 | Deficit Impact Calculator | https://budget-lab-yale.github.io/budget-lab-interactives/tools/deficit-impact-calculator/ | [`tools/deficit-impact-calculator/`](tools/deficit-impact-calculator/) |
 
 ## Embedding
@@ -23,7 +22,7 @@ Paste this into a Drupal Full-HTML block, a Squarespace Code Block, a WordPress 
 </noscript>
 ```
 
-Replace `TOOL-NAME` with the slug of the tool you want to embed (see the table above — e.g. `deficits-affordability` or `deficit-impact-calculator`).
+Replace `TOOL-NAME` with the slug of the tool you want to embed (see the table above — e.g. `ai-labor-market-tracker` or `deficit-impact-calculator`).
 
 The script creates an iframe at runtime and auto-resizes it to the tool's content height via [iframe-resizer v4](https://github.com/davidjbradshaw/iframe-resizer/tree/v4) (MIT), vendored at `embed/v1/`.
 
@@ -31,7 +30,7 @@ Optional `data-*` attributes:
 
 | Attribute | Default | Purpose |
 |---|---|---|
-| `data-tool` | _(required)_ | Which interactive to load (e.g. `deficits-affordability`). |
+| `data-tool` | _(required)_ | Which interactive to load (e.g. `deficit-impact-calculator`). |
 | `data-title` | tool name | Iframe `title` for accessibility / screen readers. |
 | `data-height` | `100` | Initial pixel height before iframe-resizer measures the tool's actual height (~100ms after load). Set to the tool's natural height to eliminate the brief flash. |
 | `data-log` | _(off)_ | Any non-empty value enables iframe-resizer's verbose console logging — useful for diagnosing unexpected sizing. |
@@ -95,17 +94,17 @@ Host pages forward these into their own analytics with a small listener — e.g.
 
 ## Tool versioning
 
-Each tool has a *canonical* URL (e.g. `/tools/deficits-affordability/`) that follows the latest published state — embedders default to this and get future updates automatically.
+Each tool has a *canonical* URL (e.g. `/tools/deficit-impact-calculator/`) that follows the latest published state — embedders default to this and get future updates automatically.
 
 For publications that need stable numbers, each tool also keeps dated *snapshots* at `/tools/<name>/versions/<YYYY-MM-DD>/`. A snapshot is a frozen copy preserved indefinitely.
 
 To embed a snapshot, pass the snapshot path as `data-tool`:
 
 ```html
-<script src="https://budget-lab-yale.github.io/budget-lab-interactives/embed/v1/embed.js" data-tool="deficits-affordability/versions/2026-05-11"></script>
+<script src="https://budget-lab-yale.github.io/budget-lab-interactives/embed/v1/embed.js" data-tool="deficit-impact-calculator/versions/2026-05-11"></script>
 ```
 
-Each tool has its own `CHANGELOG.md` (see [`tools/deficits-affordability/CHANGELOG.md`](tools/deficits-affordability/CHANGELOG.md)). The repo-wide [`CHANGELOG.md`](CHANGELOG.md) tracks embed-loader and shared-asset changes. When and how snapshots are taken is documented in [CONTRIBUTING.md](CONTRIBUTING.md).
+Each tool has its own `CHANGELOG.md` (see [`tools/deficit-impact-calculator/CHANGELOG.md`](tools/deficit-impact-calculator/CHANGELOG.md)). The repo-wide [`CHANGELOG.md`](CHANGELOG.md) tracks embed-loader and shared-asset changes. When and how snapshots are taken is documented in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Adding a new interactive
 
