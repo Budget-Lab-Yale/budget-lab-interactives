@@ -6,8 +6,8 @@ Interactive web tools published by [The Budget Lab at Yale](https://budgetlab.ya
 
 | Tool | URL | Source |
 |---|---|---|
-| AI Labor Market Tracker | https://budget-lab-yale.github.io/budget-lab-interactives/tools/ai-labor-market-tracker/ | [`tools/ai-labor-market-tracker/`](tools/ai-labor-market-tracker/) |
-| Deficit Impact Calculator | https://budget-lab-yale.github.io/budget-lab-interactives/tools/deficit-impact-calculator/ | [`tools/deficit-impact-calculator/`](tools/deficit-impact-calculator/) |
+| AI Labor Market Tracker | https://interactives.budgetlab.yale.edu/tools/ai-labor-market-tracker/ | [`tools/ai-labor-market-tracker/`](tools/ai-labor-market-tracker/) |
+| Deficit Impact Calculator | https://interactives.budgetlab.yale.edu/tools/deficit-impact-calculator/ | [`tools/deficit-impact-calculator/`](tools/deficit-impact-calculator/) |
 
 ## Embedding
 
@@ -16,9 +16,9 @@ Interactive web tools published by [The Budget Lab at Yale](https://budgetlab.ya
 Paste this into a Drupal Full-HTML block, a Squarespace Code Block, a WordPress Custom HTML block, or any host that allows third-party scripts:
 
 ```html
-<script src="https://budget-lab-yale.github.io/budget-lab-interactives/embed/v1/embed.js" data-tool="TOOL-NAME"></script>
+<script src="https://interactives.budgetlab.yale.edu/embed/v1/embed.js" data-tool="TOOL-NAME"></script>
 <noscript>
-  <p><a href="https://budget-lab-yale.github.io/budget-lab-interactives/tools/TOOL-NAME/">Open the interactive in a new tab</a> (requires JavaScript).</p>
+  <p><a href="https://interactives.budgetlab.yale.edu/tools/TOOL-NAME/">Open the interactive in a new tab</a> (requires JavaScript).</p>
 </noscript>
 ```
 
@@ -41,7 +41,7 @@ Optional `data-*` attributes:
 For the rare host that allows `<iframe>` but blocks third-party scripts:
 
 ```html
-<iframe src="https://budget-lab-yale.github.io/budget-lab-interactives/tools/TOOL-NAME/" width="100%" height="1000" style="border:0;" title="Tool title" loading="lazy"></iframe>
+<iframe src="https://interactives.budgetlab.yale.edu/tools/TOOL-NAME/" width="100%" height="1000" style="border:0;" title="Tool title" loading="lazy"></iframe>
 ```
 
 Doesn't auto-resize, so `height` needs tuning to fit the tool without inner scroll.
@@ -85,7 +85,7 @@ Host pages forward these into their own analytics with a small listener — e.g.
     var m = e.data;
     if (!m || m.type !== 'BUDGET_LAB_GTM_EVENT') return;   // ignore everything else
     // Optional: restrict to the widget origin
-    // if (e.origin !== 'https://budget-lab-yale.github.io') return;
+    // if (e.origin !== 'https://interactives.budgetlab.yale.edu') return;
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(Object.assign({ event: m.event }, m.data));
   });
@@ -101,7 +101,7 @@ For publications that need stable numbers, each tool also keeps dated *snapshots
 To embed a snapshot, pass the snapshot path as `data-tool`:
 
 ```html
-<script src="https://budget-lab-yale.github.io/budget-lab-interactives/embed/v1/embed.js" data-tool="deficit-impact-calculator/versions/2026-05-11"></script>
+<script src="https://interactives.budgetlab.yale.edu/embed/v1/embed.js" data-tool="deficit-impact-calculator/versions/2026-05-11"></script>
 ```
 
 Each tool has its own `CHANGELOG.md` (see [`tools/deficit-impact-calculator/CHANGELOG.md`](tools/deficit-impact-calculator/CHANGELOG.md)). The repo-wide [`CHANGELOG.md`](CHANGELOG.md) tracks embed-loader and shared-asset changes. When and how snapshots are taken is documented in [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -109,7 +109,7 @@ Each tool has its own `CHANGELOG.md` (see [`tools/deficit-impact-calculator/CHAN
 ## Adding a new interactive
 
 1. Create a new subfolder under `tools/` named in `kebab-case` (e.g. `tools/tariff-calculator/`).
-2. Add an `index.html` that is a complete, standalone HTML document. It will be served at `https://budget-lab-yale.github.io/budget-lab-interactives/tools/<folder>/`.
+2. Add an `index.html` that is a complete, standalone HTML document. It will be served at `https://interactives.budgetlab.yale.edu/tools/<folder>/`.
 3. Near `</body>`, include the iframe-resizer child script: `<script src="../../embed/v1/iframeResizer.contentWindow.min.js"></script>`. This enables auto-resize when the tool is embedded.
 4. Add the tool to the table at the top of this README and to the root `index.html` landing page.
 5. Open a PR or push to `main` — Pages will redeploy automatically.

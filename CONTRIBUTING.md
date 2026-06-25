@@ -58,7 +58,7 @@ Then update the per-tool `CHANGELOG.md`:
 Verify the snapshot URL renders correctly *before* applying the new changes to canonical:
 
 ```
-https://budget-lab-yale.github.io/budget-lab-interactives/tools/<name>/versions/<date>/
+https://interactives.budgetlab.yale.edu/tools/<name>/versions/<date>/
 ```
 
 Once the snapshot is in place and verified, apply the new changes to the canonical `index.html` / `tool.js`.
