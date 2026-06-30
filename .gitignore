@@ -1,3 +1,7 @@
+# Node (dev server only — the published site has no build step)
+node_modules/
+package-lock.json
+
 # OS
 .DS_Store
 Thumbs.db
