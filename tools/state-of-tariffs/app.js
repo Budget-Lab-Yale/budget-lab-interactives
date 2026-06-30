@@ -434,6 +434,10 @@ async function renderMain() {
       main.innerHTML = '<div class="figure-error">Figure not found.</div>';
       return;
     }
+    if (fig.figureType === "prose") {
+      renderModule.renderProse(main, { figure: fig, fetchCsv });
+      return;
+    }
     await renderModule.renderFigure(main, {
       tab,
       figure: fig,

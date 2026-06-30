@@ -1,0 +1,34 @@
+# Shared policy-event annotations for the Tariff Rate Tracker figures.
+# A figure opts in with `events: major` in its config.md frontmatter; the build copies the
+# named list into spec.annotations.xAxis, filtered to that figure's date range.
+# Labels are abbreviated from the workbook's "Policy Events Reference" sheet (Major=Yes events);
+# edit here once and every figure picks it up. Each entry is an engine xAxis annotation
+# ({x, label, style?, color?}); x is the effective date (YYYY-MM-DD).
+# A named group may be a flat list (treated as xAxis lines) OR a mapping with `xAxis` and/or
+# `bands` keys. `projection` marks the scheduled Section 122 expiry and shades the period in
+# which no further (unscheduled) policy changes are assumed. The band start is the report
+# "as-of" date (2026-05-09); adjust if the projection should begin elsewhere.
+projection:
+  xAxis:
+  - x: '2026-07-23'
+    label: Section 122 expiry
+    color: red
+    style: dashed
+  bands:
+  - start: '2026-05-09'
+    end: '2026-12-31'
+    label: Assumes no further policy changes
+
+major:
+- x: '2025-02-04'
+  label: Fentanyl tariffs
+- x: '2025-04-02'
+  label: Liberation Day
+- x: '2025-04-14'
+  label: Geneva truce
+- x: '2025-08-07'
+  label: Reciprocal Phase 2
+- x: '2026-02-24'
+  label: IEEPA struck down
+- x: '2026-04-06'
+  label: Section 232 reorg

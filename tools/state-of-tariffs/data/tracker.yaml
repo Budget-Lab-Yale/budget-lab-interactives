@@ -1,40 +1,48 @@
 release:
-  updated: June 30, 2026
-  version: '0.1'
+  updated: April 8, 2026
+  version: '1.0'
 
 tabs:
-- id: current-update
-  label: Overview
-  description: Summary of the current state of U.S. tariffs.
-
-- id: tariff-levels
-  label: Tariff Levels
-  description: How high U.S. tariffs are — overall, over time, and by trading partner.
+- id: key-figures
+  label: Key Figures
+  description: Figures from The Budget Lab's State of U.S. Tariffs analysis (April 8, 2026) — effective tariff rates, macroeconomic effects, and effects on households and consumer prices.
   sections:
+  - id: overview
+    label: Overview
+    figures:
+    - summary
   - id: rates
-    label: Rates Over Time
+    label: Tariff Rates
     figures:
-    - average-tariff-rate
-    - rate-by-trading-partner
-  - id: detail
-    label: Detail
+    - effective-tariff-rate-since-1790
+    - daily-effective-tariff-rate
+  - id: economic-effects
+    label: Economic Effects
     figures:
-    - effective-rate-table
-  toggles:
-  - id: variant
-    label: Weighting
-    options:
-    - id: fixed
-      label: Fixed weights
-    - id: dynamic
-      label: Dynamic weights
-    default: fixed
-    applies_to_figures:
-    - average-tariff-rate
+    - real-gdp-level-effects
+    - long-run-gdp-by-sector
+    - long-run-gdp-by-region
+  - id: households-prices
+    label: Households & Prices
+    figures:
+    - distributional-effects-by-decile
+    # - consumer-price-effects  # held: needs faceted horizontal bars (engine support pending)
 
-- id: revenue-prices
-  label: Revenue & Prices
-  description: Estimated tariff revenue and the effect of tariffs on consumer prices.
-  figures:
-  - tariff-revenue
-  - price-impact-table
+- id: tariff-rate-tracker
+  label: Tariff Rate Tracker
+  description: Daily effective U.S. tariff rates from The Budget Lab's open-source Tariff Rate Tracker — overall, by authority, by trading partner, and by commodity. Vertical markers flag major tariff-policy changes.
+  sections:
+  - id: overall
+    label: Overall Rate
+    figures:
+    - daily-effective-tariff-rate
+    - effective-tariff-rate-by-authority
+  - id: by-partner
+    label: By Trading Partner
+    figures:
+    - china-vs-other-countries
+    - etr-by-trading-partner
+  - id: by-commodity
+    label: By Commodity
+    figures:
+    - etr-by-commodity

@@ -1,228 +1,721 @@
 {
   "release": {
-    "updated": "June 30, 2026",
-    "version": "0.1"
+    "updated": "April 8, 2026",
+    "version": "1.0"
   },
   "data_base_url": "./data/",
   "tabs": [
     {
-      "id": "current-update",
-      "label": "Overview",
-      "description": "Summary of the current state of U.S. tariffs.",
-      "body_html": "<h2>Overview</h2>\n<p>This is placeholder content for the <strong>State of Tariffs</strong> interactive. The structure, navigation, and chart-engine wiring are in place; the figures and text below are samples to be replaced with real content.</p>\n<p>Use the tabs above to move between sections. Within each tab, the list on the left selects which figure to view; toggles and selectors (where present) switch between views of the same data.</p>\n<h2>What this tool will cover</h2>\n<ul>\n<li><strong>Tariff Levels</strong> — the overall U.S. tariff rate over time, rates by trading partner, and a detailed rate table.</li>\n<li><strong>Revenue &amp; Prices</strong> — estimated tariff revenue and the pass-through of tariffs to consumer prices.</li>\n</ul>\n<p>All numbers currently shown are illustrative placeholders, not Budget Lab estimates.</p>"
-    },
-    {
-      "id": "tariff-levels",
-      "label": "Tariff Levels",
-      "description": "How high U.S. tariffs are — overall, over time, and by trading partner.",
+      "id": "key-figures",
+      "label": "Key Figures",
+      "description": "Figures from The Budget Lab's State of U.S. Tariffs analysis (April 8, 2026) — effective tariff rates, macroeconomic effects, and effects on households and consumer prices.",
       "sections": [
         {
-          "id": "rates",
-          "label": "Rates Over Time"
+          "id": "overview",
+          "label": "Overview"
         },
         {
-          "id": "detail",
-          "label": "Detail"
-        }
-      ],
-      "toggles": [
+          "id": "rates",
+          "label": "Tariff Rates"
+        },
         {
-          "id": "variant",
-          "label": "Weighting",
-          "options": [
-            {
-              "id": "fixed",
-              "label": "Fixed weights"
-            },
-            {
-              "id": "dynamic",
-              "label": "Dynamic weights"
-            }
-          ],
-          "default": "fixed",
-          "applies_to_figures": [
-            "average-tariff-rate"
-          ]
+          "id": "economic-effects",
+          "label": "Economic Effects"
+        },
+        {
+          "id": "households-prices",
+          "label": "Households & Prices"
         }
       ],
       "figures": [
         {
-          "id": "average-tariff-rate",
-          "short_label": "Average Tariff Rate",
-          "figureNum": 1,
-          "figureType": "chart",
-          "data": "tariff-levels/average-tariff-rate/data.csv",
-          "spec": {
-            "chartType": "line",
-            "data": "data.csv",
-            "title": "Average U.S. Tariff Rate ({variant})",
-            "subtitle": "Percent of total goods imports. Illustrative placeholder data.",
-            "source": "Placeholder data. The Budget Lab.",
-            "note": "Numbers shown are illustrative and not Budget Lab estimates.",
-            "xAxisType": "quarterly",
-            "yAxisPolicy": {
-              "min": 0,
-              "tickCount": 5
-            }
-          },
-          "body_html": "<p>The average tariff rate is the total duties collected divided by the value of goods imports. The <strong>Weighting</strong> toggle switches between fixed import weights (held at a base-period mix) and dynamic weights (the current import mix). This is placeholder text describing the figure.</p>",
-          "section": "rates",
-          "variants": [
+          "id": "summary",
+          "short_label": "Summary",
+          "figureType": "prose",
+          "blocks": [
             {
-              "id": "fixed",
-              "label": "Fixed weights"
+              "type": "text",
+              "html": "<p>This is a placeholder summary pane demonstrating the prose layout: an arbitrary number of text cards — one per <code>##</code> heading — with table cards placed inline via a <code>{{table: id}}</code> directive, so a table can sit before, between, or after any text card. Replace this with the real narrative.</p>"
             },
             {
-              "id": "dynamic",
-              "label": "Dynamic weights"
+              "type": "table",
+              "table": "rate"
+            },
+            {
+              "type": "text",
+              "html": "<h2>Key Takeaways</h2>\n<p>Placeholder narrative. Tariffs raise consumer price levels and modestly lower long-run real GDP, with larger effects if the Section 122 tariffs are extended rather than allowed to expire.</p>"
+            },
+            {
+              "type": "table",
+              "table": "headline"
+            },
+            {
+              "type": "text",
+              "html": "<h2>Notes</h2>\n<p>Placeholder notes card, appearing after the second table. All values shown here are illustrative and not Budget Lab estimates.</p>"
             }
-          ]
+          ],
+          "tables": {
+            "rate": {
+              "spec": {
+                "title": "Effective Tariff Rate, End of 2026",
+                "data": "rate.csv",
+                "stub": [
+                  "measure"
+                ],
+                "header": [
+                  "scenario"
+                ],
+                "value": "value",
+                "column_order": [
+                  "Section 122 Expires",
+                  "Section 122 Extended"
+                ],
+                "format": {
+                  "default": {
+                    "type": "percent",
+                    "decimals": 1
+                  }
+                }
+              },
+              "data": "key-figures/summary/rate.csv"
+            },
+            "headline": {
+              "spec": {
+                "title": "Headline Long-Run Effects",
+                "data": "headline.csv",
+                "stub": [
+                  "metric"
+                ],
+                "header": [
+                  "scenario"
+                ],
+                "value": "value",
+                "column_order": [
+                  "Section 122 Expires",
+                  "Section 122 Extended"
+                ],
+                "format": {
+                  "default": {
+                    "type": "percent",
+                    "decimals": 2
+                  }
+                }
+              },
+              "data": "key-figures/summary/headline.csv"
+            }
+          },
+          "section": "overview"
         },
         {
-          "id": "rate-by-trading-partner",
-          "short_label": "Rate by Trading Partner",
-          "figureNum": 2,
+          "id": "effective-tariff-rate-since-1790",
+          "short_label": "Effective Tariff Rate Since 1790",
           "figureType": "chart",
-          "data": "tariff-levels/rate-by-trading-partner/data.csv",
+          "data": "key-figures/effective-tariff-rate-since-1790/data.csv",
           "spec": {
             "chartType": "line",
             "data": "data.csv",
-            "title": "U.S. Tariff Rate on Imports from {partner}",
-            "subtitle": "Percent. Illustrative placeholder data.",
-            "source": "Placeholder data. The Budget Lab.",
-            "xAxisType": "quarterly",
+            "title": "U.S. Average Effective Tariff Rate Since 1790",
+            "subtitle": "Customs duty revenue as a percentage of goods imports.",
+            "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+            "xAxisType": "numeric",
+            "xAxisPolicy": {
+              "anchorAtZero": false
+            },
             "yAxisPolicy": {
               "min": 0,
-              "tickCount": 5
-            }
-          },
-          "body_html": "<p>Average U.S. tariff rate applied to imports from a selected trading partner. Use the <strong>Trading partner</strong> selector to switch the series shown. This is placeholder text describing the figure.</p>",
-          "section": "rates",
-          "selectors": [
-            {
-              "id": "partner",
-              "label": "Trading partner",
-              "kind": "single",
-              "default": "china",
-              "options": [
+              "tickCount": 6
+            },
+            "series_order": [
+              "Effective Tariff Rate",
+              "Projected Post-Substitution Rate",
+              "Projected Pre-Substitution Rate"
+            ],
+            "series_colors": {
+              "Projected Post-Substitution Rate": "blue",
+              "Projected Pre-Substitution Rate": "amber"
+            },
+            "series_styles": {
+              "Projected Post-Substitution Rate": {
+                "dashed": true
+              },
+              "Projected Pre-Substitution Rate": {
+                "dashed": true
+              }
+            },
+            "annotations": {
+              "yAxis": [
                 {
-                  "id": "china",
-                  "label": "China"
+                  "y": 9.658,
+                  "label": "Current pre-substitution rate",
+                  "style": "dashed",
+                  "color": "amber",
+                  "labelSide": "left",
+                  "labelDx": 16,
+                  "labelDy": -12
                 },
                 {
-                  "id": "eu",
-                  "label": "European Union"
-                },
-                {
-                  "id": "mexico",
-                  "label": "Mexico"
+                  "y": 8.212,
+                  "label": "Current post-substitution rate",
+                  "style": "dashed",
+                  "color": "blue",
+                  "labelSide": "left",
+                  "labelDx": 16,
+                  "labelDy": 12
                 }
               ]
             }
-          ]
+          },
+          "body_html": "<p>The average effective tariff rate is customs duty revenue as a share of the value of goods imports. The historical series runs through 2024; the dashed lines project the post- and pre-substitution rates implied by 2025–2026 tariff policy. The two horizontal reference lines mark the current post- and pre-substitution rates.</p>",
+          "section": "rates",
+          "figureNum": 1
         },
         {
-          "id": "effective-rate-table",
-          "short_label": "Effective Rate Table",
-          "figureNum": 3,
-          "figureType": "table",
-          "data": "tariff-levels/effective-rate-table/data.csv",
+          "id": "daily-effective-tariff-rate",
+          "short_label": "Daily Effective Tariff Rate",
+          "figureType": "chart",
+          "data": "key-figures/daily-effective-tariff-rate/data.csv",
           "spec": {
-            "title": "Effective Tariff Rates by Scenario",
+            "chartType": "line",
             "data": "data.csv",
-            "subtitle": "Illustrative placeholder data.",
-            "source": "Placeholder data. The Budget Lab.",
-            "stub": [
-              "group",
-              {
-                "label": "measure"
-              }
-            ],
-            "header": [
-              "scenario"
-            ],
-            "value": "value",
-            "column_order": [
-              "Pre-2025",
-              "Current",
-              "Announced"
-            ],
-            "row_labels": {
-              "statutory": "Average statutory rate (\\(\\tau\\))",
-              "effective": "Effective rate (\\(\\tau_{eff}\\))",
-              "passthrough": "Import-price passthrough (\\(\\rho\\))"
+            "title": "Tariff Impact Tracker: Daily Effective Tariff Rate",
+            "subtitle": "Percent.",
+            "source": "The Budget Lab analysis.",
+            "xAxisType": "temporal",
+            "yAxisPolicy": {
+              "min": 0,
+              "tickCount": 5
+            }
+          },
+          "body_html": "<p>The daily effective tariff rate implied by tariff policy in effect on each date, from January 2025 through the end of 2026.</p>",
+          "section": "rates",
+          "figureNum": 2
+        },
+        {
+          "id": "real-gdp-level-effects",
+          "short_label": "Real GDP Level Effects",
+          "figureType": "chart",
+          "data": "key-figures/real-gdp-level-effects/data.csv",
+          "spec": {
+            "chartType": "line",
+            "data": "data.csv",
+            "title": "U.S. Real GDP Level Effects of Trump Administration Tariffs",
+            "subtitle": "Percentage point change against baseline.",
+            "source": "Bureau of Economic Analysis, The Budget Lab analysis.",
+            "xAxisType": "temporal",
+            "yAxisPolicy": {
+              "includeZero": true,
+              "tickCount": 5
             },
-            "group_labels": {
-              "rates": "Tariff rates",
-              "transmission": "Price transmission"
+            "series_order": [
+              "Section 122 Expires",
+              "Section 122 Extended"
+            ]
+          },
+          "body_html": "<p>The estimated effect of Trump administration tariffs on the level of U.S. real GDP, relative to a no-tariff baseline, under two assumptions about whether the Section 122 tariffs expire or are extended.</p>",
+          "section": "economic-effects",
+          "figureNum": 3
+        },
+        {
+          "id": "long-run-gdp-by-sector",
+          "short_label": "Long-Run GDP by Sector",
+          "figureType": "chart",
+          "data": "key-figures/long-run-gdp-by-sector/data.csv",
+          "spec": {
+            "chartType": "bar",
+            "data": "data.csv",
+            "title": "Change in Long-Run Real U.S. GDP by Sector from Trump Administration Tariffs",
+            "subtitle": "Percentage points.",
+            "note": "Real value added by sector.",
+            "source": "GTAP v7, The Budget Lab analysis.",
+            "orientation": "vertical",
+            "xAxisType": "categorical",
+            "columns": {
+              "x": "category",
+              "series": "series",
+              "facet": "pane",
+              "value": "value"
             },
-            "format": {
-              "default": {
-                "type": "percent",
-                "decimals": 1
+            "series_order": [
+              "Section 122 Expires",
+              "Section 122 Extended"
+            ],
+            "small_multiples": {
+              "mode": "shared",
+              "columns": 2,
+              "pane_order": [
+                "Sectors",
+                "Manufacturing detail"
+              ]
+            },
+            "x_order": [
+              "Agriculture",
+              "Mining & Extraction",
+              "Total Manufacturing",
+              "Utilities",
+              "Construction",
+              "Services",
+              "Overall Real GDP",
+              "Durable Manufacturing",
+              "Advanced Manufacturing",
+              "Nondurable Manufacturing"
+            ]
+          },
+          "body_html": "<p>The estimated long-run change in real value added by sector, under two assumptions about whether the Section 122 tariffs expire or are extended.</p>",
+          "section": "economic-effects",
+          "figureNum": 4
+        },
+        {
+          "id": "long-run-gdp-by-region",
+          "short_label": "Long-Run GDP by Region",
+          "figureType": "chart",
+          "data": "key-figures/long-run-gdp-by-region/data.csv",
+          "spec": {
+            "chartType": "bar",
+            "data": "data.csv",
+            "title": "Long-Run Change in Real GDP Level from Trump Administration Tariffs",
+            "subtitle": "Percentage point change.",
+            "note": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries.",
+            "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+            "orientation": "vertical",
+            "valueLabels": {
+              "show": false
+            },
+            "xAxisType": "categorical",
+            "columns": {
+              "x": "category",
+              "series": "series",
+              "value": "value"
+            },
+            "series_order": [
+              "Section 122 Expires",
+              "Section 122 Extended"
+            ],
+            "x_order": [
+              "USA",
+              "China",
+              "ROW",
+              "Canada",
+              "Mexico",
+              "FTROW",
+              "Japan",
+              "EU",
+              "UK",
+              "World Total",
+              "World ex USA"
+            ]
+          },
+          "body_html": "<p>The estimated long-run change in the level of real GDP by country and region, under two assumptions about whether the Section 122 tariffs expire or are extended.</p>",
+          "section": "economic-effects",
+          "figureNum": 5
+        },
+        {
+          "id": "distributional-effects-by-decile",
+          "short_label": "Distributional Effects by Decile",
+          "figureType": "chart",
+          "data": "key-figures/distributional-effects-by-decile/data.csv",
+          "spec": {
+            "chartType": "bar",
+            "data": "data.csv",
+            "title": "Distributional Effects of Trump Administration Tariffs",
+            "subtitle": "By household income decile.",
+            "source": "GTAP v7, Census, BLS, BEA, The Budget Lab analysis.",
+            "xAxisType": "categorical",
+            "orientation": "vertical",
+            "columns": {
+              "x": "decile",
+              "series": "scenario",
+              "facet": "measure",
+              "value": "value"
+            },
+            "series_order": [
+              "Section 122 Expires",
+              "Section 122 Extended"
+            ],
+            "small_multiples": {
+              "mode": "per-pane",
+              "columns": 2,
+              "pane_order": [
+                "% of ATI",
+                "2025$"
+              ],
+              "pane_titles": {
+                "% of ATI": "Share of after-tax income (%)",
+                "2025$": "Dollars per household (2025$)"
               }
             }
           },
-          "body_html": "<p>Statutory and effective tariff rates and the implied import-price passthrough under three scenarios. The row labels use inline math (rendered by the chart engine) to demonstrate the v1.1.1 table feature. All values are illustrative placeholders.</p>",
-          "section": "detail"
+          "body_html": "<p>The estimated effect of all 2025 tariffs on households by income decile, shown both as a share of after-tax income and in 2025 dollars, under two assumptions about whether the Section 122 tariffs expire or are extended.</p>",
+          "section": "households-prices",
+          "figureNum": 6
         }
       ]
     },
     {
-      "id": "revenue-prices",
-      "label": "Revenue & Prices",
-      "description": "Estimated tariff revenue and the effect of tariffs on consumer prices.",
+      "id": "tariff-rate-tracker",
+      "label": "Tariff Rate Tracker",
+      "description": "Daily effective U.S. tariff rates from The Budget Lab's open-source Tariff Rate Tracker — overall, by authority, by trading partner, and by commodity. Vertical markers flag major tariff-policy changes.",
+      "sections": [
+        {
+          "id": "overall",
+          "label": "Overall Rate"
+        },
+        {
+          "id": "by-partner",
+          "label": "By Trading Partner"
+        },
+        {
+          "id": "by-commodity",
+          "label": "By Commodity"
+        }
+      ],
       "figures": [
         {
-          "id": "tariff-revenue",
-          "short_label": "Tariff Revenue",
-          "figureNum": 1,
+          "id": "daily-effective-tariff-rate",
+          "short_label": "Daily Effective Tariff Rate",
           "figureType": "chart",
-          "data": "revenue-prices/tariff-revenue/data.csv",
+          "data": "tariff-rate-tracker/daily-effective-tariff-rate/data.csv",
           "spec": {
             "chartType": "line",
             "data": "data.csv",
-            "title": "Estimated Annual Tariff Revenue",
-            "subtitle": "Billions of dollars. Illustrative placeholder data.",
-            "source": "Placeholder data. The Budget Lab.",
-            "xAxisType": "quarterly",
+            "title": "Daily Effective Tariff Rate",
+            "subtitle": "Import-weighted average across all products and countries. Percent.",
+            "note": "Rates weighted by 2024 annual Census import values at HS10 x country level.",
+            "source": "Yale Budget Lab Tariff Rate Tracker; 2024 Census import values.",
+            "xAxisType": "temporal",
+            "yAxisPolicy": {
+              "min": 0,
+              "max": 25,
+              "tickCount": 5
+            },
+            "annotations": {
+              "xAxis": [
+                {
+                  "x": "2025-02-04",
+                  "label": "Fentanyl tariffs"
+                },
+                {
+                  "x": "2025-04-02",
+                  "label": "Liberation Day"
+                },
+                {
+                  "x": "2025-04-14",
+                  "label": "Geneva truce"
+                },
+                {
+                  "x": "2025-08-07",
+                  "label": "Reciprocal Phase 2"
+                },
+                {
+                  "x": "2026-02-24",
+                  "label": "IEEPA struck down"
+                },
+                {
+                  "x": "2026-04-06",
+                  "label": "Section 232 reorg"
+                },
+                {
+                  "x": "2026-07-23",
+                  "label": "Section 122 expiry",
+                  "color": "red",
+                  "style": "dashed"
+                }
+              ],
+              "bands": [
+                {
+                  "start": "2026-05-09",
+                  "end": "2026-12-31",
+                  "label": "Assumes no further policy changes"
+                }
+              ]
+            }
+          },
+          "body_html": "<p>The import-weighted average effective tariff rate across all products and countries, updated daily. Vertical markers flag major tariff-policy changes.</p>",
+          "section": "overall",
+          "figureNum": 1
+        },
+        {
+          "id": "effective-tariff-rate-by-authority",
+          "short_label": "ETR by Authority",
+          "figureType": "chart",
+          "data": "tariff-rate-tracker/effective-tariff-rate-by-authority/data.csv",
+          "spec": {
+            "chartType": "area",
+            "data": "data.csv",
+            "title": "Effective Tariff Rate by Authority",
+            "subtitle": "Import-weighted ETR decomposed by tariff authority, including base (MFN) rate. Percent.",
+            "note": "Authorities generally stack with mutual exclusion, except for certain 232 and IEEPA/122 country-product pairs.",
+            "source": "Yale Budget Lab Tariff Rate Tracker.",
+            "xAxisType": "temporal",
+            "yAxisPolicy": {
+              "min": 0,
+              "max": 25,
+              "tickCount": 5
+            },
+            "series_order": [
+              "Base Rate",
+              "Section 232",
+              "Section 301",
+              "IEEPA Reciprocal",
+              "IEEPA Fentanyl",
+              "Section 122"
+            ],
+            "annotations": {
+              "xAxis": [
+                {
+                  "x": "2025-02-04",
+                  "label": "Fentanyl tariffs"
+                },
+                {
+                  "x": "2025-04-02",
+                  "label": "Liberation Day"
+                },
+                {
+                  "x": "2025-04-14",
+                  "label": "Geneva truce"
+                },
+                {
+                  "x": "2025-08-07",
+                  "label": "Reciprocal Phase 2"
+                },
+                {
+                  "x": "2026-02-24",
+                  "label": "IEEPA struck down"
+                },
+                {
+                  "x": "2026-04-06",
+                  "label": "Section 232 reorg"
+                },
+                {
+                  "x": "2026-07-23",
+                  "label": "Section 122 expiry",
+                  "color": "red",
+                  "style": "dashed"
+                }
+              ],
+              "bands": [
+                {
+                  "start": "2026-05-09",
+                  "end": "2026-12-31",
+                  "label": "Assumes no further policy changes"
+                }
+              ]
+            }
+          },
+          "body_html": "<p>The daily effective tariff rate decomposed into its contributing authorities, stacked on top of the base (MFN) rate. The series sum to the total effective rate shown in the daily-rate figure.</p>",
+          "section": "overall",
+          "figureNum": 2
+        },
+        {
+          "id": "china-vs-other-countries",
+          "short_label": "China vs. Other Countries",
+          "figureType": "chart",
+          "data": "tariff-rate-tracker/china-vs-other-countries/data.csv",
+          "spec": {
+            "chartType": "line",
+            "data": "data.csv",
+            "title": "China vs. All Other Countries",
+            "subtitle": "Import-weighted ETR on imports from China vs. all other countries. Percent.",
+            "note": "Section 122 expiry applied at 2026-07-23.",
+            "source": "Yale Budget Lab Tariff Rate Tracker.",
+            "xAxisType": "temporal",
+            "yAxisPolicy": {
+              "min": 0,
+              "max": 120,
+              "tickCount": 5
+            },
+            "series_order": [
+              "China",
+              "All Other Countries"
+            ],
+            "annotations": {
+              "xAxis": [
+                {
+                  "x": "2025-02-04",
+                  "label": "Fentanyl tariffs"
+                },
+                {
+                  "x": "2025-04-02",
+                  "label": "Liberation Day"
+                },
+                {
+                  "x": "2025-04-14",
+                  "label": "Geneva truce"
+                },
+                {
+                  "x": "2025-08-07",
+                  "label": "Reciprocal Phase 2"
+                },
+                {
+                  "x": "2026-02-24",
+                  "label": "IEEPA struck down"
+                },
+                {
+                  "x": "2026-04-06",
+                  "label": "Section 232 reorg"
+                },
+                {
+                  "x": "2026-07-23",
+                  "label": "Section 122 expiry",
+                  "color": "red",
+                  "style": "dashed"
+                }
+              ],
+              "bands": [
+                {
+                  "start": "2026-05-09",
+                  "end": "2026-12-31",
+                  "label": "Assumes no further policy changes"
+                }
+              ]
+            }
+          },
+          "body_html": "<p>The import-weighted effective tariff rate on imports from China compared with all other countries.</p>",
+          "section": "by-partner",
+          "figureNum": 3
+        },
+        {
+          "id": "etr-by-trading-partner",
+          "short_label": "ETR by Trading Partner",
+          "figureType": "chart",
+          "data": "tariff-rate-tracker/etr-by-trading-partner/data.csv",
+          "spec": {
+            "chartType": "line",
+            "data": "data.csv",
+            "title": "Daily ETR by Trading Partner (Excluding China)",
+            "subtitle": "Import-weighted tariff rate by partner region, excluding China. Percent.",
+            "note": "Partners: Canada, Mexico, EU-27, UK, Japan, FTA Partners, Rest of World. Section 122 expiry applied at 2026-07-23.",
+            "source": "Yale Budget Lab Tariff Rate Tracker.",
+            "xAxisType": "temporal",
+            "yAxisPolicy": {
+              "min": 0,
+              "max": 20,
+              "tickCount": 5
+            },
+            "series_order": [
+              "Canada",
+              "Mexico",
+              "EU-27",
+              "UK",
+              "Japan",
+              "FTA Partners",
+              "Rest of World"
+            ],
+            "annotations": {
+              "xAxis": [
+                {
+                  "x": "2025-02-04",
+                  "label": "Fentanyl tariffs"
+                },
+                {
+                  "x": "2025-04-02",
+                  "label": "Liberation Day"
+                },
+                {
+                  "x": "2025-04-14",
+                  "label": "Geneva truce"
+                },
+                {
+                  "x": "2025-08-07",
+                  "label": "Reciprocal Phase 2"
+                },
+                {
+                  "x": "2026-02-24",
+                  "label": "IEEPA struck down"
+                },
+                {
+                  "x": "2026-04-06",
+                  "label": "Section 232 reorg"
+                },
+                {
+                  "x": "2026-07-23",
+                  "label": "Section 122 expiry",
+                  "color": "red",
+                  "style": "dashed"
+                }
+              ],
+              "bands": [
+                {
+                  "start": "2026-05-09",
+                  "end": "2026-12-31",
+                  "label": "Assumes no further policy changes"
+                }
+              ]
+            }
+          },
+          "body_html": "<p>The import-weighted effective tariff rate by partner region (excluding China).</p>",
+          "section": "by-partner",
+          "figureNum": 4
+        },
+        {
+          "id": "etr-by-commodity",
+          "short_label": "ETR by Commodity",
+          "figureType": "chart",
+          "data": "tariff-rate-tracker/etr-by-commodity/data.csv",
+          "spec": {
+            "chartType": "line",
+            "data": "data.csv",
+            "title": "Daily Effective Tariff Rate for Selected Commodities",
+            "subtitle": "Daily import-weighted ETR by GTAP sector. Percent.",
+            "note": "Sectors defined by GTAP classification.",
+            "source": "Yale Budget Lab Tariff Rate Tracker.",
+            "xAxisType": "temporal",
             "yAxisPolicy": {
               "min": 0,
               "tickCount": 5
+            },
+            "series_order": [
+              "Steel",
+              "Non-Ferrous Metals (incl. Aluminum)",
+              "Motor Vehicles",
+              "Electronics",
+              "Textiles",
+              "Processed Food"
+            ],
+            "annotations": {
+              "xAxis": [
+                {
+                  "x": "2025-02-04",
+                  "label": "Fentanyl tariffs"
+                },
+                {
+                  "x": "2025-04-02",
+                  "label": "Liberation Day"
+                },
+                {
+                  "x": "2025-04-14",
+                  "label": "Geneva truce"
+                },
+                {
+                  "x": "2025-08-07",
+                  "label": "Reciprocal Phase 2"
+                },
+                {
+                  "x": "2026-02-24",
+                  "label": "IEEPA struck down"
+                },
+                {
+                  "x": "2026-04-06",
+                  "label": "Section 232 reorg"
+                },
+                {
+                  "x": "2026-07-23",
+                  "label": "Section 122 expiry",
+                  "color": "red",
+                  "style": "dashed"
+                }
+              ],
+              "bands": [
+                {
+                  "start": "2026-05-09",
+                  "end": "2026-12-31",
+                  "label": "Assumes no further policy changes"
+                }
+              ]
             }
           },
-          "body_html": "<p>Estimated customs duties collected, at an annual rate. This is placeholder text describing the figure; the values shown are illustrative and not Budget Lab estimates.</p>"
-        },
-        {
-          "id": "price-impact-table",
-          "short_label": "Price Impact Table",
-          "figureNum": 2,
-          "figureType": "table",
-          "data": "revenue-prices/price-impact-table/data.csv",
-          "spec": {
-            "title": "Estimated Price-Level Impact by Category",
-            "data": "data.csv",
-            "subtitle": "Percent change in consumer prices. Illustrative placeholder data.",
-            "source": "Placeholder data. The Budget Lab.",
-            "stub": [
-              "category"
-            ],
-            "header": [
-              "scenario"
-            ],
-            "value": "value",
-            "column_order": [
-              "Current",
-              "Announced"
-            ],
-            "format": {
-              "default": {
-                "type": "percent",
-                "decimals": 2
-              }
-            }
-          },
-          "body_html": "<p>Estimated one-time percent change in consumer price levels by spending category under two scenarios. All values are illustrative placeholders.</p>"
+          "body_html": "<p>The import-weighted effective tariff rate for selected GTAP commodity sectors.</p>",
+          "section": "by-commodity",
+          "figureNum": 5
         }
       ]
     }

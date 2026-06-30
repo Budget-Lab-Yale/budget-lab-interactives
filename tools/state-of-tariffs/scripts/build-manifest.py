@@ -23,11 +23,21 @@ config.md frontmatter schema:
   selectors   : [ {id, label?, kind, default, options:[{id,label}]} ]  optional sidebar dropdowns
   (body)      -> body_html (python-markdown, "extra")
 
+A "prose" pane (figureType: prose) is a text-only nav item (not numbered) that renders an
+ordered list of cards: a new TEXT card starts at each `##` heading, and a TABLE card is placed
+wherever a `{{table: <id>}}` directive appears on its own line — so tables can sit before,
+between, or after any text. Its frontmatter is:
+  short_label : str (required)
+  figureType  : prose
+  tables      : { <id>: { spec: <TableSpec incl. data: file.csv> } }   tables refer-able from body
+  (body)      -> text/table card sequence
+
 Run:  C:/Python314/python.exe scripts/build-manifest.py
 """
 
 from __future__ import annotations
 
+import csv
 import json
 import re
 import sys
@@ -65,7 +75,121 @@ def parse_config_md(path: Path) -> tuple[dict, str]:
     return front, m.group(2)
 
 
-def build_figure(tab_id: str, fig_id: str, section_id: "str | None", num: int) -> dict:
+# A prose pane places table cards inline via a directive on its own line:  {{table: <id>}}
+TABLE_DIRECTIVE_RE = re.compile(r"^\s*\{\{\s*table:\s*([\w-]+)\s*\}\}\s*$")
+
+
+def parse_prose_blocks(body: str) -> tuple[list[dict], list[str]]:
+    """Split a prose body into an ordered list of cards. A new text card starts at each
+    `## ` heading; a `{{table: id}}` line emits a table card at that position. Returns
+    (blocks, referenced_table_ids)."""
+    blocks: list[dict] = []
+    referenced: list[str] = []
+    buf: list[str] = []
+
+    def flush_text() -> None:
+        text = "\n".join(buf).strip()
+        if text:
+            blocks.append({"type": "text", "html": render_markdown(text)})
+        buf.clear()
+
+    for line in body.splitlines():
+        m = TABLE_DIRECTIVE_RE.match(line)
+        if m:
+            flush_text()
+            blocks.append({"type": "table", "table": m.group(1)})
+            referenced.append(m.group(1))
+        elif line.lstrip().startswith("## "):
+            flush_text()
+            buf.append(line)
+        else:
+            buf.append(line)
+    flush_text()
+    return blocks, referenced
+
+
+def build_prose_tables(config: "Path", folder: "Path", tab_id: str, fig_id: str) -> dict:
+    """Compile the frontmatter `tables:` map into {id: {spec, data}} with resolved data paths."""
+    front, _ = parse_config_md(config)
+    tables_front = front.get("tables") or {}
+    if not isinstance(tables_front, dict):
+        fail(f"{config}: 'tables' must be a mapping of id -> {{spec, ...}}")
+    out: dict = {}
+    for tid, tdef in tables_front.items():
+        spec = (tdef or {}).get("spec")
+        if not isinstance(spec, dict):
+            fail(f"{config}: table '{tid}' needs a 'spec' mapping")
+        if not all(k in spec for k in ("stub", "header", "value")):
+            fail(f"{config}: table '{tid}' spec must set 'stub', 'header', and 'value'")
+        data_name = spec.get("data", "data.csv")
+        if not isinstance(data_name, str):
+            fail(f"{config}: table '{tid}' supports only a simple 'spec.data: <filename>'")
+        if not (folder / data_name).exists():
+            fail(f"{config}: table '{tid}' data file not found ({folder / data_name})")
+        out[tid] = {"spec": spec, "data": f"{tab_id}/{fig_id}/{data_name}"}
+    return out
+
+
+def csv_x_range(data_path: Path, x_col: str) -> "tuple[str, str] | None":
+    """Min/max of the x column in a CSV (ISO date / numeric strings sort correctly)."""
+    try:
+        with data_path.open(encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            xs = [row[x_col] for row in reader if row.get(x_col)]
+    except (OSError, KeyError):
+        return None
+    return (min(xs), max(xs)) if xs else None
+
+
+def apply_events(spec: dict, front: dict, tab_id: str, fig_id: str, config: Path) -> None:
+    """`events: <name>` (or a list of names) pulls shared annotations from the tab's
+    events.yaml into spec.annotations. A named group is either a flat list (xAxis reference
+    lines) or a mapping with `xAxis` and/or `bands`. xAxis lines are filtered to the figure's
+    data date range; bands are passed through (the engine clamps to the domain)."""
+    names = front.get("events")
+    if not names:
+        return
+    if isinstance(names, str):
+        names = [names]
+    events_file = DATA_DIR / tab_id / "events.yaml"
+    if not events_file.exists():
+        fail(f"{config}: events: {names} but {events_file} not found")
+    catalog = load_yaml(events_file) or {}
+
+    xaxis: list = []
+    bands: list = []
+    for name in names:
+        group = catalog.get(name)
+        if group is None:
+            fail(f"{config}: events group '{name}' not found in {events_file}")
+        if isinstance(group, list):
+            xaxis += group
+        elif isinstance(group, dict):
+            xaxis += group.get("xAxis", [])
+            bands += group.get("bands", [])
+        else:
+            fail(f"{config}: events group '{name}' must be a list or mapping")
+
+    x_col = (spec.get("columns") or {}).get("x", "time")
+    rng = csv_x_range(DATA_DIR / tab_id / fig_id / spec.get("data", "data.csv"), x_col)
+    if rng:
+        lo, hi = rng
+        xaxis = [e for e in xaxis if lo <= str(e.get("x", "")) <= hi]
+
+    if not xaxis and not bands:
+        return
+    ann = spec.setdefault("annotations", {})
+    if xaxis:
+        ann["xAxis"] = ann.get("xAxis", []) + xaxis
+    if bands:
+        ann["bands"] = ann.get("bands", []) + bands
+
+
+def load_yaml(path: Path):
+    return yaml.safe_load(path.read_text(encoding="utf-8"))
+
+
+def build_figure(tab_id: str, fig_id: str, section_id: "str | None") -> dict:
     folder = DATA_DIR / tab_id / fig_id
     config = folder / "config.md"
     if not config.exists():
@@ -78,8 +202,26 @@ def build_figure(tab_id: str, fig_id: str, section_id: "str | None", num: int) -
         fail(f"{config}: 'short_label' is required")
 
     figure_type = front.get("figureType", "chart")
-    if figure_type not in ("chart", "table"):
-        fail(f"{config}: figureType must be 'chart' or 'table', got '{figure_type}'")
+    if figure_type not in ("chart", "table", "prose"):
+        fail(f"{config}: figureType must be 'chart', 'table', or 'prose', got '{figure_type}'")
+
+    # Prose pane: an ordered sequence of text cards (split at each `##`) and inline table cards.
+    if figure_type == "prose":
+        blocks, referenced = parse_prose_blocks(body)
+        tables = build_prose_tables(config, folder, tab_id, fig_id)
+        for tid in referenced:
+            if tid not in tables:
+                fail(f"{config}: body references table '{{{{table: {tid}}}}}' not defined under 'tables'")
+        figure = {
+            "id": fig_id,
+            "short_label": short_label,
+            "figureType": "prose",
+            "blocks": blocks,
+            "tables": tables,
+        }
+        if section_id:
+            figure["section"] = section_id
+        return figure
 
     spec = front.get("spec")
     if not isinstance(spec, dict):
@@ -100,10 +242,12 @@ def build_figure(tab_id: str, fig_id: str, section_id: "str | None", num: int) -
     if not data_path.exists():
         fail(f"{config}: data file not found ({data_path})")
 
+    if figure_type == "chart":
+        apply_events(spec, front, tab_id, fig_id, config)
+
     figure = {
         "id": fig_id,
         "short_label": short_label,
-        "figureNum": num,
         "figureType": figure_type,
         # data is resolved by app.js against data_base_url (./data/): store the
         # path relative to the data dir.
@@ -149,8 +293,14 @@ def build_tab(tab: dict) -> dict:
         out["toggles"] = tab["toggles"]
 
     figures = []
-    for num, (fid, section_id) in enumerate(ordered_figures(tab), start=1):
-        figures.append(build_figure(tab["id"], fid, section_id, num))
+    num = 0
+    for fid, section_id in ordered_figures(tab):
+        fig = build_figure(tab["id"], fid, section_id)
+        # Prose panes are not numbered; charts/tables get sequential "Figure N".
+        if fig["figureType"] in ("chart", "table"):
+            num += 1
+            fig["figureNum"] = num
+        figures.append(fig)
     out["figures"] = figures
     return out
 

@@ -132,6 +132,47 @@ export async function renderFigure(mount, ctx) {
   appendDescription(mount, figure.body_html);
 }
 
+// Prose pane: an ordered list of cards — text cards (pre-rendered markdown, split at each
+// `##` by the build) and table cards (mounted via the engine), interleaved in author order.
+async function mountTableCard(card, def, fetchCsv) {
+  try {
+    const rows = def.data ? await fetchCsv(def.data) : [];
+    const teardown = engine().mountTable(card, { spec: def.spec, rows });
+    if (typeof teardown === "function") teardowns.push(teardown);
+  } catch (e) {
+    console.error(e);
+    card.innerHTML = `<div class="figure-error">Could not render table: ${e.message}</div>`;
+  }
+}
+
+export function renderProse(mount, ctx) {
+  for (const t of teardowns) { try { t(); } catch { /* ignore */ } }
+  teardowns = [];
+  mount.innerHTML = "";
+
+  const { figure, fetchCsv } = ctx;
+  const wrap = document.createElement("div");
+  wrap.className = "current-update"; // reuse prose card styling + outer-box suppression
+  mount.appendChild(wrap);
+
+  for (const block of (figure.blocks || [])) {
+    const card = document.createElement("div");
+    card.className = "current-update-card";
+    wrap.appendChild(card);
+    if (block.type === "text") {
+      card.innerHTML = block.html || "";
+    } else if (block.type === "table") {
+      const def = (figure.tables || {})[block.table];
+      if (!def) {
+        card.innerHTML = `<div class="figure-error">Unknown table: ${block.table}</div>`;
+        continue;
+      }
+      // Card is appended synchronously (order preserved); the table fills in when its CSV loads.
+      mountTableCard(card, def, fetchCsv);
+    }
+  }
+}
+
 export function renderCurrentUpdate(mount, { body_html } = {}) {
   for (const t of teardowns) { try { t(); } catch { /* ignore */ } }
   teardowns = [];
