@@ -1,0 +1,10 @@
+group,measure,scenario,value
+rates,statutory,Pre-2025,0.024
+rates,statutory,Current,0.087
+rates,statutory,Announced,0.155
+rates,effective,Pre-2025,0.020
+rates,effective,Current,0.079
+rates,effective,Announced,0.141
+transmission,passthrough,Pre-2025,0.90
+transmission,passthrough,Current,0.92
+transmission,passthrough,Announced,0.94

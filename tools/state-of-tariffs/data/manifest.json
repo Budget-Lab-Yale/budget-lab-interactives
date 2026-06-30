@@ -1,0 +1,230 @@
+{
+  "release": {
+    "updated": "June 30, 2026",
+    "version": "0.1"
+  },
+  "data_base_url": "./data/",
+  "tabs": [
+    {
+      "id": "current-update",
+      "label": "Overview",
+      "description": "Summary of the current state of U.S. tariffs.",
+      "body_html": "<h2>Overview</h2>\n<p>This is placeholder content for the <strong>State of Tariffs</strong> interactive. The structure, navigation, and chart-engine wiring are in place; the figures and text below are samples to be replaced with real content.</p>\n<p>Use the tabs above to move between sections. Within each tab, the list on the left selects which figure to view; toggles and selectors (where present) switch between views of the same data.</p>\n<h2>What this tool will cover</h2>\n<ul>\n<li><strong>Tariff Levels</strong> — the overall U.S. tariff rate over time, rates by trading partner, and a detailed rate table.</li>\n<li><strong>Revenue &amp; Prices</strong> — estimated tariff revenue and the pass-through of tariffs to consumer prices.</li>\n</ul>\n<p>All numbers currently shown are illustrative placeholders, not Budget Lab estimates.</p>"
+    },
+    {
+      "id": "tariff-levels",
+      "label": "Tariff Levels",
+      "description": "How high U.S. tariffs are — overall, over time, and by trading partner.",
+      "sections": [
+        {
+          "id": "rates",
+          "label": "Rates Over Time"
+        },
+        {
+          "id": "detail",
+          "label": "Detail"
+        }
+      ],
+      "toggles": [
+        {
+          "id": "variant",
+          "label": "Weighting",
+          "options": [
+            {
+              "id": "fixed",
+              "label": "Fixed weights"
+            },
+            {
+              "id": "dynamic",
+              "label": "Dynamic weights"
+            }
+          ],
+          "default": "fixed",
+          "applies_to_figures": [
+            "average-tariff-rate"
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "id": "average-tariff-rate",
+          "short_label": "Average Tariff Rate",
+          "figureNum": 1,
+          "figureType": "chart",
+          "data": "tariff-levels/average-tariff-rate/data.csv",
+          "spec": {
+            "chartType": "line",
+            "data": "data.csv",
+            "title": "Average U.S. Tariff Rate ({variant})",
+            "subtitle": "Percent of total goods imports. Illustrative placeholder data.",
+            "source": "Placeholder data. The Budget Lab.",
+            "note": "Numbers shown are illustrative and not Budget Lab estimates.",
+            "xAxisType": "quarterly",
+            "yAxisPolicy": {
+              "min": 0,
+              "tickCount": 5
+            }
+          },
+          "body_html": "<p>The average tariff rate is the total duties collected divided by the value of goods imports. The <strong>Weighting</strong> toggle switches between fixed import weights (held at a base-period mix) and dynamic weights (the current import mix). This is placeholder text describing the figure.</p>",
+          "section": "rates",
+          "variants": [
+            {
+              "id": "fixed",
+              "label": "Fixed weights"
+            },
+            {
+              "id": "dynamic",
+              "label": "Dynamic weights"
+            }
+          ]
+        },
+        {
+          "id": "rate-by-trading-partner",
+          "short_label": "Rate by Trading Partner",
+          "figureNum": 2,
+          "figureType": "chart",
+          "data": "tariff-levels/rate-by-trading-partner/data.csv",
+          "spec": {
+            "chartType": "line",
+            "data": "data.csv",
+            "title": "U.S. Tariff Rate on Imports from {partner}",
+            "subtitle": "Percent. Illustrative placeholder data.",
+            "source": "Placeholder data. The Budget Lab.",
+            "xAxisType": "quarterly",
+            "yAxisPolicy": {
+              "min": 0,
+              "tickCount": 5
+            }
+          },
+          "body_html": "<p>Average U.S. tariff rate applied to imports from a selected trading partner. Use the <strong>Trading partner</strong> selector to switch the series shown. This is placeholder text describing the figure.</p>",
+          "section": "rates",
+          "selectors": [
+            {
+              "id": "partner",
+              "label": "Trading partner",
+              "kind": "single",
+              "default": "china",
+              "options": [
+                {
+                  "id": "china",
+                  "label": "China"
+                },
+                {
+                  "id": "eu",
+                  "label": "European Union"
+                },
+                {
+                  "id": "mexico",
+                  "label": "Mexico"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "effective-rate-table",
+          "short_label": "Effective Rate Table",
+          "figureNum": 3,
+          "figureType": "table",
+          "data": "tariff-levels/effective-rate-table/data.csv",
+          "spec": {
+            "title": "Effective Tariff Rates by Scenario",
+            "data": "data.csv",
+            "subtitle": "Illustrative placeholder data.",
+            "source": "Placeholder data. The Budget Lab.",
+            "stub": [
+              "group",
+              {
+                "label": "measure"
+              }
+            ],
+            "header": [
+              "scenario"
+            ],
+            "value": "value",
+            "column_order": [
+              "Pre-2025",
+              "Current",
+              "Announced"
+            ],
+            "row_labels": {
+              "statutory": "Average statutory rate (\\(\\tau\\))",
+              "effective": "Effective rate (\\(\\tau_{eff}\\))",
+              "passthrough": "Import-price passthrough (\\(\\rho\\))"
+            },
+            "group_labels": {
+              "rates": "Tariff rates",
+              "transmission": "Price transmission"
+            },
+            "format": {
+              "default": {
+                "type": "percent",
+                "decimals": 1
+              }
+            }
+          },
+          "body_html": "<p>Statutory and effective tariff rates and the implied import-price passthrough under three scenarios. The row labels use inline math (rendered by the chart engine) to demonstrate the v1.1.1 table feature. All values are illustrative placeholders.</p>",
+          "section": "detail"
+        }
+      ]
+    },
+    {
+      "id": "revenue-prices",
+      "label": "Revenue & Prices",
+      "description": "Estimated tariff revenue and the effect of tariffs on consumer prices.",
+      "figures": [
+        {
+          "id": "tariff-revenue",
+          "short_label": "Tariff Revenue",
+          "figureNum": 1,
+          "figureType": "chart",
+          "data": "revenue-prices/tariff-revenue/data.csv",
+          "spec": {
+            "chartType": "line",
+            "data": "data.csv",
+            "title": "Estimated Annual Tariff Revenue",
+            "subtitle": "Billions of dollars. Illustrative placeholder data.",
+            "source": "Placeholder data. The Budget Lab.",
+            "xAxisType": "quarterly",
+            "yAxisPolicy": {
+              "min": 0,
+              "tickCount": 5
+            }
+          },
+          "body_html": "<p>Estimated customs duties collected, at an annual rate. This is placeholder text describing the figure; the values shown are illustrative and not Budget Lab estimates.</p>"
+        },
+        {
+          "id": "price-impact-table",
+          "short_label": "Price Impact Table",
+          "figureNum": 2,
+          "figureType": "table",
+          "data": "revenue-prices/price-impact-table/data.csv",
+          "spec": {
+            "title": "Estimated Price-Level Impact by Category",
+            "data": "data.csv",
+            "subtitle": "Percent change in consumer prices. Illustrative placeholder data.",
+            "source": "Placeholder data. The Budget Lab.",
+            "stub": [
+              "category"
+            ],
+            "header": [
+              "scenario"
+            ],
+            "value": "value",
+            "column_order": [
+              "Current",
+              "Announced"
+            ],
+            "format": {
+              "default": {
+                "type": "percent",
+                "decimals": 2
+              }
+            }
+          },
+          "body_html": "<p>Estimated one-time percent change in consumer price levels by spending category under two scenarios. All values are illustrative placeholders.</p>"
+        }
+      ]
+    }
+  ]
+}

@@ -8,6 +8,7 @@ Interactive web tools published by [The Budget Lab at Yale](https://budgetlab.ya
 |---|---|---|
 | AI Labor Market Tracker | https://interactives.budgetlab.yale.edu/tools/ai-labor-market-tracker/ | [`tools/ai-labor-market-tracker/`](tools/ai-labor-market-tracker/) |
 | Deficit Impact Calculator | https://interactives.budgetlab.yale.edu/tools/deficit-impact-calculator/ | [`tools/deficit-impact-calculator/`](tools/deficit-impact-calculator/) |
+| State of Tariffs | https://interactives.budgetlab.yale.edu/tools/state-of-tariffs/ | [`tools/state-of-tariffs/`](tools/state-of-tariffs/) |
 
 ## Embedding
 

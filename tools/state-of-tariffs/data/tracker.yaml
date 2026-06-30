@@ -1,0 +1,40 @@
+release:
+  updated: June 30, 2026
+  version: '0.1'
+
+tabs:
+- id: current-update
+  label: Overview
+  description: Summary of the current state of U.S. tariffs.
+
+- id: tariff-levels
+  label: Tariff Levels
+  description: How high U.S. tariffs are — overall, over time, and by trading partner.
+  sections:
+  - id: rates
+    label: Rates Over Time
+    figures:
+    - average-tariff-rate
+    - rate-by-trading-partner
+  - id: detail
+    label: Detail
+    figures:
+    - effective-rate-table
+  toggles:
+  - id: variant
+    label: Weighting
+    options:
+    - id: fixed
+      label: Fixed weights
+    - id: dynamic
+      label: Dynamic weights
+    default: fixed
+    applies_to_figures:
+    - average-tariff-rate
+
+- id: revenue-prices
+  label: Revenue & Prices
+  description: Estimated tariff revenue and the effect of tariffs on consumer prices.
+  figures:
+  - tariff-revenue
+  - price-impact-table
