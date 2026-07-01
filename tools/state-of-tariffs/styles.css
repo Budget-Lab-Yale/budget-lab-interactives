@@ -286,6 +286,19 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 .sidebar-explainer p { margin: 0 0 6px; }
 .sidebar-explainer p:last-child { margin-bottom: 0; }
 
+/* Release metadata block (updated date + version), separated from the figure
+   selector above it by a horizontal rule. */
+.sidebar-release {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--tbl-border);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--tbl-text-muted);
+}
+.sidebar-release p { margin: 0 0 4px; }
+.sidebar-release p:last-child { margin-bottom: 0; }
+
 /* Download-all-data button */
 .sidebar-download { margin-top: 18px; }
 .sidebar-download-btn {
@@ -360,6 +373,13 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 }
 .current-update p { margin: 0 0 14px; }
 .current-update p:last-child { margin-bottom: 0; }
+/* Styled date block from a standalone {date: ...} token. */
+.current-update-date {
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: var(--tw-semi);
+  color: var(--tbl-text-muted);
+}
 .current-update-card {
   background: var(--tbl-bg);
   border: 1px solid var(--tbl-border);

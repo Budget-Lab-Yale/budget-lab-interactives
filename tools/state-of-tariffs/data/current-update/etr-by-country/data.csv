@@ -1,0 +1,109 @@
+scenario,country,metric,leaf,value
+Section 122 Expires,China,Average Effective Tariff Rate,avg-pre,19.4
+Section 122 Expires,China,Average Effective Tariff Rate,avg-post,18.9
+Section 122 Expires,China,Share of Goods Imports,share-pre,13.4
+Section 122 Expires,China,Share of Goods Imports,share-post,14.1
+Section 122 Expires,China,Contribution,contrib-pre,2.6
+Section 122 Expires,China,Contribution,contrib-post,2.7
+Section 122 Expires,Canada,Average Effective Tariff Rate,avg-pre,7.0
+Section 122 Expires,Canada,Average Effective Tariff Rate,avg-post,4.5
+Section 122 Expires,Canada,Share of Goods Imports,share-pre,12.6
+Section 122 Expires,Canada,Share of Goods Imports,share-post,13.8
+Section 122 Expires,Canada,Contribution,contrib-pre,0.9
+Section 122 Expires,Canada,Contribution,contrib-post,0.6
+Section 122 Expires,Mexico,Average Effective Tariff Rate,avg-pre,11.2
+Section 122 Expires,Mexico,Average Effective Tariff Rate,avg-post,9.6
+Section 122 Expires,Mexico,Share of Goods Imports,share-pre,15.7
+Section 122 Expires,Mexico,Share of Goods Imports,share-post,15.5
+Section 122 Expires,Mexico,Contribution,contrib-pre,1.8
+Section 122 Expires,Mexico,Contribution,contrib-post,1.5
+Section 122 Expires,EU,Average Effective Tariff Rate,avg-pre,6.5
+Section 122 Expires,EU,Average Effective Tariff Rate,avg-post,5.0
+Section 122 Expires,EU,Share of Goods Imports,share-pre,18
+Section 122 Expires,EU,Share of Goods Imports,share-post,18.2
+Section 122 Expires,EU,Contribution,contrib-pre,1.2
+Section 122 Expires,EU,Contribution,contrib-post,0.9
+Section 122 Expires,Japan,Average Effective Tariff Rate,avg-pre,11.1
+Section 122 Expires,Japan,Average Effective Tariff Rate,avg-post,9.7
+Section 122 Expires,Japan,Share of Goods Imports,share-pre,4.6
+Section 122 Expires,Japan,Share of Goods Imports,share-post,4.3
+Section 122 Expires,Japan,Contribution,contrib-pre,0.5
+Section 122 Expires,Japan,Contribution,contrib-post,0.4
+Section 122 Expires,UK,Average Effective Tariff Rate,avg-pre,4.9
+Section 122 Expires,UK,Average Effective Tariff Rate,avg-post,4.8
+Section 122 Expires,UK,Share of Goods Imports,share-pre,2
+Section 122 Expires,UK,Share of Goods Imports,share-post,2.2
+Section 122 Expires,UK,Contribution,contrib-pre,0.1
+Section 122 Expires,UK,Contribution,contrib-post,0.1
+Section 122 Expires,FTA Partners,Average Effective Tariff Rate,avg-pre,9.1
+Section 122 Expires,FTA Partners,Average Effective Tariff Rate,avg-post,5.8
+Section 122 Expires,FTA Partners,Share of Goods Imports,share-pre,9.2
+Section 122 Expires,FTA Partners,Share of Goods Imports,share-post,9.2
+Section 122 Expires,FTA Partners,Contribution,contrib-pre,0.8
+Section 122 Expires,FTA Partners,Contribution,contrib-post,0.5
+Section 122 Expires,Rest of World,Average Effective Tariff Rate,avg-pre,7.3
+Section 122 Expires,Rest of World,Average Effective Tariff Rate,avg-post,6.5
+Section 122 Expires,Rest of World,Share of Goods Imports,share-pre,24.4
+Section 122 Expires,Rest of World,Share of Goods Imports,share-post,22.7
+Section 122 Expires,Rest of World,Contribution,contrib-pre,1.8
+Section 122 Expires,Rest of World,Contribution,contrib-post,1.5
+Section 122 Expires,Total,Average Effective Tariff Rate,avg-pre,9.7
+Section 122 Expires,Total,Average Effective Tariff Rate,avg-post,8.2
+Section 122 Expires,Total,Share of Goods Imports,share-pre,100
+Section 122 Expires,Total,Share of Goods Imports,share-post,100
+Section 122 Expires,Total,Contribution,contrib-pre,9.7
+Section 122 Expires,Total,Contribution,contrib-post,8.2
+Section 122 Extended,China,Average Effective Tariff Rate,avg-pre,23.9
+Section 122 Extended,China,Average Effective Tariff Rate,avg-post,23.5
+Section 122 Extended,China,Share of Goods Imports,share-pre,13.4
+Section 122 Extended,China,Share of Goods Imports,share-post,13.4
+Section 122 Extended,China,Contribution,contrib-pre,3.2
+Section 122 Extended,China,Contribution,contrib-post,3.2
+Section 122 Extended,Canada,Average Effective Tariff Rate,avg-pre,7.1
+Section 122 Extended,Canada,Average Effective Tariff Rate,avg-post,4.6
+Section 122 Extended,Canada,Share of Goods Imports,share-pre,12.6
+Section 122 Extended,Canada,Share of Goods Imports,share-post,14.7
+Section 122 Extended,Canada,Contribution,contrib-pre,0.9
+Section 122 Extended,Canada,Contribution,contrib-post,0.7
+Section 122 Extended,Mexico,Average Effective Tariff Rate,avg-pre,11.5
+Section 122 Extended,Mexico,Average Effective Tariff Rate,avg-post,9.7
+Section 122 Extended,Mexico,Share of Goods Imports,share-pre,15.7
+Section 122 Extended,Mexico,Share of Goods Imports,share-post,16.5
+Section 122 Extended,Mexico,Contribution,contrib-pre,1.8
+Section 122 Extended,Mexico,Contribution,contrib-post,1.6
+Section 122 Extended,EU,Average Effective Tariff Rate,avg-pre,9.7
+Section 122 Extended,EU,Average Effective Tariff Rate,avg-post,7.9
+Section 122 Extended,EU,Share of Goods Imports,share-pre,18
+Section 122 Extended,EU,Share of Goods Imports,share-post,17.5
+Section 122 Extended,EU,Contribution,contrib-pre,1.8
+Section 122 Extended,EU,Contribution,contrib-post,1.4
+Section 122 Extended,Japan,Average Effective Tariff Rate,avg-pre,13.4
+Section 122 Extended,Japan,Average Effective Tariff Rate,avg-post,12.6
+Section 122 Extended,Japan,Share of Goods Imports,share-pre,4.6
+Section 122 Extended,Japan,Share of Goods Imports,share-post,4.3
+Section 122 Extended,Japan,Contribution,contrib-pre,0.6
+Section 122 Extended,Japan,Contribution,contrib-post,0.5
+Section 122 Extended,UK,Average Effective Tariff Rate,avg-pre,7.6
+Section 122 Extended,UK,Average Effective Tariff Rate,avg-post,7.3
+Section 122 Extended,UK,Share of Goods Imports,share-pre,2
+Section 122 Extended,UK,Share of Goods Imports,share-post,2.2
+Section 122 Extended,UK,Contribution,contrib-pre,0.2
+Section 122 Extended,UK,Contribution,contrib-post,0.2
+Section 122 Extended,FTA Partners,Average Effective Tariff Rate,avg-pre,12.2
+Section 122 Extended,FTA Partners,Average Effective Tariff Rate,avg-post,9.5
+Section 122 Extended,FTA Partners,Share of Goods Imports,share-pre,9.2
+Section 122 Extended,FTA Partners,Share of Goods Imports,share-post,8.9
+Section 122 Extended,FTA Partners,Contribution,contrib-pre,1.1
+Section 122 Extended,FTA Partners,Contribution,contrib-post,0.8
+Section 122 Extended,Rest of World,Average Effective Tariff Rate,avg-pre,11.0
+Section 122 Extended,Rest of World,Average Effective Tariff Rate,avg-post,9.7
+Section 122 Extended,Rest of World,Share of Goods Imports,share-pre,24.4
+Section 122 Extended,Rest of World,Share of Goods Imports,share-post,22.5
+Section 122 Extended,Rest of World,Contribution,contrib-pre,2.7
+Section 122 Extended,Rest of World,Contribution,contrib-post,2.2
+Section 122 Extended,Total,Average Effective Tariff Rate,avg-pre,12.2
+Section 122 Extended,Total,Average Effective Tariff Rate,avg-post,10.5
+Section 122 Extended,Total,Share of Goods Imports,share-pre,100
+Section 122 Extended,Total,Share of Goods Imports,share-post,100
+Section 122 Extended,Total,Contribution,contrib-pre,12.2
+Section 122 Extended,Total,Contribution,contrib-post,10.5

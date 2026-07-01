@@ -19,4 +19,3 @@ spec:
   - All Other Countries
 ---
 
-The import-weighted effective tariff rate on imports from China compared with all other countries.

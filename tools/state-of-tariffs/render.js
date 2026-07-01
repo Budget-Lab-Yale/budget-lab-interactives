@@ -78,11 +78,6 @@ function filterRows(rows, figure, variantId, toggles) {
   return out;
 }
 
-function eyebrowFor(figure) {
-  if (figure.figureNum == null) return undefined;
-  const kind = figure.figureType === "table" ? "Table" : "Figure";
-  return `${kind} ${figure.figureNum}`;
-}
 
 function appendDescription(mount, body_html) {
   if (!body_html) return;
@@ -119,7 +114,7 @@ export async function renderFigure(mount, ctx) {
     if (figure.data) {
       rows = filterRows(await fetchCsv(figure.data), figure, variantId, toggles);
     }
-    const opts = { spec, rows, eyebrow: eyebrowFor(figure), downloadName: figure.id };
+    const opts = { spec, rows, downloadName: figure.id };
     const teardown = figure.figureType === "table"
       ? engine().mountTable(card, opts)
       : engine().mountChart(card, opts);
@@ -173,33 +168,3 @@ export function renderProse(mount, ctx) {
   }
 }
 
-export function renderCurrentUpdate(mount, { body_html } = {}) {
-  for (const t of teardowns) { try { t(); } catch { /* ignore */ } }
-  teardowns = [];
-  mount.innerHTML = "";
-
-  const wrap = document.createElement("div");
-  wrap.className = "current-update";
-
-  // Split body_html into one card per <h2>. Markdown owns the section titles;
-  // anything before the first h2 becomes an untitled lead card.
-  const parsed = document.createElement("div");
-  parsed.innerHTML = body_html || "";
-
-  const cards = [];
-  let current = null;
-  for (const node of Array.from(parsed.childNodes)) {
-    if (node.nodeType === 1 && node.tagName === "H2") {
-      current = document.createElement("div");
-      current.className = "current-update-card";
-      cards.push(current);
-    } else if (!current) {
-      current = document.createElement("div");
-      current.className = "current-update-card";
-      cards.push(current);
-    }
-    current.appendChild(node);
-  }
-  cards.forEach(c => wrap.appendChild(c));
-  mount.appendChild(wrap);
-}

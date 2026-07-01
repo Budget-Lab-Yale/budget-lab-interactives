@@ -38,4 +38,4 @@ spec:
   - Nondurable Manufacturing
 ---
 
-The estimated long-run change in real value added by sector, under two assumptions about whether the Section 122 tariffs expire or are extended.
+Tariffs shrink the overall size of the US economy in the long run, but beneath aggregate GDP, they also drive reallocation across US sectors. Long-run output in the manufacturing sector expands slightly, with durable manufacturing seeing the largest gains within the manufacturing category. But this expansion in manufacturing more than crowds out the rest of the economy: construction, mining & extraction, and agriculture contract slightly. These patterns are similar regardless of whether Section 122 tariffs expire or are extended.

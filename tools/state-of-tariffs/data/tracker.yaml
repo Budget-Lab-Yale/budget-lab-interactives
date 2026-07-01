@@ -3,30 +3,36 @@ release:
   version: '1.0'
 
 tabs:
-- id: key-figures
-  label: Key Figures
-  description: Figures from The Budget Lab's State of U.S. Tariffs analysis (April 8, 2026) — effective tariff rates, macroeconomic effects, and effects on households and consumer prices.
+- id: current-update
+  label: Current Update
+  show_release: true   # show the updated-date + version in this tab's sidebar
+  description: This tool consolidates the Budget Lab's up-to-date analysis of tariffs. See the most recent projected impacts of tariffs in this tab and the daily effective tariff rate in the next tab.
   sections:
   - id: overview
-    label: Overview
+    label: ""   # no section heading above the Summary pane
     figures:
     - summary
   - id: rates
     label: Tariff Rates
     figures:
-    - effective-tariff-rate-since-1790
-    - daily-effective-tariff-rate
+    - etr-since-1790
+    - daily-etr
+    - etr-by-country
   - id: economic-effects
     label: Economic Effects
     figures:
-    - real-gdp-level-effects
-    - long-run-gdp-by-sector
-    - long-run-gdp-by-region
+    - gdp-level
+    - gdp-by-sector
+    - gdp-by-region
+  - id: fiscal-impact
+    label: Fiscal Impact
+    figures:
+    - revenue
   - id: households-prices
     label: Households & Prices
     figures:
-    - distributional-effects-by-decile
-    - consumer-price-effects
+    - distribution-by-decile
+    - prices-by-category
 
 - id: tariff-rate-tracker
   label: Tariff Rate Tracker
@@ -35,13 +41,13 @@ tabs:
   - id: overall
     label: Overall Rate
     figures:
-    - daily-effective-tariff-rate
-    - effective-tariff-rate-by-authority
+    - daily-etr
+    - etr-by-authority
   - id: by-partner
     label: By Trading Partner
     figures:
-    - china-vs-other-countries
-    - etr-by-trading-partner
+    - china-vs-row
+    - etr-by-partner
   - id: by-commodity
     label: By Commodity
     figures:

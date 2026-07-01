@@ -24,4 +24,3 @@ spec:
   - Rest of World
 ---
 
-The import-weighted effective tariff rate by partner region (excluding China).

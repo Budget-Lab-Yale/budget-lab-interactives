@@ -22,4 +22,3 @@ spec:
   - Processed Food
 ---
 
-The import-weighted effective tariff rate for selected GTAP commodity sectors.

@@ -6,13 +6,14 @@
   "data_base_url": "./data/",
   "tabs": [
     {
-      "id": "key-figures",
-      "label": "Key Figures",
-      "description": "Figures from The Budget Lab's State of U.S. Tariffs analysis (April 8, 2026) — effective tariff rates, macroeconomic effects, and effects on households and consumer prices.",
+      "id": "current-update",
+      "label": "Current Update",
+      "description": "This tool consolidates the Budget Lab's up-to-date analysis of tariffs. See the most recent projected impacts of tariffs in this tab and the daily effective tariff rate in the next tab.",
+      "show_release": true,
       "sections": [
         {
           "id": "overview",
-          "label": "Overview"
+          "label": ""
         },
         {
           "id": "rates",
@@ -21,6 +22,10 @@
         {
           "id": "economic-effects",
           "label": "Economic Effects"
+        },
+        {
+          "id": "fiscal-impact",
+          "label": "Fiscal Impact"
         },
         {
           "id": "households-prices",
@@ -35,56 +40,55 @@
           "blocks": [
             {
               "type": "text",
-              "html": "<p>This is a placeholder summary pane demonstrating the prose layout: an arbitrary number of text cards — one per <code>##</code> heading — with table cards placed inline via a <code>{{table: id}}</code> directive, so a table can sit before, between, or after any text card. Replace this with the real narrative.</p>"
+              "html": "<h2>Current Update</h2>\n<p class=\"current-update-date\">April 8, 2026</p>\n<p>This report reflects several changes, the code behind which is available to view in our public GitHub repository, since our update published the morning of April 2. The first two are policy changes announced later on April 2:</p>\n<ul>\n<li>Changes to metal tariffs. Prior to this announcement, Section 232 tariffs on metals were structured as a single-rate system where imports were subject to a 50% tariff on the respective metal content of steel, aluminum, and copper products. The new policy creates a multi-rate system based on metal content (where certain country-specific rates apply), effective April 6, 2026:<ul>\n<li>High-metal content products face a 50% rate.</li>\n<li>Most derivative products face a 25% rate (on the full import value, not just the metal content value).</li>\n<li>Other derivative products face a minimum 15% overall tariff rate.</li>\n<li>Products with less than 15% metal content by weight are exempt (though may be subject to other tariffs).</li>\n</ul>\n</li>\n<li>New pharmaceutical tariffs. This announcement introduces a new 100% Section 232 tariff on most patented pharmaceuticals and related products. Generic drugs and “orphan” drugs are exempt, and certain countries face lower rates based on trade deals. Products from companies who make certain onshoring agreements with the administration are eligible for a lower rate; if those companies also enter pricing agreements, their products are exempt entirely. Seventeen drug manufacturers are named explicitly in the announcement as having pre-existing onshoring agreements. This regime goes into effect on September 29, 2026.</li>\n</ul>\n<p>Both regimes include scheduled future changes that we do not model. (The metal tariff’s 15% floor is temporary, expiring December 31, 2027; elements of the company-specific preferential treatment framework for the pharmaceutical tariffs expire in 2029 and 2030.) Because we use a “current policy” modeling framework, where we evaluate the effects of policy as enacted through a near-term horizon, these longer-term scheduled changes are not reflected in our estimates.</p>\n<p>Since the last report, we also made several minor changes to our effective tariff rate model which affected the estimated overall average effective tariff rate by less than 0.1 percentage point.</p>"
             },
             {
               "type": "table",
-              "table": "rate"
-            },
-            {
-              "type": "text",
-              "html": "<h2>Key Takeaways</h2>\n<p>Placeholder narrative. Tariffs raise consumer price levels and modestly lower long-run real GDP, with larger effects if the Section 122 tariffs are extended rather than allowed to expire.</p>"
+              "table": "policy"
             },
             {
               "type": "table",
-              "table": "headline"
-            },
-            {
-              "type": "text",
-              "html": "<h2>Notes</h2>\n<p>Placeholder notes card, appearing after the second table. All values shown here are illustrative and not Budget Lab estimates.</p>"
+              "table": "effects"
             }
           ],
           "tables": {
-            "rate": {
+            "policy": {
               "spec": {
-                "title": "Effective Tariff Rate, End of 2026",
-                "data": "rate.csv",
+                "title": "Current Tariff Policy as of April 8, 2026",
+                "data": "policy.csv",
                 "stub": [
-                  "measure"
+                  "group",
+                  {
+                    "label": "item"
+                  }
                 ],
                 "header": [
-                  "scenario"
+                  "col"
                 ],
                 "value": "value",
-                "column_order": [
-                  "Section 122 Expires",
-                  "Section 122 Extended"
-                ],
-                "format": {
-                  "default": {
-                    "type": "percent",
-                    "decimals": 1
-                  }
-                }
+                "group_labels": {
+                  "s122": "Broad Tariffs under Section 122 Authority",
+                  "s232": "Product-Specific Tariffs under Section 232 Authority"
+                },
+                "header_labels": {
+                  "detail": " "
+                },
+                "stub_header": " ",
+                "column_width": 360,
+                "notes": "Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap.",
+                "source": "White House proclamations and executive orders; USITC HTS. The Budget Lab analysis."
               },
-              "data": "key-figures/summary/rate.csv"
+              "data": "current-update/summary/policy.csv"
             },
-            "headline": {
+            "effects": {
               "spec": {
-                "title": "Headline Long-Run Effects",
-                "data": "headline.csv",
+                "title": "Summary Economic & Fiscal Effects of Trump Administration Tariffs",
+                "data": "effects.csv",
                 "stub": [
-                  "metric"
+                  "group",
+                  {
+                    "label": "metric"
+                  }
                 ],
                 "header": [
                   "scenario"
@@ -94,23 +98,80 @@
                   "Section 122 Expires",
                   "Section 122 Extended"
                 ],
+                "group_labels": {
+                  "eff": "Effective Tariff Rates at the End of 2026",
+                  "fiscal": "Fiscal",
+                  "prices": "Prices in the Medium Run",
+                  "output": "Output and Employment"
+                },
                 "format": {
                   "default": {
-                    "type": "percent",
-                    "decimals": 2
+                    "type": "number",
+                    "decimals": 1
+                  },
+                  "groups": {
+                    "eff": {
+                      "type": "number",
+                      "decimals": 1,
+                      "suffix": "%"
+                    },
+                    "fiscal": {
+                      "type": "currency",
+                      "decimals": 2,
+                      "prefix": "$"
+                    }
+                  },
+                  "rows": {
+                    "Percent Change in PCE Price Level, pre-substitution": {
+                      "type": "number",
+                      "decimals": 1,
+                      "suffix": "%"
+                    },
+                    "Percent Change in PCE Price Level, post-substitution": {
+                      "type": "number",
+                      "decimals": 1,
+                      "suffix": "%"
+                    },
+                    "Average Household Real Income Loss, Pre-Substitution (2025$)": {
+                      "type": "currency",
+                      "decimals": 0,
+                      "prefix": "$",
+                      "thousands": true
+                    },
+                    "Average Household Real Income Loss, Post-Substitution (2025$)": {
+                      "type": "currency",
+                      "decimals": 0,
+                      "prefix": "$",
+                      "thousands": true
+                    },
+                    "Percent change in Q4 2026 GDP": {
+                      "type": "number",
+                      "decimals": 2,
+                      "suffix": "%"
+                    },
+                    "Percent change in long-run GDP": {
+                      "type": "number",
+                      "decimals": 2,
+                      "suffix": "%"
+                    },
+                    "Percentage Point Change in the Unemployment Rate, End of 2026": {
+                      "type": "number",
+                      "decimals": 2
+                    }
                   }
-                }
+                },
+                "source": "GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis."
               },
-              "data": "key-figures/summary/headline.csv"
+              "data": "current-update/summary/effects.csv"
             }
           },
           "section": "overview"
         },
         {
-          "id": "effective-tariff-rate-since-1790",
+          "id": "etr-since-1790",
           "short_label": "Effective Tariff Rate Since 1790",
           "figureType": "chart",
-          "data": "key-figures/effective-tariff-rate-since-1790/data.csv",
+          "data": "current-update/etr-since-1790/data.csv",
           "spec": {
             "chartType": "line",
             "data": "data.csv",
@@ -165,19 +226,19 @@
               ]
             }
           },
-          "body_html": "<p>The average effective tariff rate is customs duty revenue as a share of the value of goods imports. The historical series runs through 2024; the dashed lines project the post- and pre-substitution rates implied by 2025–2026 tariff policy. The two horizontal reference lines mark the current post- and pre-substitution rates.</p>",
+          "body_html": "<p>The distinction between pre-substitution metrics (before consumers and businesses shift purchases in response to the tariffs) and post-substitution (after they shift) is a crucial one. One metric where the difference is meaningful is the average effective tariff rate.</p>\n<p>Measured pre-substitution—assuming there are no shifts in the import shares of different countries and products—the tariff policy in effect as of April 6 brings the US average effective tariff rate to approximately 11.8%, the highest since the early 1940s (excluding last year's tariff rates). A pre-substitution approach is a good measure of welfare, since it reflects the full cost faced by consumers and firms before they start making difficult spending choices. After the Section 122 tariffs expire in July and the Section 232 pharmaceutical tariffs take effect in September, the rate will settle at 9.7%. If the Section 122 tariffs are instead made permanent, the end-of-2026 rate would be 12.2%.</p>\n<p>Post-substitution—after imports shift in response to the tariffs—the end-of-2026 effective tariff rate will be 8.2% assuming Section 122 expires, or 10.5% if extended.</p>\n<p>Figure 1 shows the Trump administration’s tariffs in the long-run historical context, and Figure 2 plots the daily pre-substitution ETR throughout 2025 and 2026. Table 2 shows a country-level breakdown for pre- and post-substitution rates for the end of 2026.</p>",
           "section": "rates",
           "figureNum": 1
         },
         {
-          "id": "daily-effective-tariff-rate",
+          "id": "daily-etr",
           "short_label": "Daily Effective Tariff Rate",
           "figureType": "chart",
-          "data": "key-figures/daily-effective-tariff-rate/data.csv",
+          "data": "current-update/daily-etr/data.csv",
           "spec": {
             "chartType": "line",
             "data": "data.csv",
-            "title": "Tariff Impact Tracker: Daily Effective Tariff Rate",
+            "title": "Daily Effective Tariff Rate",
             "subtitle": "Percent.",
             "source": "The Budget Lab analysis.",
             "xAxisType": "temporal",
@@ -186,15 +247,75 @@
               "tickCount": 5
             }
           },
-          "body_html": "<p>The daily effective tariff rate implied by tariff policy in effect on each date, from January 2025 through the end of 2026.</p>",
+          "body_html": "<p>The distinction between pre-substitution metrics (before consumers and businesses shift purchases in response to the tariffs) and post-substitution (after they shift) is a crucial one. One metric where the difference is meaningful is the average effective tariff rate.</p>\n<p>Measured pre-substitution—assuming there are no shifts in the import shares of different countries and products—the tariff policy in effect as of April 6 brings the US average effective tariff rate to approximately 11.8%, the highest since the early 1940s (excluding last year's tariff rates). A pre-substitution approach is a good measure of welfare, since it reflects the full cost faced by consumers and firms before they start making difficult spending choices. After the Section 122 tariffs expire in July and the Section 232 pharmaceutical tariffs take effect in September, the rate will settle at 9.7%. If the Section 122 tariffs are instead made permanent, the end-of-2026 rate would be 12.2%.</p>\n<p>Post-substitution—after imports shift in response to the tariffs—the end-of-2026 effective tariff rate will be 8.2% assuming Section 122 expires, or 10.5% if extended.</p>\n<p>Figure 1 shows the Trump administration’s tariffs in the long-run historical context, and Figure 2 plots the daily pre-substitution ETR throughout 2025 and 2026. Table 2 shows a country-level breakdown for pre- and post-substitution rates for the end of 2026.</p>",
           "section": "rates",
           "figureNum": 2
         },
         {
-          "id": "real-gdp-level-effects",
+          "id": "etr-by-country",
+          "short_label": "Average Effective Rate by Country",
+          "figureType": "table",
+          "data": "current-update/etr-by-country/data.csv",
+          "spec": {
+            "title": "Average Effective US Tariff Rate at the End of 2026, Trump Administration Tariffs",
+            "subtitle": "Change from baseline, pre- and post-substitution.",
+            "data": "data.csv",
+            "stub": [
+              "scenario",
+              {
+                "label": "country"
+              }
+            ],
+            "header": [
+              "metric",
+              "leaf"
+            ],
+            "value": "value",
+            "column_order": [
+              "avg-pre",
+              "avg-post",
+              "share-pre",
+              "share-post",
+              "contrib-pre",
+              "contrib-post"
+            ],
+            "header_labels": {
+              "avg-pre": "Pre-sub",
+              "avg-post": "Post-sub",
+              "share-pre": "Pre-sub",
+              "share-post": "Post-sub",
+              "contrib-pre": "Pre-sub",
+              "contrib-post": "Post-sub"
+            },
+            "format": {
+              "default": {
+                "type": "number",
+                "decimals": 1
+              },
+              "columns": {
+                "share-pre": {
+                  "type": "number",
+                  "decimals": 1,
+                  "suffix": "%"
+                },
+                "share-post": {
+                  "type": "number",
+                  "decimals": 1,
+                  "suffix": "%"
+                }
+              }
+            },
+            "source": "GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis."
+          },
+          "body_html": "<p>A country-level breakdown of the average effective US tariff rate at the end of 2026, the share of goods imports each partner accounts for, and each partner's contribution to the overall rate — shown before and after trade substitution, under both Section 122 scenarios.</p>",
+          "section": "rates",
+          "figureNum": 3
+        },
+        {
+          "id": "gdp-level",
           "short_label": "Real GDP Level Effects",
           "figureType": "chart",
-          "data": "key-figures/real-gdp-level-effects/data.csv",
+          "data": "current-update/gdp-level/data.csv",
           "spec": {
             "chartType": "line",
             "data": "data.csv",
@@ -211,15 +332,15 @@
               "Section 122 Extended"
             ]
           },
-          "body_html": "<p>The estimated effect of Trump administration tariffs on the level of U.S. real GDP, relative to a no-tariff baseline, under two assumptions about whether the Section 122 tariffs expire or are extended.</p>",
+          "body_html": "<p>TBL estimates that, all else equal, the current tariff regime has reduced GDP and increased unemployment slightly. While the level of output in 2026 is lower than it would have otherwise been if the pre-2025 tariff regime had been maintained, tariffs are increasing the growth rate of output in 2026 as the economy recovers somewhat from the large shock in 2025. The level of real GDP remains persistently 0.11% to 0.18% smaller in the long run, depending on the duration of Section 122 tariffs. Our modeling suggests any economic boost associated with refunds of IEEPA tariffs to businesses will be small.</p>",
           "section": "economic-effects",
-          "figureNum": 3
+          "figureNum": 4
         },
         {
-          "id": "long-run-gdp-by-sector",
+          "id": "gdp-by-sector",
           "short_label": "Long-Run GDP by Sector",
           "figureType": "chart",
-          "data": "key-figures/long-run-gdp-by-sector/data.csv",
+          "data": "current-update/gdp-by-sector/data.csv",
           "spec": {
             "chartType": "bar",
             "data": "data.csv",
@@ -261,15 +382,15 @@
               "Nondurable Manufacturing"
             ]
           },
-          "body_html": "<p>The estimated long-run change in real value added by sector, under two assumptions about whether the Section 122 tariffs expire or are extended.</p>",
+          "body_html": "<p>Tariffs shrink the overall size of the US economy in the long run, but beneath aggregate GDP, they also drive reallocation across US sectors. Long-run output in the manufacturing sector expands slightly, with durable manufacturing seeing the largest gains within the manufacturing category. But this expansion in manufacturing more than crowds out the rest of the economy: construction, mining &amp; extraction, and agriculture contract slightly. These patterns are similar regardless of whether Section 122 tariffs expire or are extended.</p>",
           "section": "economic-effects",
-          "figureNum": 4
+          "figureNum": 5
         },
         {
-          "id": "long-run-gdp-by-region",
+          "id": "gdp-by-region",
           "short_label": "Long-Run GDP by Region",
           "figureType": "chart",
-          "data": "key-figures/long-run-gdp-by-region/data.csv",
+          "data": "current-update/gdp-by-region/data.csv",
           "spec": {
             "chartType": "bar",
             "data": "data.csv",
@@ -302,15 +423,60 @@
               "World ex USA"
             ]
           },
-          "body_html": "<p>The estimated long-run change in the level of real GDP by country and region, under two assumptions about whether the Section 122 tariffs expire or are extended.</p>",
+          "body_html": "<p>Long-run global GDP is slightly lower due to tariff policy. Canada, China and Mexico see the largest negative hits to output, while European and other free trade agreement partners see slight boosts to output. These directional effects are similar regardless of whether Section 122 tariffs expire or are extended in July.</p>",
           "section": "economic-effects",
-          "figureNum": 5
+          "figureNum": 6
         },
         {
-          "id": "distributional-effects-by-decile",
+          "id": "revenue",
+          "short_label": "Revenue Effects",
+          "figureType": "table",
+          "data": "current-update/revenue/data.csv",
+          "spec": {
+            "title": "Estimated Revenue Effects of Trump Administration Tariffs",
+            "subtitle": "Billions of dollars.",
+            "data": "data.csv",
+            "stub": [
+              "scenario",
+              {
+                "label": "metric"
+              }
+            ],
+            "header": [
+              "year"
+            ],
+            "value": "value",
+            "column_order": [
+              "2026",
+              "2027",
+              "2028",
+              "2029",
+              "2030",
+              "2031",
+              "2032",
+              "2033",
+              "2034",
+              "2035",
+              "2026-35"
+            ],
+            "format": {
+              "default": {
+                "type": "number",
+                "decimals": 0,
+                "thousands": true
+              }
+            },
+            "source": "GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis."
+          },
+          "body_html": "<p>Estimated federal revenue from the tariffs, by year and cumulatively (2026-35), on a conventional and dynamic basis, under both Section 122 scenarios. The dynamic effect is the difference between the dynamic and conventional estimates.</p>",
+          "section": "fiscal-impact",
+          "figureNum": 7
+        },
+        {
+          "id": "distribution-by-decile",
           "short_label": "Distributional Effects by Decile",
           "figureType": "chart",
-          "data": "key-figures/distributional-effects-by-decile/data.csv",
+          "data": "current-update/distribution-by-decile/data.csv",
           "spec": {
             "chartType": "bar",
             "data": "data.csv",
@@ -342,15 +508,15 @@
               }
             }
           },
-          "body_html": "<p>The estimated effect of all 2025 tariffs on households by income decile, shown both as a share of after-tax income and in 2025 dollars, under two assumptions about whether the Section 122 tariffs expire or are extended.</p>",
+          "body_html": "<p>One way to measure the distributional burden of tariffs is to look at the relationship between consumption, which gets more expensive under tariffs, and income for a given year. Under this view, tariffs are a regressive tax because lower-income households spend a larger fraction of their income than higher-income households do on average.</p>\n<p>TBL finds that the burden, expressed as a share of post-tax-and-transfer income, on the first decile is about three times that of the top decile (1.1% versus 0.4% if Section 122 tariffs expire, and 1.9% versus 0.6% if extended). The average annual costs to households in the bottom and top deciles are about $517 and $2,175 respectively in 2025 dollars—figures that assume Section 122 tariffs expire. If instead Section 122 is made permanent, these annual household burdens would be about $813 and $3,424.</p>",
           "section": "households-prices",
-          "figureNum": 6
+          "figureNum": 8
         },
         {
-          "id": "consumer-price-effects",
+          "id": "prices-by-category",
           "short_label": "Consumer Price Effects by Category",
           "figureType": "chart",
-          "data": "key-figures/consumer-price-effects/data.csv",
+          "data": "current-update/prices-by-category/data.csv",
           "spec": {
             "chartType": "bar",
             "data": "data.csv",
@@ -407,9 +573,9 @@
               "Housing"
             ]
           },
-          "body_html": "<p>The estimated percent change in consumer prices by PCE spending category, grouped into Durable goods, Nondurable goods, and Services sections, faceted by whether the Section 122 tariffs expire or are extended, showing the price effect before and after partial-equilibrium trade substitution.</p>",
+          "body_html": "<p>Tariffs affect different goods and services differently. Figure 7 shows the estimated price impact by spending category. Assuming Section 122 tariffs expire as scheduled, the categories most affected are goods products like motor vehicles, clothing, and furnishings. Services, which account for the majority of consumer spending, face only indirect price pressures through tariffs and thus see much smaller price effects. If Section 122 tariffs are extended, the price effects are directionally similar but larger, and clothing would rank above motor vehicles as the hardest-hit category.</p>",
           "section": "households-prices",
-          "figureNum": 7
+          "figureNum": 9
         }
       ]
     },
@@ -433,10 +599,10 @@
       ],
       "figures": [
         {
-          "id": "daily-effective-tariff-rate",
+          "id": "daily-etr",
           "short_label": "Daily Effective Tariff Rate",
           "figureType": "chart",
-          "data": "tariff-rate-tracker/daily-effective-tariff-rate/data.csv",
+          "data": "tariff-rate-tracker/daily-etr/data.csv",
           "spec": {
             "chartType": "line",
             "data": "data.csv",
@@ -495,15 +661,15 @@
               ]
             }
           },
-          "body_html": "<p>The import-weighted average effective tariff rate across all products and countries, updated daily. Vertical markers flag major tariff-policy changes.</p>",
+          "body_html": "<p>The ETR started the year at under 3 percent and reached over 22 percent after Liberation Day one year ago, before falling again, driven by a roller coaster of announced policy changes, trade deals, and legal challenges to the 2025 tariff regime. As each of these changes is incorporated into the HTS (or other similar legal documents), we update the tracker accordingly, including the projection of future rates according to current law.</p>",
           "section": "overall",
           "figureNum": 1
         },
         {
-          "id": "effective-tariff-rate-by-authority",
+          "id": "etr-by-authority",
           "short_label": "ETR by Authority",
           "figureType": "chart",
-          "data": "tariff-rate-tracker/effective-tariff-rate-by-authority/data.csv",
+          "data": "tariff-rate-tracker/etr-by-authority/data.csv",
           "spec": {
             "chartType": "area",
             "data": "data.csv",
@@ -575,10 +741,10 @@
           "figureNum": 2
         },
         {
-          "id": "china-vs-other-countries",
+          "id": "china-vs-row",
           "short_label": "China vs. Other Countries",
           "figureType": "chart",
-          "data": "tariff-rate-tracker/china-vs-other-countries/data.csv",
+          "data": "tariff-rate-tracker/china-vs-row/data.csv",
           "spec": {
             "chartType": "line",
             "data": "data.csv",
@@ -641,15 +807,15 @@
               ]
             }
           },
-          "body_html": "<p>The import-weighted effective tariff rate on imports from China compared with all other countries.</p>",
+          "body_html": "",
           "section": "by-partner",
           "figureNum": 3
         },
         {
-          "id": "etr-by-trading-partner",
+          "id": "etr-by-partner",
           "short_label": "ETR by Trading Partner",
           "figureType": "chart",
-          "data": "tariff-rate-tracker/etr-by-trading-partner/data.csv",
+          "data": "tariff-rate-tracker/etr-by-partner/data.csv",
           "spec": {
             "chartType": "line",
             "data": "data.csv",
@@ -717,7 +883,7 @@
               ]
             }
           },
-          "body_html": "<p>The import-weighted effective tariff rate by partner region (excluding China).</p>",
+          "body_html": "",
           "section": "by-partner",
           "figureNum": 4
         },
@@ -791,7 +957,7 @@
               ]
             }
           },
-          "body_html": "<p>The import-weighted effective tariff rate for selected GTAP commodity sectors.</p>",
+          "body_html": "",
           "section": "by-commodity",
           "figureNum": 5
         }

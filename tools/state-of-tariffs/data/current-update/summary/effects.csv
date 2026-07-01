@@ -1,0 +1,25 @@
+group,metric,scenario,value
+eff,"Overall, Pre-Substitution",Section 122 Expires,9.7
+eff,"Overall, Pre-Substitution",Section 122 Extended,12.2
+eff,"Overall, Post-Substitution",Section 122 Expires,8.2
+eff,"Overall, Post-Substitution",Section 122 Extended,10.5
+fiscal,"Conventional Revenue, 2026-2035 (Trillions)",Section 122 Expires,1.32
+fiscal,"Conventional Revenue, 2026-2035 (Trillions)",Section 122 Extended,1.87
+fiscal,"Dynamic Revenue, 2026-2035 (Trillions)",Section 122 Expires,1.21
+fiscal,"Dynamic Revenue, 2026-2035 (Trillions)",Section 122 Extended,1.72
+prices,"Percent Change in PCE Price Level, pre-substitution",Section 122 Expires,0.7
+prices,"Percent Change in PCE Price Level, pre-substitution",Section 122 Extended,1.1
+prices,"Percent Change in PCE Price Level, post-substitution",Section 122 Expires,0.5
+prices,"Percent Change in PCE Price Level, post-substitution",Section 122 Extended,0.9
+prices,"Average Household Real Income Loss, Pre-Substitution (2025$)",Section 122 Expires,939
+prices,"Average Household Real Income Loss, Pre-Substitution (2025$)",Section 122 Extended,1478
+prices,"Average Household Real Income Loss, Post-Substitution (2025$)",Section 122 Expires,761
+prices,"Average Household Real Income Loss, Post-Substitution (2025$)",Section 122 Extended,1208
+output,"Percentage Point Change in Q4-Q4 GDP Growth, 2026",Section 122 Expires,0.1
+output,"Percentage Point Change in Q4-Q4 GDP Growth, 2026",Section 122 Extended,0.2
+output,Percent change in Q4 2026 GDP,Section 122 Expires,-0.11
+output,Percent change in Q4 2026 GDP,Section 122 Extended,-0.12
+output,Percent change in long-run GDP,Section 122 Expires,-0.11
+output,Percent change in long-run GDP,Section 122 Extended,-0.18
+output,"Percentage Point Change in the Unemployment Rate, End of 2026",Section 122 Expires,0.14
+output,"Percentage Point Change in the Unemployment Rate, End of 2026",Section 122 Extended,0.18

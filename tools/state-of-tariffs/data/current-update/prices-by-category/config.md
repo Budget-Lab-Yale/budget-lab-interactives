@@ -52,5 +52,5 @@ spec:
   - Housing
 ---
 
-The estimated percent change in consumer prices by PCE spending category, grouped into Durable goods, Nondurable goods, and Services sections, faceted by whether the Section 122 tariffs expire or are extended, showing the price effect before and after partial-equilibrium trade substitution.
+Tariffs affect different goods and services differently. Figure 7 shows the estimated price impact by spending category. Assuming Section 122 tariffs expire as scheduled, the categories most affected are goods products like motor vehicles, clothing, and furnishings. Services, which account for the majority of consumer spending, face only indirect price pressures through tariffs and thus see much smaller price effects. If Section 122 tariffs are extended, the price effects are directionally similar but larger, and clothing would rank above motor vehicles as the hardest-hit category.
 

@@ -7,7 +7,6 @@ vendored chart engine via render.js), not a tracker-specific chart block.
 
 Inputs (under tools/state-of-tariffs/data/):
   tracker.yaml                      release + tab / section / figure / toggle definitions
-  current-update.md                 markdown body for the overview tab (optional)
   <tab>/<figure-slug>/config.md     YAML frontmatter (figure spec) + markdown body
   <tab>/<figure-slug>/data.csv      long-format data
 
@@ -38,6 +37,7 @@ Run:  C:/Python314/python.exe scripts/build-manifest.py
 from __future__ import annotations
 
 import csv
+import html
 import json
 import re
 import sys
@@ -48,7 +48,6 @@ import yaml
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 TRACKER = DATA_DIR / "tracker.yaml"
-CURRENT_UPDATE = DATA_DIR / "current-update.md"
 OUT = DATA_DIR / "manifest.json"
 
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n?(.*)$", re.DOTALL)
@@ -59,8 +58,37 @@ def fail(msg: str) -> "None":
     sys.exit(1)
 
 
+# Release metadata (set in main()); used to resolve {date: ...} tokens in prose bodies.
+RELEASE: dict = {}
+
+_DATE_TOKEN_BLOCK = re.compile(r"<p>\s*\{date:\s*([^}]+?)\s*\}\s*</p>")
+_DATE_TOKEN_INLINE = re.compile(r"\{date:\s*([^}]+?)\s*\}")
+
+
+def _resolve_date_token(value: str) -> str:
+    """`{date: updated}` → release.updated; a spelled-out literal renders as-is; a bare
+    lowercase keyword that isn't recognized is almost certainly a typo → error."""
+    if value == "updated":
+        return str(RELEASE.get("updated", ""))
+    if re.fullmatch(r"[a-z][a-z0-9_]*", value):
+        fail(f"unknown date keyword {value!r}. Recognized: 'updated'. For a literal date, "
+             f"spell it out, e.g. {{date: January 1, 1900}}.")
+    return value
+
+
+def substitute_date_tokens(rendered_html: str) -> str:
+    # Standalone token (its own paragraph) → styled date block; inline token → plain text.
+    out = _DATE_TOKEN_BLOCK.sub(
+        lambda m: '<p class="current-update-date">' + html.escape(_resolve_date_token(m.group(1))) + "</p>",
+        rendered_html,
+    )
+    return _DATE_TOKEN_INLINE.sub(lambda m: html.escape(_resolve_date_token(m.group(1))), out)
+
+
 def render_markdown(body: str) -> str:
-    return markdown.markdown(body.strip(), extensions=["extra"]) if body.strip() else ""
+    if not body.strip():
+        return ""
+    return substitute_date_tokens(markdown.markdown(body.strip(), extensions=["extra"]))
 
 
 def parse_config_md(path: Path) -> tuple[dict, str]:
@@ -281,14 +309,12 @@ def build_tab(tab: dict) -> dict:
     out = {"id": tab["id"], "label": tab["label"]}
     if "description" in tab:
         out["description"] = tab["description"]
-
-    if tab["id"] == "current-update":
-        body = CURRENT_UPDATE.read_text(encoding="utf-8") if CURRENT_UPDATE.exists() else ""
-        out["body_html"] = render_markdown(body)
-        return out
+    if tab.get("show_release"):
+        out["show_release"] = True
 
     if "sections" in tab:
-        out["sections"] = [{"id": s["id"], "label": s["label"]} for s in tab["sections"]]
+        # label may be empty/absent → the sidebar renders the section's figures with no heading.
+        out["sections"] = [{"id": s["id"], "label": s.get("label", "")} for s in tab["sections"]]
     if "toggles" in tab:
         out["toggles"] = tab["toggles"]
 
@@ -296,7 +322,8 @@ def build_tab(tab: dict) -> dict:
     num = 0
     for fid, section_id in ordered_figures(tab):
         fig = build_figure(tab["id"], fid, section_id)
-        # Prose panes are not numbered; charts/tables get sequential "Figure N".
+        # Charts and tables share one continuous sidebar number sequence (1..N); prose panes
+        # are unnumbered.
         if fig["figureType"] in ("chart", "table"):
             num += 1
             fig["figureNum"] = num
@@ -310,8 +337,12 @@ def main() -> None:
         fail(f"tracker.yaml not found at {TRACKER}")
     tracker = yaml.safe_load(TRACKER.read_text(encoding="utf-8")) or {}
 
+    release = tracker.get("release", {})
+    RELEASE.clear()
+    RELEASE.update(release)  # available to {date: ...} substitution during tab build
+
     manifest = {
-        "release": tracker.get("release", {}),
+        "release": release,
         "data_base_url": "./data/",
         "tabs": [build_tab(tab) for tab in tracker.get("tabs", [])],
     }
