@@ -32,6 +32,18 @@
   switched to vertical bars; F4 split into "Sectors" + "Manufacturing detail" facet panes;
   F5 value labels turned off.
 
+## Unreleased — chart engine v1.2
+
+- Re-vendored the chart engine to **v1.2.0**.
+- Re-enabled F7 (consumer price effects) using the new faceted **horizontal** bars, and grouped
+  its 20 PCE categories with the new **sectioned category axis** (`columns.section: top_level` →
+  Durable goods / Nondurable goods / Services), ticks top+bottom.
+- F4 (GDP by sector): `small_multiples.pane_widths: equal-bar` so the Manufacturing-detail pane
+  is sized to its bars (equal bar width across panes).
+- Migrated for v1.2 breaking changes: annotation `labelAnchor` → `labelSide`; F1 y-axis labels to
+  `labelSide` (top/bottom) + `labelPosition` (left); dropped now-inert `labelDy` and F5
+  `valueLabels` (in-bar labels removed in v1.2); `anchorAtZero` default is now false.
+
 ## Unreleased — Tariff Rate Tracker tab
 
 - New "Tariff Rate Tracker" tab (data from the Budget Lab Tariff Rate Tracker blog, May 2026):

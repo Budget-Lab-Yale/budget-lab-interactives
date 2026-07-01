@@ -21,6 +21,7 @@ spec:
   small_multiples:
     mode: shared
     columns: 2
+    pane_widths: equal-bar
     pane_order:
     - Sectors
     - Manufacturing detail

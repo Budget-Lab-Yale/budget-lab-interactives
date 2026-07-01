@@ -13,10 +13,16 @@ bundler or `node_modules` at deploy time.
 ## Source
 
 - Repo: `Budget-Lab-Yale/budget-lab-chart-engine` (`C:\dev\GitHub\budget-lab-chart-engine`)
-- Version: **1.1.1** (tag `v1.1.1`; the tagged tree is content-identical to release commit `24fb8ae`,
-  "feat(table): inline math and row/group label overrides")
-- v1.1.1 adds: inline math in table text (`\( … \)`, linear LaTeX subset → Unicode, rendered by the
-  engine itself — **no MathJax needed at runtime**) and `row_labels` / `group_labels` overrides.
+- Version: **1.2.1** (tag `v1.2.1`, commit `5c08658`)
+- v1.2.1 fix: faceted **horizontal** bar charts no longer force horizontal scrolling at normal
+  widths (per-pane minimum lowered 300→240px; natural width ~816→~700px).
+- v1.2.0 added: faceted **horizontal** bar charts, a **sectioned category axis**
+  (`columns.section`), variable pane widths (`small_multiples.pane_widths`: `equal` |
+  `equal-bar` | proportion array), and a reworked annotation-label placement system
+  (`labelSide` / `labelPosition`). Behavior changes vs 1.1.x: `labelDy` sign flipped
+  (**+ = up**), `labelAnchor` removed (use `labelSide`), `anchorAtZero` defaults `false` on
+  numeric x, and in-bar value labels removed. Still includes 1.1.1's inline table math
+  (rendered by the engine — **no MathJax at runtime**).
 
 ## Re-vendoring a new engine version
 

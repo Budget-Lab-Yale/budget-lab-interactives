@@ -9,8 +9,6 @@ spec:
   note: "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries."
   source: GTAP v7 [Corong et al (2017)], The Budget Lab analysis.
   orientation: vertical
-  valueLabels:
-    show: false
   xAxisType: categorical
   columns:
     x: category

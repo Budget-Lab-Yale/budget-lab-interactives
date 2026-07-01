@@ -29,16 +29,16 @@ spec:
       label: Current pre-substitution rate
       style: dashed
       color: amber
-      labelSide: left
+      labelSide: top       # above the line (v1.2: y-mark side = top|middle|bottom)
+      labelPosition: left  # at the left end of the line
       labelDx: 16
-      labelDy: -12
     - y: 8.212
       label: Current post-substitution rate
       style: dashed
       color: blue
-      labelSide: left
+      labelSide: bottom    # below the line
+      labelPosition: left
       labelDx: 16
-      labelDy: 12
 ---
 
 The average effective tariff rate is customs duty revenue as a share of the value of goods imports. The historical series runs through 2024; the dashed lines project the post- and pre-substitution rates implied by 2025–2026 tariff policy. The two horizontal reference lines mark the current post- and pre-substitution rates.

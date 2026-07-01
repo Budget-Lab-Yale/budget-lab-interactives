@@ -26,7 +26,7 @@ tabs:
     label: Households & Prices
     figures:
     - distributional-effects-by-decile
-    # - consumer-price-effects  # held: needs faceted horizontal bars (engine support pending)
+    - consumer-price-effects
 
 - id: tariff-rate-tracker
   label: Tariff Rate Tracker

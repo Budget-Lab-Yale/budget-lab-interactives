@@ -10,14 +10,19 @@ spec:
   source: BEA, GTAP v7, The Budget Lab analysis.
   orientation: horizontal
   xAxisType: categorical
+  x_axis_ticks: both
   columns:
     x: category
     series: substitution
     facet: scenario
-    value: value
+    section: top_level
   series_order:
   - Pre-Substitution
   - Post-Substitution
+  section_order:
+  - Durable goods
+  - Nondurable goods
+  - Services
   small_multiples:
     mode: shared
     columns: 2
@@ -47,10 +52,5 @@ spec:
   - Housing
 ---
 
-The estimated percent change in consumer prices by PCE spending category, faceted by whether the Section 122 tariffs expire or are extended, showing the price effect before and after partial-equilibrium trade substitution.
-
-<!-- HELD: not listed in tracker.yaml. This figure needs faceted *horizontal* bar charts,
-     which the chart engine does not yet support (horizontal + small_multiples). Re-add
-     `consumer-price-effects` to the households-prices section in tracker.yaml once the
-     engine supports it. Data (data.csv) and this spec are ready. -->
+The estimated percent change in consumer prices by PCE spending category, grouped into Durable goods, Nondurable goods, and Services sections, faceted by whether the Section 122 tariffs expire or are extended, showing the price effect before and after partial-equilibrium trade substitution.
 

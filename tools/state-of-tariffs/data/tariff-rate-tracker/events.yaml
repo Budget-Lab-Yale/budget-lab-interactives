@@ -22,13 +22,16 @@ projection:
 major:
 - x: '2025-02-04'
   label: Fentanyl tariffs
+  labelSide: middle
 - x: '2025-04-02'
   label: Liberation Day
+  labelSide: middle
 - x: '2025-04-14'
   label: Geneva truce
 - x: '2025-08-07'
   label: Reciprocal Phase 2
 - x: '2026-02-24'
   label: IEEPA struck down
+  labelSide: left
 - x: '2026-04-06'
   label: Section 232 reorg
