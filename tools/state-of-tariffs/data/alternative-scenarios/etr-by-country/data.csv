@@ -1,0 +1,55 @@
+category,value,country_code,substitution,scenario,measure
+China,21.812881196546236,chn,presub,tracker_actual_2026-07-01,level
+China,18.932418522160575,chn,postsub,tracker_actual_2026-07-01,level
+Canada,5.612039488576252,ca,presub,tracker_actual_2026-07-01,level
+Canada,3.1679178782333217,ca,postsub,tracker_actual_2026-07-01,level
+Mexico,6.6478982044533454,mx,presub,tracker_actual_2026-07-01,level
+Mexico,4.6873422865747,mx,postsub,tracker_actual_2026-07-01,level
+UK,6.422313592845061,uk,presub,tracker_actual_2026-07-01,level
+UK,4.587181029337452,uk,postsub,tracker_actual_2026-07-01,level
+Japan,10.231227413474333,jp,presub,tracker_actual_2026-07-01,level
+Japan,8.913378226364195,jp,postsub,tracker_actual_2026-07-01,level
+EU,6.23936910792036,eu,presub,tracker_actual_2026-07-01,level
+EU,3.469042459974001,eu,postsub,tracker_actual_2026-07-01,level
+Rest of World,7.636622387535763,row,presub,tracker_actual_2026-07-01,level
+Rest of World,6.001040145629532,row,postsub,tracker_actual_2026-07-01,level
+Free-trade partners,8.914752090164276,fta,presub,tracker_actual_2026-07-01,level
+Free-trade partners,4.928897321311876,fta,postsub,tracker_actual_2026-07-01,level
+Total,7.686221890029573,total,presub,tracker_actual_2026-07-01,level
+Total,6.217249241090742,total,postsub,tracker_actual_2026-07-01,level
+China,27.418178732847505,chn,presub,tracker_new_301_2026-07-01,level
+China,25.070254218809044,chn,postsub,tracker_new_301_2026-07-01,level
+Canada,5.764537774344905,ca,presub,tracker_new_301_2026-07-01,level
+Canada,3.21219573562425,ca,postsub,tracker_new_301_2026-07-01,level
+Mexico,6.931942582698629,mx,presub,tracker_new_301_2026-07-01,level
+Mexico,4.798826915117866,mx,postsub,tracker_new_301_2026-07-01,level
+UK,6.601248511068476,uk,presub,tracker_new_301_2026-07-01,level
+UK,4.658298149841106,uk,postsub,tracker_new_301_2026-07-01,level
+Japan,10.52270868809008,jp,presub,tracker_new_301_2026-07-01,level
+Japan,9.015656521069698,jp,postsub,tracker_new_301_2026-07-01,level
+EU,6.510471647594791,eu,presub,tracker_new_301_2026-07-01,level
+EU,3.5735871838462523,eu,postsub,tracker_new_301_2026-07-01,level
+Rest of World,11.769504987740016,row,presub,tracker_new_301_2026-07-01,level
+Rest of World,9.38882359269237,row,postsub,tracker_new_301_2026-07-01,level
+Free-trade partners,11.784687365648402,fta,presub,tracker_new_301_2026-07-01,level
+Free-trade partners,7.681704303315968,fta,postsub,tracker_new_301_2026-07-01,level
+Total,9.712473401643816,total,presub,tracker_new_301_2026-07-01,level
+Total,7.509875381966416,total,postsub,tracker_new_301_2026-07-01,level
+China,5.6052975363012685,chn,presub,tracker_new_301_2026-07-01,delta_vs_default
+China,6.1378356966484695,chn,postsub,tracker_new_301_2026-07-01,delta_vs_default
+Canada,0.15249828576865365,ca,presub,tracker_new_301_2026-07-01,delta_vs_default
+Canada,0.044277857390928155,ca,postsub,tracker_new_301_2026-07-01,delta_vs_default
+Mexico,0.2840443782452837,mx,presub,tracker_new_301_2026-07-01,delta_vs_default
+Mexico,0.11148462854316588,mx,postsub,tracker_new_301_2026-07-01,delta_vs_default
+UK,0.17893491822341545,uk,presub,tracker_new_301_2026-07-01,delta_vs_default
+UK,0.07111712050365426,uk,postsub,tracker_new_301_2026-07-01,delta_vs_default
+Japan,0.291481274615748,jp,presub,tracker_new_301_2026-07-01,delta_vs_default
+Japan,0.10227829470550276,jp,postsub,tracker_new_301_2026-07-01,delta_vs_default
+EU,0.2711025396744313,eu,presub,tracker_new_301_2026-07-01,delta_vs_default
+EU,0.10454472387225122,eu,postsub,tracker_new_301_2026-07-01,delta_vs_default
+Rest of World,4.132882600204253,row,presub,tracker_new_301_2026-07-01,delta_vs_default
+Rest of World,3.387783447062838,row,postsub,tracker_new_301_2026-07-01,delta_vs_default
+Free-trade partners,2.869935275484126,fta,presub,tracker_new_301_2026-07-01,delta_vs_default
+Free-trade partners,2.752806982004092,fta,postsub,tracker_new_301_2026-07-01,delta_vs_default
+Total,2.0262515116142428,total,presub,tracker_new_301_2026-07-01,delta_vs_default
+Total,1.292626140875674,total,postsub,tracker_new_301_2026-07-01,delta_vs_default

@@ -267,48 +267,55 @@ function renderSidebar() {
   const tab = tabById(state.tab);
   if (!tab) return;
 
+  const sections = tab.sections || [];
+  const figures = tab.figures || [];
+  const hasFigureList = figures.length > 1;
+
   const explainer = document.createElement("div");
-  explainer.className = "sidebar-explainer";
+  // `is-standalone` drops the explainer's divider when no figure list follows, so it doesn't
+  // stack with the release block's top border into a double rule.
+  explainer.className = "sidebar-explainer" + (hasFigureList ? "" : " is-standalone");
   explainer.innerHTML = `<p>${escapeHtml(tab.description || "")}</p>`;
   sidebar.appendChild(explainer);
 
-  // Figure list (vertical, with section headers when present)
-  const figSection = document.createElement("div");
-  figSection.className = "sidebar-section";
+  // Figure list (vertical, with section headers when present). Suppressed on tabs with a
+  // single figure (e.g. a prose-only tab) — there's nothing to pick between.
+  if (hasFigureList) {
+    const figSection = document.createElement("div");
+    figSection.className = "sidebar-section";
 
-  const figList = document.createElement("div");
-  figList.className = "figure-list";
-  figList.setAttribute("role", "tablist");
-  figList.setAttribute("aria-label", "Figure");
+    const figList = document.createElement("div");
+    figList.className = "figure-list";
+    figList.setAttribute("role", "tablist");
+    figList.setAttribute("aria-label", "Figure");
 
-  const sections = tab.sections || [];
-  const figures = tab.figures || [];
-  if (sections.length) {
-    const bySection = new Map(sections.map(s => [s.id, []]));
-    const unsectioned = [];
-    for (const f of figures) {
-      if (f.section && bySection.has(f.section)) bySection.get(f.section).push(f);
-      else unsectioned.push(f);
-    }
-    for (const s of sections) {
-      const items = bySection.get(s.id);
-      if (!items.length) continue;
-      // A section with no label renders its figures with no heading (e.g. the Summary pane).
-      if (s.label) {
-        const groupHeader = document.createElement("div");
-        groupHeader.className = "figure-list-section-heading";
-        groupHeader.textContent = s.label;
-        figList.appendChild(groupHeader);
+    if (sections.length) {
+      const bySection = new Map(sections.map(s => [s.id, []]));
+      const unsectioned = [];
+      for (const f of figures) {
+        if (f.section && bySection.has(f.section)) bySection.get(f.section).push(f);
+        else unsectioned.push(f);
       }
-      for (const f of items) figList.appendChild(buildFigureListItem(f));
+      for (const s of sections) {
+        const items = bySection.get(s.id);
+        if (!items.length) continue;
+        // A section with no label renders its figures with no heading (e.g. the Summary pane).
+        if (s.label) {
+          const groupHeader = document.createElement("div");
+          groupHeader.className = "figure-list-section-heading";
+          groupHeader.textContent = s.label;
+          figList.appendChild(groupHeader);
+        }
+        for (const f of items) figList.appendChild(buildFigureListItem(f));
+      }
+      for (const f of unsectioned) figList.appendChild(buildFigureListItem(f));
+    } else {
+      for (const f of figures) figList.appendChild(buildFigureListItem(f));
     }
-    for (const f of unsectioned) figList.appendChild(buildFigureListItem(f));
-  } else {
-    for (const f of figures) figList.appendChild(buildFigureListItem(f));
-  }
 
-  figSection.appendChild(figList);
-  sidebar.appendChild(figSection);
+    figSection.appendChild(figList);
+    sidebar.appendChild(figSection);
+  }
 
   // Tab-level toggles that apply to the active figure.
   for (const toggle of tab.toggles || []) {
@@ -322,8 +329,8 @@ function renderSidebar() {
     sidebar.appendChild(buildSelectorSection(sel));
   }
 
-  // Release metadata (updated date + version) — only on tabs that opt in.
-  if (tab.show_release) {
+  // Release metadata (updated date + version) — shown on every tab.
+  {
     const r = manifest.release || {};
     const rel = document.createElement("div");
     rel.className = "sidebar-release";
@@ -365,36 +372,42 @@ function buildDownloadAllButton() {
   return wrap;
 }
 
+// A segmented pill control (styled radio group): the shared rendering for tab toggles and for
+// binary selectors. `stateKey` is the toggles-map key; `activeValue` the current option id.
+function buildSegmentedGroup(stateKey, label, options, activeValue) {
+  const group = document.createElement("div");
+  group.className = "toggle-group";
+  group.role = "radiogroup";
+  group.setAttribute("aria-label", label);
+  for (const opt of options) {
+    const lab = document.createElement("label");
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = `toggle-${stateKey}`;
+    input.value = opt.id;
+    input.checked = activeValue === opt.id;
+    if (input.checked) lab.classList.add("is-active");
+    const txt = document.createElement("span");
+    // Non-breaking hyphen so terms like "12-month" stay whole on wrap.
+    txt.textContent = opt.label.replace(/(\w)-(\w)/g, "$1‑$2");
+    lab.append(input, txt);
+    input.addEventListener("change", () => {
+      setState({ toggles: { ...state.toggles, [stateKey]: opt.id } });
+    });
+    group.appendChild(lab);
+  }
+  return group;
+}
+
 function buildToggleSection(toggle) {
   const sec = document.createElement("div");
   sec.className = "sidebar-section";
   const heading = document.createElement("h2");
   heading.textContent = toggle.label;
   sec.appendChild(heading);
-
-  const group = document.createElement("div");
-  group.className = "toggle-group";
-  group.role = "radiogroup";
-  group.setAttribute("aria-label", toggle.label);
-
-  for (const opt of toggle.options) {
-    const label = document.createElement("label");
-    const input = document.createElement("input");
-    input.type = "radio";
-    input.name = `toggle-${toggle.id}`;
-    input.value = opt.id;
-    input.checked = (state.toggles[toggle.id] || toggle.default) === opt.id;
-    if (input.checked) label.classList.add("is-active");
-    const txt = document.createElement("span");
-    // Non-breaking hyphen so terms like "12-month" stay whole on wrap.
-    txt.textContent = opt.label.replace(/(\w)-(\w)/g, "$1‑$2");
-    label.append(input, txt);
-    input.addEventListener("change", () => {
-      setState({ toggles: { ...state.toggles, [toggle.id]: opt.id } });
-    });
-    group.appendChild(label);
-  }
-  sec.appendChild(group);
+  sec.appendChild(
+    buildSegmentedGroup(toggle.id, toggle.label, toggle.options, state.toggles[toggle.id] || toggle.default),
+  );
   return sec;
 }
 
@@ -405,10 +418,17 @@ function buildSelectorSection(sel) {
   heading.textContent = sel.label || sel.id;
   sec.appendChild(heading);
 
+  const active = state.toggles[sel.id] || sel.default;
+
+  // Binary selector → segmented pill control (same as a tab toggle); 3+ options → dropdown.
+  if ((sel.options || []).length === 2) {
+    sec.appendChild(buildSegmentedGroup(sel.id, sel.label || sel.id, sel.options, active));
+    return sec;
+  }
+
   const select = document.createElement("select");
   select.className = "sidebar-select";
   select.setAttribute("aria-label", sel.label || sel.id);
-  const active = state.toggles[sel.id] || sel.default;
   for (const opt of sel.options) {
     const o = document.createElement("option");
     o.value = opt.id;

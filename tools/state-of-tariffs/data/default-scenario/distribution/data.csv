@@ -1,0 +1,41 @@
+category,value,substitution,basis
+1,-0.6628900101965172,presub,% of after-tax income
+2,-0.409129281910413,presub,% of after-tax income
+3,-0.39485925912684144,presub,% of after-tax income
+4,-0.3506171315364288,presub,% of after-tax income
+5,-0.35921450396104054,presub,% of after-tax income
+6,-0.3540510974135673,presub,% of after-tax income
+7,-0.3373708753020646,presub,% of after-tax income
+8,-0.32519197941306394,presub,% of after-tax income
+9,-0.2982660915755371,presub,% of after-tax income
+10,-0.20978488069025625,presub,% of after-tax income
+1,-0.5225222807518778,postsub,% of after-tax income
+2,-0.32249568136172546,postsub,% of after-tax income
+3,-0.3112473524737361,postsub,% of after-tax income
+4,-0.2763735467770645,postsub,% of after-tax income
+5,-0.28315041560700754,postsub,% of after-tax income
+6,-0.27908036639200273,postsub,% of after-tax income
+7,-0.265932200682632,postsub,% of after-tax income
+8,-0.2563322001409527,postsub,% of after-tax income
+9,-0.2351079003208923,postsub,% of after-tax income
+10,-0.16536268858997685,postsub,% of after-tax income
+1,-245.67366667893123,presub,2025 dollars
+2,-245.62894698055464,presub,2025 dollars
+3,-288.5039176810267,presub,2025 dollars
+4,-301.0784370216468,presub,2025 dollars
+5,-364.24350701649513,presub,2025 dollars
+6,-414.3353777701754,presub,2025 dollars
+7,-463.5644512088019,presub,2025 dollars
+8,-535.109905963785,presub,2025 dollars
+9,-621.1272050623929,presub,2025 dollars
+10,-1050.3970933137268,presub,2025 dollars
+1,-193.65198246945343,postsub,2025 dollars
+2,-193.6167322191391,postsub,2025 dollars
+3,-227.41287808493527,postsub,2025 dollars
+4,-237.32472835293305,postsub,2025 dollars
+5,-287.11452142550564,postsub,2025 dollars
+6,-326.599380377569,postsub,2025 dollars
+7,-365.40414034797055,postsub,2025 dollars
+8,-421.7997619759405,postsub,2025 dollars
+9,-489.6027981022454,postsub,2025 dollars
+10,-827.9742890237859,postsub,2025 dollars

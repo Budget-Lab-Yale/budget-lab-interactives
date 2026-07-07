@@ -14,8 +14,8 @@ const TOOL_URL = "https://interactives.budgetlab.yale.edu/tools/state-of-tariffs
 
 // Flatten a data path into the archive layout: a figure's default `data.csv`
 // takes the bare figure slug; any other sheet keeps its name as a suffix.
-//   current-update/gdp-level/data.csv    -> current-update/gdp-level.csv
-//   current-update/summary/policy.csv    -> current-update/summary-policy.csv
+//   default-scenario/real-gdp/data.csv       -> default-scenario/real-gdp.csv
+//   statutory-rates/daily-rate-overall/data.csv -> statutory-rates/daily-rate-overall.csv
 function flattenDataPath(p) {
   const parts = p.split("/");
   const file = parts.pop();

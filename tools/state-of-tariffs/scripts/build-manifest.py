@@ -22,6 +22,17 @@ config.md frontmatter schema:
   selectors   : [ {id, label?, kind, default, options:[{id,label}]} ]  optional sidebar dropdowns
   (body)      -> body_html (python-markdown, "extra")
 
+Model-driven augmentation flags (translate the modelers' long-format conventions into
+engine spec keys from model-meta.json, so vintage-specific values aren't hand-copied):
+  auto_format: units   (table)  generate row_labels (from `series`) + format.rows (from
+                                the `unit` column), keyed by the last stub column value.
+  project_band: true   (chart)  shade the `projected == 1` date range as an annotations band
+                                (label via `project_band_label`).
+  scenario_role: series|header|selector  inject scenario ordering + id->label mapping from
+                                model-meta (default scenario first): series_order/series_labels
+                                for a chart, column_order/header_labels for a table, or a
+                                generated sidebar scenario dropdown (default preselected).
+
 A "prose" pane (figureType: prose) is a text-only nav item (not numbered) that renders an
 ordered list of cards: a new TEXT card starts at each `##` heading, and a TABLE card is placed
 wherever a `{{table: <id>}}` directive appears on its own line — so tables can sit before,
@@ -48,6 +59,7 @@ import yaml
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 TRACKER = DATA_DIR / "tracker.yaml"
+MODEL_META = DATA_DIR / "model-meta.json"
 OUT = DATA_DIR / "manifest.json"
 
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n?(.*)$", re.DOTALL)
@@ -60,6 +72,11 @@ def fail(msg: str) -> "None":
 
 # Release metadata (set in main()); used to resolve {date: ...} tokens in prose bodies.
 RELEASE: dict = {}
+
+# Model-run metadata from sync-model-data.py (set in main()): scenario definitions +
+# provenance. Empty until a vintage has been synced.
+SCENARIOS: list = []           # [{id, label, short_label, default}]
+DEFAULT_SCENARIO: "str | None" = None
 
 _DATE_TOKEN_BLOCK = re.compile(r"<p>\s*\{date:\s*([^}]+?)\s*\}\s*</p>")
 _DATE_TOKEN_INLINE = re.compile(r"\{date:\s*([^}]+?)\s*\}")
@@ -154,6 +171,9 @@ def build_prose_tables(config: "Path", folder: "Path", tab_id: str, fig_id: str)
             fail(f"{config}: table '{tid}' supports only a simple 'spec.data: <filename>'")
         if not (folder / data_name).exists():
             fail(f"{config}: table '{tid}' data file not found ({folder / data_name})")
+        # Prose-embedded tables opt into the same model-driven augmentation as standalone table
+        # figures (auto_format: units, scenario_role) via keys on the table def.
+        augment_spec(spec, tdef or {}, folder, config, "table")
         out[tid] = {"spec": spec, "data": f"{tab_id}/{fig_id}/{data_name}"}
     return out
 
@@ -217,6 +237,182 @@ def load_yaml(path: Path):
     return yaml.safe_load(path.read_text(encoding="utf-8"))
 
 
+def read_csv_rows(path: Path) -> "list[dict]":
+    with path.open(encoding="utf-8") as f:
+        return list(csv.DictReader(f))
+
+
+# --- Model-driven spec augmentation ---------------------------------------
+# These translate the modelers' long-format conventions (a per-row `unit` column, a
+# `projected` 0/1 flag, an id-keyed `scenario` column) into engine-native spec keys, so
+# figure authors declare intent with a small flag instead of hand-copying values that
+# change per vintage.
+
+# Map the model's `unit` values to engine FormatRules. Values arrive already scaled
+# (pct is a percentage, usd_bn is in billions), so `pct`/`pp` are plain numbers with a
+# suffix — NOT the engine `percent` type, which would multiply by 100 again.
+UNIT_FORMATS = {
+    "pct": {"type": "number", "decimals": 1, "suffix": "%"},
+    "pp": {"type": "number", "decimals": 2, "suffix": " pp"},
+    "usd": {"type": "currency", "decimals": 0, "prefix": "$", "thousands": True},
+    "usd_bn": {"type": "currency", "decimals": 1, "prefix": "$", "suffix": "B", "thousands": True},
+}
+
+
+def stub_col(entry) -> str:
+    """Underlying CSV column for a stub entry (`"col"` or `{label: "col"}`)."""
+    return entry["label"] if isinstance(entry, dict) else entry
+
+
+def apply_unit_format(spec: dict, folder: Path, config: Path) -> None:
+    """`auto_format: units` — generate engine number formats from the `unit` column, keyed off
+    the tidy stub so row/group LABELS stay data-driven (the stub column values are the labels;
+    no row_labels remapping). Per-group format (keyed by the first stub column, e.g. `category`)
+    covers each uniform-unit group; a per-row override (keyed by the last stub column, e.g.
+    `series`) handles any row whose unit diverges from its group's."""
+    from collections import Counter
+    stub = spec["stub"]
+    group_col = stub_col(stub[0])
+    row_col = stub_col(stub[-1])
+    rows = read_csv_rows(folder / spec.get("data", "data.csv"))
+
+    def fmt_for(unit: str) -> dict:
+        if unit not in UNIT_FORMATS:
+            fail(f"{config}: unknown unit '{unit}' (known: {', '.join(UNIT_FORMATS)})")
+        return dict(UNIT_FORMATS[unit])
+
+    group_units: "dict[str, Counter]" = {}
+    for r in rows:
+        u = r.get("unit")
+        if u:
+            group_units.setdefault(r.get(group_col, ""), Counter())[u] += 1
+    main_unit = {g: c.most_common(1)[0][0] for g, c in group_units.items()}
+
+    fmt = spec.setdefault("format", {})
+    fmt_groups = dict(fmt.get("groups") or {})
+    fmt_rows = dict(fmt.get("rows") or {})
+    for g, unit in main_unit.items():
+        fmt_groups.setdefault(g, fmt_for(unit))
+    # Rows whose unit differs from their group's dominant unit (e.g. Real GDP "Long-run" is a
+    # percent among percentage-point rows) get a per-row override.
+    for r in rows:
+        u, g, rk = r.get("unit"), r.get(group_col, ""), r.get(row_col)
+        if u and rk and u != main_unit.get(g) and rk not in fmt_rows:
+            fmt_rows[rk] = fmt_for(u)
+    if fmt_groups:
+        fmt["groups"] = fmt_groups
+    if fmt_rows:
+        fmt["rows"] = fmt_rows
+
+
+def _contiguous_date_runs(dates: "list[str]") -> "list[tuple[str, str]]":
+    """Group sorted ISO dates into (start, end) runs of consecutive calendar days."""
+    from datetime import date, timedelta
+    runs: list[tuple[str, str]] = []
+    start = prev = None
+    for s in dates:
+        try:
+            d = date.fromisoformat(s)
+        except ValueError:
+            continue
+        if prev is None:
+            start = prev_s = s; prev = d
+        elif d - prev == timedelta(days=1):
+            prev = d; prev_s = s
+        else:
+            runs.append((start, prev_s)); start = prev_s = s; prev = d
+    if start is not None:
+        runs.append((start, prev_s))
+    return runs
+
+
+def apply_project_band(spec: dict, folder: Path, config: Path, front: dict) -> None:
+    """`project_band: true` — shade projected dates. The model flags projected days with
+    `projected == 1`; these come in several disjoint runs (short mid-series stretches plus a
+    trailing future range), so emit one band per contiguous run. Only the trailing run (the one
+    reaching the data's last date) gets the label, to avoid clutter. Uses the default scenario's
+    projected pattern when a `scenario` column is present (bands are static, not per-selector)."""
+    rows = read_csv_rows(folder / spec.get("data", "data.csv"))
+    x_col = (spec.get("columns") or {}).get("x", "time")
+    if DEFAULT_SCENARIO and rows and "scenario" in rows[0]:
+        rows = [r for r in rows if r.get("scenario") == DEFAULT_SCENARIO]
+    dates = sorted({r[x_col] for r in rows if str(r.get("projected", "")).strip() == "1" and r.get(x_col)})
+    if not dates:
+        return
+    runs = _contiguous_date_runs(dates)
+    last_date = max((r[x_col] for r in rows if r.get(x_col)), default=None)
+    label = front.get("project_band_label", "Projected")
+    ann = spec.setdefault("annotations", {})
+    bands = ann.get("bands", [])
+    for start, end in runs:
+        band = {"start": start, "end": end}
+        if label and end == last_date:
+            band["label"] = label
+        bands.append(band)
+    ann["bands"] = bands
+
+
+def scenarios_default_first() -> "list[dict]":
+    return sorted(SCENARIOS, key=lambda s: (not s.get("default"),))  # default first, else stable
+
+
+def scenario_labels() -> "dict":
+    return {s["id"]: s.get("short_label") or s.get("label") or s["id"] for s in SCENARIOS}
+
+
+def apply_scenario_dimension(spec: dict, front: dict, config: Path) -> None:
+    """`scenario_role: series|header` — inject scenario ordering + id→label mapping from
+    model-meta.json (default scenario first), so configs never hard-code scenario ids/labels.
+    `series` targets a chart's series legend; `header`/`stub` a table's scenario column/row tier.
+    (`scenario_role: selector` is handled in build_figure, which owns the selectors list.)"""
+    role = front.get("scenario_role")
+    if role in (None, "selector"):
+        return
+    if not SCENARIOS:
+        fail(f"{config}: scenario_role set but no model-meta.json scenarios (run sync-model-data.py)")
+    if role not in ("series", "header", "stub"):
+        fail(f"{config}: scenario_role must be 'series', 'header', 'stub', or 'selector', got '{role}'")
+    ordered = scenarios_default_first()
+    ids = [s["id"] for s in ordered]
+    labels = scenario_labels()
+    if role == "series":
+        spec.setdefault("series_order", ids)
+        spec["series_labels"] = {**labels, **(spec.get("series_labels") or {})}
+    elif role == "header":
+        spec.setdefault("column_order", ids)
+        spec["header_labels"] = {**labels, **(spec.get("header_labels") or {})}
+    else:  # stub — scenarios on table rows. Only row_labels: a global row_order sort would
+           # break multi-level stub grouping (scenario as the 2nd stub under a category group);
+           # the data already orders the default scenario first within each group.
+        spec["row_labels"] = {**labels, **(spec.get("row_labels") or {})}
+
+
+def scenario_selector() -> dict:
+    """A sidebar scenario dropdown generated from model-meta (default option preselected)."""
+    if not SCENARIOS:
+        fail("scenario_role: selector set but no model-meta.json scenarios (run sync-model-data.py)")
+    return {
+        "id": "scenario",
+        "label": "Scenario",
+        "default": DEFAULT_SCENARIO,
+        "options": [
+            {"id": s["id"], "label": s.get("short_label") or s.get("label") or s["id"]}
+            for s in scenarios_default_first()
+        ],
+    }
+
+
+def augment_spec(spec: dict, front: dict, folder: Path, config: Path, figure_type: str) -> None:
+    """Apply the model-driven spec augmentations opted into via figure frontmatter flags."""
+    if front.get("auto_format") == "units":
+        if figure_type != "table":
+            fail(f"{config}: auto_format: units is only valid on a table figure")
+        apply_unit_format(spec, folder, config)
+    if figure_type == "chart" and front.get("project_band"):
+        apply_project_band(spec, folder, config, front)
+    apply_scenario_dimension(spec, front, config)
+
+
 def build_figure(tab_id: str, fig_id: str, section_id: "str | None") -> dict:
     folder = DATA_DIR / tab_id / fig_id
     config = folder / "config.md"
@@ -259,26 +455,27 @@ def build_figure(tab_id: str, fig_id: str, section_id: "str | None") -> dict:
     if figure_type == "table" and not all(k in spec for k in ("stub", "header", "value")):
         fail(f"{config}: table spec must set 'stub', 'header', and 'value'")
 
-    # Data lives in the engine spec (`spec.data`), the engine-native authoring form.
-    # The runtime mount ignores it (render.js fetches the CSV and passes rows), but
-    # keeping it makes the spec valid against the engine schema and self-describing.
-    # `spec.data` may be a bare filename or an object {file: "..."}; accept the simple form.
+    # Data lives in the engine spec (`spec.data`), the engine-native authoring form. The runtime
+    # mount ignores it (render.js fetches the CSV and passes rows), but keeping it makes the spec
+    # valid against the engine schema and self-describing.
     data_name = spec.get("data", "data.csv")
     if not isinstance(data_name, str):
         fail(f"{config}: only a simple 'spec.data: <filename>' is supported in this tool")
-    data_path = folder / data_name
-    if not data_path.exists():
-        fail(f"{config}: data file not found ({data_path})")
+    if not (folder / data_name).exists():
+        fail(f"{config}: data file not found ({folder / data_name})")
 
     if figure_type == "chart":
         apply_events(spec, front, tab_id, fig_id, config)
+
+    # Translate model conventions (unit column, projected flag, scenario ids) into spec keys.
+    augment_spec(spec, front, folder, config, figure_type)
 
     figure = {
         "id": fig_id,
         "short_label": short_label,
         "figureType": figure_type,
-        # data is resolved by app.js against data_base_url (./data/): store the
-        # path relative to the data dir.
+        # data is resolved by app.js against data_base_url (./data/): store the path relative
+        # to the data dir.
         "data": f"{tab_id}/{fig_id}/{data_name}",
         "spec": spec,
         "body_html": render_markdown(body),
@@ -287,8 +484,19 @@ def build_figure(tab_id: str, fig_id: str, section_id: "str | None") -> dict:
         figure["section"] = section_id
     if "variants" in front:
         figure["variants"] = front["variants"]
-    if "selectors" in front:
-        figure["selectors"] = front["selectors"]
+    selectors = list(front.get("selectors") or [])
+    if front.get("scenario_role") == "selector":
+        selectors.append(scenario_selector())
+    if selectors:
+        figure["selectors"] = selectors
+    if "total" in front:
+        figure["total"] = front["total"]
+    if "collapsible" in front:
+        figure["collapsible"] = front["collapsible"]
+    # `lead: true` renders the figure's markdown body ABOVE the figure (an intro) instead of
+    # below it as a description — used to fold section-intro copy onto its lead figure.
+    if front.get("lead"):
+        figure["lead"] = True
     return figure
 
 
@@ -309,8 +517,6 @@ def build_tab(tab: dict) -> dict:
     out = {"id": tab["id"], "label": tab["label"]}
     if "description" in tab:
         out["description"] = tab["description"]
-    if tab.get("show_release"):
-        out["show_release"] = True
 
     if "sections" in tab:
         # label may be empty/absent → the sidebar renders the section's figures with no heading.
@@ -332,12 +538,44 @@ def build_tab(tab: dict) -> dict:
     return out
 
 
+def load_model_meta() -> dict:
+    """Populate SCENARIOS / DEFAULT_SCENARIO from model-meta.json (written by
+    sync-model-data.py). Returns the provenance block (empty if not yet synced)."""
+    if not MODEL_META.exists():
+        return {}
+    meta = json.loads(MODEL_META.read_text(encoding="utf-8"))
+    SCENARIOS.clear()
+    SCENARIOS.extend(meta.get("scenarios", []))
+    global DEFAULT_SCENARIO
+    DEFAULT_SCENARIO = meta.get("default_scenario")
+    return meta.get("provenance") or {}
+
+
+def format_published(published_at: str) -> str:
+    """`2026-07-02T11:54:11-0400` → `July 2, 2026` (date part only, tz-agnostic)."""
+    from datetime import date
+    try:
+        d = date.fromisoformat(published_at[:10])
+    except ValueError:
+        return published_at
+    return f"{d.strftime('%B')} {d.day}, {d.year}"
+
+
 def main() -> None:
     if not TRACKER.exists():
         fail(f"tracker.yaml not found at {TRACKER}")
     tracker = yaml.safe_load(TRACKER.read_text(encoding="utf-8")) or {}
 
-    release = tracker.get("release", {})
+    release = dict(tracker.get("release", {}))
+
+    # A synced model vintage supplies the authoritative "updated" date + provenance; the
+    # editorial version stays in tracker.yaml. Absent a sync, tracker.yaml's release stands.
+    provenance = load_model_meta()
+    if provenance.get("published_at"):
+        release["updated"] = format_published(provenance["published_at"])
+    if provenance.get("interface_vintage"):
+        release["vintage"] = provenance["interface_vintage"]
+
     RELEASE.clear()
     RELEASE.update(release)  # available to {date: ...} substitution during tab build
 

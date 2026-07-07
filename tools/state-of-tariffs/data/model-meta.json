@@ -1,0 +1,24 @@
+{
+  "scenarios": [
+    {
+      "id": "tracker_actual_2026-07-01",
+      "label": "Current law (Section 122 expires)",
+      "short_label": "Current law",
+      "default": true
+    },
+    {
+      "id": "tracker_new_301_2026-07-01",
+      "label": "New Section 301 actions (Section 122 replaced)",
+      "short_label": "New 301",
+      "default": false
+    }
+  ],
+  "default_scenario": "tracker_actual_2026-07-01",
+  "provenance": {
+    "version": 1,
+    "interface_vintage": "2026070114",
+    "published_at": "2026-07-02T11:54:11-0400",
+    "git_commit": "dd007be7138f5c6b2f429f2daed18f7a53ab2cc9",
+    "tracker_vintage": "2026-06-25-14"
+  }
+}

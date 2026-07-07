@@ -1,0 +1,37 @@
+category,series,value,unit,metric,scenario,measure
+Effective tariff rate,Pre-substitution,7.686221890029573,pct,etr_presub_level,tracker_actual_2026-07-01,level
+Effective tariff rate,Post-substitution,6.217249241090742,pct,etr_postsub_level,tracker_actual_2026-07-01,level
+Revenue (10-year),Conventional,1110.8626831692334,usd_bn,revenue_conventional,tracker_actual_2026-07-01,level
+Revenue (10-year),Dynamic,1041.7936831692332,usd_bn,revenue_dynamic,tracker_actual_2026-07-01,level
+Consumer price increase,Pre-substitution,0.33444774821782425,pct,price_presub,tracker_actual_2026-07-01,level
+Consumer price increase,Post-substitution,0.26362804915298066,pct,price_postsub,tracker_actual_2026-07-01,level
+Household cost,Pre-substitution,452.9662508697537,usd,hh_cost_presub,tracker_actual_2026-07-01,level
+Household cost,Post-substitution,357.0501212379478,usd,hh_cost_postsub,tracker_actual_2026-07-01,level
+Real GDP,2025 Q4/Q4,-0.2810196227789108,pp,gdp_2025_q4q4,tracker_actual_2026-07-01,level
+Real GDP,2026 Q4/Q4,0.28758444493866,pp,gdp_2026_q4q4,tracker_actual_2026-07-01,level
+Real GDP,Long-run,-0.0737951472401619,pct,gdp_long_run,tracker_actual_2026-07-01,level
+Unemployment rate,2026 Q4,0.05170249239662272,pp,unemployment_2026_q4,tracker_actual_2026-07-01,level
+Effective tariff rate,Pre-substitution,9.712473401643816,pct,etr_presub_level,tracker_new_301_2026-07-01,level
+Effective tariff rate,Post-substitution,7.509875381966416,pct,etr_postsub_level,tracker_new_301_2026-07-01,level
+Revenue (10-year),Conventional,1551.7893863654365,usd_bn,revenue_conventional,tracker_new_301_2026-07-01,level
+Revenue (10-year),Dynamic,1422.3503863654364,usd_bn,revenue_dynamic,tracker_new_301_2026-07-01,level
+Consumer price increase,Pre-substitution,0.6635495211148023,pct,price_presub,tracker_new_301_2026-07-01,level
+Consumer price increase,Post-substitution,0.49345845953216183,pct,price_postsub,tracker_new_301_2026-07-01,level
+Household cost,Pre-substitution,898.6920690822996,usd,hh_cost_presub,tracker_new_301_2026-07-01,level
+Household cost,Post-substitution,668.3257087701181,usd,hh_cost_postsub,tracker_new_301_2026-07-01,level
+Real GDP,2025 Q4/Q4,-0.2955012924795719,pp,gdp_2025_q4q4,tracker_new_301_2026-07-01,level
+Real GDP,2026 Q4/Q4,0.23550374745209268,pp,gdp_2026_q4q4,tracker_new_301_2026-07-01,level
+Real GDP,Long-run,-0.14813095331192017,pct,gdp_long_run,tracker_new_301_2026-07-01,level
+Unemployment rate,2026 Q4,0.08569514047041249,pp,unemployment_2026_q4,tracker_new_301_2026-07-01,level
+Effective tariff rate,Pre-substitution,2.0262515116142428,pct,etr_presub_level,tracker_new_301_2026-07-01,delta_vs_default
+Effective tariff rate,Post-substitution,1.292626140875674,pct,etr_postsub_level,tracker_new_301_2026-07-01,delta_vs_default
+Revenue (10-year),Conventional,440.9267031962031,usd_bn,revenue_conventional,tracker_new_301_2026-07-01,delta_vs_default
+Revenue (10-year),Dynamic,380.5567031962032,usd_bn,revenue_dynamic,tracker_new_301_2026-07-01,delta_vs_default
+Consumer price increase,Pre-substitution,0.329101772896978,pct,price_presub,tracker_new_301_2026-07-01,delta_vs_default
+Consumer price increase,Post-substitution,0.22983041037918117,pct,price_postsub,tracker_new_301_2026-07-01,delta_vs_default
+Household cost,Pre-substitution,445.72581821254585,usd,hh_cost_presub,tracker_new_301_2026-07-01,delta_vs_default
+Household cost,Post-substitution,311.27558753217033,usd,hh_cost_postsub,tracker_new_301_2026-07-01,delta_vs_default
+Real GDP,2025 Q4/Q4,-0.014481669700661115,pp,gdp_2025_q4q4,tracker_new_301_2026-07-01,delta_vs_default
+Real GDP,2026 Q4/Q4,-0.052080697486567296,pp,gdp_2026_q4q4,tracker_new_301_2026-07-01,delta_vs_default
+Real GDP,Long-run,-0.07433580607175827,pct,gdp_long_run,tracker_new_301_2026-07-01,delta_vs_default
+Unemployment rate,2026 Q4,0.033992648073789766,pp,unemployment_2026_q4,tracker_new_301_2026-07-01,delta_vs_default
