@@ -2,13 +2,13 @@
 short_label: Effective Rate by Country
 figureType: table
 scenario_role: stub
-collapsible:
-  default: collapsed
-  expanded: [China, Total]
 spec:
   title: Average Effective Tariff Rate by Country
   subtitle: Change from baseline at the end of 2026, by scenario. Percent.
   data: data.csv
+  collapsible:
+    default: collapsed
+    expanded: [China, Total]
   stub:
   - category
   - scenario
@@ -16,6 +16,11 @@ spec:
   - measure
   - substitution
   value: value
+  # column_order orders the leaf tier (substitution) within each measure super-group; the engine
+  # (≥1.3.1) keeps the super-groups contiguous. column_group_order sets the super-group order.
+  column_group_order:
+  - level
+  - delta_vs_default
   column_order:
   - presub
   - postsub

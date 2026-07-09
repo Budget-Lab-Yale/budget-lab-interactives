@@ -12,6 +12,22 @@ tabs:
 - id: statutory-rates
   label: Daily Statutory Rates
   description: Daily statutory U.S. tariff rates — overall, by authority, by trading partner, and by product. Rates are shown for one policy scenario at a time; the grey band marks dates that are future projections under current policy.
+  toggles:
+  - id: china
+    label: China
+    default: with
+    # Render below the figure's scenario selector (this toggle refines a single figure; the
+    # scenario picker is the broader control and reads first).
+    after_selectors: true
+    applies_to_figures:
+    - daily-rate-by-country
+    options:
+    - {id: with, label: With China}
+    - id: without
+      label: Without China
+      spec:
+        series_order: [Canada, Mexico, EU, Japan, UK, Free-trade partners, Rest of World]
+        yAxisPolicy: {min: 0, max: 25, tickCount: 6}
   figures:
   - daily-rate-overall
   - daily-rate-by-authority
@@ -21,15 +37,6 @@ tabs:
 - id: default-scenario
   label: Default Scenario
   description: Projected effects of the default tariff policy scenario, following The State of U.S. Tariffs. Estimates are shown pre- and post-substitution (before and after consumers and businesses shift purchases in response to tariffs).
-  toggles:
-  - id: show_total
-    label: Total
-    default: "off"
-    options:
-    - {id: "off", label: Hide total}
-    - {id: "on", label: Show total}
-    applies_to_figures:
-    - revenue-by-year
   sections:
   - id: overview
     label: ""
@@ -69,14 +76,6 @@ tabs:
     - distribution
     - real-gdp
     - gdp-by-category
-    - revenue-by-year
-  - id: show_total
-    label: Total
-    default: "off"
-    options:
-    - {id: "off", label: Hide total}
-    - {id: "on", label: Show total}
-    applies_to_figures:
     - revenue-by-year
   sections:
   - id: overview

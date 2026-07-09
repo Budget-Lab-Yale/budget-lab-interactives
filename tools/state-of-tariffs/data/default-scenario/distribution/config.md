@@ -9,6 +9,16 @@ selectors:
   options:
   - {id: presub, label: Pre-substitution}
   - {id: postsub, label: Post-substitution}
+# All-household total as a per-pane dashed reference line. The value is data-driven (a Total row
+# per basis pane); the engine scopes each line to its facet and formats {value} via value_format.
+total:
+  column: category
+  value: Total
+  annotation:
+    label: All households ({value})
+    style: dashed
+    color: "#6b7280"
+    labelSide: bottom
 spec:
   chartType: bar
   data: data.csv
@@ -38,7 +48,3 @@ spec:
 The tariff burden by household income decile, shown as a share of after-tax-and-transfer income
 and in 2025 dollars per household. Values are negative by convention (a burden). Use the sidebar
 to switch pre- vs post-substitution.
-
-_TODO (TK): the all-household total will be added as a per-pane reference-line annotation once
-the engine supports per-facet annotations (see docs/engine-requests/per-facet-annotations.md) and
-the modelers supply the aggregate._

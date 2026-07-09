@@ -33,6 +33,43 @@
       "id": "statutory-rates",
       "label": "Daily Statutory Rates",
       "description": "Daily statutory U.S. tariff rates — overall, by authority, by trading partner, and by product. Rates are shown for one policy scenario at a time; the grey band marks dates that are future projections under current policy.",
+      "toggles": [
+        {
+          "id": "china",
+          "label": "China",
+          "default": "with",
+          "after_selectors": true,
+          "applies_to_figures": [
+            "daily-rate-by-country"
+          ],
+          "options": [
+            {
+              "id": "with",
+              "label": "With China"
+            },
+            {
+              "id": "without",
+              "label": "Without China",
+              "spec": {
+                "series_order": [
+                  "Canada",
+                  "Mexico",
+                  "EU",
+                  "Japan",
+                  "UK",
+                  "Free-trade partners",
+                  "Rest of World"
+                ],
+                "yAxisPolicy": {
+                  "min": 0,
+                  "max": 25,
+                  "tickCount": 6
+                }
+              }
+            }
+          ]
+        }
+      ],
       "figures": [
         {
           "id": "daily-rate-overall",
@@ -253,6 +290,16 @@
               "Free-trade partners",
               "Rest of World"
             ],
+            "series_colors": {
+              "China": "#0072B2",
+              "Canada": "#E69F00",
+              "Mexico": "#8856BF",
+              "EU": "#2A8B3A",
+              "Japan": "#B8302C",
+              "UK": "#CC79A7",
+              "Free-trade partners": "#7A5230",
+              "Rest of World": "#58A3E7"
+            },
             "annotations": {
               "xAxis": [
                 {
@@ -436,26 +483,6 @@
         {
           "id": "fiscal",
           "label": "Fiscal"
-        }
-      ],
-      "toggles": [
-        {
-          "id": "show_total",
-          "label": "Total",
-          "default": "off",
-          "options": [
-            {
-              "id": "off",
-              "label": "Hide total"
-            },
-            {
-              "id": "on",
-              "label": "Show total"
-            }
-          ],
-          "applies_to_figures": [
-            "revenue-by-year"
-          ]
         }
       ],
       "figures": [
@@ -676,7 +703,7 @@
               ]
             }
           },
-          "body_html": "<p>The tariff burden by household income decile, shown as a share of after-tax-and-transfer income\nand in 2025 dollars per household. Values are negative by convention (a burden). Use the sidebar\nto switch pre- vs post-substitution.</p>\n<p><em>TODO (TK): the all-household total will be added as a per-pane reference-line annotation once\nthe engine supports per-facet annotations (see docs/engine-requests/per-facet-annotations.md) and\nthe modelers supply the aggregate.</em></p>",
+          "body_html": "<p>The tariff burden by household income decile, shown as a share of after-tax-and-transfer income\nand in 2025 dollars per household. Values are negative by convention (a burden). Use the sidebar\nto switch pre- vs post-substitution.</p>",
           "section": "prices-households",
           "selectors": [
             {
@@ -696,6 +723,16 @@
               ]
             }
           ],
+          "total": {
+            "column": "category",
+            "value": "Total",
+            "annotation": {
+              "label": "All households ({value})",
+              "style": "dashed",
+              "color": "#6b7280",
+              "labelSide": "bottom"
+            }
+          },
           "figureNum": 4
         },
         {
@@ -731,6 +768,23 @@
             "chartType": "bar",
             "data": "data.csv",
             "title": "Long-Run Change in Real GDP by {dimension}",
+            "title_selectors": {
+              "dimension": {
+                "default": "sector",
+                "options": [
+                  {
+                    "id": "sector",
+                    "label": "Sector",
+                    "color": "blue"
+                  },
+                  {
+                    "id": "country",
+                    "label": "Country",
+                    "color": "amber"
+                  }
+                ]
+              }
+            },
             "subtitle": "Percentage-point change in the level of real GDP versus baseline.",
             "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
             "orientation": "vertical",
@@ -740,8 +794,8 @@
               "facet": "group",
               "value": "value"
             },
-            "series_colors": {
-              "": "amber"
+            "category_colors": {
+              "Total": "#6b7280"
             },
             "small_multiples": {
               "mode": "shared",
@@ -749,6 +803,7 @@
               "pane_widths": "equal-bar"
             },
             "x_order": [
+              "Total",
               "Agriculture",
               "Mining & Extraction",
               "Total Manufacturing",
@@ -760,78 +815,105 @@
               "Advanced Manufacturing"
             ]
           },
-          "body_html": "<p>Long-run change in real GDP, broken out by sector or by country. The sector view separates\nmanufacturing sub-sectors into a \"Manufacturing detail\" pane; the country view separates\nindividual countries from country groups. The dashed line marks the overall change in real GDP.</p>",
+          "body_html": "<p>Long-run change in real GDP, broken out by sector or by country. The sector view separates\nmanufacturing sub-sectors into a \"Manufacturing detail\" pane. The overall total is the left-most\nbar.</p>",
           "section": "economy",
-          "selectors": [
-            {
-              "id": "dimension",
-              "label": "Break out by",
-              "kind": "single",
-              "default": "sector",
-              "options": [
-                {
-                  "id": "sector",
-                  "label": "Sector"
-                },
-                {
-                  "id": "country",
-                  "label": "Country"
-                }
-              ]
-            }
-          ],
-          "total": {
-            "column": "category",
-            "value": "Total",
-            "annotation": {
-              "label": "Overall ({value})",
-              "value_format": {
-                "suffix": "%",
-                "decimals": 2
-              },
-              "style": "dashed",
-              "color": "gray",
-              "labelSide": "bottom",
-              "labelPosition": "right"
-            }
-          },
           "figureNum": 6
         },
         {
           "id": "revenue-by-year",
           "short_label": "Revenue by Year",
-          "figureType": "chart",
-          "data": "default-scenario/revenue-by-year/data.csv",
-          "spec": {
-            "chartType": "bar",
-            "data": "data.csv",
-            "title": "Estimated Federal Revenue Effect by Year",
-            "subtitle": "Conventional and dynamic estimates. Billions of dollars.",
-            "source": "GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-            "orientation": "vertical",
-            "xAxisType": "categorical",
-            "columns": {
-              "x": "category",
-              "series": "series",
-              "value": "value"
+          "figureType": "composite",
+          "parts": [
+            {
+              "figureType": "table",
+              "data": "default-scenario/revenue-by-year/data.csv",
+              "spec": {
+                "data": "data.csv",
+                "title": "Estimated Federal Revenue Effect by Year",
+                "subtitle": "Billions of dollars.",
+                "source": "GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+                "stub": [
+                  "series"
+                ],
+                "header": [
+                  "category"
+                ],
+                "value": "value",
+                "row_labels": {
+                  "conventional": "Conventional",
+                  "dynamic": "Dynamic"
+                },
+                "column_order": [
+                  "2026",
+                  "2027",
+                  "2028",
+                  "2029",
+                  "2030",
+                  "2031",
+                  "2032",
+                  "2033",
+                  "2034",
+                  "2035",
+                  "Total"
+                ],
+                "column_labels": {
+                  "Total": "10-yr total"
+                },
+                "format": {
+                  "default": {
+                    "type": "number",
+                    "decimals": 1,
+                    "thousands": true,
+                    "prefix": "$"
+                  }
+                }
+              }
             },
-            "series_order": [
-              "conventional",
-              "dynamic"
-            ],
-            "series_labels": {
-              "conventional": "Conventional",
-              "dynamic": "Dynamic"
+            {
+              "figureType": "chart",
+              "data": "default-scenario/revenue-by-year/data.csv",
+              "spec": {
+                "chartType": "bar",
+                "data": "data.csv",
+                "title": "Revenue by Fiscal Year",
+                "subtitle": "Conventional and dynamic estimates. Billions of dollars.",
+                "orientation": "vertical",
+                "xAxisType": "categorical",
+                "columns": {
+                  "x": "category",
+                  "series": "series",
+                  "value": "value"
+                },
+                "x_order": [
+                  "2026",
+                  "2027",
+                  "2028",
+                  "2029",
+                  "2030",
+                  "2031",
+                  "2032",
+                  "2033",
+                  "2034",
+                  "2035"
+                ],
+                "series_order": [
+                  "conventional",
+                  "dynamic"
+                ],
+                "series_labels": {
+                  "conventional": "Conventional",
+                  "dynamic": "Dynamic"
+                }
+              },
+              "total": {
+                "column": "category",
+                "value": "Total",
+                "hide": true
+              }
             }
-          },
-          "body_html": "<p>Estimated federal revenue from the tariffs by fiscal year, on both a conventional and a\ndynamic basis. Use the sidebar toggle to add the 10-year total as an extra bar group.</p>",
+          ],
+          "body_html": "<p>Estimated federal revenue from the tariffs by fiscal year, on both a conventional and a\ndynamic basis. The table gives the annual estimates and the 10-year total; the chart shows the\nyear-by-year path.</p>",
           "section": "fiscal",
-          "total": {
-            "column": "category",
-            "value": "Total",
-            "toggle": "show_total",
-            "show_option": "on"
-          },
           "figureNum": 7
         }
       ]
@@ -883,24 +965,6 @@
             "distribution",
             "real-gdp",
             "gdp-by-category",
-            "revenue-by-year"
-          ]
-        },
-        {
-          "id": "show_total",
-          "label": "Total",
-          "default": "off",
-          "options": [
-            {
-              "id": "off",
-              "label": "Hide total"
-            },
-            {
-              "id": "on",
-              "label": "Show total"
-            }
-          ],
-          "applies_to_figures": [
             "revenue-by-year"
           ]
         }
@@ -994,6 +1058,13 @@
             "title": "Average Effective Tariff Rate by Country",
             "subtitle": "Change from baseline at the end of 2026, by scenario. Percent.",
             "data": "data.csv",
+            "collapsible": {
+              "default": "collapsed",
+              "expanded": [
+                "China",
+                "Total"
+              ]
+            },
             "stub": [
               "category",
               "scenario"
@@ -1003,6 +1074,10 @@
               "substitution"
             ],
             "value": "value",
+            "column_group_order": [
+              "level",
+              "delta_vs_default"
+            ],
             "column_order": [
               "presub",
               "postsub"
@@ -1024,17 +1099,14 @@
             "row_labels": {
               "tracker_actual_2026-07-01": "Current law",
               "tracker_new_301_2026-07-01": "New 301"
+            },
+            "group_labels": {
+              "tracker_actual_2026-07-01": "Current law",
+              "tracker_new_301_2026-07-01": "New 301"
             }
           },
           "body_html": "<p>The average effective U.S. tariff rate by trading partner (row groups) and policy scenario,\nshown as both levels and change vs. the default scenario. Click a partner to expand or collapse\nits scenarios.</p>",
           "section": "rates",
-          "collapsible": {
-            "default": "collapsed",
-            "expanded": [
-              "China",
-              "Total"
-            ]
-          },
           "figureNum": 2
         },
         {
@@ -1097,6 +1169,10 @@
             "series_labels": {
               "tracker_actual_2026-07-01": "Current law",
               "tracker_new_301_2026-07-01": "New 301"
+            },
+            "series_colors": {
+              "tracker_actual_2026-07-01": "blue",
+              "tracker_new_301_2026-07-01": "amber"
             }
           },
           "body_html": "<p>Consumer-price effects by PCE spending category, faceted by pre- vs post-substitution, compared\nacross scenarios. Use the <strong>View</strong> toggle for levels vs change-vs-default.</p>",
@@ -1150,6 +1226,10 @@
             "series_labels": {
               "tracker_actual_2026-07-01": "Current law",
               "tracker_new_301_2026-07-01": "New 301"
+            },
+            "series_colors": {
+              "tracker_actual_2026-07-01": "blue",
+              "tracker_new_301_2026-07-01": "amber"
             }
           },
           "body_html": "<p>The tariff burden by household income decile — as a share of after-tax income and in 2025\ndollars — compared across scenarios. Use the sidebar to switch pre- vs post-substitution and the\n<strong>View</strong> toggle for levels vs change-vs-default.</p>",
@@ -1172,6 +1252,16 @@
               ]
             }
           ],
+          "total": {
+            "column": "category",
+            "value": "Total",
+            "annotation": {
+              "label": "All households ({value})",
+              "style": "dashed",
+              "color": "#6b7280",
+              "labelSide": "bottom"
+            }
+          },
           "figureNum": 4
         },
         {
@@ -1202,6 +1292,10 @@
             "series_labels": {
               "tracker_actual_2026-07-01": "Current law",
               "tracker_new_301_2026-07-01": "New 301"
+            },
+            "series_colors": {
+              "tracker_actual_2026-07-01": "blue",
+              "tracker_new_301_2026-07-01": "amber"
             }
           },
           "body_html": "<p>The projected path of real GDP relative to baseline, compared across scenarios. Use the\n<strong>View</strong> toggle for levels vs change-vs-default.</p>",
@@ -1217,6 +1311,21 @@
             "chartType": "bar",
             "data": "data.csv",
             "title": "Long-Run Change in Real GDP by {dimension}",
+            "title_selectors": {
+              "dimension": {
+                "default": "sector",
+                "options": [
+                  {
+                    "id": "sector",
+                    "label": "Sector"
+                  },
+                  {
+                    "id": "country",
+                    "label": "Country"
+                  }
+                ]
+              }
+            },
             "subtitle": "Percentage-point change in the level of real GDP versus baseline, by scenario.",
             "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
             "orientation": "vertical",
@@ -1233,6 +1342,7 @@
               "pane_widths": "equal-bar"
             },
             "x_order": [
+              "Total",
               "Agriculture",
               "Mining & Extraction",
               "Total Manufacturing",
@@ -1250,63 +1360,118 @@
             "series_labels": {
               "tracker_actual_2026-07-01": "Current law",
               "tracker_new_301_2026-07-01": "New 301"
+            },
+            "series_colors": {
+              "tracker_actual_2026-07-01": "blue",
+              "tracker_new_301_2026-07-01": "amber"
             }
           },
-          "body_html": "<p>Long-run change in real GDP by sector or country, compared across scenarios. The sector view\nseparates manufacturing sub-sectors into a \"Manufacturing detail\" pane; the country view\nseparates individual countries from country groups.</p>",
+          "body_html": "<p>Long-run change in real GDP by sector or country, compared across scenarios. The sector view\nseparates manufacturing sub-sectors into a \"Manufacturing detail\" pane. The overall total is the\nleft-most bar.</p>",
           "section": "economy",
-          "selectors": [
-            {
-              "id": "dimension",
-              "label": "Break out by",
-              "kind": "single",
-              "default": "sector",
-              "options": [
-                {
-                  "id": "sector",
-                  "label": "Sector"
-                },
-                {
-                  "id": "country",
-                  "label": "Country"
-                }
-              ]
-            }
-          ],
-          "total": {
-            "column": "category",
-            "value": "Total",
-            "hide": true
-          },
           "figureNum": 6
         },
         {
           "id": "revenue-by-year",
           "short_label": "Revenue by Year",
-          "figureType": "chart",
-          "data": "alternative-scenarios/revenue-by-year/data.csv",
-          "spec": {
-            "chartType": "bar",
-            "data": "data.csv",
-            "title": "Estimated Federal Revenue Effect by Year",
-            "subtitle": "Billions of dollars, by scenario.",
-            "source": "GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-            "orientation": "vertical",
-            "xAxisType": "categorical",
-            "columns": {
-              "x": "category",
-              "series": "scenario",
-              "value": "value"
+          "figureType": "composite",
+          "parts": [
+            {
+              "figureType": "table",
+              "data": "alternative-scenarios/revenue-by-year/data.csv",
+              "spec": {
+                "data": "data.csv",
+                "title": "Estimated Federal Revenue Effect by Year",
+                "subtitle": "Billions of dollars, by scenario.",
+                "source": "GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+                "stub": [
+                  "scenario"
+                ],
+                "header": [
+                  "category"
+                ],
+                "value": "value",
+                "column_order": [
+                  "2026",
+                  "2027",
+                  "2028",
+                  "2029",
+                  "2030",
+                  "2031",
+                  "2032",
+                  "2033",
+                  "2034",
+                  "2035",
+                  "Total"
+                ],
+                "column_labels": {
+                  "Total": "10-yr total"
+                },
+                "format": {
+                  "default": {
+                    "type": "number",
+                    "decimals": 1,
+                    "thousands": true,
+                    "prefix": "$"
+                  }
+                },
+                "row_labels": {
+                  "tracker_actual_2026-07-01": "Current law",
+                  "tracker_new_301_2026-07-01": "New 301"
+                },
+                "group_labels": {
+                  "tracker_actual_2026-07-01": "Current law",
+                  "tracker_new_301_2026-07-01": "New 301"
+                }
+              }
             },
-            "series_order": [
-              "tracker_actual_2026-07-01",
-              "tracker_new_301_2026-07-01"
-            ],
-            "series_labels": {
-              "tracker_actual_2026-07-01": "Current law",
-              "tracker_new_301_2026-07-01": "New 301"
+            {
+              "figureType": "chart",
+              "data": "alternative-scenarios/revenue-by-year/data.csv",
+              "spec": {
+                "chartType": "bar",
+                "data": "data.csv",
+                "title": "Revenue by Fiscal Year",
+                "subtitle": "Billions of dollars, by scenario.",
+                "orientation": "vertical",
+                "xAxisType": "categorical",
+                "columns": {
+                  "x": "category",
+                  "series": "scenario",
+                  "value": "value"
+                },
+                "x_order": [
+                  "2026",
+                  "2027",
+                  "2028",
+                  "2029",
+                  "2030",
+                  "2031",
+                  "2032",
+                  "2033",
+                  "2034",
+                  "2035"
+                ],
+                "series_order": [
+                  "tracker_actual_2026-07-01",
+                  "tracker_new_301_2026-07-01"
+                ],
+                "series_labels": {
+                  "tracker_actual_2026-07-01": "Current law",
+                  "tracker_new_301_2026-07-01": "New 301"
+                },
+                "series_colors": {
+                  "tracker_actual_2026-07-01": "blue",
+                  "tracker_new_301_2026-07-01": "amber"
+                }
+              },
+              "total": {
+                "column": "category",
+                "value": "Total",
+                "hide": true
+              }
             }
-          },
-          "body_html": "<p>Estimated federal revenue from the tariffs by fiscal year, compared across scenarios. Use the\nsidebar to switch conventional vs dynamic, and the <strong>View</strong> toggle for levels vs\nchange-vs-default.</p>",
+          ],
+          "body_html": "<p>Estimated federal revenue from the tariffs by fiscal year, compared across scenarios. The table\ngives the annual estimates and the 10-year total; the chart shows the year-by-year path. Use the\nsidebar to switch conventional vs dynamic, and the <strong>View</strong> toggle for levels vs\nchange-vs-default.</p>",
           "section": "fiscal",
           "selectors": [
             {
@@ -1326,12 +1491,6 @@
               ]
             }
           ],
-          "total": {
-            "column": "category",
-            "value": "Total",
-            "toggle": "show_total",
-            "show_option": "on"
-          },
           "figureNum": 7
         }
       ]

@@ -19,4 +19,24 @@ dashboard. Each file is a self-contained, implementation-ready spec (problem →
 | [legend-visibility.md](legend-visibility.md) | No way to hide the legend on a multi-series chart when it's redundant. Add `legend: false`. | Low |
 | [table-group-order.md](table-group-order.md) | Row groups order by first-seen only; add `group_order` (like row_order/column_order) to order stub groups without reordering data. | Low |
 
-_More may be added as we go._
+**Delivered in engine 1.3.0** — every request above shipped in 1.3.0; the tool's tool-side
+workarounds were removed on re-vendor.
+
+## Delivered in engine 1.3.1
+
+Both opened while testing 1.3.0, spec'd, and shipped in 1.3.1 (re-vendored):
+
+| Spec | Summary |
+|---|---|
+| [multi-tier-header-order.md](multi-tier-header-order.md) | 2-tier header super-groups stay contiguous under `column_order` (now a within-super sort); new `column_group_order` orders the super tier. |
+| [collapse-all-control-placement.md](collapse-all-control-placement.md) | `collapsible.control` defaults to `"stub-header"` — the expand/collapse-all toggle now sits in the top-left corner cell above the stub. |
+
+## Delivered in engine 1.3.1 (commit `36995da`, re-vendored)
+
+| Spec | Summary | Status |
+|---|---|---|
+| [single-facet-hover-tooltip.md](single-facet-hover-tooltip.md) | A `small_multiples` chart with one facet value now hovers with the bar-end pill (fill-matched), not the legacy tooltip. | **Fully delivered.** Tool no longer needs a facet workaround for hover; it still drops a size-1 facet to standalone purely to suppress the redundant single-value pane title. |
+| [inline-selector-accent-noseries-bars.md](inline-selector-accent-noseries-bars.md) | The inline title-selector color accent now recolors no-series bar charts (standalone). | **Fully delivered** (with the faceted follow-up below). |
+| [faceted-inline-selector-accent.md](faceted-inline-selector-accent.md) | Extend the accent to FACETED (`small_multiples`) bars — `mountFigure` computes `accentColor` and threads it to each pane, re-rendering on selection change. | **Fully delivered** (commit `39ee9ac`). gdp-by-category's `bar_color` bridge removed; sector/country coloring is now entirely engine-driven (verified: a faceted pane recolors to a distinct accent). |
+
+_No open requests — every spec gathered while building the dashboard has shipped._

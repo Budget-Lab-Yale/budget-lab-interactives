@@ -38,6 +38,7 @@ Bar fill is keyed by **series** only. Two common needs have no clean expression:
 
 ## Dashboard context
 
-gdp-by-category (default) currently colors via `series_colors: {"": amber}` and renders its total
-as an annotation line; distribution encodes basis+total into the series to get a darker total.
-`category_colors` would replace both workarounds.
+gdp-by-category renders the overall `Total` as the left-most bar (a real data row) alongside the
+per-sector/per-country bars, colored `amber` for the whole single series via `series_colors:
+{"": amber}`. We want that `Total` bar in a distinct gray to read as a summary; there is no way to
+color one category in a single-series bar today. `category_colors: {Total: gray}` would do it.

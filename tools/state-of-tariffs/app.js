@@ -168,11 +168,20 @@ function defaultTogglesFor(tab) {
   return out;
 }
 
-// Figure-level selector defaults (e.g. a sector/country dropdown).
+// Figure-level selector defaults (e.g. a sector/country dropdown) and inline title-selector
+// defaults (engine-rendered dropdowns declared in spec.title_selectors). Both live in the same
+// sticky toggles map keyed by the selector id, so filtering + deep-link state treat them alike.
 function figureDefaultToggles(figure) {
   const out = {};
   for (const sel of (figure?.selectors || [])) {
     if (sel.default != null) out[sel.id] = sel.default;
+  }
+  const specs = figure?.parts ? figure.parts.map(p => p.spec) : [figure?.spec];
+  for (const spec of specs) {
+    const sels = (spec && spec.title_selectors) || {};
+    for (const k of Object.keys(sels)) {
+      out[k] = sels[k].default ?? sels[k].options?.[0]?.id;
+    }
   }
   return out;
 }
@@ -317,16 +326,24 @@ function renderSidebar() {
     sidebar.appendChild(figSection);
   }
 
-  // Tab-level toggles that apply to the active figure.
-  for (const toggle of tab.toggles || []) {
-    if (toggle.applies_to_figures && !toggle.applies_to_figures.includes(state.figure)) continue;
-    sidebar.appendChild(buildToggleSection(toggle));
+  const fig = figureById(tab, state.figure);
+  const toggleApplies = (t) => !t.applies_to_figures || t.applies_to_figures.includes(state.figure);
+
+  // Tab-level toggles that apply to the active figure. By default they render ABOVE the figure's
+  // selectors; a toggle flagged `after_selectors` renders below them instead.
+  for (const toggle of (tab.toggles || [])) {
+    if (toggleApplies(toggle) && !toggle.after_selectors) sidebar.appendChild(buildToggleSection(toggle));
   }
 
   // Figure-level selectors (sidebar dropdowns).
-  const fig = figureById(tab, state.figure);
   for (const sel of (fig?.selectors || [])) {
     sidebar.appendChild(buildSelectorSection(sel));
+  }
+
+  // Toggles explicitly placed below the selectors (e.g. a China on/off refinement under the
+  // scenario picker).
+  for (const toggle of (tab.toggles || [])) {
+    if (toggleApplies(toggle) && toggle.after_selectors) sidebar.appendChild(buildToggleSection(toggle));
   }
 
   // Release metadata (updated date + version) — shown on every tab.
@@ -509,6 +526,9 @@ async function renderMain() {
       figure: fig,
       toggles: state.toggles,
       fetchCsv,
+      // An inline title selector changed: update the sticky toggles map (keyed by the selector id)
+      // and re-render so the tool re-filters rows to the new option.
+      onSelect: ({ id, value }) => setState({ toggles: { ...state.toggles, [id]: value } }),
     });
   } catch (err) {
     console.error(err);

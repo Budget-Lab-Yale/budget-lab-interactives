@@ -23,6 +23,18 @@ spec:
   - UK
   - Free-trade partners
   - Rest of World
+  # Pin each partner's color so the "Without China" toggle (which drops China from series_order)
+  # doesn't shift every remaining country to the next palette slot. Values match the engine's
+  # default categorical palette in the With-China order.
+  series_colors:
+    China: "#0072B2"
+    Canada: "#E69F00"
+    Mexico: "#8856BF"
+    EU: "#2A8B3A"
+    Japan: "#B8302C"
+    UK: "#CC79A7"
+    Free-trade partners: "#7A5230"
+    Rest of World: "#58A3E7"
 ---
 
 The daily statutory rate by trading-partner group for the selected policy scenario.

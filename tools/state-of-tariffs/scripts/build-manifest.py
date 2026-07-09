@@ -78,6 +78,10 @@ RELEASE: dict = {}
 SCENARIOS: list = []           # [{id, label, short_label, default}]
 DEFAULT_SCENARIO: "str | None" = None
 
+# The engine's categorical palette, in slot order (see chart-engine palette.ts / theme tokens).
+# Used to pin scenario series to explicit, stable colors matching the engine's implicit order.
+SERIES_PALETTE = ["blue", "amber", "violet", "green", "red", "rose", "russet"]
+
 _DATE_TOKEN_BLOCK = re.compile(r"<p>\s*\{date:\s*([^}]+?)\s*\}\s*</p>")
 _DATE_TOKEN_INLINE = re.compile(r"\{date:\s*([^}]+?)\s*\}")
 
@@ -378,13 +382,20 @@ def apply_scenario_dimension(spec: dict, front: dict, config: Path) -> None:
     if role == "series":
         spec.setdefault("series_order", ids)
         spec["series_labels"] = {**labels, **(spec.get("series_labels") or {})}
+        # Pin each scenario to its palette color (default-first order) so the mapping is explicit
+        # and stable — matches the engine's implicit assignment (no visual change) but lets the
+        # render layer reuse the color, e.g. for per-scenario total reference lines.
+        pinned = {sid: SERIES_PALETTE[i % len(SERIES_PALETTE)] for i, sid in enumerate(ids)}
+        spec["series_colors"] = {**pinned, **(spec.get("series_colors") or {})}
     elif role == "header":
         spec.setdefault("column_order", ids)
         spec["header_labels"] = {**labels, **(spec.get("header_labels") or {})}
-    else:  # stub — scenarios on table rows. Only row_labels: a global row_order sort would
-           # break multi-level stub grouping (scenario as the 2nd stub under a category group);
-           # the data already orders the default scenario first within each group.
+    else:  # stub — scenarios on table rows. No row_order (a global sort would break multi-level
+           # stub grouping); the data already orders the default scenario first within each group.
+           # Set both row_labels and group_labels so the mapping applies whether scenario is the
+           # last stub tier (a row) or an earlier tier (a group header).
         spec["row_labels"] = {**labels, **(spec.get("row_labels") or {})}
+        spec["group_labels"] = {**labels, **(spec.get("group_labels") or {})}
 
 
 def scenario_selector() -> dict:
@@ -411,6 +422,41 @@ def augment_spec(spec: dict, front: dict, folder: Path, config: Path, figure_typ
     if figure_type == "chart" and front.get("project_band"):
         apply_project_band(spec, folder, config, front)
     apply_scenario_dimension(spec, front, config)
+
+
+def build_part(part: dict, folder: Path, tab_id: str, fig_id: str, config: Path) -> dict:
+    """Build one part of a composite figure. A part is a mini-figure: its own figureType + engine
+    spec + (optional) total, sharing the parent figure's data folder, selectors, and
+    tab toggles. Model augmentations (auto_format, project_band, scenario_role) are read from the
+    part's own frontmatter keys, so each part can shape rows independently."""
+    if not isinstance(part, dict):
+        fail(f"{config}: each item in 'parts' must be a mapping")
+    pf_type = part.get("figureType", "chart")
+    if pf_type not in ("chart", "table"):
+        fail(f"{config}: part figureType must be 'chart' or 'table', got '{pf_type}'")
+    spec = part.get("spec")
+    if not isinstance(spec, dict):
+        fail(f"{config}: each part needs a 'spec' (mapping)")
+    if pf_type == "chart" and "chartType" not in spec:
+        fail(f"{config}: chart part spec must set 'chartType'")
+    if pf_type == "table" and not all(k in spec for k in ("stub", "header", "value")):
+        fail(f"{config}: table part spec must set 'stub', 'header', and 'value'")
+    data_name = spec.get("data", "data.csv")
+    if not isinstance(data_name, str):
+        fail(f"{config}: only a simple 'spec.data: <filename>' is supported")
+    if not (folder / data_name).exists():
+        fail(f"{config}: part data file not found ({folder / data_name})")
+    if pf_type == "chart":
+        apply_events(spec, part, tab_id, fig_id, config)
+    augment_spec(spec, part, folder, config, pf_type)
+    out = {
+        "figureType": pf_type,
+        "data": f"{tab_id}/{fig_id}/{data_name}",
+        "spec": spec,
+    }
+    if "total" in part:
+        out["total"] = part["total"]
+    return out
 
 
 def build_figure(tab_id: str, fig_id: str, section_id: "str | None") -> dict:
@@ -447,39 +493,53 @@ def build_figure(tab_id: str, fig_id: str, section_id: "str | None") -> dict:
             figure["section"] = section_id
         return figure
 
-    spec = front.get("spec")
-    if not isinstance(spec, dict):
-        fail(f"{config}: 'spec' (mapping) is required")
-    if figure_type == "chart" and "chartType" not in spec:
-        fail(f"{config}: chart spec must set 'chartType'")
-    if figure_type == "table" and not all(k in spec for k in ("stub", "header", "value")):
-        fail(f"{config}: table spec must set 'stub', 'header', and 'value'")
+    # Composite figure: a `parts` list renders multiple engine mounts (e.g. a table then a chart)
+    # stacked in one figure pane, sharing the figure's data folder, selectors, and tab toggles.
+    if "parts" in front:
+        parts = front["parts"]
+        if not isinstance(parts, list) or not parts:
+            fail(f"{config}: 'parts' must be a non-empty list")
+        figure = {
+            "id": fig_id,
+            "short_label": short_label,
+            "figureType": "composite",
+            "parts": [build_part(p, folder, tab_id, fig_id, config) for p in parts],
+            "body_html": render_markdown(body),
+        }
+    else:
+        spec = front.get("spec")
+        if not isinstance(spec, dict):
+            fail(f"{config}: 'spec' (mapping) is required")
+        if figure_type == "chart" and "chartType" not in spec:
+            fail(f"{config}: chart spec must set 'chartType'")
+        if figure_type == "table" and not all(k in spec for k in ("stub", "header", "value")):
+            fail(f"{config}: table spec must set 'stub', 'header', and 'value'")
 
-    # Data lives in the engine spec (`spec.data`), the engine-native authoring form. The runtime
-    # mount ignores it (render.js fetches the CSV and passes rows), but keeping it makes the spec
-    # valid against the engine schema and self-describing.
-    data_name = spec.get("data", "data.csv")
-    if not isinstance(data_name, str):
-        fail(f"{config}: only a simple 'spec.data: <filename>' is supported in this tool")
-    if not (folder / data_name).exists():
-        fail(f"{config}: data file not found ({folder / data_name})")
+        # Data lives in the engine spec (`spec.data`), the engine-native authoring form. The runtime
+        # mount ignores it (render.js fetches the CSV and passes rows), but keeping it makes the spec
+        # valid against the engine schema and self-describing.
+        data_name = spec.get("data", "data.csv")
+        if not isinstance(data_name, str):
+            fail(f"{config}: only a simple 'spec.data: <filename>' is supported in this tool")
+        if not (folder / data_name).exists():
+            fail(f"{config}: data file not found ({folder / data_name})")
 
-    if figure_type == "chart":
-        apply_events(spec, front, tab_id, fig_id, config)
+        if figure_type == "chart":
+            apply_events(spec, front, tab_id, fig_id, config)
 
-    # Translate model conventions (unit column, projected flag, scenario ids) into spec keys.
-    augment_spec(spec, front, folder, config, figure_type)
+        # Translate model conventions (unit column, projected flag, scenario ids) into spec keys.
+        augment_spec(spec, front, folder, config, figure_type)
 
-    figure = {
-        "id": fig_id,
-        "short_label": short_label,
-        "figureType": figure_type,
-        # data is resolved by app.js against data_base_url (./data/): store the path relative
-        # to the data dir.
-        "data": f"{tab_id}/{fig_id}/{data_name}",
-        "spec": spec,
-        "body_html": render_markdown(body),
-    }
+        figure = {
+            "id": fig_id,
+            "short_label": short_label,
+            "figureType": figure_type,
+            # data is resolved by app.js against data_base_url (./data/): store the path relative
+            # to the data dir.
+            "data": f"{tab_id}/{fig_id}/{data_name}",
+            "spec": spec,
+            "body_html": render_markdown(body),
+        }
     if section_id:
         figure["section"] = section_id
     if "variants" in front:
@@ -491,8 +551,6 @@ def build_figure(tab_id: str, fig_id: str, section_id: "str | None") -> dict:
         figure["selectors"] = selectors
     if "total" in front:
         figure["total"] = front["total"]
-    if "collapsible" in front:
-        figure["collapsible"] = front["collapsible"]
     # `lead: true` renders the figure's markdown body ABOVE the figure (an intro) instead of
     # below it as a description — used to fold section-intro copy onto its lead figure.
     if front.get("lead"):
@@ -530,7 +588,7 @@ def build_tab(tab: dict) -> dict:
         fig = build_figure(tab["id"], fid, section_id)
         # Charts and tables share one continuous sidebar number sequence (1..N); prose panes
         # are unnumbered.
-        if fig["figureType"] in ("chart", "table"):
+        if fig["figureType"] in ("chart", "table", "composite"):
             num += 1
             fig["figureNum"] = num
         figures.append(fig)

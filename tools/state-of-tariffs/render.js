@@ -50,18 +50,40 @@ function tokenLabels(tab, figure, toggles) {
   return map;
 }
 
-function substituteTokens(str, labels) {
+function substituteTokens(str, labels, skip) {
   if (typeof str !== "string") return str;
-  return str.replace(/\{(\w+)\}/g, (m, key) => (key in labels ? labels[key] : m));
+  return str.replace(/\{(\w+)\}/g, (m, key) =>
+    (skip && skip.has(key)) ? m : (key in labels ? labels[key] : m));
 }
 
-// Shallow-merge a variant's spec overrides onto the base spec, then substitute
-// {token}s in title/subtitle.
+// Shallow-merge a variant's spec overrides onto the base spec, then substitute {token}s in
+// title/subtitle. Tokens bound to an inline title selector (spec.title_selectors) are LEFT in the
+// title for the engine to render as an interactive dropdown — the tool substitutes everything else.
 function resolveSpec(figure, variant, labels) {
   const spec = { ...figure.spec, ...(variant?.spec || {}) };
-  if (spec.title) spec.title = substituteTokens(spec.title, labels);
+  const titleSelKeys = new Set(Object.keys(spec.title_selectors || {}));
+  if (spec.title) spec.title = substituteTokens(spec.title, labels, titleSelKeys);
   if (spec.subtitle) spec.subtitle = substituteTokens(spec.subtitle, labels);
   return spec;
+}
+
+// State for a spec's inline title selectors: the active option id per key (from the sticky toggles
+// map, else the selector's default), plus the active option's label — so row filtering, the
+// engine's `selections`, and any {token} in prose all agree. Keys whose id matches a data column
+// filter the rows to the active option (e.g. a `dimension` sector/country picker).
+function titleSelectorState(spec, toggles) {
+  const sels = (spec && spec.title_selectors) || {};
+  const keys = Object.keys(sels);
+  const selections = {};
+  const labels = {};
+  for (const k of keys) {
+    const def = sels[k].default ?? sels[k].options?.[0]?.id;
+    const active = toggles[k] != null ? toggles[k] : def;
+    selections[k] = active;
+    const opt = sels[k].options?.find(o => o.id === active);
+    labels[k] = opt ? (opt.label ?? opt.id) : active;
+  }
+  return { keys, selections, labels };
 }
 
 // Filter rows by the active variant (the `variant` column), by each single-select selector
@@ -123,75 +145,35 @@ function applyTotal(rows, figure, toggles) {
   return rows;
 }
 
-// A tab-toggle option may carry a `series_color`; when active, recolor every series to it. Used
-// so the "change vs. default" view reads in one distinct hue (violet) regardless of scenario.
-// Clones series_colors so the shared manifest spec isn't mutated across re-renders.
-function applyToggleColor(spec, tab, figure, toggles, rows) {
+// A tab-toggle option may carry overrides applied when it's active:
+//   series_color — recolor every series to it (e.g. change-vs-default → violet), and/or
+//   spec         — a shallow spec merge (e.g. a "Without China" option that swaps series_order
+//                  and yAxisPolicy). Unlike variants, no `variant`-column row filter is involved.
+// Clones the touched fields so the shared manifest spec isn't mutated across re-renders.
+function applyToggleOverrides(spec, tab, figure, toggles, rows) {
   for (const t of tab.toggles || []) {
     if (t.applies_to_figures && !t.applies_to_figures.includes(figure.id)) continue;
     const active = toggles[t.id] ?? t.default;
     const opt = t.options?.find((o) => o.id === active);
-    if (!opt?.series_color) continue;
-    const scol = spec.columns?.series;
-    const names = scol ? [...new Set(rows.map((r) => r[scol]))] : [""];
-    spec.series_colors = { ...(spec.series_colors || {}) };
-    for (const n of names) spec.series_colors[n] = opt.series_color;
+    if (!opt) continue;
+    if (opt.spec) Object.assign(spec, opt.spec);
+    if (opt.series_color) {
+      const scol = spec.columns?.series;
+      const names = scol ? [...new Set(rows.map((r) => r[scol]))] : [""];
+      spec.series_colors = { ...(spec.series_colors || {}) };
+      for (const n of names) spec.series_colors[n] = opt.series_color;
+    }
   }
 }
 
-// The engine keys header leaves by the LAST header value only, so a multi-tier header whose leaf
-// value repeats across banner groups (e.g. header [measure, substitution] where presub/postsub
-// recur under both Levels and Change-vs-default) collides — later groups' columns get dropped.
-// When that collision exists, synthesize a unique leaf column (full header path) and remap
-// header_labels so each synthetic leaf shows its original last-value label. No-op otherwise.
-const HSEP = "";
-function dedupeHeaderLeaves(rows, spec) {
-  const header = spec.header;
-  if (!Array.isArray(header) || header.length < 2) return rows;
-  const cols = header.map((c) => (c && typeof c === "object" ? c.label : c));
-  const last = cols[cols.length - 1];
-  const pathsByLast = new Map();
-  for (const r of rows) {
-    const lv = String(r[last] ?? "");
-    (pathsByLast.get(lv) || pathsByLast.set(lv, new Set()).get(lv)).add(cols.map((c) => r[c] ?? "").join(HSEP));
-  }
-  if (![...pathsByLast.values()].some((s) => s.size > 1)) return rows; // no collision
-
-  const leafCol = "__leaf";
-  const out = rows.map((r) => ({ ...r, [leafCol]: cols.map((c) => r[c] ?? "").join(HSEP) }));
-  spec.header = [...header.slice(0, -1), leafCol];
-  const labels = { ...(spec.header_labels || {}) };
-  for (const r of out) {
-    const lk = r[leafCol];
-    if (!(lk in labels)) labels[lk] = spec.header_labels?.[r[last]] ?? r[last] ?? "";
-  }
-  spec.header_labels = labels;
-  if (spec.column_order) delete spec.column_order; // old leaf values no longer match; first-seen order is correct
-  return out;
-}
-
-// The engine's table renderer emits a row-group header only on a group's FIRST appearance and
-// assumes each group's rows are contiguous. Tidy model data is often ordered by another key
-// (e.g. scenario-major), which detaches a group's later rows. Stable-reorder rows so each stub
-// group is contiguous (group order = first-seen; within-group order preserved).
-function groupContiguousRows(rows, spec) {
-  const stub = spec?.stub;
-  if (!Array.isArray(stub) || stub.length < 2) return rows;
-  const groupCols = stub.slice(0, -1).map((e) => (e && typeof e === "object" ? e.label : e));
-  const keyOf = (r) => groupCols.map((c) => r[c] ?? "").join("");
-  const firstSeen = new Map();
-  for (const r of rows) { const k = keyOf(r); if (!firstSeen.has(k)) firstSeen.set(k, firstSeen.size); }
-  return rows
-    .map((r, i) => [r, i])
-    .sort((a, b) => (firstSeen.get(keyOf(a[0])) - firstSeen.get(keyOf(b[0]))) || (a[1] - b[1]))
-    .map(([r]) => r);
-}
-
-// Render the total/aggregate rows as a reference-line ANNOTATION instead of a bar: pull the
-// matching rows out of the data and push a line (horizontal for vertical bars → yAxis; vertical
-// for horizontal bars → xAxis) at each total's value onto the (cloned) spec.annotations. Used
-// where a total bar reads poorly (e.g. a faceted chart). Returns the non-total rows.
-// figure.total.annotation: { label?, color?, style? }.
+// Render the total/aggregate rows as a reference-line ANNOTATION instead of a bar: the total's
+// value is data-driven (varies by vintage/scenario), so the tool pulls the matching rows out of
+// the data and sets a marker's value from each; everything else — label `{value}` substitution,
+// `value_format`, `labelSide`, and per-pane `facet` scoping — is handled natively by the engine
+// (chart engine ≥1.3.0). Horizontal bars → vertical rule on xAxis; vertical bars → horizontal
+// rule on yAxis. Returns the non-total rows. figure.total.annotation is passed through verbatim
+// (e.g. { label: "All households ({value})", value_format: {decimals:2,suffix:"%"}, style, color,
+// labelSide }).
 function injectTotalAnnotation(spec, rows, figure) {
   const t = figure.total;
   const isTotal = (r) => String(r[t.column]) === String(t.value);
@@ -202,20 +184,17 @@ function injectTotalAnnotation(spec, rows, figure) {
   const axis = horizontal ? "xAxis" : "yAxis";
   const coord = horizontal ? "x" : "y";
   const valueCol = spec.columns?.value || "value";
+  const facetCol = spec.columns?.facet;
+  const a = t.annotation || {};
 
-  // Pass every annotation field through to the engine (label, color, style, labelSide,
-  // labelPosition, …). Convenience: `position: under|over` maps to the engine's `labelSide`
-  // (which side of a horizontal reference line the label sits — bottom|top).
-  const a = { ...(t.annotation || {}) };
-  if (a.position) {
-    if (!horizontal) a.labelSide = /^(over|above|top)$/.test(a.position) ? "top" : "bottom";
-    delete a.position;
-  }
-  // `{value}` in the label is replaced with the total's own value, formatted per value_format
-  // ({decimals?, prefix?, suffix?}); value_format is a render-side hint, not an engine field.
-  const labelTemplate = a.label;
-  const vfmt = a.value_format;
-  delete a.value_format;
+  // When a pane carries more than one total line — a real series dimension distinct from the pane
+  // split, e.g. one line per scenario — color each line to match its series (from the pinned
+  // series_colors) so the lines are distinguishable. A single line per pane keeps the annotation's
+  // own (neutral) color.
+  const seriesCol = spec.columns?.series;
+  const perSeries = seriesCol && seriesCol !== facetCol
+    && new Set(totals.map((r) => r[seriesCol])).size > 1
+    && spec.series_colors;
 
   // Clone so we never accumulate into the shared manifest spec across re-renders.
   spec.annotations = { ...(spec.annotations || {}) };
@@ -224,110 +203,14 @@ function injectTotalAnnotation(spec, rows, figure) {
     const v = Number(tr[valueCol]);
     if (!Number.isFinite(v)) continue;
     const line = { [coord]: v, ...a };
-    if (typeof labelTemplate === "string" && labelTemplate.includes("{value}")) {
-      line.label = labelTemplate.replace("{value}", formatAnnotationValue(v, vfmt));
-    }
+    // Faceted charts have per-pane scales; scope each line to its pane. The engine renders a
+    // line in every pane when `facet` is omitted.
+    if (facetCol && tr[facetCol] != null) line.facet = tr[facetCol];
+    if (perSeries && spec.series_colors[tr[seriesCol]]) line.color = spec.series_colors[tr[seriesCol]];
     list.push(line);
   }
   spec.annotations[axis] = list;
   return rows.filter((r) => !isTotal(r));
-}
-
-function formatAnnotationValue(v, f = {}) {
-  const d = f?.decimals ?? 1;
-  return (f?.prefix || "") + v.toFixed(d) + (f?.suffix || "");
-}
-
-// Collapsible table row-groups (tool-side; a candidate engine feature). Adds a caret to each
-// group header, toggles the group's rows, and an expand/collapse-all toolbar. State lives in a
-// closure Map so it survives the engine's ResizeObserver re-render (which replaces the table DOM);
-// a MutationObserver reapplies to each freshly-rendered table. figure.collapsible:
-//   { default: "collapsed"|"expanded", expanded?: [names], collapsed?: [names] }
-function setupCollapsible(mount, card, figure, registerTeardown) {
-  const cfg = figure.collapsible;
-  if (!cfg) return;
-  const collapsed = new Map(); // groupName -> bool (persists across re-renders)
-
-  const initState = (name) => {
-    if (collapsed.has(name)) return;
-    let c = cfg.default !== "expanded"; // default collapsed unless told otherwise
-    if (Array.isArray(cfg.expanded) && cfg.expanded.includes(name)) c = false;
-    if (Array.isArray(cfg.collapsed) && cfg.collapsed.includes(name)) c = true;
-    collapsed.set(name, c);
-  };
-
-  const groupsOf = (table) => {
-    const groups = [];
-    let cur = null;
-    for (const tr of table.querySelectorAll("tbody tr")) {
-      if (tr.classList.contains("tbl-table-group")) {
-        cur = { header: tr, name: tr.textContent.trim(), rows: [] };
-        groups.push(cur);
-      } else if (cur) cur.rows.push(tr);
-    }
-    return groups;
-  };
-
-  const setAll = (all) => {
-    for (const k of collapsed.keys()) collapsed.set(k, all);
-    const t = card.querySelector("table");
-    if (t) applyToTable(t);
-  };
-
-  // Expand/collapse-all control, placed in the table's top-left corner cell (the stub-header,
-  // above the row labels). Re-injected on each apply since the engine's re-render rebuilds it.
-  function injectCornerControl(table) {
-    const corner = table.querySelector("thead .tbl-table-stub-header") || table.querySelector("thead th");
-    if (!corner || corner.querySelector(".collapse-toolbar")) return;
-    const bar = document.createElement("div");
-    bar.className = "collapse-toolbar";
-    const mkBtn = (label, all) => {
-      const b = document.createElement("button");
-      b.type = "button";
-      b.className = "collapse-all-btn";
-      b.textContent = label;
-      b.addEventListener("click", (e) => { e.stopPropagation(); setAll(all); });
-      return b;
-    };
-    bar.append(mkBtn("Expand all", false), mkBtn("Collapse all", true));
-    corner.appendChild(bar);
-  }
-
-  function applyToTable(table) {
-    table.dataset.collapsible = "1";
-    for (const g of groupsOf(table)) {
-      initState(g.name);
-      const th = g.header.querySelector("th");
-      // Insert the caret inside the group-label element so it sits inline to the LEFT of the
-      // label (the inner is block-level, so a caret placed before it would stack above instead).
-      const labelEl = th.querySelector(".tbl-table-group-inner") || th;
-      if (!th.querySelector(".collapse-caret")) {
-        const caret = document.createElement("span");
-        caret.className = "collapse-caret";
-        caret.setAttribute("aria-hidden", "true");
-        labelEl.insertBefore(caret, labelEl.firstChild);
-        g.header.classList.add("is-collapsible");
-        g.header.addEventListener("click", () => {
-          collapsed.set(g.name, !collapsed.get(g.name));
-          applyToTable(table);
-        });
-      }
-      const isC = collapsed.get(g.name);
-      g.header.classList.toggle("is-collapsed", isC);
-      for (const r of g.rows) r.style.display = isC ? "none" : "";
-    }
-    injectCornerControl(table);
-  }
-
-  const first = card.querySelector("table");
-  if (first) applyToTable(first);
-
-  const obs = new MutationObserver(() => {
-    const t = card.querySelector("table:not([data-collapsible])");
-    if (t) applyToTable(t);
-  });
-  obs.observe(card, { childList: true, subtree: true });
-  registerTeardown(() => obs.disconnect());
 }
 
 // The figure's markdown body renders as unboxed prose either below the figure card (a
@@ -349,15 +232,19 @@ export async function renderFigure(mount, ctx) {
   mount.innerHTML = "";
 
   const { tab, figure, toggles, fetchCsv } = ctx;
-  if (!figure.spec) {
+  if (!figure.spec && !figure.parts) {
     mount.innerHTML = '<div class="figure-error">Figure has no spec.</div>';
     return;
   }
 
   const labels = tokenLabels(tab, figure, toggles);
+  // Fold in inline title-selector active labels so {token}s in prose/subtitle resolve to them too
+  // (the title itself keeps the {token} for the engine to render as a dropdown — see resolveSpec).
+  for (const p of (figure.parts || [{ spec: figure.spec }])) {
+    Object.assign(labels, titleSelectorState(p.spec, toggles).labels);
+  }
   const variantId = figure.variants?.length ? pickActiveVariant(figure.variants, toggles, tab) : null;
   const variant = figure.variants?.find(v => v.id === variantId);
-  const spec = resolveSpec(figure, variant, labels);
 
   // The description/lead prose supports the same {toggleId}/{selectorId} tokens as the
   // title/subtitle, so body copy updates with the active toggle too.
@@ -366,33 +253,71 @@ export async function renderFigure(mount, ctx) {
   // Lead text renders above the figure card; a plain description renders below it (later).
   if (figure.lead) renderDescription(mount, bodyHtml, true);
 
-  const card = document.createElement("div");
-  mount.appendChild(card);
+  // A composite figure stacks several parts (e.g. a table then a chart); a plain figure is a
+  // single implicit part. Each part shares the figure's selectors/variants/toggles for filtering
+  // but carries its own engine spec, figureType, and total handling.
+  const parts = figure.parts || [{
+    figureType: figure.figureType, spec: figure.spec, data: figure.data,
+    total: figure.total,
+  }];
 
-  let rows = [];
-  try {
-    if (figure.data) {
-      rows = filterRows(await fetchCsv(figure.data), tab, figure, variantId, toggles);
-      rows = figure.total?.annotation
-        ? injectTotalAnnotation(spec, rows, figure)
-        : applyTotal(rows, figure, toggles);
-      applyToggleColor(spec, tab, figure, toggles, rows);
-      if (figure.figureType === "table") {
-        rows = dedupeHeaderLeaves(rows, spec);
-        rows = groupContiguousRows(rows, spec);
+  for (const part of parts) {
+    // A part-figure view: figure-level fields (id, selectors, variants) plus the part's own spec.
+    const pf = {
+      ...figure,
+      figureType: part.figureType,
+      spec: part.spec,
+      data: part.data ?? figure.data,
+      total: part.total,
+    };
+    const spec = resolveSpec(pf, variant, labels);
+    // Inline title selectors (engine-rendered dropdowns bound to a {token} in the title). The
+    // engine renders the control + recolors a single-series chart to the active option's color,
+    // but plots the rows it's given — so the tool filters rows to the active option and re-renders
+    // on change (ctx.onSelect → host state update → re-mount).
+    const tss = titleSelectorState(spec, toggles);
+    const card = document.createElement("div");
+    card.className = "figure-part";
+    mount.appendChild(card);
+    try {
+      let rows = [];
+      if (pf.data) {
+        rows = filterRows(await fetchCsv(pf.data), tab, pf, variantId, toggles);
+        for (const k of tss.keys) {
+          if (rows.length && Object.prototype.hasOwnProperty.call(rows[0], k)) {
+            rows = rows.filter(r => r[k] === tss.selections[k]);
+          }
+        }
+        rows = pf.total?.annotation
+          ? injectTotalAnnotation(spec, rows, pf)
+          : applyTotal(rows, pf, toggles);
+        applyToggleOverrides(spec, tab, pf, toggles, rows);
+        // Multi-tier header keying, order-independent row grouping, collapsible row groups
+        // (spec.collapsible), and single-facet bar hover (bar-end pill, not the legacy tooltip) are
+        // all handled natively by the engine (≥1.3.1).
+        // A facet channel that resolves to a single value isn't really a facet (gdp-by-category
+        // "by country" has one "Countries" group). Render it standalone so it doesn't print a
+        // redundant single-value pane title (the engine now hovers it correctly either way).
+        const facetCol = spec.columns?.facet;
+        if (facetCol && rows.length && new Set(rows.map(r => r[facetCol])).size <= 1) {
+          spec.columns = { ...spec.columns };
+          delete spec.columns.facet;
+          delete spec.small_multiples;
+        }
       }
+      const opts = { spec, rows, downloadName: figure.id };
+      if (tss.keys.length) {
+        opts.selections = tss.selections;
+        if (ctx.onSelect) opts.onSelect = ctx.onSelect;
+      }
+      const teardown = pf.figureType === "table"
+        ? engine().mountTable(card, opts)
+        : engine().mountChart(card, opts);
+      if (typeof teardown === "function") teardowns.push(teardown);
+    } catch (e) {
+      console.error(e);
+      card.innerHTML = `<div class="figure-error">Could not render: ${e.message}</div>`;
     }
-    const opts = { spec, rows, downloadName: figure.id };
-    const teardown = figure.figureType === "table"
-      ? engine().mountTable(card, opts)
-      : engine().mountChart(card, opts);
-    if (typeof teardown === "function") teardowns.push(teardown);
-    if (figure.figureType === "table" && figure.collapsible) {
-      setupCollapsible(mount, card, figure, (fn) => teardowns.push(fn));
-    }
-  } catch (e) {
-    console.error(e);
-    card.innerHTML = `<div class="figure-error">Could not render: ${e.message}</div>`;
   }
 
   if (!figure.lead) renderDescription(mount, bodyHtml, false);

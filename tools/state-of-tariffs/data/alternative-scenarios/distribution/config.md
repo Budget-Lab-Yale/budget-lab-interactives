@@ -10,6 +10,16 @@ selectors:
   options:
   - {id: presub, label: Pre-substitution}
   - {id: postsub, label: Post-substitution}
+# All-household total as a per-pane dashed reference line (one per basis pane). Data-driven Total
+# rows; the engine scopes each line to its facet.
+total:
+  column: category
+  value: Total
+  annotation:
+    label: All households ({value})
+    style: dashed
+    color: "#6b7280"
+    labelSide: bottom
 spec:
   chartType: bar
   data: data.csv

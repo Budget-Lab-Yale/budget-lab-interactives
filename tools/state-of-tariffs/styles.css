@@ -339,6 +339,21 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
    on specificity and survives re-vendoring the engine. */
 .tracker-figure .figure-logo { display: none; }
 
+/* Composite figures stack multiple parts (e.g. a table then a chart) in one pane; give the
+   parts after the first a little breathing room. */
+.figure-part + .figure-part { margin-top: 20px; }
+
+/* Sticky stub column: on a wide table that scrolls horizontally (e.g. revenue by year, with a
+   column per year), keep the row labels pinned so rows stay identifiable while scrolling. The
+   scroll ancestor is the engine's .figure-canvas-scroll. */
+.tbl-table th.tbl-table-stub,
+.tbl-table-stub-header {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--tbl-bg);
+}
+
 /* Per-figure markdown body — tool-supplied text appended below the engine's
    figure card (the engine renders the figure + source line; the prose is ours). */
 .figure-description {
@@ -352,41 +367,11 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 /* Lead intro: same body type, but sits above the figure card with spacing below. */
 .figure-description.figure-lead { margin: 0 0 16px; }
 
-/* Collapsible table row-groups (tool-side). Caret on the group header + expand/collapse-all
-   control, which sits in the table's top-left corner cell (above the row labels). */
-.collapse-toolbar { display: flex; gap: 6px; flex-wrap: wrap; margin: 0; }
-.tbl-table-stub-header { vertical-align: bottom; }
-.collapse-all-btn {
-  font: inherit;
-  font-size: 11px;
-  font-weight: var(--tw-body);
-  color: var(--tbl-navy);
-  background: var(--tbl-bg);
-  border: 1px solid var(--tbl-border);
-  border-radius: 6px;
-  padding: 2px 8px;
-  cursor: pointer;
-}
-.collapse-all-btn:hover, .collapse-all-btn:focus-visible { border-color: var(--tbl-navy); background: var(--tbl-bg-subtle); outline: none; }
-.tbl-table-group.is-collapsible th { cursor: pointer; user-select: none; }
-.collapse-caret {
-  display: inline-block;
-  width: 0.7em;
-  margin-right: 6px;
-  color: var(--tbl-text-muted);
-  transform: rotate(90deg);      /* expanded: pointing down */
-  transition: transform 0.12s ease;
-}
-.collapse-caret::before { content: "\25B8"; }   /* ▸ */
-.tbl-table-group.is-collapsed .collapse-caret { transform: rotate(0deg); }  /* collapsed: pointing right */
-
-/* Emphasis rows (e.g. a table's Total row): the engine marks only the value cells, leaving the
-   row's stub label plain. Extend the bold + highlight to the stub so the whole row — label
-   through values — reads as one style. (Live HTML table only; PNG export would need the fix
-   upstream in the engine.) */
+/* Emphasis rows (e.g. a Total row) are fully styled by the engine (bold + highlight across the
+   whole row, stub included, in HTML and PNG). Re-assert only the highlight background on the
+   sticky stub cell so the sticky background rule above doesn't overpaint it. */
 .tbl-table tbody tr:has(td.is-emphasis) th.tbl-table-stub {
-  font-weight: var(--tw-bold);
-  background: var(--tbl-bg-subtle) !important;
+  background: var(--tbl-bg-subtle);
 }
 .figure-description ul, .figure-description ol { margin: 0 0 8px; padding-left: 20px; }
 .figure-description li { margin: 0 0 4px; }

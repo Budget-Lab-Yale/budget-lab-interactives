@@ -119,3 +119,15 @@ category,value,substitution,scenario,measure,basis
 8,-367.72419590495343,postsub,tracker_new_301_2026-07-01,delta_vs_default,2025 dollars
 9,-426.83474832124944,postsub,tracker_new_301_2026-07-01,delta_vs_default,2025 dollars
 10,-721.8263429902407,postsub,tracker_new_301_2026-07-01,delta_vs_default,2025 dollars
+Total,-0.370137511112573,presub,tracker_actual_2026-07-01,level,% of after-tax income
+Total,-0.2917604633097868,postsub,tracker_actual_2026-07-01,level,% of after-tax income
+Total,-0.7343585643919825,presub,tracker_new_301_2026-07-01,level,% of after-tax income
+Total,-0.54611665655384,postsub,tracker_new_301_2026-07-01,level,% of after-tax income
+Total,-0.36422105327940946,presub,tracker_new_301_2026-07-01,delta_vs_default,% of after-tax income
+Total,-0.2543561932440533,postsub,tracker_new_301_2026-07-01,delta_vs_default,% of after-tax income
+Total,-452.96625086975365,presub,tracker_actual_2026-07-01,level,2025 dollars
+Total,-357.0501212379478,postsub,tracker_actual_2026-07-01,level,2025 dollars
+Total,-898.6920690822996,presub,tracker_new_301_2026-07-01,level,2025 dollars
+Total,-668.325708770118,postsub,tracker_new_301_2026-07-01,level,2025 dollars
+Total,-445.7258182125459,presub,tracker_new_301_2026-07-01,delta_vs_default,2025 dollars
+Total,-311.27558753217033,postsub,tracker_new_301_2026-07-01,delta_vs_default,2025 dollars

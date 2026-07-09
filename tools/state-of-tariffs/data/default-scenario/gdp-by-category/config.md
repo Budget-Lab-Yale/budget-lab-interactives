@@ -1,28 +1,19 @@
 ---
 short_label: Real GDP by Category
 figureType: chart
-selectors:
-- id: dimension
-  label: Break out by
-  kind: single
-  default: sector
-  options:
-  - {id: sector, label: Sector}
-  - {id: country, label: Country}
-total:
-  column: category
-  value: Total
-  annotation:
-    label: Overall ({value})
-    value_format: {suffix: "%", decimals: 2}
-    style: dashed
-    color: gray
-    labelSide: bottom
-    labelPosition: right
 spec:
   chartType: bar
   data: data.csv
   title: Long-Run Change in Real GDP by {dimension}
+  # Inline title selector: {dimension} is an engine-rendered dropdown. Its option color tints the
+  # trigger label and (single-series chart) recolors the bars — sector blue, country amber. The
+  # render layer filters rows to the active dimension and re-renders on change.
+  title_selectors:
+    dimension:
+      default: sector
+      options:
+      - {id: sector, label: Sector, color: blue}
+      - {id: country, label: Country, color: amber}
   subtitle: Percentage-point change in the level of real GDP versus baseline.
   source: GTAP v7 [Corong et al (2017)], The Budget Lab analysis.
   orientation: vertical
@@ -31,13 +22,14 @@ spec:
     x: category
     facet: group
     value: value
-  series_colors:
-    "": amber
+  category_colors:
+    Total: "#6b7280"
   small_multiples:
     mode: shared
     columns: 2
     pane_widths: equal-bar
   x_order:
+  - Total
   - Agriculture
   - Mining & Extraction
   - Total Manufacturing
@@ -50,5 +42,5 @@ spec:
 ---
 
 Long-run change in real GDP, broken out by sector or by country. The sector view separates
-manufacturing sub-sectors into a "Manufacturing detail" pane; the country view separates
-individual countries from country groups. The dashed line marks the overall change in real GDP.
+manufacturing sub-sectors into a "Manufacturing detail" pane. The overall total is the left-most
+bar.

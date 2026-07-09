@@ -13,10 +13,10 @@ USA,-0.07,country,usa,Countries
 China,-0.08,country,china,Countries
 Canada,-0.14,country,canada,Countries
 Mexico,0.02,country,mexico,Countries
-EU,0.04,country,eu,Country Groups
+EU,0.04,country,eu,Countries
 UK,0.05,country,uk,Countries
 Japan,0,country,japan,Countries
-Free-trade partners,0.01,country,fta,Country Groups
-Rest of World,0.01,country,row,Country Groups
-Total,-0.01985217206076361,country,world,Country Groups
-World ex USA,-0.0040746315572715,country,world_ex_usa,Country Groups
+Free-trade partners,0.01,country,fta,Countries
+Rest of World,0.01,country,row,Countries
+Total,-0.01985217206076361,country,world,Countries
+World ex USA,-0.0040746315572715,country,world_ex_usa,Countries
