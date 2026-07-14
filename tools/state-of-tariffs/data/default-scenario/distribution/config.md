@@ -1,5 +1,5 @@
 ---
-short_label: Distribution by Decile
+short_label: Household Costs by Income
 figureType: chart
 selectors:
 - id: substitution
@@ -22,9 +22,9 @@ total:
 spec:
   chartType: bar
   data: data.csv
-  title: Distributional Effect by Income Decile
+  title: Household Cost of Tariffs by Income Decile
   subtitle: Tariff burden by household income decile.
-  source: GTAP v7, Census, BLS, BEA, The Budget Lab analysis.
+  source: GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.
   orientation: vertical
   xAxisType: categorical
   columns:
@@ -45,6 +45,6 @@ spec:
     - "2025 dollars"
 ---
 
-The tariff burden by household income decile, shown as a share of after-tax-and-transfer income
-and in 2025 dollars per household. Values are negative by convention (a burden). Use the sidebar
-to switch pre- vs post-substitution.
+The tariff burden by household income decile, as a share of after-tax-and-transfer income and in
+2025 dollars per household. Values are negative by convention. Use the sidebar to switch between
+pre- and post-substitution.

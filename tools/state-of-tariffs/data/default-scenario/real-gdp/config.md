@@ -1,12 +1,12 @@
 ---
-short_label: Real GDP
+short_label: GDP over Time
 figureType: chart
 spec:
   chartType: line
   data: data.csv
-  title: U.S. Real GDP Effect
-  subtitle: Percentage-point change in the level of real GDP versus baseline.
-  source: Bureau of Economic Analysis, The Budget Lab analysis.
+  title: Effect on Real GDP over Time
+  subtitle: Percent change in the level of real GDP versus baseline.
+  source: GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.
   xAxisType: temporal
   yAxisPolicy:
     includeZero: true

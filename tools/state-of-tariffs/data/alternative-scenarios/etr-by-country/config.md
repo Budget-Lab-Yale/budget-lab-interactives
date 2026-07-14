@@ -1,9 +1,9 @@
 ---
-short_label: Effective Rate by Country
+short_label: Effective Rate by Trading Partner
 figureType: table
 scenario_role: stub
 spec:
-  title: Average Effective Tariff Rate by Country
+  title: Average Effective Tariff Rate by Trading Partner
   subtitle: Change from baseline at the end of 2026, by scenario. Percent.
   data: data.csv
   collapsible:
@@ -34,9 +34,8 @@ spec:
       type: number
       decimals: 1
       suffix: "%"
-  source: GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.
+  source: GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.
 ---
 
-The average effective U.S. tariff rate by trading partner (row groups) and policy scenario,
-shown as both levels and change vs. the default scenario. Click a partner to expand or collapse
-its scenarios.
+The average effective U.S. tariff rate by trading partner and scenario, as both levels and change
+vs. our default scenario. Click a partner to expand or collapse its scenarios.

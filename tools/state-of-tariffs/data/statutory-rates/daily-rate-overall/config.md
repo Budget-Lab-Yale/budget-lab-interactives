@@ -22,8 +22,5 @@ spec:
     additional: Additional tariffs (above baseline)
 ---
 
-The overall statutory tariff rate over time for the selected policy scenario. Dashed vertical
-lines mark major tariff-policy changes; the grey band marks the projected period.
-
-_Policy-change markers and the projection band are defined in
-`data/statutory-rates/events.yaml` (placeholder values, to be updated by the modelers)._
+The overall statutory tariff rate over time, for the selected scenario. Dashed vertical lines
+mark major tariff policy changes. The grey band marks the projected period.

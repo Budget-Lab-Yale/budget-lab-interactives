@@ -94,3 +94,22 @@ else `Country Groups`.
 6. **Revenue by year (suggestion)** — the 10-year total makes the grouped bar chart hard to read;
    would it make more sense as a **table**? We could also show both a table and a bar chart. No
    data change either way — just your preference.
+
+## Known divergences (vintage 202607131919 — reconciled tool-side)
+
+The dashboard renders against the contract above. The current artifact diverges from it in the
+ways below; `scripts/reconcile-model-data.py` patches each after sync as an interim. Please fix
+these upstream so the reconcile step can be retired:
+
+1. **Distribution ships split.** The artifact emits `distribution-pct-income` and
+   `distribution-dollars` as separate slugs; the dashboard expects one `distribution` slug with a
+   `basis` column (`% of after-tax income` / `2025 dollars`). This is the consolidation asked for
+   in §2.3. Reconcile merges them.
+2. **`gdp-by-category` drops the `group` column.** The faceting column (`Sectors` /
+   `Manufacturing detail` / `Countries`) requested in §2.4 is absent; reconcile re-derives it from
+   `dimension` + `category_code`. Please emit `group` directly.
+3. **Unemployment rate.** The summary CSV still carries an `Unemployment rate` row; the dashboard
+   does not show it. Reconcile drops it — OK to omit it from the summary output?
+4. **By Product = `daily-rate-by-hs`.** The dashboard's By Product figure now renders the HS
+   product grouping (`daily-rate-by-hs`), not `daily-rate-by-category` (GTAP sectors). Please list
+   `daily-rate-by-hs` in the artifact `figures` manifest; `daily-rate-by-category` can be dropped.

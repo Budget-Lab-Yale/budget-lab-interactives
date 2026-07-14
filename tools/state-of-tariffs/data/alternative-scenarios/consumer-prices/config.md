@@ -7,7 +7,7 @@ spec:
   data: data.csv
   title: Consumer Price Effects by Spending Category
   subtitle: Percent change in consumer prices, by scenario.
-  source: BEA, GTAP v7, The Budget Lab analysis.
+  source: GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.
   orientation: horizontal
   xAxisType: categorical
   columns:
@@ -47,5 +47,5 @@ spec:
       postsub: Post-substitution
 ---
 
-Consumer-price effects by PCE spending category, faceted by pre- vs post-substitution, compared
-across scenarios. Use the **View** toggle for levels vs change-vs-default.
+Consumer-price effects by PCE spending category, split into pre- and post-substitution panes,
+compared across scenarios. Use the **View** toggle for levels or change vs. default.

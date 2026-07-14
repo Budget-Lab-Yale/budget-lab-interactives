@@ -1,22 +1,21 @@
 category,value,dimension,category_code,group
-Agriculture,-0.37180300562448465,sector,agriculture,Sectors
-Mining & Extraction,-0.6532224549543932,sector,mining,Sectors
-Total Manufacturing,0.9344441074396412,sector,manufacturing,Sectors
-Durable Manufacturing,1.9056772358416487,sector,durable,Manufacturing detail
-Nondurable Manufacturing,-0.18637971082431415,sector,nondurable,Manufacturing detail
+Agriculture,-0.3591042512381822,sector,agriculture,Sectors
+Mining & Extraction,-0.6519274177215604,sector,mining,Sectors
+Total Manufacturing,0.9203156727836368,sector,manufacturing,Sectors
+Durable Manufacturing,1.8689410467552217,sector,durable,Manufacturing detail
+Nondurable Manufacturing,-0.17409295380106157,sector,nondurable,Manufacturing detail
 Advanced Manufacturing,0.2,sector,advanced,Manufacturing detail
-Utilities,0.2957711475899188,sector,utilities,Sectors
-Construction,-1.8,sector,construction,Sectors
-Services,-0.04567193757884656,sector,services,Sectors
-Total,-0.0737951472401619,sector,overall_gdp,Sectors
-USA,-0.07,country,usa,Countries
-China,-0.08,country,china,Countries
-Canada,-0.14,country,canada,Countries
-Mexico,0.02,country,mexico,Countries
-EU,0.04,country,eu,Countries
-UK,0.05,country,uk,Countries
-Japan,0,country,japan,Countries
-Free-trade partners,0.01,country,fta,Countries
-Rest of World,0.01,country,row,Countries
-Total,-0.01985217206076361,country,world,Countries
-World ex USA,-0.0040746315572715,country,world_ex_usa,Countries
+Utilities,0.28985350224779616,sector,utilities,Sectors
+Construction,-1.78,sector,construction,Sectors
+Services,-0.042376092125445713,sector,services,Sectors
+Total,-0.07312342524528503,sector,overall_gdp,Sectors
+USA,-0.07,country,usa,Trading partners
+China,-0.08,country,china,Trading partners
+Canada,-0.14,country,canada,Trading partners
+Mexico,0.02,country,mexico,Trading partners
+EU,0.04,country,eu,Trading partners
+UK,0.06,country,uk,Trading partners
+Japan,0,country,japan,Trading partners
+Free-trade partners,0.01,country,fta,Trading partners
+Rest of World,0.01,country,row,Trading partners
+Total,-0.01952057831328124,country,world,Trading partners

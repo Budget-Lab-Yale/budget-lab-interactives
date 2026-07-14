@@ -37,4 +37,4 @@ spec:
     Rest of World: "#58A3E7"
 ---
 
-The daily statutory rate by trading-partner group for the selected policy scenario.
+The daily statutory rate by trading partner, for the selected scenario.

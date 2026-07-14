@@ -32,11 +32,11 @@ tabs:
   - daily-rate-overall
   - daily-rate-by-authority
   - daily-rate-by-country
-  - daily-rate-by-category
+  - daily-rate-by-hs
 
 - id: default-scenario
-  label: Default Scenario
-  description: Projected effects of the default tariff policy scenario, following The State of U.S. Tariffs. Estimates are shown pre- and post-substitution (before and after consumers and businesses shift purchases in response to tariffs).
+  label: "Projected Effects:\nDefault Scenario"
+  description: Projected effects of our default tariff policy scenario.
   sections:
   - id: overview
     label: ""
@@ -52,7 +52,7 @@ tabs:
     - consumer-prices
     - distribution
   - id: economy
-    label: Economy
+    label: Macroeconomy
     figures:
     - real-gdp
     - gdp-by-category
@@ -62,8 +62,8 @@ tabs:
     - revenue-by-year
 
 - id: alternative-scenarios
-  label: Alternative Scenarios
-  description: The same projected effects across all modeled policy scenarios. Use the toggle to view each scenario's own effects (levels) or its incremental effect relative to the default scenario (change vs. default).
+  label: "Projected Effects:\nAlternative Scenarios"
+  description: The same projected effects across all modeled policy scenarios. Use the toggle to view each scenario's own effects (levels) or its effect relative to our default scenario (change vs. default).
   toggles:
   - id: measure
     label: View
@@ -92,7 +92,7 @@ tabs:
     - consumer-prices
     - distribution
   - id: economy
-    label: Economy
+    label: Macroeconomy
     figures:
     - real-gdp
     - gdp-by-category

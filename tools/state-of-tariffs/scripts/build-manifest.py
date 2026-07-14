@@ -222,6 +222,24 @@ def apply_events(spec: dict, front: dict, tab_id: str, fig_id: str, config: Path
         else:
             fail(f"{config}: events group '{name}' must be a list or mapping")
 
+    # Resolve the `today`/`build` keyword (in a band start/end or an xAxis x) to the build date,
+    # so a projection band can begin on whatever day the manifest is generated. Done before the
+    # date-range filter below so resolved marker dates are filtered correctly.
+    from datetime import date
+    build_day = date.today().isoformat()
+
+    def resolve_build_date(value):
+        return build_day if value in ("today", "build") else value
+
+    for entry in xaxis:
+        if "x" in entry:
+            entry["x"] = resolve_build_date(entry["x"])
+    for band in bands:
+        if "start" in band:
+            band["start"] = resolve_build_date(band["start"])
+        if "end" in band:
+            band["end"] = resolve_build_date(band["end"])
+
     x_col = (spec.get("columns") or {}).get("x", "time")
     rng = csv_x_range(DATA_DIR / tab_id / fig_id / spec.get("data", "data.csv"), x_col)
     if rng:

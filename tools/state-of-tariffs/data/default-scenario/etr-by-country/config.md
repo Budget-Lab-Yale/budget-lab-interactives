@@ -1,5 +1,5 @@
 ---
-short_label: Effective Rate by Country
+short_label: Effective Rate by Trading Partner
 figureType: table
 spec:
   title: Average Effective Tariff Rate by Trading Partner
@@ -23,8 +23,7 @@ spec:
       suffix: "%"
   emphasis_rows:
   - Total
-  source: GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.
+  source: GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.
 ---
 
-A country-level breakdown of the average effective U.S. tariff rate, shown before and after
-trade substitution. The total row is bold.
+The average effective U.S. tariff rate by trading partner, before and after trade substitution.

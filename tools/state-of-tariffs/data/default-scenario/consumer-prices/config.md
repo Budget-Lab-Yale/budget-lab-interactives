@@ -6,7 +6,7 @@ spec:
   data: data.csv
   title: Consumer Price Effects by Spending Category
   subtitle: Percent change in consumer prices, pre- and post-substitution.
-  source: BEA, GTAP v7, The Budget Lab analysis.
+  source: GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.
   orientation: horizontal
   xAxisType: categorical
   yAxisPolicy:
@@ -52,8 +52,8 @@ spec:
       postsub: Post-substitution
 ---
 
-The estimated consumer-price effect by PCE spending category, ordered by spending group
-(durable goods, nondurable goods, services), with the total at the top.
+The consumer-price effect by PCE spending category, grouped as durable goods, nondurable goods,
+and services, with the total at the top.
 
 _TODO (TK): the "Total" row is placeholder data added on the dashboard side (the summary overall
 price effect) — pending an aggregate PCE row from the modelers. It lives directly in `data.csv`

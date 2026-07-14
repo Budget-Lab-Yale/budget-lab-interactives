@@ -292,12 +292,22 @@ export async function renderFigure(mount, ctx) {
           ? injectTotalAnnotation(spec, rows, pf)
           : applyTotal(rows, pf, toggles);
         applyToggleOverrides(spec, tab, pf, toggles, rows);
+        // series_order acts as a whitelist: draw only the series it names. By Product lists 7 of
+        // its 22 product groups ("Selected Products"), and the "Without China" toggle swaps in a
+        // China-less order — both expect the omitted series gone, not merely reordered. For charts
+        // whose series_order already names every series this is a no-op. It also caps render load:
+        // plotting all 22 product lines over daily data froze the main thread.
+        const seriesCol = spec.columns?.series;
+        if (seriesCol && Array.isArray(spec.series_order) && spec.series_order.length) {
+          const allow = new Set(spec.series_order);
+          rows = rows.filter(r => allow.has(r[seriesCol]));
+        }
         // Multi-tier header keying, order-independent row grouping, collapsible row groups
         // (spec.collapsible), and single-facet bar hover (bar-end pill, not the legacy tooltip) are
         // all handled natively by the engine (≥1.3.1).
         // A facet channel that resolves to a single value isn't really a facet (gdp-by-category
-        // "by country" has one "Countries" group). Render it standalone so it doesn't print a
-        // redundant single-value pane title (the engine now hovers it correctly either way).
+        // "by trading partner" has one "Trading partners" group). Render it standalone so it doesn't
+        // print a redundant single-value pane title (the engine now hovers it correctly either way).
         const facetCol = spec.columns?.facet;
         if (facetCol && rows.length && new Set(rows.map(r => r[facetCol])).size <= 1) {
           spec.columns = { ...spec.columns };

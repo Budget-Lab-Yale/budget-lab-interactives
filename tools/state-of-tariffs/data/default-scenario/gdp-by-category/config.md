@@ -1,5 +1,5 @@
 ---
-short_label: Real GDP by Category
+short_label: Long-Run GDP Breakdown
 figureType: chart
 spec:
   chartType: bar
@@ -13,9 +13,9 @@ spec:
       default: sector
       options:
       - {id: sector, label: Sector, color: blue}
-      - {id: country, label: Country, color: amber}
-  subtitle: Percentage-point change in the level of real GDP versus baseline.
-  source: GTAP v7 [Corong et al (2017)], The Budget Lab analysis.
+      - {id: country, label: Trading Partner, color: amber}
+  subtitle: Percent change in the level of real GDP versus baseline.
+  source: GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.
   orientation: vertical
   xAxisType: categorical
   columns:
@@ -41,6 +41,5 @@ spec:
   - Advanced Manufacturing
 ---
 
-Long-run change in real GDP, broken out by sector or by country. The sector view separates
-manufacturing sub-sectors into a "Manufacturing detail" pane. The overall total is the left-most
-bar.
+The long-run change in real GDP, by sector or by trading partner. In the sector view, manufacturing
+sub-sectors appear in a separate "Manufacturing detail" pane. The total is the left-most bar.

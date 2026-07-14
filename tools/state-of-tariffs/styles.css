@@ -67,6 +67,7 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 .tracker-tabs {
   display: flex;
   gap: 0;
+  align-items: flex-end;
   border-bottom: 1px solid var(--tbl-border);
   margin-bottom: 20px;
 }
@@ -82,7 +83,9 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   color: var(--tbl-text-muted);
   cursor: pointer;
   border-bottom: 3px solid transparent;
-  white-space: nowrap;
+  white-space: pre-line;
+  text-align: center;
+  line-height: 1.25;
   transition: color 0.15s, border-color 0.15s;
 }
 .tracker-tab:hover { color: var(--tbl-text-heading); }

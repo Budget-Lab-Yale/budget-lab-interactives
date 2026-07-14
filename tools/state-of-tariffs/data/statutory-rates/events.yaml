@@ -5,10 +5,8 @@
 #
 # A named group is either a flat list (treated as xAxis reference lines) OR a mapping with
 # `xAxis` and/or `bands` keys. Each xAxis entry is an engine annotation ({x, label, style?,
-# color?, labelSide?}); x is the effective date (YYYY-MM-DD).
-#
-# PLACEHOLDER VALUES — to be provided/updated by the Tariff-Model team. The dates and labels
-# below are carried over from the prior tracker and are not authoritative for this dashboard.
+# color?, labelSide?}); x is the effective date (YYYY-MM-DD). A date of `today` (in an xAxis x or
+# a band start/end) resolves to the build date when the manifest is generated.
 projection:
   xAxis:
   - x: '2026-07-23'
@@ -16,19 +14,16 @@ projection:
     color: red
     style: dashed
   bands:
-  - start: '2026-05-09'
+  - start: today
     end: '2026-12-31'
-    label: Assumes no further policy changes
 
 major:
 - x: '2025-02-04'
-  label: Fentanyl tariffs
+  label: Early fentanyl tariffs
   labelSide: middle
 - x: '2025-04-02'
   label: Liberation Day
   labelSide: middle
-- x: '2025-04-14'
-  label: Geneva truce
 - x: '2025-08-07'
   label: Reciprocal Phase 2
 - x: '2026-02-24'

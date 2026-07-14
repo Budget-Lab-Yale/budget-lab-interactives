@@ -13,9 +13,10 @@ parts:
   scenario_role: stub
   spec:
     data: data.csv
-    title: Estimated Federal Revenue Effect by Year
+    title: Net Revenue Impact by Fiscal Year
     subtitle: Billions of dollars, by scenario.
-    source: GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.
+    source: GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.
+    notes: "Net of the offsetting reduction in income and payroll tax revenue."
     stub: [scenario]
     header: [category]
     value: value
@@ -30,7 +31,7 @@ parts:
   spec:
     chartType: bar
     data: data.csv
-    title: Revenue by Fiscal Year
+    title: Net Revenue Impact by Fiscal Year
     subtitle: Billions of dollars, by scenario.
     orientation: vertical
     xAxisType: categorical
@@ -41,7 +42,6 @@ parts:
     x_order: ["2026","2027","2028","2029","2030","2031","2032","2033","2034","2035"]
 ---
 
-Estimated federal revenue from the tariffs by fiscal year, compared across scenarios. The table
-gives the annual estimates and the 10-year total; the chart shows the year-by-year path. Use the
-sidebar to switch conventional vs dynamic, and the **View** toggle for levels vs
-change-vs-default.
+The net federal revenue impact of the tariffs by fiscal year, compared across scenarios. The table gives the
+annual figures and the 10-year total. The chart shows the year-by-year path. Use the sidebar to
+switch between conventional and dynamic, and the **View** toggle for levels or change vs. default.

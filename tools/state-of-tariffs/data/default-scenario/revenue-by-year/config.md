@@ -4,9 +4,10 @@ parts:
 - figureType: table
   spec:
     data: data.csv
-    title: Estimated Federal Revenue Effect by Year
+    title: Net Revenue Impact by Fiscal Year
     subtitle: Billions of dollars.
-    source: GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.
+    source: GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.
+    notes: "Net of the offsetting reduction in income and payroll tax revenue."
     stub: [series]
     header: [category]
     value: value
@@ -23,7 +24,7 @@ parts:
   spec:
     chartType: bar
     data: data.csv
-    title: Revenue by Fiscal Year
+    title: Net Revenue Impact by Fiscal Year
     subtitle: Conventional and dynamic estimates. Billions of dollars.
     orientation: vertical
     xAxisType: categorical
@@ -40,6 +41,5 @@ parts:
       dynamic: Dynamic
 ---
 
-Estimated federal revenue from the tariffs by fiscal year, on both a conventional and a
-dynamic basis. The table gives the annual estimates and the 10-year total; the chart shows the
-year-by-year path.
+The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis. The
+table gives the annual figures and the 10-year total. The chart shows the year-by-year path.

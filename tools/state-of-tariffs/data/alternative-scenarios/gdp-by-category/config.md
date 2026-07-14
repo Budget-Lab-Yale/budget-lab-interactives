@@ -1,5 +1,5 @@
 ---
-short_label: Real GDP by Category
+short_label: Long-Run GDP Breakdown
 figureType: chart
 scenario_role: series
 spec:
@@ -14,9 +14,9 @@ spec:
       default: sector
       options:
       - {id: sector, label: Sector}
-      - {id: country, label: Country}
-  subtitle: Percentage-point change in the level of real GDP versus baseline, by scenario.
-  source: GTAP v7 [Corong et al (2017)], The Budget Lab analysis.
+      - {id: country, label: Trading Partner}
+  subtitle: Percent change in the level of real GDP versus baseline, by scenario.
+  source: GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.
   orientation: vertical
   xAxisType: categorical
   columns:
@@ -41,6 +41,6 @@ spec:
   - Advanced Manufacturing
 ---
 
-Long-run change in real GDP by sector or country, compared across scenarios. The sector view
-separates manufacturing sub-sectors into a "Manufacturing detail" pane. The overall total is the
+The long-run change in real GDP by sector or trading partner, compared across scenarios. In the sector
+view, manufacturing sub-sectors appear in a separate "Manufacturing detail" pane. The total is the
 left-most bar.

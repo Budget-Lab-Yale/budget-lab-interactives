@@ -16,9 +16,9 @@
   "default_scenario": "tracker_actual_2026-07-01",
   "provenance": {
     "version": 1,
-    "interface_vintage": "2026070114",
-    "published_at": "2026-07-02T11:54:11-0400",
-    "git_commit": "dd007be7138f5c6b2f429f2daed18f7a53ab2cc9",
-    "tracker_vintage": "2026-06-25-14"
+    "interface_vintage": "202607131919",
+    "published_at": "2026-07-13T19:31:07-0400",
+    "git_commit": "f9e9805110fcf15cf82f1a93fcb317e148bc6660",
+    "tracker_vintage": "2026-07-13-20"
   }
 }
