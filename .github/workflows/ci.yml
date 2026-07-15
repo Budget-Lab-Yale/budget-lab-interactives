@@ -1,18 +1,14 @@
 name: CI
 
 # Validates the static site, publishes it to GitHub Pages (the gh-pages
-# branch), and serves a live preview of each labeled PR — matching the setup
-# in budget-lab-charts. Three jobs:
+# branch), and serves a live preview of every PR — matching the setup in
+# budget-lab-charts. Three jobs:
 #
 #   validate — gate for branch-protection. The job name "Validate site" is the
 #     required status check in the "Protect main" ruleset — do NOT rename it
 #     without updating the ruleset, or protection silently stops working.
 #   preview  — publishes the PR's tree to gh-pages at /pr-preview/pr-<n>/ and
 #     comments the URL on the PR; removes it when the PR closes.
-#     TEMPORARY GATE: until the Pages source is flipped from main to gh-pages,
-#     preview URLs would 404, so the job only runs on PRs carrying the
-#     "preview" label. After cutover, delete the label condition (and the
-#     "labeled" trigger type below).
 #   deploy   — on merge to main (or manual dispatch), publishes the tree to
 #     the gh-pages root. keep_files:true so a production deploy never wipes
 #     the pr-preview/ subtree. (Caveat: keep_files also means a removed tool
@@ -40,7 +36,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-    types: [opened, reopened, synchronize, closed, labeled]
+    types: [opened, reopened, synchronize, closed]
 
 permissions:
   contents: write        # push the site to the gh-pages branch
@@ -128,9 +124,7 @@ jobs:
   # so writers of the branch never race.
   preview:
     name: PR preview
-    if: >-
-      github.event_name == 'pull_request' &&
-      contains(github.event.pull_request.labels.*.name, 'preview')
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     concurrency:
       group: gh-pages
@@ -138,13 +132,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Assemble site
-        # Shared exclude list in .github/publish-exclude.txt. Root /CNAME and
-        # /.nojekyll are additionally excluded here (unlike the production
-        # deploy): they only matter at the site root, and the preview-removal
+        # Shared exclude list in .github/publish-exclude.txt, with two preview-
+        # only differences. Root /CNAME and /.nojekyll are additionally
+        # excluded: they only matter at the site root, and the preview-removal
         # step can never delete files with those names — leaving them in would
-        # strand a stray pr-preview/pr-<n>/ dir after every PR close.
+        # strand a stray pr-preview/pr-<n>/ dir after every PR close. And
+        # /test/ IS included (the --include precedes the exclude list, so it
+        # wins): the QA harnesses aren't published to production, and the
+        # preview is where they run against a deployed copy.
         if: github.event.action != 'closed'
-        run: rsync -a --exclude-from .github/publish-exclude.txt --exclude '/CNAME' --exclude '/.nojekyll' ./ _site/
+        run: rsync -a --include '/test/***' --exclude-from .github/publish-exclude.txt --exclude '/CNAME' --exclude '/.nojekyll' ./ _site/
       - name: Deploy / remove preview
         uses: rossjrw/pr-preview-action@v1
         with:
@@ -154,8 +151,8 @@ jobs:
           custom-url: interactives.budgetlab.yale.edu
 
   # ── Production deploy ─────────────────────────────────────────────────────
-  # On merge to main: publish the tree to the gh-pages root. Inert until the
-  # Pages source is flipped from main to gh-pages.
+  # On merge to main: publish the tree to the gh-pages root, which Pages
+  # serves at interactives.budgetlab.yale.edu.
   deploy:
     name: Deploy to GitHub Pages
     if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
