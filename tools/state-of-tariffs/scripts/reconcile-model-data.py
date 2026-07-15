@@ -103,9 +103,16 @@ def drop_unemployment(tab: str) -> None:
         return
     rows, fn = read_rows(p)
     kept = [r for r in rows if r.get("category") != "Unemployment rate"]
-    if len(kept) != len(rows):
-        write_rows(p, kept, fn)
-        print(f"  {tab}/summary-statistics: dropped {len(rows) - len(kept)} unemployment row(s)")
+    # Table row groups follow first appearance in the CSV. Keep fiscal results last so the
+    # summary table mirrors the dashboard sidebar's rates -> prices -> GDP -> revenue order.
+    non_revenue = [r for r in kept if r.get("category") != "Revenue (10-year)"]
+    revenue = [r for r in kept if r.get("category") == "Revenue (10-year)"]
+    ordered = non_revenue + revenue
+    if ordered != rows:
+        write_rows(p, ordered, fn)
+        dropped = len(rows) - len(kept)
+        note = f"; dropped {dropped} unemployment row(s)" if dropped else ""
+        print(f"  {tab}/summary-statistics: revenue last{note}")
 
 
 def remove_superseded_by_category() -> None:

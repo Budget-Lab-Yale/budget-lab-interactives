@@ -1,19 +1,19 @@
 category,value,country_code,substitution
-China,21.835005476938488,chn,presub
-China,18.96911553176749,chn,postsub
-Canada,5.589309419362975,ca,presub
-Canada,3.153133316279663,ca,postsub
-Mexico,6.604768043451275,mx,presub
-Mexico,4.647731766297517,mx,postsub
-UK,5.350369803613918,uk,presub
-UK,4.166948273291092,uk,postsub
-Japan,9.959460407423792,jp,presub
-Japan,8.7242236686729715,jp,postsub
-EU,6.216822998882148,eu,presub
-EU,3.4704226797871955,eu,postsub
-Rest of World,7.644966793089985,row,presub
-Rest of World,6.018616855961229,row,postsub
-Free-trade partners,8.727307074301399,fta,presub
-Free-trade partners,4.886188317611653,fta,postsub
-Total,7.653995644459903,total,presub
-Total,6.195140689078836,total,postsub
+China,21.887296084139795,chn,presub
+China,19.05700849829692,chn,postsub
+Canada,5.548644373407686,ca,presub
+Canada,3.1678313589659393,ca,postsub
+Mexico,6.668679767829665,mx,presub
+Mexico,4.681872867578337,mx,postsub
+UK,5.349205740664057,uk,presub
+UK,4.161165182148676,uk,postsub
+Japan,9.958462018072757,jp,presub
+Japan,8.724729871005454,jp,postsub
+EU,6.213731483738613,eu,presub
+EU,3.4700508805056027,eu,postsub
+Rest of World,7.739089090600089,row,presub
+Rest of World,6.109821257276259,row,postsub
+Free-trade partners,8.717481450524593,fta,presub
+Free-trade partners,4.88085157446934,fta,postsub
+Total,7.68826954194671,total,presub
+Total,6.229949547784288,total,postsub

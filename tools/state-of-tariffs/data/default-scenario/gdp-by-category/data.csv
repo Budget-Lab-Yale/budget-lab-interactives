@@ -1,14 +1,14 @@
 category,value,dimension,category_code,group
-Agriculture,-0.3591042512381822,sector,agriculture,Sectors
-Mining & Extraction,-0.6519274177215604,sector,mining,Sectors
-Total Manufacturing,0.9203156727836368,sector,manufacturing,Sectors
-Durable Manufacturing,1.8689410467552217,sector,durable,Manufacturing detail
-Nondurable Manufacturing,-0.17409295380106157,sector,nondurable,Manufacturing detail
-Advanced Manufacturing,0.2,sector,advanced,Manufacturing detail
-Utilities,0.28985350224779616,sector,utilities,Sectors
-Construction,-1.78,sector,construction,Sectors
-Services,-0.042376092125445713,sector,services,Sectors
-Total,-0.07312342524528503,sector,overall_gdp,Sectors
+Agriculture,-0.37458030406814147,sector,agriculture,Sectors
+Mining & Extraction,-0.6572916930122268,sector,mining,Sectors
+Total Manufacturing,0.9299588675626688,sector,manufacturing,Sectors
+Durable Manufacturing,1.9174685263657048,sector,durable,Manufacturing detail
+Nondurable Manufacturing,-0.1951493471141637,sector,nondurable,Manufacturing detail
+Advanced Manufacturing,0.14,sector,advanced,Manufacturing detail
+Utilities,0.2890537432907251,sector,utilities,Sectors
+Construction,-1.79,sector,construction,Sectors
+Services,-0.04291303504273944,sector,services,Sectors
+Total,-0.073818109929561615,sector,overall_gdp,Sectors
 USA,-0.07,country,usa,Trading partners
 China,-0.08,country,china,Trading partners
 Canada,-0.14,country,canada,Trading partners
@@ -16,6 +16,6 @@ Mexico,0.02,country,mexico,Trading partners
 EU,0.04,country,eu,Trading partners
 UK,0.06,country,uk,Trading partners
 Japan,0,country,japan,Trading partners
-Free-trade partners,0.01,country,fta,Trading partners
+Free-trade partners,0.02,country,fta,Trading partners
 Rest of World,0.01,country,row,Trading partners
-Total,-0.01952057831328124,country,world,Trading partners
+Total,-0.01889985545141526,country,world,Trading partners
