@@ -16,3 +16,8 @@ _site
 /test
 # Per-tool CI config (validate.sh / smoke.json)
 /tools/*/ci
+# Per-tool dev files — mirrors what each tool's own make-snapshot.py already
+# omits from its served versions/ snapshots (data/ stays: tools read it).
+/tools/*/CHANGELOG.md
+/tools/*/scripts
+/tools/*/package.json
