@@ -18,10 +18,11 @@ name: CI
 #     the pr-preview/ subtree. (Caveat: keep_files also means a removed tool
 #     leaves stale files on gh-pages — prune the branch manually on removal.)
 #
-# There is no build step: both publishing jobs rsync the checkout (minus
-# .git/.github) into _site/ and publish that verbatim. CNAME and .nojekyll at
-# the repo root ride along into every deploy — CNAME must stay committed or
-# GitHub drops the custom domain and every embed breaks.
+# There is no build step: both publishing jobs rsync the checkout into _site/
+# and publish that verbatim, minus the repo-docs/dev-tooling paths listed in
+# .github/publish-exclude.txt. CNAME and .nojekyll at the repo root ride along
+# into every production deploy — CNAME must stay committed or GitHub drops the
+# custom domain and every embed breaks.
 #
 # Per-tool validation convention (scales to any number of tools without editing
 # this workflow):
@@ -137,12 +138,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Assemble site
-        # Root /CNAME and /.nojekyll are excluded here (unlike the production
+        # Shared exclude list in .github/publish-exclude.txt. Root /CNAME and
+        # /.nojekyll are additionally excluded here (unlike the production
         # deploy): they only matter at the site root, and the preview-removal
         # step can never delete files with those names — leaving them in would
         # strand a stray pr-preview/pr-<n>/ dir after every PR close.
         if: github.event.action != 'closed'
-        run: rsync -a --exclude '.git' --exclude '.github' --exclude '_site' --exclude '/CNAME' --exclude '/.nojekyll' ./ _site/
+        run: rsync -a --exclude-from .github/publish-exclude.txt --exclude '/CNAME' --exclude '/.nojekyll' ./ _site/
       - name: Deploy / remove preview
         uses: rossjrw/pr-preview-action@v1
         with:
@@ -165,7 +167,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Assemble site
-        run: rsync -a --exclude '.git' --exclude '.github' --exclude '_site' ./ _site/
+        run: rsync -a --exclude-from .github/publish-exclude.txt ./ _site/
       - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
