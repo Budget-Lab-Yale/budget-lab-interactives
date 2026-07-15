@@ -1,6 +1,6 @@
 {
   "release": {
-    "updated": "July 14, 2026",
+    "updated": "July 15, 2026",
     "version": "1.0",
     "vintage": "2026-07-14-20-484f"
   },
@@ -813,7 +813,7 @@
                 "title": "Net Revenue Impact by Fiscal Year",
                 "subtitle": "Billions of dollars.",
                 "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
-                "notes": "Net of the offsetting reduction in income and payroll tax revenue.",
+                "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
                 "stub": [
                   "series"
                 ],
@@ -859,6 +859,7 @@
                 "data": "data.csv",
                 "title": "Net Revenue Impact by Fiscal Year",
                 "subtitle": "Conventional and dynamic estimates. Billions of dollars.",
+                "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
                 "orientation": "vertical",
                 "xAxisType": "categorical",
                 "columns": {
@@ -1366,7 +1367,7 @@
                 "title": "Net Revenue Impact by Fiscal Year",
                 "subtitle": "Billions of dollars, by scenario.",
                 "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
-                "notes": "Net of the offsetting reduction in income and payroll tax revenue.",
+                "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
                 "stub": [
                   "scenario"
                 ],
@@ -1416,6 +1417,7 @@
                 "data": "data.csv",
                 "title": "Net Revenue Impact by Fiscal Year",
                 "subtitle": "Billions of dollars, by scenario.",
+                "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
                 "orientation": "vertical",
                 "xAxisType": "categorical",
                 "columns": {

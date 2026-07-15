@@ -16,7 +16,7 @@ parts:
     title: Net Revenue Impact by Fiscal Year
     subtitle: Billions of dollars, by scenario.
     source: GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.
-    notes: "Net of the offsetting reduction in income and payroll tax revenue."
+    notes: "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds."
     stub: [scenario]
     header: [category]
     value: value
@@ -33,6 +33,7 @@ parts:
     data: data.csv
     title: Net Revenue Impact by Fiscal Year
     subtitle: Billions of dollars, by scenario.
+    notes: "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds."
     orientation: vertical
     xAxisType: categorical
     columns:
