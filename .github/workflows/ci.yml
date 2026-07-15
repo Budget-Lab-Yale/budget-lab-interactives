@@ -137,14 +137,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Assemble site
+        # Root /CNAME and /.nojekyll are excluded here (unlike the production
+        # deploy): they only matter at the site root, and the preview-removal
+        # step can never delete files with those names — leaving them in would
+        # strand a stray pr-preview/pr-<n>/ dir after every PR close.
         if: github.event.action != 'closed'
-        run: rsync -a --exclude '.git' --exclude '.github' --exclude '_site' ./ _site/
+        run: rsync -a --exclude '.git' --exclude '.github' --exclude '_site' --exclude '/CNAME' --exclude '/.nojekyll' ./ _site/
       - name: Deploy / remove preview
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./_site
           preview-branch: gh-pages
           umbrella-dir: pr-preview
+          custom-url: interactives.budgetlab.yale.edu
 
   # ── Production deploy ─────────────────────────────────────────────────────
   # On merge to main: publish the tree to the gh-pages root. Inert until the
