@@ -1,0 +1,18 @@
+# Paths never published to the Pages site (rsync --exclude-from syntax; a
+# leading / anchors the pattern to the repo root). The published gh-pages tree
+# should contain only servable site content — repo docs and dev/CI tooling
+# stay on GitHub. THIRD_PARTY_LICENSES.md is deliberately published: license
+# attribution ships with the bundled third-party assets it covers.
+.git
+.github
+_site
+# .gitignore / .gitattributes at any depth
+.git*
+/.pre-commit-config.yaml
+/CHANGELOG.md
+/CONTRIBUTING.md
+/README.md
+# Dev/QA harness pages (use a labeled PR preview or a local server instead)
+/test
+# Per-tool CI config (validate.sh / smoke.json)
+/tools/*/ci
