@@ -12,7 +12,9 @@ _site
 /CHANGELOG.md
 /CONTRIBUTING.md
 /README.md
-# Dev/QA harness pages (use a labeled PR preview or a local server instead)
+# Dev/QA harness pages — excluded from production, but the preview job
+# includes them (--include '/test/***' ahead of this list), so QA against a
+# deployed copy happens on PR previews.
 /test
 # Per-tool CI config (validate.sh / smoke.json)
 /tools/*/ci
