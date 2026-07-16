@@ -42,7 +42,7 @@ time,series,variant,value
 40,Baseline Nov 2022 (AI),indexed,5.256051
 41,Baseline Nov 2022 (AI),indexed,5.305724
 42,Baseline Nov 2022 (AI),indexed,5.385228
-43,Baseline Nov 2022 (AI),indexed,
+43,Baseline Nov 2022 (AI),indexed,5.444533
 44,Baseline Nov 2022 (AI),indexed,
 45,Baseline Nov 2022 (AI),indexed,
 46,Baseline Nov 2022 (AI),indexed,
@@ -64,6 +64,7 @@ time,series,variant,value
 62,Baseline Nov 2022 (AI),indexed,
 63,Baseline Nov 2022 (AI),indexed,
 64,Baseline Nov 2022 (AI),indexed,
+65,Baseline Nov 2022 (AI),indexed,
 0,Baseline Jan 2021,indexed,0.0
 1,Baseline Jan 2021,indexed,0.493556
 2,Baseline Jan 2021,indexed,0.864929
@@ -129,6 +130,7 @@ time,series,variant,value
 62,Baseline Jan 2021,indexed,6.229979
 63,Baseline Jan 2021,indexed,6.297725
 64,Baseline Jan 2021,indexed,6.379255
+65,Baseline Jan 2021,indexed,6.456651
 0,Baseline Jan 2022,indexed,0.0
 1,Baseline Jan 2022,indexed,0.452842
 2,Baseline Jan 2022,indexed,0.806425
@@ -182,7 +184,7 @@ time,series,variant,value
 50,Baseline Jan 2022,indexed,5.729496
 51,Baseline Jan 2022,indexed,5.775613
 52,Baseline Jan 2022,indexed,5.835324
-53,Baseline Jan 2022,indexed,
+53,Baseline Jan 2022,indexed,5.880136
 54,Baseline Jan 2022,indexed,
 55,Baseline Jan 2022,indexed,
 56,Baseline Jan 2022,indexed,
@@ -194,6 +196,7 @@ time,series,variant,value
 62,Baseline Jan 2022,indexed,
 63,Baseline Jan 2022,indexed,
 64,Baseline Jan 2022,indexed,
+65,Baseline Jan 2022,indexed,
 0,Baseline Jul 2022,indexed,0.0
 1,Baseline Jul 2022,indexed,0.461675
 2,Baseline Jul 2022,indexed,0.834282
@@ -241,7 +244,7 @@ time,series,variant,value
 44,Baseline Jul 2022,indexed,5.433935
 45,Baseline Jul 2022,indexed,5.495528
 46,Baseline Jul 2022,indexed,5.600077
-47,Baseline Jul 2022,indexed,
+47,Baseline Jul 2022,indexed,5.662028
 48,Baseline Jul 2022,indexed,
 49,Baseline Jul 2022,indexed,
 50,Baseline Jul 2022,indexed,
@@ -259,6 +262,7 @@ time,series,variant,value
 62,Baseline Jul 2022,indexed,
 63,Baseline Jul 2022,indexed,
 64,Baseline Jul 2022,indexed,
+65,Baseline Jul 2022,indexed,
 2022-01-02,12-Month Rolling Baseline,rolling,3.276377
 2022-02-02,12-Month Rolling Baseline,rolling,3.248557
 2022-03-02,12-Month Rolling Baseline,rolling,3.193967
@@ -312,3 +316,4 @@ time,series,variant,value
 2026-03-02,12-Month Rolling Baseline,rolling,3.417222
 2026-04-02,12-Month Rolling Baseline,rolling,3.452172
 2026-05-02,12-Month Rolling Baseline,rolling,3.468088
+2026-06-02,12-Month Rolling Baseline,rolling,3.50035
