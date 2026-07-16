@@ -16,10 +16,10 @@ spec:
     tickCount: 6
   series_order:
   - total
-  - additional
+  - new_tariffs
   series_labels:
     total: Total effective rate
-    additional: Additional tariffs (above baseline)
+    new_tariffs: Additional tariffs (above baseline)
 ---
 
 The overall statutory tariff rate over time, for the selected scenario. Dashed vertical lines

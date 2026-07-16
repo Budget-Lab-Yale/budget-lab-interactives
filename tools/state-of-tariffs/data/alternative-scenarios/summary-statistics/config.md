@@ -28,11 +28,15 @@ spec:
 
 ## Alternative Scenarios
 
-_TODO (TK): overview copy for the alternative-scenarios comparison._
-
 These figures show the same projected effects as the Default Scenario tab, but across **all**
 modeled policy scenarios. Use the **View** toggle to switch between each scenario's own effects
 (levels) and its effect relative to our default scenario (change vs. default).
-Under "change vs. default," our default scenario is the zero reference and does not appear.
 
-Columns show each scenario under both levels and change vs. our default scenario.
+We show the following alternative scenario:
+
+- **New 301.** Under this scenario, Section 122 expires as scheduled at the end of July and is
+  replaced with new Section 301 tariffs based on the U.S. Trade Representative's June
+  ["forced labor" investigation announcement](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/june/ustr-makes-findings-and-proposes-action-60-section-301-investigations-relating-failures-take-action).
+  The proposed tariffs cover most imports from 60 economies. The rate is 10% for countries that
+  have taken steps to block imports made with forced labor and 12.5% for the others. We model the
+  country rates and product list announced by USTR.

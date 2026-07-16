@@ -1,43 +1,43 @@
 category,group,substitution,value
-Total,Total,presub,0.33801785763779374
-Total,Total,postsub,0.26719860601844647
-Motor vehicles and parts,Durable goods,presub,2.862934593369443
-Motor vehicles and parts,Durable goods,postsub,2.451604497390808
-Furnishings and durable household equipment,Durable goods,presub,2.168621958157924
-Furnishings and durable household equipment,Durable goods,postsub,1.6753065313372633
-Recreational goods and vehicles,Durable goods,presub,1.1421029456420748
-Recreational goods and vehicles,Durable goods,postsub,0.9175917441192034
-Net foreign travel,Services,presub,0.6276660148846559
-Net foreign travel,Services,postsub,0.5019913170507361
-Transportation services,Services,presub,0.4829933629836433
-Transportation services,Services,postsub,0.4426162766887307
-Other durable goods,Durable goods,presub,0.34235555706135024
-Other durable goods,Durable goods,postsub,0.1777393023309065
-Other nondurable goods,Nondurable goods,presub,0.3421030840579925
-Other nondurable goods,Nondurable goods,postsub,0.2809406842438342
-Communication,Services,presub,0.32566066191654003
-Communication,Services,postsub,0.2739409420698944
-Household utilities,Services,presub,0.254888387453319
-Household utilities,Services,postsub,0.22409040274269587
-Food and beverages purchased for off-premises consumption,Nondurable goods,presub,0.21580377397495412
-Food and beverages purchased for off-premises consumption,Nondurable goods,postsub,0.19276893731341607
-Recreation services,Services,presub,0.2135191587357649
-Recreation services,Services,postsub,0.1851345230433983
-Other services,Services,presub,0.2034584577150136
-Other services,Services,postsub,0.17757558026946918
-Final consumption expenditures of NPISH,Services,presub,0.20043594797589925
-Final consumption expenditures of NPISH,Services,postsub,0.17731246840334203
-Food services and accommodations,Services,presub,0.17086692763875422
-Food services and accommodations,Services,postsub,0.15016831937649025
-Health care,Services,presub,0.13569329947250017
-Health care,Services,postsub,0.11786755310342246
-Education,Services,presub,0.13495193175506043
-Education,Services,postsub,0.11785754913034732
-Gasoline and other energy goods,Nondurable goods,presub,0.109309404718127
-Gasoline and other energy goods,Nondurable goods,postsub,0.09954423882043256
-Financial services and insurance,Services,presub,0.06538185110570252
-Financial services and insurance,Services,postsub,0.05643242734180656
-Housing,Services,presub,0.03898707842237288
-Housing,Services,postsub,0.03441204754474199
-Clothing and footwear,Nondurable goods,presub,-0.36319548098756704
-Clothing and footwear,Nondurable goods,postsub,-0.8618002434288877
+Total,Total,presub,0.3763270462082268
+Total,Total,postsub,0.32181686585678587
+Motor vehicles and parts,Durable goods,presub,2.953661373129478
+Motor vehicles and parts,Durable goods,postsub,2.5311701281315777
+Furnishings and durable household equipment,Durable goods,presub,2.276560692288278
+Furnishings and durable household equipment,Durable goods,postsub,1.805963538808164
+Recreational goods and vehicles,Durable goods,presub,1.174706479614337
+Recreational goods and vehicles,Durable goods,postsub,0.9584163968038332
+Net foreign travel,Services,presub,0.6545694002923722
+Net foreign travel,Services,postsub,0.5335617116507511
+Transportation services,Services,presub,0.49846594377886955
+Transportation services,Services,postsub,0.45867958054357955
+Other durable goods,Durable goods,presub,0.4515462292282699
+Other durable goods,Durable goods,postsub,0.3808314664099071
+Other nondurable goods,Nondurable goods,presub,0.40785970956805273
+Other nondurable goods,Nondurable goods,postsub,0.3376364074863792
+Communication,Services,presub,0.3368193456061844
+Communication,Services,postsub,0.2879321750865324
+Food and beverages purchased for off-premises consumption,Nondurable goods,presub,0.28589435793414975
+Food and beverages purchased for off-premises consumption,Nondurable goods,postsub,0.26143327240619185
+Household utilities,Services,presub,0.26333627547115185
+Household utilities,Services,postsub,0.2333276465356529
+Recreation services,Services,presub,0.22429351724806043
+Recreation services,Services,postsub,0.19709724206941584
+Other services,Services,presub,0.21793246407683312
+Other services,Services,postsub,0.19498471902865472
+Final consumption expenditures of NPISH,Services,presub,0.21227637446643804
+Final consumption expenditures of NPISH,Services,postsub,0.1918322974272763
+Food services and accommodations,Services,presub,0.19229644027058632
+Food services and accommodations,Services,postsub,0.1725245388864385
+Health care,Services,presub,0.14973809653682543
+Health care,Services,postsub,0.1320544909944814
+Education,Services,presub,0.14384131942309855
+Education,Services,postsub,0.12761574480152424
+Gasoline and other energy goods,Nondurable goods,presub,0.11543800297549651
+Gasoline and other energy goods,Nondurable goods,postsub,0.10519484838845676
+Financial services and insurance,Services,presub,0.06803508402515633
+Financial services and insurance,Services,postsub,0.05954374530769418
+Housing,Services,presub,0.04105352572217142
+Housing,Services,postsub,0.03679382053678442
+Clothing and footwear,Nondurable goods,presub,0.03450618808006882
+Clothing and footwear,Nondurable goods,postsub,0.03059346995429382

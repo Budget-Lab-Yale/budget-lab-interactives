@@ -1,45 +1,45 @@
 category,value,substitution,basis
-1,-0.6699661226308725,presub,% of after-tax income
-2,-0.4134965898415234,presub,% of after-tax income
-3,-0.3990742396972975,presub,% of after-tax income
-4,-0.354359843307613,presub,% of after-tax income
-5,-0.3630489895906036,presub,% of after-tax income
-6,-0.3578304655353806,presub,% of after-tax income
-7,-0.34097218805228474,presub,% of after-tax income
-8,-0.3286632868301047,presub,% of after-tax income
-9,-0.30144997482446173,presub,% of after-tax income
-10,-0.21202425883739712,presub,% of after-tax income
-Total,-0.3082078778412017,presub,% of after-tax income
-1,-0.5295992800427036,postsub,% of after-tax income
-2,-0.32686353665204393,postsub,% of after-tax income
-3,-0.315462861312055,postsub,% of after-tax income
-4,-0.28011672762617573,postsub,% of after-tax income
-5,-0.28698538181661004,postsub,% of after-tax income
-6,-0.28286020818592134,postsub,% of after-tax income
-7,-0.2695339647890939,postsub,% of after-tax income
-8,-0.25980394262053286,postsub,% of after-tax income
-9,-0.23829218260918889,postsub,% of after-tax income
-10,-0.1676023474006909,postsub,% of after-tax income
-Total,-0.2436342147677847,postsub,% of after-tax income
-1,-248.29614470822767,presub,2025 dollars
-2,-248.2509476431554,presub,2025 dollars
-3,-291.58359323483046,presub,2025 dollars
-4,-304.29234104668035,presub,2025 dollars
-5,-368.1316754448721,presub,2025 dollars
-6,-418.75825890208984,presub,2025 dollars
-7,-468.5128349932419,presub,2025 dollars
-8,-540.8220117446739,presub,2025 dollars
-9,-627.7575145729486,presub,2025 dollars
-10,-1061.6097044840242,presub,2025 dollars
-Total,-457.80150267747445,presub,2025 dollars
-1,-196.2747891766264,postsub,2025 dollars
-2,-196.2390614997876,postsub,2025 dollars
-3,-230.49293961765295,postsub,2025 dollars
-4,-240.53903517987337,postsub,2025 dollars
-5,-291.00317716204256,postsub,2025 dollars
-6,-331.02281583373815,postsub,2025 dollars
-7,-370.3531443184545,postsub,2025 dollars
-8,-427.5125836609392,postsub,2025 dollars
-9,-496.2339385963314,postsub,2025 dollars
-10,-839.1883054822074,postsub,2025 dollars
-Total,-361.8859790527654,postsub,2025 dollars
+1,-0.7458966036623523,presub,% of after-tax income
+2,-0.4603601459393323,presub,% of after-tax income
+3,-0.4443032415287575,presub,% of after-tax income
+4,-0.39452114766570145,presub,% of after-tax income
+5,-0.4041950766634203,presub,% of after-tax income
+6,-0.3983851121929247,presub,% of after-tax income
+7,-0.3796162050892936,presub,% of after-tax income
+8,-0.365912276925902,presub,% of after-tax income
+9,-0.3356147494633132,presub,% of after-tax income
+10,-0.23605398723716667,presub,% of after-tax income
+Total,-0.34313855811243077,presub,% of after-tax income
+1,-0.6378550509787726,postsub,% of after-tax income
+2,-0.39367794800906813,postsub,% of after-tax income
+3,-0.3799468523973166,postsub,% of after-tax income
+4,-0.3373755900226943,postsub,% of after-tax income
+5,-0.345648270771886,postsub,% of after-tax income
+6,-0.3406798674230615,postsub,% of after-tax income
+7,-0.32462959699868804,postsub,% of after-tax income
+8,-0.31291065397850176,postsub,% of after-tax income
+9,-0.2870016595826398,postsub,% of after-tax income
+10,-0.20186206415690253,postsub,% of after-tax income
+Total,-0.2934356603890168,postsub,% of after-tax income
+1,-276.4367402833044,presub,2025 dollars
+2,-276.3864208175969,presub,2025 dollars
+3,-324.6301634229867,presub,2025 dollars
+4,-338.7792547120145,presub,2025 dollars
+5,-409.8538077367082,presub,2025 dollars
+6,-466.218145246014,presub,2025 dollars
+7,-521.6116466029439,presub,2025 dollars
+8,-602.1159699271103,presub,2025 dollars
+9,-698.9042911673712,presub,2025 dollars
+10,-1181.9270351762382,presub,2025 dollars
+Total,-509.6863475092288,presub,2025 dollars
+1,-236.3954604432429,postsub,2025 dollars
+2,-236.35242964620423,postsub,2025 dollars
+3,-277.6081677040994,postsub,2025 dollars
+4,-289.70779290838783,postsub,2025 dollars
+5,-350.4873465626924,postsub,2025 dollars
+6,-398.68742844918614,postsub,2025 dollars
+7,-446.0572977560473,postsub,2025 dollars
+8,-514.9007393347042,postsub,2025 dollars
+9,-597.6694760144641,postsub,2025 dollars
+10,-1010.727392474894,postsub,2025 dollars
+Total,-435.8593531293923,postsub,2025 dollars
