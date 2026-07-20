@@ -16,7 +16,7 @@ import { buildAllDataZip, allDataStem } from "./download-all.js";
 const MANIFEST_URL = "./data/manifest.json";
 let dataBase = "./data/";
 
-// Tray-with-down-arrow glyph for the Download All Data button.
+// Tray-with-down-arrow glyph for the data-download buttons.
 const DL_ICON =
   '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false">' +
   '<path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" ' +
@@ -357,8 +357,9 @@ function renderSidebar() {
     sidebar.appendChild(rel);
   }
 
-  // Download All Data — on every tab.
+  // Data downloads — on every tab.
   sidebar.appendChild(buildDownloadAllButton());
+  sidebar.appendChild(buildDetailedDataButton());
 }
 
 function buildDownloadAllButton() {
@@ -367,7 +368,7 @@ function buildDownloadAllButton() {
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "sidebar-download-btn";
-  btn.innerHTML = `${DL_ICON}<span>Download All Data</span>`;
+  btn.innerHTML = `${DL_ICON}<span>Download report data</span>`;
   const label = btn.querySelector("span");
   btn.addEventListener("click", async () => {
     if (btn.disabled) return;
@@ -386,6 +387,24 @@ function buildDownloadAllButton() {
     }
   });
   wrap.appendChild(btn);
+  return wrap;
+}
+
+// Link out to the GitHub release hosting the (large) underlying daily tariff-rate
+// files by product and country — too big to bundle into the report ZIP.
+const DETAILED_DATA_URL =
+  "https://github.com/Budget-Lab-Yale/tariff-rate-tracker/releases/latest";
+
+function buildDetailedDataButton() {
+  const wrap = document.createElement("div");
+  wrap.className = "sidebar-download";
+  const link = document.createElement("a");
+  link.className = "sidebar-download-btn";
+  link.href = DETAILED_DATA_URL;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.innerHTML = `${DL_ICON}<span>Download detailed tariff rate data</span>`;
+  wrap.appendChild(link);
   return wrap;
 }
 

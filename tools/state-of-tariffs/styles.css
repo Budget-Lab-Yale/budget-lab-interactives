@@ -302,8 +302,9 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 .sidebar-release p { margin: 0 0 4px; }
 .sidebar-release p:last-child { margin-bottom: 0; }
 
-/* Download-all-data button */
+/* Data-download buttons */
 .sidebar-download { margin-top: 18px; }
+.sidebar-download + .sidebar-download { margin-top: 8px; }
 .sidebar-download-btn {
   display: inline-flex;
   align-items: center;
@@ -312,6 +313,7 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   width: 100%;
   font: var(--tw-medium) 13px/1.2 var(--tbl-font-sans);
   color: var(--tbl-text-muted);
+  text-decoration: none;
   background: transparent;
   border: 1px solid var(--tbl-border);
   border-radius: 6px;
