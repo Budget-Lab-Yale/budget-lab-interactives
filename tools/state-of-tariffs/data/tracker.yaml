@@ -1,0 +1,107 @@
+release:
+  updated: April 8, 2026   # overridden at build by model-meta.json published_at, when a vintage is synced
+  version: '1.0'
+
+tabs:
+- id: introduction
+  label: Introduction
+  description: An interactive overview of the Budget Lab's tariff analysis — daily statutory rates, and the projected economic and fiscal effects of current and alternative tariff policy.
+  figures:
+  - overview
+
+- id: statutory-rates
+  label: Daily Statutory Rates
+  description: Daily statutory U.S. tariff rates — overall, by authority, by trading partner, and by product. Rates are shown for one policy scenario at a time; the grey band marks dates that are future projections under current policy.
+  toggles:
+  - id: china
+    label: China
+    default: with
+    # Render below the figure's scenario selector (this toggle refines a single figure; the
+    # scenario picker is the broader control and reads first).
+    after_selectors: true
+    applies_to_figures:
+    - daily-rate-by-country
+    options:
+    - {id: with, label: With China}
+    - id: without
+      label: Without China
+      spec:
+        series_order: [Canada, Mexico, EU, Japan, UK, Free-trade partners, Rest of World]
+        yAxisPolicy: {min: 0, max: 25, tickCount: 6}
+  figures:
+  - daily-rate-overall
+  - daily-rate-by-authority
+  - daily-rate-by-country
+  - daily-rate-by-hs
+
+- id: default-scenario
+  label: "Projected Effects:\nDefault Scenario"
+  description: Projected effects of our default tariff policy scenario.
+  sections:
+  - id: overview
+    label: ""
+    figures:
+    - summary-statistics
+  - id: rates
+    label: Tariff Rates
+    figures:
+    - etr-by-country
+  - id: prices-households
+    label: Prices & Households
+    figures:
+    - consumer-prices
+    - distribution
+  - id: economy
+    label: Macroeconomy
+    figures:
+    - real-gdp
+    - gdp-by-category
+  - id: fiscal
+    label: Fiscal
+    figures:
+    - revenue-by-year
+
+- id: alternative-scenarios
+  label: "Projected Effects:\nAlternative Scenarios"
+  description: The same projected effects across all modeled policy scenarios. Use the toggle to view each scenario's own effects (levels) or its effect relative to our default scenario (change vs. default).
+  toggles:
+  - id: measure
+    label: View
+    default: level
+    options:
+    - {id: level, label: Levels}
+    - {id: delta_vs_default, label: Change vs. default, series_color: violet}
+    applies_to_figures:
+    - consumer-prices
+    - distribution
+    - real-gdp
+    - gdp-by-category
+    - revenue-by-year
+  sections:
+  - id: overview
+    label: ""
+    figures:
+    - summary-statistics
+  - id: rates
+    label: Tariff Rates
+    figures:
+    - etr-by-country
+  - id: prices-households
+    label: Prices & Households
+    figures:
+    - consumer-prices
+    - distribution
+  - id: economy
+    label: Macroeconomy
+    figures:
+    - real-gdp
+    - gdp-by-category
+  - id: fiscal
+    label: Fiscal
+    figures:
+    - revenue-by-year
+
+- id: methodology
+  label: Methodology
+  figures:
+  - overview
