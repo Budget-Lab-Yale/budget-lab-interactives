@@ -3,6 +3,12 @@ release:
   version: '1.0'
 
 tabs:
+- id: key-takeaways
+  label: Key Takeaways
+  description: The headline findings from the Budget Lab's current tariff analysis.
+  figures:
+  - overview
+
 - id: introduction
   label: Introduction
   description: An interactive overview of the Budget Lab's tariff analysis — daily statutory rates, and the projected economic and fiscal effects of current and alternative tariff policy.
