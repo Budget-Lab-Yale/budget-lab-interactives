@@ -6,9 +6,12 @@ This document covers how to safely edit existing tools and add new ones, includi
 
 1. Branch from `main`.
 2. Make and test changes locally (see [Testing](#testing) below).
-3. Open a PR. Merging to `main` is the publish step — GitHub Pages redeploys automatically within ~10 minutes.
+3. Open a PR. CI deploys a live preview of every PR to `https://interactives.budgetlab.yale.edu/pr-preview/pr-<n>/` and comments the link on the PR (the preview is removed when the PR closes).
+4. Merging to `main` is the publish step — CI deploys the site to the `gh-pages` branch, which GitHub Pages serves. Allow a few minutes for the workflow plus Pages' ~10 minute cache.
 
 Don't push directly to `main` for anything beyond trivial fixes (typos, broken links). The PR step exists to give one beat to look at the diff before it's live.
+
+The `gh-pages` branch is machine-managed by CI — never edit or push to it directly. Repo docs and dev files (root markdown docs, `test/`, `tools/*/ci/`, per-tool `scripts/` etc.) are excluded from the published site; the list lives in `.github/publish-exclude.txt`. Deploys never delete published files, so if a tool or file is removed from `main`, prune the `gh-pages` branch manually.
 
 ## When to snapshot a tool
 
@@ -78,7 +81,7 @@ Once the snapshot is in place and verified, apply the new changes to the canonic
 
 Before merging:
 
-- Open `test/embed-test.html` locally (or after deploy on the live URL) and walk the smoke-test checklist.
+- Open `test/embed-test.html` locally (or on the PR preview — `test/` is deployed to previews but not to the live site) and walk the smoke-test checklist.
 - For tool calculation changes, manually verify a few inputs against expected outputs.
 - Hard-refresh the embed-test page to bypass GitHub Pages' ~10 minute cache.
 

@@ -131,7 +131,7 @@ the repo root also works if you don't need live-reload.
 2. Add an `index.html` that is a complete, standalone HTML document. It will be served at `https://interactives.budgetlab.yale.edu/tools/<folder>/`.
 3. Near `</body>`, include the iframe-resizer child script: `<script src="../../embed/v1/iframeResizer.contentWindow.min.js"></script>`. This enables auto-resize when the tool is embedded.
 4. Add the tool to the table at the top of this README and to the root `index.html` landing page.
-5. Open a PR or push to `main` — Pages will redeploy automatically.
+5. Open a PR — CI posts a live preview link on the PR; merging to `main` publishes automatically (CI deploys to the `gh-pages` branch, which Pages serves).
 
 ### Per-tool validation (CI)
 

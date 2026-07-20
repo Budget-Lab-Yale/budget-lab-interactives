@@ -2,9 +2,11 @@
 
 {date: updated}
 
-The Budget Lab's labor market analysis, updated to incorporate May 2026 CPS microdata, does not provide clear evidence of labor market disruption associated with AI. Churn across occupations, AI exposure among the unemployed, and comparisons of AI-exposed and unexposed workers all remain flat, lie within historical ranges, or continue along pre-AI trends. 
+The Budget Lab's labor market analysis, updated to incorporate June 2026 CPS microdata, does not provide clear evidence of labor market disruption associated with AI. Churn across occupations, AI exposure among the unemployed, and usage data all remain flat, lie within historical ranges, or continue along pre-AI trends. 
 
-Of course, these findings may change as new data become available. The Budget Lab plans to continue monitoring AI-relevant trends to assess how job impacts might change.
+This data release completes the second quarter of 2026, allowing us to extend our comparisons of AI-exposed and unexposed workers by an additional quarter. One notable development is that the unemployment rate gap in the latest data (adjusting for the historical, pre-AI difference) has moved close to zero. On average since Q4 2022, excess unemployment for exposed workers has been somewhat positive—a pattern we do not observe for our other measures. 
+
+Of course, these findings may change as new data become available. The Budget Lab plans to continue monitoring AI-relevant trends to assess how job impacts might change. 
 
 
 ## Introduction

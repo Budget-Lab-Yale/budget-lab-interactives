@@ -1,0 +1,174 @@
+name: CI
+
+# Validates the static site, publishes it to GitHub Pages (the gh-pages
+# branch), and serves a live preview of every PR — matching the setup in
+# budget-lab-charts. Three jobs:
+#
+#   validate — gate for branch-protection. The job name "Validate site" is the
+#     required status check in the "Protect main" ruleset — do NOT rename it
+#     without updating the ruleset, or protection silently stops working.
+#   preview  — publishes the PR's tree to gh-pages at /pr-preview/pr-<n>/ and
+#     comments the URL on the PR; removes it when the PR closes.
+#   deploy   — on merge to main (or manual dispatch), publishes the tree to
+#     the gh-pages root. keep_files:true so a production deploy never wipes
+#     the pr-preview/ subtree. (Caveat: keep_files also means a removed tool
+#     leaves stale files on gh-pages — prune the branch manually on removal.)
+#
+# There is no build step: both publishing jobs rsync the checkout into _site/
+# and publish that verbatim, minus the repo-docs/dev-tooling paths listed in
+# .github/publish-exclude.txt. CNAME and .nojekyll at the repo root ride along
+# into every production deploy — CNAME must stay committed or GitHub drops the
+# custom domain and every embed breaks.
+#
+# Per-tool validation convention (scales to any number of tools without editing
+# this workflow):
+#   - tools/<slug>/ci/validate.sh  — optional. If present, it is run (any
+#     language; the script installs its own deps). Use for build/data gates,
+#     e.g. regenerating and diff-checking a generated manifest.
+#   - tools/<slug>/ci/smoke.json   — { "marker": "<string>", "budgetMs": <int> }.
+#     The render step loads the tool in headless Chrome and asserts the marker
+#     appears in the post-render DOM. Pick a marker that comes from local data
+#     so the check does not depend on third-party CDNs. budgetMs defaults to 5000.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, closed]
+
+permissions:
+  contents: write        # push the site to the gh-pages branch
+  pull-requests: write   # comment the preview URL on the PR
+
+jobs:
+  # ── Merge gate ────────────────────────────────────────────────────────────
+  validate:
+    name: Validate site
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: validate-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check JS syntax (parse every .js)
+        # Modules (top-level import/export) are parsed correctly because each
+        # such tool ships a package.json with "type": "module"; node resolves
+        # the nearest ancestor package.json per file.
+        run: |
+          find . -name '*.js' -not -path './.git/*' -print0 | xargs -0 -n1 node --check
+
+      - name: Check local references resolve
+        run: node .github/scripts/check-links.mjs
+
+      - name: Per-tool validation hooks
+        run: |
+          set -e
+          shopt -s nullglob
+          for d in tools/*/; do
+            hook="${d}ci/validate.sh"
+            if [ -f "$hook" ]; then
+              echo "== running $hook =="
+              bash "$hook"
+            fi
+          done
+
+      - name: Render smoke test (data-driven per tool)
+        run: |
+          set -e
+          python3 -m http.server 8099 --bind 127.0.0.1 &>/dev/null &
+          SRV=$!
+          trap 'kill $SRV 2>/dev/null || true' EXIT
+          for i in $(seq 1 30); do
+            curl -sf http://127.0.0.1:8099/ >/dev/null && break || sleep 0.5
+          done
+          CHROME=$(command -v google-chrome || command -v chromium-browser || command -v chromium)
+          echo "Browser: $CHROME"
+          fail=0
+          for d in tools/*/; do
+            smoke="${d}ci/smoke.json"
+            if [ ! -f "$smoke" ]; then
+              echo "::error::$d has no ci/smoke.json — every tool must declare a render marker"
+              fail=1
+              continue
+            fi
+            marker=$(node -e "process.stdout.write(JSON.parse(require('fs').readFileSync(process.argv[1],'utf8')).marker)" "$smoke")
+            budget=$(node -e "const j=JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'));process.stdout.write(String(j.budgetMs||5000))" "$smoke")
+            dom=$("$CHROME" --headless=new --no-sandbox --disable-gpu \
+                    --virtual-time-budget="$budget" --dump-dom "http://127.0.0.1:8099/$d" 2>/dev/null || true)
+            if echo "$dom" | grep -qF "$marker"; then
+              echo "OK   $d  (marker: $marker)"
+            else
+              echo "::error::$d did not render expected marker: $marker"
+              fail=1
+            fi
+          done
+          exit $fail
+
+  # ── Per-PR live preview ───────────────────────────────────────────────────
+  # Publishes to gh-pages at /pr-preview/pr-<n>/ and comments the URL; on PR
+  # close the same action removes that directory. Fork PRs get a read-only
+  # token and are skipped by the action (no preview) — acceptable for an
+  # internal repo. Serialized with deploy via the gh-pages concurrency group
+  # so writers of the branch never race.
+  preview:
+    name: PR preview
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: gh-pages
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble site
+        # Shared exclude list in .github/publish-exclude.txt, with two preview-
+        # only differences. Root /CNAME and /.nojekyll are additionally
+        # excluded: they only matter at the site root, and the preview-removal
+        # step can never delete files with those names — leaving them in would
+        # strand a stray pr-preview/pr-<n>/ dir after every PR close. And
+        # /test/ IS included (the --include precedes the exclude list, so it
+        # wins): the QA harnesses aren't published to production, and the
+        # preview is where they run against a deployed copy.
+        if: github.event.action != 'closed'
+        run: rsync -a --include '/test/***' --exclude-from .github/publish-exclude.txt --exclude '/CNAME' --exclude '/.nojekyll' ./ _site/
+      - name: Deploy / remove preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./_site
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          custom-url: interactives.budgetlab.yale.edu
+
+  # ── Production deploy ─────────────────────────────────────────────────────
+  # On merge to main: publish the tree to the gh-pages root, which Pages
+  # serves at interactives.budgetlab.yale.edu.
+  deploy:
+    name: Deploy to GitHub Pages
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    concurrency:
+      group: gh-pages
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble site
+        run: rsync -a --exclude-from .github/publish-exclude.txt ./ _site/
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          keep_files: true
