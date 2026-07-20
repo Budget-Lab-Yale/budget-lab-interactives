@@ -22,6 +22,12 @@ const DL_ICON =
   '<path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" ' +
   'stroke-linejoin="round" d="M8 2v8M4.5 6.5 8 10l3.5-3.5M3 13h10"/></svg>';
 
+// Arrow-out-of-box glyph for buttons that link to an external page.
+const EXTERNAL_ICON =
+  '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false">' +
+  '<path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" ' +
+  'stroke-linejoin="round" d="M9 3h4v4M13 3 7 9M11.5 9.5V13H3V4.5h3.5"/></svg>';
+
 let manifest = null;
 let renderModule = null;          // lazily-loaded { renderFigure, renderProse }
 const csvCache = new Map();       // url -> parsed rows
@@ -368,7 +374,7 @@ function buildDownloadAllButton() {
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "sidebar-download-btn";
-  btn.innerHTML = `${DL_ICON}<span>Download report data</span>`;
+  btn.innerHTML = `${DL_ICON}<span>Download Report Data</span>`;
   const label = btn.querySelector("span");
   btn.addEventListener("click", async () => {
     if (btn.disabled) return;
@@ -403,7 +409,7 @@ function buildDetailedDataButton() {
   link.href = DETAILED_DATA_URL;
   link.target = "_blank";
   link.rel = "noopener noreferrer";
-  link.innerHTML = `${DL_ICON}<span>Download detailed tariff rate data</span>`;
+  link.innerHTML = `${EXTERNAL_ICON}<span>Detailed Tariff Rate Data</span>`;
   wrap.appendChild(link);
   return wrap;
 }
