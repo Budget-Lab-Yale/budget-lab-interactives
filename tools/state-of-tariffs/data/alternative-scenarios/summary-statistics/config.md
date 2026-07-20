@@ -39,4 +39,6 @@ We show the following alternative scenario:
   ["forced labor" investigation announcement](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/june/ustr-makes-findings-and-proposes-action-60-section-301-investigations-relating-failures-take-action).
   The proposed tariffs cover most imports from 60 economies. The rate is 10% for countries that
   have taken steps to block imports made with forced labor and 12.5% for the others. We model the
-  country rates and product list announced by USTR.
+  country rates and product list announced by USTR. This scenario also includes the recently
+  announced 25% tariff on imports from Brazil, which applies in addition to the tariffs described
+  above.
