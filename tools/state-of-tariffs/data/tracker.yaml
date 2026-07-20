@@ -1,5 +1,5 @@
 release:
-  updated: April 8, 2026   # overridden at build by model-meta.json published_at, when a vintage is synced
+  updated: July 20, 2026   # overridden at build by model-meta.json published_at, when a vintage is synced
   version: '1.0'
 
 tabs:
