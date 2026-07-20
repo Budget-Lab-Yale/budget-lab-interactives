@@ -8,6 +8,7 @@ Interactive web tools published by [The Budget Lab at Yale](https://budgetlab.ya
 |---|---|---|
 | AI Labor Market Tracker | https://interactives.budgetlab.yale.edu/tools/ai-labor-market-tracker/ | [`tools/ai-labor-market-tracker/`](tools/ai-labor-market-tracker/) |
 | Deficit Impact Calculator | https://interactives.budgetlab.yale.edu/tools/deficit-impact-calculator/ | [`tools/deficit-impact-calculator/`](tools/deficit-impact-calculator/) |
+| State of Tariffs | https://interactives.budgetlab.yale.edu/tools/state-of-tariffs/ | [`tools/state-of-tariffs/`](tools/state-of-tariffs/) |
 
 ## Embedding
 
@@ -105,6 +106,24 @@ To embed a snapshot, pass the snapshot path as `data-tool`:
 ```
 
 Each tool has its own `CHANGELOG.md` (see [`tools/deficit-impact-calculator/CHANGELOG.md`](tools/deficit-impact-calculator/CHANGELOG.md)). The repo-wide [`CHANGELOG.md`](CHANGELOG.md) tracks embed-loader and shared-asset changes. When and how snapshots are taken is documented in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Local development
+
+The published site has **no build step** — Pages serves the repo as-is. For local work there is a
+dev-only server (pure Node, no npm dependencies):
+
+```sh
+npm run dev                                  # http://localhost:5173/
+npm run dev -- --open                         # also open the browser
+npm run dev -- --tool state-of-tariffs --open # open straight to one tool
+```
+
+It serves the whole repo (so each tool's `../../assets` / `../../embed` paths resolve exactly as in
+production), **live-reloads** the browser on save, and — for tools that ship a
+`scripts/build-manifest.py` — re-runs that build automatically when the tool's `data/` changes, then
+reloads. Manifest builds require Python (`python` by default; override with `PYTHON=py npm run dev`).
+The dev server is never deployed; `node_modules/` is git-ignored. A plain `python -m http.server` from
+the repo root also works if you don't need live-reload.
 
 ## Adding a new interactive
 

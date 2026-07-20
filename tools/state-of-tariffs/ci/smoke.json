@@ -1,0 +1,5 @@
+{
+  "marker": "aria-selected",
+  "budgetMs": 9000,
+  "note": "The tab buttons render aria-selected from the local manifest as soon as the app boots, before any figure is mounted, so the smoke assertion does not depend on chart-engine mount timing. The engine bundle is vendored locally (no CDN), so there is no external dependency."
+}

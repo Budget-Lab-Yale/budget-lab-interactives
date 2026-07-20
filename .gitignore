@@ -1,3 +1,19 @@
+# Node (dev server only — the published site has no build step)
+node_modules/
+package-lock.json
+
+# Python (manifest/sync build scripts)
+__pycache__/
+*.pyc
+
+# Standalone-preview build artifacts + downloaded library/font cache
+# (scripts/build-standalone.py — generated, not committed)
+dist/
+tools/*/dist/
+_libs/
+scripts/_libs/
+tools/*/scripts/_libs/
+
 # OS
 .DS_Store
 Thumbs.db

@@ -50,6 +50,17 @@ Then **edit the snapshot's `index.html`** to fix any relative paths that go up t
 
 `tool.js` and any other JS files don't reference relative paths, so they can be byte-identical copies.
 
+**Data-driven tools** (e.g. `state-of-tariffs`) also serve a committed `data/` tree, a vendored
+engine under `vendor/`, and a `styles.css` — a snapshot must include those too, not just
+`*.html`/`*.js`. For such a tool, copy the whole tool directory instead:
+
+```bash
+TOOL=tools/state-of-tariffs
+DATE=$(date +%F)
+mkdir -p "$TOOL/versions/$DATE"
+cp -r "$TOOL"/*.html "$TOOL"/*.js "$TOOL"/*.css "$TOOL"/data "$TOOL"/vendor "$TOOL/versions/$DATE/"
+```
+
 Then update the per-tool `CHANGELOG.md`:
 
 ```markdown
