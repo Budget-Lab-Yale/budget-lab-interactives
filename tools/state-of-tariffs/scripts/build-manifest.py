@@ -48,6 +48,7 @@ Run:  C:/Python314/python.exe scripts/build-manifest.py
 from __future__ import annotations
 
 import csv
+import hashlib
 import html
 import json
 import re
@@ -687,6 +688,39 @@ def format_published(published_at: str) -> str:
     return f"{d.strftime('%B')} {d.day}, {d.year}"
 
 
+# Tool runtime assets that must cache-bust together. app.js reads the stamped ?v from its own URL
+# and propagates it to render.js + download-all.js (→ zip-store.js); styles.css is stamped directly
+# in index.html. The vendored engine keeps its own ?v=<engine version>.
+ASSET_FILES = ("app.js", "render.js", "download-all.js", "zip-store.js", "styles.css")
+
+
+def stamp_assets() -> None:
+    """Stamp a content hash of the tool's runtime JS+CSS as the ?v= cache-bust on app.js and
+    styles.css in index.html, so every deploy that changes any of them serves fresh files. Hash is
+    computed over LF-normalized bytes so it matches regardless of a checkout's line endings (the CI
+    validate hook recomputes it the same way)."""
+    tool = DATA_DIR.parent
+    h = hashlib.sha256()
+    for name in ASSET_FILES:
+        p = tool / name
+        if p.exists():
+            h.update(p.read_text(encoding="utf-8").replace("\r", "").encode("utf-8"))
+    stamp = h.hexdigest()[:10]
+
+    index = tool / "index.html"
+    text = index.read_text(encoding="utf-8")
+
+    def restamp(s: str, filename: str) -> str:
+        pat = re.compile(r'((?:href|src)="' + re.escape(filename) + r')(\?v=[^"]*)?(")')
+        return pat.sub(lambda m: f"{m.group(1)}?v={stamp}{m.group(3)}", s)
+
+    text = restamp(text, "app.js")
+    text = restamp(text, "styles.css")
+    with open(index, "w", encoding="utf-8", newline="") as f:
+        f.write(text)
+    print(f"build-manifest: stamped assets ?v={stamp}")
+
+
 def main() -> None:
     if not TRACKER.exists():
         fail(f"tracker.yaml not found at {TRACKER}")
@@ -727,6 +761,8 @@ def main() -> None:
     n_vin = len(manifest.get("vintages", []))
     print(f"build-manifest: wrote {OUT.relative_to(DATA_DIR.parent)} "
           f"({n_tabs} tabs, {n_figs} figures, {n_vin} vintages)")
+
+    stamp_assets()
 
 
 if __name__ == "__main__":
