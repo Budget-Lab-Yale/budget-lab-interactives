@@ -1,8 +1,8 @@
 {
   "release": {
-    "updated": "July 16, 2026",
+    "updated": "July 21, 2026",
     "version": "1.0",
-    "vintage": "2026-07-16-09-484f"
+    "vintage": "2026-07-21-08-484f"
   },
   "data_base_url": "./data/",
   "tabs": [
@@ -22,7 +22,7 @@
             },
             {
               "type": "text",
-              "html": "<h2>Changes since the last update</h2>\n<p>Since our April 2026 release, we have made three methodological changes:</p>\n<ul>\n<li><strong>Fixed a model bug in rate increase measurement.</strong> In the prior release, baseline MFN tariffs\n  on some products were being counted as contributing to the above-baseline ETR increase that\n  feeds into the price model. We have corrected this model bug.</li>\n<li><strong>Refined our measurement of statutory tariff rates.</strong> The Tariff Rate Tracker now more closely\n  aligns HTS revisions with the dates policies took effect and incorporates updated modeling of\n  Section 232 tariffs, Section 301 exclusions, statutory exemption lists, USMCA preference use,\n  and the pre-2025 MFN baseline.</li>\n<li><strong>Replaced a flat avoidance assumption with an adjustment calibrated to observed collections.</strong>\n  Our previous model reduced projected tariff revenue by a uniform amount to account for evasion.\n  The updated model instead compares statutory rates with duties observed in Census trade data and\n  estimates the gap separately by sector and trading-partner group. This adjustment captures not\n  only evasion, but also exemptions, preference claims, tariff avoidance, and measurement error\n  that are not fully visible in the statutory rate record. It is applied upstream throughout the\n  model, including in estimates of prices, household costs, trade responses, and revenue.</li>\n</ul>\n<p>Together, these changes lower our estimates of effective tariff rates, consumer-price effects, and\naverage household costs relative to our April release. Revenue changes less because the earlier\nmodel already included an avoidance adjustment in that calculation. Because the new calibration is\nbased on experience under the 2025–2026 tariff regime, we will continue to update it as more data\nbecome available.</p>"
+              "html": "<h2>Changes since the last update</h2>\n<p>Two tariff actions have been formally proclaimed since our last update (published on 07-20-2026) and are now reflected in\nour current-law (default) scenario:</p>\n<ul>\n<li><strong>Brazil 25% tariff moved into current law.</strong> The 25% tariff on imports from Brazil has been\n  formally proclaimed. In our previous update it appeared only as part of the Section 301 alternative scenario. But it is now part of current law, the default scenario. </li>\n<li><strong>New Section 338 tariffs on Canada.</strong> The administration has proclaimed new 50% tariffs\n  on certain imports from Canada under Section 338 authority, scheduled to take effect August 19, 2026. These tariffs cover alcoholic beverages, dairy products, and a broad range of consumer goods; we estimate that these tariffs cover about 5% of Canadian imports per 2024 trade patterns. Crucially, the tariff applies regardless of USMCA eligibility. </li>\n</ul>\n<p>Because officially scheduled policy is treated as current law, these tariffs are included in the\n  default scenario. To help readers interested in the incremental impact of this action, we've added a <strong>Current Law ex-S338</strong> alternative scenario that is identical to current law but omits these new tariffs on Canadian imports. Comparing this scenario to the default current law scenario shows the incremental impact of this action.</p>"
             }
           ],
           "tables": {}
@@ -141,15 +141,19 @@
             {
               "id": "scenario",
               "label": "Scenario",
-              "default": "tracker_actual_2026-07-01",
+              "default": "tracker_actual_2026-07-21",
               "options": [
                 {
-                  "id": "tracker_actual_2026-07-01",
+                  "id": "tracker_actual_2026-07-21",
                   "label": "Current law"
                 },
                 {
-                  "id": "tracker_new_301_2026-07-01",
-                  "label": "New 301"
+                  "id": "tracker_no_s338_2026-07-21",
+                  "label": "Current Law ex-S338"
+                },
+                {
+                  "id": "tracker_new_301_2026-07-21",
+                  "label": "New S301"
                 }
               ]
             }
@@ -181,6 +185,7 @@
               "ieepa",
               "fentanyl",
               "section_122",
+              "section_338",
               "other"
             ],
             "series_labels": {
@@ -191,6 +196,7 @@
               "ieepa": "IEEPA reciprocal",
               "fentanyl": "IEEPA fentanyl",
               "section_122": "Section 122",
+              "section_338": "Section 338",
               "other": "Other"
             },
             "annotations": {
@@ -238,15 +244,19 @@
             {
               "id": "scenario",
               "label": "Scenario",
-              "default": "tracker_actual_2026-07-01",
+              "default": "tracker_actual_2026-07-21",
               "options": [
                 {
-                  "id": "tracker_actual_2026-07-01",
+                  "id": "tracker_actual_2026-07-21",
                   "label": "Current law"
                 },
                 {
-                  "id": "tracker_new_301_2026-07-01",
-                  "label": "New 301"
+                  "id": "tracker_no_s338_2026-07-21",
+                  "label": "Current Law ex-S338"
+                },
+                {
+                  "id": "tracker_new_301_2026-07-21",
+                  "label": "New S301"
                 }
               ]
             }
@@ -335,15 +345,19 @@
             {
               "id": "scenario",
               "label": "Scenario",
-              "default": "tracker_actual_2026-07-01",
+              "default": "tracker_actual_2026-07-21",
               "options": [
                 {
-                  "id": "tracker_actual_2026-07-01",
+                  "id": "tracker_actual_2026-07-21",
                   "label": "Current law"
                 },
                 {
-                  "id": "tracker_new_301_2026-07-01",
-                  "label": "New 301"
+                  "id": "tracker_no_s338_2026-07-21",
+                  "label": "Current Law ex-S338"
+                },
+                {
+                  "id": "tracker_new_301_2026-07-21",
+                  "label": "New S301"
                 }
               ]
             }
@@ -422,15 +436,19 @@
             {
               "id": "scenario",
               "label": "Scenario",
-              "default": "tracker_actual_2026-07-01",
+              "default": "tracker_actual_2026-07-21",
               "options": [
                 {
-                  "id": "tracker_actual_2026-07-01",
+                  "id": "tracker_actual_2026-07-21",
                   "label": "Current law"
                 },
                 {
-                  "id": "tracker_new_301_2026-07-01",
-                  "label": "New 301"
+                  "id": "tracker_no_s338_2026-07-21",
+                  "label": "Current Law ex-S338"
+                },
+                {
+                  "id": "tracker_new_301_2026-07-21",
+                  "label": "New S301"
                 }
               ]
             }
@@ -528,7 +546,7 @@
               }
             }
           },
-          "body_html": "<h2>Default Scenario</h2>\n<p>This section presents projected effects under our default tariff policy scenario. Under this\nscenario, Section 122 tariffs expire as scheduled at the end of July and are not replaced, and\nscheduled changes to pharmaceutical tariffs are assumed to take effect in October. This scenario\ncan be thought of as a \"current law\" concept, where official policy, including changes that are\nofficially scheduled to come into effect later this year, is taken as given.</p>\n<p>This is not a forecast of where tariff policy will end up but rather a useful scorekeeping\nbenchmark. Alternative policy scenarios are explored in the next tab.</p>\n<p>Estimated impacts are measured against a January 2025 tariff-policy baseline. That is, these\nnumbers answer the question: going forward, what will the impacts of tariffs be <em>relative to a\nworld where the Trump administration never changed tariff policy</em>?</p>",
+          "body_html": "<h2>Default Scenario</h2>\n<p>This section presents projected effects under our default tariff policy scenario. Under this\nscenario, Section 122 tariffs expire as scheduled at the end of July and are not replaced, and\nscheduled changes to pharmaceutical tariffs are assumed to take effect in October. This scenario\ncan be thought of as a \"current law\" concept, where official policy, including changes that are\nofficially scheduled to come into effect later this year, is taken as given. The default scenario\nalso incorporates two recently proclaimed actions: the 25% tariff on imports from Brazil and the\nnew Section 338 tariffs on imports from Canada. The Canada tariffs are scheduled to take effect\nAugust 19, 2026; consistent with the current-law convention above, they are included here even\nthough they are not yet in effect.</p>\n<p>This is not a forecast of where tariff policy will end up but rather a useful scorekeeping\nbenchmark. Alternative policy scenarios are explored in the next tab.</p>\n<p>Estimated impacts are measured against a January 2025 tariff-policy baseline. That is, these\nnumbers answer the question: going forward, what will the impacts of tariffs be <em>relative to a\nworld where the Trump administration never changed tariff policy</em>?</p>",
           "section": "overview",
           "lead": true,
           "figureNum": 1
@@ -972,8 +990,9 @@
             ],
             "value": "value",
             "header_labels": {
-              "tracker_actual_2026-07-01": "Current law",
-              "tracker_new_301_2026-07-01": "New 301",
+              "tracker_actual_2026-07-21": "Current law",
+              "tracker_no_s338_2026-07-21": "Current Law ex-S338",
+              "tracker_new_301_2026-07-21": "New S301",
               "level": "Levels",
               "delta_vs_default": "Change vs. default"
             },
@@ -1024,11 +1043,12 @@
               }
             },
             "column_order": [
-              "tracker_actual_2026-07-01",
-              "tracker_new_301_2026-07-01"
+              "tracker_actual_2026-07-21",
+              "tracker_no_s338_2026-07-21",
+              "tracker_new_301_2026-07-21"
             ]
           },
-          "body_html": "<h2>Alternative Scenarios</h2>\n<p>These figures show the same projected effects as the Default Scenario tab, but across <strong>all</strong>\nmodeled policy scenarios. Use the <strong>View</strong> toggle to switch between each scenario's own effects\n(levels) and its effect relative to our default scenario (change vs. default).</p>\n<p>We show the following alternative scenario:</p>\n<ul>\n<li><strong>New 301.</strong> Under this scenario, Section 122 expires as scheduled at the end of July and is\n  replaced with new Section 301 tariffs based on the U.S. Trade Representative's June\n  <a href=\"https://ustr.gov/about/policy-offices/press-office/press-releases/2026/june/ustr-makes-findings-and-proposes-action-60-section-301-investigations-relating-failures-take-action\">\"forced labor\" investigation announcement</a>.\n  The proposed tariffs cover most imports from 60 economies. The rate is 10% for countries that\n  have taken steps to block imports made with forced labor and 12.5% for the others. We model the\n  country rates and product list announced by USTR. This scenario also includes the recently\n  announced 25% tariff on imports from Brazil, which applies in addition to the tariffs described\n  above.</li>\n</ul>",
+          "body_html": "<h2>Alternative Scenarios</h2>\n<p>These figures show the same projected effects as the Default Scenario tab, but across <strong>all</strong>\nmodeled policy scenarios. Use the <strong>View</strong> toggle to switch between each scenario's own effects\n(levels) and its effect relative to our default scenario (change vs. default).</p>\n<p>Each alternative is a variation on current law (which now includes the Brazil and Canada tariffs\ndescribed in the Introduction). We show the following two alternative scenarios:</p>\n<ul>\n<li><strong>Current Law ex-S338.</strong> This scenario is identical to current law except that it omits the\n  newly proclaimed Section 338 tariffs on imports from Canada. Comparing the default scenario\n  against it isolates the projected effect of those tariffs.</li>\n<li><strong>New S301.</strong> This scenario takes everything in current law and adds a further action on top:\n  Section 122 expires as scheduled at the end of July and is replaced with new Section 301 tariffs\n  based on the U.S. Trade Representative's June\n  <a href=\"https://ustr.gov/about/policy-offices/press-office/press-releases/2026/june/ustr-makes-findings-and-proposes-action-60-section-301-investigations-relating-failures-take-action\">\"forced labor\" investigation announcement</a>.\n  The proposed tariffs cover most imports from 60 economies. The rate is 10% for countries that\n  have taken steps to block imports made with forced labor and 12.5% for the others. We model the\n  country rates and product list announced by USTR.</li>\n</ul>",
           "section": "overview",
           "lead": true,
           "figureNum": 1
@@ -1081,12 +1101,14 @@
             },
             "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
             "row_labels": {
-              "tracker_actual_2026-07-01": "Current law",
-              "tracker_new_301_2026-07-01": "New 301"
+              "tracker_actual_2026-07-21": "Current law",
+              "tracker_no_s338_2026-07-21": "Current Law ex-S338",
+              "tracker_new_301_2026-07-21": "New S301"
             },
             "group_labels": {
-              "tracker_actual_2026-07-01": "Current law",
-              "tracker_new_301_2026-07-01": "New 301"
+              "tracker_actual_2026-07-21": "Current law",
+              "tracker_no_s338_2026-07-21": "Current Law ex-S338",
+              "tracker_new_301_2026-07-21": "New S301"
             }
           },
           "body_html": "<p>The average effective U.S. tariff rate by trading partner and scenario, as both levels and change\nvs. our default scenario. Click a partner to expand or collapse its scenarios.</p>",
@@ -1147,16 +1169,19 @@
               }
             },
             "series_order": [
-              "tracker_actual_2026-07-01",
-              "tracker_new_301_2026-07-01"
+              "tracker_actual_2026-07-21",
+              "tracker_no_s338_2026-07-21",
+              "tracker_new_301_2026-07-21"
             ],
             "series_labels": {
-              "tracker_actual_2026-07-01": "Current law",
-              "tracker_new_301_2026-07-01": "New 301"
+              "tracker_actual_2026-07-21": "Current law",
+              "tracker_no_s338_2026-07-21": "Current Law ex-S338",
+              "tracker_new_301_2026-07-21": "New S301"
             },
             "series_colors": {
-              "tracker_actual_2026-07-01": "blue",
-              "tracker_new_301_2026-07-01": "amber"
+              "tracker_actual_2026-07-21": "blue",
+              "tracker_no_s338_2026-07-21": "amber",
+              "tracker_new_301_2026-07-21": "violet"
             }
           },
           "body_html": "<p>Consumer-price effects by PCE spending category, split into pre- and post-substitution panes,\ncompared across scenarios. Use the <strong>View</strong> toggle for levels or change vs. default.</p>",
@@ -1204,16 +1229,19 @@
               ]
             },
             "series_order": [
-              "tracker_actual_2026-07-01",
-              "tracker_new_301_2026-07-01"
+              "tracker_actual_2026-07-21",
+              "tracker_no_s338_2026-07-21",
+              "tracker_new_301_2026-07-21"
             ],
             "series_labels": {
-              "tracker_actual_2026-07-01": "Current law",
-              "tracker_new_301_2026-07-01": "New 301"
+              "tracker_actual_2026-07-21": "Current law",
+              "tracker_no_s338_2026-07-21": "Current Law ex-S338",
+              "tracker_new_301_2026-07-21": "New S301"
             },
             "series_colors": {
-              "tracker_actual_2026-07-01": "blue",
-              "tracker_new_301_2026-07-01": "amber"
+              "tracker_actual_2026-07-21": "blue",
+              "tracker_no_s338_2026-07-21": "amber",
+              "tracker_new_301_2026-07-21": "violet"
             }
           },
           "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2025 dollars,\ncompared across scenarios. Use the sidebar to switch between pre- and post-substitution, and the\n<strong>View</strong> toggle for levels or change vs. default.</p>",
@@ -1270,16 +1298,19 @@
               "value": "value"
             },
             "series_order": [
-              "tracker_actual_2026-07-01",
-              "tracker_new_301_2026-07-01"
+              "tracker_actual_2026-07-21",
+              "tracker_no_s338_2026-07-21",
+              "tracker_new_301_2026-07-21"
             ],
             "series_labels": {
-              "tracker_actual_2026-07-01": "Current law",
-              "tracker_new_301_2026-07-01": "New 301"
+              "tracker_actual_2026-07-21": "Current law",
+              "tracker_no_s338_2026-07-21": "Current Law ex-S338",
+              "tracker_new_301_2026-07-21": "New S301"
             },
             "series_colors": {
-              "tracker_actual_2026-07-01": "blue",
-              "tracker_new_301_2026-07-01": "amber"
+              "tracker_actual_2026-07-21": "blue",
+              "tracker_no_s338_2026-07-21": "amber",
+              "tracker_new_301_2026-07-21": "violet"
             }
           },
           "body_html": "<p>The projected path of real GDP relative to baseline, compared across scenarios. Use the <strong>View</strong>\ntoggle for levels or change vs. default.</p>",
@@ -1338,16 +1369,19 @@
               "Advanced Manufacturing"
             ],
             "series_order": [
-              "tracker_actual_2026-07-01",
-              "tracker_new_301_2026-07-01"
+              "tracker_actual_2026-07-21",
+              "tracker_no_s338_2026-07-21",
+              "tracker_new_301_2026-07-21"
             ],
             "series_labels": {
-              "tracker_actual_2026-07-01": "Current law",
-              "tracker_new_301_2026-07-01": "New 301"
+              "tracker_actual_2026-07-21": "Current law",
+              "tracker_no_s338_2026-07-21": "Current Law ex-S338",
+              "tracker_new_301_2026-07-21": "New S301"
             },
             "series_colors": {
-              "tracker_actual_2026-07-01": "blue",
-              "tracker_new_301_2026-07-01": "amber"
+              "tracker_actual_2026-07-21": "blue",
+              "tracker_no_s338_2026-07-21": "amber",
+              "tracker_new_301_2026-07-21": "violet"
             }
           },
           "body_html": "<p>The long-run change in real GDP by sector or trading partner, compared across scenarios. In the sector\nview, manufacturing sub-sectors appear in a separate \"Manufacturing detail\" pane. The total is the\nleft-most bar.</p>",
@@ -1400,12 +1434,14 @@
                   }
                 },
                 "row_labels": {
-                  "tracker_actual_2026-07-01": "Current law",
-                  "tracker_new_301_2026-07-01": "New 301"
+                  "tracker_actual_2026-07-21": "Current law",
+                  "tracker_no_s338_2026-07-21": "Current Law ex-S338",
+                  "tracker_new_301_2026-07-21": "New S301"
                 },
                 "group_labels": {
-                  "tracker_actual_2026-07-01": "Current law",
-                  "tracker_new_301_2026-07-01": "New 301"
+                  "tracker_actual_2026-07-21": "Current law",
+                  "tracker_no_s338_2026-07-21": "Current Law ex-S338",
+                  "tracker_new_301_2026-07-21": "New S301"
                 }
               }
             },
@@ -1438,16 +1474,19 @@
                   "2035"
                 ],
                 "series_order": [
-                  "tracker_actual_2026-07-01",
-                  "tracker_new_301_2026-07-01"
+                  "tracker_actual_2026-07-21",
+                  "tracker_no_s338_2026-07-21",
+                  "tracker_new_301_2026-07-21"
                 ],
                 "series_labels": {
-                  "tracker_actual_2026-07-01": "Current law",
-                  "tracker_new_301_2026-07-01": "New 301"
+                  "tracker_actual_2026-07-21": "Current law",
+                  "tracker_no_s338_2026-07-21": "Current Law ex-S338",
+                  "tracker_new_301_2026-07-21": "New S301"
                 },
                 "series_colors": {
-                  "tracker_actual_2026-07-01": "blue",
-                  "tracker_new_301_2026-07-01": "amber"
+                  "tracker_actual_2026-07-21": "blue",
+                  "tracker_no_s338_2026-07-21": "amber",
+                  "tracker_new_301_2026-07-21": "violet"
                 }
               },
               "total": {
