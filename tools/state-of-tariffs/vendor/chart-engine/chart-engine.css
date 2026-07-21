@@ -771,11 +771,9 @@ body {
   white-space: nowrap;
 }
 
-/* Header→body separator (bug #4): a single continuous rule under the WHOLE header block,
-   including the stub corner. Applied to the bottom-tier <th> AND the rowspanning corner so it
-   does not break over the stub in multi-tier tables. */
-.tbl-table thead tr:last-child th,
-.tbl-table thead th.tbl-table-stub-header {
+/* Header→body separator: every header cell whose bottom edge is the header base, so the rule
+   stays continuous across rowspanning cells (stub corner, blank-group data columns). */
+.tbl-table thead th.is-header-bottom {
   border-bottom: 1px solid var(--tbl-axis-stroke);
 }
 
@@ -863,6 +861,13 @@ td.is-num {
 /* Text cells: left-aligned, wrapping (for prose values like notes/descriptions). */
 td.is-text {
   text-align: left;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* column_wrap: force a data column's body cells to wrap within their (fixed) width, regardless of
+   whether the column is text- or number-typed. Mirrors the stub's .is-wrap. */
+td.is-wrap {
   white-space: normal;
   overflow-wrap: break-word;
 }

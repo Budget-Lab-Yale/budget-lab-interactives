@@ -513,8 +513,7 @@
               },
               {
                 "id": "delta_vs_default",
-                "label": "Change vs. default",
-                "series_color": "violet"
+                "label": "Change vs. default"
               }
             ],
             "applies_to_figures": [

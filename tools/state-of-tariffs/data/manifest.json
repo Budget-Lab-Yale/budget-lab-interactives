@@ -1,7 +1,6 @@
 {
   "release": {
     "updated": "July 21, 2026",
-    "version": "1.0",
     "vintage": "2026-07-21-08-484f"
   },
   "data_base_url": "./data/",
@@ -1269,7 +1268,12 @@
             "annotation": {
               "label": "All households ({value})",
               "style": "dashed",
-              "labelSide": "bottom"
+              "labelSide": "bottom",
+              "series_overrides": {
+                "Current Law ex-S338": {
+                  "labelSide": "top"
+                }
+              }
             }
           },
           "figureNum": 4
@@ -1547,7 +1551,7 @@
     {
       "id": "previous-vintages",
       "label": "Previous Vintages",
-      "description": "Browse an earlier release of this report. Pick a vintage date and a scenario to see that version's projected effects exactly as published. Daily statutory rates are not archived.",
+      "description": "Browse an earlier release of this report. Pick a vintage date and a scenario to see that version's projected effects exactly as published.",
       "kind": "vintages"
     }
   ],
@@ -2067,8 +2071,7 @@
                   },
                   {
                     "id": "delta_vs_default",
-                    "label": "Change vs. default",
-                    "series_color": "violet"
+                    "label": "Change vs. default"
                   }
                 ],
                 "applies_to_figures": [
