@@ -105,3 +105,10 @@ tabs:
   label: Methodology
   figures:
   - overview
+
+- id: previous-vintages
+  label: Previous Vintages
+  description: Browse an earlier release of this report. Pick a vintage date and a scenario to see that version's projected effects exactly as published. Daily statutory rates are not archived.
+  # Content comes from data/previous-vintages/*/ (see sync-model-data.py archive_current +
+  # build-manifest.py load_vintages). Dropped from the build when no vintages exist.
+  kind: vintages

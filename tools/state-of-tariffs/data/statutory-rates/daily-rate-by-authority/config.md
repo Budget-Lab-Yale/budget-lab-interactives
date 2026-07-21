@@ -22,6 +22,7 @@ spec:
   - ieepa
   - fentanyl
   - section_122
+  - section_338
   - other
   series_labels:
     base: Base (MFN) rate
@@ -31,6 +32,7 @@ spec:
     ieepa: IEEPA reciprocal
     fentanyl: IEEPA fentanyl
     section_122: Section 122
+    section_338: Section 338
     other: Other
 ---
 

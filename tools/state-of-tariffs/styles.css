@@ -301,9 +301,13 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 }
 .sidebar-release p { margin: 0 0 4px; }
 .sidebar-release p:last-child { margin-bottom: 0; }
+/* With no content above it (e.g. Methodology: no description, single figure), the release block
+   is the first sidebar item — drop its top rule so no divider floats above empty space. */
+.tracker-sidebar .sidebar-release:first-child { border-top: none; margin-top: 0; padding-top: 0; }
 
-/* Download-all-data button */
+/* Data-download buttons */
 .sidebar-download { margin-top: 18px; }
+.sidebar-download + .sidebar-download { margin-top: 8px; }
 .sidebar-download-btn {
   display: inline-flex;
   align-items: center;
@@ -312,6 +316,7 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   width: 100%;
   font: var(--tw-medium) 13px/1.2 var(--tbl-font-sans);
   color: var(--tbl-text-muted);
+  text-decoration: none;
   background: transparent;
   border: 1px solid var(--tbl-border);
   border-radius: 6px;
@@ -428,6 +433,14 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 .current-update-card:last-child { margin-bottom: 0; }
 /* Suppress the outer box when it holds current-update cards (avoid nested boxes). */
 .tracker-figure:has(.current-update) { background: transparent; border: 0; padding: 0; }
+
+/* Archived-vintage changes note: unboxed lead prose (styles from .figure-description.figure-lead).
+   A bottom rule separates it from the summary intro/figure that follows on the same page. */
+.vintage-changes {
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--tbl-border);
+}
 
 /* --- Narrow viewport ------------------------------------------------------ */
 @media (max-width: 880px) {
