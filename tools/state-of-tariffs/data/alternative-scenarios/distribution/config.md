@@ -18,7 +18,6 @@ total:
   annotation:
     label: All households ({value})
     style: dashed
-    color: "#6b7280"
     labelSide: bottom
 spec:
   chartType: bar
