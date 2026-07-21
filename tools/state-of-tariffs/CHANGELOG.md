@@ -4,6 +4,18 @@ Entries are added at release.
 
 ## Unreleased
 
+- Synced the 2026-07-21 model vintage (adds a third scenario, Current Law ex-S338) and seeded the
+  2026-07-16 release as the first archived vintage.
+- Re-vendored the chart engine to **1.6.1**, whose `staggerBarLabels` fix ends a floating-point
+  infinite loop that hung the tab on the 3-scenario grouped-bar distribution figure (hover +
+  legend multi-select). Dropped the interim `coordinated_cursor: false` workaround.
+- Scenario colors are now set centrally in `tracker.yaml` (`scenario_colors:`, keyed by scenario
+  id) and applied to every figure, overriding the positional palette; change-vs-default now uses
+  each scenario's own color (removed the hardcoded violet override).
+- Distribution figure: per-series annotation label override (`series_overrides`) flips the
+  ex-S338 total label above its line so near-coincident totals' labels don't intersect.
+- Removed the version number (uninformative) and the dead editorial `release.updated` date from
+  `tracker.yaml`; the "Updated" date comes solely from the synced vintage's `published_at`.
 - Added a **Previous Vintages** tab: vintage-date + scenario dropdowns that render an archived
   release's report exactly as published, plus a "Download this Vintage" button (the live "Download
   Report Data" button never includes archived data). Populated from

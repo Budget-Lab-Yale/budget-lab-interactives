@@ -61,7 +61,7 @@ function buildReadme(manifest) {
   const r = manifest.release || {};
   const info = datasetInfo(manifest);
   const out = [`# ${TOOL_TITLE} — Data`, "", `The Budget Lab at Yale — ${TOOL_URL}`, ""];
-  if (r.updated) out.push(`Release: ${r.updated}${r.version ? ` (version ${r.version})` : ""}`, "");
+  if (r.updated) out.push(`Release: ${r.updated}`, "");
   out.push("Source data behind the figures in the Budget Lab's State of Tariffs interactive.", "", "## Datasets", "");
   const byTab = new Map();
   for (const [path, d] of info) {
@@ -148,7 +148,7 @@ function buildVintageReadme(vintage, info) {
   const out = [
     `# ${TOOL_TITLE} — Data (${vintage.label} vintage)`, "",
     `The Budget Lab at Yale — ${TOOL_URL}`, "",
-    `Archived release: ${vintage.label}${vintage.version ? ` (version ${vintage.version})` : ""}`, "",
+    `Archived release: ${vintage.label}`, "",
     "Source data behind the figures in this archived vintage of the State of Tariffs interactive.",
     "", "## Datasets", "",
   ];

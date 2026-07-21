@@ -13,8 +13,12 @@ bundler or `node_modules` at deploy time.
 ## Source
 
 - Repo: `Budget-Lab-Yale/budget-lab-chart-engine` (`C:\dev\GitHub\budget-lab-chart-engine`)
-- Version: **1.3.1** (commit `39ee9ac` — later than the initial 1.3.1 tag `34c3739`; adds the bar
-  fixes below, so the cache-bust query in index.html is `?v=1.3.1-39ee9ac`)
+- Version: **1.6.1** (tag `v1.6.1`; cache-bust query in index.html is `?v=1.6.1`)
+- v1.6.1 fix (commit `8a631aa`): `staggerBarLabels` no longer hangs the tab — a floating-point
+  progress guard terminates the value-pill overlap loop. This unblocked the 3-scenario grouped-bar
+  distribution figure (hover + legend multi-select previously froze); the tool's tool-side
+  `coordinated_cursor: false` workaround was dropped on re-vendor.
+- v1.6.0 added a histogram chart type (not used by this tool).
 - v1.3.1 tables: multi-tier header super-groups stay contiguous under `column_order` (which now
   orders the leaf tier *within* each super-group), a new `column_group_order` to order the
   super-groups, and `collapsible.control` (`"stub-header"` default → the expand/collapse-all
