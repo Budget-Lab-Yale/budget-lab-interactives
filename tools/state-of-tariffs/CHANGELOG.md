@@ -4,6 +4,24 @@ Entries are added at release.
 
 ## Unreleased
 
+- Added a **Previous Vintages** tab: vintage-date + scenario dropdowns that render an archived
+  release's report exactly as published, plus a "Download this Vintage" button (the live "Download
+  Report Data" button never includes archived data). Populated from
+  `data/previous-vintages/*/vintage.json` by `build-manifest.py` (`load_vintages`); the tab is
+  dropped from the build when no vintages exist. Each vintage stores a generic `scenarios` list, so
+  nothing hard-codes which report scenarios exist.
+- New `update.py <dashboard-dir>` at the tool root runs the full refresh pipeline in one command
+  (sync → reconcile → build-manifest), stopping on the first failure and printing the remaining
+  manual steps (the editorial changes note + commit/PR/merge). Excluded from the published site.
+- `sync-model-data.py` now auto-archives the outgoing release into
+  `data/previous-vintages/<interface-vintage>/` before overwriting data — freezing the *compiled*
+  default- and alternative-scenario tabs (so old vintages don't re-derive from later configs) plus
+  the copied CSVs and the carried-over "Changes since the last update" note (retitled "Changes for
+  the DATE Update", shown on the vintage's summary page). The folder is keyed on the unique
+  interface_vintage, not the date, so two releases on the same calendar day each archive
+  separately; `build-manifest.py` appends the publish time to a dropdown label when a date has more
+  than one vintage. Idempotent; `--archive-only` seeds/archives without syncing. Daily Statutory
+  Rates are not archived.
 - Rebuilt around the Tariff-Model dashboard data interface. Five tabs: Introduction, Daily
   Statutory Rates, Default Scenario, Alternative Scenarios, Methodology.
 - New `scripts/sync-model-data.py` copies a published model vintage into `data/` and writes

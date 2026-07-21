@@ -5,7 +5,11 @@ The dashboard is built against your data guide and runs end-to-end on the sample
 branch **`state-of-tariffs`**, under `tools/state-of-tariffs/`: `data/` mirrors the structure we
 consume, and each figure's `config.md` shows how it's wired. `scripts/sync-model-data.py
 <dashboard-dir>` copies your `data/**` + `manifest.json` in; `scripts/build-manifest.py` builds the
-UI, reading your `unit` / `projected` / `scenario` columns and `manifest.json` directly.
+UI, reading your `unit` / `projected` / `scenario` columns and `manifest.json` directly. Before it
+overwrites anything, sync auto-archives the outgoing release into
+`data/previous-vintages/<interface-vintage>/` (default + alternative scenarios only), which powers
+the tool's Previous Vintages tab. `update.py <dashboard-dir>` runs the whole pipeline
+(sync → reconcile → build-manifest) in one command.
 
 Below: (1) the text/config split to decide, (2) output changes we're asking for, (3) decisions we
 need. Nothing here is locked — it's all open to change; this is just to get us communicating.

@@ -431,6 +431,14 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 /* Suppress the outer box when it holds current-update cards (avoid nested boxes). */
 .tracker-figure:has(.current-update) { background: transparent; border: 0; padding: 0; }
 
+/* Archived-vintage changes note: unboxed lead prose (styles from .figure-description.figure-lead).
+   A bottom rule separates it from the summary intro/figure that follows on the same page. */
+.vintage-changes {
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--tbl-border);
+}
+
 /* --- Narrow viewport ------------------------------------------------------ */
 @media (max-width: 880px) {
   .tracker-body { grid-template-columns: 1fr; }

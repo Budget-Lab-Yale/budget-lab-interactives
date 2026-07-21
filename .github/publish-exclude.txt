@@ -22,4 +22,5 @@ _site
 # omits from its served versions/ snapshots (data/ stays: tools read it).
 /tools/*/CHANGELOG.md
 /tools/*/scripts
+/tools/*/update.py
 /tools/*/package.json
