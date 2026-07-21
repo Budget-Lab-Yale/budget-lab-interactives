@@ -301,6 +301,9 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 }
 .sidebar-release p { margin: 0 0 4px; }
 .sidebar-release p:last-child { margin-bottom: 0; }
+/* With no content above it (e.g. Methodology: no description, single figure), the release block
+   is the first sidebar item — drop its top rule so no divider floats above empty space. */
+.tracker-sidebar .sidebar-release:first-child { border-top: none; margin-top: 0; padding-top: 0; }
 
 /* Data-download buttons */
 .sidebar-download { margin-top: 18px; }

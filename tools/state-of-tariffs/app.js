@@ -354,12 +354,16 @@ function renderSidebar() {
   const figures = tab?.figures || [];
   const hasFigureList = vintage || figures.length > 1;
 
-  const explainer = document.createElement("div");
-  // `is-standalone` drops the explainer's divider when no figure list follows, so it doesn't
-  // stack with the release block's top border into a double rule.
-  explainer.className = "sidebar-explainer" + (hasFigureList ? "" : " is-standalone");
-  explainer.innerHTML = `<p>${escapeHtml(realTab.description || "")}</p>`;
-  sidebar.appendChild(explainer);
+  // Only render the explainer when there's description text — an empty one would leave the
+  // release block's top rule floating at the top of the sidebar with nothing above it.
+  if (realTab.description) {
+    const explainer = document.createElement("div");
+    // `is-standalone` drops the explainer's divider when no figure list follows, so it doesn't
+    // stack with the release block's top border into a double rule.
+    explainer.className = "sidebar-explainer" + (hasFigureList ? "" : " is-standalone");
+    explainer.innerHTML = `<p>${escapeHtml(realTab.description)}</p>`;
+    sidebar.appendChild(explainer);
+  }
 
   if (vintage) sidebar.appendChild(buildVintageControls());
   if (vintage && !tab) return;  // no archived vintages yet (tab would normally be dropped)
