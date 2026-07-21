@@ -1,0 +1,30 @@
+{
+  "scenarios": [
+    {
+      "id": "tracker_actual_2026-07-21",
+      "label": "Current law (Section 122 expires)",
+      "short_label": "Current law",
+      "default": true
+    },
+    {
+      "id": "tracker_no_s338_2026-07-21",
+      "label": "Current Law excluding new Canada S338 actions",
+      "short_label": "Current Law ex-S338",
+      "default": false
+    },
+    {
+      "id": "tracker_new_301_2026-07-21",
+      "label": "New Forced Labor S301 actions (S122 replaced)",
+      "short_label": "New S301",
+      "default": false
+    }
+  ],
+  "default_scenario": "tracker_actual_2026-07-21",
+  "provenance": {
+    "version": 1,
+    "interface_vintage": "2026-07-21-08-484f",
+    "published_at": "2026-07-21T13:43:33-0400",
+    "git_commit": "8c88e0ca5c6976e32a18eac2451cc5e92b08e9bd",
+    "tracker_vintage": "2026-07-21-08"
+  }
+}

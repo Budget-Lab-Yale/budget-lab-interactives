@@ -1,0 +1,461 @@
+/* ===========================================================================
+ * State of Tariffs — layout & navigation chrome.
+ *
+ * This stylesheet owns ONLY the tool shell: header, tab bar, two-column body,
+ * sidebar (figure list, toggles, selectors, download), the current-update
+ * cards, and responsive behavior. All figure- and table-level styling
+ * (figure-card, legend, crosshair tooltip, tbl-table*) and the --tbl-* design
+ * tokens come from the vendored engine stylesheet, vendor/chart-engine/
+ * chart-engine.css. Do not duplicate figure/table rules here.
+ *
+ * Adapted from the AI Labor Market Tracker's styles.css (shell portion).
+ * =========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --tbl-font-sans:         'Figtree', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --tbl-font-sans-compact: 'Figtree', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+
+  /* Figtree weight scale: body / medium / semibold / bold. */
+  --tw-body:   500;
+  --tw-medium: 600;
+  --tw-semi:   700;
+  --tw-bold:   800;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scrollbar-gutter: stable; }
+body {
+  font-family: var(--tbl-font-sans);
+  font-weight: var(--tw-body);
+  color: var(--tbl-text-body);
+  background: var(--tbl-bg);
+  line-height: 1.5;
+}
+
+/* --- Outer shell ---------------------------------------------------------- */
+.tracker-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 24px 32px;
+}
+html.iframed .tracker-shell { padding: 16px 16px 24px; }
+
+/* --- Header bar ----------------------------------------------------------- */
+.tracker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--tbl-border);
+}
+.tracker-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: var(--tw-bold);
+  color: var(--tbl-text-heading);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.tracker-logo-link { display: inline-block; line-height: 0; }
+.tracker-logo { height: 32px; width: auto; display: block; }
+
+/* --- Tab bar -------------------------------------------------------------- */
+.tracker-tabs {
+  display: flex;
+  gap: 0;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--tbl-border);
+  margin-bottom: 20px;
+}
+.tracker-tab {
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 14px 20px 12px;
+  margin: 0 0 -1px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: var(--tw-semi);
+  color: var(--tbl-text-muted);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  white-space: pre-line;
+  text-align: center;
+  line-height: 1.25;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tracker-tab:hover { color: var(--tbl-text-heading); }
+.tracker-tab[aria-selected="true"] {
+  color: var(--tbl-navy);
+  border-bottom-color: var(--tbl-navy);
+}
+.tracker-tab:focus-visible { outline: 2px solid var(--tbl-blue); outline-offset: -3px; }
+
+/* Mobile tab dropdown — hidden on desktop; shown ≤880px (see media query). */
+.tracker-tabs-menu { display: none; position: relative; }
+.tracker-tabs-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  text-align: left;
+  background: #fff;
+  border: 1px solid var(--tbl-border);
+  border-radius: 8px;
+  padding: 11px 14px;
+  font: var(--tw-semi) 15px var(--tbl-font-sans);
+  color: var(--tbl-navy);
+  cursor: pointer;
+}
+.tracker-tabs-trigger > span:first-child { flex: 1; min-width: 0; }
+.tracker-tabs-caret { flex-shrink: 0; color: var(--tbl-text-muted); font-size: 0.8em; transition: transform 0.15s; }
+.tracker-tabs-trigger[aria-expanded="true"] .tracker-tabs-caret { transform: rotate(180deg); }
+.tracker-tabs-trigger:focus-visible { outline: none; border-color: var(--tbl-navy); }
+.tracker-tabs-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 4px);
+  background: #fff;
+  border: 1px solid var(--tbl-border);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  z-index: 30;
+  overflow: hidden;
+}
+.tracker-tabs-list[hidden] { display: none; }
+.tracker-tabs-list button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--tbl-border);
+  padding: 11px 14px;
+  font: var(--tw-medium) 14px var(--tbl-font-sans);
+  color: var(--tbl-text-muted);
+  cursor: pointer;
+}
+.tracker-tabs-list button:last-child { border-bottom: none; }
+.tracker-tabs-list button:hover,
+.tracker-tabs-list button:focus-visible { background: var(--tbl-bg-subtle); color: var(--tbl-text-heading); outline: none; }
+.tracker-tabs-list button.is-active { color: var(--tbl-navy); background: var(--tbl-bg-subtle); font-weight: var(--tw-semi); }
+
+/* --- Two-column body ------------------------------------------------------ */
+.tracker-body {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.tracker-sidebar {
+  background: var(--tbl-bg-subtle);
+  border: 1px solid var(--tbl-border);
+  border-radius: 8px;
+  padding: 20px;
+  position: sticky;
+  top: 12px;
+}
+.tracker-sidebar .sidebar-section { margin-bottom: 20px; }
+.tracker-sidebar .sidebar-section:last-child { margin-bottom: 0; }
+.tracker-sidebar h2 {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: var(--tw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tbl-text-muted);
+}
+
+/* Vertical figure picker */
+.figure-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--tbl-border);
+  border-radius: 6px;
+  background: var(--tbl-bg);
+  overflow: hidden;
+}
+.figure-list-section-heading {
+  font: var(--tw-semi) 10px/1 var(--tbl-font-sans-compact, var(--tbl-font-sans));
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tbl-text-muted);
+  padding: 10px 10px 4px;
+  background: var(--tbl-bg-subtle);
+  border-bottom: 1px solid var(--tbl-border);
+}
+.figure-list > .figure-list-section-heading:not(:first-child) { border-top: 1px solid var(--tbl-border); }
+.figure-list-item {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--tbl-border);
+  padding: 0;
+  margin: 0;
+  font: var(--tw-body) 13px/1.3 var(--tbl-font-sans-compact, var(--tbl-font-sans));
+  color: var(--tbl-text-body);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: stretch;
+  transition: background 0.1s, color 0.1s;
+}
+.figure-list-item:focus-visible { outline: 2px solid var(--tbl-blue); outline-offset: -2px; }
+.figure-list-item:last-child { border-bottom: none; }
+.figure-list-num {
+  flex-shrink: 0;
+  min-width: 26px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tbl-bg-subtle);
+  color: var(--tbl-text-muted);
+  border-right: 1px solid var(--tbl-border);
+  font: var(--tw-semi) 11px/1 var(--tbl-font-sans-compact, var(--tbl-font-sans));
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  transition: background 0.1s, color 0.1s, border-color 0.1s;
+}
+.figure-list-label { flex: 1 1 auto; padding: 7px 10px; min-width: 0; }
+.figure-list-item:hover { background: var(--tbl-bg-subtle); color: var(--tbl-text-heading); }
+.figure-list-item:hover .figure-list-num { background: #ECEFF4; color: var(--tbl-text-heading); }
+.figure-list-item.is-active { background: var(--tbl-bg-subtle); color: var(--tbl-navy); font-weight: var(--tw-semi); }
+.figure-list-item.is-active .figure-list-num { background: var(--tbl-navy); color: #fff; border-right-color: var(--tbl-navy); }
+
+/* Toggle group (radio segmented control) */
+.toggle-group {
+  display: flex;
+  border: 1px solid var(--tbl-border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--tbl-bg);
+}
+.toggle-group label {
+  flex: 1;
+  margin: 0;
+  padding: 8px 10px;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: var(--tw-semi);
+  color: var(--tbl-text-muted);
+  text-align: center;
+  cursor: pointer;
+  border-right: 1px solid var(--tbl-border);
+  transition: background 0.12s, color 0.12s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toggle-group label:last-child { border-right: none; }
+.toggle-group input[type="radio"] { position: absolute; opacity: 0; pointer-events: none; }
+.toggle-group label.is-active { background: var(--tbl-navy); color: #fff; }
+
+/* Sidebar selector (native dropdown). Used for figure dimensions like sector/country. */
+.sidebar-select {
+  appearance: none;
+  width: 100%;
+  background: var(--tbl-bg);
+  border: 1px solid var(--tbl-border);
+  border-radius: 6px;
+  padding: 9px 30px 9px 12px;
+  font: var(--tw-semi) 13px var(--tbl-font-sans);
+  color: var(--tbl-text-body);
+  cursor: pointer;
+  /* caret */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'><path fill='%236b7280' d='M5 7 0 0h10z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+.sidebar-select:hover { border-color: var(--tbl-navy); }
+.sidebar-select:focus-visible { outline: none; border-color: var(--tbl-navy); box-shadow: 0 0 0 2px var(--tbl-bg-subtle); }
+
+.sidebar-explainer {
+  font-size: 13px;
+  color: var(--tbl-text-muted);
+  line-height: 1.45;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--tbl-border);
+}
+.sidebar-explainer.is-standalone { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+.sidebar-explainer p { margin: 0 0 6px; }
+.sidebar-explainer p:last-child { margin-bottom: 0; }
+
+/* Release metadata block (updated date + version), separated from the figure
+   selector above it by a horizontal rule. */
+.sidebar-release {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--tbl-border);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--tbl-text-muted);
+}
+.sidebar-release p { margin: 0 0 4px; }
+.sidebar-release p:last-child { margin-bottom: 0; }
+/* With no content above it (e.g. Methodology: no description, single figure), the release block
+   is the first sidebar item — drop its top rule so no divider floats above empty space. */
+.tracker-sidebar .sidebar-release:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+
+/* Data-download buttons */
+.sidebar-download { margin-top: 18px; }
+.sidebar-download + .sidebar-download { margin-top: 8px; }
+.sidebar-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  font: var(--tw-medium) 13px/1.2 var(--tbl-font-sans);
+  color: var(--tbl-text-muted);
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid var(--tbl-border);
+  border-radius: 6px;
+  padding: 9px 12px;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.sidebar-download-btn:hover,
+.sidebar-download-btn:focus-visible { border-color: var(--tbl-navy); color: #fff; background: var(--tbl-navy); outline: none; }
+.sidebar-download-btn:disabled { opacity: 0.6; cursor: default; }
+.sidebar-download-btn svg { display: block; flex-shrink: 0; }
+
+/* --- Main figure area ----------------------------------------------------- */
+.tracker-main { min-width: 0; }
+
+/* Outer card box. The engine's figure-card / table render inside this. */
+.tracker-figure {
+  background: var(--tbl-bg);
+  border: 1px solid var(--tbl-border);
+  border-radius: 8px;
+  padding: 20px 24px 16px;
+}
+
+/* Hide the engine's per-figure logo on screen — it duplicates the logo in the
+   page header. This affects ONLY the live DOM; PNG export draws its own logo
+   independently (engine composeTopChrome), so downloaded images keep the
+   wordmark. Scoped + placed here (not in vendored chart-engine.css) so it wins
+   on specificity and survives re-vendoring the engine. */
+.tracker-figure .figure-logo { display: none; }
+
+/* Composite figures stack multiple parts (e.g. a table then a chart) in one pane; give the
+   parts after the first a little breathing room. */
+.figure-part + .figure-part { margin-top: 20px; }
+
+/* Sticky stub column: on a wide table that scrolls horizontally (e.g. revenue by year, with a
+   column per year), keep the row labels pinned so rows stay identifiable while scrolling. The
+   scroll ancestor is the engine's .figure-canvas-scroll. */
+.tbl-table th.tbl-table-stub,
+.tbl-table-stub-header {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--tbl-bg);
+}
+
+/* Per-figure markdown body — tool-supplied text appended below the engine's
+   figure card (the engine renders the figure + source line; the prose is ours). */
+.figure-description {
+  margin: 4px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--tbl-text-body);
+}
+.figure-description p { margin: 0 0 14px; }
+.figure-description p:last-child { margin-bottom: 0; }
+/* Lead intro: same body type, but sits above the figure card with spacing below. */
+.figure-description.figure-lead { margin: 0 0 16px; }
+
+/* Emphasis rows (e.g. a Total row) are fully styled by the engine (bold + highlight across the
+   whole row, stub included, in HTML and PNG). Re-assert only the highlight background on the
+   sticky stub cell so the sticky background rule above doesn't overpaint it. */
+.tbl-table tbody tr:has(td.is-emphasis) th.tbl-table-stub {
+  background: var(--tbl-bg-subtle);
+}
+.figure-description ul, .figure-description ol { margin: 0 0 8px; padding-left: 20px; }
+.figure-description li { margin: 0 0 4px; }
+.figure-description li:last-child { margin-bottom: 0; }
+
+.figure-loading,
+.figure-error {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--tbl-text-muted);
+  font-size: 14px;
+}
+.figure-error { color: var(--tbl-red-400, #C13933); }
+
+/* Current Update tab content: each ## section becomes its own card. */
+.current-update { font-size: 16px; line-height: 1.6; color: var(--tbl-text-body); }
+.current-update h2,
+.figure-description h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: var(--tw-bold);
+  color: var(--tbl-navy);
+  letter-spacing: -0.005em;
+}
+/* Subheads (###) — same size as body (never smaller), but navy + semibold so they read as
+   headers, and below the 18px bold h2 section title. */
+.current-update h3,
+.figure-description h3 {
+  margin: 16px 0 4px;
+  font-size: 16px;
+  font-weight: var(--tw-semi);
+  color: var(--tbl-navy);
+  letter-spacing: -0.003em;
+}
+.current-update p { margin: 0 0 14px; }
+.current-update p:last-child { margin-bottom: 0; }
+/* Styled date block from a standalone {date: ...} token. */
+.current-update-date {
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: var(--tw-semi);
+  color: var(--tbl-text-muted);
+}
+.current-update-card {
+  background: var(--tbl-bg);
+  border: 1px solid var(--tbl-border);
+  border-radius: 8px;
+  padding: 20px 24px 16px;
+  margin-bottom: 16px;
+}
+.current-update-card:last-child { margin-bottom: 0; }
+/* Suppress the outer box when it holds current-update cards (avoid nested boxes). */
+.tracker-figure:has(.current-update) { background: transparent; border: 0; padding: 0; }
+
+/* Archived-vintage changes note: unboxed lead prose (styles from .figure-description.figure-lead).
+   A bottom rule separates it from the summary intro/figure that follows on the same page. */
+.vintage-changes {
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--tbl-border);
+}
+
+/* --- Narrow viewport ------------------------------------------------------ */
+@media (max-width: 880px) {
+  .tracker-body { grid-template-columns: 1fr; }
+  .tracker-sidebar { position: static; }
+  .tracker-header { flex-wrap: wrap; }
+  .tracker-title { font-size: 20px; }
+  .tracker-logo { height: 26px; }
+  .tracker-figure { padding: 16px; }
+  .tracker-tabs { display: block; border-bottom: none; }
+  .tracker-tab { display: none; }
+  .tracker-tabs-menu { display: block; }
+}
+
+@media (max-width: 390px) {
+  .tracker-header { flex-direction: column-reverse; align-items: stretch; gap: 8px; }
+  .tracker-logo-link { align-self: flex-end; }
+}
