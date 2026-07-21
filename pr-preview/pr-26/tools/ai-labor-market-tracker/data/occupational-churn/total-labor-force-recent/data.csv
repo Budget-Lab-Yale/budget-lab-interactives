@@ -1,0 +1,319 @@
+time,series,variant,value
+0,Baseline Nov 2022 (AI),indexed,0.0
+1,Baseline Nov 2022 (AI),indexed,0.466881
+2,Baseline Nov 2022 (AI),indexed,0.852354
+3,Baseline Nov 2022 (AI),indexed,1.201651
+4,Baseline Nov 2022 (AI),indexed,1.497782
+5,Baseline Nov 2022 (AI),indexed,1.722342
+6,Baseline Nov 2022 (AI),indexed,1.996874
+7,Baseline Nov 2022 (AI),indexed,2.179838
+8,Baseline Nov 2022 (AI),indexed,2.392164
+9,Baseline Nov 2022 (AI),indexed,2.546148
+10,Baseline Nov 2022 (AI),indexed,2.745112
+11,Baseline Nov 2022 (AI),indexed,2.906108
+12,Baseline Nov 2022 (AI),indexed,3.050123
+13,Baseline Nov 2022 (AI),indexed,3.167837
+14,Baseline Nov 2022 (AI),indexed,3.255132
+15,Baseline Nov 2022 (AI),indexed,3.333606
+16,Baseline Nov 2022 (AI),indexed,3.383294
+17,Baseline Nov 2022 (AI),indexed,3.415579
+18,Baseline Nov 2022 (AI),indexed,3.474198
+19,Baseline Nov 2022 (AI),indexed,3.523316
+20,Baseline Nov 2022 (AI),indexed,3.569678
+21,Baseline Nov 2022 (AI),indexed,3.589157
+22,Baseline Nov 2022 (AI),indexed,3.634015
+23,Baseline Nov 2022 (AI),indexed,3.724557
+24,Baseline Nov 2022 (AI),indexed,3.825276
+25,Baseline Nov 2022 (AI),indexed,3.919537
+26,Baseline Nov 2022 (AI),indexed,4.016336
+27,Baseline Nov 2022 (AI),indexed,4.101635
+28,Baseline Nov 2022 (AI),indexed,4.186109
+29,Baseline Nov 2022 (AI),indexed,4.277379
+30,Baseline Nov 2022 (AI),indexed,4.372565
+31,Baseline Nov 2022 (AI),indexed,4.490198
+32,Baseline Nov 2022 (AI),indexed,4.607443
+33,Baseline Nov 2022 (AI),indexed,4.757053
+34,Baseline Nov 2022 (AI),indexed,4.838377
+35,Baseline Nov 2022 (AI),indexed,
+36,Baseline Nov 2022 (AI),indexed,4.944998
+37,Baseline Nov 2022 (AI),indexed,5.056901
+38,Baseline Nov 2022 (AI),indexed,5.133041
+39,Baseline Nov 2022 (AI),indexed,5.171458
+40,Baseline Nov 2022 (AI),indexed,5.256051
+41,Baseline Nov 2022 (AI),indexed,5.305724
+42,Baseline Nov 2022 (AI),indexed,5.385228
+43,Baseline Nov 2022 (AI),indexed,5.444533
+44,Baseline Nov 2022 (AI),indexed,
+45,Baseline Nov 2022 (AI),indexed,
+46,Baseline Nov 2022 (AI),indexed,
+47,Baseline Nov 2022 (AI),indexed,
+48,Baseline Nov 2022 (AI),indexed,
+49,Baseline Nov 2022 (AI),indexed,
+50,Baseline Nov 2022 (AI),indexed,
+51,Baseline Nov 2022 (AI),indexed,
+52,Baseline Nov 2022 (AI),indexed,
+53,Baseline Nov 2022 (AI),indexed,
+54,Baseline Nov 2022 (AI),indexed,
+55,Baseline Nov 2022 (AI),indexed,
+56,Baseline Nov 2022 (AI),indexed,
+57,Baseline Nov 2022 (AI),indexed,
+58,Baseline Nov 2022 (AI),indexed,
+59,Baseline Nov 2022 (AI),indexed,
+60,Baseline Nov 2022 (AI),indexed,
+61,Baseline Nov 2022 (AI),indexed,
+62,Baseline Nov 2022 (AI),indexed,
+63,Baseline Nov 2022 (AI),indexed,
+64,Baseline Nov 2022 (AI),indexed,
+65,Baseline Nov 2022 (AI),indexed,
+0,Baseline Jan 2021,indexed,0.0
+1,Baseline Jan 2021,indexed,0.493556
+2,Baseline Jan 2021,indexed,0.864929
+3,Baseline Jan 2021,indexed,1.217327
+4,Baseline Jan 2021,indexed,1.583216
+5,Baseline Jan 2021,indexed,1.918699
+6,Baseline Jan 2021,indexed,2.207381
+7,Baseline Jan 2021,indexed,2.459667
+8,Baseline Jan 2021,indexed,2.648243
+9,Baseline Jan 2021,indexed,2.822207
+10,Baseline Jan 2021,indexed,2.991074
+11,Baseline Jan 2021,indexed,3.123091
+12,Baseline Jan 2021,indexed,3.276377
+13,Baseline Jan 2021,indexed,3.353519
+14,Baseline Jan 2021,indexed,3.402696
+15,Baseline Jan 2021,indexed,3.438461
+16,Baseline Jan 2021,indexed,3.51169
+17,Baseline Jan 2021,indexed,3.549286
+18,Baseline Jan 2021,indexed,3.602179
+19,Baseline Jan 2021,indexed,3.657832
+20,Baseline Jan 2021,indexed,3.683471
+21,Baseline Jan 2021,indexed,3.740804
+22,Baseline Jan 2021,indexed,3.768221
+23,Baseline Jan 2021,indexed,3.857583
+24,Baseline Jan 2021,indexed,3.966781
+25,Baseline Jan 2021,indexed,4.073095
+26,Baseline Jan 2021,indexed,4.160322
+27,Baseline Jan 2021,indexed,4.221828
+28,Baseline Jan 2021,indexed,4.306463
+29,Baseline Jan 2021,indexed,4.34455
+30,Baseline Jan 2021,indexed,4.400973
+31,Baseline Jan 2021,indexed,4.429727
+32,Baseline Jan 2021,indexed,4.516236
+33,Baseline Jan 2021,indexed,4.588387
+34,Baseline Jan 2021,indexed,4.675127
+35,Baseline Jan 2021,indexed,4.776554
+36,Baseline Jan 2021,indexed,4.837493
+37,Baseline Jan 2021,indexed,4.874827
+38,Baseline Jan 2021,indexed,4.934871
+39,Baseline Jan 2021,indexed,4.959244
+40,Baseline Jan 2021,indexed,4.982603
+41,Baseline Jan 2021,indexed,4.986551
+42,Baseline Jan 2021,indexed,5.02623
+43,Baseline Jan 2021,indexed,5.048984
+44,Baseline Jan 2021,indexed,5.088357
+45,Baseline Jan 2021,indexed,5.167114
+46,Baseline Jan 2021,indexed,5.221466
+47,Baseline Jan 2021,indexed,5.237679
+48,Baseline Jan 2021,indexed,5.287345
+49,Baseline Jan 2021,indexed,5.331365
+50,Baseline Jan 2021,indexed,5.40043
+51,Baseline Jan 2021,indexed,5.43984
+52,Baseline Jan 2021,indexed,5.469489
+53,Baseline Jan 2021,indexed,5.561747
+54,Baseline Jan 2021,indexed,5.624939
+55,Baseline Jan 2021,indexed,5.698159
+56,Baseline Jan 2021,indexed,5.761091
+57,Baseline Jan 2021,indexed,
+58,Baseline Jan 2021,indexed,5.899929
+59,Baseline Jan 2021,indexed,6.002272
+60,Baseline Jan 2021,indexed,6.106979
+61,Baseline Jan 2021,indexed,6.139962
+62,Baseline Jan 2021,indexed,6.229979
+63,Baseline Jan 2021,indexed,6.297725
+64,Baseline Jan 2021,indexed,6.379255
+65,Baseline Jan 2021,indexed,6.456651
+0,Baseline Jan 2022,indexed,0.0
+1,Baseline Jan 2022,indexed,0.452842
+2,Baseline Jan 2022,indexed,0.806425
+3,Baseline Jan 2022,indexed,1.123139
+4,Baseline Jan 2022,indexed,1.408547
+5,Baseline Jan 2022,indexed,1.614425
+6,Baseline Jan 2022,indexed,1.833572
+7,Baseline Jan 2022,indexed,2.054084
+8,Baseline Jan 2022,indexed,2.229453
+9,Baseline Jan 2022,indexed,2.45237
+10,Baseline Jan 2022,indexed,2.623178
+11,Baseline Jan 2022,indexed,2.835311
+12,Baseline Jan 2022,indexed,3.075741
+13,Baseline Jan 2022,indexed,3.241352
+14,Baseline Jan 2022,indexed,3.393497
+15,Baseline Jan 2022,indexed,3.492953
+16,Baseline Jan 2022,indexed,3.627042
+17,Baseline Jan 2022,indexed,3.726154
+18,Baseline Jan 2022,indexed,3.809571
+19,Baseline Jan 2022,indexed,3.843179
+20,Baseline Jan 2022,indexed,3.89778
+21,Baseline Jan 2022,indexed,3.976933
+22,Baseline Jan 2022,indexed,4.094752
+23,Baseline Jan 2022,indexed,4.1855
+24,Baseline Jan 2022,indexed,4.240326
+25,Baseline Jan 2022,indexed,4.290604
+26,Baseline Jan 2022,indexed,4.32059
+27,Baseline Jan 2022,indexed,4.352282
+28,Baseline Jan 2022,indexed,4.38001
+29,Baseline Jan 2022,indexed,4.406472
+30,Baseline Jan 2022,indexed,4.365639
+31,Baseline Jan 2022,indexed,4.378079
+32,Baseline Jan 2022,indexed,4.412325
+33,Baseline Jan 2022,indexed,4.479514
+34,Baseline Jan 2022,indexed,4.539706
+35,Baseline Jan 2022,indexed,4.592005
+36,Baseline Jan 2022,indexed,4.655956
+37,Baseline Jan 2022,indexed,4.728362
+38,Baseline Jan 2022,indexed,4.788062
+39,Baseline Jan 2022,indexed,4.86746
+40,Baseline Jan 2022,indexed,4.923712
+41,Baseline Jan 2022,indexed,5.000208
+42,Baseline Jan 2022,indexed,5.099497
+43,Baseline Jan 2022,indexed,5.251581
+44,Baseline Jan 2022,indexed,5.358368
+45,Baseline Jan 2022,indexed,
+46,Baseline Jan 2022,indexed,5.520854
+47,Baseline Jan 2022,indexed,5.596105
+48,Baseline Jan 2022,indexed,5.659744
+49,Baseline Jan 2022,indexed,5.676341
+50,Baseline Jan 2022,indexed,5.729496
+51,Baseline Jan 2022,indexed,5.775613
+52,Baseline Jan 2022,indexed,5.835324
+53,Baseline Jan 2022,indexed,5.880136
+54,Baseline Jan 2022,indexed,
+55,Baseline Jan 2022,indexed,
+56,Baseline Jan 2022,indexed,
+57,Baseline Jan 2022,indexed,
+58,Baseline Jan 2022,indexed,
+59,Baseline Jan 2022,indexed,
+60,Baseline Jan 2022,indexed,
+61,Baseline Jan 2022,indexed,
+62,Baseline Jan 2022,indexed,
+63,Baseline Jan 2022,indexed,
+64,Baseline Jan 2022,indexed,
+65,Baseline Jan 2022,indexed,
+0,Baseline Jul 2022,indexed,0.0
+1,Baseline Jul 2022,indexed,0.461675
+2,Baseline Jul 2022,indexed,0.834282
+3,Baseline Jul 2022,indexed,1.16447
+4,Baseline Jul 2022,indexed,1.452395
+5,Baseline Jul 2022,indexed,1.736
+6,Baseline Jul 2022,indexed,1.99504
+7,Baseline Jul 2022,indexed,2.215925
+8,Baseline Jul 2022,indexed,2.450392
+9,Baseline Jul 2022,indexed,2.630112
+10,Baseline Jul 2022,indexed,2.835691
+11,Baseline Jul 2022,indexed,2.992988
+12,Baseline Jul 2022,indexed,3.139561
+13,Baseline Jul 2022,indexed,3.192693
+14,Baseline Jul 2022,indexed,3.276248
+15,Baseline Jul 2022,indexed,3.353229
+16,Baseline Jul 2022,indexed,3.440189
+17,Baseline Jul 2022,indexed,3.540492
+18,Baseline Jul 2022,indexed,3.631632
+19,Baseline Jul 2022,indexed,3.708586
+20,Baseline Jul 2022,indexed,3.776904
+21,Baseline Jul 2022,indexed,3.852433
+22,Baseline Jul 2022,indexed,3.902825
+23,Baseline Jul 2022,indexed,3.950499
+24,Baseline Jul 2022,indexed,3.965646
+25,Baseline Jul 2022,indexed,3.964453
+26,Baseline Jul 2022,indexed,4.012879
+27,Baseline Jul 2022,indexed,4.045958
+28,Baseline Jul 2022,indexed,4.113355
+29,Baseline Jul 2022,indexed,4.183718
+30,Baseline Jul 2022,indexed,4.247328
+31,Baseline Jul 2022,indexed,4.327418
+32,Baseline Jul 2022,indexed,4.420994
+33,Baseline Jul 2022,indexed,4.517589
+34,Baseline Jul 2022,indexed,4.593899
+35,Baseline Jul 2022,indexed,4.672209
+36,Baseline Jul 2022,indexed,4.780123
+37,Baseline Jul 2022,indexed,4.921709
+38,Baseline Jul 2022,indexed,5.004414
+39,Baseline Jul 2022,indexed,
+40,Baseline Jul 2022,indexed,5.132903
+41,Baseline Jul 2022,indexed,5.21326
+42,Baseline Jul 2022,indexed,5.304394
+43,Baseline Jul 2022,indexed,5.365146
+44,Baseline Jul 2022,indexed,5.433935
+45,Baseline Jul 2022,indexed,5.495528
+46,Baseline Jul 2022,indexed,5.600077
+47,Baseline Jul 2022,indexed,5.662028
+48,Baseline Jul 2022,indexed,
+49,Baseline Jul 2022,indexed,
+50,Baseline Jul 2022,indexed,
+51,Baseline Jul 2022,indexed,
+52,Baseline Jul 2022,indexed,
+53,Baseline Jul 2022,indexed,
+54,Baseline Jul 2022,indexed,
+55,Baseline Jul 2022,indexed,
+56,Baseline Jul 2022,indexed,
+57,Baseline Jul 2022,indexed,
+58,Baseline Jul 2022,indexed,
+59,Baseline Jul 2022,indexed,
+60,Baseline Jul 2022,indexed,
+61,Baseline Jul 2022,indexed,
+62,Baseline Jul 2022,indexed,
+63,Baseline Jul 2022,indexed,
+64,Baseline Jul 2022,indexed,
+65,Baseline Jul 2022,indexed,
+2022-01-02,12-Month Rolling Baseline,rolling,3.276377
+2022-02-02,12-Month Rolling Baseline,rolling,3.248557
+2022-03-02,12-Month Rolling Baseline,rolling,3.193967
+2022-04-02,12-Month Rolling Baseline,rolling,3.064937
+2022-05-02,12-Month Rolling Baseline,rolling,2.943308
+2022-06-02,12-Month Rolling Baseline,rolling,2.82817
+2022-07-02,12-Month Rolling Baseline,rolling,2.771521
+2022-08-02,12-Month Rolling Baseline,rolling,2.749316
+2022-09-02,12-Month Rolling Baseline,rolling,2.791097
+2022-10-02,12-Month Rolling Baseline,rolling,2.873624
+2022-11-02,12-Month Rolling Baseline,rolling,2.833375
+2022-12-02,12-Month Rolling Baseline,rolling,2.90909
+2023-01-02,12-Month Rolling Baseline,rolling,3.075741
+2023-02-02,12-Month Rolling Baseline,rolling,3.142298
+2023-03-02,12-Month Rolling Baseline,rolling,3.183913
+2023-04-02,12-Month Rolling Baseline,rolling,3.144533
+2023-05-02,12-Month Rolling Baseline,rolling,3.193057
+2023-06-02,12-Month Rolling Baseline,rolling,3.172713
+2023-07-02,12-Month Rolling Baseline,rolling,3.139561
+2023-08-02,12-Month Rolling Baseline,rolling,3.027063
+2023-09-02,12-Month Rolling Baseline,rolling,3.015766
+2023-10-02,12-Month Rolling Baseline,rolling,3.006845
+2023-11-02,12-Month Rolling Baseline,rolling,3.050123
+2023-12-02,12-Month Rolling Baseline,rolling,3.02957
+2024-01-02,12-Month Rolling Baseline,rolling,2.991475
+2024-02-02,12-Month Rolling Baseline,rolling,2.957101
+2024-03-02,12-Month Rolling Baseline,rolling,2.864364
+2024-04-02,12-Month Rolling Baseline,rolling,2.778757
+2024-05-02,12-Month Rolling Baseline,rolling,2.727614
+2024-06-02,12-Month Rolling Baseline,rolling,2.736881
+2024-07-02,12-Month Rolling Baseline,rolling,2.785487
+2024-08-02,12-Month Rolling Baseline,rolling,2.785049
+2024-09-02,12-Month Rolling Baseline,rolling,2.845465
+2024-10-02,12-Month Rolling Baseline,rolling,2.911038
+2024-11-02,12-Month Rolling Baseline,rolling,2.99304
+2024-12-02,12-Month Rolling Baseline,rolling,3.059228
+2025-01-02,12-Month Rolling Baseline,rolling,3.095169
+2025-02-02,12-Month Rolling Baseline,rolling,3.118096
+2025-03-02,12-Month Rolling Baseline,rolling,3.190004
+2025-04-02,12-Month Rolling Baseline,rolling,3.146859
+2025-05-02,12-Month Rolling Baseline,rolling,3.094992
+2025-06-02,12-Month Rolling Baseline,rolling,3.133913
+2025-07-02,12-Month Rolling Baseline,rolling,3.188346
+2025-08-02,12-Month Rolling Baseline,rolling,3.292224
+2025-09-02,12-Month Rolling Baseline,rolling,3.31397
+2025-10-02,12-Month Rolling Baseline,rolling,
+2025-11-02,12-Month Rolling Baseline,rolling,3.409742
+2025-12-02,12-Month Rolling Baseline,rolling,3.46678
+2026-01-02,12-Month Rolling Baseline,rolling,3.42465
+2026-02-02,12-Month Rolling Baseline,rolling,3.32171
+2026-03-02,12-Month Rolling Baseline,rolling,3.417222
+2026-04-02,12-Month Rolling Baseline,rolling,3.452172
+2026-05-02,12-Month Rolling Baseline,rolling,3.468088
+2026-06-02,12-Month Rolling Baseline,rolling,3.50035
