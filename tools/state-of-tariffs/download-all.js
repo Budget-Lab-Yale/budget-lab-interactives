@@ -7,7 +7,11 @@
  * (see zip-store.js) nested under one date-stamped root folder.
  * =========================================================================== */
 
-import { zipStore } from "./zip-store.js";
+// Propagate the cache-bust version (stamped on this module's own URL by app.js) to the zip-store
+// import, so a content-hash bump busts it too. Loaded lazily since it's only needed on download.
+const ASSET_V = new URL(import.meta.url).searchParams.get("v") || "";
+const loadZipStore = async () =>
+  (await import(ASSET_V ? `./zip-store.js?v=${ASSET_V}` : "./zip-store.js")).zipStore;
 
 const TOOL_TITLE = "State of Tariffs";
 const TOOL_URL = "https://interactives.budgetlab.yale.edu/tools/state-of-tariffs/";
@@ -106,7 +110,7 @@ export async function buildAllDataZip(manifest, fetchText) {
   const paths = collectPaths(manifest);
   const texts = await Promise.all(paths.map(p => fetchText(p)));
   paths.forEach((p, i) => files.push({ name: `${stem}/${flattenDataPath(p)}`, data: texts[i] }));
-  return zipStore(files);
+  return (await loadZipStore())(files);
 }
 
 // --- Per-vintage bundle ----------------------------------------------------
@@ -194,5 +198,5 @@ export async function buildVintageZip(vintage, fetchText) {
   ];
   const texts = await Promise.all(paths.map(p => fetchText(p)));
   paths.forEach((p, i) => files.push({ name: `${stem}/${vintageArchiveName(p)}`, data: texts[i] }));
-  return zipStore(files);
+  return (await loadZipStore())(files);
 }

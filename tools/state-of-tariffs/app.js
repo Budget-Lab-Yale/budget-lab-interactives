@@ -11,7 +11,13 @@
  * paints before the (large) engine bundle is exercised.
  * =========================================================================== */
 
-import { buildAllDataZip, allDataStem, buildVintageZip, vintageStem } from "./download-all.js";
+// Cache-bust version: build-manifest.py stamps `app.js?v=<content-hash>` in index.html; we read it
+// back from our own URL and append it to sibling module imports (render.js, download-all.js) so a
+// single content-hash bump busts the whole tool bundle on deploy. download-all.js is imported
+// lazily (only on a download click) with the same version.
+const ASSET_V = new URL(import.meta.url).searchParams.get("v") || "";
+const withV = (path) => (ASSET_V ? `${path}${path.includes("?") ? "&" : "?"}v=${ASSET_V}` : path);
+const loadDownloadAll = () => import(withV("./download-all.js"));
 
 const MANIFEST_URL = "./data/manifest.json";
 let dataBase = "./data/";
@@ -206,6 +212,7 @@ function saveBlob(blob, filename) {
 // Bundle every dataset (plus README + citation) into one ZIP — backs the
 // "Download All Data" button in the sidebar.
 async function downloadAllData() {
+  const { buildAllDataZip, allDataStem } = await loadDownloadAll();
   const blob = await buildAllDataZip(manifest, fetchCsvText);
   saveBlob(blob, `${allDataStem(manifest)}.zip`);
 }
@@ -214,6 +221,7 @@ async function downloadAllData() {
 async function downloadVintageData() {
   const v = currentVintage();
   if (!v) return;
+  const { buildVintageZip, vintageStem } = await loadDownloadAll();
   const blob = await buildVintageZip(v, fetchCsvText);
   saveBlob(blob, `${vintageStem(v)}.zip`);
 }
@@ -664,7 +672,7 @@ async function renderMain() {
     return;
   }
 
-  if (!renderModule) renderModule = await import("./render.js");
+  if (!renderModule) renderModule = await import(withV("./render.js"));
 
   try {
     const fig = figureById(tab, state.figure);

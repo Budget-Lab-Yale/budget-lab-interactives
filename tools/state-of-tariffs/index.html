@@ -13,7 +13,7 @@
   <!-- Vendored chart engine 1.6.1 figure/table styles + design tokens (see vendor/chart-engine/).
        The ?v= query busts the browser/CDN cache on re-vendor — bump it whenever VERSION changes. -->
   <link rel="stylesheet" href="vendor/chart-engine/chart-engine.css?v=1.6.1">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=7142f91350">
 
   <script>
     if (window.self !== window.top) document.documentElement.classList.add('iframed');
@@ -41,7 +41,9 @@
   <!-- Vendored chart engine 1.6.1 (IIFE): exposes window.BudgetLabChart. Plain script so the
        global is set before app.js (a module) runs. ?v= busts cache on re-vendor. -->
   <script src="vendor/chart-engine/live.js?v=1.6.1"></script>
-  <script type="module" src="app.js?v=2026-07-15-methodology"></script>
+  <!-- app.js + styles.css ?v= are auto-stamped with a content hash by build-manifest.py (don't
+       hand-edit); app.js propagates that version to render.js / download-all.js. -->
+  <script type="module" src="app.js?v=7142f91350"></script>
   <script src="../../embed/v1/iframeResizer.contentWindow.min.js"></script>
 </body>
 </html>

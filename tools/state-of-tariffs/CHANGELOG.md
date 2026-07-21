@@ -4,6 +4,13 @@ Entries are added at release.
 
 ## Unreleased
 
+- Cache-busting is now automatic: `build-manifest.py` stamps a content hash of the runtime JS+CSS
+  as `?v=` on `app.js`/`styles.css` in `index.html`, and `app.js` propagates that version to its
+  module imports (`render.js`, `download-all.js` → `zip-store.js`) via `import.meta.url` — so one
+  hash busts the whole bundle on deploy. A `ci/validate.sh` hook fails the build if the committed
+  stamp is stale (a runtime file changed without re-running `build-manifest.py`). The vendored
+  engine keeps its own `?v=<engine version>`.
+
 - Synced the 2026-07-21 model vintage (adds a third scenario, Current Law ex-S338) and seeded the
   2026-07-16 release as the first archived vintage.
 - Re-vendored the chart engine to **1.6.1**, whose `staggerBarLabels` fix ends a floating-point
