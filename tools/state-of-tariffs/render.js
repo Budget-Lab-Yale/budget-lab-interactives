@@ -185,7 +185,12 @@ function injectTotalAnnotation(spec, rows, figure) {
   const coord = horizontal ? "x" : "y";
   const valueCol = spec.columns?.value || "value";
   const facetCol = spec.columns?.facet;
-  const a = t.annotation || {};
+  // `series_overrides` ({ "<series id or label>": { labelSide, labelPosition, … } }) lets a figure
+  // tweak one scenario's total label — e.g. flip a near-coincident line's label to the other side
+  // so labels don't intersect. A per-figure, per-vintage visual tweak; pulled out of the shared
+  // spread `a` and applied per line below.
+  const { series_overrides: seriesOverrides = {}, ...a } = t.annotation || {};
+  const seriesLabelOf = spec.series_labels || {};
 
   // When a pane carries more than one total line — a real series dimension distinct from the pane
   // split, e.g. one line per scenario — color each line to match its series (from the pinned
@@ -207,6 +212,8 @@ function injectTotalAnnotation(spec, rows, figure) {
     // line in every pane when `facet` is omitted.
     if (facetCol && tr[facetCol] != null) line.facet = tr[facetCol];
     if (perSeries && spec.series_colors[tr[seriesCol]]) line.color = spec.series_colors[tr[seriesCol]];
+    const ov = seriesOverrides[tr[seriesCol]] ?? seriesOverrides[seriesLabelOf[tr[seriesCol]]];
+    if (ov) Object.assign(line, ov);
     list.push(line);
   }
   spec.annotations[axis] = list;

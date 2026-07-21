@@ -427,16 +427,14 @@ function renderSidebar() {
     if (toggleApplies(toggle) && toggle.after_selectors) sidebar.appendChild(buildToggleSection(toggle));
   }
 
-  // Release metadata (updated date + version). On the vintages tab, show the selected vintage's
-  // own release date/version rather than the live release.
+  // Release metadata (updated date). On the vintages tab, show the selected vintage's own date
+  // rather than the live release.
   {
     const v = vintage ? currentVintage() : null;
-    const r = v ? { updated: v.label, version: v.version } : (manifest.release || {});
+    const r = v ? { updated: v.label } : (manifest.release || {});
     const rel = document.createElement("div");
     rel.className = "sidebar-release";
-    rel.innerHTML =
-      `<p>${vintage ? "Vintage" : "Updated"}: ${escapeHtml(r.updated || "")}</p>` +
-      `<p>Version ${escapeHtml(r.version || "")}</p>`;
+    rel.innerHTML = `<p>${vintage ? "Vintage" : "Updated"}: ${escapeHtml(r.updated || "")}</p>`;
     sidebar.appendChild(rel);
   }
 

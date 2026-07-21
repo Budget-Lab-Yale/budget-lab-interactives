@@ -1,6 +1,10 @@
-release:
-  updated: July 20, 2026   # overridden at build by model-meta.json published_at, when a vintage is synced
-  version: '1.0'
+# Fixed color per scenario, applied to every figure (overrides the default-first palette in
+# build-manifest.py). Keyed by the scenario id from model-meta.json — these are vintage-dated, so
+# re-check/update them each release. Any scenario omitted here falls back to the palette by order.
+scenario_colors:
+  tracker_actual_2026-07-21: blue     # Current law
+  tracker_no_s338_2026-07-21: amber   # Current Law ex-S338
+  tracker_new_301_2026-07-21: violet  # New S301
 
 tabs:
 - id: introduction
@@ -70,7 +74,7 @@ tabs:
     default: level
     options:
     - {id: level, label: Levels}
-    - {id: delta_vs_default, label: Change vs. default, series_color: violet}
+    - {id: delta_vs_default, label: Change vs. default}
     applies_to_figures:
     - consumer-prices
     - distribution
@@ -108,7 +112,7 @@ tabs:
 
 - id: previous-vintages
   label: Previous Vintages
-  description: Browse an earlier release of this report. Pick a vintage date and a scenario to see that version's projected effects exactly as published. Daily statutory rates are not archived.
+  description: Browse an earlier release of this report. Pick a vintage date and a scenario to see that version's projected effects exactly as published.
   # Content comes from data/previous-vintages/*/ (see sync-model-data.py archive_current +
   # build-manifest.py load_vintages). Dropped from the build when no vintages exist.
   kind: vintages

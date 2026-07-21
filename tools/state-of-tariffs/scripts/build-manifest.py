@@ -77,6 +77,10 @@ RELEASE: dict = {}
 # provenance. Empty until a vintage has been synced.
 SCENARIOS: list = []           # [{id, label, short_label, default}]
 DEFAULT_SCENARIO: "str | None" = None
+# Optional scenario-id -> color map from tracker.yaml (`scenario_colors:`). Overrides the
+# positional palette below so a scenario keeps a chosen color across every figure. Keyed by the
+# (vintage-dated) scenario id, so it's re-checked each release.
+SCENARIO_COLORS: dict = {}
 
 # The engine's categorical palette, in slot order (see chart-engine palette.ts / theme tokens).
 # Used to pin scenario series to explicit, stable colors matching the engine's implicit order.
@@ -403,7 +407,8 @@ def apply_scenario_dimension(spec: dict, front: dict, config: Path) -> None:
         # Pin each scenario to its palette color (default-first order) so the mapping is explicit
         # and stable — matches the engine's implicit assignment (no visual change) but lets the
         # render layer reuse the color, e.g. for per-scenario total reference lines.
-        pinned = {sid: SERIES_PALETTE[i % len(SERIES_PALETTE)] for i, sid in enumerate(ids)}
+        pinned = {sid: SCENARIO_COLORS.get(sid, SERIES_PALETTE[i % len(SERIES_PALETTE)])
+                  for i, sid in enumerate(ids)}
         spec["series_colors"] = {**pinned, **(spec.get("series_colors") or {})}
     elif role == "header":
         spec.setdefault("column_order", ids)
@@ -687,10 +692,12 @@ def main() -> None:
         fail(f"tracker.yaml not found at {TRACKER}")
     tracker = yaml.safe_load(TRACKER.read_text(encoding="utf-8")) or {}
 
-    release = dict(tracker.get("release", {}))
+    SCENARIO_COLORS.clear()
+    SCENARIO_COLORS.update(tracker.get("scenario_colors") or {})
 
-    # A synced model vintage supplies the authoritative "updated" date + provenance; the
-    # editorial version stays in tracker.yaml. Absent a sync, tracker.yaml's release stands.
+    # The release block is entirely model-derived: `updated` from the synced vintage's published_at,
+    # `vintage` from its interface_vintage. (No editorial date/version in tracker.yaml.)
+    release = dict(tracker.get("release") or {})
     provenance = load_model_meta()
     if provenance.get("published_at"):
         release["updated"] = format_published(provenance["published_at"])

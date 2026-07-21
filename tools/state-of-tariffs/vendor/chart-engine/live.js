@@ -34,6 +34,9 @@ var BudgetLabChart = (() => {
     const facet = c.facet ?? null;
     const shape = c.shape != null && c.shape !== "" ? c.shape : null;
     const section = c.section != null && c.section !== "" ? c.section : null;
+    const kind = c.kind != null && c.kind !== "" ? c.kind : null;
+    const x03 = c.x0 != null && c.x0 !== "" ? c.x0 : null;
+    const x13 = c.x1 != null && c.x1 !== "" ? c.x1 : null;
     let series;
     if (c.series != null && c.series !== "") {
       series = c.series;
@@ -42,7 +45,10 @@ var BudgetLabChart = (() => {
     } else {
       series = "series";
     }
-    return { x, value, series, facet, shape, section };
+    return { x, value, series, facet, shape, section, kind, x0: x03, x1: x13 };
+  }
+  function isPreBinned(cols) {
+    return cols.x0 != null && cols.x1 != null;
   }
 
   // src/spec/title.ts
@@ -23678,7 +23684,7 @@ ${m}`)).style("margin-left", u ? `${+u}px` : null).style("width", l === void 0 ?
       xAxis: keep(resolved.xAxis),
       yAxis: keep(resolved.yAxis),
       bands: resolved.bands,
-      points: resolved.points
+      points: keep(resolved.points)
     };
   }
   var VALUE_FORMAT_DEFAULT_DECIMALS = 2;
@@ -23787,6 +23793,65 @@ ${m}`)).style("margin-left", u ? `${+u}px` : null).style("width", l === void 0 ?
       min: Math.min(0, negMin),
       max: posMax * headroom
     };
+  }
+  function kindOf(row) {
+    const k = (row._kind ?? "").trim();
+    return k === "total" || k === "skip" ? k : "delta";
+  }
+  function computeWaterfallSteps(data) {
+    let running = 0;
+    const steps = [];
+    for (const row of data) {
+      const cat = row._xc ?? row.time ?? "";
+      const kind = kindOf(row);
+      if (kind === "skip") {
+        steps.push({ row, cat, kind, delta: 0, base: running, top: running, level: running, before: running, rise: true });
+        continue;
+      }
+      const before = running;
+      if (kind === "total") {
+        const v10 = row._y;
+        const level = v10 == null || !Number.isFinite(v10) ? running : v10;
+        running = level;
+        steps.push({ row, cat, kind, delta: level, base: Math.min(0, level), top: Math.max(0, level), level, before, rise: level >= 0 });
+        continue;
+      }
+      const v = Number.isFinite(row._y) ? row._y : 0;
+      const after = before + v;
+      running = after;
+      steps.push({ row, cat, kind, delta: v, base: Math.min(before, after), top: Math.max(before, after), level: after, before, rise: v >= 0 });
+    }
+    return steps;
+  }
+  function computeWaterfallYExtent(data) {
+    const vals = [0];
+    for (const s of computeWaterfallSteps(data)) {
+      if (s.kind === "skip") continue;
+      vals.push(s.base, s.top);
+    }
+    const lo3 = Math.min(...vals);
+    const hi3 = Math.max(...vals);
+    return {
+      min: lo3 < 0 ? lo3 * HEADROOM_NET_TEXT : lo3,
+      max: hi3 > 0 ? hi3 * HEADROOM_NET_TEXT : hi3
+    };
+  }
+  function waterfallValueDecimals(data, explicit) {
+    if (explicit != null) return explicit;
+    const vals = [];
+    for (const s of computeWaterfallSteps(data)) {
+      if (s.kind === "skip") continue;
+      vals.push(s.delta, s.level);
+    }
+    return Math.min(
+      2,
+      vals.reduce((max, v) => {
+        if (!Number.isFinite(v)) return max;
+        const str = String(v);
+        const i = str.indexOf(".");
+        return Math.max(max, i < 0 ? 0 : str.length - i - 1);
+      }, 0)
+    );
   }
   function makeTickFormatter(ticks, units = "") {
     const maxFrac = ticks.reduce((max, t60) => {
@@ -24131,27 +24196,12 @@ ${words.slice(bestI).join(" ")}`;
     ];
   }
   var SECTION_SPACER_PREFIX = " section:";
-  function sectionSpacer(section) {
-    return SECTION_SPACER_PREFIX + section;
+  var SECTION_SPACER_SLOTS = 2;
+  function sectionSpacerSlot(section, i) {
+    return `${SECTION_SPACER_PREFIX}${i}:${section}`;
   }
   function isSectionSpacer(v) {
     return v.startsWith(SECTION_SPACER_PREFIX);
-  }
-  function tblSectionHeaderYAxis(spacers, marginLeft = TBL_MARGIN_LEFT, fontSize = TBL.size.axis, gap = 12) {
-    if (!spacers.length) return [];
-    return [
-      plot_0_6_16_esm_min_exports.text(spacers, {
-        fy: (d) => d.value,
-        text: (d) => d.label,
-        frameAnchor: "bottom-left",
-        dx: -marginLeft,
-        dy: -gap,
-        textAnchor: "start",
-        fill: TBL.color.heading,
-        fontSize,
-        fontWeight: 700
-      })
-    ];
   }
   function tblSectionTopHeader(header, marginLeft = TBL_MARGIN_LEFT, lift = 14, fontSize = TBL.size.axis) {
     return [
@@ -24351,13 +24401,26 @@ ${words.slice(bestI).join(" ")}`;
     const allJanuary = ticks.length > 0 && ticks.every((d) => d.getMonth() === 0);
     return allJanuary ? 22 : 38;
   };
-  function makeXAdapter(xType, xAxisPolicy) {
+  function makeXAdapter(xType, xAxisPolicy, histogramDomain) {
     if (xType === "numeric") {
       return {
         parseX: (v) => +v,
         xField: "_xn",
         validate: (r) => Number.isFinite(r._xn),
         buildXOpts(data, faceted = false) {
+          if (histogramDomain) {
+            return {
+              marginBottom: 22,
+              xPlotOpts: { type: "linear", label: null, axis: null, domain: histogramDomain },
+              axisMarks: tblXAxis(
+                { xTickFormat: (d) => `${+d}` },
+                faceted ? X_AXIS_LABEL_CLASS : void 0
+              ),
+              markerToX: (m) => +m.x,
+              tooltipXParse: (v) => +v,
+              tooltipXFormat: (v) => `${+v}`
+            };
+          }
           const xMax = d3_7_9_0_esm_min_exports.max(data, (d) => d._xn);
           const anchorAtZero = xAxisPolicy?.anchorAtZero === true;
           const xMin = anchorAtZero ? Math.min(0, d3_7_9_0_esm_min_exports.min(data, (d) => d._xn)) : d3_7_9_0_esm_min_exports.min(data, (d) => d._xn);
@@ -24385,10 +24448,19 @@ ${words.slice(bestI).join(" ")}`;
         xField: "_xd",
         validate: (r) => !!r._xd && !Number.isNaN(+r._xd),
         buildXOpts(data, faceted = false) {
-          const xs3 = data.map((r) => +r._xd);
-          const xDomain = [new Date(d3_7_9_0_esm_min_exports.min(xs3)), new Date(d3_7_9_0_esm_min_exports.max(xs3))];
+          let xDomain;
+          if (histogramDomain) {
+            xDomain = [new Date(histogramDomain[0]), new Date(histogramDomain[1])];
+          } else {
+            const xs3 = data.map((r) => +r._xd);
+            xDomain = [new Date(d3_7_9_0_esm_min_exports.min(xs3)), new Date(d3_7_9_0_esm_min_exports.max(xs3))];
+          }
           return {
             marginBottom: temporalMarginBottom(xDomain),
+            // axis:null/label:null so Plot draws NO native axis — the engine's tblTemporalXAxis marks
+            // are the axis. Without this, xPlotOpts replaces the whole x-scale (assemble-plot merges by
+            // assignment, not over the default) and Plot's native ticks render on top → doubled labels.
+            xPlotOpts: histogramDomain ? { type: "utc", domain: xDomain, axis: null, label: null } : void 0,
             axisMarks: tblTemporalXAxis(xDomain, 1, faceted ? X_AXIS_LABEL_CLASS : void 0),
             markerToX: (m) => parseDate(m.x),
             // Use the SAME local-midnight parse as the chart's line points (parseDate), not the
@@ -24447,8 +24519,9 @@ ${words.slice(bestI).join(" ")}`;
               labelMode,
               tagCategoryLabels
             ),
-            // Vertical reference markers are meaningless on a band scale.
-            markerToX: () => null,
+            // Categorical: a marker/point `x` resolves to the category string itself, which Plot's
+            // band scale positions at the band (bar) center; unknown categories → null (dropped).
+            markerToX: (m) => seen.has(m.x) ? m.x : null,
             tooltipXParse: void 0,
             tooltipXFormat: void 0
           };
@@ -24456,6 +24529,135 @@ ${words.slice(bestI).join(" ")}`;
       };
     }
     throw new Error(`Unknown xAxisType: ${xType}`);
+  }
+
+  // src/engine/histogram-bin.ts
+  function autoBinCount(values) {
+    const n = values.length;
+    if (n < 2) return 1;
+    const sorted = [...values].sort((a, b) => a - b);
+    const q10 = (p) => {
+      const idx = (sorted.length - 1) * p;
+      const lo3 = Math.floor(idx), hi3 = Math.ceil(idx);
+      return sorted[lo3] + (sorted[hi3] - sorted[lo3]) * (idx - lo3);
+    };
+    const iqr = q10(0.75) - q10(0.25);
+    const min = sorted[0], max = sorted[sorted.length - 1];
+    if (iqr <= 0) return Math.max(1, Math.ceil(Math.log2(n) + 1));
+    const width = 2 * iqr * Math.pow(n, -1 / 3);
+    return Math.max(1, Math.ceil((max - min) / width));
+  }
+  function computeThresholds(values, spec) {
+    if (spec.thresholds && spec.thresholds.length >= 2) return spec.thresholds;
+    let [min, max] = spec.domain ?? [Math.min(...values), Math.max(...values)];
+    if (!Number.isFinite(min) || !Number.isFinite(max)) {
+      min = 0;
+      max = 1;
+    }
+    if (max <= min) return [min, min + 1];
+    const width = spec.binWidth != null && spec.binWidth > 0 ? spec.binWidth : (max - min) / (spec.bins && spec.bins > 0 ? spec.bins : autoBinCount(values));
+    const edges = [];
+    for (let e = min; e < max - 1e-9; e += width) edges.push(e);
+    edges.push(max);
+    return edges;
+  }
+  function binIndex(x, t60) {
+    if (x < t60[0] || x > t60[t60.length - 1]) return -1;
+    if (x === t60[t60.length - 1]) return t60.length - 2;
+    let lo3 = 0, hi3 = t60.length - 1;
+    while (lo3 < hi3 - 1) {
+      const mid = lo3 + hi3 >> 1;
+      if (x < t60[mid]) hi3 = mid;
+      else lo3 = mid;
+    }
+    return lo3;
+  }
+  var DAY_MS = 864e5;
+  function calendarEdges(startMs, endMs, interval) {
+    const floor = (ms3) => {
+      const d = new Date(ms3);
+      if (interval === "day") return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+      if (interval === "week") {
+        const day = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+        return day - new Date(day).getUTCDay() * DAY_MS;
+      }
+      if (interval === "month") return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), 1);
+      if (interval === "quarter") return Date.UTC(d.getUTCFullYear(), Math.floor(d.getUTCMonth() / 3) * 3, 1);
+      return Date.UTC(d.getUTCFullYear(), 0, 1);
+    };
+    const next = (ms3) => {
+      const d = new Date(ms3);
+      if (interval === "day") return ms3 + DAY_MS;
+      if (interval === "week") return ms3 + 7 * DAY_MS;
+      if (interval === "month") return Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 1);
+      if (interval === "quarter") return Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 3, 1);
+      return Date.UTC(d.getUTCFullYear() + 1, 0, 1);
+    };
+    const edges = [];
+    let e = floor(startMs);
+    edges.push(e);
+    while (e <= endMs) {
+      e = next(e);
+      edges.push(e);
+    }
+    return edges;
+  }
+  function temporalThresholds(valuesMs, binWidth, bins, domain) {
+    const [min, max] = domain ?? [Math.min(...valuesMs), Math.max(...valuesMs)];
+    if (typeof binWidth === "string") {
+      if (["day", "week", "month", "quarter", "year"].includes(binWidth)) {
+        return calendarEdges(min, max, binWidth);
+      }
+      const days = Number(binWidth);
+      if (Number.isFinite(days) && days > 0) return computeThresholds(valuesMs, { binWidth: days * DAY_MS, domain: [min, max] });
+    }
+    if (typeof binWidth === "number" && binWidth > 0) return computeThresholds(valuesMs, { binWidth: binWidth * DAY_MS, domain: [min, max] });
+    return computeThresholds(valuesMs, { bins, domain: [min, max] });
+  }
+  function normalizeBinned(rows, mode) {
+    if (!mode || mode === "none") return rows;
+    const totalBySeries = /* @__PURE__ */ new Map();
+    for (const r of rows) totalBySeries.set(r.series, (totalBySeries.get(r.series) ?? 0) + r._y);
+    return rows.map((r) => {
+      const total = totalBySeries.get(r.series) || 1;
+      let y = r._y;
+      if (mode === "proportion") y = y / total;
+      else if (mode === "density") y = y / (total * (r._x1 - r._x0));
+      return { ...r, _y: y };
+    });
+  }
+  function binValues(rows, spec) {
+    const values = rows.map((r) => r.x).filter(Number.isFinite);
+    const t60 = computeThresholds(values, spec);
+    const nBins = t60.length - 1;
+    const seriesOrder = [];
+    const seen = /* @__PURE__ */ new Set();
+    for (const r of rows) if (!seen.has(r.series)) {
+      seen.add(r.series);
+      seriesOrder.push(r.series);
+    }
+    if (!seriesOrder.length) seriesOrder.push("");
+    const facetOf = /* @__PURE__ */ new Map();
+    const acc = /* @__PURE__ */ new Map();
+    for (const s of seriesOrder) acc.set(s, new Array(nBins).fill(0));
+    for (const r of rows) {
+      if (!Number.isFinite(r.x)) continue;
+      const i = binIndex(r.x, t60);
+      if (i < 0) continue;
+      acc.get(r.series)[i] += r.weight ?? 1;
+      if (!facetOf.has(r.series)) facetOf.set(r.series, r._facet);
+    }
+    const out = [];
+    for (const s of seriesOrder) {
+      const counts = acc.get(s);
+      for (let i = 0; i < nBins; i++) {
+        const row = { series: s, _x0: t60[i], _x1: t60[i + 1], _y: counts[i] };
+        const f = facetOf.get(s);
+        if (f !== void 0) row._facet = f;
+        out.push(row);
+      }
+    }
+    return normalizeBinned(out, spec.normalize);
   }
 
   // src/engine/marks/projected.ts
@@ -24811,9 +25013,8 @@ ${words.slice(bestI).join(" ")}`;
           topSectionHeader = { category: catsInSection[0], label: labels[s] ?? s };
           firstRendered = true;
         } else {
-          const spacer = sectionSpacer(s);
-          domain.push(spacer);
-          sectionHeaders.push({ value: spacer, label: labels[s] ?? s });
+          for (let i = 0; i < SECTION_SPACER_SLOTS; i++) domain.push(sectionSpacerSlot(s, i));
+          sectionHeaders.push({ category: catsInSection[0], label: labels[s] ?? s });
         }
         for (const cat of catsInSection) domain.push(cat);
       }
@@ -24853,7 +25054,7 @@ ${words.slice(bestI).join(" ")}`;
       fyScaleOpts: { domain: bandDomain, paddingInner: 0.2, paddingOuter: HBAND_PADDING_OUTER, align: 0, axis: null },
       xAxisMarks: ctx.hideCategoryLabels ? [] : [
         ...tblFacetGroupYAxis(categories, gutter, catFont),
-        ...tblSectionHeaderYAxis(sectionHeaders, gutter, catFont, SECTION_HEADER_GAP),
+        ...sectionHeaders.flatMap((h) => tblSectionTopHeader(h, gutter, topHeaderLift, catFont)),
         ...topSectionHeader ? tblSectionTopHeader(topSectionHeader, gutter, topHeaderLift, catFont) : []
       ],
       marginLeft: gutter,
@@ -24903,7 +25104,7 @@ ${words.slice(bestI).join(" ")}`;
           yScaleOpts: { type: "band", domain: bandDomain, paddingInner: 0.2, paddingOuter: HBAND_PADDING_OUTER, align: 0, axis: null },
           xAxisMarks: ctx.hideCategoryLabels ? [] : [
             ...tblBandYAxis(categories, gutter, catFont),
-            ...tblSectionHeaderYAxis(sectionHeaders, gutter, catFont, SECTION_HEADER_GAP),
+            ...sectionHeaders.flatMap((h) => tblSectionTopHeader(h, gutter, topHeaderLift, catFont)),
             ...topSectionHeader ? tblSectionTopHeader(topSectionHeader, gutter, topHeaderLift, catFont) : []
           ],
           marginLeft: gutter,
@@ -24991,7 +25192,8 @@ ${words.slice(bestI).join(" ")}`;
 
   // src/engine/marks/stacked.ts
   var NET_DOT_CLASS = "tbl-net-marker";
-  var NET_LABEL_CLASS = "tbl-net-label";
+  var NET_DOT_R = 8;
+  var NET_DOT_PANE_R = 5.6;
   var SEGMENT_LABEL_MIN_PX = 25;
   var MARK_BLACK = tokens.structural.mark_black;
   var WHITE = "#FFFFFF";
@@ -25120,62 +25322,9 @@ ${words.slice(bestI).join(" ")}`;
         horizontal ? plot_0_6_16_esm_min_exports.text(netRows, { ...common, y: "_xc", x: "posTop", textAnchor: "start", dx: TBL_VALUE_LABEL.gap }) : plot_0_6_16_esm_min_exports.text(netRows, { ...common, x: "_xc", y: "posTop", textAnchor: "middle", dy: -TBL_VALUE_LABEL.gap })
       );
     } else if (netMode === "dot") {
-      const netLabelFill2 = spec.barStack?.netLabelColor === "black" ? MARK_BLACK : WHITE;
-      if (horizontal) {
-        overlay.push(
-          plot_0_6_16_esm_min_exports.dot(netRows, {
-            y: "_xc",
-            x: "net",
-            r: 10,
-            fill: WHITE,
-            stroke: MARK_BLACK,
-            strokeWidth: 2,
-            className: NET_DOT_CLASS
-          })
-        );
-        if (!pane) {
-          overlay.push(
-            plot_0_6_16_esm_min_exports.text(netRows, {
-              y: "_xc",
-              x: "net",
-              text: (d) => netFmt(d.net),
-              fill: netLabelFill2,
-              fontSize: TBL_VALUE_LABEL.fontSize,
-              fontWeight: TBL_VALUE_LABEL.fontWeight,
-              textAnchor: "middle",
-              dy: 20,
-              className: NET_LABEL_CLASS
-            })
-          );
-        }
-      } else {
-        overlay.push(
-          plot_0_6_16_esm_min_exports.dot(netRows, {
-            x: "_xc",
-            y: "net",
-            r: 10,
-            fill: WHITE,
-            stroke: MARK_BLACK,
-            strokeWidth: 2,
-            className: NET_DOT_CLASS
-          })
-        );
-        if (!pane) {
-          overlay.push(
-            plot_0_6_16_esm_min_exports.text(netRows, {
-              x: "_xc",
-              y: "net",
-              text: (d) => netFmt(d.net),
-              fill: netLabelFill2,
-              fontSize: TBL_VALUE_LABEL.fontSize,
-              fontWeight: TBL_VALUE_LABEL.fontWeight,
-              textAnchor: "middle",
-              dy: 20,
-              className: NET_LABEL_CLASS
-            })
-          );
-        }
-      }
+      const netDotR = pane ? NET_DOT_PANE_R : NET_DOT_R;
+      const netDot = horizontal ? plot_0_6_16_esm_min_exports.dot(netRows, { y: "_xc", x: "net", r: netDotR, fill: WHITE, stroke: MARK_BLACK, strokeWidth: 2, className: NET_DOT_CLASS }) : plot_0_6_16_esm_min_exports.dot(netRows, { x: "_xc", y: "net", r: netDotR, fill: WHITE, stroke: MARK_BLACK, strokeWidth: 2, className: NET_DOT_CLASS });
+      overlay.push(netDot);
     }
     if (netMode !== "dot" && !pane && spec.valueLabels?.show === true) {
       let lightSeries = null;
@@ -25208,18 +25357,11 @@ ${words.slice(bestI).join(" ")}`;
       {
         selector: `g.${NET_DOT_CLASS} circle`,
         seriesOrder: Array(categories.length).fill(TOTAL_SERIES_KEY)
-      },
-      // The net LABEL text is suppressed in panes, so only tag it for the single chart.
-      ...pane ? [] : [
-        {
-          selector: `g.${NET_LABEL_CLASS} text`,
-          seriesOrder: Array(categories.length).fill(TOTAL_SERIES_KEY)
-        }
-      ]
+      }
     ] : [];
     const showTotalDot = netMode === "dot" ? true : netMode === "text" ? false : void 0;
     if (horizontal) {
-      const gutter = horizontalLeftGutter(categories, { fontSize: catFont });
+      const gutter = ctx.hideCategoryLabels ? SHARED_LABELLESS_MARGIN_LEFT : ctx.categoryGutter ?? horizontalLeftGutter(categories, { fontSize: catFont });
       return {
         underlay: [],
         overlay,
@@ -25232,7 +25374,7 @@ ${words.slice(bestI).join(" ")}`;
         ],
         dashedNames: /* @__PURE__ */ new Set(),
         yScaleOpts: { type: "band", domain: categories, padding: 0.2, axis: null },
-        xAxisMarks: tblBandYAxis(categories, gutter, catFont),
+        xAxisMarks: ctx.hideCategoryLabels ? [] : tblBandYAxis(categories, gutter, catFont),
         marginLeft: gutter,
         seriesColors,
         legendVisualOrder,
@@ -25329,6 +25471,149 @@ ${words.slice(bestI).join(" ")}`;
     ];
   }
 
+  // src/engine/marks/waterfall.ts
+  var DEFAULT_INCREASE = "blue";
+  var DEFAULT_DECREASE = "red";
+  var DEFAULT_TOTAL = "navy";
+  function makeLevelFormatter(units, decimals) {
+    const maxFrac = decimals;
+    return (v) => {
+      if (!Number.isFinite(v)) return "";
+      const s = v.toFixed(maxFrac);
+      return units ? `${s}${units}` : s;
+    };
+  }
+  function buildWaterfallMarks(data, spec, ctx) {
+    const catField = ctx.xField;
+    const clipOpt = ctx.clipMarks ? { clip: true } : {};
+    const steps = computeWaterfallSteps(data);
+    const categories = steps.map((s) => s.cat);
+    const barSteps = steps.filter((s) => s.kind !== "skip");
+    const wf2 = spec.waterfall ?? {};
+    const incColor = resolveColor(wf2.colors?.increase) ?? resolveColor(DEFAULT_INCREASE);
+    const decColor = resolveColor(wf2.colors?.decrease) ?? resolveColor(DEFAULT_DECREASE);
+    const totColor = resolveColor(wf2.colors?.total) ?? resolveColor(DEFAULT_TOTAL);
+    const categoryColorMap = spec.category_colors ? Object.fromEntries(
+      Object.entries(spec.category_colors).map(([k, v]) => [k, resolveColor(v)])
+    ) : null;
+    const fillFor = (s) => {
+      const byCat = categoryColorMap?.[s.cat];
+      if (byCat != null) return byCat;
+      if (s.kind === "total") return totColor;
+      return s.rise ? incColor : decColor;
+    };
+    const barRows = steps.map((s) => ({
+      _xc: s.cat,
+      _base: s.base,
+      _top: s.top,
+      _fill: s.kind === "skip" ? "none" : fillFor(s)
+    }));
+    const overlay = [];
+    const connectors = wf2.connectors !== false;
+    if (connectors && barSteps.length > 1) {
+      const connColor = resolveColor(wf2.connectorColor) ?? TBL.color.annotationDim;
+      const connRows = [];
+      for (let i = 0; i < barSteps.length - 1; i++) {
+        connRows.push({ x1: barSteps[i].cat, x2: barSteps[i + 1].cat, y: barSteps[i].level });
+      }
+      overlay.push(
+        plot_0_6_16_esm_min_exports.link(connRows, {
+          x1: "x1",
+          x2: "x2",
+          y1: "y",
+          y2: "y",
+          stroke: connColor,
+          strokeWidth: 1,
+          strokeDasharray: "1 3"
+        })
+      );
+    }
+    overlay.push(
+      plot_0_6_16_esm_min_exports.barY(barRows, { x: "_xc", y1: "_base", y2: "_top", fill: (d) => d._fill, ...clipOpt })
+    );
+    if (spec.valueLabels?.show === true) {
+      const units = inferUnitsFromSubtitle(spec.subtitle);
+      const fmt = makeLevelFormatter(units, waterfallValueDecimals(data, spec.valueLabels?.decimals));
+      const labelSize = ctx.pane ? 10.5 : TBL_VALUE_LABEL.fontSize;
+      const pushLabels = (rising) => {
+        const rows = barSteps.filter((s) => s.rise === rising).map((s) => ({ _xc: s.cat, level: s.level, fill: fillFor(s) }));
+        if (!rows.length) return;
+        overlay.push(
+          plot_0_6_16_esm_min_exports.text(rows, {
+            x: "_xc",
+            y: "level",
+            text: (d) => fmt(d.level),
+            textAnchor: "middle",
+            dy: rising ? -TBL_VALUE_LABEL.gap : TBL_VALUE_LABEL.gapBelow,
+            fontSize: labelSize,
+            fontWeight: TBL_VALUE_LABEL.fontWeight,
+            fill: (d) => d.fill
+          })
+        );
+      };
+      pushLabels(true);
+      pushLabels(false);
+    }
+    return {
+      underlay: [],
+      overlay,
+      tagging: [
+        // One rect per non-skip step, in barRows (= declaration) order; tag them the single-series
+        // key so the live layer treats the whole chart as one series (per-bar fill is read off the
+        // rendered rect). Category labels (adapter-drawn on `x`) tagged in full band-domain order.
+        { selector: 'g[aria-label="bar"] rect', seriesOrder: barRows.map(() => SINGLE_SERIES_KEY) },
+        { selector: `g.${CAT_LABEL_CLASS} text`, seriesOrder: [], categoryOrder: categories }
+      ],
+      dashedNames: /* @__PURE__ */ new Set(),
+      // Explicit band domain (declaration order, incl. skip slots) so a skipped step still reserves
+      // its axis position; padding matches single-series bars.
+      xScaleOpts: { domain: categories, paddingInner: 0.2, paddingOuter: 0.2 }
+    };
+  }
+
+  // src/engine/marks/histogram.ts
+  var FILL_OPACITY = 0.5;
+  function buildHistogramMarks(data, spec, ctx) {
+    const seriesNames = ctx.seriesNames ?? [""];
+    const isMulti = seriesNames.length > 1;
+    const { colors } = ctx;
+    const barColor = resolveColor(spec.bar_color);
+    const highlightSet = spec.highlightSeries && spec.highlightSeries.length ? new Set(spec.highlightSeries) : null;
+    const fillFor = (s) => {
+      if (highlightSet && !highlightSet.has(s)) return TBL.color.annotationDim;
+      if (!isMulti) return barColor ?? colors.get(s) ?? TBL.color.blue;
+      return colors.get(s) ?? TBL.color.blue;
+    };
+    const overlay = [];
+    for (const s of seriesNames) {
+      const seriesData = data.filter((d) => d.series === s && d._y != null && d._x0 != null && d._x1 != null);
+      overlay.push(
+        plot_0_6_16_esm_min_exports.rectY(seriesData, {
+          x1: "_x0",
+          x2: "_x1",
+          y: "_y",
+          fill: fillFor(s),
+          // Function channel (not a bare constant) so Plot emits fill-opacity on each <rect> rather
+          // than hoisting it onto the parent <g> — the per-rect attribute the legend dim/pin model
+          // reads. (Same constant→group vs fn→per-rect Plot behavior documented in bar.ts.)
+          fillOpacity: () => FILL_OPACITY,
+          stroke: fillFor(s),
+          strokeOpacity: 1
+        })
+      );
+    }
+    const seriesOrder = [];
+    for (const s of seriesNames)
+      for (const d of data)
+        if (d.series === s && d._y != null && d._x0 != null && d._x1 != null) seriesOrder.push(s);
+    return {
+      underlay: [],
+      overlay,
+      tagging: [{ selector: 'g[aria-label="rect"] rect', seriesOrder }],
+      dashedNames: /* @__PURE__ */ new Set()
+    };
+  }
+
   // src/engine/marks/index.ts
   var REGISTRY = {
     line: buildLineMarks,
@@ -25337,7 +25622,9 @@ ${words.slice(bestI).join(" ")}`;
     stacked: buildStackedMarks,
     // Both point types share one builder; it branches on x-scale (numeric vs categorical point).
     scatter: buildPointMarks,
-    dotplot: buildPointMarks
+    dotplot: buildPointMarks,
+    waterfall: buildWaterfallMarks,
+    histogram: buildHistogramMarks
   };
   function markBuilderFor(chartType) {
     const builder = REGISTRY[chartType];
@@ -25405,7 +25692,7 @@ ${words.slice(bestI).join(" ")}`;
     if (xExtent && xExtent[1] > xExtent[0] && width != null) {
       const innerW = width - effMarginLeft - effMarginRight;
       const toPx = (v) => {
-        if (v == null) return null;
+        if (v == null || typeof v === "string") return null;
         const n = typeof v === "number" ? v : v.getTime();
         return effMarginLeft + (n - xExtent[0]) / (xExtent[1] - xExtent[0]) * innerW;
       };
@@ -25615,7 +25902,7 @@ ${words.slice(bestI).join(" ")}`;
       if (!horizontal) {
         xAxisAnn.forEach((m, markerIdx) => {
           const mx3 = xOpts.markerToX(m);
-          if (mx3 == null) return;
+          if (mx3 == null || typeof mx3 === "string") return;
           drawXAxisMarker(mx3, m, staggerDy.get(`m${markerIdx}`) ?? 4);
         });
       }
@@ -25640,9 +25927,8 @@ ${words.slice(bestI).join(" ")}`;
       });
     }
     const markerList = yAxisAnn;
-    const markerPalette = tblColorScale(markerList.length + 1);
     markerList.forEach((m, i) => {
-      const markerColor = m.color && (resolveColor(m.color) || m.color) || markerPalette[i + 1] || TBL.color.annotationDim;
+      const markerColor = m.color && (resolveColor(m.color) || m.color) || TBL.color.annotationDim;
       marks.push(
         plot_0_6_16_esm_min_exports.ruleY([m.y], {
           stroke: markerColor,
@@ -25696,8 +25982,7 @@ ${words.slice(bestI).join(" ")}`;
       const dx3 = p.dx != null ? p.dx : 0;
       const dy3 = p.dy != null ? -p.dy : p.connector ? -28 : -6;
       const anchor = dx3 < 0 ? "end" : dx3 > 0 ? "start" : "middle";
-      const canLeader = p.connector && xExtent != null && xExtent[1] > xExtent[0] && innerWForPx != null && innerHForPx != null;
-      if (canLeader) {
+      if (p.connector && typeof px3 !== "string" && xExtent != null && xExtent[1] > xExtent[0] && innerWForPx != null && innerHForPx != null) {
         const dppx = (xExtent[1] - xExtent[0]) / innerWForPx;
         const dppy = (yDomain[1] - yDomain[0]) / innerHForPx;
         const baseN = typeof px3 === "number" ? px3 : px3.getTime();
@@ -25720,8 +26005,9 @@ ${words.slice(bestI).join(" ")}`;
       } else if (p.connector) {
         marks.push(plot_0_6_16_esm_min_exports.dot([{ x: px3, y: py3 }], { x: "x", y: "y", r: 3, fill: pColor }));
       }
+      const labelText = p.maxWidth != null ? wrapToWidth(p.label, p.maxWidth, TBL.size.annotation) : p.label;
       marks.push(
-        plot_0_6_16_esm_min_exports.text([{ x: px3, y: py3, t: p.label }], {
+        plot_0_6_16_esm_min_exports.text([{ x: px3, y: py3, t: labelText }], {
           x: "x",
           y: "y",
           text: "t",
@@ -25842,6 +26128,40 @@ ${words.slice(bestI).join(" ")}`;
     const inner = (nCategories + Math.max(0, nSpacers)) * slotPx;
     return Math.max(HORIZONTAL_HEIGHT_FLOOR, Math.round(inner + HORIZONTAL_CHROME_PX + extraTopPx));
   }
+  function horizontalBarChartHeight(spec, rows) {
+    const cols = resolveColumns(spec, rows);
+    const categories = orderedCategories(rows, cols.x, spec);
+    const nCats = Math.max(1, categories.length);
+    const series = /* @__PURE__ */ new Set();
+    for (const r of rows) {
+      const s = cols.series ? r[cols.series] : "";
+      if (s) series.add(s);
+    }
+    const nSeries = spec.series_order && spec.series_order.length ? spec.series_order.length : Math.max(1, series.size);
+    const grouped = spec.chartType === "bar" && nSeries > 1;
+    const nSections = cols.section ? countSections(rows, cols.x, cols.section, spec, categories) : 0;
+    const nSpacers = Math.max(0, nSections - 1) * SECTION_SPACER_SLOTS;
+    const gutter = horizontalLeftGutter(categories, { fontSize: FACETED_CAT_LABEL_PX });
+    const maxLabelLines = categories.reduce(
+      (m, c) => Math.max(m, labelLineCount(c, gutter - GUTTER_TEXT_PAD, FACETED_CAT_LABEL_PX)),
+      1
+    );
+    return horizontalBarHeight({
+      nCategories: nCats,
+      nSeries,
+      grouped,
+      nSpacers,
+      maxLabelLines,
+      extraTopPx: nSections > 0 ? SECTION_HEADER_TOP_PX : 0
+    });
+  }
+  function figurePaneHeight(spec) {
+    const horizontal = spec.orientation === "horizontal";
+    if (horizontal && (spec.chartType === "bar" || spec.chartType === "stacked")) return void 0;
+    if (spec.chartType === "waterfall") return 420;
+    if (spec.chartType === "dotplot" || spec.chartType === "bar" || spec.chartType === "stacked") return 320;
+    return 240;
+  }
   function countSections(rows, xField, sectionField, spec, categories) {
     const sectionOf = /* @__PURE__ */ new Map();
     for (const r of rows) {
@@ -25917,27 +26237,55 @@ ${words.slice(bestI).join(" ")}`;
     if (!facetField) {
       throw new Error("small_multiples requires a facet column (set columns.facet).");
     }
-    const isHorizontalBar = spec.chartType === "bar" && spec.orientation === "horizontal";
+    let binThresholds;
+    if (spec.chartType === "histogram" && mode !== "per-pane" && !isPreBinned(cols)) {
+      const isTemporal = spec.xAxisType === "temporal";
+      const values = rows.map((r) => isTemporal ? parseDate(r[cols.x] ?? "").getTime() : +(r[cols.x] ?? "")).filter((v) => Number.isFinite(v));
+      const bw3 = spec.histogram?.binWidth;
+      binThresholds = isTemporal ? temporalThresholds(values, bw3, spec.histogram?.bins, spec.histogram?.domain) : computeThresholds(values, {
+        bins: spec.histogram?.bins,
+        binWidth: typeof bw3 === "number" ? bw3 : void 0,
+        domain: spec.histogram?.domain
+      });
+    }
+    const isHorizontalStacked = spec.chartType === "stacked" && spec.orientation === "horizontal";
+    const isHorizontalBar = (spec.chartType === "bar" || spec.chartType === "stacked") && spec.orientation === "horizontal";
     const sharedCategories = isHorizontalBar ? orderedCategories(rows, cols.x, spec) : [];
     const hGutter = isHorizontalBar ? horizontalLeftGutter(sharedCategories, { fontSize: FACETED_CAT_LABEL_PX }) : TBL_MARGIN_LEFT;
     let autoHeight;
+    let nSpacers = 0;
+    let catsByFacet;
+    let effSlotPx = 0;
+    let chromeExtra = 0;
     if (isHorizontalBar && opts.height == null) {
       const nSeries = spec.series_order && spec.series_order.length ? spec.series_order.length : new Set(rows.map((r) => cols.series ? r[cols.series] : "").filter((s) => s !== "")).size;
       const nSections = cols.section ? countSections(rows, cols.x, cols.section, spec, sharedCategories) : 0;
-      const nSpacers = Math.max(0, nSections - 1);
+      nSpacers = Math.max(0, nSections - 1) * SECTION_SPACER_SLOTS;
       const maxPx = hGutter - GUTTER_TEXT_PAD;
       const maxLabelLines = sharedCategories.reduce(
         (m, c) => Math.max(m, labelLineCount(c, maxPx, FACETED_CAT_LABEL_PX)),
         1
       );
-      autoHeight = horizontalBarHeight({
-        nCategories: sharedCategories.length,
-        nSeries: Math.max(1, nSeries),
-        grouped: nSeries > 1,
-        nSpacers,
-        maxLabelLines,
-        extraTopPx: nSections > 0 ? SECTION_HEADER_TOP_PX : 0
-      });
+      catsByFacet = /* @__PURE__ */ new Map();
+      for (const r of rows) {
+        const f = facetField ? r[facetField] : "";
+        const c = r[cols.x];
+        if (!c) continue;
+        if (!catsByFacet.has(f)) catsByFacet.set(f, /* @__PURE__ */ new Set());
+        catsByFacet.get(f).add(c);
+      }
+      const maxPaneCats = Math.max(1, ...[...catsByFacet.values()].map((s) => s.size));
+      const barsPerCat = nSeries > 1 && !isHorizontalStacked ? Math.max(1, nSeries) : 1;
+      const slotPxNatural = Math.max(
+        barsPerCat * HORIZONTAL_PX_PER_BAR,
+        Math.max(1, maxLabelLines) * HORIZONTAL_LABEL_LINE_PX + 6
+      );
+      chromeExtra = HORIZONTAL_CHROME_PX + (nSections > 0 ? SECTION_HEADER_TOP_PX : 0);
+      const busiestSlots = maxPaneCats + nSpacers;
+      const naturalBusiest = busiestSlots * slotPxNatural + chromeExtra;
+      const hBusy = Math.max(HORIZONTAL_HEIGHT_FLOOR, naturalBusiest);
+      effSlotPx = (hBusy - chromeExtra) / busiestSlots;
+      autoHeight = Math.round(hBusy);
     }
     const effHeight = opts.height ?? autoHeight;
     const encounterOrder = [];
@@ -25951,6 +26299,10 @@ ${words.slice(bestI).join(" ")}`;
     }
     const paneValues = sm3.pane_order && sm3.pane_order.length ? sm3.pane_order.filter((v) => seen.has(v)) : encounterOrder;
     if (!paneValues.length) throw new Error("No panes: facet_field produced no values in scope.");
+    const perPaneHeights = isHorizontalBar && opts.height == null ? paneValues.map((v) => {
+      const slots = Math.max(1, catsByFacet?.get(v)?.size ?? 1) + nSpacers;
+      return Math.round(slots * effSlotPx + chromeExtra);
+    }) : void 0;
     const variableWidths = sm3.pane_widths != null && sm3.pane_widths !== "equal";
     const requestedColumns = opts.columns && opts.columns > 0 ? opts.columns : sm3.columns && sm3.columns > 0 ? sm3.columns : variableWidths ? paneValues.length : defaultColumns(paneValues.length);
     const columns = Math.max(1, Math.min(requestedColumns, paneValues.length));
@@ -25976,7 +26328,7 @@ ${words.slice(bestI).join(" ")}`;
             const s = cols.series ? r[cols.series] : "";
             if (s) serSet.add(s);
           }
-          return Math.max(1, catSet.size) * Math.max(1, serSet.size);
+          return isHorizontalStacked ? Math.max(1, catSet.size) : Math.max(1, catSet.size) * Math.max(1, serSet.size);
         };
         const weights = Array.from({ length: columns }, () => 0);
         paneValues.forEach((v, i) => {
@@ -26013,7 +26365,7 @@ ${words.slice(bestI).join(" ")}`;
           paneRows,
           {
             ...opts,
-            height: effHeight,
+            height: perPaneHeights ? perPaneHeights[i] : effHeight,
             pane: true,
             paneFacetValue: value,
             ...perPaneWidths ? { width: perPaneWidths[col] } : {},
@@ -26061,6 +26413,7 @@ ${words.slice(bestI).join(" ")}`;
         columns,
         rows: gridRows,
         ...perPaneWidths ? { columnWidths: perPaneWidths } : {},
+        ...perPaneHeights ? { paneHeights: perPaneHeights } : {},
         legendItems: legendItems2,
         shapeLegendItems: buildShapeLegendItems(spec, firstLayers2 ?? { underlay: [], overlay: [], tagging: [], dashedNames: /* @__PURE__ */ new Set() }),
         colorLegendTitle: spec.color_legend_title,
@@ -26085,7 +26438,13 @@ ${words.slice(bestI).join(" ")}`;
       const [lo3, hi3] = renderPane(
         spec,
         paneRows,
-        { ...opts, height: effHeight, pane: true, paneFacetValue: value },
+        {
+          ...opts,
+          height: effHeight,
+          pane: true,
+          paneFacetValue: value,
+          ...binThresholds ? { binThresholds } : {}
+        },
         "probe"
       ).yDomain;
       if (lo3 < yLo) yLo = lo3;
@@ -26111,10 +26470,11 @@ ${words.slice(bestI).join(" ")}`;
         paneRows,
         {
           ...opts,
-          height: effHeight,
+          height: perPaneHeights ? perPaneHeights[i] : effHeight,
           pane: true,
           paneFacetValue: value,
           yDomain: sharedYDomain,
+          ...binThresholds ? { binThresholds } : {},
           width: colWidths[col],
           ...forcedXLabelMode ? { xLabelMode: forcedXLabelMode } : {},
           ...forcedMarginBottom != null ? { marginBottom: forcedMarginBottom } : {},
@@ -26158,6 +26518,7 @@ ${words.slice(bestI).join(" ")}`;
       columns,
       rows: gridRows,
       columnWidths: colWidths,
+      ...perPaneHeights ? { paneHeights: perPaneHeights } : {},
       legendItems,
       shapeLegendItems: buildShapeLegendItems(spec, firstLayers ?? { underlay: [], overlay: [], tagging: [], dashedNames: /* @__PURE__ */ new Set() }),
       colorLegendTitle: spec.color_legend_title,
@@ -26198,8 +26559,11 @@ ${words.slice(bestI).join(" ")}`;
   function renderPane(spec, rows, opts = {}, classNameSuffix, facetInfo) {
     const xType = spec.xAxisType;
     if (!xType) throw new Error("No xAxisType.");
-    const adapter = makeXAdapter(xType, spec.xAxisPolicy);
     const cols = resolveColumns(spec, rows);
+    if (spec.chartType === "histogram") {
+      return renderHistogramPane(spec, rows, opts, classNameSuffix, facetInfo, cols, xType);
+    }
+    const adapter = makeXAdapter(xType, spec.xAxisPolicy);
     const data = rows.map((r) => {
       const xRaw = r[cols.x] ?? "";
       const valRaw = r[cols.value];
@@ -26210,6 +26574,7 @@ ${words.slice(bestI).join(" ")}`;
       };
       if (cols.shape) row._shape = r[cols.shape] ?? "";
       if (cols.section) row._section = r[cols.section] ?? "";
+      if (cols.kind) row._kind = r[cols.kind] ?? "";
       if (spec.projected_field) {
         row._projected = isTruthyFlag(r[spec.projected_field]);
       }
@@ -26234,6 +26599,65 @@ ${words.slice(bestI).join(" ")}`;
       return row;
     }).filter((r) => adapter.validate(r)).filter((r) => !facetInfo || r._facet != null);
     if (!data.length) throw new Error("No data.");
+    return assemblePaneResult(spec, opts, classNameSuffix, facetInfo, adapter, cols, data);
+  }
+  function histogramDomainOf(binned) {
+    let lo3 = Infinity;
+    let hi3 = -Infinity;
+    for (const r of binned) {
+      if (r._x0 != null && r._x0 < lo3) lo3 = r._x0;
+      if (r._x1 != null && r._x1 > hi3) hi3 = r._x1;
+    }
+    return Number.isFinite(lo3) && Number.isFinite(hi3) ? [lo3, hi3] : [0, 1];
+  }
+  function renderHistogramPane(spec, rows, opts, classNameSuffix, facetInfo, cols, xType) {
+    const isTemporal = xType === "temporal";
+    let binned;
+    if (isPreBinned(cols)) {
+      const preRows = rows.map((r) => {
+        const valRaw = r[cols.value];
+        const row = {
+          series: cols.series ? String(r[cols.series] ?? "") : SINGLE_SERIES_KEY,
+          _x0: +r[cols.x0],
+          _x1: +r[cols.x1],
+          _y: valRaw === "" || valRaw == null ? 0 : +valRaw
+        };
+        if (cols.facet) row._facet = String(r[cols.facet] ?? "");
+        return row;
+      });
+      binned = normalizeBinned(preRows, spec.histogram?.normalize);
+    } else {
+      const weightCol = spec.histogram?.weight;
+      const inputs = rows.map((r) => {
+        const xRaw = r[cols.x] ?? "";
+        const x = isTemporal ? parseDate(xRaw).getTime() : +xRaw;
+        const wRaw = weightCol ? r[weightCol] : void 0;
+        const weight = weightCol != null ? wRaw === "" || wRaw == null ? 0 : Number(wRaw) : void 0;
+        const input = {
+          series: cols.series ? String(r[cols.series] ?? "") : SINGLE_SERIES_KEY,
+          x
+        };
+        if (weight !== void 0) input.weight = weight;
+        if (cols.facet) input._facet = String(r[cols.facet] ?? "");
+        return input;
+      }).filter((r) => Number.isFinite(r.x));
+      const values = inputs.map((r) => r.x);
+      const bw3 = spec.histogram?.binWidth;
+      const thresholds = opts.binThresholds ?? (isTemporal ? temporalThresholds(values, bw3, spec.histogram?.bins, spec.histogram?.domain) : computeThresholds(values, {
+        bins: spec.histogram?.bins,
+        binWidth: typeof bw3 === "number" ? bw3 : void 0,
+        domain: spec.histogram?.domain
+      }));
+      binned = binValues(inputs, {
+        thresholds,
+        normalize: spec.histogram?.normalize
+      });
+    }
+    if (!binned.length) throw new Error("No data.");
+    const adapter = makeXAdapter(xType, spec.xAxisPolicy, histogramDomainOf(binned));
+    return assemblePaneResult(spec, opts, classNameSuffix, facetInfo, adapter, cols, binned);
+  }
+  function assemblePaneResult(spec, opts, classNameSuffix, facetInfo, adapter, cols, data) {
     const seriesNames = spec.series_order && spec.series_order.length ? spec.series_order.filter((s) => data.some((r) => r.series === s)) : uniqueSeries(data);
     const seriesSet = new Set(seriesNames);
     const dataInScope = data.filter((r) => seriesSet.has(r.series));
@@ -26293,6 +26717,16 @@ ${words.slice(bestI).join(" ")}`;
       const barExtent = computeBarYExtent(dataInScope, spec, chartType);
       const resolvedMin = policy.min ?? Math.min(barExtent.min, ...markerYs);
       const resolvedMax = Math.max(policy.max ?? barExtent.max, ...markerYs);
+      hardDomain = [resolvedMin, resolvedMax];
+    } else if (chartType === "histogram") {
+      includeZero = true;
+      hardDomain = policy.min != null && policy.max != null ? [policy.min, policy.max] : null;
+    } else if (chartType === "waterfall") {
+      includeZero = policy.min == null;
+      const markerYs = ann.yAxis.map((m) => m.y).filter(Number.isFinite);
+      const wfExtent = computeWaterfallYExtent(dataInScope);
+      const resolvedMin = policy.min ?? Math.min(wfExtent.min, ...markerYs);
+      const resolvedMax = Math.max(policy.max ?? wfExtent.max, ...markerYs);
       hardDomain = [resolvedMin, resolvedMax];
     } else if (chartType === "area") {
       includeZero = true;
@@ -26452,7 +26886,7 @@ ${words.slice(bestI).join(" ")}`;
         return { ...base, markerShape: "point", markerSymbol: "circle" };
       });
     }
-    const markerShape = chartType === "bar" || chartType === "stacked" ? "rect" : "line";
+    const markerShape = chartType === "bar" || chartType === "stacked" || chartType === "histogram" ? "rect" : "line";
     const withSymbols = markerShape === "line" && spec.points === true;
     const baseItems = seriesNames.length > 1 || hasDashOverrides ? seriesNames.map((name, i) => ({
       series: name,
@@ -26794,6 +27228,75 @@ ${words.slice(bestI).join(" ")}`;
     };
   }
 
+  // src/engine/histogram-label.ts
+  var MONTHS = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+  function formatNumericEdge(v, decimals) {
+    const n = +v;
+    if (!Number.isFinite(n)) return String(v);
+    return n.toLocaleString(
+      void 0,
+      decimals != null ? { minimumFractionDigits: decimals, maximumFractionDigits: decimals } : { maximumFractionDigits: 2 }
+    );
+  }
+  function formatSinglePeriod(startMs, interval) {
+    const d = new Date(startMs);
+    const y = d.getUTCFullYear();
+    const m = d.getUTCMonth();
+    const day = d.getUTCDate();
+    switch (interval) {
+      case "year":
+        return String(y);
+      case "quarter":
+        return `Q${Math.floor(m / 3) + 1} ${y}`;
+      case "month":
+        return `${MONTHS[m]} ${y}`;
+      case "week":
+        return `Week of ${MONTHS[m]} ${day}, ${y}`;
+      case "day":
+        return `${MONTHS[m]} ${day}, ${y}`;
+    }
+  }
+  function formatBinLabel(x03, x13, opts) {
+    if (opts.xType === "temporal") {
+      if (opts.interval) return formatSinglePeriod(x03, opts.interval);
+      const start = new Date(x03);
+      const end = new Date(x13 - 1);
+      const sY2 = start.getUTCFullYear(), sM2 = start.getUTCMonth();
+      const eY2 = end.getUTCFullYear(), eM2 = end.getUTCMonth();
+      if (sY2 === eY2 && sM2 === eM2) return `${MONTHS[sM2]} ${sY2}`;
+      if (sY2 === eY2) return `${MONTHS[sM2]} \u2013 ${MONTHS[eM2]} ${sY2}`;
+      return `${MONTHS[sM2]} ${sY2} \u2013 ${MONTHS[eM2]} ${eY2}`;
+    }
+    const position = opts.unitPosition ?? "suffix";
+    const unit = opts.unit ?? "";
+    let lo3 = formatNumericEdge(x03, opts.decimals);
+    let hi3 = formatNumericEdge(x13, opts.decimals);
+    if (unit) {
+      if (position === "prefix") {
+        lo3 = `${unit}${lo3}`;
+        hi3 = `${unit}${hi3}`;
+      } else if (unit.startsWith(" ")) hi3 = `${hi3}${unit}`;
+      else {
+        lo3 = `${lo3}${unit}`;
+        hi3 = `${hi3}${unit}`;
+      }
+    }
+    return `${lo3} \u2013 ${hi3}`;
+  }
+
   // src/engine/crosshair.ts
   var activeTooltip = null;
   function getSharedTooltip(doc) {
@@ -26955,12 +27458,14 @@ ${words.slice(bestI).join(" ")}`;
     hit.addEventListener("pointerleave", hide);
     hit.addEventListener("pointerdown", update);
   }
-  function widenBandsToMidpoints(bands, lo3, hi3) {
+  function widenBandsToMidpoints(bands, lo3, hi3, boundaryAfter) {
     if (!bands.length) return [];
     const centers = bands.map((b) => (b.min + b.max) / 2);
     return centers.map((c, i) => {
-      const prev = i > 0 ? centers[i - 1] : null;
-      const next = i < centers.length - 1 ? centers[i + 1] : null;
+      const hasPrev = i > 0 && !boundaryAfter?.[i - 1];
+      const hasNext = i < centers.length - 1 && !boundaryAfter?.[i];
+      const prev = hasPrev ? centers[i - 1] : null;
+      const next = hasNext ? centers[i + 1] : null;
       const left = prev != null ? (prev + c) / 2 : next != null ? c - (next - c) / 2 : bands[i].min;
       const right = next != null ? (c + next) / 2 : prev != null ? c + (c - prev) / 2 : bands[i].max;
       return { min: Math.max(lo3, left), max: Math.min(hi3, right) };
@@ -27092,17 +27597,26 @@ ${words.slice(bestI).join(" ")}`;
       if (groups.length) {
         const parsed = [];
         for (const g of groups) {
-          if (!g.querySelector("rect")) continue;
           const transform = g.getAttribute("transform") ?? "";
           const m = /translate\(\s*-?[\d.]+\s*[ ,]\s*([\d.+-]+)/.exec(transform);
           const ty3 = m ? parseFloat(m[1]) : 0;
-          parsed.push({ y: ty3, g });
+          parsed.push({ y: ty3, g, hasRect: !!g.querySelector("rect") });
         }
         parsed.sort((a, b) => a.y - b.y);
-        return parsed.map((p, i) => {
-          const cat = categories[i] ?? String(i);
+        const bands2 = [];
+        const boundaryAfter = [];
+        let sawEmptySinceLastReal = false;
+        let ci3 = 0;
+        for (const p of parsed) {
+          if (!p.hasRect) {
+            if (bands2.length) sawEmptySinceLastReal = true;
+            continue;
+          }
+          if (sawEmptySinceLastReal && bands2.length) boundaryAfter[bands2.length - 1] = true;
+          sawEmptySinceLastReal = false;
+          const cat = categories[ci3] ?? String(ci3);
+          ci3++;
           const rects = Array.from(p.g.querySelectorAll("rect"));
-          if (!rects.length) return { category: cat, yMin: p.y, yMax: p.y + 1 };
           let yMin = Infinity;
           let yMax = -Infinity;
           for (const rect of rects) {
@@ -27111,12 +27625,14 @@ ${words.slice(bestI).join(" ")}`;
             if (ry3 < yMin) yMin = ry3;
             if (ry3 + rh3 > yMax) yMax = ry3 + rh3;
           }
-          return { category: cat, yMin, yMax };
-        });
+          bands2.push({ category: cat, yMin, yMax });
+          boundaryAfter.push(false);
+        }
+        return { bands: bands2, boundaryAfter };
       }
     }
     const allRects = Array.from(svgEl3.querySelectorAll('g[aria-label="bar"] rect'));
-    if (!allRects.length) return [];
+    if (!allRects.length) return { bands: [], boundaryAfter: [] };
     const yToBand = /* @__PURE__ */ new Map();
     for (const rect of allRects) {
       const ry3 = parseFloat(rect.getAttribute("y") ?? "0");
@@ -27131,11 +27647,12 @@ ${words.slice(bestI).join(" ")}`;
       }
     }
     const sortedKeys = Array.from(yToBand.keys()).sort((a, b) => a - b);
-    return sortedKeys.map((key, i) => {
+    const bands = sortedKeys.map((key, i) => {
       const band = yToBand.get(key);
       const cat = categories[i] ?? String(i);
       return { category: cat, yMin: band.yMin, yMax: band.yMax };
     });
+    return { bands, boundaryAfter: bands.map(() => false) };
   }
   function attachBandCrosshair(svgEl3, opts) {
     if (!svgEl3 || !opts.rows?.length) return;
@@ -27203,11 +27720,12 @@ ${words.slice(bestI).join(" ")}`;
       if (horizontal) {
         const scaleY = H11 / rect.height;
         const svgY = (evt.clientY - rect.top) * scaleY;
-        const raw = readCategoryBandsH(svgEl3, opts);
+        const { bands: raw, boundaryAfter } = readCategoryBandsH(svgEl3, opts);
         const wide = widenBandsToMidpoints(
           raw.map((b) => ({ min: b.yMin, max: b.yMax })),
           mt3,
-          H11 - mb3
+          H11 - mb3,
+          boundaryAfter
         );
         const bands = raw.map((b, i) => ({
           category: b.category,
@@ -27288,6 +27806,234 @@ ${words.slice(bestI).join(" ")}`;
     hit.addEventListener("pointerleave", hide);
     hit.addEventListener("pointerdown", update);
   }
+  function buildHistogramBins(rows) {
+    const byKey = /* @__PURE__ */ new Map();
+    for (const r of rows) {
+      if (r._x0 == null || r._x1 == null) continue;
+      const key = `${r._x0}:${r._x1}`;
+      let bin = byKey.get(key);
+      if (!bin) {
+        bin = { x0: r._x0, x1: r._x1, bySeries: /* @__PURE__ */ new Map() };
+        byKey.set(key, bin);
+      }
+      if (r._y != null && Number.isFinite(r._y)) bin.bySeries.set(r.series, r._y);
+    }
+    return [...byKey.values()].sort((a, b) => a.x0 - b.x0);
+  }
+  function resolveHistogramBinIndex(spans, svgX) {
+    if (!spans.length) return null;
+    for (let i = 0; i < spans.length; i++) {
+      if (svgX >= spans[i].min && svgX <= spans[i].max) return i;
+    }
+    let best = 0;
+    let bestDist = Infinity;
+    for (let i = 0; i < spans.length; i++) {
+      const mid = (spans[i].min + spans[i].max) / 2;
+      const d = Math.abs(svgX - mid);
+      if (d < bestDist) {
+        bestDist = d;
+        best = i;
+      }
+    }
+    return best;
+  }
+  function buildHistogramTooltipHtml(bin, opts) {
+    const { colors, seriesLabels, seriesOrder, renderedFills } = opts;
+    const yFormat = opts.yFormat ?? ((v) => String(v));
+    const header = formatBinLabel(bin.x0, bin.x1, opts.label ?? { xType: "numeric", interval: null });
+    let html = `<div class="tbl-tooltip-head">${escapeHtml(header)}</div>`;
+    const ordered = seriesOrder && seriesOrder.length ? seriesOrder.filter((s) => bin.bySeries.has(s)) : [...bin.bySeries.keys()];
+    for (const series of ordered) {
+      const v = bin.bySeries.get(series);
+      if (v == null || Number.isNaN(v)) continue;
+      const dot = renderedFills?.get(series) || colors?.get(series) || "currentColor";
+      const display = seriesLabels && seriesLabels[series] || series;
+      html += `<div class="tbl-tooltip-row"><span class="tbl-tooltip-swatch is-square" style="background: ${dot}"></span><span><span class="tbl-tooltip-label">${escapeHtml(display)}:</span> <span class="tbl-tooltip-value">${escapeHtml(yFormat(v))}</span></span></div>`;
+    }
+    return html;
+  }
+  function buildHistogramGeom(svgEl3, rows) {
+    const bins = buildHistogramBins(rows);
+    if (!bins.length) return null;
+    const vb3 = svgEl3.viewBox?.baseVal;
+    const W10 = vb3?.width || +(svgEl3.getAttribute("width") ?? "") || svgEl3.clientWidth;
+    const H11 = vb3?.height || +(svgEl3.getAttribute("height") ?? "") || svgEl3.clientHeight;
+    const ml3 = +(svgEl3.dataset.marginLeft ?? "") || 0;
+    const mr3 = +(svgEl3.dataset.marginRight ?? "") || 8;
+    const mt3 = +(svgEl3.dataset.marginTop ?? "") || 18;
+    const mb3 = +(svgEl3.dataset.marginBottom ?? "") || 28;
+    const rects = Array.from(svgEl3.querySelectorAll('g[aria-label="rect"] rect'));
+    let pxMinAll = Infinity;
+    let pxMaxAll = -Infinity;
+    for (const r of rects) {
+      const rx3 = parseFloat(r.getAttribute("x") ?? "0");
+      const rw3 = parseFloat(r.getAttribute("width") ?? "0");
+      if (rx3 < pxMinAll) pxMinAll = rx3;
+      if (rx3 + rw3 > pxMaxAll) pxMaxAll = rx3 + rw3;
+    }
+    const dataXmin = bins[0].x0;
+    const dataXmax = bins[bins.length - 1].x1;
+    const span = dataXmax - dataXmin;
+    const haveGeom = Number.isFinite(pxMinAll) && Number.isFinite(pxMaxAll) && pxMaxAll > pxMinAll && span > 0;
+    const xToPx = haveGeom ? (x) => pxMinAll + (x - dataXmin) / span * (pxMaxAll - pxMinAll) : (x) => ml3 + (x - dataXmin) / (span || 1) * (W10 - ml3 - mr3);
+    const spans = bins.map((b) => ({ min: xToPx(b.x0), max: xToPx(b.x1) }));
+    const renderedFills = (() => {
+      const m = /* @__PURE__ */ new Map();
+      for (const r of rects) {
+        const s = r.getAttribute("data-series") ?? "";
+        if (m.has(s)) continue;
+        const f = renderedRectFill(r, svgEl3);
+        if (f) m.set(s, f);
+      }
+      return m;
+    })();
+    return { bins, W: W10, H: H11, ml: ml3, mr: mr3, mt: mt3, mb: mb3, xToPx, spans, renderedFills };
+  }
+  function attachHistogramHover(svgEl3, opts) {
+    if (!svgEl3 || !opts.rows?.length) return;
+    const geom = buildHistogramGeom(svgEl3, opts.rows);
+    if (!geom) return;
+    const { bins, W: W10, H: H11, mt: mt3, mb: mb3, spans, renderedFills } = geom;
+    const emitOnly = opts.emitOnly ?? false;
+    const yFormat = opts.yFormat ?? ((v) => `${(+v).toLocaleString(void 0, { maximumFractionDigits: 2 })}`);
+    const NS2 = "http://www.w3.org/2000/svg";
+    svgEl3.querySelectorAll(".tbl-hist-hover-hit, .tbl-hist-hover-hl").forEach((el3) => el3.remove());
+    const hl3 = emitOnly ? null : svgEl3.ownerDocument.createElementNS(NS2, "rect");
+    if (hl3) {
+      hl3.classList.add("tbl-hist-hover-hl");
+      hl3.setAttribute("fill", TBL.color.annotationDim);
+      hl3.setAttribute("opacity", "0");
+      hl3.style.pointerEvents = "none";
+      svgEl3.appendChild(hl3);
+    }
+    const hit = svgEl3.ownerDocument.createElementNS(NS2, "rect");
+    hit.classList.add("tbl-hist-hover-hit");
+    hit.setAttribute("x", "0");
+    hit.setAttribute("y", "0");
+    hit.setAttribute("width", String(W10));
+    hit.setAttribute("height", String(H11));
+    hit.setAttribute("fill", "transparent");
+    hit.style.cursor = "default";
+    svgEl3.appendChild(hit);
+    const tip = emitOnly ? null : getSharedTooltip(svgEl3.ownerDocument);
+    function showHighlight(min, max) {
+      if (!hl3) return;
+      hl3.setAttribute("x", String(min));
+      hl3.setAttribute("y", String(mt3));
+      hl3.setAttribute("width", String(Math.max(0, max - min)));
+      hl3.setAttribute("height", String(H11 - mt3 - mb3));
+      hl3.setAttribute("opacity", "0.12");
+    }
+    function update(evt) {
+      const rect = svgEl3.getBoundingClientRect();
+      if (!rect.width) return;
+      const scaleX = W10 / rect.width;
+      const svgX = (evt.clientX - rect.left) * scaleX;
+      const idx = resolveHistogramBinIndex(spans, svgX);
+      if (idx == null) {
+        hide();
+        return;
+      }
+      const bin = bins[idx];
+      opts.onResolve?.((bin.x0 + bin.x1) / 2);
+      if (emitOnly) return;
+      showHighlight(spans[idx].min, spans[idx].max);
+      tip.innerHTML = buildHistogramTooltipHtml(bin, {
+        colors: opts.colors,
+        seriesLabels: opts.seriesLabels,
+        seriesOrder: opts.seriesOrder,
+        yFormat,
+        label: opts.label,
+        renderedFills
+      });
+      const offset = 14;
+      const win = svgEl3.ownerDocument.defaultView;
+      const vw3 = win.innerWidth;
+      const vh3 = win.innerHeight;
+      tip.style.opacity = "1";
+      let left = evt.clientX + offset;
+      let top = evt.clientY + offset;
+      if (left + tip.offsetWidth + 4 > vw3) left = evt.clientX - tip.offsetWidth - offset;
+      if (top + tip.offsetHeight + 4 > vh3) top = evt.clientY - tip.offsetHeight - offset;
+      if (left < 4) left = 4;
+      if (top < 4) top = 4;
+      tip.style.left = `${left}px`;
+      tip.style.top = `${top}px`;
+    }
+    function hide() {
+      if (hl3) hl3.setAttribute("opacity", "0");
+      if (tip) tip.style.opacity = "0";
+      opts.onResolve?.(null);
+    }
+    hit.style.pointerEvents = "all";
+    hit.addEventListener("pointermove", update);
+    hit.addEventListener("pointerleave", hide);
+    hit.addEventListener("pointerdown", update);
+  }
+  function attachSecondaryHistogramCursor(svgEl3, opts) {
+    const noop = () => {
+    };
+    if (!svgEl3 || !opts.rows?.length) return noop;
+    const geom = buildHistogramGeom(svgEl3, opts.rows);
+    if (!geom) return noop;
+    const { bins, H: H11, mt: mt3, mb: mb3, xToPx, spans, renderedFills } = geom;
+    const plotH = H11 - mt3 - mb3;
+    const yFormat = opts.yFormat ?? ((v) => `${(+v).toLocaleString(void 0, { maximumFractionDigits: 2 })}`);
+    const rectsByBin = /* @__PURE__ */ new Map();
+    for (const r of Array.from(svgEl3.querySelectorAll('g[aria-label="rect"] rect'))) {
+      const rx3 = parseFloat(r.getAttribute("x") ?? "0");
+      const rw3 = parseFloat(r.getAttribute("width") ?? "0");
+      const cx3 = rx3 + rw3 / 2;
+      const idx = resolveHistogramBinIndex(spans, cx3);
+      if (idx == null) continue;
+      if (!rectsByBin.has(idx)) rectsByBin.set(idx, []);
+      rectsByBin.get(idx).push({
+        series: r.getAttribute("data-series") ?? "",
+        cx: cx3,
+        y: parseFloat(r.getAttribute("y") ?? "0"),
+        fill: renderedRectFill(r, svgEl3)
+      });
+    }
+    const order = opts.seriesOrder && opts.seriesOrder.length ? opts.seriesOrder : null;
+    const colorFor = (s) => renderedFills.get(s) || opts.colors?.get(s) || COORD_LABEL_DARK;
+    const doc = svgEl3.ownerDocument;
+    const g = makeCoordGroup(svgEl3);
+    const axisRows = makeAxisRows(svgEl3, mt3 + plotH);
+    return (key, active = false) => {
+      while (g.firstChild) g.removeChild(g.firstChild);
+      if (key == null) {
+        g.setAttribute("opacity", "0");
+        return;
+      }
+      const idx = resolveHistogramBinIndex(spans, xToPx(key));
+      if (idx == null) {
+        g.setAttribute("opacity", "0");
+        return;
+      }
+      const bin = bins[idx];
+      addCoordRegion(g, doc, spans[idx].min, spans[idx].max - spans[idx].min, mt3, plotH);
+      const weight = active ? 700 : 600;
+      const rects = rectsByBin.get(idx) ?? [];
+      const orderedRects = order ? order.map((s) => rects.find((r) => r.series === s)).filter(Boolean) : rects;
+      const valid = orderedRects.map((rect) => ({ rect, v: bin.bySeries.get(rect.series) })).filter((x) => x.v != null && Number.isFinite(x.v));
+      const ys3 = staggerBarLabels(
+        valid.map((x) => ({ cx: x.rect.cx, w: coordPillWidth(yFormat(x.v)), value: x.v, y: x.rect.y - 9 })),
+        COORD_PILL_H
+      );
+      valid.forEach(
+        (x, i) => addCoordPill(g, doc, x.rect.cx, ys3[i], "middle", yFormat(x.v), x.rect.fill ?? colorFor(x.rect.series), weight)
+      );
+      if (active) {
+        const rowYs = axisRows.get();
+        if (rowYs.length) {
+          const cx3 = (spans[idx].min + spans[idx].max) / 2;
+          const text = formatBinLabel(bin.x0, bin.x1, opts.label ?? { xType: "numeric", interval: null });
+          addCoordAxisLabel(g, doc, cx3, [{ text, cy: rowYs[0] }]);
+        }
+      }
+      g.setAttribute("opacity", "1");
+    };
+  }
   function readLinearYScale(svgEl3) {
     const scaleFn = svgEl3.scale;
     if (typeof scaleFn !== "function") return null;
@@ -27304,6 +28050,7 @@ ${words.slice(bestI).join(" ")}`;
   }
   var COORD_NS = "http://www.w3.org/2000/svg";
   var COORD_LABEL_DARK = "#1A1A2E";
+  var TOTAL_PILL_COLOR = "#000000";
   function addCoordDot(g, doc, cx3, cy3, color, symbol) {
     if (symbol && symbol !== "circle") {
       const p = doc.createElementNS(COORD_NS, "path");
@@ -27553,8 +28300,11 @@ ${words.slice(bestI).join(" ")}`;
         for (const j11 of placed) {
           const horiz = Math.abs(labels[i].cx - labels[j11].cx) < (labels[i].w + labels[j11].w) / 2;
           if (horiz && Math.abs(y - out[j11]) < pad) {
-            y = out[j11] + pad;
-            moved = true;
+            const ny3 = out[j11] + pad;
+            if (ny3 - y > 1e-6) {
+              y = ny3;
+              moved = true;
+            }
           }
         }
       }
@@ -27715,6 +28465,31 @@ ${words.slice(bestI).join(" ")}`;
     Array.from(byKey.keys()).sort((a, b) => a - b).forEach((k, i) => out.set(categories[i] ?? String(i), byKey.get(k)));
     return out;
   }
+  function readNetDotMarkers(svgEl3) {
+    const circles = svgEl3.querySelectorAll(
+      `g.tbl-net-marker circle, circle[data-series="${TOTAL_SERIES_KEY}"]`
+    );
+    const seen = /* @__PURE__ */ new Set();
+    const out = [];
+    for (const c of circles) {
+      if (seen.has(c)) continue;
+      seen.add(c);
+      let cx3 = parseFloat(c.getAttribute("cx") ?? "0");
+      let cy3 = parseFloat(c.getAttribute("cy") ?? "0");
+      const r = parseFloat(c.getAttribute("r") ?? "8");
+      let el3 = c.parentElement;
+      while (el3 && el3 !== svgEl3) {
+        const m = /translate\(\s*(-?[\d.]+)(?:\s*[ ,]\s*(-?[\d.]+))?/.exec(el3.getAttribute("transform") ?? "");
+        if (m) {
+          cx3 += parseFloat(m[1]);
+          cy3 += parseFloat(m[2] ?? "0");
+        }
+        el3 = el3.parentElement;
+      }
+      out.push({ cx: cx3, cy: cy3, r });
+    }
+    return out;
+  }
   function attachSecondaryBandCursor(svgEl3, opts) {
     const noop = () => {
     };
@@ -27763,7 +28538,7 @@ ${words.slice(bestI).join(" ")}`;
         return;
       }
       if (horizontal) {
-        const rawH = readCategoryBandsH(svgEl3, {
+        const { bands: rawH } = readCategoryBandsH(svgEl3, {
           rows: opts.rows,
           isFaceted: opts.isFaceted,
           categories: opts.categories
@@ -27825,7 +28600,7 @@ ${words.slice(bestI).join(" ")}`;
       });
       const idx = raw.findIndex((b) => b.category === category);
       const vals = valByCat.get(category);
-      if (idx < 0 || !vals) {
+      if (idx < 0 || !vals && !opts.waterfall) {
         g.setAttribute("opacity", "0");
         return;
       }
@@ -27839,10 +28614,18 @@ ${words.slice(bestI).join(" ")}`;
           addCoordCategoryHighlight(g, doc, svgEl3, mt3 + plotH, rawCenter, category, detectBandLabelMode(svgEl3, mt3 + plotH), ys3);
         }
       }
-      const valid = (rectsByCat.get(category) ?? []).map((rect) => ({ rect, v: vals.get(rect.series) })).filter((x) => x.v != null && !Number.isNaN(x.v));
+      const valid = (rectsByCat.get(category) ?? []).map((rect) => ({ rect, v: vals?.get(rect.series) })).filter((x) => x.v != null && !Number.isNaN(x.v));
       const colorFor = (s) => opts.colors?.get(s) || COORD_LABEL_DARK;
       const pillColor = (r) => r.fill ?? colorFor(r.series);
-      if (opts.isStacked) {
+      if (opts.waterfall) {
+        if (opts.waterfall.deltaCats.has(category)) {
+          for (const x of valid) {
+            const cy3 = x.rect.y + x.rect.h / 2;
+            const text = `${x.v >= 0 ? "+" : ""}${yFormat(x.v)}`;
+            addCoordPill(g, doc, x.rect.cx, cy3, "middle", text, pillColor(x.rect), weight);
+          }
+        }
+      } else if (opts.isStacked) {
         const cys = spreadLabelYs(valid.map((x) => x.rect.y + x.rect.h / 2), COORD_PILL_H, mt3, mt3 + plotH);
         valid.forEach((x, i) => addCoordPill(g, doc, x.rect.cx, cys[i], "middle", yFormat(x.v), pillColor(x.rect), weight));
       } else {
@@ -28194,6 +28977,7 @@ ${words.slice(bestI).join(" ")}`;
         isFaceted: opts.isFaceted,
         categories: opts.categories
       }, opts.horizontal);
+      const segPillYByCat = /* @__PURE__ */ new Map();
       for (const [category, rects] of rectsByCat) {
         if (category === suppressedCat) continue;
         const vals = valByCat.get(category);
@@ -28212,6 +28996,7 @@ ${words.slice(bestI).join(" ")}`;
           }
         } else if (opts.isStacked) {
           const cys = spreadLabelYs(valid.map((x) => x.rect.y + x.rect.h / 2), COORD_PILL_H, mt3, mt3 + plotH);
+          segPillYByCat.set(category, cys);
           valid.forEach((x, i) => addCoordPill(g, doc, x.rect.cx, cys[i], "middle", yFormat(x.v), pillColor(x.rect), weight));
         } else {
           const ys3 = staggerBarLabels(
@@ -28224,6 +29009,44 @@ ${words.slice(bestI).join(" ")}`;
             COORD_PILL_H
           );
           valid.forEach((x, i) => addCoordPill(g, doc, x.rect.cx, ys3[i], "middle", yFormat(x.v), pillColor(x.rect), weight));
+        }
+      }
+      if (opts.showTotalDot && active.has(TOTAL_SERIES_KEY)) {
+        const dots = readNetDotMarkers(svgEl3);
+        if (dots.length) {
+          const loY = mt3 + COORD_PILL_H / 2;
+          const hiY = mt3 + plotH - COORD_PILL_H / 2;
+          const midX = ml3 + (W10 - ml3 - mr3) / 2;
+          for (const [category, rects] of rectsByCat) {
+            if (category === suppressedCat || !rects.length) continue;
+            const vals = valByCat.get(category);
+            if (!vals) continue;
+            let net = 0;
+            let any = false;
+            for (const v of vals.values()) {
+              if (v != null && Number.isFinite(v)) {
+                net += v;
+                any = true;
+              }
+            }
+            if (!any) continue;
+            if (opts.horizontal) {
+              const yc3 = rects[0].y + rects[0].h / 2;
+              const dot = dots.reduce((a, b) => Math.abs(b.cy - yc3) < Math.abs(a.cy - yc3) ? b : a);
+              const toRight = dot.cx <= midX;
+              const ax3 = toRight ? dot.cx + dot.r + 4 : dot.cx - dot.r - 4;
+              addCoordPill(g, doc, ax3, dot.cy, toRight ? "start" : "end", yFormat(net), TOTAL_PILL_COLOR, weight);
+            } else {
+              const cx3 = rects[0].cx;
+              const dot = dots.reduce((a, b) => Math.abs(b.cx - cx3) < Math.abs(a.cx - cx3) ? b : a);
+              const below = dot.cy + dot.r + COORD_PILL_H / 2 + 2;
+              const above = dot.cy - dot.r - COORD_PILL_H / 2 - 2;
+              const segYs = segPillYByCat.get(category) ?? [];
+              const clear = (y) => segYs.every((sy3) => Math.abs(sy3 - y) >= COORD_PILL_H);
+              const py3 = below <= hiY && clear(below) ? below : above >= loY && clear(above) ? above : Math.min(Math.max(below <= hiY ? below : above, loY), hiY);
+              addCoordPill(g, doc, dot.cx, py3, "middle", yFormat(net), TOTAL_PILL_COLOR, weight);
+            }
+          }
         }
       }
       g.setAttribute("opacity", "1");
@@ -28531,9 +29354,6 @@ ${words.slice(bestI).join(" ")}`;
   function drawLines2(root, lines, x, firstBaseline, lineHeight, opt) {
     return drawLines(document, root, lines, x, firstBaseline, lineHeight, opt);
   }
-  var PANE_CHART_H = 240;
-  var TALL_PANE_TYPES = /* @__PURE__ */ new Set(["dotplot", "bar", "stacked"]);
-  var TALL_PANE_CHART_H = 320;
   var PANE_TITLE_H = 18;
   var COL_GAP = 20;
   var ROW_GAP = 18;
@@ -28617,6 +29437,7 @@ ${words.slice(bestI).join(" ")}`;
   }
   function buildExportSvg(spec, rows, opts = {}) {
     const isFigure = spec.small_multiples != null;
+    const isSingleHorizontalBar = !isFigure && (spec.chartType === "bar" || spec.chartType === "stacked") && spec.orientation === "horizontal";
     const meta = isFigure ? renderFigure(spec, rows, { width: INNER_W }) : renderChart(spec, rows, { width: INNER_W });
     const legendItems = meta.legendItems ?? [];
     const shapeLegendItems = meta.shapeLegendItems ?? [];
@@ -28659,7 +29480,7 @@ ${words.slice(bestI).join(" ")}`;
     if (xAxisTitle) bottomH += 14;
     let contentHeight;
     if (!isFigure) {
-      contentHeight = Math.max(160, H10 - chartTop - bottomH);
+      contentHeight = isSingleHorizontalBar ? horizontalBarChartHeight(spec, rows) : Math.max(160, H10 - chartTop - bottomH);
       const { svg: chartSvg } = renderChart(spec, rows, {
         width: INNER_W,
         height: contentHeight,
@@ -28674,13 +29495,13 @@ ${words.slice(bestI).join(" ")}`;
       const figMeta = meta;
       const cols = figMeta.columns;
       const gridRows = figMeta.rows;
-      const paneChartH = TALL_PANE_TYPES.has(spec.chartType) ? TALL_PANE_CHART_H : PANE_CHART_H;
-      const isHorizontalBarFig = spec.chartType === "bar" && spec.orientation === "horizontal";
+      const paneChartH = figurePaneHeight(spec);
+      const isHorizontalBarFig = (spec.chartType === "bar" || spec.chartType === "stacked") && spec.orientation === "horizontal";
       const isShared = (spec.small_multiples?.mode ?? "shared") === "shared";
       const shared = isShared ? sharedColumnWidths(INNER_W, cols, COL_GAP) : null;
       const equalPaneW = Math.floor((INNER_W - COL_GAP * (cols - 1)) / cols);
       const useGridW = isShared || isHorizontalBarFig;
-      const fig = useGridW ? renderFigure(spec, rows, { gridWidth: INNER_W, gridGap: COL_GAP, height: isHorizontalBarFig ? void 0 : paneChartH, columns: cols, ...accentColor ? { accentColor } : {} }) : renderFigure(spec, rows, { width: equalPaneW, height: isHorizontalBarFig ? void 0 : paneChartH, columns: cols, ...accentColor ? { accentColor } : {} });
+      const fig = useGridW ? renderFigure(spec, rows, { gridWidth: INNER_W, gridGap: COL_GAP, height: paneChartH, columns: cols, ...accentColor ? { accentColor } : {} }) : renderFigure(spec, rows, { width: equalPaneW, height: paneChartH, columns: cols, ...accentColor ? { accentColor } : {} });
       const figColWidths = !isShared && isHorizontalBarFig ? fig.columnWidths : void 0;
       const colWidth = (col) => shared?.colWidths[col] ?? figColWidths?.[col] ?? equalPaneW;
       const colX = [];
@@ -28689,14 +29510,31 @@ ${words.slice(bestI).join(" ")}`;
         colX.push(acc);
         acc += colWidth(c) + COL_GAP;
       }
-      const effPaneH = isHorizontalBarFig && fig.panes[0]?.svg ? Number(fig.panes[0].svg.getAttribute("height")) || paneChartH : paneChartH;
-      const gridTop = chartTop;
+      const paneH = (i) => Number(fig.panes[i]?.svg?.getAttribute("height")) || paneChartH || 240;
+      const rowHeights = [];
+      for (let r = 0; r < gridRows; r++) {
+        let h = 0;
+        for (let c = 0; c < cols; c++) {
+          const i = r * cols + c;
+          if (i < fig.panes.length) h = Math.max(h, paneH(i));
+        }
+        rowHeights.push(h);
+      }
+      const rowY = [];
+      {
+        let acc2 = chartTop;
+        for (let r = 0; r < gridRows; r++) {
+          rowY.push(acc2);
+          acc2 += PANE_TITLE_H + rowHeights[r] + ROW_GAP;
+        }
+      }
       fig.panes.forEach((pane, i) => {
         const col = i % cols;
         const row = Math.floor(i / cols);
         const x = colX[col];
         const w = colWidth(col);
-        const y = gridTop + row * (PANE_TITLE_H + effPaneH + ROW_GAP);
+        const y = rowY[row];
+        const h = paneH(i);
         const titleDx = isHorizontalBarFig ? Number(pane.svg?.dataset.marginLeft) || 0 : 0;
         root.appendChild(
           textEl2(x + titleDx, y + 12, pane.title, { size: 11, weight: W_SEMI, fill: HEADING })
@@ -28706,13 +29544,13 @@ ${words.slice(bestI).join(" ")}`;
           ps3.setAttribute("x", String(x));
           ps3.setAttribute("y", String(y + PANE_TITLE_H));
           ps3.setAttribute("width", String(w));
-          ps3.setAttribute("height", String(effPaneH));
+          ps3.setAttribute("height", String(h));
           root.appendChild(ps3);
         }
       });
-      contentHeight = gridRows * (PANE_TITLE_H + effPaneH) + (gridRows - 1) * ROW_GAP;
+      contentHeight = rowHeights.reduce((s, h) => s + PANE_TITLE_H + h, 0) + (gridRows - 1) * ROW_GAP;
     }
-    const H_eff = isFigure ? Math.round(chartTop + contentHeight + bottomH) : H10;
+    const H_eff = isFigure || isSingleHorizontalBar ? Math.round(chartTop + contentHeight + bottomH) : H10;
     if (H_eff !== H10) {
       root.setAttribute("height", String(H_eff));
       bgRect.setAttribute("height", String(H_eff));
@@ -28774,52 +29612,27 @@ ${words.slice(bestI).join(" ")}`;
   }
 
   // src/engine/render-live.ts
+  var CALENDAR_INTERVALS = ["day", "week", "month", "quarter", "year"];
+  function histogramBinLabelOpts(spec) {
+    const xType = spec.xAxisType === "temporal" ? "temporal" : "numeric";
+    const bw3 = spec.histogram?.binWidth;
+    const interval = xType === "temporal" && typeof bw3 === "string" && CALENDAR_INTERVALS.includes(bw3) ? bw3 : null;
+    const cfg = spec.histogram?.bin_label;
+    return {
+      xType,
+      interval,
+      ...cfg?.unit != null ? { unit: cfg.unit } : {},
+      ...cfg?.unit_position != null ? { unitPosition: cfg.unit_position } : {},
+      ...cfg?.decimals != null ? { decimals: cfg.decimals } : {}
+    };
+  }
   var MIN_CHART_WIDTH = 390;
   var FIXED_CHART_HEIGHT = 400;
   function computeChartHeight(spec, rows) {
     if (spec.orientation !== "horizontal" || spec.chartType !== "bar" && spec.chartType !== "stacked") {
-      return FIXED_CHART_HEIGHT;
+      return spec.chartType === "waterfall" ? 460 : FIXED_CHART_HEIGHT;
     }
-    const cols = resolveColumns(spec, rows);
-    const catList = [];
-    const catSeen = /* @__PURE__ */ new Set();
-    const series = /* @__PURE__ */ new Set();
-    const sectionOf = /* @__PURE__ */ new Map();
-    for (const r of rows) {
-      const cat = r[cols.x];
-      if (typeof cat === "string" && cat !== "" && !catSeen.has(cat)) {
-        catSeen.add(cat);
-        catList.push(cat);
-      }
-      const s = cols.series ? r[cols.series] : null;
-      if (typeof s === "string" && s !== "") series.add(s);
-      if (cols.section && typeof cat === "string" && cat !== "" && !sectionOf.has(cat)) {
-        const sec = r[cols.section];
-        if (typeof sec === "string") sectionOf.set(cat, sec);
-      }
-    }
-    const nCats = Math.max(1, catList.length);
-    const nSeries = spec.series_order && spec.series_order.length ? spec.series_order.length : Math.max(1, series.size);
-    const grouped = spec.chartType === "bar" && nSeries > 1;
-    let nSections = 0;
-    if (cols.section) {
-      const present = new Set(catList.map((c) => sectionOf.get(c) ?? ""));
-      nSections = spec.section_order && spec.section_order.length ? spec.section_order.filter((s) => present.has(s)).length : present.size;
-    }
-    const nSpacers = Math.max(0, nSections - 1);
-    const gutter = horizontalLeftGutter(catList, { fontSize: FACETED_CAT_LABEL_PX });
-    const maxLabelLines = catList.reduce(
-      (m, c) => Math.max(m, labelLineCount(c, gutter - GUTTER_TEXT_PAD, FACETED_CAT_LABEL_PX)),
-      1
-    );
-    return horizontalBarHeight({
-      nCategories: nCats,
-      nSeries,
-      grouped,
-      nSpacers,
-      maxLabelLines,
-      extraTopPx: nSections > 0 ? SECTION_HEADER_TOP_PX : 0
-    });
+    return horizontalBarChartHeight(spec, rows);
   }
   var LEGEND_COLUMN_WIDTH = 160;
   var LEGEND_GAP = 16;
@@ -29346,6 +30159,14 @@ ${words.slice(bestI).join(" ")}`;
       } else if (spec.xAxisType === "categorical") {
         const isStacked = spec.chartType === "stacked";
         const isFaceted = isBarCategoryFaceted(spec, dataInScope, seriesOrder.length);
+        const waterfallCursor = spec.chartType === "waterfall" ? {
+          deltaCats: new Set(
+            dataInScope.filter((r) => {
+              const k = (r._kind ?? "").trim();
+              return k !== "total" && k !== "skip";
+            }).map((r) => r._xc)
+          )
+        } : void 0;
         const catsSeen = /* @__PURE__ */ new Set();
         const cats = [];
         for (const r of dataInScope) {
@@ -29358,7 +30179,9 @@ ${words.slice(bestI).join(" ")}`;
         const orderedCats = sectionOrderedCategories(spec, dataInScope, cats);
         const bandRows = dataInScope.map((r) => ({ _xc: r._xc, series: r.series, _y: r._y }));
         const horizontalBar = spec.orientation === "horizontal";
-        const bandYFormat = (v) => formatValue(v, units, spec.tooltip_decimals);
+        const wfDecimals = spec.chartType === "waterfall" ? waterfallValueDecimals(dataInScope, spec.valueLabels?.decimals) : void 0;
+        const bandYFormat = (v) => formatValue(v, units, wfDecimals ?? spec.tooltip_decimals);
+        const useTooltip = showTotalDot === true;
         let secondaryDriver = null;
         attachBandCrosshair(svg, {
           rows: bandRows,
@@ -29373,10 +30196,12 @@ ${words.slice(bestI).join(" ")}`;
           categoryLabels: spec.x_labels,
           swatchShape: "rect",
           orientation: horizontalBar ? "horizontal" : "vertical",
-          emitOnly: true,
-          onResolve: (cat) => {
-            pillDriver?.setSuppressedCategory(cat);
-            secondaryDriver?.(cat, true);
+          ...useTooltip ? {} : {
+            emitOnly: true,
+            onResolve: (cat) => {
+              pillDriver?.setSuppressedCategory(cat);
+              secondaryDriver?.(cat, true);
+            }
           }
         });
         pillDriver = attachHighlightPills(svg, {
@@ -29388,22 +30213,35 @@ ${words.slice(bestI).join(" ")}`;
           colors,
           seriesOrder,
           yFormat: bandYFormat,
-          horizontal: horizontalBar
+          horizontal: horizontalBar,
+          showTotalDot
         });
-        secondaryDriver = attachSecondaryBandCursor(svg, {
-          rows: bandRows,
-          isStacked,
-          isFaceted,
-          categories: orderedCats,
+        if (!useTooltip) {
+          secondaryDriver = attachSecondaryBandCursor(svg, {
+            rows: bandRows,
+            isStacked,
+            isFaceted,
+            categories: orderedCats,
+            colors,
+            seriesLabels,
+            seriesOrder,
+            yFormat: bandYFormat,
+            horizontal: horizontalBar,
+            // Horizontal: shade into the left label gutter + bold the hovered row label (no pill).
+            // Vertical: shade stops at the baseline (matching faceted vertical); the x-axis category
+            // name gets its own frosted pill from attachSecondaryBandCursor's addCoordCategoryHighlight.
+            ...horizontalBar ? { regionFromLeftEdge: true, accentLabel: { font: FACETED_CAT_LABEL_PX } } : {},
+            ...waterfallCursor ? { waterfall: waterfallCursor } : {}
+          });
+        }
+      } else if (spec.chartType === "histogram") {
+        attachHistogramHover(svg, {
+          rows: dataInScope.map((r) => ({ _x0: r._x0, _x1: r._x1, series: r.series, _y: r._y })),
           colors,
           seriesLabels,
           seriesOrder,
-          yFormat: bandYFormat,
-          horizontal: horizontalBar,
-          // Horizontal: shade into the left label gutter + bold the hovered row label (no pill).
-          // Vertical: shade stops at the baseline (matching faceted vertical); the x-axis category
-          // name gets its own frosted pill from attachSecondaryBandCursor's addCoordCategoryHighlight.
-          ...horizontalBar ? { regionFromLeftEdge: true, accentLabel: { font: FACETED_CAT_LABEL_PX } } : {}
+          yFormat: (v) => formatValue(v, units, spec.tooltip_decimals),
+          label: histogramBinLabelOpts(spec)
         });
       } else {
         attachCrosshair(svg, {
@@ -29497,7 +30335,6 @@ ${words.slice(bestI).join(" ")}`;
   var PANE_MIN_WIDTH = 240;
   var HBAR_PANE_MIN_WIDTH = 240;
   var HBAR_GUTTER_RESERVE = 200;
-  var PANE_HEIGHT = 240;
   var GRID_GAP = 16;
   function buildInlineSelect(doc, items, initialActiveId, onSelect) {
     const btn = doc.createElement("button");
@@ -29820,6 +30657,8 @@ ${words.slice(bestI).join(" ")}`;
         }
       }
       const cats = sectionOrderedCategories(ctx.spec, ctx.dataInScope, catsRaw);
+      const useTooltip = ctx.showTotalDot === true;
+      const coord = useCoord && !useTooltip;
       attachBandCrosshair(svg, {
         rows: ctx.dataInScope.map((r) => ({ _xc: r._xc, series: r.series, _y: r._y })),
         isStacked,
@@ -29834,7 +30673,7 @@ ${words.slice(bestI).join(" ")}`;
         swatchShape: "rect",
         orientation: horizontal ? "horizontal" : "vertical",
         // Coordinated: hit-test + emit only (no tooltip/highlight); the coordinated renderer draws.
-        ...useCoord ? { emitOnly: true, onResolve: (cat) => ctx.onResolve(cat) } : {}
+        ...coord ? { emitOnly: true, onResolve: (cat) => ctx.onResolve(cat) } : {}
       });
       if (handle) {
         svg.querySelectorAll(".tbl-band-crosshair-hit").forEach((el3) => {
@@ -29855,10 +30694,20 @@ ${words.slice(bestI).join(" ")}`;
           colors: ctx.colors,
           seriesOrder: ctx.seriesOrder,
           yFormat: (v) => formatValue(v, ctx.units, ctx.spec.tooltip_decimals),
-          horizontal
+          horizontal,
+          showTotalDot: ctx.showTotalDot
         })
       );
-      if (useCoord) {
+      if (coord) {
+        const wfCursor = ctx.spec.chartType === "waterfall" ? {
+          deltaCats: new Set(
+            ctx.dataInScope.filter((r) => {
+              const k = (r._kind ?? "").trim();
+              return k !== "total" && k !== "skip";
+            }).map((r) => r._xc)
+          )
+        } : void 0;
+        const wfDecimals = wfCursor ? waterfallValueDecimals(ctx.dataInScope, ctx.spec.valueLabels?.decimals) : void 0;
         return attachSecondaryBandCursor(svg, {
           rows: ctx.dataInScope.map((r) => ({ _xc: r._xc, series: r.series, _y: r._y })),
           isStacked,
@@ -29867,13 +30716,38 @@ ${words.slice(bestI).join(" ")}`;
           colors: ctx.colors,
           seriesLabels: ctx.seriesLabels,
           seriesOrder: ctx.seriesOrder,
-          yFormat: (v) => formatValue(v, ctx.units, ctx.spec.tooltip_decimals),
+          yFormat: (v) => formatValue(v, ctx.units, wfDecimals ?? ctx.spec.tooltip_decimals),
           horizontal,
           ...horizontal ? {
             regionFromLeftEdge: true,
             regionExtendRight: ctx.coordExtendRight ?? 0,
             ...ctx.coordAccentLabel ? { accentLabel: { font: FACETED_CAT_LABEL_PX } } : {}
-          } : {}
+          } : {},
+          ...wfCursor ? { waterfall: wfCursor } : {}
+        });
+      }
+      return void 0;
+    }
+    if (ctx.spec.chartType === "histogram") {
+      const histCoord = ctx.onResolve != null && (ctx.spec.small_multiples?.mode ?? "shared") !== "per-pane";
+      const histRows = ctx.dataInScope.map((r) => ({ _x0: r._x0, _x1: r._x1, series: r.series, _y: r._y }));
+      attachHistogramHover(svg, {
+        rows: histRows,
+        colors: ctx.colors,
+        seriesLabels: ctx.seriesLabels,
+        seriesOrder: ctx.seriesOrder,
+        yFormat: (v) => formatValue(v, ctx.units, ctx.spec.tooltip_decimals),
+        label: histogramBinLabelOpts(ctx.spec),
+        ...histCoord ? { emitOnly: true, onResolve: (x) => ctx.onResolve(x) } : {}
+      });
+      if (histCoord) {
+        return attachSecondaryHistogramCursor(svg, {
+          rows: histRows,
+          colors: ctx.colors,
+          seriesLabels: ctx.seriesLabels,
+          seriesOrder: ctx.seriesOrder,
+          yFormat: (v) => formatValue(v, ctx.units, ctx.spec.tooltip_decimals),
+          label: histogramBinLabelOpts(ctx.spec)
         });
       }
       return void 0;
@@ -29977,12 +30851,11 @@ ${words.slice(bestI).join(" ")}`;
     };
     const isShared = (sm3.mode ?? "shared") === "shared";
     const isPointFigure = spec.chartType === "dotplot" || spec.chartType === "scatter";
-    const paneMinWidth = isPointFigure ? 160 : PANE_MIN_WIDTH;
-    const TALL_PANE_TYPES2 = /* @__PURE__ */ new Set(["dotplot", "bar", "stacked"]);
-    const paneHeight = TALL_PANE_TYPES2.has(spec.chartType) ? 320 : PANE_HEIGHT;
-    const isHorizontalBarFig = spec.chartType === "bar" && spec.orientation === "horizontal";
+    const isWaterfallFig = spec.chartType === "waterfall";
+    const paneMinWidth = isPointFigure ? 160 : isWaterfallFig ? 320 : PANE_MIN_WIDTH;
+    const isHorizontalBarFig = (spec.chartType === "bar" || spec.chartType === "stacked") && spec.orientation === "horizontal";
     const isCategoricalBarFig = spec.chartType === "bar" || spec.chartType === "stacked";
-    const figHeight = isHorizontalBarFig ? void 0 : paneHeight;
+    const figHeight = figurePaneHeight(spec);
     const drawGrid = (outerWidth) => {
       const baseCols = sm3.columns && sm3.columns > 0 ? sm3.columns : 0;
       const fitCols = Math.max(1, Math.floor((outerWidth + GRID_GAP) / (paneMinWidth + GRID_GAP)));
@@ -30572,38 +31445,74 @@ ${words.slice(bestI).join(" ")}`;
   function hasMath(s) {
     return s.includes("\\(") || s.includes("\\[") || s.includes("$$");
   }
-  function nextOpener(s, from) {
-    let best = null;
-    for (const d of DELIMS) {
-      const idx = s.indexOf(d.open, from);
-      if (idx >= 0 && (best == null || idx < best.idx)) best = { idx, open: d.open, close: d.close };
-    }
-    return best;
+  function hasBreak(s) {
+    return s.includes("\\\\");
+  }
+  function openerAt(s, i) {
+    for (const d of DELIMS) if (s.startsWith(d.open, i)) return { open: d.open, close: d.close };
+    return null;
   }
   function unescapeText(s) {
     return s.replace(/\\\$/g, "$");
   }
   function parseRich(s, onUnsupported) {
-    if (!hasMath(s)) return [{ kind: "text", text: s, italic: false }];
+    if (!hasMath(s) && !hasBreak(s)) return [{ kind: "text", text: s, italic: false }];
     const runs = [];
     let i = 0;
+    let start = 0;
+    const flush = (end) => {
+      if (end > start) pushText(runs, unescapeText(s.slice(start, end)), false);
+    };
     while (i < s.length) {
-      const opener = nextOpener(s, i);
-      if (opener == null) {
-        pushText(runs, unescapeText(s.slice(i)), false);
-        break;
+      if (s[i] === "\\" && s[i + 1] === "\\") {
+        flush(i);
+        runs.push({ kind: "break" });
+        i += 2;
+        start = i;
+        continue;
       }
-      if (opener.idx > i) pushText(runs, unescapeText(s.slice(i, opener.idx)), false);
-      const contentStart = opener.idx + opener.open.length;
-      const closeIdx = s.indexOf(opener.close, contentStart);
-      if (closeIdx < 0) {
-        parseMath(s.slice(contentStart), runs, onUnsupported);
-        break;
+      const opener = openerAt(s, i);
+      if (opener != null) {
+        flush(i);
+        const contentStart = i + opener.open.length;
+        const closeIdx = s.indexOf(opener.close, contentStart);
+        if (closeIdx < 0) {
+          parseMath(s.slice(contentStart), runs, onUnsupported);
+          return runs;
+        }
+        parseMath(s.slice(contentStart, closeIdx), runs, onUnsupported);
+        i = closeIdx + opener.close.length;
+        start = i;
+        continue;
       }
-      parseMath(s.slice(contentStart, closeIdx), runs, onUnsupported);
-      i = closeIdx + opener.close.length;
+      i++;
     }
+    flush(i);
     return runs;
+  }
+  function splitBreaks(s) {
+    if (!hasBreak(s)) return [s];
+    const segs = [];
+    let i = 0;
+    let start = 0;
+    while (i < s.length) {
+      if (s[i] === "\\" && s[i + 1] === "\\") {
+        segs.push(s.slice(start, i));
+        i += 2;
+        start = i;
+        continue;
+      }
+      const opener = openerAt(s, i);
+      if (opener != null) {
+        const closeIdx = s.indexOf(opener.close, i + opener.open.length);
+        if (closeIdx < 0) break;
+        i = closeIdx + opener.close.length;
+        continue;
+      }
+      i++;
+    }
+    segs.push(s.slice(start));
+    return segs;
   }
   function pushText(runs, text, italic) {
     if (text === "") return;
@@ -30640,7 +31549,7 @@ ${words.slice(bestI).join(" ")}`;
   }
   function renderScript(raw, onUnsupported) {
     const sub = parseMath(raw, [], onUnsupported, true);
-    const text = sub.map((r) => r.kind === "text" || r.kind === "super" || r.kind === "sub" ? r.text : r.sub + r.sup).join("");
+    const text = sub.map((r) => r.kind === "subsup" ? r.sub + r.sup : r.kind === "break" ? "" : r.text).join("");
     const italic = /[a-zA-Z]/.test(text) && sub.some((r) => r.kind === "text" ? r.italic : false);
     return { text, italic };
   }
@@ -30751,24 +31660,30 @@ ${words.slice(bestI).join(" ")}`;
     return i;
   }
   function richWidth(s, fontPx, weight, measure) {
-    if (!hasMath(s)) return measure(s, fontPx, weight);
+    if (!hasMath(s) && !hasBreak(s)) return measure(s, fontPx, weight);
     const runs = parseRich(s);
     const sf3 = fontPx * SCRIPT_SCALE;
-    let w = 0;
+    let maxW = 0;
+    let line = 0;
     for (const run of runs) {
-      if (run.kind === "text") w += measure(run.text, fontPx, weight);
-      else if (run.kind === "super" || run.kind === "sub") w += measure(run.text, sf3, weight);
-      else w += Math.max(measure(run.sub, sf3, weight), measure(run.sup, sf3, weight));
+      if (run.kind === "break") {
+        maxW = Math.max(maxW, line);
+        line = 0;
+      } else if (run.kind === "text") line += measure(run.text, fontPx, weight);
+      else if (run.kind === "super" || run.kind === "sub") line += measure(run.text, sf3, weight);
+      else line += Math.max(measure(run.sub, sf3, weight), measure(run.sup, sf3, weight));
     }
-    return w;
+    return Math.max(maxW, line);
   }
   function richToPlain(s) {
-    if (!hasMath(s)) return s;
-    return parseRich(s).map((r) => r.kind === "subsup" ? r.sup + r.sub : r.text).join("");
+    if (!hasMath(s) && !hasBreak(s)) return s;
+    return parseRich(s).map((r) => r.kind === "break" ? " " : r.kind === "subsup" ? r.sup + r.sub : r.text).join("");
   }
   function appendRichHtml(parent, s, doc) {
     for (const run of parseRich(s)) {
-      if (run.kind === "text") {
+      if (run.kind === "break") {
+        parent.appendChild(doc.createElement("br"));
+      } else if (run.kind === "text") {
         if (run.italic) {
           const el3 = doc.createElement("i");
           el3.textContent = run.text;
@@ -30802,15 +31717,26 @@ ${words.slice(bestI).join(" ")}`;
     const runs = parseRich(s);
     const sf3 = opts.fontSize * SCRIPT_SCALE;
     const m = opts.measure;
-    let total = 0;
+    const lines = [[]];
     for (const run of runs) {
-      if (run.kind === "text") total += m(run.text, opts.fontSize, opts.weight);
-      else if (run.kind === "super" || run.kind === "sub") total += m(run.text, sf3, opts.weight);
-      else total += Math.max(m(run.sub, sf3, opts.weight), m(run.sup, sf3, opts.weight));
+      if (run.kind === "break") lines.push([]);
+      else lines[lines.length - 1].push(run);
     }
-    const startX = opts.anchor === "middle" ? opts.x - total / 2 : opts.anchor === "end" ? opts.x - total : opts.x;
+    const lineWidth = (line) => {
+      let w = 0;
+      for (const run of line) {
+        if (run.kind === "text") w += m(run.text, opts.fontSize, opts.weight);
+        else if (run.kind === "super" || run.kind === "sub") w += m(run.text, sf3, opts.weight);
+        else if (run.kind === "subsup") w += Math.max(m(run.sub, sf3, opts.weight), m(run.sup, sf3, opts.weight));
+      }
+      return w;
+    };
+    const lineStartX = (line) => {
+      const w = lineWidth(line);
+      return opts.anchor === "middle" ? opts.x - w / 2 : opts.anchor === "end" ? opts.x - w : opts.x;
+    };
     const t60 = doc.createElementNS(SVG_NS4, "text");
-    t60.setAttribute("x", String(startX));
+    t60.setAttribute("x", String(lineStartX(lines[0])));
     t60.setAttribute("y", String(opts.baselineY));
     t60.setAttribute("text-anchor", "start");
     t60.setAttribute("font-family", opts.fontFamily);
@@ -30820,7 +31746,7 @@ ${words.slice(bestI).join(" ")}`;
     if (opts.cls) t60.setAttribute("class", opts.cls);
     const supRise = opts.fontSize * 0.42;
     const subDrop = opts.fontSize * 0.16;
-    let cx3 = startX;
+    const lineHeight = opts.fontSize + 3;
     const put = (text, x, y, italic, script) => {
       const ts3 = doc.createElementNS(SVG_NS4, "tspan");
       ts3.setAttribute("x", String(x));
@@ -30830,24 +31756,28 @@ ${words.slice(bestI).join(" ")}`;
       ts3.textContent = text;
       t60.appendChild(ts3);
     };
-    for (const run of runs) {
-      if (run.kind === "text") {
-        put(run.text, cx3, opts.baselineY, run.italic, false);
-        cx3 += m(run.text, opts.fontSize, opts.weight);
-      } else if (run.kind === "super") {
-        put(run.text, cx3, opts.baselineY - supRise, run.italic, true);
-        cx3 += m(run.text, sf3, opts.weight);
-      } else if (run.kind === "sub") {
-        put(run.text, cx3, opts.baselineY + subDrop, run.italic, true);
-        cx3 += m(run.text, sf3, opts.weight);
-      } else {
-        const supW = m(run.sup, sf3, opts.weight);
-        const subW = m(run.sub, sf3, opts.weight);
-        put(run.sup, cx3, opts.baselineY - supRise, run.supItalic, true);
-        put(run.sub, cx3, opts.baselineY + subDrop, run.subItalic, true);
-        cx3 += Math.max(supW, subW);
+    lines.forEach((line, li3) => {
+      let cx3 = lineStartX(line);
+      const baseY = opts.baselineY + li3 * lineHeight;
+      for (const run of line) {
+        if (run.kind === "text") {
+          put(run.text, cx3, baseY, run.italic, false);
+          cx3 += m(run.text, opts.fontSize, opts.weight);
+        } else if (run.kind === "super") {
+          put(run.text, cx3, baseY - supRise, run.italic, true);
+          cx3 += m(run.text, sf3, opts.weight);
+        } else if (run.kind === "sub") {
+          put(run.text, cx3, baseY + subDrop, run.italic, true);
+          cx3 += m(run.text, sf3, opts.weight);
+        } else if (run.kind === "subsup") {
+          const supW = m(run.sup, sf3, opts.weight);
+          const subW = m(run.sub, sf3, opts.weight);
+          put(run.sup, cx3, baseY - supRise, run.supItalic, true);
+          put(run.sub, cx3, baseY + subDrop, run.subItalic, true);
+          cx3 += Math.max(supW, subW);
+        }
       }
-    }
+    });
     return t60;
   }
 
@@ -30880,6 +31810,11 @@ ${words.slice(bestI).join(" ")}`;
   var NOTE_WRAP_PAD = 16;
   var NOTE_WRAP_MAX_LINES = 4;
   function wrapToLines(s, maxWidth, maxLines, measure) {
+    const segments = splitBreaks(s);
+    if (segments.length === 1) return wrapSegment(s, maxWidth, maxLines, measure);
+    return segments.flatMap((seg) => wrapSegment(seg, maxWidth, maxLines, measure));
+  }
+  function wrapSegment(s, maxWidth, maxLines, measure) {
     if (maxLines <= 1 || measure(s) <= maxWidth) return [s];
     const words = s.split(/\s+/).filter(Boolean);
     const lines = [];
@@ -30904,6 +31839,7 @@ ${words.slice(bestI).join(" ")}`;
       ...spec.stub_width != null ? { stubWidth: spec.stub_width } : {},
       ...spec.stub_nowrap != null ? { stubNowrap: spec.stub_nowrap } : {},
       ...spec.column_width != null ? { columnWidth: spec.column_width } : {},
+      ...spec.column_wrap != null ? { columnWrap: spec.column_wrap } : {},
       ...spec.header_max_lines != null ? { headerMaxLines: spec.header_max_lines } : {},
       ...spec.stub_min_width != null ? { stubMinWidth: spec.stub_min_width } : {},
       ...spec.stub_wrap != null ? { stubWrap: spec.stub_wrap } : {}
@@ -30921,6 +31857,12 @@ ${words.slice(bestI).join(" ")}`;
       if (cw3 == null) return void 0;
       if (typeof cw3 === "number") return cw3;
       return cw3[leafValue];
+    };
+    const colWrapEnabled = (leafValue) => {
+      const cw3 = opts.columnWrap;
+      if (cw3 == null) return false;
+      if (typeof cw3 === "boolean") return cw3;
+      return cw3[leafValue] === true;
     };
     const colW = leaves.map((leaf, i) => {
       const override = colWidthOverride(leaf.lastValue);
@@ -30974,8 +31916,10 @@ ${words.slice(bestI).join(" ")}`;
     if (opts.stubWrap) {
       for (const b of model.body) {
         if (b.kind !== "row") continue;
-        for (const w of b.row.label.split(/\s+/).filter(Boolean)) {
-          widestWord = Math.max(widestWord, richWidth(w, bodyFontPx, bodyWeight, measureText2) + b.row.level * INDENT_STEP);
+        for (const seg of splitBreaks(b.row.label)) {
+          for (const w of seg.split(/\s+/).filter(Boolean)) {
+            widestWord = Math.max(widestWord, richWidth(w, bodyFontPx, bodyWeight, measureText2) + b.row.level * INDENT_STEP);
+          }
         }
       }
     }
@@ -30997,9 +31941,10 @@ ${words.slice(bestI).join(" ")}`;
     }
     const totalWidth = stubWidth + colW.reduce((a, b) => a + b, 0);
     const leafLines = leaves.map((leaf, i) => {
-      if (headerMaxLines == null || headerMaxLines <= 1) return null;
+      const softWrap = headerMaxLines != null && headerMaxLines > 1;
+      if (!softWrap && !hasBreak(leaf.label)) return null;
       const avail = Math.max(1, colW[i] - padX);
-      const lines = wrapToLines(leaf.label, avail, headerMaxLines, measureHeader);
+      const lines = wrapToLines(leaf.label, avail, softWrap ? headerMaxLines : 1, measureHeader);
       return lines.length > 1 ? lines : null;
     });
     const maxLeafLines = leafLines.reduce((m, l) => Math.max(m, l ? l.length : 1), 1);
@@ -31056,9 +32001,9 @@ ${words.slice(bestI).join(" ")}`;
       const measureBody = (s) => richWidth(s, bodyFontPx, bodyWeight, measureText2);
       let maxLines = 1;
       let stubLines;
-      if (opts.stubWrap) {
+      if (opts.stubWrap || hasBreak(entry.row.label)) {
         const avail = Math.max(1, stubWidth - padX - entry.row.level * INDENT_STEP);
-        const lines = wrapToLines(entry.row.label, avail, 99, measureBody);
+        const lines = wrapToLines(entry.row.label, avail, opts.stubWrap ? 99 : 1, measureBody);
         if (lines.length > 1) {
           stubLines = lines;
           maxLines = Math.max(maxLines, lines.length);
@@ -31066,8 +32011,10 @@ ${words.slice(bestI).join(" ")}`;
       }
       let cellLines;
       entry.row.cells.forEach((cell, i) => {
-        if (!cell.isText || cell.text === "") return;
-        const lines = wrapToLines(cell.text, Math.max(1, colW[i] - padX), 99, measureBody);
+        if (cell.text === "") return;
+        const softWrap = cell.isText || colWrapEnabled(leaves[i].lastValue);
+        if (!softWrap && !hasBreak(cell.text)) return;
+        const lines = wrapToLines(cell.text, Math.max(1, colW[i] - padX), softWrap ? 99 : 1, measureBody);
         if (lines.length > 1) {
           if (!cellLines) cellLines = leaves.map(() => void 0);
           cellLines[i] = lines;
@@ -31108,7 +32055,9 @@ ${words.slice(bestI).join(" ")}`;
     const headerMaxLines = spec?.header_max_lines;
     const stubNowrap = spec?.stub_nowrap === true;
     const stubWrap = spec?.stub_wrap === true && !stubNowrap;
-    const flexData = stubWrap || opts?.flexDataCols === true;
+    const flexData = opts?.flexDataCols === true;
+    const columnWrap = spec?.column_wrap;
+    const colWrapEnabled = (leafValue) => columnWrap === true || typeof columnWrap === "object" && columnWrap[leafValue] === true;
     const table = doc.createElement("table");
     table.className = "tbl-table";
     table.style.tableLayout = "fixed";
@@ -31131,6 +32080,7 @@ ${words.slice(bestI).join(" ")}`;
         const cornerTh = doc.createElement("th");
         cornerTh.rowSpan = tierCount;
         cornerTh.className = "tbl-table-stub-header";
+        cornerTh.classList.add("is-header-bottom");
         appendRichHtml(cornerTh, model.stubHeader, doc);
         tr3.appendChild(cornerTh);
       }
@@ -31139,6 +32089,7 @@ ${words.slice(bestI).join(" ")}`;
         th3.scope = "col";
         th3.colSpan = hCell.colSpan;
         th3.rowSpan = hCell.rowSpan;
+        if (tierIdx + hCell.rowSpan === tierCount) th3.classList.add("is-header-bottom");
         const leafForCell = hCell.leafKey != null ? leaves.find((l) => l.key === hCell.leafKey) : void 0;
         if (leafForCell?.isText) th3.classList.add("is-text");
         const spannerRules = spec?.spanner_rules !== false;
@@ -31235,6 +32186,7 @@ ${words.slice(bestI).join(" ")}`;
         row.cells.forEach((cell, i) => {
           const td3 = doc.createElement("td");
           td3.className = cell.isText ? "is-text" : "is-num";
+          if (colWrapEnabled(leaves[i].lastValue)) td3.classList.add("is-wrap");
           td3.setAttribute("data-col", leaves[i].key);
           if (cell.signClass != null) {
             td3.classList.add(`is-${cell.signClass}`);
@@ -31349,7 +32301,7 @@ ${words.slice(bestI).join(" ")}`;
       return t60;
     };
     const drawText = (x, y, str, o) => {
-      if (!hasMath(str)) return text(x, y, str, o);
+      if (!hasMath(str) && !hasBreak(str)) return text(x, y, str, o);
       const rich = renderRichSvgText(doc, str, {
         x,
         baselineY: y,
