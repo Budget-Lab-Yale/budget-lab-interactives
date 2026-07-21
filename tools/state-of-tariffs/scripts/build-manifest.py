@@ -594,6 +594,13 @@ def build_tab(tab: dict) -> dict:
     if "description" in tab:
         out["description"] = tab["description"]
 
+    # The Previous Vintages tab carries no figures of its own — its content is the `vintages`
+    # array (archived, pre-compiled scenario tabs), attached to the manifest in main(). Emit only
+    # the marker so app.js can recognize it; if no vintages exist, main() drops the tab entirely.
+    if tab.get("kind") == "vintages":
+        out["kind"] = "vintages"
+        return out
+
     if "sections" in tab:
         # label may be empty/absent → the sidebar renders the section's figures with no heading.
         out["sections"] = [{"id": s["id"], "label": s.get("label", "")} for s in tab["sections"]]
@@ -625,6 +632,44 @@ def load_model_meta() -> dict:
     global DEFAULT_SCENARIO
     DEFAULT_SCENARIO = meta.get("default_scenario")
     return meta.get("provenance") or {}
+
+
+def _vintage_time_label(published_at: str) -> str:
+    """`2026-07-16T11:02:00-0400` → `11:02 AM` (local wall time as published)."""
+    from datetime import datetime
+    try:
+        dt = datetime.fromisoformat(published_at)
+    except (ValueError, TypeError):
+        return ""
+    hour = dt.hour % 12 or 12
+    return f"{hour}:{dt.minute:02d} {'AM' if dt.hour < 12 else 'PM'}"
+
+
+def load_vintages() -> list:
+    """Collect archived vintages from data/previous-vintages/*/vintage.json (written by
+    sync-model-data.py's archive_current), newest first. Each is a pre-compiled snapshot of the
+    default- and alternative-scenario tabs plus a carried-over changes note — passed through
+    verbatim, never recompiled, so an old vintage renders exactly as it was published."""
+    root = DATA_DIR / "previous-vintages"
+    if not root.is_dir():
+        return []
+    out = []
+    for d in sorted(p for p in root.iterdir() if p.is_dir()):
+        vj = d / "vintage.json"
+        if vj.exists():
+            out.append(json.loads(vj.read_text(encoding="utf-8")))
+    # Newest first, using the full publish timestamp so same-day vintages order correctly.
+    out.sort(key=lambda v: v.get("published_at") or v.get("date") or "", reverse=True)
+    # When two vintages share a calendar date, append the publish time so the dropdown labels stay
+    # distinct (e.g. "July 16, 2026 (3:00 PM)").
+    from collections import Counter
+    per_date = Counter(v.get("date") for v in out)
+    for v in out:
+        if per_date[v.get("date")] > 1:
+            t = _vintage_time_label(v.get("published_at"))
+            if t:
+                v["label"] = f"{v.get('label')} ({t})"
+    return out
 
 
 def format_published(published_at: str) -> str:
@@ -661,10 +706,20 @@ def main() -> None:
         "tabs": [build_tab(tab) for tab in tracker.get("tabs", [])],
     }
 
+    # Fold in archived vintages. With none present, drop the (empty) Previous Vintages tab so the
+    # tool degrades cleanly to the live report.
+    vintages = load_vintages()
+    if vintages:
+        manifest["vintages"] = vintages
+    else:
+        manifest["tabs"] = [t for t in manifest["tabs"] if t.get("kind") != "vintages"]
+
     OUT.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     n_tabs = len(manifest["tabs"])
     n_figs = sum(len(t.get("figures", [])) for t in manifest["tabs"])
-    print(f"build-manifest: wrote {OUT.relative_to(DATA_DIR.parent)} ({n_tabs} tabs, {n_figs} figures)")
+    n_vin = len(manifest.get("vintages", []))
+    print(f"build-manifest: wrote {OUT.relative_to(DATA_DIR.parent)} "
+          f"({n_tabs} tabs, {n_figs} figures, {n_vin} vintages)")
 
 
 if __name__ == "__main__":

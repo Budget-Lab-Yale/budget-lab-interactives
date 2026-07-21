@@ -11,16 +11,22 @@
  * paints before the (large) engine bundle is exercised.
  * =========================================================================== */
 
-import { buildAllDataZip, allDataStem } from "./download-all.js";
+import { buildAllDataZip, allDataStem, buildVintageZip, vintageStem } from "./download-all.js";
 
 const MANIFEST_URL = "./data/manifest.json";
 let dataBase = "./data/";
 
-// Tray-with-down-arrow glyph for the Download All Data button.
+// Tray-with-down-arrow glyph for the data-download buttons.
 const DL_ICON =
   '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false">' +
   '<path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" ' +
   'stroke-linejoin="round" d="M8 2v8M4.5 6.5 8 10l3.5-3.5M3 13h10"/></svg>';
+
+// Arrow-out-of-box glyph for buttons that link to an external page.
+const EXTERNAL_ICON =
+  '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false">' +
+  '<path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" ' +
+  'stroke-linejoin="round" d="M9 3h4v4M13 3 7 9M11.5 9.5V13H3V4.5h3.5"/></svg>';
 
 let manifest = null;
 let renderModule = null;          // lazily-loaded { renderFigure, renderProse }
@@ -42,6 +48,9 @@ function readState() {
   return {
     tab: p.get("tab") || null,
     figure: p.get("figure") || null,
+    // Previous Vintages tab: which archived release + scenario view is selected.
+    vintage: p.get("vintage") || null,
+    scenario: p.get("scenario") || null,
     toggles,
   };
 }
@@ -49,6 +58,8 @@ function readState() {
 function writeState(state) {
   const p = new URLSearchParams();
   if (state.tab) p.set("tab", state.tab);
+  if (state.vintage) p.set("vintage", state.vintage);
+  if (state.scenario) p.set("scenario", state.scenario);
   if (state.figure) p.set("figure", state.figure);
   const togglePairs = Object.entries(state.toggles || {})
     .filter(([, v]) => v != null && v !== "")
@@ -59,7 +70,7 @@ function writeState(state) {
   history.replaceState(null, "", url);
 }
 
-const state = { tab: null, figure: null, toggles: {} };
+const state = { tab: null, figure: null, vintage: null, scenario: null, toggles: {} };
 
 function setState(patch, opts = { rerender: true }) {
   Object.assign(state, patch);
@@ -72,11 +83,50 @@ function setState(patch, opts = { rerender: true }) {
 function tabById(id) { return manifest.tabs.find(t => t.id === id); }
 
 function defaultFigureForTab(tab) {
-  return tab.figures?.[0]?.id ?? null;
+  return tab?.figures?.[0]?.id ?? null;
 }
 
 function figureById(tab, id) {
-  return tab.figures?.find(f => f.id === id);
+  return tab?.figures?.find(f => f.id === id);
+}
+
+// --- Previous Vintages helpers --------------------------------------------
+// The Previous Vintages tab is a "virtual" tab: it carries no figures of its own. Instead it
+// resolves, via the vintage dropdown + scenario selector, to one of an archived vintage's
+// pre-compiled scenario tabs (same shape as a live tab), which then flows through the normal
+// sidebar/figure rendering.
+
+function isVintagesTab(tab) { return !!tab && tab.kind === "vintages"; }
+function vintagesList() { return manifest.vintages || []; }
+// Vintages are keyed by their unique id (the model interface_vintage), not date — two releases
+// can share a calendar date. The date is only a display label.
+function vintageById(id) { return vintagesList().find(v => v.id === id) || null; }
+function currentVintage() { return vintageById(state.vintage) || vintagesList()[0] || null; }
+
+// A vintage's scenarios are a generic ordered list [{id, label, tab}] — the tool never assumes a
+// fixed set, so a future release with more (or differently-named) scenarios just works.
+function vintageScenarios(v) { return v?.scenarios || []; }
+function scenarioTab(v, id) {
+  const list = vintageScenarios(v);
+  return (list.find(s => s.id === id) || list[0])?.tab || null;
+}
+function defaultScenarioId(v) { return vintageScenarios(v)[0]?.id ?? null; }
+
+// The tab whose figures/sections/toggles drive the sidebar + main render. For the vintages tab
+// this is the selected vintage's selected scenario tab; otherwise the real tab.
+function activeTab() {
+  const tab = tabById(state.tab);
+  if (!isVintagesTab(tab)) return tab;
+  return scenarioTab(currentVintage(), state.scenario);
+}
+
+// Fresh figure + toggle defaults for a resolved tab, keeping `keepFigureId` if it still exists
+// there (so switching vintage/scenario stays on the same figure when possible).
+function figureStateFor(tab, keepFigureId) {
+  if (!tab) return { figure: null, toggles: {} };
+  const figure = (keepFigureId && figureById(tab, keepFigureId)) ? keepFigureId : defaultFigureForTab(tab);
+  const figObj = figure ? figureById(tab, figure) : null;
+  return { figure, toggles: { ...defaultTogglesFor(tab), ...figureDefaultToggles(figObj) } };
 }
 
 // --- CSV fetching ---------------------------------------------------------
@@ -160,6 +210,14 @@ async function downloadAllData() {
   saveBlob(blob, `${allDataStem(manifest)}.zip`);
 }
 
+// Download just the currently-selected archived vintage (all its scenarios).
+async function downloadVintageData() {
+  const v = currentVintage();
+  if (!v) return;
+  const blob = await buildVintageZip(v, fetchCsvText);
+  saveBlob(blob, `${vintageStem(v)}.zip`);
+}
+
 // --- Toggle / selector defaults -------------------------------------------
 
 function defaultTogglesFor(tab) {
@@ -190,13 +248,24 @@ function figureDefaultToggles(figure) {
 
 function switchTab(tabId) {
   const newTab = tabById(tabId);
-  const defaultFig = defaultFigureForTab(newTab);
-  const figObj = defaultFig ? figureById(newTab, defaultFig) : null;
-  setState({
-    tab: tabId,
-    figure: defaultFig,
-    toggles: { ...defaultTogglesFor(newTab), ...figureDefaultToggles(figObj) },
-  });
+  if (isVintagesTab(newTab)) {
+    const v = vintagesList()[0] || null;
+    const scenario = defaultScenarioId(v);
+    setState({ tab: tabId, vintage: v?.id ?? null, scenario, ...figureStateFor(scenarioTab(v, scenario), null) });
+    return;
+  }
+  setState({ tab: tabId, vintage: null, scenario: null, ...figureStateFor(newTab, null) });
+}
+
+function switchVintage(id) {
+  const v = vintageById(id);
+  // Keep the current scenario if the new vintage has it, else fall back to its first.
+  const scenario = vintageScenarios(v).some(s => s.id === state.scenario) ? state.scenario : defaultScenarioId(v);
+  setState({ vintage: id, scenario, ...figureStateFor(scenarioTab(v, scenario), state.figure) });
+}
+
+function switchScenario(scenario) {
+  setState({ scenario, ...figureStateFor(scenarioTab(currentVintage(), scenario), state.figure) });
 }
 
 function renderTabBar() {
@@ -273,19 +342,31 @@ function renderTabBar() {
 function renderSidebar() {
   const sidebar = document.querySelector(".tracker-sidebar");
   sidebar.innerHTML = "";
-  const tab = tabById(state.tab);
-  if (!tab) return;
+  const realTab = tabById(state.tab);
+  if (!realTab) return;
 
-  const sections = tab.sections || [];
-  const figures = tab.figures || [];
-  const hasFigureList = figures.length > 1;
+  // On the Previous Vintages tab the sidebar controls (figure list, toggles, selectors) come from
+  // the resolved scenario tab, but the explainer copy stays the vintages tab's own.
+  const vintage = isVintagesTab(realTab);
+  const tab = vintage ? activeTab() : realTab;
 
-  const explainer = document.createElement("div");
-  // `is-standalone` drops the explainer's divider when no figure list follows, so it doesn't
-  // stack with the release block's top border into a double rule.
-  explainer.className = "sidebar-explainer" + (hasFigureList ? "" : " is-standalone");
-  explainer.innerHTML = `<p>${escapeHtml(tab.description || "")}</p>`;
-  sidebar.appendChild(explainer);
+  const sections = tab?.sections || [];
+  const figures = tab?.figures || [];
+  const hasFigureList = vintage || figures.length > 1;
+
+  // Only render the explainer when there's description text — an empty one would leave the
+  // release block's top rule floating at the top of the sidebar with nothing above it.
+  if (realTab.description) {
+    const explainer = document.createElement("div");
+    // `is-standalone` drops the explainer's divider when no figure list follows, so it doesn't
+    // stack with the release block's top border into a double rule.
+    explainer.className = "sidebar-explainer" + (hasFigureList ? "" : " is-standalone");
+    explainer.innerHTML = `<p>${escapeHtml(realTab.description)}</p>`;
+    sidebar.appendChild(explainer);
+  }
+
+  if (vintage) sidebar.appendChild(buildVintageControls());
+  if (vintage && !tab) return;  // no archived vintages yet (tab would normally be dropped)
 
   // Figure list (vertical, with section headers when present). Suppressed on tabs with a
   // single figure (e.g. a prose-only tab) — there's nothing to pick between.
@@ -346,28 +427,81 @@ function renderSidebar() {
     if (toggleApplies(toggle) && toggle.after_selectors) sidebar.appendChild(buildToggleSection(toggle));
   }
 
-  // Release metadata (updated date + version) — shown on every tab.
+  // Release metadata (updated date + version). On the vintages tab, show the selected vintage's
+  // own release date/version rather than the live release.
   {
-    const r = manifest.release || {};
+    const v = vintage ? currentVintage() : null;
+    const r = v ? { updated: v.label, version: v.version } : (manifest.release || {});
     const rel = document.createElement("div");
     rel.className = "sidebar-release";
     rel.innerHTML =
-      `<p>Updated: ${escapeHtml(r.updated || "")}</p>` +
+      `<p>${vintage ? "Vintage" : "Updated"}: ${escapeHtml(r.updated || "")}</p>` +
       `<p>Version ${escapeHtml(r.version || "")}</p>`;
     sidebar.appendChild(rel);
   }
 
-  // Download All Data — on every tab.
-  sidebar.appendChild(buildDownloadAllButton());
+  // Data downloads. The live-release buttons point at current data, so on an archived vintage they
+  // are replaced by a button that downloads that vintage's own data.
+  if (vintage) {
+    sidebar.appendChild(buildDownloadVintageButton());
+  } else {
+    sidebar.appendChild(buildDownloadAllButton());
+    sidebar.appendChild(buildDetailedDataButton());
+  }
 }
 
-function buildDownloadAllButton() {
+// A labeled sidebar <select>. options: [{value, label}]; onChange(value) fires on selection.
+function buildDropdownSection(label, options, active, onChange) {
+  const sec = document.createElement("div");
+  sec.className = "sidebar-section";
+  const heading = document.createElement("h2");
+  heading.textContent = label;
+  sec.appendChild(heading);
+  const select = document.createElement("select");
+  select.className = "sidebar-select";
+  select.setAttribute("aria-label", label);
+  for (const opt of options) {
+    const o = document.createElement("option");
+    o.value = opt.value;
+    o.textContent = opt.label;
+    if (opt.value === active) o.selected = true;
+    select.appendChild(o);
+  }
+  select.addEventListener("change", () => onChange(select.value));
+  sec.appendChild(select);
+  return sec;
+}
+
+// Vintage dropdown + (when the vintage has more than one) a scenario dropdown, prepended to the
+// sidebar on the Previous Vintages tab.
+function buildVintageControls() {
+  const frag = document.createDocumentFragment();
+  frag.appendChild(buildDropdownSection(
+    "Vintage",
+    vintagesList().map(v => ({ value: v.id, label: v.label })),
+    state.vintage,
+    switchVintage,
+  ));
+  const scenarios = vintageScenarios(currentVintage());
+  if (scenarios.length > 1) {
+    frag.appendChild(buildDropdownSection(
+      "Scenario",
+      scenarios.map(s => ({ value: s.id, label: s.label })),
+      state.scenario,
+      switchScenario,
+    ));
+  }
+  return frag;
+}
+
+// A sidebar download button that runs an async build+save, showing in-button progress/failure.
+function buildDownloadButton(text, run) {
   const wrap = document.createElement("div");
   wrap.className = "sidebar-download";
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "sidebar-download-btn";
-  btn.innerHTML = `${DL_ICON}<span>Download All Data</span>`;
+  btn.innerHTML = `${DL_ICON}<span>${text}</span>`;
   const label = btn.querySelector("span");
   btn.addEventListener("click", async () => {
     if (btn.disabled) return;
@@ -375,10 +509,10 @@ function buildDownloadAllButton() {
     btn.disabled = true;
     label.textContent = "Preparing…";
     try {
-      await downloadAllData();
+      await run();
       label.textContent = original;
     } catch (err) {
-      console.error("Download all data failed:", err);
+      console.error(`${text} failed:`, err);
       label.textContent = "Failed";
       setTimeout(() => { label.textContent = original; }, 2000);
     } finally {
@@ -386,6 +520,27 @@ function buildDownloadAllButton() {
     }
   });
   wrap.appendChild(btn);
+  return wrap;
+}
+
+function buildDownloadAllButton() { return buildDownloadButton("Download Report Data", downloadAllData); }
+function buildDownloadVintageButton() { return buildDownloadButton("Download this Vintage", downloadVintageData); }
+
+// Link out to the GitHub release hosting the (large) underlying daily tariff-rate
+// files by product and country — too big to bundle into the report ZIP.
+const DETAILED_DATA_URL =
+  "https://github.com/Budget-Lab-Yale/tariff-rate-tracker/releases/latest";
+
+function buildDetailedDataButton() {
+  const wrap = document.createElement("div");
+  wrap.className = "sidebar-download";
+  const link = document.createElement("a");
+  link.className = "sidebar-download-btn";
+  link.href = DETAILED_DATA_URL;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.innerHTML = `${EXTERNAL_ICON}<span>Detailed Tariff Rate Data</span>`;
+  wrap.appendChild(link);
   return wrap;
 }
 
@@ -503,9 +658,11 @@ async function renderMain() {
   const main = document.getElementById("tracker-figure");
   main.innerHTML = '<div class="figure-loading">Loading&hellip;</div>';
 
-  const tab = tabById(state.tab);
+  const tab = activeTab();
   if (!tab) {
-    main.innerHTML = '<div class="figure-error">Unknown tab.</div>';
+    main.innerHTML = isVintagesTab(tabById(state.tab))
+      ? '<div class="figure-error">No archived vintages available.</div>'
+      : '<div class="figure-error">Unknown tab.</div>';
     return;
   }
 
@@ -521,11 +678,17 @@ async function renderMain() {
       renderModule.renderProse(main, { figure: fig, fetchCsv });
       return;
     }
+    // On an archived vintage's summary page (the tab's lead figure), surface that release's
+    // carried-over "Changes for the … Update" note above the figure.
+    const changesHtml = (isVintagesTab(tabById(state.tab)) && fig.id === defaultFigureForTab(tab))
+      ? currentVintage()?.changes_html
+      : null;
     await renderModule.renderFigure(main, {
       tab,
       figure: fig,
       toggles: state.toggles,
       fetchCsv,
+      changesHtml,
       // An inline title selector changed: update the sticky toggles map (keyed by the selector id)
       // and re-render so the tool re-filters rows to the new option.
       onSelect: ({ id, value }) => setState({ toggles: { ...state.toggles, [id]: value } }),
@@ -551,19 +714,19 @@ async function boot() {
 
   const initial = readState();
   const tabId = initial.tab && tabById(initial.tab) ? initial.tab : manifest.tabs[0].id;
-  const tab = tabById(tabId);
-
-  let figureId = initial.figure;
-  if (!(figureId && figureById(tab, figureId))) figureId = defaultFigureForTab(tab);
-  const figObj = figureId ? figureById(tab, figureId) : null;
+  const realTab = tabById(tabId);
 
   state.tab = tabId;
-  state.figure = figureId;
-  state.toggles = {
-    ...defaultTogglesFor(tab),
-    ...figureDefaultToggles(figObj),
-    ...initial.toggles,
-  };
+  if (isVintagesTab(realTab)) {
+    const v = (initial.vintage && vintageById(initial.vintage)) || vintagesList()[0] || null;
+    state.vintage = v?.id ?? null;
+    state.scenario = vintageScenarios(v).some(s => s.id === initial.scenario) ? initial.scenario : defaultScenarioId(v);
+  }
+  const tab = activeTab();
+
+  const fs = figureStateFor(tab, initial.figure);
+  state.figure = fs.figure;
+  state.toggles = { ...fs.toggles, ...initial.toggles };
   writeState(state);
 
   render();

@@ -237,6 +237,15 @@ export async function renderFigure(mount, ctx) {
     return;
   }
 
+  // Archived-vintage "Changes for the … Update" note: plain lead prose above the summary figure,
+  // styled like a scenario description (not a boxed card).
+  if (ctx.changesHtml) {
+    const note = document.createElement("div");
+    note.className = "figure-description figure-lead vintage-changes";
+    note.innerHTML = ctx.changesHtml;
+    mount.appendChild(note);
+  }
+
   const labels = tokenLabels(tab, figure, toggles);
   // Fold in inline title-selector active labels so {token}s in prose/subtitle resolve to them too
   // (the title itself keeps the {token} for the engine to render as a dropdown — see resolveSpec).
