@@ -1,4 +1,0 @@
-Distributional Impact
-One way to measure the distributional burden of tariffs is to look at the relationship between consumption, which gets more expensive under tariffs, and income for a given year. Under this view, tariffs are a regressive tax because lower-income households spend a larger fraction of their income than higher-income households do on average.
-
-TBL finds that the burden, expressed as a share of post-tax-and-transfer income, on the first decile is about three times that of the top decile (1.1% versus 0.4% if Section 122 tariffs expire, and 1.9% versus 0.6% if extended). The average annual costs to households in the bottom and top deciles are about $517 and $2,175 respectively in 2025 dollars—figures that assume Section 122 tariffs expire. If instead Section 122 is made permanent, these annual household burdens would be about $813 and $3,424.
