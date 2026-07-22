@@ -1,0 +1,31 @@
+Figure 6. Distributional Effects of Trump Administration Tariffs,
+By household income decile,
+"Source: GTAP v7, Census, BLS, BEA, The Budget Lab analysis.",
+,
+Scenario: Section 122 Expires,
+,
+"Table A: Burden as % of After-Tax Income (ATI), by decile",
+Decile,All 2025 Tariffs (% of ATI)
+1,-1.10
+2,-0.70
+3,-0.70
+4,-0.60
+5,-0.60
+6,-0.60
+7,-0.60
+8,-0.50
+9,-0.50
+10,-0.40
+,
+"Table B: Burden in 2025 Dollars, by decile",
+Decile,All 2025 Tariffs (2025$)
+1,-$429
+2,-$426
+3,-$502
+4,-$520
+5,-$625
+6,-$710
+7,-$795
+8,-$918
+9,"-$1,067"
+10,"-$1,807"

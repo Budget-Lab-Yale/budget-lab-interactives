@@ -1,0 +1,17 @@
+Figure 4. Change in Long-Run Real US GDP by Sector from Trump Administration Tariffs,
+Percentage points,
+Notes: Real value added by sector.,
+"Source: GTAP v7, The Budget Lab analysis.",
+,
+Scenario: Section 122 Extended,
+Sector,Value
+Agriculture,-0.90
+Mining & Extraction,-1.10
+Total Manufacturing,1.20
+Durable Manufacturing,1.90
+Advanced Manufacturing,-0.80
+Nondurable Manufacturing,0.80
+Utilities,0.40
+Construction,-2.60
+Services,0.00
+Overall Real GDP,-0.20
