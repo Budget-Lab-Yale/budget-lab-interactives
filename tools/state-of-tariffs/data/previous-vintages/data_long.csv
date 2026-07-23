@@ -1,0 +1,29 @@
+vintage_date,scenario,row_label_field,row_label,column,value
+2025-09-04,Baseline,Label,China,"Effective
+Tariff",27.893650104865955
+2025-09-04,Baseline,Label,China,Import Share - Pre-Substitution,0.1362
+2025-09-04,Baseline,Label,China,Import Share - Post-Substitution,0.08708427939162816
+2025-09-04,Baseline,Label,China,Average Effective Tariff - Pre-Substitution,3.7991151442827427
+2025-09-04,Baseline,Label,China,Average Effective Tariff - Post-Substitution,2.429098418984465
+2025-09-04,Baseline,Label,Canada,"Effective
+Tariff",6.897354942395533
+2025-09-04,Baseline,Label,Canada,Import Share - Pre-Substitution,0.1263
+2025-09-04,Baseline,Label,Canada,Import Share - Post-Substitution,0.1501305912059073
+2025-09-04,Baseline,Label,Canada,Average Effective Tariff - Pre-Substitution,0.8711359292245558
+2025-09-04,Baseline,Label,Canada,Average Effective Tariff - Post-Substitution,1.035503975258828
+2025-09-04,Baseline,Label,Mexico,"Effective
+Tariff",7.902532758168925
+2025-09-04,Baseline,Label,Mexico,Import Share - Pre-Substitution,0.15481
+2025-09-04,Baseline,Label,Mexico,Import Share - Post-Substitution,0.1866499763317612
+2025-09-04,Baseline,Label,Mexico,Average Effective Tariff - Pre-Substitution,1.2233910962921313
+2025-09-04,Baseline,Label,Mexico,Average Effective Tariff - Post-Substitution,1.4750075522731974
+2025-09-04,Baseline,Label,Rest of World,"Effective
+Tariff",15.611045884071032
+2025-09-04,Baseline,Label,Rest of World,Import Share - Pre-Substitution,0.58269
+2025-09-04,Baseline,Label,Rest of World,Import Share - Post-Substitution,0.5761351530707033
+2025-09-04,Baseline,Label,Rest of World,Average Effective Tariff - Pre-Substitution,9.09640032618935
+2025-09-04,Baseline,Label,Rest of World,Average Effective Tariff - Post-Substitution,8.994072310013037
+2025-09-04,Baseline,Label,Total,Import Share - Pre-Substitution,1
+2025-09-04,Baseline,Label,Total,Import Share - Post-Substitution,1
+2025-09-04,Baseline,Label,Total,Average Effective Tariff - Pre-Substitution,14.99004249598878
+2025-09-04,Baseline,Label,Total,Average Effective Tariff - Post-Substitution,13.933682256529528
