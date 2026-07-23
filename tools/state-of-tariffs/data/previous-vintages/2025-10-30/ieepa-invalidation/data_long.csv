@@ -1,0 +1,34 @@
+vintage_date,scenario,row_label_field,row_label,column,value
+2025-10-30,IEEPA Invalidation,Label,Conventional,2026,113.47247525918442
+2025-10-30,IEEPA Invalidation,Label,Conventional,2027,113.44881776004136
+2025-10-30,IEEPA Invalidation,Label,Conventional,2028,117.72827528246013
+2025-10-30,IEEPA Invalidation,Label,Conventional,2029,121.63798845961465
+2025-10-30,IEEPA Invalidation,Label,Conventional,2030,125.7849008094012
+2025-10-30,IEEPA Invalidation,Label,Conventional,2031,130.6986994015964
+2025-10-30,IEEPA Invalidation,Label,Conventional,2032,135.9025177871757
+2025-10-30,IEEPA Invalidation,Label,Conventional,2033,141.1860607246351
+2025-10-30,IEEPA Invalidation,Label,Conventional,2034,146.60116159322257
+2025-10-30,IEEPA Invalidation,Label,Conventional,2035,151.93752515143393
+2025-10-30,IEEPA Invalidation,Label,Conventional,2026-35,1298.3984222287654
+2025-10-30,IEEPA Invalidation,Label,Dynamic,2026,92.82947525918442
+2025-10-30,IEEPA Invalidation,Label,Dynamic,2027,90.62181776004137
+2025-10-30,IEEPA Invalidation,Label,Dynamic,2028,89.93327528246013
+2025-10-30,IEEPA Invalidation,Label,Dynamic,2029,95.35698845961466
+2025-10-30,IEEPA Invalidation,Label,Dynamic,2030,102.01090080940119
+2025-10-30,IEEPA Invalidation,Label,Dynamic,2031,109.6046994015964
+2025-10-30,IEEPA Invalidation,Label,Dynamic,2032,114.6245177871757
+2025-10-30,IEEPA Invalidation,Label,Dynamic,2033,118.6100607246351
+2025-10-30,IEEPA Invalidation,Label,Dynamic,2034,122.68816159322257
+2025-10-30,IEEPA Invalidation,Label,Dynamic,2035,126.56752515143393
+2025-10-30,IEEPA Invalidation,Label,Dynamic,2026-35,1062.8474222287655
+2025-10-30,IEEPA Invalidation,Label,Dynamic effect,2026,-20.643
+2025-10-30,IEEPA Invalidation,Label,Dynamic effect,2027,-22.827
+2025-10-30,IEEPA Invalidation,Label,Dynamic effect,2028,-27.795
+2025-10-30,IEEPA Invalidation,Label,Dynamic effect,2029,-26.281
+2025-10-30,IEEPA Invalidation,Label,Dynamic effect,2030,-23.774
+2025-10-30,IEEPA Invalidation,Label,Dynamic effect,2031,-21.094
+2025-10-30,IEEPA Invalidation,Label,Dynamic effect,2032,-21.278
+2025-10-30,IEEPA Invalidation,Label,Dynamic effect,2033,-22.576
+2025-10-30,IEEPA Invalidation,Label,Dynamic effect,2034,-23.913
+2025-10-30,IEEPA Invalidation,Label,Dynamic effect,2035,-25.37
+2025-10-30,IEEPA Invalidation,Label,Dynamic effect,2026-35,-235.551
