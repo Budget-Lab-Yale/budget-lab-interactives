@@ -1,0 +1,14 @@
+vintage_date,scenario,row_label_field,row_label,column,value
+2025-11-17,IEEPA Invalidation,Label,USA,All 2025 Tariffs to Date,-0.1
+2025-11-17,IEEPA Invalidation,Label,China,All 2025 Tariffs to Date,-0.12
+2025-11-17,IEEPA Invalidation,Label,ROW,All 2025 Tariffs to Date,0.01
+2025-11-17,IEEPA Invalidation,Label,Canada,All 2025 Tariffs to Date,-0.32
+2025-11-17,IEEPA Invalidation,Label,Mexico,All 2025 Tariffs to Date,-0.08
+2025-11-17,IEEPA Invalidation,Label,FTROW,All 2025 Tariffs to Date,0.01
+2025-11-17,IEEPA Invalidation,Label,Japan,All 2025 Tariffs to Date,0.01
+2025-11-17,IEEPA Invalidation,Label,EU,All 2025 Tariffs to Date,0.03
+2025-11-17,IEEPA Invalidation,Label,UK,All 2025 Tariffs to Date,0.04
+2025-11-17,IEEPA Invalidation,Label,"World Total
+",All 2025 Tariffs to Date,-0.03917422260721892
+2025-11-17,IEEPA Invalidation,Label,"World ex USA
+",All 2025 Tariffs to Date,-0.020521039495713378
