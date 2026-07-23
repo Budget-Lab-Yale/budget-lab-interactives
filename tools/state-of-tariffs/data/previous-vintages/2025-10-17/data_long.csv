@@ -1,0 +1,40 @@
+vintage_date,scenario,row_label_field,row_label,column,value
+2025-10-17,Baseline,Label,Conventional,2025,111
+2025-10-17,Baseline,Label,Conventional,2026,227.60891601888872
+2025-10-17,Baseline,Label,Conventional,2027,220.13223185605278
+2025-10-17,Baseline,Label,Conventional,2028,228.43871790934386
+2025-10-17,Baseline,Label,Conventional,2029,236.0271513798273
+2025-10-17,Baseline,Label,Conventional,2030,244.0783941417146
+2025-10-17,Baseline,Label,Conventional,2031,253.61462342022003
+2025-10-17,Baseline,Label,Conventional,2032,263.7162409305304
+2025-10-17,Baseline,Label,Conventional,2033,273.9705227918434
+2025-10-17,Baseline,Label,Conventional,2034,284.4824560637581
+2025-10-17,Baseline,Label,Conventional,2035,294.8393168654723
+2025-10-17,Baseline,Label,Conventional,2026-35,2526.9085713776517
+2025-10-17,Baseline,Label,Conventional,2025-34,2343.0692545121788
+2025-10-17,Baseline,Label,Dynamic,2025,102.664
+2025-10-17,Baseline,Label,Dynamic,2026,183.46691601888872
+2025-10-17,Baseline,Label,Dynamic,2027,162.7352318560528
+2025-10-17,Baseline,Label,Dynamic,2028,178.07271790934385
+2025-10-17,Baseline,Label,Dynamic,2029,194.5691513798273
+2025-10-17,Baseline,Label,Dynamic,2030,204.16539414171461
+2025-10-17,Baseline,Label,Dynamic,2031,211.58062342022004
+2025-10-17,Baseline,Label,Dynamic,2032,218.9392409305304
+2025-10-17,Baseline,Label,Dynamic,2033,226.3565227918434
+2025-10-17,Baseline,Label,Dynamic,2034,233.9964560637581
+2025-10-17,Baseline,Label,Dynamic,2035,241.25631686547231
+2025-10-17,Baseline,Label,Dynamic,2026-35,2055.1385713776513
+2025-10-17,Baseline,Label,Dynamic,2025-34,1916.5462545121793
+2025-10-17,Baseline,Label,Dynamic effect,2025,-8.336
+2025-10-17,Baseline,Label,Dynamic effect,2026,-44.142
+2025-10-17,Baseline,Label,Dynamic effect,2027,-57.397
+2025-10-17,Baseline,Label,Dynamic effect,2028,-50.366
+2025-10-17,Baseline,Label,Dynamic effect,2029,-41.458
+2025-10-17,Baseline,Label,Dynamic effect,2030,-39.913
+2025-10-17,Baseline,Label,Dynamic effect,2031,-42.034
+2025-10-17,Baseline,Label,Dynamic effect,2032,-44.777
+2025-10-17,Baseline,Label,Dynamic effect,2033,-47.614
+2025-10-17,Baseline,Label,Dynamic effect,2034,-50.486
+2025-10-17,Baseline,Label,Dynamic effect,2035,-53.583
+2025-10-17,Baseline,Label,Dynamic effect,2026-35,-471.77
+2025-10-17,Baseline,Label,Dynamic effect,2025-34,-426.5229999999999
