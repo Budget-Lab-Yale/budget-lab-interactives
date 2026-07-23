@@ -1,0 +1,131 @@
+vintage_date,scenario,row_label_field,row_label,column,value
+2025-10-30,Baseline,Name,Wearing apparel,Short-Run,24.422981590714993
+2025-10-30,Baseline,Name,Wearing apparel,Long-Run,8.391602847831262
+2025-10-30,Baseline,Name,Leather products,Short-Run,24.16837424694611
+2025-10-30,Baseline,Name,Leather products,Long-Run,8.302802817695481
+2025-10-30,Baseline,Name,Crops nec,Short-Run,23.799851596312283
+2025-10-30,Baseline,Name,Crops nec,Long-Run,8.006802717242879
+2025-10-30,Baseline,Name,Metals nec,Short-Run,18.80652347006489
+2025-10-30,Baseline,Name,Metals nec,Long-Run,6.8474689904701895
+2025-10-30,Baseline,Name,Electrical equipment,Short-Run,18.297710774124692
+2025-10-30,Baseline,Name,Electrical equipment,Long-Run,7.025069050741751
+2025-10-30,Baseline,Name,Metal products,Short-Run,16.356113736837045
+2025-10-30,Baseline,Name,Metal products,Long-Run,5.485868528388219
+2025-10-30,Baseline,Name,"Computer, electronic and optical",Short-Run,15.60168193756926
+2025-10-30,Baseline,Name,"Computer, electronic and optical",Long-Run,5.4464018483278736
+2025-10-30,Baseline,Name,Textiles,Short-Run,14.77799165908249
+2025-10-30,Baseline,Name,Textiles,Long-Run,5.012268367664057
+2025-10-30,Baseline,Name,Machinery and equipment nec,Short-Run,11.658285910790312
+2025-10-30,Baseline,Name,Machinery and equipment nec,Long-Run,4.997468362641428
+2025-10-30,Baseline,Name,Transport equipment nec,Short-Run,11.371169148157701
+2025-10-30,Baseline,Name,Transport equipment nec,Long-Run,4.972801687603711
+2025-10-30,Baseline,Name,Motor vehicles and parts,Short-Run,10.434267461367824
+2025-10-30,Baseline,Name,Motor vehicles and parts,Long-Run,5.36746848820718
+2025-10-30,Baseline,Name,Manufactures nec,Short-Run,8.790070107335866
+2025-10-30,Baseline,Name,Manufactures nec,Long-Run,3.4385345002577243
+2025-10-30,Baseline,Name,Mineral products nec,Short-Run,8.316355095315929
+2025-10-30,Baseline,Name,Mineral products nec,Long-Run,3.24120109995599
+2025-10-30,Baseline,Name,Rubber and plastic products,Short-Run,7.859793203347602
+2025-10-30,Baseline,Name,Rubber and plastic products,Long-Run,3.2856011150238804
+2025-10-30,Baseline,Name,Ferrous metals,Short-Run,5.352562047356496
+2025-10-30,Baseline,Name,Ferrous metals,Long-Run,2.6541342340583296
+2025-10-30,Baseline,Name,Processed rice,Short-Run,4.995293260930399
+2025-10-30,Baseline,Name,Processed rice,Long-Run,5.4464018483278736
+2025-10-30,Baseline,Name,Wood products,Short-Run,3.3129530783645214
+2025-10-30,Baseline,Name,Wood products,Long-Run,2.1016007132134726
+2025-10-30,Baseline,Name,Fishing,Short-Run,3.2718188705015114
+2025-10-30,Baseline,Name,Fishing,Long-Run,2.2989341135152075
+2025-10-30,Baseline,Name,"Vegetables, fruit, nuts",Short-Run,3.2699496097880876
+2025-10-30,Baseline,Name,"Vegetables, fruit, nuts",Long-Run,1.8648006328513915
+2025-10-30,Baseline,Name,Chemical products,Short-Run,3.2163192250120685
+2025-10-30,Baseline,Name,Chemical products,Long-Run,1.938800657964542
+2025-10-30,Baseline,Name,Vegetable oils and fats,Short-Run,2.782591181515579
+2025-10-30,Baseline,Name,Vegetable oils and fats,Long-Run,1.5490671923686163
+2025-10-30,Baseline,Name,Food products nec,Short-Run,2.5262487224151333
+2025-10-30,Baseline,Name,Food products nec,Long-Run,1.8105339477684146
+2025-10-30,Baseline,Name,Beverages and tobacco products,Short-Run,1.797586304405015
+2025-10-30,Baseline,Name,Beverages and tobacco products,Long-Run,1.9437339929720854
+2025-10-30,Baseline,Name,Paddy rice,Short-Run,1.7513194922622612
+2025-10-30,Baseline,Name,Paddy rice,Long-Run,1.179067066802864
+2025-10-30,Baseline,Name,"Paper products, publishing",Short-Run,1.7423374309375044
+2025-10-30,Baseline,Name,"Paper products, publishing",Long-Run,1.6329338874968533
+2025-10-30,Baseline,Name,Forestry,Short-Run,1.1345674093844635
+2025-10-30,Baseline,Name,Forestry,Long-Run,1.0754670316444535
+2025-10-30,Baseline,Name,Animal products nec,Short-Run,0.962146451422399
+2025-10-30,Baseline,Name,Animal products nec,Long-Run,0.9718669964860427
+2025-10-30,Baseline,Name,Cereal grains nec,Short-Run,0.8846491164142496
+2025-10-30,Baseline,Name,Cereal grains nec,Long-Run,1.1741337317953204
+2025-10-30,Baseline,Name,Sugar,Short-Run,0.849310541864924
+2025-10-30,Baseline,Name,Sugar,Long-Run,1.4158671471649455
+2025-10-30,Baseline,Name,Bovine meat products,Short-Run,0.7527664682060984
+2025-10-30,Baseline,Name,Bovine meat products,Long-Run,1.0557336916142799
+2025-10-30,Baseline,Name,Oil,Short-Run,0.6148155360493026
+2025-10-30,Baseline,Name,Oil,Long-Run,0.11840004018104072
+2025-10-30,Baseline,Name,Dairy products,Short-Run,0.4856338019073246
+2025-10-30,Baseline,Name,Dairy products,Long-Run,1.223467081870754
+2025-10-30,Baseline,Name,Meat products nec,Short-Run,0.3247189667237231
+2025-10-30,Baseline,Name,Meat products nec,Long-Run,0.9274669814181523
+2025-10-30,Baseline,Name,Oil seeds,Short-Run,0.29215622840001604
+2025-10-30,Baseline,Name,Oil seeds,Long-Run,0.4292001456562727
+2025-10-30,Baseline,Name,Basic pharmaceutical products,Short-Run,0.2567633630172452
+2025-10-30,Baseline,Name,Basic pharmaceutical products,Long-Run,0.49826683576187975
+2025-10-30,Baseline,Name,"Wool, silk-worm cocoons",Short-Run,0.21634736247147363
+2025-10-30,Baseline,Name,"Wool, silk-worm cocoons",Long-Run,5.2984017981015725
+2025-10-30,Baseline,Name,"Petroleum, coal products",Short-Run,0.16209138787972238
+2025-10-30,Baseline,Name,"Petroleum, coal products",Long-Run,0.20720007031682125
+2025-10-30,Baseline,Name,Electricity,Short-Run,0.13010049213974076
+2025-10-30,Baseline,Name,Electricity,Long-Run,0.7054669060787009
+2025-10-30,Baseline,Name,Minerals nec,Short-Run,0.09100467286393935
+2025-10-30,Baseline,Name,Minerals nec,Long-Run,0.25160008538471157
+2025-10-30,Baseline,Name,Plant-based fibers,Short-Run,0.08145340838986119
+2025-10-30,Baseline,Name,Plant-based fibers,Long-Run,0.7893336012069382
+2025-10-30,Baseline,Name,Natural gas,Short-Run,0.07346505994383803
+2025-10-30,Baseline,Name,Natural gas,Long-Run,0.379866795580839
+2025-10-30,Baseline,Name,"Bovine cattle, sheep and goats",Short-Run,0.030414176415393446
+2025-10-30,Baseline,Name,"Bovine cattle, sheep and goats",Long-Run,0.7548002561541347
+2025-10-30,Baseline,Name,"Sugar cane, sugar beet",Short-Run,0.008433610590591523
+2025-10-30,Baseline,Name,"Sugar cane, sugar beet",Long-Run,0.379866795580839
+2025-10-30,Baseline,Name,Wheat,Short-Run,0.0069655778581019815
+2025-10-30,Baseline,Name,Wheat,Long-Run,0.8090669412371115
+2025-10-30,Baseline,Name,Coal,Short-Run,0.00018542433361135496
+2025-10-30,Baseline,Name,Coal,Long-Run,0.2960001004526018
+2025-10-30,Baseline,Name,Construction,Short-Run,0
+2025-10-30,Baseline,Name,Construction,Long-Run,1.1642670617802338
+2025-10-30,Baseline,Name,Raw milk,Short-Run,0
+2025-10-30,Baseline,Name,Raw milk,Long-Run,1.0064003415388463
+2025-10-30,Baseline,Name,Water,Short-Run,0
+2025-10-30,Baseline,Name,Water,Long-Run,1.0360003515841065
+2025-10-30,Baseline,Name,"Gas manufacture, distribution",Short-Run,0
+2025-10-30,Baseline,Name,"Gas manufacture, distribution",Long-Run,0.7153335760937877
+2025-10-30,Baseline,Name,Air transport,Short-Run,0
+2025-10-30,Baseline,Name,Air transport,Long-Run,0.4686668257166195
+2025-10-30,Baseline,Name,Accommodation & food services,Short-Run,0
+2025-10-30,Baseline,Name,Accommodation & food services,Long-Run,0.759733591161678
+2025-10-30,Baseline,Name,Communication,Short-Run,0
+2025-10-30,Baseline,Name,Communication,Long-Run,0.8386669512823718
+2025-10-30,Baseline,Name,Water transport,Short-Run,0
+2025-10-30,Baseline,Name,Water transport,Long-Run,0.7104002410862443
+2025-10-30,Baseline,Name,Financial services nec,Short-Run,0
+2025-10-30,Baseline,Name,Financial services nec,Long-Run,0.6808002310409842
+2025-10-30,Baseline,Name,Insurance,Short-Run,0
+2025-10-30,Baseline,Name,Insurance,Long-Run,0.6265335459580071
+2025-10-30,Baseline,Name,Business services nec,Short-Run,0
+2025-10-30,Baseline,Name,Business services nec,Long-Run,0.7942669362144816
+2025-10-30,Baseline,Name,Transport nec,Short-Run,0
+2025-10-30,Baseline,Name,Transport nec,Long-Run,0.7202669111013311
+2025-10-30,Baseline,Name,Warehousing and support,Short-Run,0
+2025-10-30,Baseline,Name,Warehousing and support,Long-Run,0.9669336614784992
+2025-10-30,Baseline,Name,Recreational and other services,Short-Run,0
+2025-10-30,Baseline,Name,Recreational and other services,Long-Run,0.799200271222025
+2025-10-30,Baseline,Name,Human health and social work,Short-Run,0
+2025-10-30,Baseline,Name,Human health and social work,Long-Run,0.8386669512823718
+2025-10-30,Baseline,Name,Public Administration,Short-Run,0
+2025-10-30,Baseline,Name,Public Administration,Long-Run,0.8436002862899151
+2025-10-30,Baseline,Name,Real estate activities,Short-Run,0
+2025-10-30,Baseline,Name,Real estate activities,Long-Run,0.7252002461088743
+2025-10-30,Baseline,Name,Trade,Short-Run,0
+2025-10-30,Baseline,Name,Trade,Long-Run,0.7942669362144816
+2025-10-30,Baseline,Name,Dwellings,Short-Run,0
+2025-10-30,Baseline,Name,Dwellings,Long-Run,0.6709335610258975
+2025-10-30,Baseline,Name,Education,Short-Run,0
+2025-10-30,Baseline,Name,Education,Long-Run,0.7202669111013311
