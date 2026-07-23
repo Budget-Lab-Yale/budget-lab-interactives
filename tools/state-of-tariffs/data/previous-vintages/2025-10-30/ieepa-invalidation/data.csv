@@ -1,0 +1,31 @@
+category,value,country_code,substitution,scenario,measure
+China,2.7470098881686336,chn,presub,baseline,level
+China,2.4245400422171604,chn,postsub,baseline,level
+Canada,0.9997212009496644,ca,presub,baseline,level
+Canada,1.1828920362994506,ca,postsub,baseline,level
+Mexico,1.651800551973195,mx,presub,baseline,level
+Mexico,2.0592157941393596,mx,postsub,baseline,level
+Rest of World,10.059385178723165,row,presub,baseline,level
+Rest of World,9.276713766408998,row,postsub,baseline,level
+Total,15.457916819814658,total,presub,baseline,level
+Total,14.943361639064968,total,postsub,baseline,level
+China,0.8776529599261964,chn,presub,ieepa_invalidation,level
+China,0.846469602871933,chn,postsub,ieepa_invalidation,level
+Canada,0.8028545436916565,ca,presub,ieepa_invalidation,level
+Canada,0.8627171616790228,ca,postsub,ieepa_invalidation,level
+Mexico,1.3470255358299603,mx,presub,ieepa_invalidation,level
+Mexico,1.4618661139944005,mx,postsub,ieepa_invalidation,level
+Rest of World,3.6314610095910123,row,presub,ieepa_invalidation,level
+Rest of World,3.5206750208705837,row,postsub,ieepa_invalidation,level
+Total,6.658994049038825,total,presub,ieepa_invalidation,level
+Total,6.691727899415939,total,postsub,ieepa_invalidation,level
+China,-1.8693569282424372,chn,presub,ieepa_invalidation,delta_vs_default
+China,-1.5780704393452274,chn,postsub,ieepa_invalidation,delta_vs_default
+Canada,-0.1968666572580079,ca,presub,ieepa_invalidation,delta_vs_default
+Canada,-0.3201748746204278,ca,postsub,ieepa_invalidation,delta_vs_default
+Mexico,-0.30477501614323477,mx,presub,ieepa_invalidation,delta_vs_default
+Mexico,-0.5973496801449591,mx,postsub,ieepa_invalidation,delta_vs_default
+Rest of World,-6.427924169132153,row,presub,ieepa_invalidation,delta_vs_default
+Rest of World,-5.756038745538413,row,postsub,ieepa_invalidation,delta_vs_default
+Total,-8.798922770775832,total,presub,ieepa_invalidation,delta_vs_default
+Total,-8.251633739649028,total,postsub,ieepa_invalidation,delta_vs_default
