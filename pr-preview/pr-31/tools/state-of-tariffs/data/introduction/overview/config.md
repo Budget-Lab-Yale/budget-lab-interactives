@@ -21,6 +21,8 @@ as separate reports. The tool has five tabs:
 
 ## Changes since the last update
 
+{date: updated}
+
 One major tariff action has been finalized since our last update (published July 21, 2026) and is
 now reflected in our current-law (default) scenario:
 

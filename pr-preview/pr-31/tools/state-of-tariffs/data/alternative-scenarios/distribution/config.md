@@ -17,6 +17,7 @@ total:
   value: Total
   annotation:
     label: All households ({value})
+    value_format: {decimals: 2}
     style: dashed
     labelSide: bottom
     # Flip the Current law total label above its line (default is below). Per-vintage visual tweak —
