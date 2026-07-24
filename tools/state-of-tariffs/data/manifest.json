@@ -1298,7 +1298,7 @@
               "style": "dashed",
               "labelSide": "bottom",
               "series_overrides": {
-                "Current Law ex-S338": {
+                "Current law": {
                   "labelSide": "top"
                 }
               }
