@@ -10,7 +10,7 @@ spec:
   orientation: horizontal
   xAxisType: categorical
   yAxisPolicy:
-    max: 3
+    max: 4
   columns:
     x: category
     facet: substitution
