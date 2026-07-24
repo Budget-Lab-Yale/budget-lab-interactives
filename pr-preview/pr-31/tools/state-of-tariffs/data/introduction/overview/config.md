@@ -34,20 +34,30 @@ now reflected in our current-law (default) scenario:
 
 The final action differs from the June proposal:
 
-**Three rate tiers instead of two.** A 10% rate applies to 17 economies that have acted against
-forced-labor imports (the final action adds Honduras, India, Jordan, Sri Lanka, and Trinidad and
-Tobago); a 12.5% rate applies to most other economies (including China, Hong Kong, and Vietnam);
-and a new lower-rate tier applies to the European Union, Taiwan, Japan, South Korea, and
-Switzerland. For this lower-rate group, the Section 301 rate is set so that the total duty,
-including a product's existing tariff, reaches a ceiling of:
+- **Three rate tiers instead of two.** A 10% rate applies to 17 economies that have acted against
+  forced-labor imports (the final action adds Honduras, India, Jordan, Sri Lanka, and Trinidad and
+  Tobago); a 12.5% rate applies to most other economies (including China, Hong Kong, and Vietnam);
+  and a new lower-rate tier applies to the European Union, Taiwan, Japan, South Korea, and
+  Switzerland. For this lower-rate group, the Section 301 rate is set so that the total duty,
+  including a product's existing tariff, reaches a ceiling of:
 
-- 10% for the European Union and Taiwan.
-- 12.5% for Japan, South Korea, and Switzerland.
+    - 10% for the European Union and Taiwan.
+    - 12.5% for Japan, South Korea, and Switzerland.
 
-This treatment represents a smaller incremental tariff burden than the flat surcharge from the
-June proposal.
+    This treatment represents a smaller incremental tariff burden than the flat surcharge from the
+    June proposal.
 
-- **Broader exemptions.** Goods subject to Section 232 tariffs—including steel, aluminum, autos, and other covered articles—are fully excluded. The action also carries an expanded, country-specific exemption list, including duty-free textile and apparel trade under the CAFTA-DR and U.S.–Jordan free trade agreements.
+- **Broader exemptions.** Goods subject to Section 232 tariffs—including steel, aluminum, autos,
+  and other covered articles—are fully excluded. The action also carries an expanded,
+  country-specific exemption list, including duty-free textile and apparel trade under the
+  CAFTA-DR and U.S.–Jordan free trade agreements.
 
 To help readers isolate the impact of this action, we have added alternative scenarios that hold
 everything else fixed but remove it (see the Alternative Scenarios tab).
+
+We also made one modeling change this update:
+
+- **Correction to the statutory tariff rate calculation.** We fixed an error in how we compute
+  statutory tariff rates, in which the Section 232 tariffs on metals were over-applied to certain
+  products. This update affects both the historical daily rate estimates and the projected future
+  rates.
