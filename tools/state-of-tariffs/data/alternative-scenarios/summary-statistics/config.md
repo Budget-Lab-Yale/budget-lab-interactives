@@ -32,16 +32,15 @@ These figures show the same projected effects as the Default Scenario tab, but a
 modeled policy scenarios. Use the **View** toggle to switch between each scenario's own effects
 (levels) and its effect relative to our default scenario (change vs. default).
 
-Each alternative is a variation on current law (which now includes the Brazil and Canada tariffs
-described in the Introduction). We show the following two alternative scenarios:
+Each alternative is a variation on current law, which now includes the Brazil, Canada, and
+forced-labor Section 301 tariffs described in the Introduction. We show the following two
+alternative scenarios:
 
-- **Current Law ex-S338.** This scenario is identical to current law except that it omits the
-  newly proclaimed Section 338 tariffs on imports from Canada. Comparing the default scenario
-  against it isolates the projected effect of those tariffs.
-- **New S301.** This scenario takes everything in current law and adds a further action on top:
-  Section 122 expires as scheduled at the end of July and is replaced with new Section 301 tariffs
-  based on the U.S. Trade Representative's June
-  ["forced labor" investigation announcement](https://ustr.gov/about/policy-offices/press-office/press-releases/2026/june/ustr-makes-findings-and-proposes-action-60-section-301-investigations-relating-failures-take-action).
-  The proposed tariffs cover most imports from 60 economies. The rate is 10% for countries that
-  have taken steps to block imports made with forced labor and 12.5% for the others. We model the
-  country rates and product list announced by USTR.
+- **Current law excluding new Section 301.** This scenario is identical to current law except that
+  it omits the newly finalized forced-labor Section 301 tariffs; the Section 122 surcharge still
+  ends at 12:01 a.m. on July 24 with nothing in its place. Comparing the default against it
+  isolates the effect of the forced-labor action.
+- **Section 122 regime.** Instead of letting the Section 122 tariffs expire and replacing them with
+  the forced-labor Section 301 action, this scenario assumes the Section 122 10% tariff is extended
+  and stays in force. Comparing it against the default contrasts the two blanket-tariff regimes:
+  the expiring Section 122 regime and the Section 301 regime that actually took effect.

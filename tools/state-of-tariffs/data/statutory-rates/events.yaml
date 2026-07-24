@@ -13,6 +13,10 @@ projection:
     label: Section 122 expiry
     color: red
     style: dashed
+  - x: '2026-07-23'
+    label: 'Section 301 "forced labor" enacted'
+    color: red
+    style: dashed
   bands:
   - start: today
     end: '2026-12-31'
