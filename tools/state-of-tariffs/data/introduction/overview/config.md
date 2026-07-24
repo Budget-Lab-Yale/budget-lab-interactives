@@ -21,13 +21,33 @@ as separate reports. The tool has five tabs:
 
 ## Changes since the last update
 
-Two tariff actions have been formally proclaimed since our last update (published on 07-20-2026) and are now reflected in
-our current-law (default) scenario:
+One major tariff action has been finalized since our last update (published July 21, 2026) and is
+now reflected in our current-law (default) scenario:
 
-- **Brazil 25% tariff moved into current law.** The 25% tariff on imports from Brazil has been
-  formally proclaimed. In our previous update it appeared only as part of the Section 301 alternative scenario. But it is now part of current law, the default scenario. 
-- **New Section 338 tariffs on Canada.** The administration has proclaimed new 50% tariffs
-  on certain imports from Canada under Section 338 authority, scheduled to take effect August 19, 2026. These tariffs cover alcoholic beverages, dairy products, and a broad range of consumer goods; we estimate that these tariffs cover about 5% of Canadian imports per 2024 trade patterns. Crucially, the tariff applies regardless of USMCA eligibility. 
-  
-  Because officially scheduled policy is treated as current law, these tariffs are included in the
-  default scenario. To help readers interested in the incremental impact of this action, we've added a **Current Law ex-S338** alternative scenario that is identical to current law but omits these new tariffs on Canadian imports. Comparing this scenario to the default current law scenario shows the incremental impact of this action.
+- **Section 301 "forced labor" tariffs finalized and moved into current law.** In our previous
+  update, the U.S. Trade Representative's forced-labor Section 301 action appeared only as a
+  proposed alternative scenario ("New S301"), based on USTR's June announcement. On July 23, 2026,
+  USTR issued the final action, effective July 24, 2026, imposing an additional tariff on nearly
+  all imports from the 60 investigated economies and replacing the Section 122 surcharge at 12:01
+  a.m. on July 24, when that temporary measure ends. Because it is now official policy, it is part
+  of the default scenario.
+
+The final action differs from the June proposal:
+
+**Three rate tiers instead of two.** A 10% rate applies to 17 economies that have acted against
+forced-labor imports (the final action adds Honduras, India, Jordan, Sri Lanka, and Trinidad and
+Tobago); a 12.5% rate applies to most other economies (including China, Hong Kong, and Vietnam);
+and a new lower-rate tier applies to the European Union, Taiwan, Japan, South Korea, and
+Switzerland. For this lower-rate group, the Section 301 rate is set so that the total duty,
+including a product's existing tariff, reaches a ceiling of:
+
+- 10% for the European Union and Taiwan.
+- 12.5% for Japan, South Korea, and Switzerland.
+
+This treatment represents a smaller incremental tariff burden than the flat surcharge from the
+June proposal.
+
+- **Broader exemptions.** Goods subject to Section 232 tariffs—including steel, aluminum, autos, and other covered articles—are fully excluded. The action also carries an expanded, country-specific exemption list, including duty-free textile and apparel trade under the CAFTA-DR and U.S.–Jordan free trade agreements.
+
+To help readers isolate the impact of this action, we have added alternative scenarios that hold
+everything else fixed but remove it (see the Alternative Scenarios tab).

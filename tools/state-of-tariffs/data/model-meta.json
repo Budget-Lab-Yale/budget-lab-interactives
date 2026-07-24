@@ -1,30 +1,30 @@
 {
   "scenarios": [
     {
-      "id": "tracker_actual_2026-07-21",
+      "id": "tracker_actual_2026-07-23",
       "label": "Current law (Section 122 expires)",
       "short_label": "Current law",
       "default": true
     },
     {
-      "id": "tracker_no_s338_2026-07-21",
-      "label": "Current Law excluding new Canada S338 actions",
-      "short_label": "Current Law ex-S338",
+      "id": "tracker_no_fl_301_2026-07-23",
+      "label": "Excluding new forced-labor Section 301 actions",
+      "short_label": "Ex forced-labor 301",
       "default": false
     },
     {
-      "id": "tracker_new_301_2026-07-21",
-      "label": "New Forced Labor S301 actions (S122 replaced)",
-      "short_label": "New S301",
+      "id": "tracker_no_fl_301_keep_s122_2026-07-23",
+      "label": "Excluding forced-labor 301; Section 122 retained",
+      "short_label": "Ex FL-301, keep §122",
       "default": false
     }
   ],
-  "default_scenario": "tracker_actual_2026-07-21",
+  "default_scenario": "tracker_actual_2026-07-23",
   "provenance": {
     "version": 1,
-    "interface_vintage": "2026-07-21-08-484f",
-    "published_at": "2026-07-21T21:14:56-0400",
-    "git_commit": "79804b15204a9c94214afbc22fbc5f8db20b87d6",
-    "tracker_vintage": "2026-07-21-08"
+    "interface_vintage": "2026-07-23-21",
+    "published_at": "2026-07-24T07:16:39-0400",
+    "git_commit": "50a07e510ed9c4280fd88e2fba29a37757c55f28",
+    "tracker_vintage": "2026-07-23-21"
   }
 }
