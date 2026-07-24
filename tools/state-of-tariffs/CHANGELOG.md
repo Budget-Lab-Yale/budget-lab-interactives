@@ -4,10 +4,12 @@ Entries are added at release.
 
 ## Unreleased
 
-- **State of Tariffs: July 23, 2026 vintage.** Refreshed all figures to the published
-  `2026-07-23-21` Tariff-Model artifact. The default scenario now incorporates the finalized
+- **State of Tariffs: July 24, 2026 vintage.** Refreshed all figures to the published
+  `2026072409` Tariff-Model artifact. The default scenario now incorporates the finalized
   Section 301 "forced-labor" tariffs (replacing the Section 122 surcharge on July 24); adds two
-  alternatives — current law excluding new Section 301, and a Section 122-retained regime. July 21
+  alternatives — current law excluding new Section 301, and a Section 122-retained regime. Also
+  corrects an error in the statutory tariff rate calculation in which the Section 232 metal tariffs
+  were over-applied to certain products (revises both historical and projected rates). July 21
   release archived to previous-vintages.
 
 - Cache-busting is now automatic: `build-manifest.py` stamps a content hash of the runtime JS+CSS

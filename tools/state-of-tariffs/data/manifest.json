@@ -1,7 +1,7 @@
 {
   "release": {
     "updated": "July 24, 2026",
-    "vintage": "2026-07-23-21"
+    "vintage": "2026072409"
   },
   "data_base_url": "./data/",
   "tabs": [
@@ -147,18 +147,18 @@
             {
               "id": "scenario",
               "label": "Scenario",
-              "default": "tracker_actual_2026-07-23",
+              "default": "tracker_actual_2026-07-24",
               "options": [
                 {
-                  "id": "tracker_actual_2026-07-23",
+                  "id": "tracker_actual_2026-07-24",
                   "label": "Current law"
                 },
                 {
-                  "id": "tracker_no_fl_301_2026-07-23",
+                  "id": "tracker_no_fl_301_2026-07-24",
                   "label": "Ex forced-labor 301"
                 },
                 {
-                  "id": "tracker_no_fl_301_keep_s122_2026-07-23",
+                  "id": "tracker_no_fl_301_keep_s122_2026-07-24",
                   "label": "Ex FL-301, keep §122"
                 }
               ]
@@ -257,18 +257,18 @@
             {
               "id": "scenario",
               "label": "Scenario",
-              "default": "tracker_actual_2026-07-23",
+              "default": "tracker_actual_2026-07-24",
               "options": [
                 {
-                  "id": "tracker_actual_2026-07-23",
+                  "id": "tracker_actual_2026-07-24",
                   "label": "Current law"
                 },
                 {
-                  "id": "tracker_no_fl_301_2026-07-23",
+                  "id": "tracker_no_fl_301_2026-07-24",
                   "label": "Ex forced-labor 301"
                 },
                 {
-                  "id": "tracker_no_fl_301_keep_s122_2026-07-23",
+                  "id": "tracker_no_fl_301_keep_s122_2026-07-24",
                   "label": "Ex FL-301, keep §122"
                 }
               ]
@@ -365,18 +365,18 @@
             {
               "id": "scenario",
               "label": "Scenario",
-              "default": "tracker_actual_2026-07-23",
+              "default": "tracker_actual_2026-07-24",
               "options": [
                 {
-                  "id": "tracker_actual_2026-07-23",
+                  "id": "tracker_actual_2026-07-24",
                   "label": "Current law"
                 },
                 {
-                  "id": "tracker_no_fl_301_2026-07-23",
+                  "id": "tracker_no_fl_301_2026-07-24",
                   "label": "Ex forced-labor 301"
                 },
                 {
-                  "id": "tracker_no_fl_301_keep_s122_2026-07-23",
+                  "id": "tracker_no_fl_301_keep_s122_2026-07-24",
                   "label": "Ex FL-301, keep §122"
                 }
               ]
@@ -463,18 +463,18 @@
             {
               "id": "scenario",
               "label": "Scenario",
-              "default": "tracker_actual_2026-07-23",
+              "default": "tracker_actual_2026-07-24",
               "options": [
                 {
-                  "id": "tracker_actual_2026-07-23",
+                  "id": "tracker_actual_2026-07-24",
                   "label": "Current law"
                 },
                 {
-                  "id": "tracker_no_fl_301_2026-07-23",
+                  "id": "tracker_no_fl_301_2026-07-24",
                   "label": "Ex forced-labor 301"
                 },
                 {
-                  "id": "tracker_no_fl_301_keep_s122_2026-07-23",
+                  "id": "tracker_no_fl_301_keep_s122_2026-07-24",
                   "label": "Ex FL-301, keep §122"
                 }
               ]
@@ -1016,9 +1016,9 @@
             ],
             "value": "value",
             "header_labels": {
-              "tracker_actual_2026-07-23": "Current law",
-              "tracker_no_fl_301_2026-07-23": "Ex forced-labor 301",
-              "tracker_no_fl_301_keep_s122_2026-07-23": "Ex FL-301, keep §122",
+              "tracker_actual_2026-07-24": "Current law",
+              "tracker_no_fl_301_2026-07-24": "Ex forced-labor 301",
+              "tracker_no_fl_301_keep_s122_2026-07-24": "Ex FL-301, keep §122",
               "level": "Levels",
               "delta_vs_default": "Change vs. default"
             },
@@ -1069,9 +1069,9 @@
               }
             },
             "column_order": [
-              "tracker_actual_2026-07-23",
-              "tracker_no_fl_301_2026-07-23",
-              "tracker_no_fl_301_keep_s122_2026-07-23"
+              "tracker_actual_2026-07-24",
+              "tracker_no_fl_301_2026-07-24",
+              "tracker_no_fl_301_keep_s122_2026-07-24"
             ]
           },
           "body_html": "<h2>Alternative Scenarios</h2>\n<p>These figures show the same projected effects as the Default Scenario tab, but across <strong>all</strong>\nmodeled policy scenarios. Use the <strong>View</strong> toggle to switch between each scenario's own effects\n(levels) and its effect relative to our default scenario (change vs. default).</p>\n<p>Each alternative is a variation on current law, which now includes the Brazil, Canada, and\nforced-labor Section 301 tariffs described in the Introduction. We show the following two\nalternative scenarios:</p>\n<ul>\n<li><strong>Current law excluding new Section 301.</strong> This scenario is identical to current law except that\n  it omits the newly finalized forced-labor Section 301 tariffs; the Section 122 surcharge still\n  ends at 12:01 a.m. on July 24 with nothing in its place. Comparing the default against it\n  isolates the effect of the forced-labor action.</li>\n<li><strong>Section 122 regime.</strong> Instead of letting the Section 122 tariffs expire and replacing them with\n  the forced-labor Section 301 action, this scenario assumes the Section 122 10% tariff is extended\n  and stays in force. Comparing it against the default contrasts the two blanket-tariff regimes:\n  the expiring Section 122 regime and the Section 301 regime that actually took effect.</li>\n</ul>",
@@ -1127,14 +1127,14 @@
             },
             "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
             "row_labels": {
-              "tracker_actual_2026-07-23": "Current law",
-              "tracker_no_fl_301_2026-07-23": "Ex forced-labor 301",
-              "tracker_no_fl_301_keep_s122_2026-07-23": "Ex FL-301, keep §122"
+              "tracker_actual_2026-07-24": "Current law",
+              "tracker_no_fl_301_2026-07-24": "Ex forced-labor 301",
+              "tracker_no_fl_301_keep_s122_2026-07-24": "Ex FL-301, keep §122"
             },
             "group_labels": {
-              "tracker_actual_2026-07-23": "Current law",
-              "tracker_no_fl_301_2026-07-23": "Ex forced-labor 301",
-              "tracker_no_fl_301_keep_s122_2026-07-23": "Ex FL-301, keep §122"
+              "tracker_actual_2026-07-24": "Current law",
+              "tracker_no_fl_301_2026-07-24": "Ex forced-labor 301",
+              "tracker_no_fl_301_keep_s122_2026-07-24": "Ex FL-301, keep §122"
             }
           },
           "body_html": "<p>The average effective U.S. tariff rate by trading partner and scenario, as both levels and change\nvs. our default scenario. Click a partner to expand or collapse its scenarios.</p>",
@@ -1195,19 +1195,19 @@
               }
             },
             "series_order": [
-              "tracker_actual_2026-07-23",
-              "tracker_no_fl_301_2026-07-23",
-              "tracker_no_fl_301_keep_s122_2026-07-23"
+              "tracker_actual_2026-07-24",
+              "tracker_no_fl_301_2026-07-24",
+              "tracker_no_fl_301_keep_s122_2026-07-24"
             ],
             "series_labels": {
-              "tracker_actual_2026-07-23": "Current law",
-              "tracker_no_fl_301_2026-07-23": "Ex forced-labor 301",
-              "tracker_no_fl_301_keep_s122_2026-07-23": "Ex FL-301, keep §122"
+              "tracker_actual_2026-07-24": "Current law",
+              "tracker_no_fl_301_2026-07-24": "Ex forced-labor 301",
+              "tracker_no_fl_301_keep_s122_2026-07-24": "Ex FL-301, keep §122"
             },
             "series_colors": {
-              "tracker_actual_2026-07-23": "blue",
-              "tracker_no_fl_301_2026-07-23": "amber",
-              "tracker_no_fl_301_keep_s122_2026-07-23": "violet"
+              "tracker_actual_2026-07-24": "blue",
+              "tracker_no_fl_301_2026-07-24": "amber",
+              "tracker_no_fl_301_keep_s122_2026-07-24": "violet"
             }
           },
           "body_html": "<p>Consumer-price effects by PCE spending category, split into pre- and post-substitution panes,\ncompared across scenarios. Use the <strong>View</strong> toggle for levels or change vs. default.</p>",
@@ -1255,19 +1255,19 @@
               ]
             },
             "series_order": [
-              "tracker_actual_2026-07-23",
-              "tracker_no_fl_301_2026-07-23",
-              "tracker_no_fl_301_keep_s122_2026-07-23"
+              "tracker_actual_2026-07-24",
+              "tracker_no_fl_301_2026-07-24",
+              "tracker_no_fl_301_keep_s122_2026-07-24"
             ],
             "series_labels": {
-              "tracker_actual_2026-07-23": "Current law",
-              "tracker_no_fl_301_2026-07-23": "Ex forced-labor 301",
-              "tracker_no_fl_301_keep_s122_2026-07-23": "Ex FL-301, keep §122"
+              "tracker_actual_2026-07-24": "Current law",
+              "tracker_no_fl_301_2026-07-24": "Ex forced-labor 301",
+              "tracker_no_fl_301_keep_s122_2026-07-24": "Ex FL-301, keep §122"
             },
             "series_colors": {
-              "tracker_actual_2026-07-23": "blue",
-              "tracker_no_fl_301_2026-07-23": "amber",
-              "tracker_no_fl_301_keep_s122_2026-07-23": "violet"
+              "tracker_actual_2026-07-24": "blue",
+              "tracker_no_fl_301_2026-07-24": "amber",
+              "tracker_no_fl_301_keep_s122_2026-07-24": "violet"
             }
           },
           "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2025 dollars,\ncompared across scenarios. Use the sidebar to switch between pre- and post-substitution, and the\n<strong>View</strong> toggle for levels or change vs. default.</p>",
@@ -1328,19 +1328,19 @@
               "value": "value"
             },
             "series_order": [
-              "tracker_actual_2026-07-23",
-              "tracker_no_fl_301_2026-07-23",
-              "tracker_no_fl_301_keep_s122_2026-07-23"
+              "tracker_actual_2026-07-24",
+              "tracker_no_fl_301_2026-07-24",
+              "tracker_no_fl_301_keep_s122_2026-07-24"
             ],
             "series_labels": {
-              "tracker_actual_2026-07-23": "Current law",
-              "tracker_no_fl_301_2026-07-23": "Ex forced-labor 301",
-              "tracker_no_fl_301_keep_s122_2026-07-23": "Ex FL-301, keep §122"
+              "tracker_actual_2026-07-24": "Current law",
+              "tracker_no_fl_301_2026-07-24": "Ex forced-labor 301",
+              "tracker_no_fl_301_keep_s122_2026-07-24": "Ex FL-301, keep §122"
             },
             "series_colors": {
-              "tracker_actual_2026-07-23": "blue",
-              "tracker_no_fl_301_2026-07-23": "amber",
-              "tracker_no_fl_301_keep_s122_2026-07-23": "violet"
+              "tracker_actual_2026-07-24": "blue",
+              "tracker_no_fl_301_2026-07-24": "amber",
+              "tracker_no_fl_301_keep_s122_2026-07-24": "violet"
             }
           },
           "body_html": "<p>The projected path of real GDP relative to baseline, compared across scenarios. Use the <strong>View</strong>\ntoggle for levels or change vs. default.</p>",
@@ -1399,19 +1399,19 @@
               "Advanced Manufacturing"
             ],
             "series_order": [
-              "tracker_actual_2026-07-23",
-              "tracker_no_fl_301_2026-07-23",
-              "tracker_no_fl_301_keep_s122_2026-07-23"
+              "tracker_actual_2026-07-24",
+              "tracker_no_fl_301_2026-07-24",
+              "tracker_no_fl_301_keep_s122_2026-07-24"
             ],
             "series_labels": {
-              "tracker_actual_2026-07-23": "Current law",
-              "tracker_no_fl_301_2026-07-23": "Ex forced-labor 301",
-              "tracker_no_fl_301_keep_s122_2026-07-23": "Ex FL-301, keep §122"
+              "tracker_actual_2026-07-24": "Current law",
+              "tracker_no_fl_301_2026-07-24": "Ex forced-labor 301",
+              "tracker_no_fl_301_keep_s122_2026-07-24": "Ex FL-301, keep §122"
             },
             "series_colors": {
-              "tracker_actual_2026-07-23": "blue",
-              "tracker_no_fl_301_2026-07-23": "amber",
-              "tracker_no_fl_301_keep_s122_2026-07-23": "violet"
+              "tracker_actual_2026-07-24": "blue",
+              "tracker_no_fl_301_2026-07-24": "amber",
+              "tracker_no_fl_301_keep_s122_2026-07-24": "violet"
             }
           },
           "body_html": "<p>The long-run change in real GDP by sector or trading partner, compared across scenarios. In the sector\nview, manufacturing sub-sectors appear in a separate \"Manufacturing detail\" pane. The total is the\nleft-most bar.</p>",
@@ -1464,14 +1464,14 @@
                   }
                 },
                 "row_labels": {
-                  "tracker_actual_2026-07-23": "Current law",
-                  "tracker_no_fl_301_2026-07-23": "Ex forced-labor 301",
-                  "tracker_no_fl_301_keep_s122_2026-07-23": "Ex FL-301, keep §122"
+                  "tracker_actual_2026-07-24": "Current law",
+                  "tracker_no_fl_301_2026-07-24": "Ex forced-labor 301",
+                  "tracker_no_fl_301_keep_s122_2026-07-24": "Ex FL-301, keep §122"
                 },
                 "group_labels": {
-                  "tracker_actual_2026-07-23": "Current law",
-                  "tracker_no_fl_301_2026-07-23": "Ex forced-labor 301",
-                  "tracker_no_fl_301_keep_s122_2026-07-23": "Ex FL-301, keep §122"
+                  "tracker_actual_2026-07-24": "Current law",
+                  "tracker_no_fl_301_2026-07-24": "Ex forced-labor 301",
+                  "tracker_no_fl_301_keep_s122_2026-07-24": "Ex FL-301, keep §122"
                 }
               }
             },
@@ -1504,19 +1504,19 @@
                   "2035"
                 ],
                 "series_order": [
-                  "tracker_actual_2026-07-23",
-                  "tracker_no_fl_301_2026-07-23",
-                  "tracker_no_fl_301_keep_s122_2026-07-23"
+                  "tracker_actual_2026-07-24",
+                  "tracker_no_fl_301_2026-07-24",
+                  "tracker_no_fl_301_keep_s122_2026-07-24"
                 ],
                 "series_labels": {
-                  "tracker_actual_2026-07-23": "Current law",
-                  "tracker_no_fl_301_2026-07-23": "Ex forced-labor 301",
-                  "tracker_no_fl_301_keep_s122_2026-07-23": "Ex FL-301, keep §122"
+                  "tracker_actual_2026-07-24": "Current law",
+                  "tracker_no_fl_301_2026-07-24": "Ex forced-labor 301",
+                  "tracker_no_fl_301_keep_s122_2026-07-24": "Ex FL-301, keep §122"
                 },
                 "series_colors": {
-                  "tracker_actual_2026-07-23": "blue",
-                  "tracker_no_fl_301_2026-07-23": "amber",
-                  "tracker_no_fl_301_keep_s122_2026-07-23": "violet"
+                  "tracker_actual_2026-07-24": "blue",
+                  "tracker_no_fl_301_2026-07-24": "amber",
+                  "tracker_no_fl_301_keep_s122_2026-07-24": "violet"
                 }
               },
               "total": {

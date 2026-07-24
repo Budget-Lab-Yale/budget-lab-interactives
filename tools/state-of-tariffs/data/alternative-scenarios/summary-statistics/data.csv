@@ -1,61 +1,61 @@
 category,series,value,unit,metric,scenario,measure
-Tariff rate,Average statutory rate,12.5049269371539,pct,etr_statutory_level,tracker_actual_2026-07-23,level
-Tariff rate,"Effective rate, pre-substitution",10.774551780224185,pct,etr_presub_level,tracker_actual_2026-07-23,level
-Tariff rate,"Effective rate, post-substitution",8.974112123065307,pct,etr_postsub_level,tracker_actual_2026-07-23,level
-Consumer price increase,Pre-substitution,0.778056287368543,pct,price_presub,tracker_actual_2026-07-23,level
-Consumer price increase,Post-substitution,0.6631199703802942,pct,price_postsub,tracker_actual_2026-07-23,level
-Household cost,Pre-substitution,1053.776685096503,usd,hh_cost_presub,tracker_actual_2026-07-23,level
-Household cost,Post-substitution,898.110298127628,usd,hh_cost_postsub,tracker_actual_2026-07-23,level
-Real GDP,2025 Q4/Q4,-0.2964486812438216,pp,gdp_2025_q4q4,tracker_actual_2026-07-23,level
-Real GDP,2026 Q4/Q4,0.21929022711140167,pp,gdp_2026_q4q4,tracker_actual_2026-07-23,level
-Real GDP,Long-run,-0.1420358568429947,pct,gdp_long_run,tracker_actual_2026-07-23,level
-Tariff rate,Average statutory rate,9.76945647906406,pct,etr_statutory_level,tracker_no_fl_301_2026-07-23,level
-Tariff rate,"Effective rate, pre-substitution",8.213476401334235,pct,etr_presub_level,tracker_no_fl_301_2026-07-23,level
-Tariff rate,"Effective rate, post-substitution",6.838908559866538,pct,etr_postsub_level,tracker_no_fl_301_2026-07-23,level
-Consumer price increase,Pre-substitution,0.4053566079682058,pct,price_presub,tracker_no_fl_301_2026-07-23,level
-Consumer price increase,Post-substitution,0.34636935710901967,pct,price_postsub,tracker_no_fl_301_2026-07-23,level
-Household cost,Pre-substitution,549.0031371269765,usd,hh_cost_presub,tracker_no_fl_301_2026-07-23,level
-Household cost,Post-substitution,469.1125293618524,usd,hh_cost_postsub,tracker_no_fl_301_2026-07-23,level
-Real GDP,2025 Q4/Q4,-0.28252887718158703,pp,gdp_2025_q4q4,tracker_no_fl_301_2026-07-23,level
-Real GDP,2026 Q4/Q4,0.27801183501614535,pp,gdp_2026_q4q4,tracker_no_fl_301_2026-07-23,level
-Real GDP,Long-run,-0.07359795272350311,pct,gdp_long_run,tracker_no_fl_301_2026-07-23,level
-Tariff rate,Average statutory rate,12.796246670671875,pct,etr_statutory_level,tracker_no_fl_301_keep_s122_2026-07-23,level
-Tariff rate,"Effective rate, pre-substitution",11.042982607235905,pct,etr_presub_level,tracker_no_fl_301_keep_s122_2026-07-23,level
-Tariff rate,"Effective rate, post-substitution",9.34181945803419,pct,etr_postsub_level,tracker_no_fl_301_keep_s122_2026-07-23,level
-Consumer price increase,Pre-substitution,0.7965422845143846,pct,price_presub,tracker_no_fl_301_keep_s122_2026-07-23,level
-Consumer price increase,Post-substitution,0.6992233165849514,pct,price_postsub,tracker_no_fl_301_keep_s122_2026-07-23,level
-Household cost,Pre-substitution,1078.8135790967194,usd,hh_cost_presub,tracker_no_fl_301_keep_s122_2026-07-23,level
-Household cost,Post-substitution,947.0076145584304,usd,hh_cost_postsub,tracker_no_fl_301_keep_s122_2026-07-23,level
-Real GDP,2025 Q4/Q4,-0.2953623435316244,pp,gdp_2025_q4q4,tracker_no_fl_301_keep_s122_2026-07-23,level
-Real GDP,2026 Q4/Q4,0.21673433357882743,pp,gdp_2026_q4q4,tracker_no_fl_301_keep_s122_2026-07-23,level
-Real GDP,Long-run,-0.13526566326618197,pct,gdp_long_run,tracker_no_fl_301_keep_s122_2026-07-23,level
-Tariff rate,Average statutory rate,-2.735470458089841,pct,etr_statutory_level,tracker_no_fl_301_2026-07-23,delta_vs_default
-Tariff rate,"Effective rate, pre-substitution",-2.5610753788899494,pct,etr_presub_level,tracker_no_fl_301_2026-07-23,delta_vs_default
-Tariff rate,"Effective rate, post-substitution",-2.135203563198769,pct,etr_postsub_level,tracker_no_fl_301_2026-07-23,delta_vs_default
-Consumer price increase,Pre-substitution,-0.37269967940033727,pct,price_presub,tracker_no_fl_301_2026-07-23,delta_vs_default
-Consumer price increase,Post-substitution,-0.3167506132712746,pct,price_postsub,tracker_no_fl_301_2026-07-23,delta_vs_default
-Household cost,Pre-substitution,-504.77354796952636,usd,hh_cost_presub,tracker_no_fl_301_2026-07-23,delta_vs_default
-Household cost,Post-substitution,-428.99776876577556,usd,hh_cost_postsub,tracker_no_fl_301_2026-07-23,delta_vs_default
-Real GDP,2025 Q4/Q4,0.013919804062234586,pp,gdp_2025_q4q4,tracker_no_fl_301_2026-07-23,delta_vs_default
-Real GDP,2026 Q4/Q4,0.05872160790474368,pp,gdp_2026_q4q4,tracker_no_fl_301_2026-07-23,delta_vs_default
-Real GDP,Long-run,0.06843790411949158,pct,gdp_long_run,tracker_no_fl_301_2026-07-23,delta_vs_default
-Tariff rate,Average statutory rate,0.2913197335179749,pct,etr_statutory_level,tracker_no_fl_301_keep_s122_2026-07-23,delta_vs_default
-Tariff rate,"Effective rate, pre-substitution",0.26843082701171994,pct,etr_presub_level,tracker_no_fl_301_keep_s122_2026-07-23,delta_vs_default
-Tariff rate,"Effective rate, post-substitution",0.3677073349688822,pct,etr_postsub_level,tracker_no_fl_301_keep_s122_2026-07-23,delta_vs_default
-Consumer price increase,Pre-substitution,0.018485997145841537,pct,price_presub,tracker_no_fl_301_keep_s122_2026-07-23,delta_vs_default
-Consumer price increase,Post-substitution,0.03610334620465716,pct,price_postsub,tracker_no_fl_301_keep_s122_2026-07-23,delta_vs_default
-Household cost,Pre-substitution,25.036894000216535,usd,hh_cost_presub,tracker_no_fl_301_keep_s122_2026-07-23,delta_vs_default
-Household cost,Post-substitution,48.89731643080245,usd,hh_cost_postsub,tracker_no_fl_301_keep_s122_2026-07-23,delta_vs_default
-Real GDP,2025 Q4/Q4,0.0010863377121972384,pp,gdp_2025_q4q4,tracker_no_fl_301_keep_s122_2026-07-23,delta_vs_default
-Real GDP,2026 Q4/Q4,-0.0025558935325742382,pp,gdp_2026_q4q4,tracker_no_fl_301_keep_s122_2026-07-23,delta_vs_default
-Real GDP,Long-run,0.006770193576812716,pct,gdp_long_run,tracker_no_fl_301_keep_s122_2026-07-23,delta_vs_default
-Revenue (10-year),Conventional,1910.78562773465,usd_bn,revenue_conventional,tracker_actual_2026-07-23,level
-Revenue (10-year),Dynamic,1783.46262773465,usd_bn,revenue_dynamic,tracker_actual_2026-07-23,level
-Revenue (10-year),Conventional,1277.6083321611773,usd_bn,revenue_conventional,tracker_no_fl_301_2026-07-23,level
-Revenue (10-year),Dynamic,1207.1853321611773,usd_bn,revenue_dynamic,tracker_no_fl_301_2026-07-23,level
-Revenue (10-year),Conventional,1982.9403040889065,usd_bn,revenue_conventional,tracker_no_fl_301_keep_s122_2026-07-23,level
-Revenue (10-year),Dynamic,1860.2523040889064,usd_bn,revenue_dynamic,tracker_no_fl_301_keep_s122_2026-07-23,level
-Revenue (10-year),Conventional,-633.1772955734727,usd_bn,revenue_conventional,tracker_no_fl_301_2026-07-23,delta_vs_default
-Revenue (10-year),Dynamic,-576.2772955734727,usd_bn,revenue_dynamic,tracker_no_fl_301_2026-07-23,delta_vs_default
-Revenue (10-year),Conventional,72.15467635425648,usd_bn,revenue_conventional,tracker_no_fl_301_keep_s122_2026-07-23,delta_vs_default
-Revenue (10-year),Dynamic,76.78967635425647,usd_bn,revenue_dynamic,tracker_no_fl_301_keep_s122_2026-07-23,delta_vs_default
+Tariff rate,Average statutory rate,11.799503308306608,pct,etr_statutory_level,tracker_actual_2026-07-24,level
+Tariff rate,"Effective rate, pre-substitution",10.865264086926953,pct,etr_presub_level,tracker_actual_2026-07-24,level
+Tariff rate,"Effective rate, post-substitution",8.991044614042206,pct,etr_postsub_level,tracker_actual_2026-07-24,level
+Consumer price increase,Pre-substitution,0.7940331278302027,pct,price_presub,tracker_actual_2026-07-24,level
+Consumer price increase,Post-substitution,0.6678774840383362,pct,price_postsub,tracker_actual_2026-07-24,level
+Household cost,Pre-substitution,1075.4152506518874,usd,hh_cost_presub,tracker_actual_2026-07-24,level
+Household cost,Post-substitution,904.553735515466,usd,hh_cost_postsub,tracker_actual_2026-07-24,level
+Real GDP,2025 Q4/Q4,-0.29408879795755904,pp,gdp_2025_q4q4,tracker_actual_2026-07-24,level
+Real GDP,2026 Q4/Q4,0.21472354701421725,pp,gdp_2026_q4q4,tracker_actual_2026-07-24,level
+Real GDP,Long-run,-0.1431908905506134,pct,gdp_long_run,tracker_actual_2026-07-24,level
+Tariff rate,Average statutory rate,9.058150747539598,pct,etr_statutory_level,tracker_no_fl_301_2026-07-24,level
+Tariff rate,"Effective rate, pre-substitution",8.292316138446706,pct,etr_presub_level,tracker_no_fl_301_2026-07-24,level
+Tariff rate,"Effective rate, post-substitution",6.827242093614387,pct,etr_postsub_level,tracker_no_fl_301_2026-07-24,level
+Consumer price increase,Pre-substitution,0.4197274503754486,pct,price_presub,tracker_no_fl_301_2026-07-24,level
+Consumer price increase,Post-substitution,0.35501545692358577,pct,price_postsub,tracker_no_fl_301_2026-07-24,level
+Household cost,Pre-substitution,568.4665858771509,usd,hh_cost_presub,tracker_no_fl_301_2026-07-24,level
+Household cost,Post-substitution,480.8225541370797,usd,hh_cost_postsub,tracker_no_fl_301_2026-07-24,level
+Real GDP,2025 Q4/Q4,-0.2801356781819475,pp,gdp_2025_q4q4,tracker_no_fl_301_2026-07-24,level
+Real GDP,2026 Q4/Q4,0.2735449407861523,pp,gdp_2026_q4q4,tracker_no_fl_301_2026-07-24,level
+Real GDP,Long-run,-0.07488849759101868,pct,gdp_long_run,tracker_no_fl_301_2026-07-24,level
+Tariff rate,Average statutory rate,12.087444601218644,pct,etr_statutory_level,tracker_no_fl_301_keep_s122_2026-07-24,level
+Tariff rate,"Effective rate, pre-substitution",11.132638473787493,pct,etr_presub_level,tracker_no_fl_301_keep_s122_2026-07-24,level
+Tariff rate,"Effective rate, post-substitution",9.352281411723258,pct,etr_postsub_level,tracker_no_fl_301_keep_s122_2026-07-24,level
+Consumer price increase,Pre-substitution,0.8127478900614685,pct,price_presub,tracker_no_fl_301_keep_s122_2026-07-24,level
+Consumer price increase,Post-substitution,0.7040253078640493,pct,price_postsub,tracker_no_fl_301_keep_s122_2026-07-24,level
+Household cost,Pre-substitution,1100.7619773946676,usd,hh_cost_presub,tracker_no_fl_301_keep_s122_2026-07-24,level
+Household cost,Post-substitution,953.5112911356922,usd,hh_cost_postsub,tracker_no_fl_301_keep_s122_2026-07-24,level
+Real GDP,2025 Q4/Q4,-0.2930911383116852,pp,gdp_2025_q4q4,tracker_no_fl_301_keep_s122_2026-07-24,level
+Real GDP,2026 Q4/Q4,0.21216102889178856,pp,gdp_2026_q4q4,tracker_no_fl_301_keep_s122_2026-07-24,level
+Real GDP,Long-run,-0.13676325976848602,pct,gdp_long_run,tracker_no_fl_301_keep_s122_2026-07-24,level
+Tariff rate,Average statutory rate,-2.7413525607670106,pct,etr_statutory_level,tracker_no_fl_301_2026-07-24,delta_vs_default
+Tariff rate,"Effective rate, pre-substitution",-2.5729479484802464,pct,etr_presub_level,tracker_no_fl_301_2026-07-24,delta_vs_default
+Tariff rate,"Effective rate, post-substitution",-2.1638025204278186,pct,etr_postsub_level,tracker_no_fl_301_2026-07-24,delta_vs_default
+Consumer price increase,Pre-substitution,-0.3743056774547541,pct,price_presub,tracker_no_fl_301_2026-07-24,delta_vs_default
+Consumer price increase,Post-substitution,-0.3128620271147505,pct,price_postsub,tracker_no_fl_301_2026-07-24,delta_vs_default
+Household cost,Pre-substitution,-506.94866477473647,usd,hh_cost_presub,tracker_no_fl_301_2026-07-24,delta_vs_default
+Household cost,Post-substitution,-423.7311813783863,usd,hh_cost_postsub,tracker_no_fl_301_2026-07-24,delta_vs_default
+Real GDP,2025 Q4/Q4,0.013953119775611533,pp,gdp_2025_q4q4,tracker_no_fl_301_2026-07-24,delta_vs_default
+Real GDP,2026 Q4/Q4,0.05882139377193507,pp,gdp_2026_q4q4,tracker_no_fl_301_2026-07-24,delta_vs_default
+Real GDP,Long-run,0.06830239295959473,pct,gdp_long_run,tracker_no_fl_301_2026-07-24,delta_vs_default
+Tariff rate,Average statutory rate,0.28794129291203596,pct,etr_statutory_level,tracker_no_fl_301_keep_s122_2026-07-24,delta_vs_default
+Tariff rate,"Effective rate, pre-substitution",0.26737438686054027,pct,etr_presub_level,tracker_no_fl_301_keep_s122_2026-07-24,delta_vs_default
+Tariff rate,"Effective rate, post-substitution",0.36123679768105177,pct,etr_postsub_level,tracker_no_fl_301_keep_s122_2026-07-24,delta_vs_default
+Consumer price increase,Pre-substitution,0.01871476223126578,pct,price_presub,tracker_no_fl_301_keep_s122_2026-07-24,delta_vs_default
+Consumer price increase,Post-substitution,0.03614782382571302,pct,price_postsub,tracker_no_fl_301_keep_s122_2026-07-24,delta_vs_default
+Household cost,Pre-substitution,25.34672674278022,usd,hh_cost_presub,tracker_no_fl_301_keep_s122_2026-07-24,delta_vs_default
+Household cost,Post-substitution,48.95755562022623,usd,hh_cost_postsub,tracker_no_fl_301_keep_s122_2026-07-24,delta_vs_default
+Real GDP,2025 Q4/Q4,9.976596458738385e-4,pp,gdp_2025_q4q4,tracker_no_fl_301_keep_s122_2026-07-24,delta_vs_default
+Real GDP,2026 Q4/Q4,-0.002562518122428692,pp,gdp_2026_q4q4,tracker_no_fl_301_keep_s122_2026-07-24,delta_vs_default
+Real GDP,Long-run,0.00642763078212738,pct,gdp_long_run,tracker_no_fl_301_keep_s122_2026-07-24,delta_vs_default
+Revenue (10-year),Conventional,1897.9337858266451,usd_bn,revenue_conventional,tracker_actual_2026-07-24,level
+Revenue (10-year),Dynamic,1769.646785826645,usd_bn,revenue_dynamic,tracker_actual_2026-07-24,level
+Revenue (10-year),Conventional,1259.614980569107,usd_bn,revenue_conventional,tracker_no_fl_301_2026-07-24,level
+Revenue (10-year),Dynamic,1188.147980569107,usd_bn,revenue_dynamic,tracker_no_fl_301_2026-07-24,level
+Revenue (10-year),Conventional,1967.223940857834,usd_bn,revenue_conventional,tracker_no_fl_301_keep_s122_2026-07-24,level
+Revenue (10-year),Dynamic,1843.316940857834,usd_bn,revenue_dynamic,tracker_no_fl_301_keep_s122_2026-07-24,level
+Revenue (10-year),Conventional,-638.3188052575381,usd_bn,revenue_conventional,tracker_no_fl_301_2026-07-24,delta_vs_default
+Revenue (10-year),Dynamic,-581.4988052575382,usd_bn,revenue_dynamic,tracker_no_fl_301_2026-07-24,delta_vs_default
+Revenue (10-year),Conventional,69.29015503118876,usd_bn,revenue_conventional,tracker_no_fl_301_keep_s122_2026-07-24,delta_vs_default
+Revenue (10-year),Dynamic,73.67015503118887,usd_bn,revenue_dynamic,tracker_no_fl_301_keep_s122_2026-07-24,delta_vs_default
