@@ -1,0 +1,345 @@
+time,series,variant,value
+0,All Sectors,indexed,0.0
+1,All Sectors,indexed,0.466881
+2,All Sectors,indexed,0.852354
+3,All Sectors,indexed,1.201651
+4,All Sectors,indexed,1.497782
+5,All Sectors,indexed,1.722342
+6,All Sectors,indexed,1.996874
+7,All Sectors,indexed,2.179838
+8,All Sectors,indexed,2.392164
+9,All Sectors,indexed,2.546148
+10,All Sectors,indexed,2.745112
+11,All Sectors,indexed,2.906108
+12,All Sectors,indexed,3.050123
+13,All Sectors,indexed,3.167837
+14,All Sectors,indexed,3.255132
+15,All Sectors,indexed,3.333606
+16,All Sectors,indexed,3.383294
+17,All Sectors,indexed,3.415579
+18,All Sectors,indexed,3.474198
+19,All Sectors,indexed,3.523316
+20,All Sectors,indexed,3.569678
+21,All Sectors,indexed,3.589157
+22,All Sectors,indexed,3.634015
+23,All Sectors,indexed,3.724557
+24,All Sectors,indexed,3.825276
+25,All Sectors,indexed,3.919537
+26,All Sectors,indexed,4.016336
+27,All Sectors,indexed,4.101635
+28,All Sectors,indexed,4.186109
+29,All Sectors,indexed,4.277379
+30,All Sectors,indexed,4.372565
+31,All Sectors,indexed,4.490198
+32,All Sectors,indexed,4.607443
+33,All Sectors,indexed,4.757053
+34,All Sectors,indexed,4.838377
+35,All Sectors,indexed,
+36,All Sectors,indexed,4.944998
+37,All Sectors,indexed,5.056901
+38,All Sectors,indexed,5.133041
+39,All Sectors,indexed,5.171458
+40,All Sectors,indexed,5.256051
+41,All Sectors,indexed,5.305724
+42,All Sectors,indexed,5.385228
+0,Information,indexed,0.0
+1,Information,indexed,1.913316
+2,Information,indexed,3.452663
+3,Information,indexed,4.538036
+4,Information,indexed,5.289803
+5,Information,indexed,6.854515
+6,Information,indexed,8.101219
+7,Information,indexed,8.786192
+8,Information,indexed,9.508014
+9,Information,indexed,10.1589
+10,Information,indexed,10.804157
+11,Information,indexed,11.651524
+12,Information,indexed,12.463356
+13,Information,indexed,13.097847
+14,Information,indexed,13.491103
+15,Information,indexed,13.454508
+16,Information,indexed,13.533278
+17,Information,indexed,13.539851
+18,Information,indexed,13.244957
+19,Information,indexed,13.23877
+20,Information,indexed,13.193333
+21,Information,indexed,13.008673
+22,Information,indexed,13.174584
+23,Information,indexed,13.295304
+24,Information,indexed,13.273208
+25,Information,indexed,13.501876
+26,Information,indexed,13.39974
+27,Information,indexed,13.251411
+28,Information,indexed,13.224035
+29,Information,indexed,12.951041
+30,Information,indexed,12.862089
+31,Information,indexed,12.895962
+32,Information,indexed,13.271036
+33,Information,indexed,13.575732
+34,Information,indexed,13.69874
+35,Information,indexed,
+36,Information,indexed,13.693435
+37,Information,indexed,13.44363
+38,Information,indexed,13.236685
+39,Information,indexed,13.109521
+40,Information,indexed,12.988538
+41,Information,indexed,13.355181
+42,Information,indexed,13.557206
+0,Financial Activities,indexed,0.0
+1,Financial Activities,indexed,0.924442
+2,Financial Activities,indexed,1.740085
+3,Financial Activities,indexed,2.404743
+4,Financial Activities,indexed,3.100406
+5,Financial Activities,indexed,3.602952
+6,Financial Activities,indexed,4.105109
+7,Financial Activities,indexed,4.810358
+8,Financial Activities,indexed,5.446655
+9,Financial Activities,indexed,5.766231
+10,Financial Activities,indexed,6.2386
+11,Financial Activities,indexed,6.563374
+12,Financial Activities,indexed,6.838519
+13,Financial Activities,indexed,7.036561
+14,Financial Activities,indexed,7.046167
+15,Financial Activities,indexed,7.067699
+16,Financial Activities,indexed,7.186511
+17,Financial Activities,indexed,7.425126
+18,Financial Activities,indexed,7.561263
+19,Financial Activities,indexed,7.599105
+20,Financial Activities,indexed,7.640851
+21,Financial Activities,indexed,7.699896
+22,Financial Activities,indexed,7.788948
+23,Financial Activities,indexed,7.946043
+24,Financial Activities,indexed,8.177772
+25,Financial Activities,indexed,8.29845
+26,Financial Activities,indexed,8.533742
+27,Financial Activities,indexed,8.729556
+28,Financial Activities,indexed,9.015001
+29,Financial Activities,indexed,9.160867
+30,Financial Activities,indexed,9.140894
+31,Financial Activities,indexed,9.013576
+32,Financial Activities,indexed,8.986867
+33,Financial Activities,indexed,8.976374
+34,Financial Activities,indexed,8.873646
+35,Financial Activities,indexed,
+36,Financial Activities,indexed,8.585487
+37,Financial Activities,indexed,8.561836
+38,Financial Activities,indexed,8.717458
+39,Financial Activities,indexed,8.734011
+40,Financial Activities,indexed,8.743664
+41,Financial Activities,indexed,8.670105
+42,Financial Activities,indexed,8.709718
+0,Professional and Business Services,indexed,0.0
+1,Professional and Business Services,indexed,0.899573
+2,Professional and Business Services,indexed,1.645671
+3,Professional and Business Services,indexed,2.363774
+4,Professional and Business Services,indexed,3.021616
+5,Professional and Business Services,indexed,3.47136
+6,Professional and Business Services,indexed,3.791878
+7,Professional and Business Services,indexed,4.144538
+8,Professional and Business Services,indexed,4.478182
+9,Professional and Business Services,indexed,4.739277
+10,Professional and Business Services,indexed,5.143957
+11,Professional and Business Services,indexed,5.351582
+12,Professional and Business Services,indexed,5.565276
+13,Professional and Business Services,indexed,5.682853
+14,Professional and Business Services,indexed,5.621888
+15,Professional and Business Services,indexed,5.640787
+16,Professional and Business Services,indexed,5.656068
+17,Professional and Business Services,indexed,5.657744
+18,Professional and Business Services,indexed,5.833637
+19,Professional and Business Services,indexed,5.974392
+20,Professional and Business Services,indexed,6.160105
+21,Professional and Business Services,indexed,6.237966
+22,Professional and Business Services,indexed,6.325557
+23,Professional and Business Services,indexed,6.463822
+24,Professional and Business Services,indexed,6.652536
+25,Professional and Business Services,indexed,6.750021
+26,Professional and Business Services,indexed,6.780975
+27,Professional and Business Services,indexed,6.788133
+28,Professional and Business Services,indexed,6.655216
+29,Professional and Business Services,indexed,6.490329
+30,Professional and Business Services,indexed,6.45967
+31,Professional and Business Services,indexed,6.628137
+32,Professional and Business Services,indexed,6.764448
+33,Professional and Business Services,indexed,6.836697
+34,Professional and Business Services,indexed,6.880491
+35,Professional and Business Services,indexed,
+36,Professional and Business Services,indexed,7.212898
+37,Professional and Business Services,indexed,7.331497
+38,Professional and Business Services,indexed,7.343861
+39,Professional and Business Services,indexed,7.477214
+40,Professional and Business Services,indexed,7.593037
+41,Professional and Business Services,indexed,7.765236
+42,Professional and Business Services,indexed,8.053513
+2022-11-02,All Sectors,rolling,2.833375
+2022-12-02,All Sectors,rolling,2.90909
+2023-01-02,All Sectors,rolling,3.075741
+2023-02-02,All Sectors,rolling,3.142298
+2023-03-02,All Sectors,rolling,3.183913
+2023-04-02,All Sectors,rolling,3.144533
+2023-05-02,All Sectors,rolling,3.193057
+2023-06-02,All Sectors,rolling,3.172713
+2023-07-02,All Sectors,rolling,3.139561
+2023-08-02,All Sectors,rolling,3.027063
+2023-09-02,All Sectors,rolling,3.015766
+2023-10-02,All Sectors,rolling,3.006845
+2023-11-02,All Sectors,rolling,3.050123
+2023-12-02,All Sectors,rolling,3.02957
+2024-01-02,All Sectors,rolling,2.991475
+2024-02-02,All Sectors,rolling,2.957101
+2024-03-02,All Sectors,rolling,2.864364
+2024-04-02,All Sectors,rolling,2.778757
+2024-05-02,All Sectors,rolling,2.727614
+2024-06-02,All Sectors,rolling,2.736881
+2024-07-02,All Sectors,rolling,2.785487
+2024-08-02,All Sectors,rolling,2.785049
+2024-09-02,All Sectors,rolling,2.845465
+2024-10-02,All Sectors,rolling,2.911038
+2024-11-02,All Sectors,rolling,2.99304
+2024-12-02,All Sectors,rolling,3.059228
+2025-01-02,All Sectors,rolling,3.095169
+2025-02-02,All Sectors,rolling,3.118096
+2025-03-02,All Sectors,rolling,3.190004
+2025-04-02,All Sectors,rolling,3.146859
+2025-05-02,All Sectors,rolling,3.094992
+2025-06-02,All Sectors,rolling,3.133913
+2025-07-02,All Sectors,rolling,3.188346
+2025-08-02,All Sectors,rolling,3.292224
+2025-09-02,All Sectors,rolling,3.31397
+2025-10-02,All Sectors,rolling,
+2025-11-02,All Sectors,rolling,3.409742
+2025-12-02,All Sectors,rolling,3.46678
+2026-01-02,All Sectors,rolling,3.42465
+2026-02-02,All Sectors,rolling,3.32171
+2026-03-02,All Sectors,rolling,3.417222
+2026-04-02,All Sectors,rolling,3.452172
+2026-05-02,All Sectors,rolling,3.468088
+2022-11-02,Information,rolling,9.768929
+2022-12-02,Information,rolling,10.084666
+2023-01-02,Information,rolling,10.01992
+2023-02-02,Information,rolling,10.189046
+2023-03-02,Information,rolling,10.13045
+2023-04-02,Information,rolling,10.861833
+2023-05-02,Information,rolling,11.736748
+2023-06-02,Information,rolling,11.733972
+2023-07-02,Information,rolling,11.89711
+2023-08-02,Information,rolling,11.39114
+2023-09-02,Information,rolling,11.39983
+2023-10-02,Information,rolling,11.894014
+2023-11-02,Information,rolling,12.463356
+2023-12-02,Information,rolling,13.042149
+2024-01-02,Information,rolling,13.147823
+2024-02-02,Information,rolling,12.669883
+2024-03-02,Information,rolling,12.039912
+2024-04-02,Information,rolling,11.119555
+2024-05-02,Information,rolling,10.952037
+2024-06-02,Information,rolling,10.986993
+2024-07-02,Information,rolling,11.29695
+2024-08-02,Information,rolling,10.702815
+2024-09-02,Information,rolling,10.539817
+2024-10-02,Information,rolling,10.951319
+2024-11-02,Information,rolling,10.935098
+2024-12-02,Information,rolling,11.733164
+2025-01-02,Information,rolling,11.569106
+2025-02-02,Information,rolling,11.673417
+2025-03-02,Information,rolling,11.926823
+2025-04-02,Information,rolling,11.88875
+2025-05-02,Information,rolling,11.846562
+2025-06-02,Information,rolling,12.079698
+2025-07-02,Information,rolling,12.261555
+2025-08-02,Information,rolling,12.263466
+2025-09-02,Information,rolling,12.491506
+2025-10-02,Information,rolling,
+2025-11-02,Information,rolling,12.306185
+2025-12-02,Information,rolling,12.247286
+2026-01-02,Information,rolling,12.028315
+2026-02-02,Information,rolling,12.20711
+2026-03-02,Information,rolling,12.159182
+2026-04-02,Information,rolling,12.468939
+2026-05-02,Information,rolling,12.548876
+2022-11-02,Financial Activities,rolling,5.864302
+2022-12-02,Financial Activities,rolling,6.017756
+2023-01-02,Financial Activities,rolling,5.934308
+2023-02-02,Financial Activities,rolling,5.929516
+2023-03-02,Financial Activities,rolling,5.87971
+2023-04-02,Financial Activities,rolling,5.725794
+2023-05-02,Financial Activities,rolling,5.555671
+2023-06-02,Financial Activities,rolling,5.656101
+2023-07-02,Financial Activities,rolling,6.015821
+2023-08-02,Financial Activities,rolling,6.137603
+2023-09-02,Financial Activities,rolling,6.565859
+2023-10-02,Financial Activities,rolling,6.847783
+2023-11-02,Financial Activities,rolling,6.838519
+2023-12-02,Financial Activities,rolling,6.713902
+2024-01-02,Financial Activities,rolling,6.428879
+2024-02-02,Financial Activities,rolling,6.466917
+2024-03-02,Financial Activities,rolling,6.503658
+2024-04-02,Financial Activities,rolling,6.354906
+2024-05-02,Financial Activities,rolling,6.054173
+2024-06-02,Financial Activities,rolling,5.963569
+2024-07-02,Financial Activities,rolling,5.807246
+2024-08-02,Financial Activities,rolling,5.497547
+2024-09-02,Financial Activities,rolling,5.637454
+2024-10-02,Financial Activities,rolling,5.914091
+2024-11-02,Financial Activities,rolling,5.948889
+2024-12-02,Financial Activities,rolling,6.058671
+2025-01-02,Financial Activities,rolling,6.629813
+2025-02-02,Financial Activities,rolling,7.029505
+2025-03-02,Financial Activities,rolling,7.35874
+2025-04-02,Financial Activities,rolling,7.238172
+2025-05-02,Financial Activities,rolling,6.914622
+2025-06-02,Financial Activities,rolling,6.685481
+2025-07-02,Financial Activities,rolling,6.366822
+2025-08-02,Financial Activities,rolling,6.131005
+2025-09-02,Financial Activities,rolling,5.679884
+2025-10-02,Financial Activities,rolling,
+2025-11-02,Financial Activities,rolling,5.673282
+2025-12-02,Financial Activities,rolling,5.873686
+2026-01-02,Financial Activities,rolling,6.122114
+2026-02-02,Financial Activities,rolling,6.030228
+2026-03-02,Financial Activities,rolling,6.439586
+2026-04-02,Financial Activities,rolling,6.742921
+2026-05-02,Financial Activities,rolling,6.757702
+2022-11-02,Professional and Business Services,rolling,5.801342
+2022-12-02,Professional and Business Services,rolling,5.792355
+2023-01-02,Professional and Business Services,rolling,6.050361
+2023-02-02,Professional and Business Services,rolling,6.100289
+2023-03-02,Professional and Business Services,rolling,6.187171
+2023-04-02,Professional and Business Services,rolling,6.241164
+2023-05-02,Professional and Business Services,rolling,6.111354
+2023-06-02,Professional and Business Services,rolling,5.923992
+2023-07-02,Professional and Business Services,rolling,5.732779
+2023-08-02,Professional and Business Services,rolling,5.489451
+2023-09-02,Professional and Business Services,rolling,5.585083
+2023-10-02,Professional and Business Services,rolling,5.513899
+2023-11-02,Professional and Business Services,rolling,5.565276
+2023-12-02,Professional and Business Services,rolling,5.581373
+2024-01-02,Professional and Business Services,rolling,5.378074
+2024-02-02,Professional and Business Services,rolling,5.492876
+2024-03-02,Professional and Business Services,rolling,5.416673
+2024-04-02,Professional and Business Services,rolling,5.413354
+2024-05-02,Professional and Business Services,rolling,5.560679
+2024-06-02,Professional and Business Services,rolling,5.63882
+2024-07-02,Professional and Business Services,rolling,5.59373
+2024-08-02,Professional and Business Services,rolling,5.594556
+2024-09-02,Professional and Business Services,rolling,5.778392
+2024-10-02,Professional and Business Services,rolling,5.837178
+2024-11-02,Professional and Business Services,rolling,6.132555
+2024-12-02,Professional and Business Services,rolling,6.176028
+2025-01-02,Professional and Business Services,rolling,6.143486
+2025-02-02,Professional and Business Services,rolling,5.937658
+2025-03-02,Professional and Business Services,rolling,5.851239
+2025-04-02,Professional and Business Services,rolling,5.66242
+2025-05-02,Professional and Business Services,rolling,5.465898
+2025-06-02,Professional and Business Services,rolling,5.402344
+2025-07-02,Professional and Business Services,rolling,5.521661
+2025-08-02,Professional and Business Services,rolling,5.768322
+2025-09-02,Professional and Business Services,rolling,6.016567
+2025-10-02,Professional and Business Services,rolling,
+2025-11-02,Professional and Business Services,rolling,6.353343
+2025-12-02,Professional and Business Services,rolling,6.310627
+2026-01-02,Professional and Business Services,rolling,6.231476
+2026-02-02,Professional and Business Services,rolling,6.324275
+2026-03-02,Professional and Business Services,rolling,6.326256
+2026-04-02,Professional and Business Services,rolling,6.197673
+2026-05-02,Professional and Business Services,rolling,6.145013
