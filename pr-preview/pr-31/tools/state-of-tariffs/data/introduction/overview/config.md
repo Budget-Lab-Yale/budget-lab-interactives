@@ -28,24 +28,21 @@ now reflected in our current-law (default) scenario:
   update, the U.S. Trade Representative's forced-labor Section 301 action appeared only as a
   proposed alternative scenario ("New S301"), based on USTR's June announcement. On July 23, 2026,
   USTR issued the final action, effective July 24, 2026, imposing an additional tariff on nearly
-  all imports from the 60 investigated economies and replacing the Section 122 surcharge at 12:01
+  all imports from the more than 80 investigated economies and replacing the Section 122 surcharge at 12:01
   a.m. on July 24, when that temporary measure ends. Because it is now official policy, it is part
   of the default scenario.
 
 The final action differs from the June proposal:
 
-- **Three rate tiers instead of two.** A 10% rate applies to 17 economies that have acted against
-  forced-labor imports (the final action adds Honduras, India, Jordan, Sri Lanka, and Trinidad and
-  Tobago); a 12.5% rate applies to most other economies (including China, Hong Kong, and Vietnam);
-  and a new lower-rate tier applies to the European Union, Taiwan, Japan, South Korea, and
-  Switzerland. For this lower-rate group, the Section 301 rate is set so that the total duty,
-  including a product's existing tariff, reaches a ceiling of:
+- **Four rate tiers.** Two tiers apply a flat additional rate of 10% or 12.5%; the other two apply
+  those same rates but net of a country's baseline (MFN) tariffs, creating a ceiling on the combined
+  MFN and new Section 301 duty. This means a smaller tariff increase now than was announced in June
+  2026:
 
-    - 10% for the European Union and Taiwan.
-    - 12.5% for Japan, South Korea, and Switzerland.
-
-    This treatment represents a smaller incremental tariff burden than the flat surcharge from the
-    June proposal.
+    1. Flat 10% additional rate (e.g., Canada, Mexico, UK; 17 countries).
+    2. Flat 12.5% additional rate (e.g., China, Vietnam; 38 countries).
+    3. 10% rate net of MFN (e.g., EU, Taiwan; 28 countries).
+    4. 12.5% rate net of MFN (Japan, South Korea, Switzerland; 3 countries).
 
 - **Broader exemptions.** Goods subject to Section 232 tariffs—including steel, aluminum, autos,
   and other covered articles—are fully excluded. The action also carries an expanded,
