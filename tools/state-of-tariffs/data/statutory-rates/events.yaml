@@ -17,7 +17,6 @@ projection:
     label: 'Section 301 "forced labor" enacted'
     color: red
     style: dashed
-    labelPosition: bottom
   bands:
   - start: today
     end: '2026-12-31'
