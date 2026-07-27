@@ -40,7 +40,7 @@
             "id": "summary-statistics",
             "short_label": "Summary of Results",
             "figureType": "table",
-            "data": "previous-vintages/2025-01-17/baseline/summary-statistics/data.csv",
+            "data": "previous-vintages/2026-01-17/baseline/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
               "subtitle": "Projected effects of tariff policy as of January 19, 2026.",
@@ -106,7 +106,7 @@
             "id": "etr-by-country",
             "short_label": "Effective Rate by Trading Partner",
             "figureType": "table",
-            "data": "previous-vintages/2025-01-17/baseline/etr-by-country/data.csv",
+            "data": "previous-vintages/2026-01-17/baseline/etr-by-country/data.csv",
             "spec": {
               "title": "Average Effective Tariff Rate by Trading Partner",
               "subtitle": "Pre- and post-substitution",
@@ -146,7 +146,7 @@
             "id": "consumer-prices",
             "short_label": "Consumer Prices",
             "figureType": "chart",
-            "data": "previous-vintages/2025-01-17/baseline/consumer-prices/data.csv",
+            "data": "previous-vintages/2026-01-17/baseline/consumer-prices/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -179,7 +179,7 @@
             "id": "distribution",
             "short_label": "Household Costs by Income",
             "figureType": "chart",
-            "data": "previous-vintages/2025-01-17/baseline/distribution/data.csv",
+            "data": "previous-vintages/2026-01-17/baseline/distribution/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -224,7 +224,7 @@
             "id": "real-gdp",
             "short_label": "GDP over Time",
             "figureType": "chart",
-            "data": "previous-vintages/2025-01-17/baseline/real-gdp/data.csv",
+            "data": "previous-vintages/2026-01-17/baseline/real-gdp/data.csv",
             "spec": {
               "chartType": "line",
               "data": "data.csv",
@@ -248,7 +248,7 @@
             "id": "gdp-by-category",
             "short_label": "Long-Run GDP Breakdown",
             "figureType": "chart",
-            "data": "previous-vintages/2025-01-17/baseline/gdp-by-category/data.csv",
+            "data": "previous-vintages/2026-01-17/baseline/gdp-by-category/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -296,7 +296,7 @@
             "parts": [
               {
                 "figureType": "table",
-                "data": "previous-vintages/2025-01-17/baseline/revenue-by-year/data.csv",
+                "data": "previous-vintages/2026-01-17/baseline/revenue-by-year/data.csv",
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
@@ -338,7 +338,7 @@
               },
               {
                 "figureType": "chart",
-                "data": "previous-vintages/2025-01-17/baseline/revenue-by-year/data.csv",
+                "data": "previous-vintages/2026-01-17/baseline/revenue-by-year/data.csv",
                 "spec": {
                   "chartType": "bar",
                   "data": "data.csv",
@@ -415,7 +415,7 @@
             "id": "summary-statistics",
             "short_label": "Summary of Results",
             "figureType": "table",
-            "data": "previous-vintages/2025-01-17/with-greenland-tariffs/summary-statistics/data.csv",
+            "data": "previous-vintages/2026-01-17/with-greenland-tariffs/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
               "subtitle": "Projected effects of tariff policy as of January 19, 2026.",
@@ -481,7 +481,7 @@
             "id": "etr-by-country",
             "short_label": "Effective Rate by Trading Partner",
             "figureType": "table",
-            "data": "previous-vintages/2025-01-17/with-greenland-tariffs/etr-by-country/data.csv",
+            "data": "previous-vintages/2026-01-17/with-greenland-tariffs/etr-by-country/data.csv",
             "spec": {
               "title": "Average Effective Tariff Rate by Trading Partner",
               "subtitle": "Pre- and post-substitution",
@@ -521,7 +521,7 @@
             "id": "consumer-prices",
             "short_label": "Consumer Prices",
             "figureType": "chart",
-            "data": "previous-vintages/2025-01-17/with-greenland-tariffs/consumer-prices/data.csv",
+            "data": "previous-vintages/2026-01-17/with-greenland-tariffs/consumer-prices/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -554,7 +554,7 @@
             "id": "distribution",
             "short_label": "Household Costs by Income",
             "figureType": "chart",
-            "data": "previous-vintages/2025-01-17/with-greenland-tariffs/distribution/data.csv",
+            "data": "previous-vintages/2026-01-17/with-greenland-tariffs/distribution/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -599,7 +599,7 @@
             "id": "real-gdp",
             "short_label": "GDP over Time",
             "figureType": "chart",
-            "data": "previous-vintages/2025-01-17/with-greenland-tariffs/real-gdp/data.csv",
+            "data": "previous-vintages/2026-01-17/with-greenland-tariffs/real-gdp/data.csv",
             "spec": {
               "chartType": "line",
               "data": "data.csv",
@@ -623,7 +623,7 @@
             "id": "gdp-by-category",
             "short_label": "Long-Run GDP Breakdown",
             "figureType": "chart",
-            "data": "previous-vintages/2025-01-17/with-greenland-tariffs/gdp-by-category/data.csv",
+            "data": "previous-vintages/2026-01-17/with-greenland-tariffs/gdp-by-category/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -671,7 +671,7 @@
             "parts": [
               {
                 "figureType": "table",
-                "data": "previous-vintages/2025-01-17/with-greenland-tariffs/revenue-by-year/data.csv",
+                "data": "previous-vintages/2026-01-17/with-greenland-tariffs/revenue-by-year/data.csv",
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
@@ -713,7 +713,7 @@
               },
               {
                 "figureType": "chart",
-                "data": "previous-vintages/2025-01-17/with-greenland-tariffs/revenue-by-year/data.csv",
+                "data": "previous-vintages/2026-01-17/with-greenland-tariffs/revenue-by-year/data.csv",
                 "spec": {
                   "chartType": "bar",
                   "data": "data.csv",
