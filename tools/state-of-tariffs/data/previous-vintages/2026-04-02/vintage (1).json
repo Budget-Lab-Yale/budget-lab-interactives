@@ -1,0 +1,760 @@
+{
+  "id": "2026-04-02",
+  "date": "2026-04-02",
+  "label": "April 2, 2026",
+  "published_at": "2026-04-02T00:00:00-0500",
+  "version": "1.0",
+  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: April 2, 2026\" report, restructured to match the current interactive's data format. The \"Section 122 Expires\" scenario reflects tariff policy as it stood on April 2, 2026; the \"Section 122 Extended\" scenario models Section 122 tariffs are extended rather than allowed to expire.</p>",
+  "scenarios": [
+    {
+      "id": "section-122-expires",
+      "label": "Section 122 Expires",
+      "tab": {
+        "id": "section-122-expires",
+        "label": "Projected Effects:\nSection 122 Expires",
+        "description": "Projected effects of tariff policy as of April 2, 2026, under the Section 122 Expires scenario.",
+        "sections": [
+          {
+            "id": "overview",
+            "label": ""
+          },
+          {
+            "id": "rates",
+            "label": "Tariff Rates"
+          },
+          {
+            "id": "prices-households",
+            "label": "Prices & Households"
+          },
+          {
+            "id": "economy",
+            "label": "Macroeconomy"
+          },
+          {
+            "id": "fiscal",
+            "label": "Fiscal"
+          }
+        ],
+        "figures": [
+          {
+            "id": "summary-statistics",
+            "short_label": "Summary of Results",
+            "figureType": "table",
+            "data": "previous-vintages/2026-04-02/section-122-expires/summary-statistics/data.csv",
+            "spec": {
+              "title": "Summary of Results",
+              "subtitle": "Projected effects of tariff policy as of April 2, 2026.",
+              "data": "data.csv",
+              "stub": [
+                "category",
+                "series"
+              ],
+              "header": [],
+              "value": "value",
+              "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "group_labels": {
+                "Tariff rate": "Tariff rates, as of April 2, 2026",
+                "Consumer price increase": "Consumer price increase",
+                "Household cost": "Average household cost"
+              },
+              "format": {
+                "groups": {
+                  "Revenue (10-year)": {
+                    "type": "currency",
+                    "decimals": 0,
+                    "prefix": "$",
+                    "suffix": "B",
+                    "thousands": true
+                  },
+                  "Consumer price increase": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  },
+                  "Tariff rate": {
+                    "type": "number",
+                    "decimals": 1,
+                    "suffix": "%"
+                  },
+                  "Household cost": {
+                    "type": "currency",
+                    "decimals": 0,
+                    "prefix": "$",
+                    "thousands": true
+                  },
+                  "Real GDP": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": " pp"
+                  }
+                },
+                "rows": {
+                  "Long-run": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  }
+                }
+              }
+            },
+            "body_html": "<h2>Section 122 Expires</h2><p>This section presents projected effects as of April 2, 2026, under the Section 122 Expires scenario. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
+            "section": "overview",
+            "lead": true,
+            "figureNum": 1
+          },
+          {
+            "id": "etr-by-country",
+            "short_label": "Effective Rate by Trading Partner",
+            "figureType": "table",
+            "data": "previous-vintages/2026-04-02/section-122-expires/etr-by-country/data.csv",
+            "spec": {
+              "title": "Average Effective Tariff Rate by Trading Partner",
+              "subtitle": "Pre- and post-substitution",
+              "data": "data.csv",
+              "stub": [
+                "category"
+              ],
+              "header": [
+                "substitution"
+              ],
+              "value": "value",
+              "column_order": [
+                "presub",
+                "postsub"
+              ],
+              "header_labels": {
+                "presub": "Pre-substitution",
+                "postsub": "Post-substitution"
+              },
+              "format": {
+                "default": {
+                  "type": "number",
+                  "decimals": 1,
+                  "suffix": "%"
+                }
+              },
+              "emphasis_rows": [
+                "Total"
+              ],
+              "source": "GTAP v7, The Budget Lab analysis."
+            },
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of April 2, 2026, before and after trade substitution.</p>",
+            "section": "rates",
+            "figureNum": 2
+          },
+          {
+            "id": "consumer-prices",
+            "short_label": "Consumer Prices",
+            "figureType": "chart",
+            "data": "previous-vintages/2026-04-02/section-122-expires/consumer-prices/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Consumer Price Effects by PCE Spending Category",
+              "subtitle": "Percent change in consumer prices",
+              "source": "BEA, GTAP v7, The Budget Lab analysis.",
+              "orientation": "horizontal",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "facet": "substitution",
+                "series": "substitution",
+                "value": "value"
+              },
+              "header_labels": {
+                "presub": "Pre-substitution",
+                "postsub": "Post-substitution"
+              },
+              "notes": "I-O price model (Barbiero & Stein 2025). Pre-sub = welfare-relevant tariff price effect. Post-sub = after partial equilibrium trade substitution.",
+              "series_colors": {
+                "presub": "blue",
+                "postsub": "amber"
+              }
+            },
+            "body_html": "<p>Price effects by spending category, split by pre- and post-substitution.</p>",
+            "section": "prices-households",
+            "figureNum": 3
+          },
+          {
+            "id": "distribution",
+            "short_label": "Household Costs by Income",
+            "figureType": "chart",
+            "data": "previous-vintages/2026-04-02/section-122-expires/distribution/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Household Cost of Tariffs by Income Decile",
+              "subtitle": "By household income decile",
+              "source": "GTAP v7, Census, BLS, BEA, The Budget Lab analysis.",
+              "orientation": "vertical",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "facet": "basis",
+                "series": "basis",
+                "value": "value"
+              },
+              "x_order": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+              ],
+              "x_axis_title": "Income decile",
+              "small_multiples": {
+                "mode": "per-pane",
+                "columns": 2,
+                "pane_order": [
+                  "% of after-tax income",
+                  "2025 dollars"
+                ]
+              }
+            },
+            "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2025 dollars per household.</p>",
+            "section": "prices-households",
+            "figureNum": 4
+          },
+          {
+            "id": "real-gdp",
+            "short_label": "GDP over Time",
+            "figureType": "chart",
+            "data": "previous-vintages/2026-04-02/section-122-expires/real-gdp/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "Effect on Real GDP over Time",
+              "subtitle": "Percentage point change against baseline",
+              "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "yAxisPolicy": {
+                "includeZero": true,
+                "tickCount": 6
+              },
+              "series_labels": {
+                "gdp_level": "Real GDP"
+              }
+            },
+            "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
+            "section": "economy",
+            "figureNum": 5
+          },
+          {
+            "id": "gdp-by-category",
+            "short_label": "Long-Run GDP Breakdown",
+            "figureType": "chart",
+            "data": "previous-vintages/2026-04-02/section-122-expires/gdp-by-category/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Long-Run Change in Real GDP by {dimension}",
+              "title_selectors": {
+                "dimension": {
+                  "default": "sector",
+                  "options": [
+                    {
+                      "id": "sector",
+                      "label": "Sector",
+                      "color": "blue"
+                    },
+                    {
+                      "id": "country",
+                      "label": "Trading Partner",
+                      "color": "amber"
+                    }
+                  ]
+                }
+              },
+              "subtitle": "Percentage points",
+              "source": "GTAP v7, The Budget Lab analysis.",
+              "orientation": "vertical",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "facet": "group",
+                "value": "value"
+              },
+              "small_multiples": {
+                "mode": "shared",
+                "columns": 2,
+                "pane_widths": "equal-bar"
+              }
+            },
+            "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
+            "section": "economy",
+            "figureNum": 6
+          },
+          {
+            "id": "revenue-by-year",
+            "short_label": "Revenue by Year",
+            "figureType": "composite",
+            "parts": [
+              {
+                "figureType": "table",
+                "data": "previous-vintages/2026-04-02/section-122-expires/revenue-by-year/data.csv",
+                "spec": {
+                  "data": "data.csv",
+                  "title": "Net Revenue Impact by Fiscal Year",
+                  "subtitle": "Billions of dollars.",
+                  "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
+                  "stub": [
+                    "series"
+                  ],
+                  "header": [
+                    "category"
+                  ],
+                  "value": "value",
+                  "row_labels": {
+                    "conventional": "Conventional",
+                    "dynamic": "Dynamic"
+                  },
+                  "column_order": [
+                    "2026",
+                    "2027",
+                    "2028",
+                    "2029",
+                    "2030",
+                    "2031",
+                    "2032",
+                    "2033",
+                    "2034",
+                    "2035"
+                  ],
+                  "format": {
+                    "default": {
+                      "type": "number",
+                      "decimals": 1,
+                      "thousands": true,
+                      "prefix": "$"
+                    }
+                  }
+                }
+              },
+              {
+                "figureType": "chart",
+                "data": "previous-vintages/2026-04-02/section-122-expires/revenue-by-year/data.csv",
+                "spec": {
+                  "chartType": "bar",
+                  "data": "data.csv",
+                  "title": "Net Revenue Impact by Fiscal Year",
+                  "subtitle": "Conventional and dynamic estimates. Billions of dollars.",
+                  "orientation": "vertical",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "category",
+                    "series": "series",
+                    "value": "value"
+                  },
+                  "x_order": [
+                    "2026",
+                    "2027",
+                    "2028",
+                    "2029",
+                    "2030",
+                    "2031",
+                    "2032",
+                    "2033",
+                    "2034",
+                    "2035"
+                  ],
+                  "series_order": [
+                    "conventional",
+                    "dynamic"
+                  ],
+                  "series_labels": {
+                    "conventional": "Conventional",
+                    "dynamic": "Dynamic"
+                  }
+                }
+              }
+            ],
+            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis.</p>",
+            "section": "fiscal",
+            "figureNum": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "section-122-extended",
+      "label": "Section 122 Extended",
+      "tab": {
+        "id": "section-122-extended",
+        "label": "Projected Effects:\nSection 122 Extended",
+        "description": "Projected effects of tariff policy as of April 2, 2026, under the Section 122 Extended scenario, in which Section 122 tariffs are extended rather than allowed to expire.",
+        "sections": [
+          {
+            "id": "overview",
+            "label": ""
+          },
+          {
+            "id": "rates",
+            "label": "Tariff Rates"
+          },
+          {
+            "id": "prices-households",
+            "label": "Prices & Households"
+          },
+          {
+            "id": "economy",
+            "label": "Macroeconomy"
+          },
+          {
+            "id": "fiscal",
+            "label": "Fiscal"
+          }
+        ],
+        "figures": [
+          {
+            "id": "summary-statistics",
+            "short_label": "Summary of Results",
+            "figureType": "table",
+            "data": "previous-vintages/2026-04-02/section-122-extended/summary-statistics/data.csv",
+            "spec": {
+              "title": "Summary of Results",
+              "subtitle": "Projected effects of tariff policy as of April 2, 2026, if Section 122 tariffs are extended.",
+              "data": "data.csv",
+              "stub": [
+                "category",
+                "series"
+              ],
+              "header": [],
+              "value": "value",
+              "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "group_labels": {
+                "Tariff rate": "Tariff rates, if Section 122 tariffs are extended",
+                "Consumer price increase": "Consumer price increase",
+                "Household cost": "Average household cost"
+              },
+              "format": {
+                "groups": {
+                  "Revenue (10-year)": {
+                    "type": "currency",
+                    "decimals": 0,
+                    "prefix": "$",
+                    "suffix": "B",
+                    "thousands": true
+                  },
+                  "Consumer price increase": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  },
+                  "Tariff rate": {
+                    "type": "number",
+                    "decimals": 1,
+                    "suffix": "%"
+                  },
+                  "Household cost": {
+                    "type": "currency",
+                    "decimals": 0,
+                    "prefix": "$",
+                    "thousands": true
+                  },
+                  "Real GDP": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": " pp"
+                  }
+                },
+                "rows": {
+                  "Long-run": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  }
+                }
+              }
+            },
+            "body_html": "<h2>Section 122 Extended</h2><p>This section presents projected effects as of April 2, 2026, under the Section 122 Extended scenario, in which Section 122 tariffs are extended rather than allowed to expire. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
+            "section": "overview",
+            "lead": true,
+            "figureNum": 1
+          },
+          {
+            "id": "etr-by-country",
+            "short_label": "Effective Rate by Trading Partner",
+            "figureType": "table",
+            "data": "previous-vintages/2026-04-02/section-122-extended/etr-by-country/data.csv",
+            "spec": {
+              "title": "Average Effective Tariff Rate by Trading Partner",
+              "subtitle": "Pre- and post-substitution, if Section 122 tariffs are extended",
+              "data": "data.csv",
+              "stub": [
+                "category"
+              ],
+              "header": [
+                "substitution"
+              ],
+              "value": "value",
+              "column_order": [
+                "presub",
+                "postsub"
+              ],
+              "header_labels": {
+                "presub": "Pre-substitution",
+                "postsub": "Post-substitution"
+              },
+              "format": {
+                "default": {
+                  "type": "number",
+                  "decimals": 1,
+                  "suffix": "%"
+                }
+              },
+              "emphasis_rows": [
+                "Total"
+              ],
+              "source": "GTAP v7, The Budget Lab analysis."
+            },
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of April 2, 2026, before and after trade substitution.</p>",
+            "section": "rates",
+            "figureNum": 2
+          },
+          {
+            "id": "consumer-prices",
+            "short_label": "Consumer Prices",
+            "figureType": "chart",
+            "data": "previous-vintages/2026-04-02/section-122-extended/consumer-prices/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Consumer Price Effects by PCE Spending Category",
+              "subtitle": "Percent change in consumer prices",
+              "source": "BEA, GTAP v7, The Budget Lab analysis.",
+              "orientation": "horizontal",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "facet": "substitution",
+                "series": "substitution",
+                "value": "value"
+              },
+              "header_labels": {
+                "presub": "Pre-substitution",
+                "postsub": "Post-substitution"
+              },
+              "notes": "I-O price model (Barbiero & Stein 2025). Pre-sub = welfare-relevant tariff price effect. Post-sub = after partial equilibrium trade substitution.",
+              "series_colors": {
+                "presub": "blue",
+                "postsub": "amber"
+              }
+            },
+            "body_html": "<p>Price effects by spending category, split by pre- and post-substitution, if Section 122 tariffs are extended.</p>",
+            "section": "prices-households",
+            "figureNum": 3
+          },
+          {
+            "id": "distribution",
+            "short_label": "Household Costs by Income",
+            "figureType": "chart",
+            "data": "previous-vintages/2026-04-02/section-122-extended/distribution/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Household Cost of Tariffs by Income Decile",
+              "subtitle": "By household income decile",
+              "source": "GTAP v7, Census, BLS, BEA, The Budget Lab analysis.",
+              "orientation": "vertical",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "facet": "basis",
+                "series": "basis",
+                "value": "value"
+              },
+              "x_order": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+              ],
+              "x_axis_title": "Income decile",
+              "small_multiples": {
+                "mode": "per-pane",
+                "columns": 2,
+                "pane_order": [
+                  "% of after-tax income",
+                  "2025 dollars"
+                ]
+              }
+            },
+            "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2025 dollars per household, if Section 122 tariffs are extended.</p>",
+            "section": "prices-households",
+            "figureNum": 4
+          },
+          {
+            "id": "real-gdp",
+            "short_label": "GDP over Time",
+            "figureType": "chart",
+            "data": "previous-vintages/2026-04-02/section-122-extended/real-gdp/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "Effect on Real GDP over Time",
+              "subtitle": "Percentage point change against baseline",
+              "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "yAxisPolicy": {
+                "includeZero": true,
+                "tickCount": 6
+              },
+              "series_labels": {
+                "gdp_level": "Real GDP"
+              }
+            },
+            "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter, if Section 122 tariffs are extended.</p>",
+            "section": "economy",
+            "figureNum": 5
+          },
+          {
+            "id": "gdp-by-category",
+            "short_label": "Long-Run GDP Breakdown",
+            "figureType": "chart",
+            "data": "previous-vintages/2026-04-02/section-122-extended/gdp-by-category/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Long-Run Change in Real GDP by {dimension}",
+              "title_selectors": {
+                "dimension": {
+                  "default": "sector",
+                  "options": [
+                    {
+                      "id": "sector",
+                      "label": "Sector",
+                      "color": "blue"
+                    },
+                    {
+                      "id": "country",
+                      "label": "Trading Partner",
+                      "color": "amber"
+                    }
+                  ]
+                }
+              },
+              "subtitle": "Percentage points",
+              "source": "GTAP v7, The Budget Lab analysis.",
+              "orientation": "vertical",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "facet": "group",
+                "value": "value"
+              },
+              "small_multiples": {
+                "mode": "shared",
+                "columns": 2,
+                "pane_widths": "equal-bar"
+              }
+            },
+            "body_html": "<p>The long-run change in real GDP, by sector or by trading partner, if Section 122 tariffs are extended.</p>",
+            "section": "economy",
+            "figureNum": 6
+          },
+          {
+            "id": "revenue-by-year",
+            "short_label": "Revenue by Year",
+            "figureType": "composite",
+            "parts": [
+              {
+                "figureType": "table",
+                "data": "previous-vintages/2026-04-02/section-122-extended/revenue-by-year/data.csv",
+                "spec": {
+                  "data": "data.csv",
+                  "title": "Net Revenue Impact by Fiscal Year",
+                  "subtitle": "Billions of dollars, if Section 122 tariffs are extended.",
+                  "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
+                  "stub": [
+                    "series"
+                  ],
+                  "header": [
+                    "category"
+                  ],
+                  "value": "value",
+                  "row_labels": {
+                    "conventional": "Conventional",
+                    "dynamic": "Dynamic"
+                  },
+                  "column_order": [
+                    "2026",
+                    "2027",
+                    "2028",
+                    "2029",
+                    "2030",
+                    "2031",
+                    "2032",
+                    "2033",
+                    "2034",
+                    "2035"
+                  ],
+                  "format": {
+                    "default": {
+                      "type": "number",
+                      "decimals": 1,
+                      "thousands": true,
+                      "prefix": "$"
+                    }
+                  }
+                }
+              },
+              {
+                "figureType": "chart",
+                "data": "previous-vintages/2026-04-02/section-122-extended/revenue-by-year/data.csv",
+                "spec": {
+                  "chartType": "bar",
+                  "data": "data.csv",
+                  "title": "Net Revenue Impact by Fiscal Year",
+                  "subtitle": "Conventional and dynamic estimates. Billions of dollars.",
+                  "orientation": "vertical",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "category",
+                    "series": "series",
+                    "value": "value"
+                  },
+                  "x_order": [
+                    "2026",
+                    "2027",
+                    "2028",
+                    "2029",
+                    "2030",
+                    "2031",
+                    "2032",
+                    "2033",
+                    "2034",
+                    "2035"
+                  ],
+                  "series_order": [
+                    "conventional",
+                    "dynamic"
+                  ],
+                  "series_labels": {
+                    "conventional": "Conventional",
+                    "dynamic": "Dynamic"
+                  }
+                }
+              }
+            ],
+            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, if Section 122 tariffs are extended.</p>",
+            "section": "fiscal",
+            "figureNum": 7
+          }
+        ]
+      }
+    }
+  ]
+}
