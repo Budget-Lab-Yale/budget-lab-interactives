@@ -7,11 +7,11 @@
   "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: May 29, 2025\" report, restructured to match the current interactive's data format.</p>",
   "scenarios": [
     {
-      "id": "default-scenario",
-      "label": "Default Scenario",
+      "id": "baseline",
+      "label": "Baseline",
       "tab": {
-        "id": "default-scenario",
-        "label": "Projected Effects:\nDefault Scenario",
+        "id": "baseline",
+        "label": "Projected Effects:\nBaseline",
         "description": "Projected effects of tariff policy as of May 29, 2025.",
         "sections": [
           {
@@ -40,7 +40,7 @@
             "id": "summary-statistics",
             "short_label": "Summary of Results",
             "figureType": "table",
-            "data": "previous-vintages/2025-05-29/default-scenario/summary-statistics/data.csv",
+            "data": "previous-vintages/2025-05-29/baseline/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
               "subtitle": "Projected effects of tariff policy as of May 29, 2025.",
@@ -106,7 +106,7 @@
             "id": "etr-by-country",
             "short_label": "Effective Rate by Trading Partner",
             "figureType": "table",
-            "data": "previous-vintages/2025-05-29/default-scenario/etr-by-country/data.csv",
+            "data": "previous-vintages/2025-05-29/baseline/etr-by-country/data.csv",
             "spec": {
               "title": "Average Effective Tariff Rate by Trading Partner",
               "subtitle": "As of May 29, 2025, pre- and post-substitution. Percent.",
@@ -146,7 +146,7 @@
             "id": "consumer-prices",
             "short_label": "Consumer Prices",
             "figureType": "chart",
-            "data": "previous-vintages/2025-05-29/default-scenario/consumer-prices/data.csv",
+            "data": "previous-vintages/2025-05-29/baseline/consumer-prices/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -178,7 +178,7 @@
             "id": "distribution",
             "short_label": "Household Costs by Income",
             "figureType": "chart",
-            "data": "previous-vintages/2025-05-29/default-scenario/distribution/data.csv",
+            "data": "previous-vintages/2025-05-29/baseline/distribution/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -223,7 +223,7 @@
             "id": "real-gdp",
             "short_label": "GDP over Time",
             "figureType": "chart",
-            "data": "previous-vintages/2025-05-29/default-scenario/real-gdp/data.csv",
+            "data": "previous-vintages/2025-05-29/baseline/real-gdp/data.csv",
             "spec": {
               "chartType": "line",
               "data": "data.csv",
@@ -247,7 +247,7 @@
             "id": "gdp-by-category",
             "short_label": "Long-Run GDP Breakdown",
             "figureType": "chart",
-            "data": "previous-vintages/2025-05-29/default-scenario/gdp-by-category/data.csv",
+            "data": "previous-vintages/2025-05-29/baseline/gdp-by-category/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
