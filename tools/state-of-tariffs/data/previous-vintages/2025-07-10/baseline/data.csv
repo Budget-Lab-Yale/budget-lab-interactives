@@ -1,0 +1,10 @@
+category,series,value,unit,metric
+Tariff rate,"Effective rate, pre-substitution",15.551984068676198,pct,etr_presub_level
+Tariff rate,"Effective rate, post-substitution",14.510688498409529,pct,etr_postsub_level
+Consumer price increase,Pre-substitution,1.7825819794381648,pct,price_presub
+Household cost,Pre-substitution,-2367.035355377679,usd,hh_cost_presub
+Real GDP,"Q4-Q4 growth (p.p.), 2025",-0.7463971061258734,pp,gdp_growth_2025
+Real GDP,Long-run,-0.39,pct,gdp_longrun
+Labor market,"Unemployment rate (p.p.), end of 2025",0.39848995208740234,pp,unemployment_2025
+Revenue (10-year),Conventional,2616.126704605547,usd_b,revenue_conventional
+Revenue (10-year),Dynamic,2197.7927046055465,usd_b,revenue_dynamic
