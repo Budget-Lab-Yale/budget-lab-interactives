@@ -1,0 +1,11 @@
+category,value,country_code,substitution
+China,0.1589238129444066,chn,presub
+China,0.15508833772722336,chn,postsub
+Canada,0.8699613549390937,ca,presub
+Canada,0.9913924885084935,ca,postsub
+Mexico,1.1508640788081577,mx,presub
+Mexico,1.2084511022701478,mx,postsub
+Rest of World,2.342571720903671,row,presub
+Rest of World,2.2537696801928098,row,postsub
+Total,4.522320967595329,total,presub
+Total,4.6087016086986745,total,postsub
