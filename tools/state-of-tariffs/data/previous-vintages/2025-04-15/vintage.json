@@ -254,13 +254,8 @@
               "title": "Long-Run Change in Real GDP by {dimension}",
               "title_selectors": {
                 "dimension": {
-                  "default": "sector",
+                  "default": "country",
                   "options": [
-                    {
-                      "id": "sector",
-                      "label": "Sector",
-                      "color": "blue"
-                    },
                     {
                       "id": "country",
                       "label": "Trading Partner",
@@ -284,7 +279,7 @@
                 "pane_widths": "equal-bar"
               }
             },
-            "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
+            "body_html": "<p>The long-run change in real GDP, by trading partner. A sector-level breakdown was not published for this vintage.</p>",
             "section": "economy",
             "figureNum": 6
           }
