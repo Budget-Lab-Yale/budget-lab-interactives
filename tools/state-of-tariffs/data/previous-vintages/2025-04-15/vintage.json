@@ -162,12 +162,12 @@
                 "value": "value"
               },
               "header_labels": {
-                "presub": "Short-run",
-                "postsub": "Long-run"
+                "Short-run": "Short-run",
+                "Long-run": "Long-run"
               },
               "series_colors": {
-                "presub": "blue",
-                "postsub": "amber"
+                "Short-run": "blue",
+                "Long-run": "amber"
               }
             },
             "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes.</p>",
