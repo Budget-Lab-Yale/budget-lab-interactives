@@ -14,11 +14,26 @@
         "label": "Projected Effects:\nBaseline",
         "description": "Projected effects of tariff policy as of April 8, 2025 (through the week of April 7).",
         "sections": [
-          { "id": "overview", "label": "" },
-          { "id": "rates", "label": "Tariff Rates" },
-          { "id": "prices-households", "label": "Prices & Households" },
-          { "id": "economy", "label": "Macroeconomy" },
-          { "id": "fiscal", "label": "Fiscal" }
+          {
+            "id": "overview",
+            "label": ""
+          },
+          {
+            "id": "rates",
+            "label": "Tariff Rates"
+          },
+          {
+            "id": "prices-households",
+            "label": "Prices & Households"
+          },
+          {
+            "id": "economy",
+            "label": "Macroeconomy"
+          },
+          {
+            "id": "fiscal",
+            "label": "Fiscal"
+          }
         ],
         "figures": [
           {
@@ -30,20 +45,50 @@
               "title": "Summary of Results",
               "subtitle": "Projected effects of tariff policy as of April 8, 2025 (through the week of April 7).",
               "data": "data.csv",
-              "stub": ["category", "series"],
+              "stub": [
+                "category",
+                "series"
+              ],
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
               "format": {
                 "groups": {
-                  "Revenue (10-year)": { "type": "currency", "decimals": 0, "prefix": "$", "suffix": "B", "thousands": true },
-                  "Consumer price increase": { "type": "number", "decimals": 2, "suffix": "%" },
-                  "Tariff rate": { "type": "number", "decimals": 1, "suffix": "%" },
-                  "Household cost": { "type": "currency", "decimals": 0, "prefix": "$", "thousands": true },
-                  "Real GDP": { "type": "number", "decimals": 2, "suffix": " pp" }
+                  "Revenue (10-year)": {
+                    "type": "currency",
+                    "decimals": 0,
+                    "prefix": "$",
+                    "suffix": "B",
+                    "thousands": true
+                  },
+                  "Consumer price increase": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  },
+                  "Tariff rate": {
+                    "type": "number",
+                    "decimals": 1,
+                    "suffix": "%"
+                  },
+                  "Household cost": {
+                    "type": "currency",
+                    "decimals": 0,
+                    "prefix": "$",
+                    "thousands": true
+                  },
+                  "Real GDP": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": " pp"
+                  }
                 },
                 "rows": {
-                  "Long-run": { "type": "number", "decimals": 2, "suffix": "%" }
+                  "Long-run": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  }
                 }
               }
             },
@@ -64,7 +109,11 @@
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
-              "columns": { "x": "year", "series": "series", "value": "value" },
+              "columns": {
+                "x": "year",
+                "series": "series",
+                "value": "value"
+              },
               "series_labels": {
                 "historical": "Historical",
                 "projected": "Projected",
@@ -79,29 +128,43 @@
           {
             "id": "consumer-prices",
             "short_label": "Consumer Prices",
-            "figureType": "table",
+            "figureType": "chart",
             "data": "previous-vintages/2025-04-07/baseline/consumer-prices/data.csv",
             "spec": {
-              "title": "Commodity Price Effects from 2025 Tariffs Through Week of April 7",
-              "subtitle": "Percent change to price level.",
+              "chartType": "bar",
               "data": "data.csv",
-              "stub": ["category"],
-              "header": ["measure"],
-              "value": "value",
-              "column_order": ["overall", "domestic", "imported"],
-              "header_labels": {
-                "overall": "Overall Prices",
-                "domestic": "Domestic Products",
-                "imported": "Imported Products"
-              },
-              "sort": { "by": "overall", "direction": "desc" },
-              "format": {
-                "default": { "type": "number", "decimals": 1, "suffix": "%" }
-              },
+              "title": "Long-Run Commodity Price Effects, Overall / Domestic / Imported",
+              "subtitle": "Percent change to price level. Through week of April 7.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-              "notes": "\"nec\" = \"Not elsewhere classified.\" Rows are sorted by Overall Prices, descending, matching the published table. Only long-run (post-substitution) values were published in this release."
+              "orientation": "horizontal",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "facet": "substitution",
+                "series": "basis",
+                "value": "value"
+              },
+              "series_order": [
+                "overall",
+                "domestic",
+                "imported"
+              ],
+              "series_labels": {
+                "overall": "Overall price",
+                "domestic": "Domestic price",
+                "imported": "Imported price"
+              },
+              "series_colors": {
+                "overall": "blue",
+                "domestic": "green",
+                "imported": "amber"
+              },
+              "header_labels": {
+                "postsub": "Long-run"
+              },
+              "notes": "\"nec\" = \"Not elsewhere classified.\" Only long-run (post-substitution) values were published in this release. The \"basis\" field splits each commodity into its overall, domestic-price, and imported-price change, as delineated in the source workbook."
             },
-            "body_html": "<p>Long-run overall, domestic, and imported price effects by commodity, as of the week of April 7, 2025, ranked by overall price change. No short-run (pre-substitution) commodity-level breakdown was published in this release.</p>",
+            "body_html": "<p>Long-run overall, domestic, and imported price effects for the commodities with the largest projected changes, as of the week of April 7, 2025. No short-run (pre-substitution) commodity-level breakdown was published in this release.</p>",
             "section": "prices-households",
             "figureNum": 3
           },
@@ -118,13 +181,31 @@
               "source": "GTAP v7, Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
-              "columns": { "x": "category", "facet": "basis", "series": "basis", "value": "value" },
-              "x_order": ["2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              "columns": {
+                "x": "category",
+                "facet": "basis",
+                "series": "basis",
+                "value": "value"
+              },
+              "x_order": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+              ],
               "x_axis_title": "Income decile",
               "small_multiples": {
                 "mode": "per-pane",
                 "columns": 2,
-                "pane_order": ["% of after-tax income", "2024 dollars"]
+                "pane_order": [
+                  "% of after-tax income",
+                  "2024 dollars"
+                ]
               },
               "notes": "Decile 1 values were not published in this release."
             },
@@ -144,8 +225,13 @@
               "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "S&P Global, GTAP v7, GTAP RD, The Budget Lab analysis.",
               "xAxisType": "temporal",
-              "yAxisPolicy": { "includeZero": true, "tickCount": 6 },
-              "series_labels": { "gdp_level": "Real GDP" }
+              "yAxisPolicy": {
+                "includeZero": true,
+                "tickCount": 6
+              },
+              "series_labels": {
+                "gdp_level": "Real GDP"
+              }
             },
             "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
             "section": "economy",
@@ -164,7 +250,11 @@
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
-              "columns": { "x": "category", "facet": "group", "value": "value" },
+              "columns": {
+                "x": "category",
+                "facet": "group",
+                "value": "value"
+              },
               "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries. Only country-level effects were published in this release; no sector-level breakdown is available for this vintage."
             },
             "body_html": "<p>The long-run change in real GDP, by trading partner. No sector-level breakdown was published in this release.</p>",
