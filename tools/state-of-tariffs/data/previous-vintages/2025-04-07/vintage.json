@@ -40,7 +40,7 @@
             "id": "summary-statistics",
             "short_label": "Summary of Results",
             "figureType": "table",
-            "data": "previous-vintages/2025-04-08/baseline/summary-statistics/data.csv",
+            "data": "previous-vintages/2025-04-07/baseline/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
               "subtitle": "Projected effects of tariff policy as of April 8, 2025 (through the week of April 7).",
@@ -101,7 +101,7 @@
             "id": "etr-historical",
             "short_label": "Historical Effective Tariff Rate",
             "figureType": "chart",
-            "data": "previous-vintages/2025-04-08/baseline/etr-historical/data.csv",
+            "data": "previous-vintages/2025-04-07/baseline/etr-historical/data.csv",
             "spec": {
               "chartType": "line",
               "data": "data.csv",
@@ -129,7 +129,7 @@
             "id": "consumer-prices",
             "short_label": "Consumer Prices",
             "figureType": "chart",
-            "data": "previous-vintages/2025-04-08/baseline/consumer-prices/data.csv",
+            "data": "previous-vintages/2025-04-07/baseline/consumer-prices/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -160,7 +160,7 @@
             "id": "distribution",
             "short_label": "Household Costs by Income",
             "figureType": "chart",
-            "data": "previous-vintages/2025-04-08/baseline/distribution/data.csv",
+            "data": "previous-vintages/2025-04-07/baseline/distribution/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -205,7 +205,7 @@
             "id": "real-gdp",
             "short_label": "GDP over Time",
             "figureType": "chart",
-            "data": "previous-vintages/2025-04-08/baseline/real-gdp/data.csv",
+            "data": "previous-vintages/2025-04-07/baseline/real-gdp/data.csv",
             "spec": {
               "chartType": "line",
               "data": "data.csv",
@@ -229,7 +229,7 @@
             "id": "gdp-by-category",
             "short_label": "Long-Run GDP Breakdown",
             "figureType": "chart",
-            "data": "previous-vintages/2025-04-08/baseline/gdp-by-category/data.csv",
+            "data": "previous-vintages/2025-04-07/baseline/gdp-by-category/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
