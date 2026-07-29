@@ -133,7 +133,7 @@
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
-              "title": "Long-Run Commodity Price Effects",
+              "title": "Long-Run Commodity Price Effects, Overall / Domestic / Imported",
               "subtitle": "Percent change to price level. Through week of April 7.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "orientation": "horizontal",
@@ -141,18 +141,30 @@
               "columns": {
                 "x": "category",
                 "facet": "substitution",
-                "series": "substitution",
+                "series": "basis",
                 "value": "value"
+              },
+              "series_order": [
+                "overall",
+                "domestic",
+                "imported"
+              ],
+              "series_labels": {
+                "overall": "Overall price",
+                "domestic": "Domestic price",
+                "imported": "Imported price"
+              },
+              "series_colors": {
+                "overall": "blue",
+                "domestic": "green",
+                "imported": "amber"
               },
               "header_labels": {
                 "postsub": "Long-run"
               },
-              "series_colors": {
-                "postsub": "amber"
-              },
-              "notes": "\"nec\" = \"Not elsewhere classified.\" Only long-run (post-substitution) values were published in this release; the data.csv also includes domestic and imported price columns for reference."
+              "notes": "\"nec\" = \"Not elsewhere classified.\" Only long-run (post-substitution) values were published in this release. The \"basis\" field splits each commodity into its overall, domestic-price, and imported-price change, as delineated in the source workbook."
             },
-            "body_html": "<p>Long-run price effects for the commodities with the largest projected changes, as of the week of April 7, 2025. No short-run (pre-substitution) commodity-level breakdown was published in this release.</p>",
+            "body_html": "<p>Long-run overall, domestic, and imported price effects for the commodities with the largest projected changes, as of the week of April 7, 2025. No short-run (pre-substitution) commodity-level breakdown was published in this release.</p>",
             "section": "prices-households",
             "figureNum": 3
           },
