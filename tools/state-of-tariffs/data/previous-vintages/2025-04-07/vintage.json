@@ -4,14 +4,14 @@
   "label": "April 8, 2025",
   "published_at": "2025-04-08T00:00:00-0400",
   "version": "1.0",
-  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: Week of April 7, 2025\" report, restructured to match the current interactive's data format. This report captured tariff policy shortly after the April 2 \"Liberation Day\" reciprocal tariff announcement and China's retaliatory tariff increase to 34%, effective April 10. There was no live Baseline vs. alternative-scenario framing at this point (that structure emerged later, e.g. around the IEEPA legal challenge), so this vintage has a single Default Scenario only. Two figures published in the original release &mdash; the historical effective tariff rate since 1790, and a country-by-country effective tariff rate breakdown &mdash; do not have exact analogues in the current interactive's figure set; the former is included as an extra figure (<code>etr-historical</code>), and the latter (country-level effective tariff rates) was not published in this release at all, so the <code>etr-by-country</code> figure and the <code>revenue-by-year</code> figure (this release reported only a single 2026&ndash;35 total, not a year-by-year series) are omitted from this vintage.</p>",
+  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: Week of April 7, 2025\" report, restructured to match the current interactive's data format. This report captured tariff policy shortly after the April 2 \"Liberation Day\" reciprocal tariff announcement and China's retaliatory tariff increase to 34%, effective April 10. There was no live Baseline vs. alternative-scenario framing at this point (that structure emerged later, e.g. around the IEEPA legal challenge), so this vintage has a single Baseline only. Two figures published in the original release &mdash; the historical effective tariff rate since 1790, and a country-by-country effective tariff rate breakdown &mdash; do not have exact analogues in the current interactive's figure set; the former is included as an extra figure (<code>etr-historical</code>), and the latter (country-level effective tariff rates) was not published in this release at all, so the <code>etr-by-country</code> figure and the <code>revenue-by-year</code> figure (this release reported only a single 2026&ndash;35 total, not a year-by-year series) are omitted from this vintage.</p>",
   "scenarios": [
     {
-      "id": "default-scenario",
-      "label": "Default Scenario",
+      "id": "baseline",
+      "label": "Baseline",
       "tab": {
-        "id": "default-scenario",
-        "label": "Projected Effects:\nDefault Scenario",
+        "id": "baseline",
+        "label": "Projected Effects:\nBaseline",
         "description": "Projected effects of tariff policy as of April 8, 2025 (through the week of April 7).",
         "sections": [
           {
@@ -40,7 +40,7 @@
             "id": "summary-statistics",
             "short_label": "Summary of Results",
             "figureType": "table",
-            "data": "previous-vintages/2025-04-08/default-scenario/summary-statistics/data.csv",
+            "data": "previous-vintages/2025-04-08/baseline/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
               "subtitle": "Projected effects of tariff policy as of April 8, 2025 (through the week of April 7).",
@@ -92,7 +92,7 @@
                 }
               }
             },
-            "body_html": "<h2>Default Scenario</h2><p>This section presents projected effects as of April 8, 2025, reflecting all 2025 tariffs and foreign retaliation implemented through the week of April 7. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
+            "body_html": "<h2>Baseline</h2><p>This section presents projected effects as of April 8, 2025, reflecting all 2025 tariffs and foreign retaliation implemented through the week of April 7. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
             "section": "overview",
             "lead": true,
             "figureNum": 1
@@ -101,7 +101,7 @@
             "id": "etr-historical",
             "short_label": "Historical Effective Tariff Rate",
             "figureType": "chart",
-            "data": "previous-vintages/2025-04-08/default-scenario/etr-historical/data.csv",
+            "data": "previous-vintages/2025-04-08/baseline/etr-historical/data.csv",
             "spec": {
               "chartType": "line",
               "data": "data.csv",
@@ -129,7 +129,7 @@
             "id": "consumer-prices",
             "short_label": "Consumer Prices",
             "figureType": "chart",
-            "data": "previous-vintages/2025-04-08/default-scenario/consumer-prices/data.csv",
+            "data": "previous-vintages/2025-04-08/baseline/consumer-prices/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -160,7 +160,7 @@
             "id": "distribution",
             "short_label": "Household Costs by Income",
             "figureType": "chart",
-            "data": "previous-vintages/2025-04-08/default-scenario/distribution/data.csv",
+            "data": "previous-vintages/2025-04-08/baseline/distribution/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -205,7 +205,7 @@
             "id": "real-gdp",
             "short_label": "GDP over Time",
             "figureType": "chart",
-            "data": "previous-vintages/2025-04-08/default-scenario/real-gdp/data.csv",
+            "data": "previous-vintages/2025-04-08/baseline/real-gdp/data.csv",
             "spec": {
               "chartType": "line",
               "data": "data.csv",
@@ -229,7 +229,7 @@
             "id": "gdp-by-category",
             "short_label": "Long-Run GDP Breakdown",
             "figureType": "chart",
-            "data": "previous-vintages/2025-04-08/default-scenario/gdp-by-category/data.csv",
+            "data": "previous-vintages/2025-04-08/baseline/gdp-by-category/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
