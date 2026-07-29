@@ -1,0 +1,266 @@
+{
+  "id": "2025-04-08",
+  "date": "2025-04-08",
+  "label": "April 8, 2025",
+  "published_at": "2025-04-08T00:00:00-0400",
+  "version": "1.0",
+  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: Week of April 7, 2025\" report, restructured to match the current interactive's data format. This report captured tariff policy shortly after the April 2 \"Liberation Day\" reciprocal tariff announcement and China's retaliatory tariff increase to 34%, effective April 10. There was no live Baseline vs. alternative-scenario framing at this point (that structure emerged later, e.g. around the IEEPA legal challenge), so this vintage has a single Default Scenario only. Two figures published in the original release &mdash; the historical effective tariff rate since 1790, and a country-by-country effective tariff rate breakdown &mdash; do not have exact analogues in the current interactive's figure set; the former is included as an extra figure (<code>etr-historical</code>), and the latter (country-level effective tariff rates) was not published in this release at all, so the <code>etr-by-country</code> figure and the <code>revenue-by-year</code> figure (this release reported only a single 2026&ndash;35 total, not a year-by-year series) are omitted from this vintage.</p>",
+  "scenarios": [
+    {
+      "id": "default-scenario",
+      "label": "Default Scenario",
+      "tab": {
+        "id": "default-scenario",
+        "label": "Projected Effects:\nDefault Scenario",
+        "description": "Projected effects of tariff policy as of April 8, 2025 (through the week of April 7).",
+        "sections": [
+          {
+            "id": "overview",
+            "label": ""
+          },
+          {
+            "id": "rates",
+            "label": "Tariff Rates"
+          },
+          {
+            "id": "prices-households",
+            "label": "Prices & Households"
+          },
+          {
+            "id": "economy",
+            "label": "Macroeconomy"
+          },
+          {
+            "id": "fiscal",
+            "label": "Fiscal"
+          }
+        ],
+        "figures": [
+          {
+            "id": "summary-statistics",
+            "short_label": "Summary of Results",
+            "figureType": "table",
+            "data": "previous-vintages/2025-04-08/default-scenario/summary-statistics/data.csv",
+            "spec": {
+              "title": "Summary of Results",
+              "subtitle": "Projected effects of tariff policy as of April 8, 2025 (through the week of April 7).",
+              "data": "data.csv",
+              "stub": [
+                "category",
+                "series"
+              ],
+              "header": [],
+              "value": "value",
+              "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "format": {
+                "groups": {
+                  "Revenue (10-year)": {
+                    "type": "currency",
+                    "decimals": 0,
+                    "prefix": "$",
+                    "suffix": "B",
+                    "thousands": true
+                  },
+                  "Consumer price increase": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  },
+                  "Tariff rate": {
+                    "type": "number",
+                    "decimals": 1,
+                    "suffix": "%"
+                  },
+                  "Household cost": {
+                    "type": "currency",
+                    "decimals": 0,
+                    "prefix": "$",
+                    "thousands": true
+                  },
+                  "Real GDP": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": " pp"
+                  }
+                },
+                "rows": {
+                  "Long-run": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  }
+                }
+              }
+            },
+            "body_html": "<h2>Default Scenario</h2><p>This section presents projected effects as of April 8, 2025, reflecting all 2025 tariffs and foreign retaliation implemented through the week of April 7. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
+            "section": "overview",
+            "lead": true,
+            "figureNum": 1
+          },
+          {
+            "id": "etr-historical",
+            "short_label": "Historical Effective Tariff Rate",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-08/default-scenario/etr-historical/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "US Average Effective Tariff Rate Since 1790",
+              "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "columns": {
+                "x": "year",
+                "series": "series",
+                "value": "value"
+              },
+              "series_labels": {
+                "historical": "Historical",
+                "projected": "Projected",
+                "current_average": "Current average effective rate"
+              }
+            },
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 8, 2025) average effective rate shown for reference. This figure is not part of the current interactive's standard figure set and is included here as an extra, since it was published in this release.</p>",
+            "section": "rates",
+            "figureNum": 2,
+            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
+          },
+          {
+            "id": "consumer-prices",
+            "short_label": "Consumer Prices",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-08/default-scenario/consumer-prices/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Long-Run Commodity Price Effects",
+              "subtitle": "Percent change to price level. Through week of April 7.",
+              "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "orientation": "horizontal",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "facet": "substitution",
+                "series": "substitution",
+                "value": "value"
+              },
+              "header_labels": {
+                "postsub": "Long-run"
+              },
+              "series_colors": {
+                "postsub": "amber"
+              },
+              "notes": "\"nec\" = \"Not elsewhere classified.\" Only long-run (post-substitution) values were published in this release; the data.csv also includes domestic and imported price columns for reference."
+            },
+            "body_html": "<p>Long-run price effects for the commodities with the largest projected changes, as of the week of April 7, 2025. No short-run (pre-substitution) commodity-level breakdown was published in this release.</p>",
+            "section": "prices-households",
+            "figureNum": 3
+          },
+          {
+            "id": "distribution",
+            "short_label": "Household Costs by Income",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-08/default-scenario/distribution/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Household Cost of Tariffs by Income Decile",
+              "subtitle": "Tariff burden by household income decile, post-substitution. Through week of April 7.",
+              "source": "GTAP v7, Census, BLS, BEA, The Budget Lab analysis.",
+              "orientation": "vertical",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "facet": "basis",
+                "series": "basis",
+                "value": "value"
+              },
+              "x_order": [
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+              ],
+              "x_axis_title": "Income decile",
+              "small_multiples": {
+                "mode": "per-pane",
+                "columns": 2,
+                "pane_order": [
+                  "% of after-tax income",
+                  "2024 dollars"
+                ]
+              },
+              "notes": "Decile 1 values were not published in this release."
+            },
+            "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention. Decile 1 was not published in this release.</p>",
+            "section": "prices-households",
+            "figureNum": 4
+          },
+          {
+            "id": "real-gdp",
+            "short_label": "GDP over Time",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-08/default-scenario/real-gdp/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "Effect on Real GDP over Time",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "source": "S&P Global, GTAP v7, GTAP RD, The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "yAxisPolicy": {
+                "includeZero": true,
+                "tickCount": 6
+              },
+              "series_labels": {
+                "gdp_level": "Real GDP"
+              }
+            },
+            "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
+            "section": "economy",
+            "figureNum": 5
+          },
+          {
+            "id": "gdp-by-category",
+            "short_label": "Long-Run GDP Breakdown",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-08/default-scenario/gdp-by-category/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Long-Run Change in Real GDP by Trading Partner",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "orientation": "vertical",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "facet": "group",
+                "value": "value"
+              },
+              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries. Only country-level effects were published in this release; no sector-level breakdown is available for this vintage."
+            },
+            "body_html": "<p>The long-run change in real GDP, by trading partner. No sector-level breakdown was published in this release.</p>",
+            "section": "economy",
+            "figureNum": 6
+          }
+        ]
+      }
+    }
+  ],
+  "omitted_figures": [
+    {
+      "id": "etr-by-country",
+      "reason": "Not published in the April 8, 2025 (week of April 7) release. This report did not include a country-level pre-/post-substitution effective tariff rate table."
+    },
+    {
+      "id": "revenue-by-year",
+      "reason": "Not published in the April 8, 2025 (week of April 7) release. This report gave only a single aggregate 2026-35 conventional and dynamic revenue figure (see summary-statistics), not a year-by-year breakdown."
+    }
+  ]
+}
