@@ -161,7 +161,7 @@
                 "series": "substitution",
                 "value": "value"
               },
-              "header_labels": {
+              "series_labels": {
                 "presub": "Short-run",
                 "postsub": "Long-run"
               },
