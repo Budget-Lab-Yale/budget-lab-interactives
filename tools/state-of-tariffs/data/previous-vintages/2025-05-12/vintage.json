@@ -115,40 +115,83 @@
           {
             "id": "etr-by-country",
             "short_label": "Effective Rate by Trading Partner",
-            "figureType": "table",
-            "data": "previous-vintages/2025-05-12/baseline/etr-by-country/data.csv",
-            "spec": {
-              "title": "Average Effective Tariff Rate by Trading Partner",
-              "subtitle": "As of May 12, 2025, pre- and post-substitution. Percent.",
-              "data": "data.csv",
-              "stub": [
-                "category"
-              ],
-              "header": [
-                "substitution"
-              ],
-              "value": "value",
-              "column_order": [
-                "presub",
-                "postsub"
-              ],
-              "header_labels": {
-                "presub": "Pre-substitution",
-                "postsub": "Post-substitution"
-              },
-              "format": {
-                "default": {
-                  "type": "number",
-                  "decimals": 1,
-                  "suffix": "%"
+            "figureType": "composite",
+            "parts": [
+              {
+                "figureType": "table",
+                "data": "previous-vintages/2025-05-12/baseline/etr-by-country/data.csv",
+                "spec": {
+                  "title": "Average Effective Tariff Rate by Trading Partner",
+                  "subtitle": "As of May 12, 2025, pre- and post-substitution. Percent.",
+                  "data": "data.csv",
+                  "stub": [
+                    "category"
+                  ],
+                  "header": [
+                    "substitution"
+                  ],
+                  "value": "value",
+                  "column_order": [
+                    "presub",
+                    "postsub"
+                  ],
+                  "header_labels": {
+                    "presub": "Pre-substitution",
+                    "postsub": "Post-substitution"
+                  },
+                  "format": {
+                    "default": {
+                      "type": "number",
+                      "decimals": 1,
+                      "suffix": "%"
+                    }
+                  },
+                  "emphasis_rows": [
+                    "Total"
+                  ],
+                  "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
                 }
               },
-              "emphasis_rows": [
-                "Total"
-              ],
-              "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
-            },
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of May 12, 2025, before and after trade substitution.</p>",
+              {
+                "figureType": "chart",
+                "data": "previous-vintages/2025-05-12/baseline/etr-by-country/data.csv",
+                "spec": {
+                  "chartType": "bar",
+                  "data": "data.csv",
+                  "title": "Average Effective US Tariff Rate, New 2025 Policy Through May 12",
+                  "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
+                  "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                  "orientation": "horizontal",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "category",
+                    "facet": "substitution",
+                    "series": "substitution",
+                    "value": "value"
+                  },
+                  "x_order": [
+                    "China",
+                    "Canada",
+                    "Mexico",
+                    "Rest of World"
+                  ],
+                  "series_labels": {
+                    "presub": "Pre-substitution",
+                    "postsub": "Post-substitution"
+                  },
+                  "series_colors": {
+                    "presub": "blue",
+                    "postsub": "amber"
+                  }
+                },
+                "total": {
+                  "column": "category",
+                  "value": "Total",
+                  "hide": true
+                }
+              }
+            ],
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of May 12, 2025, before and after trade substitution. Published in the original release as Table 2/Figure 1; shown here as both a table and a bar chart.</p>",
             "section": "rates",
             "figureNum": 2
           },
