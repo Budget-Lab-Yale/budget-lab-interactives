@@ -143,6 +143,36 @@
             "figureNum": 2
           },
           {
+            "id": "etr-historical",
+            "short_label": "Historical Effective Tariff Rate",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-15/baseline/etr-historical/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "US Average Effective Tariff Rate Since 1790",
+              "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "columns": {
+                "x": "year",
+                "series": "series",
+                "value": "value"
+              },
+              "series_labels": {
+                "historical": "Historical",
+                "projected_presub": "Projected (pre-substitution)",
+                "projected_postsub": "Projected (post-substitution)",
+                "current_average_presub": "Current average effective rate (pre-substitution)",
+                "current_average_postsub": "Current average effective rate (post-substitution)"
+              }
+            },
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 15, 2025) average effective rate shown for reference, both pre- and post-substitution. This figure is not part of the current interactive's standard figure set and is included here as an extra, since it was published in this release.</p>",
+            "section": "rates",
+            "figureNum": 3,
+            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
+          },
+          {
             "id": "consumer-prices",
             "short_label": "Consumer Prices",
             "figureType": "chart",
@@ -172,7 +202,7 @@
             },
             "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes.</p>",
             "section": "prices-households",
-            "figureNum": 3
+            "figureNum": 4
           },
           {
             "id": "distribution",
@@ -217,7 +247,7 @@
             },
             "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
             "section": "prices-households",
-            "figureNum": 4
+            "figureNum": 5
           },
           {
             "id": "real-gdp",
@@ -241,7 +271,7 @@
             },
             "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
             "section": "economy",
-            "figureNum": 5
+            "figureNum": 6
           },
           {
             "id": "gdp-by-category",
@@ -265,7 +295,7 @@
             },
             "body_html": "<p>The long-run change in real GDP, by trading partner. No sector-level breakdown was published in this release.</p>",
             "section": "economy",
-            "figureNum": 6
+            "figureNum": 7
           }
         ]
       }
