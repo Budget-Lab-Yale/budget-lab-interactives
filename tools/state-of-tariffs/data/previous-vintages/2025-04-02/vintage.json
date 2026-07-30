@@ -1,0 +1,571 @@
+{
+  "id": "2025-04-02",
+  "date": "2025-04-02",
+  "label": "April 2, 2025",
+  "published_at": "2025-04-02T00:00:00-0400",
+  "version": "1.0",
+  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"Where We Stand: The Fiscal, Economic, and Distributional Effects of All U.S. Tariffs Enacted in 2025 Through April 2\" report, restructured to match the current interactive's data format. This report captured tariff policy immediately following the April 2 \u201cLiberation Day\u201d tariff announcement. The \u201cApril 2 Announcement Only\u201d scenario models the April 2nd action in isolation, without the other tariffs already in effect earlier in 2025 or any foreign retaliation. The \u201cAll 2025 Tariffs to Date\u201d scenario models the April 2nd action stacked together with every other US tariff enacted so far in 2025 (China, Canada, Mexico, autos, steel & aluminum) and all foreign retaliation announced as of publication.</p>",
+  "scenarios": [
+    {
+      "id": "april-2-announcement-only",
+      "label": "April 2 Announcement Only",
+      "tab": {
+        "id": "april-2-announcement-only",
+        "label": "Projected Effects:\nApril 2 Announcement Only",
+        "description": "Projected effects of tariff policy as of April 2, 2025, under the April 2 Announcement Only scenario.",
+        "sections": [
+          {
+            "id": "overview",
+            "label": ""
+          },
+          {
+            "id": "rates",
+            "label": "Tariff Rates"
+          },
+          {
+            "id": "prices-households",
+            "label": "Prices & Households"
+          },
+          {
+            "id": "economy",
+            "label": "Macroeconomy"
+          },
+          {
+            "id": "fiscal",
+            "label": "Fiscal"
+          }
+        ],
+        "figures": [
+          {
+            "id": "summary-statistics",
+            "short_label": "Summary of Results",
+            "figureType": "table",
+            "data": "previous-vintages/2025-04-02/april-2-announcement-only/summary-statistics/data.csv",
+            "spec": {
+              "title": "Summary of Results",
+              "subtitle": "Projected effects of tariff policy as of April 2, 2025, under the April 2 Announcement Only scenario.",
+              "data": "data.csv",
+              "stub": [
+                "category",
+                "series"
+              ],
+              "header": [],
+              "value": "value",
+              "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "group_labels": {
+                "Tariff rate": "Tariff rate increase, as of April 2, 2025",
+                "Consumer price increase": "Consumer price increase",
+                "Household cost": "Average household cost"
+              },
+              "format": {
+                "groups": {
+                  "Revenue (10-year)": {
+                    "type": "currency",
+                    "decimals": 0,
+                    "prefix": "$",
+                    "suffix": "B",
+                    "thousands": true
+                  },
+                  "Consumer price increase": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  },
+                  "Tariff rate": {
+                    "type": "number",
+                    "decimals": 1,
+                    "suffix": " p.p."
+                  },
+                  "Household cost": {
+                    "type": "currency",
+                    "decimals": 0,
+                    "prefix": "$",
+                    "thousands": true
+                  },
+                  "Real GDP": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": " pp"
+                  }
+                },
+                "rows": {
+                  "Long-run": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  },
+                  "Conventional (% of GDP)": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  }
+                }
+              }
+            },
+            "body_html": "<h2>April 2 Announcement Only</h2><p>This section presents projected effects as of April 2, 2025, under the April 2 Announcement Only scenario. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
+            "section": "overview",
+            "lead": true,
+            "figureNum": 1
+          },
+          {
+            "id": "reciprocal-tariff-rates",
+            "short_label": "April 2nd Tariff Rates by Country",
+            "figureType": "table",
+            "data": "previous-vintages/2025-04-02/april-2-announcement-only/reciprocal-tariff-rates/data.csv",
+            "spec": {
+              "title": "Appendix. April 2nd Tariff Rates",
+              "subtitle": "As announced by the White House.",
+              "data": "data.csv",
+              "stub": [
+                "country"
+              ],
+              "header": [],
+              "value": "usa_discounted_reciprocal_tariff",
+              "source": "The White House.",
+              "format": {
+                "default": {
+                  "type": "number",
+                  "decimals": 0,
+                  "suffix": "%"
+                }
+              }
+            },
+            "body_html": "<p>Country-by-country tariff rates as announced by the White House on April 2, 2025: the tariff rate attributed to each country ('Tariffs Charged to the U.S.A.') and the discounted reciprocal tariff rate the US applied in response. This appendix is specific to the April 2nd announcement and is not duplicated under the All 2025 Tariffs to Date scenario.</p>",
+            "section": "rates",
+            "figureNum": 2
+          },
+          {
+            "id": "etr-historical",
+            "short_label": "Historical Effective Tariff Rate",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-02/april-2-announcement-only/etr-historical/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "US Average Effective Tariff Rate Since 1790",
+              "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "columns": {
+                "x": "year",
+                "series": "series",
+                "value": "value"
+              },
+              "series_labels": {
+                "historical": "Historical",
+                "current_average": "Current average effective rate (April 2 Announcement Only)"
+              },
+              "series_styles": {
+                "current_average": {
+                  "dashed": true
+                }
+              }
+            },
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 2, 2025) average effective rate under the April 2 Announcement Only scenario shown for reference.</p>",
+            "section": "rates",
+            "figureNum": 3,
+            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
+          },
+          {
+            "id": "consumer-prices",
+            "short_label": "Commodity Price Effects",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-02/april-2-announcement-only/consumer-prices/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Commodity Price Effects",
+              "subtitle": "Percent change to price level.",
+              "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "notes": "'nec' = 'Not elsewhere classified.'",
+              "orientation": "horizontal",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "series": "measure",
+                "value": "value"
+              },
+              "series_labels": {
+                "price": "Overall price",
+                "domestic": "Domestic",
+                "imported": "Imported"
+              },
+              "series_colors": {
+                "price": "blue",
+                "domestic": "amber",
+                "imported": "green"
+              }
+            },
+            "body_html": "<p>Percent change in producer/consumer prices by commodity under the April 2 Announcement Only scenario, overall and split between domestically-produced and imported goods. The published report charted only a subset of the largest movers; this data file includes all commodities.</p>",
+            "section": "prices-households",
+            "figureNum": 4
+          },
+          {
+            "id": "distribution",
+            "short_label": "Household Costs by Income",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-02/april-2-announcement-only/distribution/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Short-Run Distributional Effects of 2025 Tariffs",
+              "subtitle": "Tariff burden by household income decile, post-substitution.",
+              "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
+              "notes": "Decile 1 was not published in this release and is omitted.",
+              "orientation": "vertical",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "facet": "basis",
+                "series": "basis",
+                "value": "value"
+              },
+              "x_order": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+              ],
+              "x_axis_title": "Income decile",
+              "series_colors": {
+                "% of after-tax income": "blue",
+                "2024 dollars": "amber"
+              },
+              "small_multiples": {
+                "mode": "per-pane",
+                "columns": 2,
+                "pane_order": [
+                  "% of after-tax income",
+                  "2024 dollars"
+                ]
+              }
+            },
+            "body_html": "<p>The short-run tariff burden by household income decile under the April 2 Announcement Only scenario, as a share of after-tax income and in dollars per household. Values are negative by convention. Decile 1 was not published in the original release.</p>",
+            "section": "prices-households",
+            "figureNum": 5
+          },
+          {
+            "id": "real-gdp",
+            "short_label": "GDP over Time",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-02/april-2-announcement-only/real-gdp/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "U.S. Real GDP Level Effects of 2025 Tariffs to Date",
+              "subtitle": "Percentage point change against baseline.",
+              "source": "S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "yAxisPolicy": {
+                "includeZero": true,
+                "tickCount": 6
+              },
+              "series_labels": {
+                "gdp_level": "Real GDP"
+              }
+            },
+            "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter, under the April 2 Announcement Only scenario.</p>",
+            "section": "economy",
+            "figureNum": 6
+          },
+          {
+            "id": "gdp-by-category",
+            "short_label": "Long-Run GDP Breakdown",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-02/april-2-announcement-only/gdp-by-category/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Long-Run Change in Real GDP Level from 2025 Tariffs",
+              "subtitle": "Percentage point change, by trading partner.",
+              "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "orientation": "vertical",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "value": "value"
+              },
+              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries. Only country-level effects were published in this release; no sector-level breakdown is available for this vintage."
+            },
+            "body_html": "<p>The long-run change in real GDP under the April 2 Announcement Only scenario, by trading partner. No sector-level breakdown was published in this release.</p>",
+            "section": "economy",
+            "figureNum": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "all-2025-tariffs-to-date",
+      "label": "All 2025 Tariffs to Date",
+      "tab": {
+        "id": "all-2025-tariffs-to-date",
+        "label": "Projected Effects:\nAll 2025 Tariffs to Date",
+        "description": "Projected effects of tariff policy as of April 2, 2025, under the All 2025 Tariffs to Date scenario.",
+        "sections": [
+          {
+            "id": "overview",
+            "label": ""
+          },
+          {
+            "id": "rates",
+            "label": "Tariff Rates"
+          },
+          {
+            "id": "prices-households",
+            "label": "Prices & Households"
+          },
+          {
+            "id": "economy",
+            "label": "Macroeconomy"
+          },
+          {
+            "id": "fiscal",
+            "label": "Fiscal"
+          }
+        ],
+        "figures": [
+          {
+            "id": "summary-statistics",
+            "short_label": "Summary of Results",
+            "figureType": "table",
+            "data": "previous-vintages/2025-04-02/all-2025-tariffs-to-date/summary-statistics/data.csv",
+            "spec": {
+              "title": "Summary of Results",
+              "subtitle": "Projected effects of tariff policy as of April 2, 2025, under the All 2025 Tariffs to Date scenario.",
+              "data": "data.csv",
+              "stub": [
+                "category",
+                "series"
+              ],
+              "header": [],
+              "value": "value",
+              "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "group_labels": {
+                "Tariff rate": "Tariff rate increase, as of April 2, 2025",
+                "Consumer price increase": "Consumer price increase",
+                "Household cost": "Average household cost"
+              },
+              "format": {
+                "groups": {
+                  "Revenue (10-year)": {
+                    "type": "currency",
+                    "decimals": 0,
+                    "prefix": "$",
+                    "suffix": "B",
+                    "thousands": true
+                  },
+                  "Consumer price increase": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  },
+                  "Tariff rate": {
+                    "type": "number",
+                    "decimals": 1,
+                    "suffix": " p.p."
+                  },
+                  "Household cost": {
+                    "type": "currency",
+                    "decimals": 0,
+                    "prefix": "$",
+                    "thousands": true
+                  },
+                  "Real GDP": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": " pp"
+                  }
+                },
+                "rows": {
+                  "Long-run": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  },
+                  "Conventional (% of GDP)": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  }
+                }
+              }
+            },
+            "body_html": "<h2>All 2025 Tariffs to Date</h2><p>This section presents projected effects as of April 2, 2025, under the All 2025 Tariffs to Date scenario. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
+            "section": "overview",
+            "lead": true,
+            "figureNum": 1
+          },
+          {
+            "id": "etr-historical",
+            "short_label": "Historical Effective Tariff Rate",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-02/all-2025-tariffs-to-date/etr-historical/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "US Average Effective Tariff Rate Since 1790",
+              "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "columns": {
+                "x": "year",
+                "series": "series",
+                "value": "value"
+              },
+              "series_labels": {
+                "historical": "Historical",
+                "current_average": "Current average effective rate (All 2025 Tariffs to Date)"
+              },
+              "series_styles": {
+                "current_average": {
+                  "dashed": true
+                }
+              }
+            },
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 2, 2025) average effective rate under the All 2025 Tariffs to Date scenario shown for reference.</p>",
+            "section": "rates",
+            "figureNum": 2,
+            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
+          },
+          {
+            "id": "consumer-prices",
+            "short_label": "Commodity Price Effects",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-02/all-2025-tariffs-to-date/consumer-prices/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Commodity Price Effects",
+              "subtitle": "Percent change to price level.",
+              "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "notes": "'nec' = 'Not elsewhere classified.'",
+              "orientation": "horizontal",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "series": "measure",
+                "value": "value"
+              },
+              "series_labels": {
+                "price": "Overall price",
+                "domestic": "Domestic",
+                "imported": "Imported"
+              },
+              "series_colors": {
+                "price": "blue",
+                "domestic": "amber",
+                "imported": "green"
+              }
+            },
+            "body_html": "<p>Percent change in producer/consumer prices by commodity under the All 2025 Tariffs to Date scenario, overall and split between domestically-produced and imported goods. The published report charted only a subset of the largest movers; this data file includes all commodities.</p>",
+            "section": "prices-households",
+            "figureNum": 3
+          },
+          {
+            "id": "distribution",
+            "short_label": "Household Costs by Income",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-02/all-2025-tariffs-to-date/distribution/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Short-Run Distributional Effects of 2025 Tariffs",
+              "subtitle": "Tariff burden by household income decile, post-substitution.",
+              "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
+              "notes": "Decile 1 was not published in this release and is omitted.",
+              "orientation": "vertical",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "facet": "basis",
+                "series": "basis",
+                "value": "value"
+              },
+              "x_order": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+              ],
+              "x_axis_title": "Income decile",
+              "series_colors": {
+                "% of after-tax income": "blue",
+                "2024 dollars": "amber"
+              },
+              "small_multiples": {
+                "mode": "per-pane",
+                "columns": 2,
+                "pane_order": [
+                  "% of after-tax income",
+                  "2024 dollars"
+                ]
+              }
+            },
+            "body_html": "<p>The short-run tariff burden by household income decile under the All 2025 Tariffs to Date scenario, as a share of after-tax income and in dollars per household. Values are negative by convention. Decile 1 was not published in the original release.</p>",
+            "section": "prices-households",
+            "figureNum": 4
+          },
+          {
+            "id": "real-gdp",
+            "short_label": "GDP over Time",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-02/all-2025-tariffs-to-date/real-gdp/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "U.S. Real GDP Level Effects of 2025 Tariffs to Date",
+              "subtitle": "Percentage point change against baseline.",
+              "source": "S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "yAxisPolicy": {
+                "includeZero": true,
+                "tickCount": 6
+              },
+              "series_labels": {
+                "gdp_level": "Real GDP"
+              }
+            },
+            "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter, under the All 2025 Tariffs to Date scenario.</p>",
+            "section": "economy",
+            "figureNum": 5
+          },
+          {
+            "id": "gdp-by-category",
+            "short_label": "Long-Run GDP Breakdown",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-02/all-2025-tariffs-to-date/gdp-by-category/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Long-Run Change in Real GDP Level from 2025 Tariffs",
+              "subtitle": "Percentage point change, by trading partner.",
+              "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "orientation": "vertical",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "value": "value"
+              },
+              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries. Only country-level effects were published in this release; no sector-level breakdown is available for this vintage."
+            },
+            "body_html": "<p>The long-run change in real GDP under the All 2025 Tariffs to Date scenario, by trading partner. No sector-level breakdown was published in this release.</p>",
+            "section": "economy",
+            "figureNum": 6
+          }
+        ]
+      }
+    }
+  ]
+}
