@@ -187,6 +187,10 @@
                 "series": "basis",
                 "value": "value"
               },
+               "series_labels": {
+                "presub": "Short-run",
+                "postsub": "Long-run"
+              },
               "x_order": [
                 "2",
                 "3",
