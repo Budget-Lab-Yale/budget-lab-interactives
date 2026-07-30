@@ -208,6 +208,14 @@
                 "projected_postsub": "Projected (post-substitution)",
                 "current_average_presub": "Current average effective rate (pre-substitution)",
                 "current_average_postsub": "Current average effective rate (post-substitution)"
+              },
+              "series_styles": {
+                "current_average_presub": {
+                  "dashed": true
+                },
+                "current_average_postsub": {
+                  "dashed": true
+                }
               }
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 15, 2025) average effective rate shown for reference, both pre- and post-substitution. This figure is not part of the current interactive's standard figure set and is included here as an extra, since it was published in this release.</p>",
