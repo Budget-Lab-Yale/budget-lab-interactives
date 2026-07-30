@@ -119,8 +119,18 @@
               "stub": [
                 "country"
               ],
-              "header": [],
-              "value": "usa_discounted_reciprocal_tariff",
+              "header": [
+                "series"
+              ],
+              "value": "value",
+              "column_order": [
+                "tariffs_charged",
+                "discounted_reciprocal"
+              ],
+              "header_labels": {
+                "tariffs_charged": "Tariffs Charged to the U.S.A. (%)",
+                "discounted_reciprocal": "U.S.A. Discounted Reciprocal Tariffs (%)"
+              },
               "source": "The White House.",
               "format": {
                 "default": {
