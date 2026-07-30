@@ -146,7 +146,7 @@
                 "figureType": "chart",
                 "data": "previous-vintages/2025-04-15/baseline/etr-by-country/data.csv",
                 "spec": {
-                  "chartType": "bar",
+                  "chartType": "stacked",
                   "data": "data.csv",
                   "title": "Change in Average Effective US Tariff Rate, New 2025 Policy Through April 15",
                   "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
@@ -154,24 +154,32 @@
                   "orientation": "horizontal",
                   "xAxisType": "categorical",
                   "columns": {
-                    "x": "category",
-                    "facet": "substitution",
-                    "series": "substitution",
+                    "x": "substitution",
+                    "series": "category",
                     "value": "value"
                   },
                   "x_order": [
+                    "presub",
+                    "postsub"
+                  ],
+                  "x_labels": {
+                    "presub": "Pre-substitution",
+                    "postsub": "Post-substitution"
+                  },
+                  "series_order": [
                     "China",
                     "Canada",
                     "Mexico",
                     "Rest of World"
                   ],
-                  "series_labels": {
-                    "presub": "Pre-substitution",
-                    "postsub": "Post-substitution"
-                  },
                   "series_colors": {
-                    "presub": "blue",
-                    "postsub": "amber"
+                    "China": "blue",
+                    "Canada": "amber",
+                    "Mexico": "violet",
+                    "Rest of World": "green"
+                  },
+                  "barStack": {
+                    "netDisplay": "text"
                   }
                 },
                 "total": {
@@ -181,7 +189,7 @@
                 }
               }
             ],
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of April 15, 2025, before and after trade substitution. Published in the original release as Table 2/Figure 1; shown here as both a table and a bar chart.</p>",
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of April 15, 2025, before and after trade substitution. Published in the original release as Table 2/Figure 1; shown here as both a table and a stacked bar chart, with China, Canada, Mexico, and Rest of World stacking to the total for each substitution basis.</p>",
             "section": "rates",
             "figureNum": 2
           },
