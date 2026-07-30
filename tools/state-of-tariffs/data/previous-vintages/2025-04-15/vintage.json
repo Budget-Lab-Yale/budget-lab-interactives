@@ -143,6 +143,49 @@
             "figureNum": 2
           },
           {
+            "id": "etr-by-country-chart",
+            "short_label": "Change in Tariff Rate by Trading Partner",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-04-15/baseline/etr-by-country-chart/data.csv",
+            "spec": {
+              "chartType": "bar",
+              "data": "data.csv",
+              "title": "Change in Average Effective US Tariff Rate, New 2025 Policy Through April 15",
+              "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
+              "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "orientation": "horizontal",
+              "xAxisType": "categorical",
+              "columns": {
+                "x": "category",
+                "facet": "substitution",
+                "series": "substitution",
+                "value": "value"
+              },
+              "x_order": [
+                "China",
+                "Canada",
+                "Mexico",
+                "Rest of World",
+                "Total"
+              ],
+              "series_labels": {
+                "presub": "Pre-substitution",
+                "postsub": "Post-substitution"
+              },
+              "series_colors": {
+                "presub": "blue",
+                "postsub": "amber"
+              },
+              "emphasis_categories": [
+                "Total"
+              ]
+            },
+            "body_html": "<p>The chart version of Table 2/Figure 1 as originally published: the percentage-point contribution of each trading partner to the increase in the US average effective tariff rate, pre- and post-substitution. Values are identical to the \"Effective Rate by Trading Partner\" table above.</p>",
+            "section": "rates",
+            "figureNum": 3,
+            "note": "No direct analogue in the reference (2025-10-30) vintage structure, which shows this data only as a table; included as an additional figure to preserve the original chart presentation."
+          },
+          {
             "id": "etr-historical",
             "short_label": "Historical Effective Tariff Rate",
             "figureType": "chart",
@@ -169,7 +212,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 15, 2025) average effective rate shown for reference, both pre- and post-substitution. This figure is not part of the current interactive's standard figure set and is included here as an extra, since it was published in this release.</p>",
             "section": "rates",
-            "figureNum": 3,
+            "figureNum": 4,
             "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
           },
           {
@@ -202,7 +245,7 @@
             },
             "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes.</p>",
             "section": "prices-households",
-            "figureNum": 4
+            "figureNum": 5
           },
           {
             "id": "distribution",
@@ -241,13 +284,13 @@
                 "columns": 2,
                 "pane_order": [
                   "% of after-tax income",
-                  "2025 dollars"
+                  "2024 dollars"
                 ]
               }
             },
             "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
             "section": "prices-households",
-            "figureNum": 5
+            "figureNum": 6
           },
           {
             "id": "real-gdp",
@@ -271,7 +314,7 @@
             },
             "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
             "section": "economy",
-            "figureNum": 6
+            "figureNum": 7
           },
           {
             "id": "gdp-by-category",
@@ -295,7 +338,7 @@
             },
             "body_html": "<p>The long-run change in real GDP, by trading partner. No sector-level breakdown was published in this release.</p>",
             "section": "economy",
-            "figureNum": 7
+            "figureNum": 8
           }
         ]
       }
