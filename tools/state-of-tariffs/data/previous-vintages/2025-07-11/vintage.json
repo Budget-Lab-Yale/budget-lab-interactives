@@ -93,6 +93,16 @@
                     "type": "number",
                     "decimals": 2,
                     "suffix": "%"
+                  },
+                  "Unemployment rate (p.p.), end of 2025": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": " p.p."
+                  },
+                  "Change in payroll employment, 2025 Q4 (thousands)": {
+                    "type": "number",
+                    "decimals": 0,
+                    "suffix": "K jobs"
                   }
                 }
               }
@@ -105,42 +115,131 @@
           {
             "id": "etr-by-country",
             "short_label": "Effective Rate by Trading Partner",
-            "figureType": "table",
-            "data": "previous-vintages/2025-07-11/baseline/etr-by-country/data.csv",
-            "spec": {
-              "title": "Average Effective Tariff Rate by Trading Partner",
-              "subtitle": "As of July 11, 2025, pre- and post-substitution. Percent.",
-              "data": "data.csv",
-              "stub": [
-                "category"
-              ],
-              "header": [
-                "substitution"
-              ],
-              "value": "value",
-              "column_order": [
-                "presub",
-                "postsub"
-              ],
-              "header_labels": {
-                "presub": "Pre-substitution",
-                "postsub": "Post-substitution"
-              },
-              "format": {
-                "default": {
-                  "type": "number",
-                  "decimals": 1,
-                  "suffix": "%"
+            "figureType": "composite",
+            "parts": [
+              {
+                "figureType": "table",
+                "data": "previous-vintages/2025-07-11/baseline/etr-by-country/data.csv",
+                "spec": {
+                  "title": "Average Effective Tariff Rate by Trading Partner",
+                  "subtitle": "As of July 11, 2025, pre- and post-substitution. Percent.",
+                  "data": "data.csv",
+                  "stub": [
+                    "category"
+                  ],
+                  "header": [
+                    "substitution"
+                  ],
+                  "value": "value",
+                  "column_order": [
+                    "presub",
+                    "postsub"
+                  ],
+                  "header_labels": {
+                    "presub": "Pre-substitution",
+                    "postsub": "Post-substitution"
+                  },
+                  "format": {
+                    "default": {
+                      "type": "number",
+                      "decimals": 1,
+                      "suffix": "%"
+                    }
+                  },
+                  "emphasis_rows": [
+                    "Total"
+                  ],
+                  "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
                 }
               },
-              "emphasis_rows": [
-                "Total"
-              ],
-              "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
-            },
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of July 11, 2025, before and after trade substitution.</p>",
+              {
+                "figureType": "chart",
+                "data": "previous-vintages/2025-07-11/baseline/etr-by-country/data.csv",
+                "spec": {
+                  "chartType": "stacked",
+                  "data": "data.csv",
+                  "title": "Average Effective US Tariff Rate, New 2025 Policy Through July 11",
+                  "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
+                  "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                  "orientation": "horizontal",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "substitution",
+                    "series": "category",
+                    "value": "value"
+                  },
+                  "x_order": [
+                    "presub",
+                    "postsub"
+                  ],
+                  "x_labels": {
+                    "presub": "Pre-substitution",
+                    "postsub": "Post-substitution"
+                  },
+                  "series_order": [
+                    "China",
+                    "Canada",
+                    "Mexico",
+                    "Rest of World"
+                  ],
+                  "series_colors": {
+                    "China": "blue",
+                    "Canada": "amber",
+                    "Mexico": "violet",
+                    "Rest of World": "green"
+                  },
+                  "barStack": {
+                    "netDisplay": "text"
+                  }
+                },
+                "total": {
+                  "column": "category",
+                  "value": "Total",
+                  "hide": true
+                }
+              }
+            ],
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of July 11, 2025, before and after trade substitution. Published in the original release as Table 2/Figure 1; shown here as both a table and a stacked bar chart, with China, Canada, Mexico, and Rest of World stacking to the total for each substitution basis. Note: the Total is recalculated from the four country rows (16.29% pre-substitution, 15.46% post-substitution) rather than the source workbook's own Total cell, which was not updated after the Canada/Mexico rate changes in this release.</p>",
             "section": "rates",
             "figureNum": 2
+          },
+          {
+            "id": "etr-historical",
+            "short_label": "Historical Effective Tariff Rate",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-07-11/baseline/etr-historical/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "US Average Effective Tariff Rate Since 1790",
+              "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "columns": {
+                "x": "year",
+                "series": "series",
+                "value": "value"
+              },
+              "series_labels": {
+                "historical": "Historical",
+                "projected_presub": "Projected (pre-substitution)",
+                "projected_postsub": "Projected (post-substitution)",
+                "current_average_presub": "Current average effective rate (pre-substitution)",
+                "current_average_postsub": "Current average effective rate (post-substitution)"
+              },
+              "series_styles": {
+                "current_average_presub": {
+                  "dashed": true
+                },
+                "current_average_postsub": {
+                  "dashed": true
+                }
+              }
+            },
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (July 11, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
+            "section": "rates",
+            "figureNum": 3,
+            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure since it was published in the original July 11, 2025 release (Figure 2)."
           },
           {
             "id": "consumer-prices",
@@ -161,18 +260,18 @@
                 "series": "substitution",
                 "value": "value"
               },
-              "header_labels": {
-                "presub": "Short-run",
-                "postsub": "Long-run"
-              },
               "series_colors": {
                 "presub": "blue",
                 "postsub": "amber"
+              },
+              "series_labels": {
+                "presub": "Short-run",
+                "postsub": "Long-run"
               }
             },
             "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes.</p>",
             "section": "prices-households",
-            "figureNum": 3
+            "figureNum": 4
           },
           {
             "id": "distribution",
@@ -213,11 +312,15 @@
                   "% of after-tax income",
                   "2025 dollars"
                 ]
+              },
+              "series_colors": {
+                "% of after-tax income": "blue",
+                "2025 dollars": "amber"
               }
             },
             "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
             "section": "prices-households",
-            "figureNum": 4
+            "figureNum": 5
           },
           {
             "id": "real-gdp",
@@ -241,7 +344,7 @@
             },
             "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
             "section": "economy",
-            "figureNum": 5
+            "figureNum": 6
           },
           {
             "id": "gdp-by-category",
@@ -286,7 +389,7 @@
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
             "section": "economy",
-            "figureNum": 6
+            "figureNum": 7
           }
         ]
       }
