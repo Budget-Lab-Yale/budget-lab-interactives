@@ -447,7 +447,9 @@
                 "2032",
                 "2033",
                 "2034",
-                "2035"
+                "2035",
+                "2026-35",
+                "2025-34"
               ],
               "format": {
                 "default": {
@@ -456,6 +458,10 @@
                   "thousands": true,
                   "prefix": "$"
                 }
+              },
+              "header_labels": {
+                "2026-35": "2026-35 Total",
+                "2025-34": "2025-34 Total"
               }
             },
             "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, plus the difference between the two (the dynamic revenue effect).</p>",
