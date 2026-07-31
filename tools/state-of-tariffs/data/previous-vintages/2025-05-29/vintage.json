@@ -304,18 +304,18 @@
                 "9",
                 "10"
               ],
-              "series_colors": {
-          "% of after-tax income": "blue",
-          "2024 dollars": "amber"
-  }
               "x_axis_title": "Income decile",
               "small_multiples": {
                 "mode": "per-pane",
                 "columns": 2,
                 "pane_order": [
                   "% of after-tax income",
-                  "2024 dollars"
+                  "2025 dollars"
                 ]
+              },
+              "series_colors": {
+                "% of after-tax income": "blue",
+                "2024 dollars": "amber"
               }
             },
             "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
