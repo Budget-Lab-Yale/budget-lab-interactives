@@ -304,6 +304,10 @@
                 "9",
                 "10"
               ],
+              "series_colors": {
+          "% of after-tax income": "blue",
+          "2024 dollars": "amber"
+  }
               "x_axis_title": "Income decile",
               "small_multiples": {
                 "mode": "per-pane",
