@@ -1,10 +1,10 @@
 {
-  "id": "2025-07-07",
-  "date": "2025-07-07",
-  "label": "July 7, 2025",
-  "published_at": "2025-07-07T00:00:00-0400",
+  "id": "2025-07-22",
+  "date": "2025-07-22",
+  "label": "July 22, 2025",
+  "published_at": "2025-07-22T00:00:00-0400",
   "version": "1.0",
-  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: July 7, 2025\" report, restructured to match the current interactive's data format.</p>",
+  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: July 22, 2025\" report, restructured to match the current interactive's data format.</p>",
   "scenarios": [
     {
       "id": "baseline",
@@ -12,7 +12,7 @@
       "tab": {
         "id": "baseline",
         "label": "Projected Effects:\nBaseline",
-        "description": "Projected effects of tariff policy as of July 7, 2025.",
+        "description": "Projected effects of tariff policy as of July 22, 2025.",
         "sections": [
           {
             "id": "overview",
@@ -40,10 +40,10 @@
             "id": "summary-statistics",
             "short_label": "Summary of Results",
             "figureType": "table",
-            "data": "previous-vintages/2025-07-07/baseline/summary-statistics/data.csv",
+            "data": "previous-vintages/2025-07-22/baseline/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
-              "subtitle": "Projected effects of tariff policy as of July 7, 2025.",
+              "subtitle": "Projected effects of tariff policy as of July 22, 2025.",
               "data": "data.csv",
               "stub": [
                 "category",
@@ -53,7 +53,7 @@
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
               "group_labels": {
-                "Tariff rate": "Tariff rates, as of July 7, 2025",
+                "Tariff rate": "Tariff rates, as of July 22, 2025",
                 "Consumer price increase": "Consumer price increase",
                 "Household cost": "Average household cost"
               },
@@ -107,7 +107,7 @@
                 }
               }
             },
-            "body_html": "<h2>Summary</h2><p>This section presents projected effects as of July 7, 2025. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
+            "body_html": "<h2>Summary</h2><p>This section presents projected effects as of July 22, 2025. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
             "section": "overview",
             "lead": true,
             "figureNum": 1
@@ -119,10 +119,10 @@
             "parts": [
               {
                 "figureType": "table",
-                "data": "previous-vintages/2025-07-07/baseline/etr-by-country/data.csv",
+                "data": "previous-vintages/2025-07-22/baseline/etr-by-country/data.csv",
                 "spec": {
                   "title": "Average Effective Tariff Rate by Trading Partner",
-                  "subtitle": "As of July 7, 2025, pre- and post-substitution. Percent.",
+                  "subtitle": "As of July 22, 2025, pre- and post-substitution. Percent.",
                   "data": "data.csv",
                   "stub": [
                     "category"
@@ -154,11 +154,11 @@
               },
               {
                 "figureType": "chart",
-                "data": "previous-vintages/2025-07-07/baseline/etr-by-country/data.csv",
+                "data": "previous-vintages/2025-07-22/baseline/etr-by-country/data.csv",
                 "spec": {
                   "chartType": "stacked",
                   "data": "data.csv",
-                  "title": "Average Effective US Tariff Rate, New 2025 Policy Through July 7",
+                  "title": "Average Effective US Tariff Rate, New 2025 Policy Through July 22",
                   "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
                   "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "orientation": "horizontal",
@@ -199,7 +199,7 @@
                 }
               }
             ],
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of July 7, 2025, before and after trade substitution. Published in the original release as Table 2/Figure 1; shown here as both a table and a stacked bar chart, with China, Canada, Mexico, and Rest of World stacking to the total for each substitution basis.</p>",
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of July 22, 2025, before and after trade substitution. Published in the original release as Table 2/Figure 2; shown here as both a table and a stacked bar chart, with China, Canada, Mexico, and Rest of World stacking to the total for each substitution basis.</p>",
             "section": "rates",
             "figureNum": 2
           },
@@ -207,7 +207,7 @@
             "id": "etr-historical",
             "short_label": "Historical Effective Tariff Rate",
             "figureType": "chart",
-            "data": "previous-vintages/2025-07-07/baseline/etr-historical/data.csv",
+            "data": "previous-vintages/2025-07-22/baseline/etr-historical/data.csv",
             "spec": {
               "chartType": "line",
               "data": "data.csv",
@@ -236,16 +236,38 @@
                 }
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current (July 7, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (July 22, 2025) average effective rate shown for reference, both pre- and post-substitution. Published in the original release as Figure 1.</p>",
             "section": "rates",
             "figureNum": 3,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure since it was published in the original July 7, 2025 release (Figure 2)."
+            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure since it was published in the original July 22, 2025 release (Figure 1)."
+          },
+          {
+            "id": "etr-since-2025",
+            "short_label": "Effective Tariff Rate, 2025 YTD",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-07-22/baseline/etr-since-2025/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "US Average Effective Tariff Rate Since January 1, 2025",
+              "subtitle": "Policy as of July 22, pre-substitution. Percent of goods imports.",
+              "source": "The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "columns": {
+                "x": "date",
+                "value": "value"
+              }
+            },
+            "body_html": "<p>Published in the original release as Figure 3, a new figure introduced in this vintage. Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, from the January 2025 baseline (2.4%) to the current policy level (20.24%), held flat thereafter as a forward projection.</p>",
+            "section": "rates",
+            "figureNum": 4,
+            "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure since it was published as a new figure in the original July 22, 2025 release."
           },
           {
             "id": "consumer-prices",
             "short_label": "Consumer Prices",
             "figureType": "chart",
-            "data": "previous-vintages/2025-07-07/baseline/consumer-prices/data.csv",
+            "data": "previous-vintages/2025-07-22/baseline/consumer-prices/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -271,13 +293,13 @@
             },
             "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes.</p>",
             "section": "prices-households",
-            "figureNum": 4
+            "figureNum": 5
           },
           {
             "id": "distribution",
             "short_label": "Household Costs by Income",
             "figureType": "chart",
-            "data": "previous-vintages/2025-07-07/baseline/distribution/data.csv",
+            "data": "previous-vintages/2025-07-22/baseline/distribution/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -320,13 +342,13 @@
             },
             "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
             "section": "prices-households",
-            "figureNum": 5
+            "figureNum": 6
           },
           {
             "id": "real-gdp",
             "short_label": "GDP over Time",
             "figureType": "chart",
-            "data": "previous-vintages/2025-07-07/baseline/real-gdp/data.csv",
+            "data": "previous-vintages/2025-07-22/baseline/real-gdp/data.csv",
             "spec": {
               "chartType": "line",
               "data": "data.csv",
@@ -344,13 +366,13 @@
             },
             "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
             "section": "economy",
-            "figureNum": 6
+            "figureNum": 7
           },
           {
             "id": "gdp-by-category",
             "short_label": "Long-Run GDP Breakdown",
             "figureType": "chart",
-            "data": "previous-vintages/2025-07-07/baseline/gdp-by-category/data.csv",
+            "data": "previous-vintages/2025-07-22/baseline/gdp-by-category/data.csv",
             "spec": {
               "chartType": "bar",
               "data": "data.csv",
@@ -389,7 +411,56 @@
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
             "section": "economy",
-            "figureNum": 7
+            "figureNum": 8
+          },
+          {
+            "id": "revenue-by-year",
+            "short_label": "Revenue by Year",
+            "figureType": "table",
+            "data": "previous-vintages/2025-07-22/baseline/revenue-by-year/data.csv",
+            "spec": {
+              "data": "data.csv",
+              "title": "Net Revenue Impact by Fiscal Year",
+              "subtitle": "Billions of dollars.",
+              "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
+              "stub": [
+                "series"
+              ],
+              "header": [
+                "category"
+              ],
+              "value": "value",
+              "row_labels": {
+                "conventional": "Conventional",
+                "dynamic": "Dynamic",
+                "difference": "Difference (Dynamic \u2212 Conventional)"
+              },
+              "column_order": [
+                "2025",
+                "2026",
+                "2027",
+                "2028",
+                "2029",
+                "2030",
+                "2031",
+                "2032",
+                "2033",
+                "2034",
+                "2035"
+              ],
+              "format": {
+                "default": {
+                  "type": "number",
+                  "decimals": 1,
+                  "thousands": true,
+                  "prefix": "$"
+                }
+              }
+            },
+            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, plus the difference between the two (the dynamic revenue effect).</p>",
+            "section": "fiscal",
+            "figureNum": 9
           }
         ]
       }
