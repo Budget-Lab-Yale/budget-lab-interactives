@@ -101,10 +101,10 @@
               },
               "header_labels": {
                 "current": "Current",
-                "before_scotus": "Pre-SCOTUS",
-                "immediately_following_scotus": "Post-SCOTUS",
-                "pct10": "10%",
-                "pct15": "15%",
+                "before_scotus": "Policy Before\\\\SCOTUS Ruling",
+                "immediately_following_scotus": "Policy Immediately Following\\\\SCOTUS Ruling\\\\(No IEEPA or Section 122)",
+                "pct10": "10% Section\\\\122",
+                "pct15": "15% Section\\\\122",
                 "expires": "Expires",
                 "extended": "Extended",
                 "only": ""
@@ -120,7 +120,10 @@
                 "only",
                 "expires",
                 "extended"
-              ]
+              ],
+              "column_width": 130,
+              "column_wrap": true,
+              "header_max_lines": 4
             },
             "body_html": "<h2>Section 122 Expires</h2><p>This section presents projected effects as of February 21, 2026, under the Section 122 Expires scenario. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
             "section": "overview",
@@ -515,10 +518,10 @@
               },
               "header_labels": {
                 "current": "Current",
-                "before_scotus": "Pre-SCOTUS",
-                "immediately_following_scotus": "Post-SCOTUS",
-                "pct10": "10%",
-                "pct15": "15%",
+                "before_scotus": "Policy Before\\\\SCOTUS Ruling",
+                "immediately_following_scotus": "Policy Immediately Following\\\\SCOTUS Ruling\\\\(No IEEPA or Section 122)",
+                "pct10": "10% Section\\\\122",
+                "pct15": "15% Section\\\\122",
                 "expires": "Expires",
                 "extended": "Extended",
                 "only": ""
@@ -534,7 +537,10 @@
                 "only",
                 "expires",
                 "extended"
-              ]
+              ],
+              "column_width": 130,
+              "column_wrap": true,
+              "header_max_lines": 4
             },
             "body_html": "<h2>Section 122 Extended</h2><p>This section presents projected effects as of February 21, 2026, under the Section 122 Extended scenario, in which Section 122 tariffs are extended rather than allowed to expire. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
             "section": "overview",
