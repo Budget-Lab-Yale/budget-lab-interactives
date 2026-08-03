@@ -102,7 +102,7 @@
               "header_labels": {
                 "current": "Current",
                 "before_scotus": "Policy Before\\\\SCOTUS Ruling",
-                "immediately_following_scotus": "Policy Immediately Following\\\\SCOTUS Ruling\\\\(No IEEPA or Section 122)",
+                "immediately_following_scotus": "Policy Immediately\\\\Following SCOTUS Ruling\\\\(No IEEPA or Section 122)",
                 "pct10": "10% Section\\\\122",
                 "pct15": "15% Section\\\\122",
                 "expires": "Expires",
@@ -519,7 +519,7 @@
               "header_labels": {
                 "current": "Current",
                 "before_scotus": "Policy Before\\\\SCOTUS Ruling",
-                "immediately_following_scotus": "Policy Immediately Following\\\\SCOTUS Ruling\\\\(No IEEPA or Section 122)",
+                "immediately_following_scotus": "Policy Immediately\\\\Following SCOTUS Ruling\\\\(No IEEPA or Section 122)",
                 "pct10": "10% Section\\\\122",
                 "pct15": "15% Section\\\\122",
                 "expires": "Expires",
