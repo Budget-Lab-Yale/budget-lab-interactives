@@ -19,5 +19,3 @@ category,value,substitution,basis,scenario,measure
 9,-1110.093610139028,postsub,2025 dollars,ieepa_invalidation,level
 10,-0.35357438526554386,postsub,% of after-tax income,ieepa_invalidation,level
 10,-1768.3740019547963,postsub,2025 dollars,ieepa_invalidation,level
-
-10,2370.1655372636783,postsub,2025 dollars,ieepa_invalidation,delta_vs_default
