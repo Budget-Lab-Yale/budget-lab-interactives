@@ -1,0 +1,78 @@
+category,series,column,value,unit,metric
+Tariff rate,"Effective rate, pre-substitution",current,9.137318822243504,pct,etr_presub_level
+Tariff rate,"Effective rate, pre-substitution",before_scotus,15.98400186657739,pct,etr_presub_level
+Tariff rate,"Effective rate, pre-substitution",immediately_following_scotus,9.137318822243504,pct,etr_presub_level
+Tariff rate,"Effective rate, pre-substitution",section122_10_expires,9.137318822243504,pct,etr_presub_level
+Tariff rate,"Effective rate, pre-substitution",section122_10_extended,12.20059292356644,pct,etr_presub_level
+Tariff rate,"Effective rate, pre-substitution",section122_15_expires,9.137318822243499,pct,etr_presub_level
+Tariff rate,"Effective rate, pre-substitution",section122_15_extended,13.7322299742279,pct,etr_presub_level
+Tariff rate,"Effective rate, post-substitution",current,7.968423956883649,pct,etr_postsub_level
+Tariff rate,"Effective rate, post-substitution",before_scotus,13.71702213552857,pct,etr_postsub_level
+Tariff rate,"Effective rate, post-substitution",immediately_following_scotus,7.968423956883649,pct,etr_postsub_level
+Tariff rate,"Effective rate, post-substitution",section122_10_expires,7.968423956883649,pct,etr_postsub_level
+Tariff rate,"Effective rate, post-substitution",section122_10_extended,10.923710062420371,pct,etr_postsub_level
+Tariff rate,"Effective rate, post-substitution",section122_15_expires,7.968423956883649,pct,etr_postsub_level
+Tariff rate,"Effective rate, post-substitution",section122_15_extended,12.1751543397031,pct,etr_postsub_level
+Consumer price increase,Pre-substitution,current,0.5767845344630138,pct,price_presub
+Consumer price increase,Pre-substitution,before_scotus,1.164501979759557,pct,price_presub
+Consumer price increase,Pre-substitution,immediately_following_scotus,0.5767845344630138,pct,price_presub
+Consumer price increase,Pre-substitution,section122_10_expires,0.5767845344630138,pct,price_presub
+Consumer price increase,Pre-substitution,section122_10_extended,0.839735165800109,pct,price_presub
+Consumer price increase,Pre-substitution,section122_15_expires,0.576784534463014,pct,price_presub
+Consumer price increase,Pre-substitution,section122_15_extended,0.9712104814686561,pct,price_presub
+Consumer price increase,Post-substitution,current,0.45643235134691007,pct,price_postsub
+Consumer price increase,Post-substitution,before_scotus,0.8815772227089637,pct,price_postsub
+Consumer price increase,Post-substitution,immediately_following_scotus,0.45643235134691007,pct,price_postsub
+Consumer price increase,Post-substitution,section122_10_expires,0.45643235134691007,pct,price_postsub
+Consumer price increase,Post-substitution,section122_10_extended,0.6799299396805187,pct,price_postsub
+Consumer price increase,Post-substitution,section122_15_expires,0.45643235134691,pct,price_postsub
+Consumer price increase,Post-substitution,section122_15_extended,0.769430764349365,pct,price_postsub
+Household cost,Pre-substitution,current,780.9291897760387,usd,hh_cost_presub
+Household cost,Pre-substitution,before_scotus,1576.660838163542,usd,hh_cost_presub
+Household cost,Pre-substitution,immediately_following_scotus,780.9291897760387,usd,hh_cost_presub
+Household cost,Pre-substitution,section122_10_expires,780.9291897760387,usd,hh_cost_presub
+Household cost,Pre-substitution,section122_10_extended,1136.947444794531,usd,hh_cost_presub
+Household cost,Pre-substitution,section122_15_expires,780.929189776039,usd,hh_cost_presub
+Household cost,Pre-substitution,section122_15_extended,1314.95657230378,usd,hh_cost_presub
+Household cost,Post-substitution,current,617.9800688601359,usd,hh_cost_postsub
+Household cost,Post-substitution,before_scotus,1193.598900664123,usd,hh_cost_postsub
+Household cost,Post-substitution,immediately_following_scotus,617.9800688601359,usd,hh_cost_postsub
+Household cost,Post-substitution,section122_10_expires,617.9800688601359,usd,hh_cost_postsub
+Household cost,Post-substitution,section122_10_extended,920.5814392952091,usd,hh_cost_postsub
+Household cost,Post-substitution,section122_15_expires,617.980068860136,usd,hh_cost_postsub
+Household cost,Post-substitution,section122_15_extended,1041.75980368738,usd,hh_cost_postsub
+Real GDP,"Q4-Q4 growth (p.p.), 2026",current,0.05792524477770122,pp,gdp_growth_2026
+Real GDP,"Q4-Q4 growth (p.p.), 2026",before_scotus,-0.2757978978126241,pp,gdp_growth_2026
+Real GDP,"Q4-Q4 growth (p.p.), 2026",immediately_following_scotus,0.05664323338030464,pp,gdp_growth_2026
+Real GDP,"Q4-Q4 growth (p.p.), 2026",section122_10_expires,0.05792524477770122,pp,gdp_growth_2026
+Real GDP,"Q4-Q4 growth (p.p.), 2026",section122_10_extended,-0.02139719872524815,pp,gdp_growth_2026
+Real GDP,"Q4-Q4 growth (p.p.), 2026",section122_15_expires,0.0566432333803046,pp,gdp_growth_2026
+Real GDP,"Q4-Q4 growth (p.p.), 2026",section122_15_extended,-0.0579352557204094,pp,gdp_growth_2026
+Real GDP,Long-run,current,-0.0951487123966217,pct,gdp_longrun
+Real GDP,Long-run,before_scotus,-0.2857685685157776,pct,gdp_longrun
+Real GDP,Long-run,immediately_following_scotus,-0.0951487123966217,pct,gdp_longrun
+Real GDP,Long-run,section122_10_expires,-0.0951487123966217,pct,gdp_longrun
+Real GDP,Long-run,section122_10_extended,-0.1622726321220398,pct,gdp_longrun
+Real GDP,Long-run,section122_15_expires,-0.09514871239662169,pct,gdp_longrun
+Real GDP,Long-run,section122_15_extended,-0.20953439176082603,pct,gdp_longrun
+Labor market,"Unemployment rate (p.p.), end of 2026",current,0.2930746080000004,pp,unemployment_2026
+Labor market,"Unemployment rate (p.p.), end of 2026",before_scotus,0.4649033549999997,pp,unemployment_2026
+Labor market,"Unemployment rate (p.p.), end of 2026",immediately_following_scotus,0.2716975210000001,pp,unemployment_2026
+Labor market,"Unemployment rate (p.p.), end of 2026",section122_10_expires,0.2930746080000004,pp,unemployment_2026
+Labor market,"Unemployment rate (p.p.), end of 2026",section122_10_extended,0.3325700759999997,pp,unemployment_2026
+Labor market,"Unemployment rate (p.p.), end of 2026",section122_15_expires,0.305145264,pp,unemployment_2026
+Labor market,"Unemployment rate (p.p.), end of 2026",section122_15_extended,0.353068829,pp,unemployment_2026
+Revenue (10-year),Conventional,current,1291.591825556844,usd_b,revenue_conventional
+Revenue (10-year),Conventional,before_scotus,2619.170333208172,usd_b,revenue_conventional
+Revenue (10-year),Conventional,immediately_following_scotus,1268.711263061714,usd_b,revenue_conventional
+Revenue (10-year),Conventional,section122_10_expires,1291.591825556844,usd_b,revenue_conventional
+Revenue (10-year),Conventional,section122_10_extended,1943.2861391604179,usd_b,revenue_conventional
+Revenue (10-year),Conventional,section122_15_expires,1303.03210680441,usd_b,revenue_conventional
+Revenue (10-year),Conventional,section122_15_extended,2198.9793260389397,usd_b,revenue_conventional
+Revenue (10-year),Dynamic,current,1114.276825556844,usd_b,revenue_dynamic
+Revenue (10-year),Dynamic,before_scotus,2292.934333208172,usd_b,revenue_dynamic
+Revenue (10-year),Dynamic,immediately_following_scotus,1091.592263061714,usd_b,revenue_dynamic
+Revenue (10-year),Dynamic,section122_10_expires,1114.276825556844,usd_b,revenue_dynamic
+Revenue (10-year),Dynamic,section122_10_extended,1705.947139160418,usd_b,revenue_dynamic
+Revenue (10-year),Dynamic,section122_15_expires,1125.1321068044101,usd_b,revenue_dynamic
+Revenue (10-year),Dynamic,section122_15_extended,1930.1933260389399,usd_b,revenue_dynamic
