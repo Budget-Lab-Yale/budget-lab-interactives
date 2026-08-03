@@ -1,24 +1,4 @@
 category,value,substitution,basis,scenario,measure
-1,-2.692265000350822,postsub,% of after-tax income,baseline,level
-1,-1012.3185627819126,postsub,2025 dollars,baseline,level
-2,-1.640552102320301,postsub,% of after-tax income,baseline,level
-2,-992.5832384668516,postsub,2025 dollars,baseline,level
-3,-1.5766369406996574,postsub,% of after-tax income,baseline,level
-3,-1164.5513435089879,postsub,2025 dollars,baseline,level
-4,-1.4005750165403865,postsub,% of after-tax income,baseline,level
-4,-1205.6289799881301,postsub,2025 dollars,baseline,level
-5,-1.422057607291105,postsub,% of after-tax income,baseline,level
-5,-1435.6240368646622,postsub,2025 dollars,baseline,level
-6,-1.4044683204582296,postsub,% of after-tax income,baseline,level
-6,-1634.6185441317198,postsub,2025 dollars,baseline,level
-7,-1.3346567080291192,postsub,% of after-tax income,baseline,level
-7,-1825.8103765838353,postsub,2025 dollars,baseline,level
-8,-1.286873147960564,postsub,% of after-tax income,baseline,level
-8,-2109.2494331647626,postsub,2025 dollars,baseline,level
-9,-1.1765817788645259,postsub,% of after-tax income,baseline,level
-9,-2443.7132914304657,postsub,2025 dollars,baseline,level
-10,-0.8274729055385219,postsub,% of after-tax income,baseline,level
-10,-4138.539539218475,postsub,2025 dollars,baseline,level
 1,-0.9575681080157333,postsub,% of after-tax income,ieepa_invalidation,level
 1,-360.0551842949959,postsub,2025 dollars,ieepa_invalidation,level
 2,-0.632142243248941,postsub,% of after-tax income,ieepa_invalidation,level
