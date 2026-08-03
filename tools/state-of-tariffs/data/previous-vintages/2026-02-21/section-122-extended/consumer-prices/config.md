@@ -14,6 +14,6 @@ Percent change to price level
 
 _Scenario: Section 122 Extended_
 
-_Notes: 'nec' = 'Not elsewhere classified.'_
+_Notes: 'nec' = 'Not elsewhere classified.' Fixed the chart legend, which showed the raw presub/postsub data values instead of "Short-run"/"Long-run" -- the spec used header_labels (a table-only key) instead of series_labels (the key the chart legend actually reads). No change to the underlying data._
 
 _Source: GTAP v7 [Corong et al (2017)], The Budget Lab analysis._
