@@ -105,42 +105,153 @@
           {
             "id": "etr-by-country",
             "short_label": "Effective Rate by Trading Partner",
-            "figureType": "table",
-            "data": "previous-vintages/2025-10-30/baseline/etr-by-country/data.csv",
-            "spec": {
-              "title": "Average Effective Tariff Rate by Trading Partner",
-              "subtitle": "As of October 30, 2025, pre- and post-substitution. Percent.",
-              "data": "data.csv",
-              "stub": [
-                "category"
-              ],
-              "header": [
-                "substitution"
-              ],
-              "value": "value",
-              "column_order": [
-                "presub",
-                "postsub"
-              ],
-              "header_labels": {
-                "presub": "Pre-substitution",
-                "postsub": "Post-substitution"
-              },
-              "format": {
-                "default": {
-                  "type": "number",
-                  "decimals": 1,
-                  "suffix": "%"
+            "figureType": "composite",
+            "parts": [
+              {
+                "figureType": "table",
+                "data": "previous-vintages/2025-10-30/baseline/etr-by-country/data.csv",
+                "spec": {
+                  "title": "Average Effective Tariff Rate by Trading Partner",
+                  "subtitle": "As of October 30, 2025, pre- and post-substitution. Percent.",
+                  "data": "data.csv",
+                  "stub": [
+                    "category"
+                  ],
+                  "header": [
+                    "substitution"
+                  ],
+                  "value": "value",
+                  "column_order": [
+                    "presub",
+                    "postsub"
+                  ],
+                  "header_labels": {
+                    "presub": "Pre-substitution",
+                    "postsub": "Post-substitution"
+                  },
+                  "format": {
+                    "default": {
+                      "type": "number",
+                      "decimals": 1,
+                      "suffix": "%"
+                    }
+                  },
+                  "emphasis_rows": [
+                    "Total"
+                  ],
+                  "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
                 }
               },
-              "emphasis_rows": [
-                "Total"
-              ],
-              "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
-            },
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of October 30, 2025, before and after trade substitution.</p>",
+              {
+                "figureType": "chart",
+                "data": "previous-vintages/2025-10-30/baseline/etr-by-country/data.csv",
+                "spec": {
+                  "chartType": "stacked",
+                  "data": "data.csv",
+                  "title": "Average Effective US Tariff Rate, New 2025 Policy Through October 30",
+                  "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
+                  "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                  "orientation": "horizontal",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "substitution",
+                    "series": "category",
+                    "value": "value"
+                  },
+                  "x_order": [
+                    "presub",
+                    "postsub"
+                  ],
+                  "x_labels": {
+                    "presub": "Pre-substitution",
+                    "postsub": "Post-substitution"
+                  },
+                  "series_order": [
+                    "China",
+                    "Canada",
+                    "Mexico",
+                    "Rest of World"
+                  ],
+                  "series_colors": {
+                    "China": "blue",
+                    "Canada": "amber",
+                    "Mexico": "violet",
+                    "Rest of World": "green"
+                  },
+                  "barStack": {
+                    "netDisplay": "text"
+                  }
+                },
+                "total": {
+                  "column": "category",
+                  "value": "Total",
+                  "hide": true
+                }
+              }
+            ],
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of October 30, 2025, before and after trade substitution. Shown here as both a table and a stacked bar chart, with China, Canada, Mexico, and Rest of World stacking to the total for each substitution basis.</p>",
             "section": "rates",
             "figureNum": 2
+          },
+          {
+            "id": "etr-historical",
+            "short_label": "Historical Effective Tariff Rate",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-10-30/baseline/etr-historical/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "US Average Effective Tariff Rate Since 1790",
+              "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "columns": {
+                "x": "year",
+                "series": "series",
+                "value": "value"
+              },
+              "series_labels": {
+                "historical": "Historical",
+                "projected_presub": "Projected (pre-substitution)",
+                "projected_postsub": "Projected (post-substitution)",
+                "current_average_presub": "Current average effective rate (pre-substitution)",
+                "current_average_postsub": "Current average effective rate (post-substitution)"
+              },
+              "series_styles": {
+                "current_average_presub": {
+                  "dashed": true
+                },
+                "current_average_postsub": {
+                  "dashed": true
+                }
+              }
+            },
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (October 30, 2025) average effective rate shown for reference, both pre- and post-substitution. Published in the original release as Figure 2. Baseline scenario only.</p>",
+            "section": "rates",
+            "figureNum": 3,
+            "note": "No direct analogue in the reference vintage structure; included as an additional figure. Baseline scenario only -- no IEEPA Invalidation equivalent exists in the source."
+          },
+          {
+            "id": "etr-since-2025",
+            "short_label": "Effective Tariff Rate, 2025 YTD",
+            "figureType": "chart",
+            "data": "previous-vintages/2025-10-30/baseline/etr-since-2025/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "US Average Effective Tariff Rate Since January 1, 2025",
+              "subtitle": "Policy through October 30, pre-substitution. Percent of goods imports.",
+              "source": "The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "columns": {
+                "x": "date",
+                "value": "value"
+              }
+            },
+            "body_html": "<p>Published in the original release as Figure 3. Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection. Baseline scenario only.</p>",
+            "section": "rates",
+            "figureNum": 4,
+            "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure. Baseline scenario only."
           },
           {
             "id": "consumer-prices",
@@ -161,18 +272,18 @@
                 "series": "substitution",
                 "value": "value"
               },
-              "header_labels": {
-                "presub": "Short-run",
-                "postsub": "Long-run"
-              },
               "series_colors": {
                 "presub": "blue",
                 "postsub": "amber"
+              },
+              "series_labels": {
+                "presub": "Short-run",
+                "postsub": "Long-run"
               }
             },
             "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes.</p>",
             "section": "prices-households",
-            "figureNum": 3
+            "figureNum": 5
           },
           {
             "id": "distribution",
@@ -213,11 +324,15 @@
                   "% of after-tax income",
                   "2025 dollars"
                 ]
+              },
+              "series_colors": {
+                "% of after-tax income": "blue",
+                "2025 dollars": "amber"
               }
             },
             "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2025 dollars per household. Values are negative by convention.</p>",
             "section": "prices-households",
-            "figureNum": 4
+            "figureNum": 6
           },
           {
             "id": "real-gdp",
@@ -241,7 +356,7 @@
             },
             "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
             "section": "economy",
-            "figureNum": 5
+            "figureNum": 7
           },
           {
             "id": "gdp-by-category",
@@ -289,102 +404,62 @@
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
             "section": "economy",
-            "figureNum": 6
+            "figureNum": 8
           },
           {
             "id": "revenue-by-year",
             "short_label": "Revenue by Year",
-            "figureType": "composite",
-            "parts": [
-              {
-                "figureType": "table",
-                "data": "previous-vintages/2025-10-30/baseline/revenue-by-year/data.csv",
-                "spec": {
-                  "data": "data.csv",
-                  "title": "Net Revenue Impact by Fiscal Year",
-                  "subtitle": "Billions of dollars.",
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
-                  "stub": [
-                    "series"
-                  ],
-                  "header": [
-                    "category"
-                  ],
-                  "value": "value",
-                  "row_labels": {
-                    "conventional": "Conventional",
-                    "dynamic": "Dynamic"
-                  },
-                  "column_order": [
-                    "2026",
-                    "2027",
-                    "2028",
-                    "2029",
-                    "2030",
-                    "2031",
-                    "2032",
-                    "2033",
-                    "2034",
-                    "2035"
-                  ],
-                  "format": {
-                    "default": {
-                      "type": "number",
-                      "decimals": 1,
-                      "thousands": true,
-                      "prefix": "$"
-                    }
-                  }
+            "figureType": "table",
+            "data": "previous-vintages/2025-10-30/baseline/revenue-by-year/data.csv",
+            "spec": {
+              "data": "data.csv",
+              "title": "Net Revenue Impact by Fiscal Year",
+              "subtitle": "Billions of dollars.",
+              "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
+              "stub": [
+                "series"
+              ],
+              "header": [
+                "category"
+              ],
+              "value": "value",
+              "row_labels": {
+                "conventional": "Conventional",
+                "dynamic": "Dynamic",
+                "difference": "Difference (Dynamic \u2212 Conventional)"
+              },
+              "column_order": [
+                "2025",
+                "2026",
+                "2027",
+                "2028",
+                "2029",
+                "2030",
+                "2031",
+                "2032",
+                "2033",
+                "2034",
+                "2035",
+                "2026-35",
+                "2025-34"
+              ],
+              "format": {
+                "default": {
+                  "type": "number",
+                  "decimals": 1,
+                  "thousands": true,
+                  "prefix": "$"
                 }
               },
-              {
-                "figureType": "chart",
-                "data": "previous-vintages/2025-10-30/baseline/revenue-by-year/data.csv",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Net Revenue Impact by Fiscal Year",
-                  "subtitle": "Conventional and dynamic estimates. Billions of dollars.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
-                  "orientation": "vertical",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "series": "series",
-                    "value": "value"
-                  },
-                  "x_order": [
-                    "2026",
-                    "2027",
-                    "2028",
-                    "2029",
-                    "2030",
-                    "2031",
-                    "2032",
-                    "2033",
-                    "2034",
-                    "2035"
-                  ],
-                  "series_order": [
-                    "conventional",
-                    "dynamic"
-                  ],
-                  "series_labels": {
-                    "conventional": "Conventional",
-                    "dynamic": "Dynamic"
-                  }
-                },
-                "total": {
-                  "column": "category",
-                  "value": "Total",
-                  "hide": true
-                }
+              "header_labels": {
+                "2026-35": "2026-35 Total",
+                "2025-34": "2025-34 Total"
               }
-            ],
-            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis.</p>",
+            },
+            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, plus the difference between the two (the dynamic revenue effect), including 10- and 11-year totals.</p>",
             "section": "fiscal",
-            "figureNum": 7
+            "figureNum": 9
           }
         ]
       }
@@ -501,56 +576,120 @@
           {
             "id": "etr-by-country",
             "short_label": "Effective Rate by Trading Partner",
-            "figureType": "table",
-            "data": "previous-vintages/2025-10-30/ieepa-invalidation/etr-by-country/data.csv",
-            "spec": {
-              "title": "Average Effective Tariff Rate by Trading Partner",
-              "subtitle": "As of October 30, 2025, pre- and post-substitution. Percent.",
-              "data": "data.csv",
-              "stub": [
-                "category",
-                "scenario"
-              ],
-              "header": [
-                "measure",
-                "substitution"
-              ],
-              "value": "value",
-              "column_order": [
-                "presub",
-                "postsub"
-              ],
-              "header_labels": {
-                "presub": "Pre-substitution",
-                "postsub": "Post-substitution",
-                "level": "Levels",
-                "delta_vs_default": "Change vs. baseline"
-              },
-              "format": {
-                "default": {
-                  "type": "number",
-                  "decimals": 1,
-                  "suffix": "%"
+            "figureType": "composite",
+            "parts": [
+              {
+                "figureType": "table",
+                "data": "previous-vintages/2025-10-30/ieepa-invalidation/etr-by-country/data.csv",
+                "spec": {
+                  "title": "Average Effective Tariff Rate by Trading Partner",
+                  "subtitle": "As of October 30, 2025, pre- and post-substitution. Percent.",
+                  "data": "data.csv",
+                  "stub": [
+                    "category",
+                    "scenario"
+                  ],
+                  "header": [
+                    "measure",
+                    "substitution"
+                  ],
+                  "value": "value",
+                  "column_order": [
+                    "presub",
+                    "postsub"
+                  ],
+                  "header_labels": {
+                    "presub": "Pre-substitution",
+                    "postsub": "Post-substitution",
+                    "level": "Levels",
+                    "delta_vs_default": "Change vs. baseline"
+                  },
+                  "format": {
+                    "default": {
+                      "type": "number",
+                      "decimals": 1,
+                      "suffix": "%"
+                    }
+                  },
+                  "emphasis_rows": [
+                    "Total"
+                  ],
+                  "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                  "column_group_order": [
+                    "level",
+                    "delta_vs_default"
+                  ],
+                  "row_labels": {
+                    "baseline": "Baseline",
+                    "ieepa_invalidation": "IEEPA Invalidation"
+                  },
+                  "group_labels": {
+                    "baseline": "Baseline",
+                    "ieepa_invalidation": "IEEPA Invalidation"
+                  }
                 }
               },
-              "emphasis_rows": [
-                "Total"
-              ],
-              "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-              "column_group_order": [
-                "level",
-                "delta_vs_default"
-              ],
-              "row_labels": {
-                "baseline": "Baseline",
-                "ieepa_invalidation": "IEEPA Invalidation"
-              },
-              "group_labels": {
-                "baseline": "Baseline",
-                "ieepa_invalidation": "IEEPA Invalidation"
+              {
+                "figureType": "chart",
+                "data": "previous-vintages/2025-10-30/ieepa-invalidation/etr-by-country/chart-data.csv",
+                "spec": {
+                  "chartType": "stacked",
+                  "data": "chart-data.csv",
+                  "title": "Average Effective US Tariff Rate, New 2025 Policy Through October 30",
+                  "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner and scenario. Pre- and post-substitution.",
+                  "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                  "orientation": "horizontal",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "substitution",
+                    "series": "category",
+                    "value": "value",
+                    "facet": "scenario"
+                  },
+                  "x_order": [
+                    "presub",
+                    "postsub"
+                  ],
+                  "x_labels": {
+                    "presub": "Pre-substitution",
+                    "postsub": "Post-substitution"
+                  },
+                  "series_order": [
+                    "China",
+                    "Canada",
+                    "Mexico",
+                    "Rest of World"
+                  ],
+                  "series_colors": {
+                    "China": "blue",
+                    "Canada": "amber",
+                    "Mexico": "violet",
+                    "Rest of World": "green"
+                  },
+                  "barStack": {
+                    "netDisplay": "text"
+                  },
+                  "small_multiples": {
+                    "mode": "per-pane",
+                    "columns": 2,
+                    "pane_order": [
+                      "baseline",
+                      "ieepa_invalidation"
+                    ],
+                    "pane_titles": {
+                      "baseline": "Baseline",
+                      "ieepa_invalidation": "IEEPA Invalidation"
+                    }
+                  }
+                },
+                "total": {
+                  "column": "category",
+                  "value": "Total",
+                  "hide": true
+                }
               }
-            },
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner and scenario, as both levels and change vs. Baseline.</p>",
+            ],
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner and scenario, as both levels and change vs. Baseline (table), and as stacked bars per scenario (chart), with China, Canada, Mexico, and Rest of World stacking to each scenario's total for each substitution basis.</p>",
             "section": "rates",
             "figureNum": 2
           },
@@ -750,99 +889,67 @@
           {
             "id": "revenue-by-year",
             "short_label": "Revenue by Year",
-            "figureType": "composite",
-            "parts": [
-              {
-                "figureType": "table",
-                "data": "previous-vintages/2025-10-30/ieepa-invalidation/revenue-by-year/data.csv",
-                "spec": {
-                  "data": "data.csv",
-                  "title": "Net Revenue Impact by Fiscal Year",
-                  "subtitle": "Billions of dollars. By scenario.",
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
-                  "stub": [
-                    "scenario"
-                  ],
-                  "header": [
-                    "category"
-                  ],
-                  "value": "value",
-                  "row_labels": {
-                    "baseline": "Baseline",
-                    "ieepa_invalidation": "IEEPA Invalidation"
-                  },
-                  "column_order": [
-                    "2026",
-                    "2027",
-                    "2028",
-                    "2029",
-                    "2030",
-                    "2031",
-                    "2032",
-                    "2033",
-                    "2034",
-                    "2035"
-                  ],
-                  "format": {
-                    "default": {
-                      "type": "number",
-                      "decimals": 1,
-                      "thousands": true,
-                      "prefix": "$"
-                    }
-                  },
-                  "group_labels": {
-                    "baseline": "Baseline",
-                    "ieepa_invalidation": "IEEPA Invalidation"
-                  }
+            "figureType": "table",
+            "data": "previous-vintages/2025-10-30/ieepa-invalidation/revenue-by-year/data.csv",
+            "spec": {
+              "title": "Net Revenue Impact by Fiscal Year",
+              "subtitle": "Billions of dollars. By scenario.",
+              "data": "data.csv",
+              "stub": [
+                "series",
+                "scenario"
+              ],
+              "header": [
+                "measure",
+                "category"
+              ],
+              "value": "value",
+              "column_order": [
+                "2025",
+                "2026",
+                "2027",
+                "2028",
+                "2029",
+                "2030",
+                "2031",
+                "2032",
+                "2033",
+                "2034",
+                "2035",
+                "2026-35",
+                "2025-34"
+              ],
+              "column_group_order": [
+                "level",
+                "delta_vs_default"
+              ],
+              "row_labels": {
+                "conventional": "Conventional",
+                "dynamic": "Dynamic",
+                "difference": "Difference (Dynamic \u2212 Conventional)"
+              },
+              "group_labels": {
+                "baseline": "Baseline",
+                "ieepa_invalidation": "IEEPA Invalidation"
+              },
+              "header_labels": {
+                "level": "Levels",
+                "delta_vs_default": "Change vs. Baseline",
+                "2026-35": "2026-35 Total",
+                "2025-34": "2025-34 Total"
+              },
+              "format": {
+                "default": {
+                  "type": "currency",
+                  "decimals": 1,
+                  "thousands": true,
+                  "prefix": "$"
                 }
               },
-              {
-                "figureType": "chart",
-                "data": "previous-vintages/2025-10-30/ieepa-invalidation/revenue-by-year/data.csv",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Net Revenue Impact by Fiscal Year",
-                  "subtitle": "Conventional and dynamic estimates. Billions of dollars.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
-                  "orientation": "vertical",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "series": "series",
-                    "value": "value"
-                  },
-                  "x_order": [
-                    "2026",
-                    "2027",
-                    "2028",
-                    "2029",
-                    "2030",
-                    "2031",
-                    "2032",
-                    "2033",
-                    "2034",
-                    "2035"
-                  ],
-                  "series_order": [
-                    "conventional",
-                    "dynamic"
-                  ],
-                  "series_labels": {
-                    "conventional": "Conventional",
-                    "dynamic": "Dynamic"
-                  }
-                },
-                "total": {
-                  "column": "category",
-                  "value": "Total",
-                  "hide": true
-                }
-              }
-            ],
-            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis.</p>",
+              "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue. The IEEPA Invalidation scenario has no fiscal year 2025 figures (no '2025' or '2025-34' column) since it is a hypothetical policy counterfactual that does not apply retroactively to a fiscal year already mostly over. Blank cells reflect this, not missing data.",
+              "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
+            },
+            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, by scenario, on a conventional and a dynamic basis, plus the difference between the two, as both levels and change vs. Baseline, including totals.</p>",
             "section": "fiscal",
             "figureNum": 7
           }
