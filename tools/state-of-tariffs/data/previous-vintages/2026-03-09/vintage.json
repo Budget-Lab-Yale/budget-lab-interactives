@@ -49,7 +49,10 @@
                 "category",
                 "series"
               ],
-              "header": [],
+              "header": [
+                "rate_group",
+                "duration"
+              ],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
               "group_labels": {
@@ -95,12 +98,37 @@
                     "suffix": "%"
                   }
                 }
-              }
+              },
+              "column_group_order": [
+                "current",
+                "before_scotus",
+                "immediately_following_scotus",
+                "pct10",
+                "pct15"
+              ],
+              "column_order": [
+                "only",
+                "expires",
+                "extended"
+              ],
+              "header_labels": {
+                "current": "Current",
+                "before_scotus": "Policy Before\\\\SCOTUS Ruling",
+                "immediately_following_scotus": "Policy Immediately\\\\Following SCOTUS Ruling\\\\(No IEEPA or Section 122)",
+                "pct10": "10% Section\\\\122",
+                "pct15": "15% Section\\\\122",
+                "expires": "Expires",
+                "extended": "Extended",
+                "only": ""
+              },
+              "column_width": 130,
+              "column_wrap": true,
+              "header_max_lines": 4
             },
             "body_html": "<h2>Section 122 Expires</h2><p>This section presents projected effects as of March 9, 2026, under the Section 122 Expires scenario. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
             "section": "overview",
-            "lead": true,
-            "figureNum": 1
+            "figureNum": 1,
+            "lead": true
           },
           {
             "id": "etr-by-country",
@@ -115,6 +143,7 @@
                 "category"
               ],
               "header": [
+                "metric",
                 "substitution"
               ],
               "value": "value",
@@ -122,9 +151,17 @@
                 "presub",
                 "postsub"
               ],
+              "column_group_order": [
+                "rate",
+                "import_share",
+                "contribution"
+              ],
               "header_labels": {
                 "presub": "Pre-substitution",
-                "postsub": "Post-substitution"
+                "postsub": "Post-substitution",
+                "rate": "Average Effective Tariff Rate",
+                "import_share": "Share of Goods Imports",
+                "contribution": "Contribution"
               },
               "format": {
                 "default": {
@@ -141,6 +178,44 @@
             "body_html": "<p>The average effective U.S. tariff rate by trading partner as of March 9, 2026, before and after trade substitution.</p>",
             "section": "rates",
             "figureNum": 2
+          },
+          {
+            "id": "etr-historical",
+            "short_label": "Historical Effective Tariff Rate",
+            "figureType": "chart",
+            "data": "previous-vintages/2026-03-09/section-122-expires/etr-historical/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "US Average Effective Tariff Rate Since 1790",
+              "subtitle": "Customs duty revenue as a percentage of goods imports",
+              "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "columns": {
+                "x": "year",
+                "series": "series",
+                "value": "value"
+              },
+              "series_labels": {
+                "historical": "Historical",
+                "projected_presub": "Projected (pre-substitution)",
+                "projected_postsub": "Projected (post-substitution)",
+                "current_average_presub": "Current average effective rate (pre-substitution)",
+                "current_average_postsub": "Current average effective rate (post-substitution)"
+              },
+              "series_styles": {
+                "current_average_presub": {
+                  "dashed": true
+                },
+                "current_average_postsub": {
+                  "dashed": true
+                }
+              }
+            },
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution. Published in the original release as Figure 1.</p>",
+            "section": "rates",
+            "figureNum": 3,
+            "note": "No direct analogue in the reference vintage structure; included as an additional figure."
           },
           {
             "id": "distribution",
@@ -181,11 +256,15 @@
                   "% of after-tax income",
                   "2025 dollars"
                 ]
+              },
+              "series_colors": {
+                "% of after-tax income": "blue",
+                "2025 dollars": "amber"
               }
             },
             "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2025 dollars per household.</p>",
             "section": "prices-households",
-            "figureNum": 3
+            "figureNum": 4
           },
           {
             "id": "real-gdp",
@@ -209,7 +288,7 @@
             },
             "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
             "section": "economy",
-            "figureNum": 4
+            "figureNum": 5
           },
           {
             "id": "gdp-by-category",
@@ -254,96 +333,59 @@
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
             "section": "economy",
-            "figureNum": 5
+            "figureNum": 6
           },
           {
             "id": "revenue-by-year",
             "short_label": "Revenue by Year",
-            "figureType": "composite",
-            "parts": [
-              {
-                "figureType": "table",
-                "data": "previous-vintages/2026-03-09/section-122-expires/revenue-by-year/data.csv",
-                "spec": {
-                  "data": "data.csv",
-                  "title": "Net Revenue Impact by Fiscal Year",
-                  "subtitle": "Billions of dollars.",
-                  "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
-                  "stub": [
-                    "series"
-                  ],
-                  "header": [
-                    "category"
-                  ],
-                  "value": "value",
-                  "row_labels": {
-                    "conventional": "Conventional",
-                    "dynamic": "Dynamic"
-                  },
-                  "column_order": [
-                    "2026",
-                    "2027",
-                    "2028",
-                    "2029",
-                    "2030",
-                    "2031",
-                    "2032",
-                    "2033",
-                    "2034",
-                    "2035"
-                  ],
-                  "format": {
-                    "default": {
-                      "type": "number",
-                      "decimals": 1,
-                      "thousands": true,
-                      "prefix": "$"
-                    }
-                  }
+            "figureType": "table",
+            "data": "previous-vintages/2026-03-09/section-122-expires/revenue-by-year/data.csv",
+            "spec": {
+              "data": "data.csv",
+              "title": "Net Revenue Impact by Fiscal Year",
+              "subtitle": "Billions of dollars.",
+              "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
+              "stub": [
+                "series"
+              ],
+              "header": [
+                "category"
+              ],
+              "value": "value",
+              "row_labels": {
+                "conventional": "Conventional",
+                "dynamic": "Dynamic",
+                "difference": "Difference (Dynamic \u2212 Conventional)"
+              },
+              "column_order": [
+                "2026",
+                "2027",
+                "2028",
+                "2029",
+                "2030",
+                "2031",
+                "2032",
+                "2033",
+                "2034",
+                "2035",
+                "2026-35"
+              ],
+              "format": {
+                "default": {
+                  "type": "number",
+                  "decimals": 1,
+                  "thousands": true,
+                  "prefix": "$"
                 }
               },
-              {
-                "figureType": "chart",
-                "data": "previous-vintages/2026-03-09/section-122-expires/revenue-by-year/data.csv",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Net Revenue Impact by Fiscal Year",
-                  "subtitle": "Conventional and dynamic estimates. Billions of dollars.",
-                  "orientation": "vertical",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "series": "series",
-                    "value": "value"
-                  },
-                  "x_order": [
-                    "2026",
-                    "2027",
-                    "2028",
-                    "2029",
-                    "2030",
-                    "2031",
-                    "2032",
-                    "2033",
-                    "2034",
-                    "2035"
-                  ],
-                  "series_order": [
-                    "conventional",
-                    "dynamic"
-                  ],
-                  "series_labels": {
-                    "conventional": "Conventional",
-                    "dynamic": "Dynamic"
-                  }
-                }
+              "header_labels": {
+                "2026-35": "2026-35 Total"
               }
-            ],
-            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis.</p>",
+            },
+            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total.</p>",
             "section": "fiscal",
-            "figureNum": 6
+            "figureNum": 7
           }
         ]
       }
@@ -391,7 +433,10 @@
                 "category",
                 "series"
               ],
-              "header": [],
+              "header": [
+                "rate_group",
+                "duration"
+              ],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
               "group_labels": {
@@ -437,12 +482,37 @@
                     "suffix": "%"
                   }
                 }
-              }
+              },
+              "column_group_order": [
+                "current",
+                "before_scotus",
+                "immediately_following_scotus",
+                "pct10",
+                "pct15"
+              ],
+              "column_order": [
+                "only",
+                "expires",
+                "extended"
+              ],
+              "header_labels": {
+                "current": "Current",
+                "before_scotus": "Policy Before\\\\SCOTUS Ruling",
+                "immediately_following_scotus": "Policy Immediately\\\\Following SCOTUS Ruling\\\\(No IEEPA or Section 122)",
+                "pct10": "10% Section\\\\122",
+                "pct15": "15% Section\\\\122",
+                "expires": "Expires",
+                "extended": "Extended",
+                "only": ""
+              },
+              "column_width": 130,
+              "column_wrap": true,
+              "header_max_lines": 4
             },
             "body_html": "<h2>Section 122 Extended</h2><p>This section presents projected effects as of March 9, 2026, under the Section 122 Extended scenario, in which Section 122 tariffs are extended rather than allowed to expire. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
             "section": "overview",
-            "lead": true,
-            "figureNum": 1
+            "figureNum": 1,
+            "lead": true
           },
           {
             "id": "etr-by-country",
@@ -451,12 +521,13 @@
             "data": "previous-vintages/2026-03-09/section-122-extended/etr-by-country/data.csv",
             "spec": {
               "title": "Average Effective Tariff Rate by Trading Partner",
-              "subtitle": "Pre- and post-substitution, if Section 122 tariffs are extended",
+              "subtitle": "Pre- and post-substitution",
               "data": "data.csv",
               "stub": [
                 "category"
               ],
               "header": [
+                "metric",
                 "substitution"
               ],
               "value": "value",
@@ -464,9 +535,17 @@
                 "presub",
                 "postsub"
               ],
+              "column_group_order": [
+                "rate",
+                "import_share",
+                "contribution"
+              ],
               "header_labels": {
                 "presub": "Pre-substitution",
-                "postsub": "Post-substitution"
+                "postsub": "Post-substitution",
+                "rate": "Average Effective Tariff Rate",
+                "import_share": "Share of Goods Imports",
+                "contribution": "Contribution"
               },
               "format": {
                 "default": {
@@ -483,6 +562,44 @@
             "body_html": "<p>The average effective U.S. tariff rate by trading partner as of March 9, 2026, before and after trade substitution.</p>",
             "section": "rates",
             "figureNum": 2
+          },
+          {
+            "id": "etr-historical",
+            "short_label": "Historical Effective Tariff Rate",
+            "figureType": "chart",
+            "data": "previous-vintages/2026-03-09/section-122-extended/etr-historical/data.csv",
+            "spec": {
+              "chartType": "line",
+              "data": "data.csv",
+              "title": "US Average Effective Tariff Rate Since 1790",
+              "subtitle": "Customs duty revenue as a percentage of goods imports",
+              "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "xAxisType": "temporal",
+              "columns": {
+                "x": "year",
+                "series": "series",
+                "value": "value"
+              },
+              "series_labels": {
+                "historical": "Historical",
+                "projected_presub": "Projected (pre-substitution)",
+                "projected_postsub": "Projected (post-substitution)",
+                "current_average_presub": "Current average effective rate (pre-substitution)",
+                "current_average_postsub": "Current average effective rate (post-substitution)"
+              },
+              "series_styles": {
+                "current_average_presub": {
+                  "dashed": true
+                },
+                "current_average_postsub": {
+                  "dashed": true
+                }
+              }
+            },
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution. Published in the original release as Figure 1.</p>",
+            "section": "rates",
+            "figureNum": 3,
+            "note": "No direct analogue in the reference vintage structure; included as an additional figure."
           },
           {
             "id": "distribution",
@@ -523,11 +640,15 @@
                   "% of after-tax income",
                   "2025 dollars"
                 ]
+              },
+              "series_colors": {
+                "% of after-tax income": "blue",
+                "2025 dollars": "amber"
               }
             },
             "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2025 dollars per household, if Section 122 tariffs are extended.</p>",
             "section": "prices-households",
-            "figureNum": 3
+            "figureNum": 4
           },
           {
             "id": "real-gdp",
@@ -551,7 +672,7 @@
             },
             "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter, if Section 122 tariffs are extended.</p>",
             "section": "economy",
-            "figureNum": 4
+            "figureNum": 5
           },
           {
             "id": "gdp-by-category",
@@ -596,96 +717,59 @@
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner, if Section 122 tariffs are extended.</p>",
             "section": "economy",
-            "figureNum": 5
+            "figureNum": 6
           },
           {
             "id": "revenue-by-year",
             "short_label": "Revenue by Year",
-            "figureType": "composite",
-            "parts": [
-              {
-                "figureType": "table",
-                "data": "previous-vintages/2026-03-09/section-122-extended/revenue-by-year/data.csv",
-                "spec": {
-                  "data": "data.csv",
-                  "title": "Net Revenue Impact by Fiscal Year",
-                  "subtitle": "Billions of dollars, if Section 122 tariffs are extended.",
-                  "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
-                  "stub": [
-                    "series"
-                  ],
-                  "header": [
-                    "category"
-                  ],
-                  "value": "value",
-                  "row_labels": {
-                    "conventional": "Conventional",
-                    "dynamic": "Dynamic"
-                  },
-                  "column_order": [
-                    "2026",
-                    "2027",
-                    "2028",
-                    "2029",
-                    "2030",
-                    "2031",
-                    "2032",
-                    "2033",
-                    "2034",
-                    "2035"
-                  ],
-                  "format": {
-                    "default": {
-                      "type": "number",
-                      "decimals": 1,
-                      "thousands": true,
-                      "prefix": "$"
-                    }
-                  }
+            "figureType": "table",
+            "data": "previous-vintages/2026-03-09/section-122-extended/revenue-by-year/data.csv",
+            "spec": {
+              "data": "data.csv",
+              "title": "Net Revenue Impact by Fiscal Year",
+              "subtitle": "Billions of dollars, if Section 122 tariffs are extended.",
+              "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
+              "stub": [
+                "series"
+              ],
+              "header": [
+                "category"
+              ],
+              "value": "value",
+              "row_labels": {
+                "conventional": "Conventional",
+                "dynamic": "Dynamic",
+                "difference": "Difference (Dynamic \u2212 Conventional)"
+              },
+              "column_order": [
+                "2026",
+                "2027",
+                "2028",
+                "2029",
+                "2030",
+                "2031",
+                "2032",
+                "2033",
+                "2034",
+                "2035",
+                "2026-35"
+              ],
+              "format": {
+                "default": {
+                  "type": "number",
+                  "decimals": 1,
+                  "thousands": true,
+                  "prefix": "$"
                 }
               },
-              {
-                "figureType": "chart",
-                "data": "previous-vintages/2026-03-09/section-122-extended/revenue-by-year/data.csv",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Net Revenue Impact by Fiscal Year",
-                  "subtitle": "Conventional and dynamic estimates. Billions of dollars.",
-                  "orientation": "vertical",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "series": "series",
-                    "value": "value"
-                  },
-                  "x_order": [
-                    "2026",
-                    "2027",
-                    "2028",
-                    "2029",
-                    "2030",
-                    "2031",
-                    "2032",
-                    "2033",
-                    "2034",
-                    "2035"
-                  ],
-                  "series_order": [
-                    "conventional",
-                    "dynamic"
-                  ],
-                  "series_labels": {
-                    "conventional": "Conventional",
-                    "dynamic": "Dynamic"
-                  }
-                }
+              "header_labels": {
+                "2026-35": "2026-35 Total"
               }
-            ],
-            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, if Section 122 tariffs are extended.</p>",
+            },
+            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total.</p>",
             "section": "fiscal",
-            "figureNum": 6
+            "figureNum": 7
           }
         ]
       }
