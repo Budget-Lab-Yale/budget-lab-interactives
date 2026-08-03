@@ -470,7 +470,7 @@
       "tab": {
         "id": "ieepa-invalidation",
         "label": "Projected Effects:\nIEEPA Invalidation Scenario",
-        "description": "The same projected effects across the Baseline and IEEPA Invalidation scenarios. Use the toggle to view each scenario's own effects (levels) or its effect relative to the Baseline scenario (change vs. baseline).",
+        "description": "Projected effects of tariff policy under an IEEPA Invalidation scenario, in which the Supreme Court invalidates the administration's use of IEEPA as legal authority for tariffs, and those tariffs are not replaced through another authority.",
         "sections": [
           {
             "id": "overview",
@@ -861,30 +861,6 @@
             "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year under the IEEPA Invalidation scenario, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total. No fiscal year 2025 figures are published for this scenario, since it is a hypothetical policy counterfactual that does not apply retroactively to a fiscal year already mostly over.</p>",
             "section": "fiscal",
             "figureNum": 7
-          }
-        ],
-        "toggles": [
-          {
-            "id": "measure",
-            "label": "View",
-            "default": "level",
-            "options": [
-              {
-                "id": "level",
-                "label": "Levels"
-              },
-              {
-                "id": "delta_vs_default",
-                "label": "Change vs. baseline"
-              }
-            ],
-            "applies_to_figures": [
-              "consumer-prices",
-              "distribution",
-              "real-gdp",
-              "gdp-by-category",
-              "revenue-by-year"
-            ]
           }
         ]
       }
