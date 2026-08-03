@@ -13,4 +13,6 @@ By household income decile
 
 _Scenario: Section 122 Expires_
 
+_Notes: Added series_colors (blue for "% of after-tax income", amber for "2025 dollars"); the figure had no colors defined at all. No change to the underlying data._
+
 _Source: GTAP v7, Census, BLS, BEA, The Budget Lab analysis._
