@@ -101,12 +101,12 @@
               },
               "header_labels": {
                 "current": "Current",
-                "before_scotus": "Policy Before\nSCOTUS Ruling",
-                "immediately_following_scotus": "Policy Immediately\nFollowing SCOTUS Ruling\n(No IEEPA or\nSection 122)",
-                "pct10": "10% Section\n122",
-                "pct15": "15% Section\n122",
-                "expires": "Expires in\n150 Days",
-                "extended": "Extended After\n150 Days",
+                "before_scotus": "Pre-SCOTUS",
+                "immediately_following_scotus": "Post-SCOTUS",
+                "pct10": "10%",
+                "pct15": "15%",
+                "expires": "Expires",
+                "extended": "Extended",
                 "only": ""
               },
               "column_group_order": [
@@ -515,12 +515,12 @@
               },
               "header_labels": {
                 "current": "Current",
-                "before_scotus": "Policy Before\nSCOTUS Ruling",
-                "immediately_following_scotus": "Policy Immediately\nFollowing SCOTUS Ruling\n(No IEEPA or\nSection 122)",
-                "pct10": "10% Section\n122",
-                "pct15": "15% Section\n122",
-                "expires": "Expires in\n150 Days",
-                "extended": "Extended After\n150 Days",
+                "before_scotus": "Pre-SCOTUS",
+                "immediately_following_scotus": "Post-SCOTUS",
+                "pct10": "10%",
+                "pct15": "15%",
+                "expires": "Expires",
+                "extended": "Extended",
                 "only": ""
               },
               "column_group_order": [
