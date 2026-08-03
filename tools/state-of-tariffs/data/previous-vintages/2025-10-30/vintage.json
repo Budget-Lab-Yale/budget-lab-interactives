@@ -500,17 +500,14 @@
             "figureType": "table",
             "data": "previous-vintages/2025-10-30/ieepa-invalidation/summary-statistics/data.csv",
             "spec": {
-              "title": "Summary of Results by Scenario",
-              "subtitle": "Projected effects of tariff policy as of October 30, 2025. Compare Baseline and IEEPA Invalidation scenarios.",
+              "title": "Summary of Results",
+              "subtitle": "Projected effects of tariff policy as of October 30, 2025, under the IEEPA Invalidation scenario.",
               "data": "data.csv",
               "stub": [
                 "category",
                 "series"
               ],
-              "header": [
-                "measure",
-                "scenario"
-              ],
+              "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
               "group_labels": {
@@ -556,19 +553,9 @@
                     "suffix": "%"
                   }
                 }
-              },
-              "header_labels": {
-                "baseline": "Baseline",
-                "ieepa_invalidation": "IEEPA Invalidation",
-                "level": "Levels",
-                "delta_vs_default": "Change vs. baseline"
-              },
-              "column_order": [
-                "baseline",
-                "ieepa_invalidation"
-              ]
+              }
             },
-            "body_html": "<h2>IEEPA Invalidation Scenario</h2><p>These figures show the same projected effects as the Baseline tab, compared against an <strong>IEEPA Invalidation</strong> scenario, in which the Supreme Court invalidates the administration's use of IEEPA as legal authority for tariffs, and those tariffs are not replaced through another authority. Use the <strong>View</strong> toggle to switch between each scenario's own effects (levels) and its effect relative to the Baseline scenario (change vs. baseline).</p>",
+            "body_html": "<h2>IEEPA Invalidation Scenario</h2><p>These figures show projected effects under an <strong>IEEPA Invalidation</strong> scenario, in which the Supreme Court invalidates the administration's use of IEEPA as legal authority for tariffs, and those tariffs are not replaced through another authority.</p>",
             "section": "overview",
             "lead": true,
             "figureNum": 1
@@ -583,14 +570,12 @@
                 "data": "previous-vintages/2025-10-30/ieepa-invalidation/etr-by-country/data.csv",
                 "spec": {
                   "title": "Average Effective Tariff Rate by Trading Partner",
-                  "subtitle": "As of October 30, 2025, pre- and post-substitution. Percent.",
+                  "subtitle": "As of October 30, 2025, pre- and post-substitution. Percent. IEEPA Invalidation scenario.",
                   "data": "data.csv",
                   "stub": [
-                    "category",
-                    "scenario"
+                    "category"
                   ],
                   "header": [
-                    "measure",
                     "substitution"
                   ],
                   "value": "value",
@@ -600,9 +585,7 @@
                   ],
                   "header_labels": {
                     "presub": "Pre-substitution",
-                    "postsub": "Post-substitution",
-                    "level": "Levels",
-                    "delta_vs_default": "Change vs. baseline"
+                    "postsub": "Post-substitution"
                   },
                   "format": {
                     "default": {
@@ -614,19 +597,7 @@
                   "emphasis_rows": [
                     "Total"
                   ],
-                  "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "column_group_order": [
-                    "level",
-                    "delta_vs_default"
-                  ],
-                  "row_labels": {
-                    "baseline": "Baseline",
-                    "ieepa_invalidation": "IEEPA Invalidation"
-                  },
-                  "group_labels": {
-                    "baseline": "Baseline",
-                    "ieepa_invalidation": "IEEPA Invalidation"
-                  }
+                  "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
                 }
               },
               {
@@ -676,7 +647,7 @@
                 }
               }
             ],
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner and scenario, as both levels and change vs. Baseline (table), and as a stacked bar chart showing only the IEEPA Invalidation scenario, with China, Canada, Mexico, and Rest of World stacking to that scenario's total for each substitution basis.</p>",
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner under the IEEPA Invalidation scenario, before and after trade substitution, shown as both a table and a stacked bar chart, with China, Canada, Mexico, and Rest of World stacking to the total for each substitution basis.</p>",
             "section": "rates",
             "figureNum": 2
           },
@@ -689,34 +660,26 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Consumer Price Effects, Selected Commodities",
-              "subtitle": "Percent change in producer/consumer prices, short-run and long-run. By scenario.",
+              "subtitle": "Percent change in producer/consumer prices, short-run and long-run. IEEPA Invalidation scenario.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
                 "x": "category",
                 "facet": "substitution",
-                "series": "scenario",
+                "series": "substitution",
                 "value": "value"
               },
-              "header_labels": {
+              "series_colors": {
+                "presub": "blue",
+                "postsub": "amber"
+              },
+              "series_labels": {
                 "presub": "Short-run",
                 "postsub": "Long-run"
-              },
-              "series_order": [
-                "baseline",
-                "ieepa_invalidation"
-              ],
-              "series_labels": {
-                "baseline": "Baseline",
-                "ieepa_invalidation": "IEEPA Invalidation"
-              },
-              "series_colors": {
-                "baseline": "blue",
-                "ieepa_invalidation": "amber"
               }
             },
-            "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes.</p>",
+            "body_html": "<p>Commodity price effects under the IEEPA Invalidation scenario, short-run and long-run.</p>",
             "section": "prices-households",
             "figureNum": 3
           },
@@ -729,14 +692,14 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Household Cost of Tariffs by Income Decile",
-              "subtitle": "Tariff burden by household income decile, post-substitution. By scenario.",
+              "subtitle": "Tariff burden by household income decile, post-substitution. IEEPA Invalidation scenario.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
                 "x": "category",
                 "facet": "basis",
-                "series": "scenario",
+                "series": "basis",
                 "value": "value"
               },
               "x_order": [
@@ -760,20 +723,12 @@
                   "2025 dollars"
                 ]
               },
-              "series_order": [
-                "baseline",
-                "ieepa_invalidation"
-              ],
-              "series_labels": {
-                "baseline": "Baseline",
-                "ieepa_invalidation": "IEEPA Invalidation"
-              },
               "series_colors": {
-                "baseline": "blue",
-                "ieepa_invalidation": "amber"
+                "% of after-tax income": "blue",
+                "2025 dollars": "amber"
               }
             },
-            "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2025 dollars per household. Values are negative by convention.</p>",
+            "body_html": "<p>Household cost of tariffs by income decile under the IEEPA Invalidation scenario.</p>",
             "section": "prices-households",
             "figureNum": 4
           },
@@ -786,32 +741,23 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
-              "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "subtitle": "Percent change in the level of real GDP versus baseline. IEEPA Invalidation scenario.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
                 "includeZero": true,
                 "tickCount": 6
               },
-              "series_labels": {
-                "baseline": "Baseline",
-                "ieepa_invalidation": "IEEPA Invalidation"
-              },
               "columns": {
                 "x": "time",
-                "series": "scenario",
+                "series": "series",
                 "value": "value"
               },
-              "series_order": [
-                "baseline",
-                "ieepa_invalidation"
-              ],
-              "series_colors": {
-                "baseline": "blue",
-                "ieepa_invalidation": "amber"
+              "series_labels": {
+                "gdp_level": "Real GDP"
               }
             },
-            "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
+            "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter, under the IEEPA Invalidation scenario.</p>",
             "section": "economy",
             "figureNum": 5
           },
@@ -841,14 +787,13 @@
                   ]
                 }
               },
-              "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "subtitle": "Percent change in the level of real GDP versus baseline. IEEPA Invalidation scenario.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
                 "x": "category",
                 "facet": "group",
-                "series": "scenario",
                 "value": "value"
               },
               "small_multiples": {
@@ -856,20 +801,11 @@
                 "columns": 2,
                 "pane_widths": "equal-bar"
               },
-              "series_order": [
-                "baseline",
-                "ieepa_invalidation"
-              ],
-              "series_labels": {
-                "baseline": "Baseline",
-                "ieepa_invalidation": "IEEPA Invalidation"
-              },
-              "series_colors": {
-                "baseline": "blue",
-                "ieepa_invalidation": "amber"
+              "category_colors": {
+                "Total": "#6b7280"
               }
             },
-            "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
+            "body_html": "<p>The long-run change in real GDP, by sector or by trading partner, under the IEEPA Invalidation scenario.</p>",
             "section": "economy",
             "figureNum": 6
           },
@@ -879,20 +815,24 @@
             "figureType": "table",
             "data": "previous-vintages/2025-10-30/ieepa-invalidation/revenue-by-year/data.csv",
             "spec": {
-              "title": "Net Revenue Impact by Fiscal Year",
-              "subtitle": "Billions of dollars. By scenario.",
               "data": "data.csv",
+              "title": "Net Revenue Impact by Fiscal Year",
+              "subtitle": "Billions of dollars. IEEPA Invalidation scenario.",
+              "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
               "stub": [
-                "series",
-                "scenario"
+                "series"
               ],
               "header": [
-                "measure",
                 "category"
               ],
               "value": "value",
+              "row_labels": {
+                "conventional": "Conventional",
+                "dynamic": "Dynamic",
+                "difference": "Difference (Dynamic \u2212 Conventional)"
+              },
               "column_order": [
-                "2025",
                 "2026",
                 "2027",
                 "2028",
@@ -903,40 +843,22 @@
                 "2033",
                 "2034",
                 "2035",
-                "2026-35",
-                "2025-34"
+                "2026-35"
               ],
-              "column_group_order": [
-                "level",
-                "delta_vs_default"
-              ],
-              "row_labels": {
-                "conventional": "Conventional",
-                "dynamic": "Dynamic",
-                "difference": "Difference (Dynamic \u2212 Conventional)"
-              },
-              "group_labels": {
-                "baseline": "Baseline",
-                "ieepa_invalidation": "IEEPA Invalidation"
-              },
-              "header_labels": {
-                "level": "Levels",
-                "delta_vs_default": "Change vs. Baseline",
-                "2026-35": "2026-35 Total",
-                "2025-34": "2025-34 Total"
-              },
               "format": {
                 "default": {
-                  "type": "currency",
+                  "type": "number",
                   "decimals": 1,
                   "thousands": true,
                   "prefix": "$"
                 }
               },
-              "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue. The IEEPA Invalidation scenario has no fiscal year 2025 figures (no '2025' or '2025-34' column) since it is a hypothetical policy counterfactual that does not apply retroactively to a fiscal year already mostly over. Blank cells reflect this, not missing data.",
-              "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
+              "header_labels": {
+                "2026-35": "2026-35 Total",
+                "2025-34": "2025-34 Total"
+              }
             },
-            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, by scenario, on a conventional and a dynamic basis, plus the difference between the two, as both levels and change vs. Baseline, including totals.</p>",
+            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year under the IEEPA Invalidation scenario, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total. No fiscal year 2025 figures are published for this scenario, since it is a hypothetical policy counterfactual that does not apply retroactively to a fiscal year already mostly over.</p>",
             "section": "fiscal",
             "figureNum": 7
           }
