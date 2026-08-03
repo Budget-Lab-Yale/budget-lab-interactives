@@ -1,29 +1,4 @@
 category,value,dimension,category_code,group,scenario,measure
-Agriculture,-0.6513782788299326,sector,agriculture,Sectors,baseline,level
-Mining & Extraction,-2.0989542253814775,sector,mining_and_extraction,Sectors,baseline,level
-Total Manufacturing,3.159976063311725,sector,total_manufacturing,Sectors,baseline,level
-Durable Manufacturing,5.441571232168002,sector,durable_manufacturing,Manufacturing detail,baseline,level
-Advanced Manufacturing,0.27,sector,advanced_manufacturing,Manufacturing detail,baseline,level
-Nondurable Manufacturing,0.9891298062521265,sector,nondurable_manufacturing,Manufacturing detail,baseline,level
-Utilities,0.5851466339471021,sector,utilities,Sectors,baseline,level
-Construction,-4.04,sector,construction,Sectors,baseline,level
-Services,-0.254089257289436,sector,services,Sectors,baseline,level
-Overall Real GDP,-0.35,sector,overall_real_gdp,Sectors,baseline,level
-USA,-0.35,country,usa,Trading partners,baseline,level
-China,-0.18,country,china,Trading partners,baseline,level
-ROW,-0.01,country,row,Trading partners,baseline,level
-Canada,-0.09,country,canada,Trading partners,baseline,level
-Mexico,0.08,country,mexico,Trading partners,baseline,level
-FTROW,0.02,country,ftrow,Trading partners,baseline,level
-Japan,0.0,country,japan,Trading partners,baseline,level
-EU,0.04,country,eu,Trading partners,baseline,level
-UK,0.08,country,uk,Trading partners,baseline,level
-"World Total
-",-0.10392155661520519,country,"world_total
-",Trading partners,baseline,level
-"World ex USA
-",-0.02586469847580819,country,"world_ex_usa
-",Trading partners,baseline,level
 Agriculture,-1.4267783526077098,sector,agriculture,Sectors,ieepa_invalidation,level
 Mining & Extraction,-1.0907126369259141,sector,mining_and_extraction,Sectors,ieepa_invalidation,level
 Total Manufacturing,1.3110095552282304,sector,total_manufacturing,Sectors,ieepa_invalidation,level
