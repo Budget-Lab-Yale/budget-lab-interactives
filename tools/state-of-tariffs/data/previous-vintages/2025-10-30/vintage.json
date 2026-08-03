@@ -635,16 +635,15 @@
                 "spec": {
                   "chartType": "stacked",
                   "data": "chart-data.csv",
-                  "title": "Average Effective US Tariff Rate, New 2025 Policy Through October 30",
-                  "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner and scenario. Pre- and post-substitution.",
+                  "title": "Average Effective US Tariff Rate, New 2025 Policy Through October 30, IEEPA Invalidation Scenario",
+                  "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution. IEEPA Invalidation scenario only.",
                   "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "orientation": "horizontal",
                   "xAxisType": "categorical",
                   "columns": {
                     "x": "substitution",
                     "series": "category",
-                    "value": "value",
-                    "facet": "scenario"
+                    "value": "value"
                   },
                   "x_order": [
                     "presub",
@@ -668,18 +667,6 @@
                   },
                   "barStack": {
                     "netDisplay": "text"
-                  },
-                  "small_multiples": {
-                    "mode": "per-pane",
-                    "columns": 2,
-                    "pane_order": [
-                      "baseline",
-                      "ieepa_invalidation"
-                    ],
-                    "pane_titles": {
-                      "baseline": "Baseline",
-                      "ieepa_invalidation": "IEEPA Invalidation"
-                    }
                   }
                 },
                 "total": {
@@ -689,7 +676,7 @@
                 }
               }
             ],
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner and scenario, as both levels and change vs. Baseline (table), and as stacked bars per scenario (chart), with China, Canada, Mexico, and Rest of World stacking to each scenario's total for each substitution basis.</p>",
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner and scenario, as both levels and change vs. Baseline (table), and as a stacked bar chart showing only the IEEPA Invalidation scenario, with China, Canada, Mexico, and Rest of World stacking to that scenario's total for each substitution basis.</p>",
             "section": "rates",
             "figureNum": 2
           },
