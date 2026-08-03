@@ -50,7 +50,8 @@
                 "series"
               ],
               "header": [
-                "column"
+                "rate_group",
+                "duration"
               ],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
@@ -98,24 +99,28 @@
                   }
                 }
               },
-              "column_order": [
-                "current",
-                "before_scotus",
-                "immediately_following_scotus",
-                "section122_10_expires",
-                "section122_10_extended",
-                "section122_15_expires",
-                "section122_15_extended"
-              ],
               "header_labels": {
                 "current": "Current",
                 "before_scotus": "Policy Before SCOTUS Ruling",
                 "immediately_following_scotus": "Policy Immediately Following SCOTUS Ruling (No IEEPA or Section 122)",
-                "section122_10_expires": "10% Section 122, Expires in 150 Days",
-                "section122_10_extended": "10% Section 122, Extended After 150 Days",
-                "section122_15_expires": "15% Section 122, Expires in 150 Days",
-                "section122_15_extended": "15% Section 122, Extended After 150 Days"
-              }
+                "pct10": "10% Section 122",
+                "pct15": "15% Section 122",
+                "expires": "Expires in 150 Days",
+                "extended": "Extended After 150 Days",
+                "only": ""
+              },
+              "column_group_order": [
+                "current",
+                "before_scotus",
+                "immediately_following_scotus",
+                "pct10",
+                "pct15"
+              ],
+              "column_order": [
+                "only",
+                "expires",
+                "extended"
+              ]
             },
             "body_html": "<h2>Section 122 Expires</h2><p>This section presents projected effects as of February 21, 2026, under the Section 122 Expires scenario. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
             "section": "overview",
@@ -459,7 +464,8 @@
                 "series"
               ],
               "header": [
-                "column"
+                "rate_group",
+                "duration"
               ],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
@@ -507,24 +513,28 @@
                   }
                 }
               },
-              "column_order": [
-                "current",
-                "before_scotus",
-                "immediately_following_scotus",
-                "section122_10_expires",
-                "section122_10_extended",
-                "section122_15_expires",
-                "section122_15_extended"
-              ],
               "header_labels": {
                 "current": "Current",
                 "before_scotus": "Policy Before SCOTUS Ruling",
                 "immediately_following_scotus": "Policy Immediately Following SCOTUS Ruling (No IEEPA or Section 122)",
-                "section122_10_expires": "10% Section 122, Expires in 150 Days",
-                "section122_10_extended": "10% Section 122, Extended After 150 Days",
-                "section122_15_expires": "15% Section 122, Expires in 150 Days",
-                "section122_15_extended": "15% Section 122, Extended After 150 Days"
-              }
+                "pct10": "10% Section 122",
+                "pct15": "15% Section 122",
+                "expires": "Expires in 150 Days",
+                "extended": "Extended After 150 Days",
+                "only": ""
+              },
+              "column_group_order": [
+                "current",
+                "before_scotus",
+                "immediately_following_scotus",
+                "pct10",
+                "pct15"
+              ],
+              "column_order": [
+                "only",
+                "expires",
+                "extended"
+              ]
             },
             "body_html": "<h2>Section 122 Extended</h2><p>This section presents projected effects as of February 21, 2026, under the Section 122 Extended scenario, in which Section 122 tariffs are extended rather than allowed to expire. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
             "section": "overview",
