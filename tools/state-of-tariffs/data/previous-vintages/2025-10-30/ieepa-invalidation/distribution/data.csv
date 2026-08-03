@@ -19,23 +19,5 @@ category,value,substitution,basis,scenario,measure
 9,-1110.093610139028,postsub,2025 dollars,ieepa_invalidation,level
 10,-0.35357438526554386,postsub,% of after-tax income,ieepa_invalidation,level
 10,-1768.3740019547963,postsub,2025 dollars,ieepa_invalidation,level
-1,1.7346968923350885,postsub,% of after-tax income,ieepa_invalidation,delta_vs_default
-1,652.2633784869167,postsub,2025 dollars,ieepa_invalidation,delta_vs_default
-2,1.00840985907136,postsub,% of after-tax income,ieepa_invalidation,delta_vs_default
-2,610.1182170339449,postsub,2025 dollars,ieepa_invalidation,delta_vs_default
-3,0.9305636527865816,postsub,% of after-tax income,ieepa_invalidation,delta_vs_default
-3,687.3422308577526,postsub,2025 dollars,ieepa_invalidation,delta_vs_default
-4,0.829341034072642,postsub,% of after-tax income,ieepa_invalidation,delta_vs_default
-4,713.9050555400711,postsub,2025 dollars,ieepa_invalidation,delta_vs_default
-5,0.769526563165608,postsub,% of after-tax income,ieepa_invalidation,delta_vs_default
-5,776.8678465782078,postsub,2025 dollars,ieepa_invalidation,delta_vs_default
-6,0.7960024505952876,postsub,% of after-tax income,ieepa_invalidation,delta_vs_default
-6,926.4433721743375,postsub,2025 dollars,ieepa_invalidation,delta_vs_default
-7,0.7394836721282574,postsub,% of after-tax income,ieepa_invalidation,delta_vs_default
-7,1011.6136634714563,postsub,2025 dollars,ieepa_invalidation,delta_vs_default
-8,0.7225450761793565,postsub,% of after-tax income,ieepa_invalidation,delta_vs_default
-8,1184.2875071117746,postsub,2025 dollars,ieepa_invalidation,delta_vs_default
-9,0.6421017647385784,postsub,% of after-tax income,ieepa_invalidation,delta_vs_default
-9,1333.6196812914377,postsub,2025 dollars,ieepa_invalidation,delta_vs_default
-10,0.4738985202729781,postsub,% of after-tax income,ieepa_invalidation,delta_vs_default
+
 10,2370.1655372636783,postsub,2025 dollars,ieepa_invalidation,delta_vs_default
