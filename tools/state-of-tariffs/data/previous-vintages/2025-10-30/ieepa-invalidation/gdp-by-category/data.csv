@@ -24,28 +24,3 @@ UK,0.04,country,uk,Trading partners,ieepa_invalidation,level
 "World ex USA
 ",-0.020521039495713378,country,"world_ex_usa
 ",Trading partners,ieepa_invalidation,level
-Agriculture,-0.7754000737777772,sector,agriculture,Sectors,ieepa_invalidation,delta_vs_default
-Mining & Extraction,1.0082415884555633,sector,mining_and_extraction,Sectors,ieepa_invalidation,delta_vs_default
-Total Manufacturing,-1.8489665080834947,sector,total_manufacturing,Sectors,ieepa_invalidation,delta_vs_default
-Durable Manufacturing,-2.1808633341584347,sector,durable_manufacturing,Manufacturing detail,ieepa_invalidation,delta_vs_default
-Advanced Manufacturing,-0.91,sector,advanced_manufacturing,Manufacturing detail,ieepa_invalidation,delta_vs_default
-Nondurable Manufacturing,-1.7198285835992757,sector,nondurable_manufacturing,Manufacturing detail,ieepa_invalidation,delta_vs_default
-Utilities,-0.5804001994708684,sector,utilities,Sectors,ieepa_invalidation,delta_vs_default
-Construction,1.75,sector,construction,Sectors,ieepa_invalidation,delta_vs_default
-Services,0.21079304052485925,sector,services,Sectors,ieepa_invalidation,delta_vs_default
-Overall Real GDP,0.24999999999999997,sector,overall_real_gdp,Sectors,ieepa_invalidation,delta_vs_default
-USA,0.24999999999999997,country,usa,Trading partners,ieepa_invalidation,delta_vs_default
-China,0.06,country,china,Trading partners,ieepa_invalidation,delta_vs_default
-ROW,0.02,country,row,Trading partners,ieepa_invalidation,delta_vs_default
-Canada,-0.23,country,canada,Trading partners,ieepa_invalidation,delta_vs_default
-Mexico,-0.16,country,mexico,Trading partners,ieepa_invalidation,delta_vs_default
-FTROW,-0.01,country,ftrow,Trading partners,ieepa_invalidation,delta_vs_default
-Japan,0.01,country,japan,Trading partners,ieepa_invalidation,delta_vs_default
-EU,-0.010000000000000002,country,eu,Trading partners,ieepa_invalidation,delta_vs_default
-UK,-0.04,country,uk,Trading partners,ieepa_invalidation,delta_vs_default
-"World Total
-",0.06474733400798627,country,"world_total
-",Trading partners,ieepa_invalidation,delta_vs_default
-"World ex USA
-",0.005343658980094812,country,"world_ex_usa
-",Trading partners,ieepa_invalidation,delta_vs_default
