@@ -1,5 +1,5 @@
 ---
-figureType: composite (table + stacked bar chart)
+figureType: table
 spec:
   title: "Average Effective Tariff Rate by Trading Partner"
   subtitle: "As of November 17, 2025, pre- and post-substitution. Percent."
