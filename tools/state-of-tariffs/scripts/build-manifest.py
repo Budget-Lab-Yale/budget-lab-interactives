@@ -51,6 +51,7 @@ import csv
 import hashlib
 import html
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -698,7 +699,12 @@ def stamp_assets() -> None:
     """Stamp a content hash of the tool's runtime JS+CSS as the ?v= cache-bust on app.js and
     styles.css in index.html, so every deploy that changes any of them serves fresh files. Hash is
     computed over LF-normalized bytes so it matches regardless of a checkout's line endings (the CI
-    validate hook recomputes it the same way)."""
+    validate hook recomputes it the same way).
+
+    index.html is hand-maintained source, not a build output, so it is rewritten only when the stamp
+    actually changes — a data-only build (the common case, and the only one the dev server triggers
+    on a data/ edit) leaves it untouched — and any rewrite goes through a temp file + atomic
+    replace. An interrupted build therefore cannot leave it truncated."""
     tool = DATA_DIR.parent
     h = hashlib.sha256()
     for name in ASSET_FILES:
@@ -708,16 +714,34 @@ def stamp_assets() -> None:
     stamp = h.hexdigest()[:10]
 
     index = tool / "index.html"
-    text = index.read_text(encoding="utf-8")
+    original = index.read_text(encoding="utf-8")
 
-    def restamp(s: str, filename: str) -> str:
+    def restamp(s: str, filename: str) -> tuple[str, int]:
         pat = re.compile(r'((?:href|src)="' + re.escape(filename) + r')(\?v=[^"]*)?(")')
-        return pat.sub(lambda m: f"{m.group(1)}?v={stamp}{m.group(3)}", s)
+        return pat.subn(lambda m: f"{m.group(1)}?v={stamp}{m.group(3)}", s)
 
-    text = restamp(text, "app.js")
-    text = restamp(text, "styles.css")
-    with open(index, "w", encoding="utf-8", newline="") as f:
+    text, n_app = restamp(original, "app.js")
+    text, n_css = restamp(text, "styles.css")
+
+    # A reference we can't find means index.html isn't the file we expect — most likely empty or
+    # truncated. Fail loudly: without this, a broken index would compare equal to itself and sail
+    # straight through the unchanged check below, silently "succeeding" on a corrupt file.
+    if not n_app or not n_css:
+        missing = ", ".join(n for n, c in (("app.js", n_app), ("styles.css", n_css)) if not c)
+        fail(f"index.html ({len(original)} bytes) has no {missing} reference to stamp; it looks "
+             f"empty or corrupt. Restore it (e.g. git checkout <good-ref> -- index.html), then "
+             f"re-run. data/manifest.json was already written and is fine.")
+
+    if text == original:
+        print(f"build-manifest: asset stamp unchanged (?v={stamp})")
+        return
+
+    # Temp file + atomic replace: an interrupted write leaves either the old file or the new one,
+    # never a truncated one. .tmp is already gitignored.
+    tmp = index.parent / (index.name + ".tmp")
+    with open(tmp, "w", encoding="utf-8", newline="") as f:
         f.write(text)
+    os.replace(tmp, index)
     print(f"build-manifest: stamped assets ?v={stamp}")
 
 
