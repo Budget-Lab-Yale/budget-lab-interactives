@@ -1,0 +1,30 @@
+{
+  "scenarios": [
+    {
+      "id": "tracker_actual_2026-07-24",
+      "label": "Current law (Section 122 expires)",
+      "short_label": "Current law",
+      "default": true
+    },
+    {
+      "id": "tracker_no_fl_301_2026-07-24",
+      "label": "Excluding new forced-labor Section 301 actions",
+      "short_label": "Ex forced-labor 301",
+      "default": false
+    },
+    {
+      "id": "tracker_no_fl_301_keep_s122_2026-07-24",
+      "label": "Excluding forced-labor 301; Section 122 retained",
+      "short_label": "Ex FL-301, keep §122",
+      "default": false
+    }
+  ],
+  "default_scenario": "tracker_actual_2026-07-24",
+  "provenance": {
+    "version": 1,
+    "interface_vintage": "2026072409",
+    "published_at": "2026-07-24T11:02:49-0400",
+    "git_commit": "7e306c65330696355f4023ad110d46a947180c37",
+    "tracker_vintage": "2026-07-24-09"
+  }
+}
