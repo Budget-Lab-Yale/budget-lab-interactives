@@ -52,6 +52,11 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "group_labels": {
+                "Tariff rate": "Tariff rates, as of April 8, 2025",
+                "Consumer price increase": "Consumer price increase",
+                "Household cost": "Average household cost"
+              },
               "format": {
                 "groups": {
                   "Revenue (10-year)": {
@@ -85,6 +90,21 @@
                 },
                 "rows": {
                   "Long-run": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  },
+                  "Unemployment rate (p.p.), end of 2025": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": " p.p."
+                  },
+                  "Change in payroll employment, 2025 Q4 (thousands)": {
+                    "type": "number",
+                    "decimals": 0,
+                    "suffix": " jobs"
+                  },
+                  "Conventional, % of GDP": {
                     "type": "number",
                     "decimals": 2,
                     "suffix": "%"

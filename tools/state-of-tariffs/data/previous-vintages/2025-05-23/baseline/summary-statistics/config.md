@@ -50,7 +50,7 @@ spec:
       Change in payroll employment, 2025 Q4 (thousands):
         type: number
         decimals: 0
-        suffix: "K jobs"
+        suffix: " jobs"
   originalFigureId: "summary-statistics"
   vintageDate: "2025-05-23"
   scenarioTab: "default-scenario"

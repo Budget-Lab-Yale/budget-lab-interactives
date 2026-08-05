@@ -6,5 +6,7 @@ Household cost,Pre-substitution,-4877.766018091493,usd,hh_cost_presub
 Real GDP,"Q4-Q4 growth (p.p.), 2025",-1.0930760794626737,pp,gdp_growth_2025
 Real GDP,Long-run,-0.61,pct,gdp_longrun
 Labor market,"Unemployment rate (p.p.), end of 2025",0.5715875625610352,pp,unemployment_2025
+Labor market,"Change in payroll employment, 2025 Q4 (thousands)",-770.44677734375,thousands,payroll_employment_2025
 Revenue (10-year),Conventional,2442.432237222261,usd_b,revenue_conventional
 Revenue (10-year),Dynamic,1811.3172372222612,usd_b,revenue_dynamic
+Revenue (10-year),"Conventional, % of GDP",0.6545197921616932,pct,revenue_pct_gdp

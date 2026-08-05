@@ -102,7 +102,7 @@
                   "Change in payroll employment, 2025 Q4 (thousands)": {
                     "type": "number",
                     "decimals": 0,
-                    "suffix": "K jobs"
+                    "suffix": " jobs"
                   }
                 }
               }
@@ -119,15 +119,16 @@
             "parts": [
               {
                 "figureType": "table",
-                "data": "previous-vintages/2025-06-17/baseline/etr-by-country/data.csv",
+                "data": "previous-vintages/2025-06-17/baseline/etr-by-country/data-full.csv",
                 "spec": {
                   "title": "Average Effective Tariff Rate by Trading Partner",
                   "subtitle": "As of June 17, 2025, pre- and post-substitution. Percent.",
-                  "data": "data.csv",
+                  "data": "data-full.csv",
                   "stub": [
                     "category"
                   ],
                   "header": [
+                    "metric",
                     "substitution"
                   ],
                   "value": "value",
@@ -137,7 +138,10 @@
                   ],
                   "header_labels": {
                     "presub": "Pre-substitution",
-                    "postsub": "Post-substitution"
+                    "postsub": "Post-substitution",
+                    "rate": "Average Effective Tariff Rate",
+                    "import_share": "Share of Goods Imports",
+                    "contribution": "Contribution"
                   },
                   "format": {
                     "default": {
@@ -149,7 +153,12 @@
                   "emphasis_rows": [
                     "Total"
                   ],
-                  "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
+                  "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                  "column_group_order": [
+                    "rate",
+                    "import_share",
+                    "contribution"
+                  ]
                 }
               },
               {

@@ -1,11 +1,11 @@
 category,series,value,unit,metric
-Revenue (10-year),Conventional (2026-35),3008.774500975184,usd_b,revenue_conventional
-Revenue (10-year),Additional dynamic effect (2026-35),-588.112,usd_b,revenue_dynamic_addl
-Revenue (10-year),"Conventional, % of GDP",0.8062874502833028,pct,revenue_pct_gdp
-Consumer price increase,Pre-substitution,2.2822533278818264,pct,price_presub
-Household cost,Pre-substitution (2024$),-3750.233337267858,usd,hh_cost_presub
-Tariff rate,"Additional effective rate, post-substitution (p.p.)",20.020661141351546,pp,etr_addl_postsub
-Real GDP,"Q4-Q4 growth (p.p.), 2025",-0.8748210644038412,pp,gdp_growth_2025
+Tariff rate,"Additional effective rate, post-substitution (p.p.)",16.11788492447341,pp,etr_addl_postsub
+Consumer price increase,Pre-substitution,2.853773299192298,pct,price_presub
+Household cost,Pre-substitution (2024$),-4689.3636358803005,usd,hh_cost_presub
+Real GDP,"Q4-Q4 growth (p.p.), 2025",-1.0522395137821938,pp,gdp_growth_2025
 Real GDP,Long-run,-0.57,pct,gdp_longrun
-Labor market,"Unemployment rate (p.p.), end of 2025",0.45647192001342773,pp,unemployment_2025
-Labor market,"Payroll employment (thousands), end of 2025",-611.8316650390625,thous,payroll_2025
+Labor market,"Unemployment rate (p.p.), end of 2025",0.5502419471740723,pp,unemployment_2025
+Labor market,"Change in payroll employment, 2025 Q4 (thousands)",-740.325927734375,thousands,payroll_employment_2025
+Revenue (10-year),Conventional,2388.2623709959908,usd_b,revenue_conventional
+Revenue (10-year),Dynamic,1801.5703709959907,usd_b,revenue_dynamic
+Revenue (10-year),"Conventional, % of GDP",0.6400034223547799,pct,revenue_pct_gdp

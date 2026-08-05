@@ -1,0 +1,31 @@
+category,value,country_code,substitution,metric
+China,33.212663093508226,chn,presub,rate
+China,33.212663093508226,chn,postsub,rate
+China,13.62,chn,presub,import_share
+China,6.90004946332807,chn,postsub,import_share
+China,4.52356471333582,chn,presub,contribution
+China,2.2916901815405746,chn,postsub,contribution
+Canada,17.16441005654145,ca,presub,rate
+Canada,17.16441005654145,ca,postsub,rate
+Canada,12.629999999999999,ca,presub,import_share
+Canada,15.917694420978194,ca,postsub,import_share
+Canada,2.167864990141185,ca,presub,contribution
+Canada,2.7321783419639183,ca,postsub,contribution
+Mexico,14.741823131798363,mx,presub,rate
+Mexico,14.741823131798363,mx,postsub,rate
+Mexico,15.481,mx,presub,import_share
+Mexico,17.79790129110361,mx,postsub,import_share
+Mexico,2.2821816390337046,mx,presub,contribution
+Mexico,2.623735129506551,mx,postsub,contribution
+Rest of World,17.978858808538895,row,presub,rate
+Rest of World,17.978858808538895,row,postsub,rate
+Rest of World,58.269000000000005,row,presub,import_share
+Rest of World,59.384354824590126,row,postsub,import_share
+Rest of World,10.47610123914753,row,presub,contribution
+Rest of World,10.676629308274814,row,postsub,contribution
+Total,19.44971258165824,total,presub,rate
+Total,18.32423296128586,total,postsub,rate
+Total,100,total,presub,import_share
+Total,100,total,postsub,import_share
+Total,19.44971258165824,total,presub,contribution
+Total,18.32423296128586,total,postsub,contribution

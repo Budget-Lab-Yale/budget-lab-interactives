@@ -50,7 +50,11 @@ spec:
       Change in payroll employment, 2025 Q4 (thousands):
         type: number
         decimals: 0
-        suffix: "K jobs"
+        suffix: " jobs"
+      "Conventional, % of GDP":
+        type: number
+        decimals: 2
+        suffix: "%"
   originalFigureId: "summary-statistics"
   vintageDate: "2025-05-12"
   scenarioTab: "default-scenario"
@@ -60,6 +64,6 @@ spec:
 
 Projected effects of tariff policy as of May 12, 2025.
 
-_Notes: Adds a "Change in payroll employment, 2025 Q4 (thousands)" row (Table 1) to the Labor market group, which was present in the original May 12, 2025 release but missing from the initial restructuring of this vintage. It uses a row-level format override since its unit (thousands of jobs) differs from the group's other row (unemployment rate, p.p.)._
+_Notes: Adds a "Change in payroll employment, 2025 Q4 (thousands)" row and a "Conventional, % of GDP" row (Table 1), both present in the original May 12, 2025 release but missing from the initial restructuring of this vintage. It uses a row-level format override since its unit (thousands of jobs) differs from the group's other row (unemployment rate, p.p.)._
 
 _Source: Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis._
