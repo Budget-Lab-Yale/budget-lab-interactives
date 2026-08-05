@@ -10,3 +10,4 @@ Labor market,"Unemployment rate (p.p.), end of 2025",0.29076337814331055,pp,unem
 Labor market,"Change in payroll employment, 2025 Q4 (thousands)",-491.76025390625,thousands,payroll_employment_2025
 Revenue (10-year),Conventional,2526.9085713776517,usd_b,revenue_conventional
 Revenue (10-year),Dynamic,2055.1385713776517,usd_b,revenue_dynamic
+Revenue (10-year),"Conventional, % of GDP",0.6771574154646712,pct,revenue_pct_gdp

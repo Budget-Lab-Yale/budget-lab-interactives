@@ -107,7 +107,9 @@
                   "Conventional, % of GDP": {
                     "type": "number",
                     "decimals": 2,
-                    "suffix": "%"
+                    "suffix": "%",
+                    "prefix": "",
+                    "thousands": false
                   }
                 }
               }

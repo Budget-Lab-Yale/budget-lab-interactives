@@ -103,6 +103,13 @@
                     "type": "number",
                     "decimals": 0,
                     "suffix": " jobs"
+                  },
+                  "Conventional, % of GDP": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%",
+                    "prefix": "",
+                    "thousands": false
                   }
                 }
               }

@@ -129,7 +129,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-04",
+                  "start": "2026-08-05",
                   "end": "2026-12-31"
                 }
               ]
@@ -232,7 +232,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-04",
+                  "start": "2026-08-05",
                   "end": "2026-12-31"
                 }
               ]
@@ -333,7 +333,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-04",
+                  "start": "2026-08-05",
                   "end": "2026-12-31"
                 }
               ]
@@ -424,7 +424,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-04",
+                  "start": "2026-08-05",
                   "end": "2026-12-31"
                 }
               ]
@@ -8413,6 +8413,13 @@
                         "type": "number",
                         "decimals": 0,
                         "suffix": " jobs"
+                      },
+                      "Conventional, % of GDP": {
+                        "type": "number",
+                        "decimals": 2,
+                        "suffix": "%",
+                        "prefix": "",
+                        "thousands": false
                       }
                     }
                   }
@@ -14048,7 +14055,9 @@
                       "Conventional, % of GDP": {
                         "type": "number",
                         "decimals": 2,
-                        "suffix": "%"
+                        "suffix": "%",
+                        "prefix": "",
+                        "thousands": false
                       }
                     }
                   }
@@ -14456,7 +14465,9 @@
                       "Conventional, % of GDP": {
                         "type": "number",
                         "decimals": 2,
-                        "suffix": "%"
+                        "suffix": "%",
+                        "prefix": "",
+                        "thousands": false
                       }
                     }
                   }
@@ -14847,7 +14858,9 @@
                       "Conventional, % of GDP": {
                         "type": "number",
                         "decimals": 2,
-                        "suffix": "%"
+                        "suffix": "%",
+                        "prefix": "",
+                        "thousands": false
                       }
                     }
                   }
@@ -15139,7 +15152,9 @@
                       "Conventional (% of GDP)": {
                         "type": "number",
                         "decimals": 2,
-                        "suffix": "%"
+                        "suffix": "%",
+                        "prefix": "",
+                        "thousands": false
                       }
                     }
                   }
@@ -15443,7 +15458,9 @@
                       "Conventional (% of GDP)": {
                         "type": "number",
                         "decimals": 2,
-                        "suffix": "%"
+                        "suffix": "%",
+                        "prefix": "",
+                        "thousands": false
                       }
                     }
                   }

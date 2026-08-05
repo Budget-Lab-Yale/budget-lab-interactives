@@ -51,6 +51,12 @@ spec:
         type: number
         decimals: 0
         suffix: " jobs"
+      "Conventional, % of GDP":
+        type: number
+        decimals: 2
+        suffix: "%"
+        prefix: ""
+        thousands: false
   originalFigureId: "summary-statistics"
   vintageDate: "2025-10-17"
   scenarioTab: "default-scenario"
@@ -60,6 +66,6 @@ spec:
 
 Projected effects of tariff policy as of October 17, 2025.
 
-_Notes: Adds a "Change in payroll employment, 2025 Q4 (thousands)" row (Table 1) to the Labor market group, which was present in the original release but missing from the initial restructuring of this vintage. It uses a row-level format override since its unit (thousands of jobs) differs from the group's other row (unemployment rate, p.p.)._
+_Notes: Adds a "Change in payroll employment, 2025 Q4 (thousands)" row and a "Conventional, % of GDP" row (Table 1) to this vintage, both present in the original release but missing from the initial restructuring of this vintage. The % of GDP row explicitly clears the Revenue group's currency prefix/thousands-separator so it renders as a plain percentage (e.g. "0.68%") rather than inheriting the group's "$...B" formatting -- a formatting bug found and fixed across all vintages carrying this row (2025-04-02, 2025-04-07, 2025-04-15, 2025-05-12) while adding it here._
 
 _Source: Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis._
