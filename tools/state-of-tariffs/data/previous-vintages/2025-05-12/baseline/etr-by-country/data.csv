@@ -3,29 +3,19 @@ China,33.212663093508226,chn,presub,rate
 China,33.212663093508226,chn,postsub,rate
 China,13.62,chn,presub,import_share
 China,6.142944134278623,chn,postsub,import_share
-China,4.52356471333582,chn,presub,contribution
-China,2.0402353393403847,chn,postsub,contribution
 Canada,17.16441005654145,ca,presub,rate
 Canada,17.16441005654145,ca,postsub,rate
 Canada,12.629999999999999,ca,presub,import_share
 Canada,15.13455285937509,ca,postsub,import_share
-Canada,2.167864990141185,ca,presub,contribution
-Canada,2.597756713007159,ca,postsub,contribution
 Mexico,14.741823131798363,mx,presub,rate
 Mexico,14.741823131798363,mx,postsub,rate
 Mexico,15.481,mx,presub,import_share
 Mexico,17.15336827749307,mx,postsub,import_share
-Mexico,2.2821816390337046,mx,presub,contribution
-Mexico,2.528719212614036,mx,postsub,contribution
 Rest of World,11.04364607578566,row,presub,rate
 Rest of World,11.04364607578566,row,postsub,rate
 Rest of World,58.269000000000005,row,presub,import_share
 Rest of World,61.569134728853214,row,postsub,import_share
-Rest of World,6.435022131899546,row,presub,contribution
-Rest of World,6.799477331378184,row,postsub,contribution
 Total,15.408633474410255,total,presub,rate
 Total,13.966188596339762,total,postsub,rate
 Total,100,total,presub,import_share
 Total,100,total,postsub,import_share
-Total,15.408633474410255,total,presub,contribution
-Total,13.966188596339762,total,postsub,contribution
