@@ -144,7 +144,6 @@
                     "postsub": "Post-substitution",
                     "rate": "Average Effective Tariff Rate",
                     "import_share": "Share of Goods Imports",
-                    "contribution": "Contribution"
                   },
                   "format": {
                     "default": {
@@ -160,7 +159,6 @@
                   "column_group_order": [
                     "rate",
                     "import_share",
-                    "contribution"
                   ]
                 }
               },
@@ -171,7 +169,6 @@
                   "chartType": "stacked",
                   "data": "data.csv",
                   "title": "Average Effective US Tariff Rate, New 2025 Policy as of September 26",
-                  "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
                   "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "orientation": "horizontal",
                   "xAxisType": "categorical",
