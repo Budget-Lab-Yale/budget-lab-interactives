@@ -126,7 +126,7 @@
             "parts": [
               {
                 "figureType": "table",
-                "data": "previous-vintages/2025-04-15/baseline/etr-by-country/data-full.csv",
+                "data": "previous-vintages/2025-04-15/baseline/etr-by-country/data.csv",
                 "spec": {
                   "title": "Average Effective Tariff Rate by Trading Partner",
                   "subtitle": "As of April 15, 2025, pre- and post-substitution. Percent.",
@@ -147,8 +147,7 @@
                     "presub": "Pre-substitution",
                     "postsub": "Post-substitution",
                     "rate": "Average Effective Tariff Rate",
-                    "import_share": "Share of Goods Imports",
-                    "contribution": "Contribution"
+                    "import_share": "Share of Goods Imports"
                   },
                   "format": {
                     "default": {
@@ -164,7 +163,6 @@
                   "column_group_order": [
                     "rate",
                     "import_share",
-                    "contribution"
                   ]
                 }
               },
