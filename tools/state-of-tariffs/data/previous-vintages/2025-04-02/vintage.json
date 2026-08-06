@@ -96,7 +96,10 @@
                   },
                   "Conventional (% of GDP)": {
                     "type": "number",
-                    "decimals": 2
+                    "decimals": 2,
+                    "prefix": "",
+                    "suffix": "%",
+                    "thousands": false
                   }
                 }
               }
@@ -399,7 +402,10 @@
                   },
                   "Conventional (% of GDP)": {
                     "type": "number",
-                    "decimals": 2
+                    "decimals": 2,
+                    "prefix": "",
+                    "suffix": "%",
+                    "thousands": false
                   }
                 }
               }
