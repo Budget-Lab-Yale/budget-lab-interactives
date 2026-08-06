@@ -129,7 +129,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-05",
+                  "start": "2026-08-06",
                   "end": "2026-12-31"
                 }
               ]
@@ -232,7 +232,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-05",
+                  "start": "2026-08-06",
                   "end": "2026-12-31"
                 }
               ]
@@ -333,7 +333,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-05",
+                  "start": "2026-08-06",
                   "end": "2026-12-31"
                 }
               ]
@@ -424,7 +424,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-05",
+                  "start": "2026-08-06",
                   "end": "2026-12-31"
                 }
               ]
@@ -8265,8 +8265,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -8281,8 +8280,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -8732,8 +8730,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -8748,8 +8745,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -9169,8 +9165,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -9185,8 +9180,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -10090,8 +10084,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -10106,8 +10099,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -10569,8 +10561,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -10585,8 +10576,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -11016,40 +11006,98 @@
               {
                 "id": "etr-by-country",
                 "short_label": "Effective Rate by Trading Partner",
-                "figureType": "table",
-                "data": "previous-vintages/2025-08-07/baseline/etr-by-country/data.csv",
-                "spec": {
-                  "title": "Average Effective Tariff Rate by Trading Partner",
-                  "subtitle": "As of August 7, 2025, pre- and post-substitution. Percent.",
-                  "data": "data.csv",
-                  "stub": [
-                    "category"
-                  ],
-                  "header": [
-                    "substitution"
-                  ],
-                  "value": "value",
-                  "column_order": [
-                    "presub",
-                    "postsub"
-                  ],
-                  "header_labels": {
-                    "presub": "Pre-substitution",
-                    "postsub": "Post-substitution"
-                  },
-                  "format": {
-                    "default": {
-                      "type": "number",
-                      "decimals": 1,
-                      "suffix": "%"
+                "figureType": "composite",
+                "parts": [
+                  {
+                    "figureType": "table",
+                    "data": "previous-vintages/2025-08-07/baseline/etr-by-country/data-full.csv",
+                    "spec": {
+                      "title": "Average Effective Tariff Rate by Trading Partner",
+                      "subtitle": "As of August 7, 2025, pre- and post-substitution. Percent.",
+                      "data": "data-full.csv",
+                      "stub": [
+                        "category"
+                      ],
+                      "header": [
+                        "metric",
+                        "substitution"
+                      ],
+                      "value": "value",
+                      "column_order": [
+                        "presub",
+                        "postsub"
+                      ],
+                      "header_labels": {
+                        "presub": "Pre-substitution",
+                        "postsub": "Post-substitution",
+                        "rate": "Average Effective Tariff Rate",
+                        "import_share": "Share of Goods Imports"
+                      },
+                      "format": {
+                        "default": {
+                          "type": "number",
+                          "decimals": 1,
+                          "suffix": "%"
+                        }
+                      },
+                      "emphasis_rows": [
+                        "Total"
+                      ],
+                      "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                      "column_group_order": [
+                        "rate",
+                        "import_share"
+                      ]
                     }
                   },
-                  "emphasis_rows": [
-                    "Total"
-                  ],
-                  "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
-                },
-                "body_html": "<p>The average effective U.S. tariff rate by trading partner as of August 7, 2025, before and after trade substitution.</p>",
+                  {
+                    "figureType": "chart",
+                    "data": "previous-vintages/2025-08-07/baseline/etr-by-country/data.csv",
+                    "spec": {
+                      "chartType": "stacked",
+                      "data": "data.csv",
+                      "title": "Average Effective US Tariff Rate, New 2025 Policy through August 6",
+                      "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
+                      "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                      "orientation": "horizontal",
+                      "xAxisType": "categorical",
+                      "columns": {
+                        "x": "substitution",
+                        "series": "category",
+                        "value": "value"
+                      },
+                      "x_order": [
+                        "presub",
+                        "postsub"
+                      ],
+                      "x_labels": {
+                        "presub": "Pre-substitution",
+                        "postsub": "Post-substitution"
+                      },
+                      "series_order": [
+                        "China",
+                        "Canada",
+                        "Mexico",
+                        "Rest of World"
+                      ],
+                      "series_colors": {
+                        "China": "blue",
+                        "Canada": "amber",
+                        "Mexico": "violet",
+                        "Rest of World": "green"
+                      },
+                      "barStack": {
+                        "netDisplay": "text"
+                      }
+                    },
+                    "total": {
+                      "column": "category",
+                      "value": "Total",
+                      "hide": true
+                    }
+                  }
+                ],
+                "body_html": "<p>The average effective U.S. tariff rate by trading partner as of August 7, 2025, before and after trade substitution. Shown here as both a table and a stacked bar chart, with China, Canada, Mexico, and Rest of World stacking to the total for each substitution basis.</p>",
                 "section": "rates",
                 "figureNum": 2
               },
@@ -11866,8 +11914,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -11882,8 +11929,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -12350,8 +12396,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -12366,8 +12411,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -12834,8 +12878,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -12850,8 +12893,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -13318,8 +13360,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -13334,8 +13375,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -13725,8 +13765,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -13741,8 +13780,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -14132,8 +14170,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -14148,8 +14185,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -14539,8 +14575,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -14555,8 +14590,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -14946,8 +14980,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -14962,8 +14995,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -15407,8 +15439,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -15423,8 +15454,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -15814,8 +15844,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -15830,8 +15859,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -16221,8 +16249,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -16237,8 +16264,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -16635,8 +16661,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -16651,19 +16676,22 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
                   {
                     "figureType": "chart",
                     "data": "previous-vintages/2025-05-12/baseline/etr-by-country/data.csv",
+                    "filter": {
+                      "column": "metric",
+                      "value": "rate"
+                    },
                     "spec": {
-                      "chartType": "stacked",
+                      "chartType": "bar",
                       "data": "data.csv",
                       "title": "Average Effective US Tariff Rate, New 2025 Policy Through May 12",
-                      "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
+                      "subtitle": "Average effective tariff rate by trading partner. Pre- and post-substitution.",
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "orientation": "horizontal",
                       "xAxisType": "categorical",
@@ -16691,9 +16719,6 @@
                         "Canada": "amber",
                         "Mexico": "violet",
                         "Rest of World": "green"
-                      },
-                      "barStack": {
-                        "netDisplay": "text"
                       }
                     },
                     "total": {
@@ -16809,6 +16834,10 @@
                     "10"
                   ],
                   "x_axis_title": "Income decile",
+                  "series_colors": {
+                    "% of after-tax income": "blue",
+                    "2024 dollars": "amber"
+                  },
                   "small_multiples": {
                     "mode": "per-pane",
                     "columns": 2,
@@ -17024,11 +17053,11 @@
                 "parts": [
                   {
                     "figureType": "table",
-                    "data": "previous-vintages/2025-04-15/baseline/etr-by-country/data-full.csv",
+                    "data": "previous-vintages/2025-04-15/baseline/etr-by-country/data.csv",
                     "spec": {
                       "title": "Average Effective Tariff Rate by Trading Partner",
                       "subtitle": "As of April 15, 2025, pre- and post-substitution. Percent.",
-                      "data": "data-full.csv",
+                      "data": "data.csv",
                       "stub": [
                         "category"
                       ],
@@ -17045,8 +17074,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -17061,8 +17089,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -17692,7 +17719,9 @@
                       "Conventional (% of GDP)": {
                         "type": "number",
                         "decimals": 2,
-                        "suffix": "%"
+                        "prefix": "",
+                        "suffix": "%",
+                        "thousands": false
                       }
                     }
                   }
@@ -17996,7 +18025,9 @@
                       "Conventional (% of GDP)": {
                         "type": "number",
                         "decimals": 2,
-                        "suffix": "%"
+                        "prefix": "",
+                        "suffix": "%",
+                        "thousands": false
                       }
                     }
                   }
