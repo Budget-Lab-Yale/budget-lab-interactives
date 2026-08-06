@@ -126,11 +126,11 @@
             "parts": [
               {
                 "figureType": "table",
-                "data": "previous-vintages/2025-05-12/baseline/etr-by-country/data.csv",
+                "data": "previous-vintages/2025-05-12/baseline/etr-by-country/data-full.csv",
                 "spec": {
                   "title": "Average Effective Tariff Rate by Trading Partner",
                   "subtitle": "As of May 12, 2025, pre- and post-substitution. Percent.",
-                  "data": "data.csv",
+                  "data": "data-full.csv",
                   "stub": [
                     "category"
                   ],
@@ -321,6 +321,10 @@
                 "10"
               ],
               "x_axis_title": "Income decile",
+              "series_colors": {
+                "% of after-tax income": "blue",
+                "2024 dollars": "amber"
+              },
               "small_multiples": {
                 "mode": "per-pane",
                 "columns": 2,
