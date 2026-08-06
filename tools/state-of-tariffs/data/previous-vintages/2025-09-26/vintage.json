@@ -143,7 +143,7 @@
                     "presub": "Pre-substitution",
                     "postsub": "Post-substitution",
                     "rate": "Average Effective Tariff Rate",
-                    "import_share": "Share of Goods Imports",
+                    "import_share": "Share of Goods Imports"
                   },
                   "format": {
                     "default": {
@@ -158,7 +158,7 @@
                   "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "column_group_order": [
                     "rate",
-                    "import_share",
+                    "import_share"
                   ]
                 }
               },

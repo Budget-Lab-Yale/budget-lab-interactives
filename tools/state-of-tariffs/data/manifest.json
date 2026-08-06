@@ -9650,8 +9650,7 @@
                         "presub": "Pre-substitution",
                         "postsub": "Post-substitution",
                         "rate": "Average Effective Tariff Rate",
-                        "import_share": "Share of Goods Imports",
-                        "contribution": "Contribution"
+                        "import_share": "Share of Goods Imports"
                       },
                       "format": {
                         "default": {
@@ -9666,8 +9665,7 @@
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "column_group_order": [
                         "rate",
-                        "import_share",
-                        "contribution"
+                        "import_share"
                       ]
                     }
                   },
@@ -9678,7 +9676,6 @@
                       "chartType": "stacked",
                       "data": "data.csv",
                       "title": "Average Effective US Tariff Rate, New 2025 Policy as of September 26",
-                      "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "orientation": "horizontal",
                       "xAxisType": "categorical",
@@ -11102,6 +11099,66 @@
                 "figureNum": 2
               },
               {
+                "id": "etr-historical",
+                "short_label": "Historical Effective Tariff Rate",
+                "figureType": "chart",
+                "data": "previous-vintages/2025-08-07/baseline/etr-historical/data.csv",
+                "spec": {
+                  "chartType": "line",
+                  "data": "data.csv",
+                  "title": "US Average Effective Tariff Rate Since 1790",
+                  "subtitle": "Customs duty revenue as a percentage of goods imports.",
+                  "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+                  "xAxisType": "temporal",
+                  "columns": {
+                    "x": "year",
+                    "series": "series",
+                    "value": "value"
+                  },
+                  "series_labels": {
+                    "historical": "Historical",
+                    "projected_presub": "Projected (pre-substitution)",
+                    "projected_postsub": "Projected (post-substitution)",
+                    "current_average_presub": "Current average effective rate (pre-substitution)",
+                    "current_average_postsub": "Current average effective rate (post-substitution)"
+                  },
+                  "series_styles": {
+                    "current_average_presub": {
+                      "dashed": true
+                    },
+                    "current_average_postsub": {
+                      "dashed": true
+                    }
+                  }
+                },
+                "body_html": "<p>The US average effective tariff rate since 1790, with the current (August 7, 2025) average effective rate shown for reference, both pre- and post-substitution. Published in the original release as Figure 2.</p>",
+                "section": "rates",
+                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure since it was published in the original August 7, 2025 release (Figure 2).",
+                "figureNum": 3
+              },
+              {
+                "id": "etr-since-2025",
+                "short_label": "Effective Tariff Rate, 2025 YTD",
+                "figureType": "chart",
+                "data": "previous-vintages/2025-08-07/baseline/etr-since-2025/data.csv",
+                "spec": {
+                  "chartType": "line",
+                  "data": "data.csv",
+                  "title": "US Average Effective Tariff Rate Since January 1, 2025",
+                  "subtitle": "Policy through August 6, pre-substitution. Percent of goods imports.",
+                  "source": "The Budget Lab analysis.",
+                  "xAxisType": "temporal",
+                  "columns": {
+                    "x": "date",
+                    "value": "value"
+                  }
+                },
+                "body_html": "<p>Published in the original release as Figure 3. Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, from the January 2025 baseline (2.4%) to the current policy level (18.61%), held flat thereafter as a forward projection.</p>",
+                "section": "rates",
+                "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure since it was published as a figure in the original August 7, 2025 release.",
+                "figureNum": 4
+              },
+              {
                 "id": "consumer-prices",
                 "short_label": "Consumer Prices",
                 "figureType": "chart",
@@ -11131,7 +11188,7 @@
                 },
                 "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes.</p>",
                 "section": "prices-households",
-                "figureNum": 3
+                "figureNum": 5
               },
               {
                 "id": "distribution",
@@ -11176,7 +11233,7 @@
                 },
                 "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
                 "section": "prices-households",
-                "figureNum": 4
+                "figureNum": 6
               },
               {
                 "id": "real-gdp",
@@ -11200,7 +11257,7 @@
                 },
                 "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
                 "section": "economy",
-                "figureNum": 5
+                "figureNum": 7
               },
               {
                 "id": "gdp-by-category",
@@ -11245,7 +11302,7 @@
                 },
                 "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
                 "section": "economy",
-                "figureNum": 6
+                "figureNum": 8
               },
               {
                 "id": "revenue-by-year",
@@ -11335,7 +11392,7 @@
                 ],
                 "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis.</p>",
                 "section": "fiscal",
-                "figureNum": 7
+                "figureNum": 9
               }
             ]
           }
@@ -16683,15 +16740,11 @@
                   {
                     "figureType": "chart",
                     "data": "previous-vintages/2025-05-12/baseline/etr-by-country/data.csv",
-                    "filter": {
-                      "column": "metric",
-                      "value": "rate"
-                    },
                     "spec": {
-                      "chartType": "bar",
+                      "chartType": "stacked",
                       "data": "data.csv",
-                      "title": "Average Effective US Tariff Rate, New 2025 Policy Through May 12",
-                      "subtitle": "Average effective tariff rate by trading partner. Pre- and post-substitution.",
+                      "title": "Change in Average Effective US Tariff Rate, New 2025 Policy Through May 12",
+                      "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "orientation": "horizontal",
                       "xAxisType": "categorical",
@@ -16719,6 +16772,9 @@
                         "Canada": "amber",
                         "Mexico": "violet",
                         "Rest of World": "green"
+                      },
+                      "barStack": {
+                        "netDisplay": "text"
                       }
                     },
                     "total": {
