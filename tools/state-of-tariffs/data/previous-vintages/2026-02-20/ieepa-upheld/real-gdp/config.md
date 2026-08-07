@@ -13,6 +13,4 @@ spec:
 
 Percent change in the level of real GDP versus baseline.
 
-_Notes: Published in the original release as Figure 2, which already splits Current Policy vs. IEEPA Upheld into separate columns._
-
 _Source: GTAP v7 [Corong et al (2017)], The Budget Lab analysis._

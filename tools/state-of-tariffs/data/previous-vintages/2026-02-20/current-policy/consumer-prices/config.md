@@ -13,6 +13,4 @@ spec:
 
 Percent change in producer/consumer prices, short-run and long-run.
 
-_Notes: Published in the original release as Figure 6, which already splits Current Policy vs. IEEPA Upheld into separate columns._
-
 _Source: GTAP v7 [Corong et al (2017)], The Budget Lab analysis._

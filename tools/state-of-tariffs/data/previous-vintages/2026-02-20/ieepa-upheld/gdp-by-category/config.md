@@ -13,6 +13,6 @@ spec:
 
 Percent change in the level of real GDP versus baseline.
 
-_Notes: Combines the original release's Figure 3 (by sector) and Figure 4 (by trading partner) into one figure with a dimension toggle, consistent with how this repo structures the same pair of breakdowns in other vintages. Both figures already split Current Policy vs. IEEPA Upheld into separate columns._
+_Notes: Published in the original release as Figure 3 (by sector) and Figure 4 (by trading partner). FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries. Toggle between sector and trading-partner views.
 
 _Source: GTAP v7 [Corong et al (2017)], The Budget Lab analysis._
