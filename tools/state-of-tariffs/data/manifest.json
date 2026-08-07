@@ -129,7 +129,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-06",
+                  "start": "2026-08-07",
                   "end": "2026-12-31"
                 }
               ]
@@ -232,7 +232,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-06",
+                  "start": "2026-08-07",
                   "end": "2026-12-31"
                 }
               ]
@@ -333,7 +333,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-06",
+                  "start": "2026-08-07",
                   "end": "2026-12-31"
                 }
               ]
@@ -424,7 +424,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-06",
+                  "start": "2026-08-07",
                   "end": "2026-12-31"
                 }
               ]
@@ -5844,17 +5844,17 @@
     {
       "id": "2026-02-20",
       "date": "2026-02-20",
-      "label": "February 20, 2026",
+      "label": "February 20, 2026 Update",
       "published_at": "2026-02-20T00:00:00-0500",
-      "version": 1.0,
-      "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: February 20, 2026 Update\" report, restructured to match the current interactive's data format. This release included two scenarios with full breakdowns -- \"Current Policy\" and \"IEEPA Upheld\" -- plus a \"Without Refunds\" variant of Current Policy that appears only in Table 1 (no other figure breaks it out), shown as a third comparison column within the Current Policy tab's summary table.</p>",
+      "version": "1.0",
+      "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: February 20, 2026 Update\" data release, restructured to match the current interactive's data format. Only the summary-of-results table and the effective-tariff-rate-by-region table were included in this vintage.</p>",
       "scenarios": [
         {
-          "id": "current-policy",
-          "label": "Current Policy",
+          "id": "baseline",
+          "label": "Baseline",
           "tab": {
-            "id": "current-policy",
-            "label": "Projected Effects:\nCurrent Policy",
+            "id": "baseline",
+            "label": "Projected Effects",
             "description": "Projected effects of tariff policy as of February 20, 2026.",
             "sections": [
               {
@@ -5864,18 +5864,6 @@
               {
                 "id": "rates",
                 "label": "Tariff Rates"
-              },
-              {
-                "id": "prices-households",
-                "label": "Prices & Households"
-              },
-              {
-                "id": "economy",
-                "label": "Macroeconomy"
-              },
-              {
-                "id": "fiscal",
-                "label": "Fiscal"
               }
             ],
             "figures": [
@@ -5883,10 +5871,10 @@
                 "id": "summary-statistics",
                 "short_label": "Summary of Results",
                 "figureType": "table",
-                "data": "previous-vintages/2026-02-20/current-policy/summary-statistics/data.csv",
+                "data": "previous-vintages/2026-02-20/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
-                  "subtitle": "Projected effects of tariff policy as of February 20, 2026, under the Current Policy scenario.",
+                  "subtitle": "Projected effects of tariff policy as of February 20, 2026.",
                   "data": "data.csv",
                   "stub": [
                     "category",
@@ -5895,10 +5883,69 @@
                   "header": [
                     "policy"
                   ],
+                  "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "scenario": "Current Policy"
+                  "column_order": [
+                    "current_with_refunds",
+                    "current_without_refunds",
+                    "ieepa_upheld"
+                  ],
+                  "header_labels": {
+                    "current_with_refunds": "Current Policy (With Refunds)",
+                    "current_without_refunds": "Current Policy (Without Refunds)",
+                    "ieepa_upheld": "IEEPA Upheld"
+                  },
+                  "group_labels": {
+                    "Tariff rate": "Tariff rates, as of February 20, 2026",
+                    "Consumer price increase": "Consumer price increase",
+                    "Household cost": "Average household cost"
+                  },
+                  "format": {
+                    "groups": {
+                      "Revenue (10-year)": {
+                        "type": "currency",
+                        "decimals": 0,
+                        "prefix": "$",
+                        "suffix": "B",
+                        "thousands": true
+                      },
+                      "Consumer price increase": {
+                        "type": "number",
+                        "decimals": 2,
+                        "suffix": "%"
+                      },
+                      "Tariff rate": {
+                        "type": "number",
+                        "decimals": 1,
+                        "suffix": "%"
+                      },
+                      "Household cost": {
+                        "type": "currency",
+                        "decimals": 0,
+                        "prefix": "$",
+                        "thousands": true
+                      },
+                      "Real GDP": {
+                        "type": "number",
+                        "decimals": 2,
+                        "suffix": " pp"
+                      }
+                    },
+                    "rows": {
+                      "Long-run": {
+                        "type": "number",
+                        "decimals": 2,
+                        "suffix": "%"
+                      },
+                      "Unemployment rate (p.p.), end of 2026": {
+                        "type": "number",
+                        "decimals": 2,
+                        "suffix": " p.p."
+                      }
+                    }
+                  }
                 },
-                "body_html": "<h2>Summary</h2><p>This section presents projected effects as of February 20, 2026, under the Current Policy scenario.</p>",
+                "body_html": "<h2>Summary</h2><p>This section presents projected effects as of February 20, 2026, across three policy scenarios: Current Policy with IEEPA refunds, Current Policy without refunds, and a counterfactual in which IEEPA tariffs remain upheld. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
                 "section": "overview",
                 "lead": true,
                 "figureNum": 1
@@ -5907,10 +5954,10 @@
                 "id": "etr-by-country",
                 "short_label": "Effective Rate by Region",
                 "figureType": "table",
-                "data": "previous-vintages/2026-02-20/current-policy/etr-by-country/data.csv",
+                "data": "previous-vintages/2026-02-20/baseline/etr-by-country/data.csv",
                 "spec": {
                   "title": "Average Effective Tariff Rate by Region",
-                  "subtitle": "Using tariff policy as of February 20, 2026, under the Current Policy scenario. Pre- and post-substitution. Percent.",
+                  "subtitle": "Using tariff policy as of February 20, 2026, under Current Policy. Pre- and post-substitution. Percent.",
                   "data": "data.csv",
                   "stub": [
                     "category"
@@ -5919,9 +5966,15 @@
                     "metric",
                     "substitution"
                   ],
+                  "value": "value",
                   "column_order": [
                     "presub",
                     "postsub"
+                  ],
+                  "column_group_order": [
+                    "rate",
+                    "import_share",
+                    "contribution"
                   ],
                   "header_labels": {
                     "presub": "Pre-substitution",
@@ -5940,591 +5993,11 @@
                   "emphasis_rows": [
                     "Total"
                   ],
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "column_group_order": [
-                    "rate",
-                    "import_share",
-                    "contribution"
-                  ]
+                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
                 },
-                "body_html": "<p>The average effective U.S. tariff rate by region as of February 20, 2026, under the Current Policy scenario, before and after trade substitution.</p>",
+                "body_html": "<p>The average effective U.S. tariff rate by region as of February 20, 2026, under Current Policy, before and after trade substitution.</p>",
                 "section": "rates",
                 "figureNum": 2
-              },
-              {
-                "id": "etr-historical",
-                "short_label": "Historical Effective Tariff Rate",
-                "figureType": "chart",
-                "data": "previous-vintages/2026-02-20/current-policy/etr-historical/data.csv",
-                "spec": {
-                  "chartType": "line",
-                  "data": "data.csv",
-                  "title": "US Average Effective Tariff Rate Since 1790",
-                  "subtitle": "Customs duty revenue as a percentage of goods imports.",
-                  "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
-                  "xAxisType": "temporal",
-                  "columns": {
-                    "x": "year",
-                    "series": "series",
-                    "value": "value"
-                  },
-                  "series_labels": {
-                    "historical": "Historical",
-                    "projected_presub": "Projected (pre-substitution)",
-                    "projected_postsub": "Projected (post-substitution)",
-                    "current_average_presub": "Current average effective rate (pre-substitution)",
-                    "current_average_postsub": "Current average effective rate (post-substitution)"
-                  },
-                  "series_styles": {
-                    "current_average_presub": {
-                      "dashed": true
-                    },
-                    "current_average_postsub": {
-                      "dashed": true
-                    }
-                  }
-                },
-                "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026, Current Policy) average effective rate shown for reference.</p>",
-                "section": "rates",
-                "figureNum": 3
-              },
-              {
-                "id": "real-gdp",
-                "short_label": "GDP over Time",
-                "figureType": "chart",
-                "data": "previous-vintages/2026-02-20/current-policy/real-gdp/data.csv",
-                "spec": {
-                  "chartType": "line",
-                  "data": "data.csv",
-                  "title": "Effect on Real GDP over Time",
-                  "subtitle": "Percent change in the level of real GDP versus baseline.",
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "xAxisType": "temporal",
-                  "yAxisPolicy": {
-                    "includeZero": true,
-                    "tickCount": 6
-                  },
-                  "series_labels": {
-                    "gdp_level": "Real GDP"
-                  }
-                },
-                "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
-                "section": "economy",
-                "figureNum": 4
-              },
-              {
-                "id": "gdp-by-category",
-                "short_label": "Long-Run GDP Breakdown",
-                "figureType": "chart",
-                "data": "previous-vintages/2026-02-20/current-policy/gdp-by-category/data.csv",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Long-Run Change in Real GDP by {dimension}",
-                  "title_selectors": {
-                    "dimension": {
-                      "default": "sector",
-                      "options": [
-                        {
-                          "id": "sector",
-                          "label": "Sector",
-                          "color": "blue"
-                        },
-                        {
-                          "id": "country",
-                          "label": "Trading Partner",
-                          "color": "amber"
-                        }
-                      ]
-                    }
-                  },
-                  "subtitle": "Percent change in the level of real GDP versus baseline.",
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "orientation": "vertical",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "facet": "group",
-                    "value": "value"
-                  },
-                  "small_multiples": {
-                    "mode": "shared",
-                    "columns": 2,
-                    "pane_widths": "equal-bar"
-                  }
-                },
-                "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
-                "section": "economy",
-                "figureNum": 5
-              },
-              {
-                "id": "revenue-by-year",
-                "short_label": "Revenue by Year",
-                "figureType": "table",
-                "data": "previous-vintages/2026-02-20/current-policy/revenue-by-year/data.csv",
-                "spec": {
-                  "data": "data.csv",
-                  "title": "Net Revenue Impact by Fiscal Year",
-                  "subtitle": "Billions of dollars.",
-                  "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
-                  "stub": [
-                    "series"
-                  ],
-                  "header": [
-                    "category"
-                  ],
-                  "value": "value",
-                  "row_labels": {
-                    "conventional": "Conventional",
-                    "dynamic": "Dynamic",
-                    "difference": "Difference (Dynamic − Conventional)"
-                  },
-                  "column_order": [
-                    "2026",
-                    "2027",
-                    "2028",
-                    "2029",
-                    "2030",
-                    "2031",
-                    "2032",
-                    "2033",
-                    "2034",
-                    "2035"
-                  ],
-                  "format": {
-                    "default": {
-                      "type": "number",
-                      "decimals": 1,
-                      "thousands": true,
-                      "prefix": "$"
-                    }
-                  }
-                },
-                "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, plus the difference between the two.</p>",
-                "section": "fiscal",
-                "figureNum": 6
-              },
-              {
-                "id": "distribution",
-                "short_label": "Household Costs by Income",
-                "figureType": "chart",
-                "data": "previous-vintages/2026-02-20/current-policy/distribution/data.csv",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Household Cost of Tariffs by Income Decile",
-                  "subtitle": "Tariff burden by household income decile, post-substitution.",
-                  "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
-                  "orientation": "vertical",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "facet": "basis",
-                    "series": "basis",
-                    "value": "value"
-                  },
-                  "x_order": [
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5",
-                    "6",
-                    "7",
-                    "8",
-                    "9",
-                    "10"
-                  ],
-                  "x_axis_title": "Income decile",
-                  "small_multiples": {
-                    "mode": "per-pane",
-                    "columns": 2,
-                    "pane_order": [
-                      "% of after-tax income",
-                      "2025 dollars"
-                    ]
-                  },
-                  "series_colors": {
-                    "% of after-tax income": "blue",
-                    "2025 dollars": "amber"
-                  }
-                },
-                "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
-                "section": "prices-households",
-                "figureNum": 7
-              },
-              {
-                "id": "consumer-prices",
-                "short_label": "Consumer Prices",
-                "figureType": "chart",
-                "data": "previous-vintages/2026-02-20/current-policy/consumer-prices/data.csv",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Consumer Price Effects, Selected Commodities",
-                  "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "orientation": "horizontal",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "facet": "substitution",
-                    "series": "substitution",
-                    "value": "value"
-                  },
-                  "series_colors": {
-                    "presub": "blue",
-                    "postsub": "amber"
-                  },
-                  "series_labels": {
-                    "presub": "Short-run",
-                    "postsub": "Long-run"
-                  }
-                },
-                "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes.</p>",
-                "section": "prices-households",
-                "figureNum": 8
-              }
-            ]
-          }
-        },
-        {
-          "id": "ieepa-upheld",
-          "label": "IEEPA Upheld",
-          "tab": {
-            "id": "ieepa-upheld",
-            "label": "Projected Effects:\nIEEPA Upheld",
-            "description": "Projected effects of tariff policy as of February 20, 2026, under the IEEPA Upheld scenario.",
-            "sections": [
-              {
-                "id": "overview",
-                "label": ""
-              },
-              {
-                "id": "rates",
-                "label": "Tariff Rates"
-              },
-              {
-                "id": "prices-households",
-                "label": "Prices & Households"
-              },
-              {
-                "id": "economy",
-                "label": "Macroeconomy"
-              },
-              {
-                "id": "fiscal",
-                "label": "Fiscal"
-              }
-            ],
-            "figures": [
-              {
-                "id": "summary-statistics",
-                "short_label": "Summary of Results",
-                "figureType": "table",
-                "data": "previous-vintages/2026-02-20/ieepa-upheld/summary-statistics/data.csv",
-                "spec": {
-                  "title": "Summary of Results",
-                  "subtitle": "Projected effects of tariff policy as of February 20, 2026, under the IEEPA Upheld scenario.",
-                  "data": "data.csv",
-                  "stub": [
-                    "category",
-                    "series"
-                  ],
-                  "header": [
-                    "policy"
-                  ],
-                  "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "scenario": "IEEPA Upheld"
-                },
-                "body_html": "<h2>Summary</h2><p>This section presents projected effects as of February 20, 2026, under the IEEPA Upheld scenario.</p>",
-                "section": "overview",
-                "lead": true,
-                "figureNum": 1
-              },
-              {
-                "id": "etr-by-country",
-                "short_label": "Effective Rate by Region",
-                "figureType": "table",
-                "data": "previous-vintages/2026-02-20/ieepa-upheld/etr-by-country/data.csv",
-                "spec": {
-                  "title": "Average Effective Tariff Rate by Region",
-                  "subtitle": "Using tariff policy as of February 20, 2026, under the IEEPA Upheld scenario. Pre- and post-substitution. Percent.",
-                  "data": "data.csv",
-                  "stub": [
-                    "category"
-                  ],
-                  "header": [
-                    "metric",
-                    "substitution"
-                  ],
-                  "column_order": [
-                    "presub",
-                    "postsub"
-                  ],
-                  "header_labels": {
-                    "presub": "Pre-substitution",
-                    "postsub": "Post-substitution",
-                    "rate": "Average Effective Tariff Rate",
-                    "import_share": "Share of Goods Imports",
-                    "contribution": "Contribution"
-                  },
-                  "format": {
-                    "default": {
-                      "type": "number",
-                      "decimals": 1,
-                      "suffix": "%"
-                    }
-                  },
-                  "emphasis_rows": [
-                    "Total"
-                  ],
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "column_group_order": [
-                    "rate",
-                    "import_share",
-                    "contribution"
-                  ]
-                },
-                "body_html": "<p>The average effective U.S. tariff rate by region as of February 20, 2026, under the IEEPA Upheld scenario, before and after trade substitution.</p>",
-                "section": "rates",
-                "figureNum": 2
-              },
-              {
-                "id": "etr-historical",
-                "short_label": "Historical Effective Tariff Rate",
-                "figureType": "chart",
-                "data": "previous-vintages/2026-02-20/ieepa-upheld/etr-historical/data.csv",
-                "spec": {
-                  "chartType": "line",
-                  "data": "data.csv",
-                  "title": "US Average Effective Tariff Rate Since 1790",
-                  "subtitle": "Customs duty revenue as a percentage of goods imports.",
-                  "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
-                  "xAxisType": "temporal",
-                  "columns": {
-                    "x": "year",
-                    "series": "series",
-                    "value": "value"
-                  },
-                  "series_labels": {
-                    "historical": "Historical",
-                    "projected_presub": "Projected (pre-substitution)",
-                    "projected_postsub": "Projected (post-substitution)",
-                    "current_average_presub": "Current average effective rate (pre-substitution)",
-                    "current_average_postsub": "Current average effective rate (post-substitution)"
-                  },
-                  "series_styles": {
-                    "current_average_presub": {
-                      "dashed": true
-                    },
-                    "current_average_postsub": {
-                      "dashed": true
-                    }
-                  }
-                },
-                "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026, IEEPA Upheld) average effective rate shown for reference.</p>",
-                "section": "rates",
-                "figureNum": 3
-              },
-              {
-                "id": "real-gdp",
-                "short_label": "GDP over Time",
-                "figureType": "chart",
-                "data": "previous-vintages/2026-02-20/ieepa-upheld/real-gdp/data.csv",
-                "spec": {
-                  "chartType": "line",
-                  "data": "data.csv",
-                  "title": "Effect on Real GDP over Time",
-                  "subtitle": "Percent change in the level of real GDP versus baseline.",
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "xAxisType": "temporal",
-                  "yAxisPolicy": {
-                    "includeZero": true,
-                    "tickCount": 6
-                  },
-                  "series_labels": {
-                    "gdp_level": "Real GDP"
-                  }
-                },
-                "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
-                "section": "economy",
-                "figureNum": 4
-              },
-              {
-                "id": "gdp-by-category",
-                "short_label": "Long-Run GDP Breakdown",
-                "figureType": "chart",
-                "data": "previous-vintages/2026-02-20/ieepa-upheld/gdp-by-category/data.csv",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Long-Run Change in Real GDP by {dimension}",
-                  "title_selectors": {
-                    "dimension": {
-                      "default": "sector",
-                      "options": [
-                        {
-                          "id": "sector",
-                          "label": "Sector",
-                          "color": "blue"
-                        },
-                        {
-                          "id": "country",
-                          "label": "Trading Partner",
-                          "color": "amber"
-                        }
-                      ]
-                    }
-                  },
-                  "subtitle": "Percent change in the level of real GDP versus baseline.",
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "orientation": "vertical",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "facet": "group",
-                    "value": "value"
-                  },
-                  "small_multiples": {
-                    "mode": "shared",
-                    "columns": 2,
-                    "pane_widths": "equal-bar"
-                  }
-                },
-                "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
-                "section": "economy",
-                "figureNum": 5
-              },
-              {
-                "id": "revenue-by-year",
-                "short_label": "Revenue by Year",
-                "figureType": "table",
-                "data": "previous-vintages/2026-02-20/ieepa-upheld/revenue-by-year/data.csv",
-                "spec": {
-                  "data": "data.csv",
-                  "title": "Net Revenue Impact by Fiscal Year",
-                  "subtitle": "Billions of dollars.",
-                  "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
-                  "stub": [
-                    "series"
-                  ],
-                  "header": [
-                    "category"
-                  ],
-                  "value": "value",
-                  "row_labels": {
-                    "conventional": "Conventional",
-                    "dynamic": "Dynamic",
-                    "difference": "Difference (Dynamic − Conventional)"
-                  },
-                  "column_order": [
-                    "2026",
-                    "2027",
-                    "2028",
-                    "2029",
-                    "2030",
-                    "2031",
-                    "2032",
-                    "2033",
-                    "2034",
-                    "2035"
-                  ],
-                  "format": {
-                    "default": {
-                      "type": "number",
-                      "decimals": 1,
-                      "thousands": true,
-                      "prefix": "$"
-                    }
-                  }
-                },
-                "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, plus the difference between the two.</p>",
-                "section": "fiscal",
-                "figureNum": 6
-              },
-              {
-                "id": "distribution",
-                "short_label": "Household Costs by Income",
-                "figureType": "chart",
-                "data": "previous-vintages/2026-02-20/ieepa-upheld/distribution/data.csv",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Household Cost of Tariffs by Income Decile",
-                  "subtitle": "Tariff burden by household income decile, post-substitution.",
-                  "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
-                  "orientation": "vertical",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "facet": "basis",
-                    "series": "basis",
-                    "value": "value"
-                  },
-                  "x_order": [
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5",
-                    "6",
-                    "7",
-                    "8",
-                    "9",
-                    "10"
-                  ],
-                  "x_axis_title": "Income decile",
-                  "small_multiples": {
-                    "mode": "per-pane",
-                    "columns": 2,
-                    "pane_order": [
-                      "% of after-tax income",
-                      "2025 dollars"
-                    ]
-                  },
-                  "series_colors": {
-                    "% of after-tax income": "blue",
-                    "2025 dollars": "amber"
-                  }
-                },
-                "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
-                "section": "prices-households",
-                "figureNum": 7
-              },
-              {
-                "id": "consumer-prices",
-                "short_label": "Consumer Prices",
-                "figureType": "chart",
-                "data": "previous-vintages/2026-02-20/ieepa-upheld/consumer-prices/data.csv",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Consumer Price Effects, Selected Commodities",
-                  "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "orientation": "horizontal",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "facet": "substitution",
-                    "series": "substitution",
-                    "value": "value"
-                  },
-                  "series_colors": {
-                    "presub": "blue",
-                    "postsub": "amber"
-                  },
-                  "series_labels": {
-                    "presub": "Short-run",
-                    "postsub": "Long-run"
-                  }
-                },
-                "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes.</p>",
-                "section": "prices-households",
-                "figureNum": 8
               }
             ]
           }
@@ -7770,22 +7243,6 @@
               {
                 "id": "overview",
                 "label": ""
-              },
-              {
-                "id": "rates",
-                "label": "Tariff Rates"
-              },
-              {
-                "id": "prices-households",
-                "label": "Prices & Households"
-              },
-              {
-                "id": "economy",
-                "label": "Macroeconomy"
-              },
-              {
-                "id": "fiscal",
-                "label": "Fiscal"
               }
             ],
             "figures": [
@@ -7859,274 +7316,32 @@
                 "section": "overview",
                 "lead": true,
                 "figureNum": 1
-              },
+              }
+            ],
+            "omitted_figures": [
               {
                 "id": "etr-by-country",
-                "short_label": "Effective Rate by Trading Partner",
-                "figureType": "table",
-                "data": "previous-vintages/2025-11-17/ieepa-invalidation/etr-by-country/data.csv",
-                "spec": {
-                  "title": "Average Effective Tariff Rate by Trading Partner",
-                  "subtitle": "As of November 17, 2025, pre- and post-substitution. Percent. IEEPA Invalidation scenario.",
-                  "data": "data.csv",
-                  "stub": [
-                    "category"
-                  ],
-                  "header": [
-                    "metric",
-                    "substitution"
-                  ],
-                  "value": "value",
-                  "column_order": [
-                    "presub",
-                    "postsub"
-                  ],
-                  "column_group_order": [
-                    "rate",
-                    "import_share",
-                    "contribution"
-                  ],
-                  "header_labels": {
-                    "presub": "Pre-substitution",
-                    "postsub": "Post-substitution",
-                    "rate": "Average Effective Tariff Rate",
-                    "import_share": "Share of Goods Imports",
-                    "contribution": "Contribution"
-                  },
-                  "format": {
-                    "groups": {
-                      "rate": {
-                        "type": "number",
-                        "decimals": 1,
-                        "suffix": "%"
-                      },
-                      "import_share": {
-                        "type": "number",
-                        "decimals": 0,
-                        "suffix": "%"
-                      },
-                      "contribution": {
-                        "type": "number",
-                        "decimals": 1,
-                        "suffix": "%"
-                      }
-                    },
-                    "default": {
-                      "type": "number",
-                      "decimals": 1,
-                      "suffix": "%"
-                    }
-                  },
-                  "emphasis_rows": [
-                    "Total"
-                  ],
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
-                },
-                "body_html": "<p>The average effective U.S. tariff rate by trading partner as of November 17, 2025 under the IEEPA Invalidation scenario, before and after trade substitution.</p>",
-                "section": "rates",
-                "figureNum": 2
+                "reason": "Only the summary-of-results table was retained for the IEEPA Invalidation scenario in this vintage; other figures were not shown for this scenario."
               },
               {
                 "id": "consumer-prices",
-                "short_label": "Consumer Prices",
-                "figureType": "chart",
-                "data": "previous-vintages/2025-11-17/ieepa-invalidation/consumer-prices/data.csv",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Consumer Price Effects, Selected Commodities",
-                  "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "orientation": "horizontal",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "facet": "substitution",
-                    "series": "substitution",
-                    "value": "value"
-                  },
-                  "series_colors": {
-                    "presub": "blue",
-                    "postsub": "amber"
-                  },
-                  "series_labels": {
-                    "presub": "Short-run",
-                    "postsub": "Long-run"
-                  }
-                },
-                "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes.</p>",
-                "section": "prices-households",
-                "figureNum": 3
+                "reason": "Only the summary-of-results table was retained for the IEEPA Invalidation scenario in this vintage; other figures were not shown for this scenario."
               },
               {
                 "id": "distribution",
-                "short_label": "Household Costs by Income",
-                "figureType": "chart",
-                "data": "previous-vintages/2025-11-17/ieepa-invalidation/distribution/data.csv",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Household Cost of Tariffs by Income Decile",
-                  "subtitle": "Tariff burden by household income decile, post-substitution.",
-                  "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
-                  "orientation": "vertical",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "facet": "basis",
-                    "series": "basis",
-                    "value": "value"
-                  },
-                  "x_order": [
-                    "1",
-                    "2",
-                    "3",
-                    "4",
-                    "5",
-                    "6",
-                    "7",
-                    "8",
-                    "9",
-                    "10"
-                  ],
-                  "x_axis_title": "Income decile",
-                  "small_multiples": {
-                    "mode": "per-pane",
-                    "columns": 2,
-                    "pane_order": [
-                      "% of after-tax income",
-                      "2025 dollars"
-                    ]
-                  },
-                  "series_colors": {
-                    "% of after-tax income": "blue",
-                    "2025 dollars": "amber"
-                  }
-                },
-                "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
-                "section": "prices-households",
-                "figureNum": 4
+                "reason": "Only the summary-of-results table was retained for the IEEPA Invalidation scenario in this vintage; other figures were not shown for this scenario."
               },
               {
                 "id": "real-gdp",
-                "short_label": "GDP over Time",
-                "figureType": "chart",
-                "data": "previous-vintages/2025-11-17/ieepa-invalidation/real-gdp/data.csv",
-                "spec": {
-                  "chartType": "line",
-                  "data": "data.csv",
-                  "title": "Effect on Real GDP over Time",
-                  "subtitle": "Percent change in the level of real GDP versus baseline.",
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "xAxisType": "temporal",
-                  "yAxisPolicy": {
-                    "includeZero": true,
-                    "tickCount": 6
-                  },
-                  "series_labels": {
-                    "gdp_level": "Real GDP"
-                  }
-                },
-                "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
-                "section": "economy",
-                "figureNum": 5
+                "reason": "Only the summary-of-results table was retained for the IEEPA Invalidation scenario in this vintage; other figures were not shown for this scenario."
               },
               {
                 "id": "gdp-by-category",
-                "short_label": "Long-Run GDP Breakdown",
-                "figureType": "chart",
-                "data": "previous-vintages/2025-11-17/ieepa-invalidation/gdp-by-category/data.csv",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Long-Run Change in Real GDP by {dimension}",
-                  "title_selectors": {
-                    "dimension": {
-                      "default": "sector",
-                      "options": [
-                        {
-                          "id": "sector",
-                          "label": "Sector",
-                          "color": "blue"
-                        },
-                        {
-                          "id": "country",
-                          "label": "Trading Partner",
-                          "color": "amber"
-                        }
-                      ]
-                    }
-                  },
-                  "subtitle": "Percent change in the level of real GDP versus baseline.",
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "orientation": "vertical",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "facet": "group",
-                    "value": "value"
-                  },
-                  "small_multiples": {
-                    "mode": "shared",
-                    "columns": 2,
-                    "pane_widths": "equal-bar"
-                  }
-                },
-                "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
-                "section": "economy",
-                "figureNum": 6
+                "reason": "Only the summary-of-results table was retained for the IEEPA Invalidation scenario in this vintage; other figures were not shown for this scenario."
               },
               {
                 "id": "revenue-by-year",
-                "short_label": "Revenue by Year",
-                "figureType": "table",
-                "data": "previous-vintages/2025-11-17/ieepa-invalidation/revenue-by-year/data.csv",
-                "spec": {
-                  "data": "data.csv",
-                  "title": "Net Revenue Impact by Fiscal Year",
-                  "subtitle": "Billions of dollars. IEEPA Invalidation scenario.",
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
-                  "stub": [
-                    "series"
-                  ],
-                  "header": [
-                    "category"
-                  ],
-                  "value": "value",
-                  "row_labels": {
-                    "conventional": "Conventional",
-                    "dynamic": "Dynamic",
-                    "difference": "Difference (Dynamic − Conventional)"
-                  },
-                  "column_order": [
-                    "2026",
-                    "2027",
-                    "2028",
-                    "2029",
-                    "2030",
-                    "2031",
-                    "2032",
-                    "2033",
-                    "2034",
-                    "2035",
-                    "2026-35"
-                  ],
-                  "format": {
-                    "default": {
-                      "type": "number",
-                      "decimals": 1,
-                      "thousands": true,
-                      "prefix": "$"
-                    }
-                  },
-                  "header_labels": {
-                    "2026-35": "2026-35 Total"
-                  }
-                },
-                "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year under the IEEPA Invalidation scenario, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total. No fiscal year 2025 figures are published for this release.</p>",
-                "section": "fiscal",
-                "figureNum": 7
+                "reason": "Only the summary-of-results table was retained for the IEEPA Invalidation scenario in this vintage; other figures were not shown for this scenario."
               }
             ]
           }
@@ -17369,6 +16584,406 @@
               }
             ]
           }
+        }
+      ]
+    },
+    {
+      "id": "2025-04-10",
+      "date": "2025-04-10",
+      "label": "April 10, 2025",
+      "published_at": "2025-04-10T00:00:00-0400",
+      "version": "1.0",
+      "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"The Fiscal and Economic Effects of the Revised April 9 Tariffs\" data release, restructured to match the current interactive's data format. This update incorporates the late-afternoon April 9 tariff announcement and associated retaliation.</p>",
+      "scenarios": [
+        {
+          "id": "baseline",
+          "label": "Baseline",
+          "tab": {
+            "id": "baseline",
+            "label": "Projected Effects:\nBaseline",
+            "description": "Projected effects of tariff policy as of April 10, 2025, incorporating the revised April 9 tariff announcement.",
+            "sections": [
+              {
+                "id": "overview",
+                "label": ""
+              },
+              {
+                "id": "rates",
+                "label": "Tariff Rates"
+              },
+              {
+                "id": "prices-households",
+                "label": "Prices & Households"
+              },
+              {
+                "id": "economy",
+                "label": "Macroeconomy"
+              },
+              {
+                "id": "fiscal",
+                "label": "Fiscal"
+              }
+            ],
+            "figures": [
+              {
+                "id": "summary-statistics",
+                "short_label": "Summary of Results",
+                "figureType": "table",
+                "data": "previous-vintages/2025-04-10/baseline/summary-statistics/data.csv",
+                "spec": {
+                  "title": "Summary of Results",
+                  "subtitle": "Projected effects of tariff policy as of April 10, 2025, incorporating the revised April 9 tariff announcement.",
+                  "data": "data.csv",
+                  "stub": [
+                    "category",
+                    "series"
+                  ],
+                  "header": [],
+                  "value": "value",
+                  "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+                  "group_labels": {
+                    "Tariff rate": "Tariff rates, as of April 10, 2025",
+                    "Consumer price increase": "Consumer price increase",
+                    "Household cost": "Average household cost"
+                  },
+                  "format": {
+                    "groups": {
+                      "Revenue (10-year)": {
+                        "type": "currency",
+                        "decimals": 0,
+                        "prefix": "$",
+                        "suffix": "B",
+                        "thousands": true
+                      },
+                      "Consumer price increase": {
+                        "type": "number",
+                        "decimals": 2,
+                        "suffix": "%"
+                      },
+                      "Tariff rate": {
+                        "type": "number",
+                        "decimals": 1,
+                        "suffix": "%"
+                      },
+                      "Household cost": {
+                        "type": "currency",
+                        "decimals": 0,
+                        "prefix": "$",
+                        "thousands": true
+                      },
+                      "Real GDP": {
+                        "type": "number",
+                        "decimals": 2,
+                        "suffix": " pp"
+                      }
+                    },
+                    "rows": {
+                      "Long-run": {
+                        "type": "number",
+                        "decimals": 2,
+                        "suffix": "%"
+                      },
+                      "Unemployment rate (p.p.), end of 2025": {
+                        "type": "number",
+                        "decimals": 2,
+                        "suffix": " p.p."
+                      },
+                      "Change in payroll employment, 2025 Q4 (thousands)": {
+                        "type": "number",
+                        "decimals": 0,
+                        "suffix": " jobs"
+                      },
+                      "Conventional, % of GDP": {
+                        "type": "number",
+                        "decimals": 2,
+                        "suffix": "%",
+                        "prefix": "",
+                        "thousands": false
+                      }
+                    }
+                  }
+                },
+                "body_html": "<h2>Summary</h2><p>This section presents projected effects as of April 10, 2025, reflecting all 2025 tariffs and foreign retaliation implemented through the revised April 9 announcement. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
+                "section": "overview",
+                "lead": true,
+                "figureNum": 1
+              },
+              {
+                "id": "etr-by-country",
+                "short_label": "Effective Rate by Trading Partner",
+                "figureType": "composite",
+                "parts": [
+                  {
+                    "figureType": "table",
+                    "data": "previous-vintages/2025-04-10/baseline/etr-by-country/data-full.csv",
+                    "spec": {
+                      "title": "Average Effective Tariff Rate by Trading Partner",
+                      "subtitle": "As of April 10, 2025, pre- and post-substitution. Percent.",
+                      "data": "data-full.csv",
+                      "stub": [
+                        "category"
+                      ],
+                      "header": [
+                        "metric",
+                        "substitution"
+                      ],
+                      "value": "value",
+                      "column_order": [
+                        "presub",
+                        "postsub"
+                      ],
+                      "column_group_order": [
+                        "rate",
+                        "import_share"
+                      ],
+                      "header_labels": {
+                        "presub": "Pre-substitution",
+                        "postsub": "Post-substitution",
+                        "rate": "Average Effective Tariff Rate",
+                        "import_share": "Share of Goods Imports"
+                      },
+                      "format": {
+                        "default": {
+                          "type": "number",
+                          "decimals": 1,
+                          "suffix": "%"
+                        }
+                      },
+                      "emphasis_rows": [
+                        "Total"
+                      ],
+                      "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis."
+                    }
+                  },
+                  {
+                    "figureType": "chart",
+                    "data": "previous-vintages/2025-04-10/baseline/etr-by-country/data.csv",
+                    "spec": {
+                      "chartType": "stacked",
+                      "data": "data.csv",
+                      "title": "Average Effective US Tariff Rate, New 2025 Policy Through April 9",
+                      "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
+                      "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                      "orientation": "horizontal",
+                      "xAxisType": "categorical",
+                      "columns": {
+                        "x": "substitution",
+                        "series": "category",
+                        "value": "value"
+                      },
+                      "x_order": [
+                        "presub",
+                        "postsub"
+                      ],
+                      "x_labels": {
+                        "presub": "Pre-substitution",
+                        "postsub": "Post-substitution"
+                      },
+                      "series_order": [
+                        "China",
+                        "Canada",
+                        "Mexico",
+                        "Rest of World"
+                      ],
+                      "series_colors": {
+                        "China": "blue",
+                        "Canada": "amber",
+                        "Mexico": "violet",
+                        "Rest of World": "green"
+                      },
+                      "barStack": {
+                        "netDisplay": "text"
+                      }
+                    },
+                    "total": {
+                      "column": "category",
+                      "value": "Total",
+                      "hide": true
+                    }
+                  }
+                ],
+                "body_html": "<p>The average effective U.S. tariff rate by trading partner as of April 10, 2025, before and after trade substitution. Shown here as both a table and a stacked bar chart, with China, Canada, Mexico, and Rest of World stacking to the total for each substitution basis.</p>",
+                "section": "rates",
+                "figureNum": 2
+              },
+              {
+                "id": "etr-historical",
+                "short_label": "Historical Effective Tariff Rate",
+                "figureType": "chart",
+                "data": "previous-vintages/2025-04-10/baseline/etr-historical/data.csv",
+                "spec": {
+                  "chartType": "line",
+                  "data": "data.csv",
+                  "title": "US Average Effective Tariff Rate Since 1790",
+                  "subtitle": "Customs duty revenue as a percentage of goods imports.",
+                  "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+                  "xAxisType": "temporal",
+                  "columns": {
+                    "x": "year",
+                    "series": "series",
+                    "value": "value"
+                  },
+                  "series_labels": {
+                    "historical": "Historical",
+                    "projected_presub": "Projected (pre-substitution)",
+                    "projected_postsub": "Projected (post-substitution)",
+                    "current_average_presub": "Current average effective rate (pre-substitution)",
+                    "current_average_postsub": "Current average effective rate (post-substitution)"
+                  },
+                  "series_styles": {
+                    "current_average_presub": {
+                      "dashed": true
+                    },
+                    "current_average_postsub": {
+                      "dashed": true
+                    }
+                  }
+                },
+                "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 10, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
+                "section": "rates",
+                "figureNum": 3
+              },
+              {
+                "id": "consumer-prices",
+                "short_label": "Consumer Prices",
+                "figureType": "chart",
+                "data": "previous-vintages/2025-04-10/baseline/consumer-prices/data.csv",
+                "spec": {
+                  "chartType": "bar",
+                  "data": "data.csv",
+                  "title": "Long-Run Commodity Price Effects",
+                  "subtitle": "Percent change in producer/consumer prices, short-run and long-run. Through April 9.",
+                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                  "orientation": "horizontal",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "category",
+                    "facet": "substitution",
+                    "series": "substitution",
+                    "value": "value"
+                  },
+                  "header_labels": {
+                    "presub": "Short-run",
+                    "postsub": "Long-run"
+                  },
+                  "series_colors": {
+                    "presub": "blue",
+                    "postsub": "amber"
+                  }
+                },
+                "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes, as of April 10, 2025.</p>",
+                "section": "prices-households",
+                "figureNum": 4
+              },
+              {
+                "id": "distribution",
+                "short_label": "Household Costs by Income",
+                "figureType": "chart",
+                "data": "previous-vintages/2025-04-10/baseline/distribution/data.csv",
+                "spec": {
+                  "chartType": "bar",
+                  "data": "data.csv",
+                  "title": "Household Cost of Tariffs by Income Decile",
+                  "subtitle": "Tariff burden by household income decile, post-substitution. Through April 9.",
+                  "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
+                  "orientation": "vertical",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "category",
+                    "facet": "basis",
+                    "series": "basis",
+                    "value": "value"
+                  },
+                  "x_order": [
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                  ],
+                  "x_axis_title": "Income decile",
+                  "series_colors": {
+                    "% of after-tax income": "blue",
+                    "2024 dollars": "amber"
+                  },
+                  "small_multiples": {
+                    "mode": "per-pane",
+                    "columns": 2,
+                    "pane_order": [
+                      "% of after-tax income",
+                      "2024 dollars"
+                    ]
+                  },
+                  "notes": "Decile 1 values were not published in this release."
+                },
+                "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention. Decile 1 was not published in this release.</p>",
+                "section": "prices-households",
+                "figureNum": 5
+              },
+              {
+                "id": "real-gdp",
+                "short_label": "GDP over Time",
+                "figureType": "chart",
+                "data": "previous-vintages/2025-04-10/baseline/real-gdp/data.csv",
+                "spec": {
+                  "chartType": "line",
+                  "data": "data.csv",
+                  "title": "Effect on Real GDP over Time",
+                  "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                  "xAxisType": "temporal",
+                  "yAxisPolicy": {
+                    "includeZero": true,
+                    "tickCount": 6
+                  },
+                  "series_labels": {
+                    "gdp_level": "Real GDP"
+                  }
+                },
+                "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
+                "section": "economy",
+                "figureNum": 6
+              },
+              {
+                "id": "gdp-by-category",
+                "short_label": "Long-Run GDP Breakdown",
+                "figureType": "chart",
+                "data": "previous-vintages/2025-04-10/baseline/gdp-by-category/data.csv",
+                "spec": {
+                  "chartType": "bar",
+                  "data": "data.csv",
+                  "title": "Long-Run Change in Real GDP by Trading Partner",
+                  "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+                  "orientation": "vertical",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "category",
+                    "facet": "group",
+                    "value": "value"
+                  },
+                  "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries. Only country-level effects were published in this release; no sector-level breakdown is available for this vintage."
+                },
+                "body_html": "<p>The long-run change in real GDP, by trading partner. No sector-level breakdown was published in this release.</p>",
+                "section": "economy",
+                "figureNum": 7
+              }
+            ]
+          }
+        }
+      ],
+      "omitted_figures": [
+        {
+          "id": "etr-since-2025",
+          "reason": "Not published in this release; no daily post-January-1 effective tariff rate tracker figure was included."
+        },
+        {
+          "id": "revenue-by-year",
+          "reason": "Not published in this release; only a single aggregate 2026-35 conventional and dynamic revenue figure was given (see summary-statistics), not a year-by-year breakdown."
         }
       ]
     },
