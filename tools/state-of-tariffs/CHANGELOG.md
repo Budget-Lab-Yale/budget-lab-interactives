@@ -4,6 +4,19 @@ Entries are added at release.
 
 ## Unreleased
 
+- **State of Tariffs: August 11, 2026 vintage.** Refreshed all figures to the published
+  `2026081111` Tariff-Model artifact. The default scenario now includes the Section 232 polysilicon
+  action — a 15% tariff on polysilicon and derivative solar cells and modules (the UK capped at
+  10%), announced August 6 and effective December 4, 2026. It covers about $18 billion of imports,
+  raises the overall statutory rate by 0.09pp to 11.8% at end-2026, and raises $8 billion over ten
+  years. The alternative scenarios are now current law excluding the new forced-labor Section 301
+  action, and current law excluding the polysilicon action; the Section 122-retained scenario is
+  retired. The tracker was also rerun, revising the daily statutory rate history by small amounts
+  (January 2025 moves from 2.675% to 2.678%). July 24 release archived to previous-vintages.
+
+- Updated `tracker.yaml` scenario colors and the `events.yaml` marker list for the new vintage —
+  both are keyed to the vintage-dated scenario ids and need re-pointing every release.
+
 - **State of Tariffs: July 24, 2026 vintage.** Refreshed all figures to the published
   `2026072409` Tariff-Model artifact. The default scenario now incorporates the finalized
   Section 301 "forced-labor" tariffs (replacing the Section 122 surcharge on July 24); adds two
