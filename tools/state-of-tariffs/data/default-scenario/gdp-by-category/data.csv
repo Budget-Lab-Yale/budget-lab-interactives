@@ -1,14 +1,14 @@
 category,value,dimension,category_code,group
-Agriculture,-0.2869220445495891,sector,agriculture,Sectors
-Mining & Extraction,-1.0226307706842768,sector,mining,Sectors
-Total Manufacturing,1.3158436488629195,sector,manufacturing,Sectors
-Durable Manufacturing,2.5035973656338624,sector,durable,Manufacturing detail
-Nondurable Manufacturing,0.7682839437895993,sector,nondurable,Manufacturing detail
-Advanced Manufacturing,-2.01,sector,advanced,Manufacturing detail
-Utilities,0.4519189906747647,sector,utilities,Sectors
-Construction,-2.2,sector,construction,Sectors
-Services,-0.08055287365766815,sector,services,Sectors
-Total,-0.1431908905506134,sector,overall_gdp,Sectors
+Agriculture,-0.2896446837030137,sector,agriculture,Sectors
+Mining & Extraction,-1.022643732295837,sector,mining,Sectors
+Total Manufacturing,1.31900557798407,sector,manufacturing,Sectors
+Durable Manufacturing,2.499263110345864,sector,durable,Manufacturing detail
+Nondurable Manufacturing,0.7724504318676921,sector,nondurable,Manufacturing detail
+Advanced Manufacturing,-1.98,sector,advanced,Manufacturing detail
+Utilities,0.45191722041302507,sector,utilities,Sectors
+Construction,-2.21,sector,construction,Sectors
+Services,-0.08055490855589054,sector,services,Sectors
+Total,-0.14329010248184204,sector,overall_gdp,Sectors
 USA,-0.14,country,usa,Trading partners
 China,-0.11,country,china,Trading partners
 Canada,-0.19,country,canada,Trading partners
