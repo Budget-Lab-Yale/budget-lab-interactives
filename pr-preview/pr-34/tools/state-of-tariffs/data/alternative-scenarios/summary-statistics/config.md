@@ -32,15 +32,12 @@ These figures show the same projected effects as the Default Scenario tab, but a
 modeled policy scenarios. Use the **View** toggle to switch between each scenario's own effects
 (levels) and its effect relative to our default scenario (change vs. default).
 
-Each alternative is a variation on current law, which now includes the Brazil, Canada, and
-forced-labor Section 301 tariffs described in the Introduction. We show the following two
-alternative scenarios:
+Each alternative is a variation on current law. We show the following two alternative scenarios:
 
-- **Current law excluding new Section 301.** This scenario is identical to current law except that
-  it omits the newly finalized forced-labor Section 301 tariffs; the Section 122 surcharge still
-  ends at 12:01 a.m. on July 24 with nothing in its place. Comparing the default against it
-  isolates the effect of the forced-labor action.
-- **Section 122 regime.** Instead of letting the Section 122 tariffs expire and replacing them with
-  the forced-labor Section 301 action, this scenario assumes the Section 122 10% tariff is extended
-  and stays in force. Comparing it against the default contrasts the two blanket-tariff regimes:
-  the expiring Section 122 regime and the Section 301 regime that actually took effect.
+- **Excluding the forced-labor Section 301 tariffs.** This scenario is identical to current law
+  except that it omits the Section 301 "forced labor" action that took effect on July 24. The
+  Section 122 surcharge still expires on that date, with nothing put in its place. Comparing the
+  default against it isolates the effect of the forced-labor action.
+- **Excluding the polysilicon tariffs.** This scenario is identical to current law except that it
+  omits the Section 232 action on polysilicon and derivative products, scheduled to take effect on
+  December 4. Comparing the default against it isolates the effect of that action.
