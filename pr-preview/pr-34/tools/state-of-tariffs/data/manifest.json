@@ -131,12 +131,6 @@
                   "label": "Section 301 \"forced labor\" enacted",
                   "color": "red",
                   "style": "dashed"
-                },
-                {
-                  "x": "2026-12-04",
-                  "label": "Section 232 polysilicon tariffs",
-                  "color": "red",
-                  "style": "dashed"
                 }
               ],
               "bands": [
@@ -246,12 +240,6 @@
                   "label": "Section 301 \"forced labor\" enacted",
                   "color": "red",
                   "style": "dashed"
-                },
-                {
-                  "x": "2026-12-04",
-                  "label": "Section 232 polysilicon tariffs",
-                  "color": "red",
-                  "style": "dashed"
                 }
               ],
               "bands": [
@@ -359,12 +347,6 @@
                   "label": "Section 301 \"forced labor\" enacted",
                   "color": "red",
                   "style": "dashed"
-                },
-                {
-                  "x": "2026-12-04",
-                  "label": "Section 232 polysilicon tariffs",
-                  "color": "red",
-                  "style": "dashed"
                 }
               ],
               "bands": [
@@ -460,12 +442,6 @@
                 {
                   "x": "2026-07-23",
                   "label": "Section 301 \"forced labor\" enacted",
-                  "color": "red",
-                  "style": "dashed"
-                },
-                {
-                  "x": "2026-12-04",
-                  "label": "Section 232 polysilicon tariffs",
                   "color": "red",
                   "style": "dashed"
                 }
