@@ -28,17 +28,12 @@ spec:
 
 ## Default Scenario
 
-This section presents projected effects under our default tariff policy scenario. Under this
-scenario, the Section 122 surcharge remains in force through 12:01 a.m. on July 24 and is replaced
-at that time by the newly finalized Section 301 "forced labor" tariffs; scheduled changes to
-pharmaceutical tariffs are assumed to take effect in October. This scenario can be thought of as a
-"current law" concept, where official policy, including changes officially scheduled to come into
-effect later this year, is taken as given.
-
-The default scenario also incorporates other recently finalized actions: the 25% tariff on imports
-from Brazil, the new Section 338 tariffs on imports from Canada (effective August 19), and the
-Section 301 "forced labor" tariffs on imports from 60 economies, newly added in this update and
-effective July 24.
+This section presents projected effects under our default tariff policy scenario. This scenario can
+be thought of as a "current law" concept, where official policy, including changes officially
+scheduled to come into effect later this year, is taken as given. In addition to the tariffs
+currently in place as of early August 2026, this scenario includes scheduled tariff increases later
+this month (tariffs on Canadian products under Section 338), October (pharmaceutical tariffs under
+Section 232), and December (polysilicon tariffs under Section 232.)
 
 This is not a forecast of where tariff policy will end up, but rather a useful scorekeeping
 benchmark. Alternative policy scenarios are explored in the next tab.
