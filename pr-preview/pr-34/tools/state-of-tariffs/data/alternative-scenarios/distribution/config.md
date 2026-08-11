@@ -23,7 +23,7 @@ total:
     # Flip the Current law total label above its line (default is below). Per-vintage visual tweak —
     # re-check (scenario names/values change each release).
     series_overrides:
-      Current law: {labelSide: top}
+      Ex polysilicon: {labelSide: top}
 spec:
   chartType: bar
   data: data.csv
