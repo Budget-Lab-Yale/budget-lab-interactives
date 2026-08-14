@@ -108,6 +108,60 @@
             "figureNum": 1
           },
           {
+            "id": "current-tariff-policy",
+            "short_label": "Current Tariff Policy",
+            "figureType": "table",
+            "data": "previous-vintages/2025-11-17/baseline/current-tariff-policy/data.csv",
+            "spec": {
+              "title": "Current Tariff Policy",
+              "subtitle": "Tariff actions in effect as of November 17, 2025.",
+              "data": "data.csv",
+              "stub": [
+                "category",
+                "item"
+              ],
+              "header": [
+                "column"
+              ],
+              "value": "value",
+              "column_order": [
+                "reciprocal",
+                "fentanyl",
+                "rate"
+              ],
+              "header_labels": {
+                "reciprocal": "“Reciprocal” Tariff",
+                "fentanyl": "“Fentanyl” Tariff",
+                "rate": "Current Tariff Rate"
+              },
+              "row_order": [
+                "Canada",
+                "Mexico",
+                "China",
+                "European Union",
+                "United Kingdom",
+                "Trade-deal partners (Japan, Korea, Vietnam, etc.)",
+                "Other",
+                "Steel",
+                "Aluminum",
+                "Copper",
+                "Automobiles",
+                "Auto parts",
+                "Medium/heavy trucks & buses",
+                "Lumber / wood products"
+              ],
+              "stub_header": "",
+              "source": "The Budget Lab analysis.",
+              "originalFigureId": "current-tariff-policy",
+              "vintageDate": "2025-11-17",
+              "scenarioTab": "default-scenario"
+            },
+            "body_html": "<p>Tariff actions in effect as of November 17, 2025: broad tariffs applied under IEEPA authority by trading region (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B). The “Reciprocal” and “Fentanyl” Tariff columns apply only to Panel A rows; the Current Tariff Rate column applies only to Panel B rows.</p><p><em>Source: The Budget Lab analysis.</em></p>",
+            "section": "overview",
+            "figureNum": 2,
+            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original November 17, 2025 report's tariff-policy summary tables. Uses a single dataset with a 'category' column to group Panel A (IEEPA broad tariffs by region) and Panel B (Section 232 product tariffs by sector) rows, rendered as one grouped table (same stub-grouping mechanism as summary-statistics) rather than two separate table parts. Added only to the baseline scenario per instruction, not the ieepa-invalidation alternative scenario."
+          },
+          {
             "id": "etr-by-country",
             "short_label": "Effective Rate by Trading Partner",
             "figureType": "table",
@@ -171,7 +225,7 @@
             },
             "body_html": "<p>The average effective U.S. tariff rate by trading partner as of November 17, 2025, before and after trade substitution.</p>",
             "section": "rates",
-            "figureNum": 2
+            "figureNum": 3
           },
           {
             "id": "etr-historical",
@@ -208,7 +262,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (November 17, 2025) average effective rate shown for reference, both pre- and post-substitution. Published in the original release as Figure 1. Baseline scenario only.</p>",
             "section": "rates",
-            "figureNum": 3,
+            "figureNum": 4,
             "note": "No direct analogue in the reference vintage structure; included as an additional figure. Baseline scenario only."
           },
           {
@@ -230,7 +284,7 @@
             },
             "body_html": "<p>Published in the original release as Figure 2. Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection. Baseline scenario only.</p>",
             "section": "rates",
-            "figureNum": 4,
+            "figureNum": 5,
             "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure. Baseline scenario only."
           },
           {
@@ -263,7 +317,7 @@
             },
             "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes.</p>",
             "section": "prices-households",
-            "figureNum": 5
+            "figureNum": 6
           },
           {
             "id": "distribution",
@@ -312,7 +366,7 @@
             },
             "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
             "section": "prices-households",
-            "figureNum": 6
+            "figureNum": 7
           },
           {
             "id": "real-gdp",
@@ -336,7 +390,7 @@
             },
             "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
             "section": "economy",
-            "figureNum": 7
+            "figureNum": 8
           },
           {
             "id": "gdp-by-category",
@@ -381,7 +435,7 @@
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
             "section": "economy",
-            "figureNum": 8
+            "figureNum": 9
           },
           {
             "id": "revenue-by-year",
@@ -404,7 +458,7 @@
               "row_labels": {
                 "conventional": "Conventional",
                 "dynamic": "Dynamic",
-                "difference": "Difference (Dynamic \u2212 Conventional)"
+                "difference": "Difference (Dynamic − Conventional)"
               },
               "column_order": [
                 "2026",
@@ -433,7 +487,7 @@
             },
             "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total. No fiscal year 2025 figures are published for this release.</p>",
             "section": "fiscal",
-            "figureNum": 9
+            "figureNum": 10
           }
         ]
       }
@@ -776,7 +830,7 @@
               "row_labels": {
                 "conventional": "Conventional",
                 "dynamic": "Dynamic",
-                "difference": "Difference (Dynamic \u2212 Conventional)"
+                "difference": "Difference (Dynamic − Conventional)"
               },
               "column_order": [
                 "2026",
