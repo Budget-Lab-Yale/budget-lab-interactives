@@ -5,10 +5,24 @@ spec:
   subtitle: "Tariff actions in effect or announced as of April 8, 2025."
   data: data.csv
   stub:
-    - "category"
-    - "series"
-  header: []
+    - "row"
+  header:
+    - "column"
   value: "value"
+  column_order:
+    - "us"
+    - "retaliatory"
+  header_labels:
+    us: "U.S. Tariffs"
+    retaliatory: "Retaliatory Tariffs"
+  row_labels:
+    "1": ""
+    "2": ""
+    "3": ""
+    "4": ""
+    "5": ""
+    "6": ""
+  stub_header: ""
   source: "The Budget Lab analysis."
   originalFigureId: "current-tariff-policy"
   vintageDate: "2025-04-08"
@@ -18,7 +32,7 @@ spec:
 **Current Tariff Policy**
 
 Tariff actions in effect or announced as of April 8, 2025, shown as a timeline of U.S. actions
-paired with the retaliatory actions announced in response.
+alongside the retaliatory actions announced in response.
 
 _Notes: * USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from
 Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. ** TBL assumes that
