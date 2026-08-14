@@ -1,13 +1,13 @@
 row,column,value
-1,us,"20% broad tariff on all Chinese imports (effective February 4; increased March 4)"
-1,retaliatory,"China 10%/15% list (announced February 4)"
-2,us,"10% tariff on Canadian potash and energy (effective April 2)"
-2,retaliatory,"Canada 25% list (announced March 4)"
-3,us,"25% tariff on all Mexican imports and other Canadian imports* (effective March 4)"
-3,retaliatory,"China 10%/15% list (announced March 4)"
-4,us,"25% tariff on all automobiles, with an exemption for US content** (effective April 3)"
-4,retaliatory,"Canada 25% list (announced March 13)"
-5,us,25% tariff on all steel and aluminum imports (effective March 12)
-5,retaliatory,"China broad 34% (announced April 4)"
-6,us,"April 2 announcement: 10% minimum tariffs + special ""reciprocal"" rates on 60 countries*** (effective April 9)"
+1,us,"20% broad tariff on all Chinese imports \\ (effective February 4; increased March 4)"
+1,retaliatory,"China 10%/15% list \\ (announced February 4)"
+2,us,"10% tariff on Canadian potash and energy \\ (effective April 2)"
+2,retaliatory,"Canada 25% list \\ (announced March 4)"
+3,us,"25% tariff on all Mexican imports and other Canadian imports* \\ (effective March 4)"
+3,retaliatory,"China 10%/15% list \\ (announced March 4)"
+4,us,"25% tariff on all automobiles, with an exemption for US content** \\ (effective April 3)"
+4,retaliatory,"Canada 25% list \\ (announced March 13)"
+5,us,25% tariff on all steel and aluminum imports \\ (effective March 12)
+5,retaliatory,"China broad 34% \\ (announced April 4)"
+6,us,"April 2 announcement: 10% minimum tariffs + \\ special ""reciprocal"" rates on 60 countries*** \\ (effective April 9)"
 6,retaliatory,
