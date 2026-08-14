@@ -120,6 +120,31 @@
             "figureNum": 1
           },
           {
+            "id": "current-tariff-policy",
+            "short_label": "Current Tariff Policy",
+            "figureType": "table",
+            "data": "previous-vintages/2025-04-07/baseline/current-tariff-policy/data.csv",
+            "spec": {
+              "title": "Current Tariff Policy",
+              "subtitle": "Tariff actions in effect or announced as of April 8, 2025.",
+              "data": "data.csv",
+              "stub": [
+                "category",
+                "series"
+              ],
+              "header": [],
+              "value": "value",
+              "source": "The Budget Lab analysis.",
+              "originalFigureId": "current-tariff-policy",
+              "vintageDate": "2025-04-08",
+              "scenarioTab": "default-scenario"
+            },
+            "body_html": "<p>Tariff actions in effect or announced as of April 8, 2025, shown as a timeline of U.S. actions paired with the retaliatory actions announced in response.</p><p><em>Notes: * USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. All of Budget Lab's analysis may be adjusted moving forward with more detail from the Administration on implementation.</em></p>",
+            "section": "overview",
+            "figureNum": 2,
+            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original April 8, 2025 report's tariff-action timeline graphic."
+          },
+          {
             "id": "etr-historical",
             "short_label": "Historical Effective Tariff Rate",
             "figureType": "chart",
@@ -144,7 +169,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 8, 2025) average effective rate shown for reference. This figure is not part of the current interactive's standard figure set and is included here as an extra, since it was published in this release.</p>",
             "section": "rates",
-            "figureNum": 2,
+            "figureNum": 3,
             "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
           },
           {
@@ -188,7 +213,7 @@
             },
             "body_html": "<p>Long-run overall, domestic, and imported price effects for the commodities with the largest projected changes, as of the week of April 7, 2025. No short-run (pre-substitution) commodity-level breakdown was published in this release.</p>",
             "section": "prices-households",
-            "figureNum": 3
+            "figureNum": 4
           },
           {
             "id": "distribution",
@@ -237,7 +262,7 @@
             },
             "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention. Decile 1 was not published in this release.</p>",
             "section": "prices-households",
-            "figureNum": 4
+            "figureNum": 5
           },
           {
             "id": "real-gdp",
@@ -261,7 +286,7 @@
             },
             "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
             "section": "economy",
-            "figureNum": 5
+            "figureNum": 6
           },
           {
             "id": "gdp-by-category",
@@ -285,7 +310,7 @@
             },
             "body_html": "<p>The long-run change in real GDP, by trading partner. No sector-level breakdown was published in this release.</p>",
             "section": "economy",
-            "figureNum": 6
+            "figureNum": 7
           }
         ]
       }
