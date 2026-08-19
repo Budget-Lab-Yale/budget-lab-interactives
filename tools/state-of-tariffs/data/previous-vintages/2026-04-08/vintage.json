@@ -4,7 +4,7 @@
   "label": "April 8, 2026",
   "published_at": "2026-04-08T00:00:00-0400",
   "version": "1.0",
-  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: April 8, 2026\" report, restructured to match the current interactive's data format. The underlying model figures in this release are unchanged from the immediately preceding report (no new tariff action between April 6 and April 8), verified against the source workbook's own title page, which reads exactly \"State of U.S. Tariffs: April 8, 2026.\" The \u201cSection 122 Expires\u201d and \u201cSection 122 Extended\u201d scenarios are shown in isolation -- no cross-scenario comparison or change-vs-baseline toggle.</p>",
+  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: April 8, 2026\" report, restructured to match the current interactive's data format. The underlying model figures in this release are unchanged from the immediately preceding report (no new tariff action between April 6 and April 8), verified against the source workbook's own title page, which reads exactly \"State of U.S. Tariffs: April 8, 2026.\" The “Section 122 Expires” and “Section 122 Extended” scenarios are shown in isolation -- no cross-scenario comparison or change-vs-baseline toggle.</p>",
   "scenarios": [
     {
       "id": "section-122-expires",
@@ -103,6 +103,52 @@
             "figureNum": 1
           },
           {
+            "id": "current-tariff-policy",
+            "short_label": "Current Tariff Policy",
+            "figureType": "table",
+            "data": "previous-vintages/2026-04-08/section-122-expires/current-tariff-policy/data.csv",
+            "spec": {
+              "title": "Current Tariff Policy",
+              "subtitle": "Tariff actions in effect as of April 8, 2026.",
+              "data": "data.csv",
+              "stub": [
+                "category",
+                "item"
+              ],
+              "header": [
+                "column"
+              ],
+              "value": "value",
+              "column_order": [
+                "description"
+              ],
+              "header_labels": {
+                "description": "Details"
+              },
+              "row_order": [
+                "Rate",
+                "Exemptions",
+                "Steel",
+                "Aluminum",
+                "Copper",
+                "Automobiles",
+                "Auto parts",
+                "Medium/heavy trucks & buses",
+                "Lumber/wood products",
+                "Patented pharmaceuticals"
+              ],
+              "stub_header": "",
+              "source": "The Budget Lab analysis.",
+              "originalFigureId": "current-tariff-policy",
+              "vintageDate": "2026-04-08",
+              "scenarioTab": "section-122-expires"
+            },
+            "body_html": "<p>Tariff actions in effect as of April 8, 2026: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p><p><em>Source: The Budget Lab analysis.</em></p>",
+            "section": "overview",
+            "figureNum": 2,
+            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original April 8, 2026 report's tariff-policy summary tables, using a single dataset with a 'category' column to group Panel A (Section 122 broad tariff) and Panel B (Section 232 product tariffs) rows. Added only to the section-122-expires scenario per instruction, not the section-122-extended alternative scenario."
+          },
+          {
             "id": "etr-by-country",
             "short_label": "Effective Rate by Trading Partner",
             "figureType": "table",
@@ -149,7 +195,7 @@
             },
             "body_html": "<p>The average effective U.S. tariff rate by trading partner under the Section 122 Expires scenario, before and after trade substitution -- shown as a table with three metrics (own tariff rate, import share, and additive contribution to the total).</p>",
             "section": "rates",
-            "figureNum": 2
+            "figureNum": 3
           },
           {
             "id": "etr-historical",
@@ -186,7 +232,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate under the Section 122 Expires scenario shown for reference, both pre- and post-substitution. Published in the original release as Figure 1.</p>",
             "section": "rates",
-            "figureNum": 3,
+            "figureNum": 4,
             "note": "No direct analogue in the reference vintage structure; included as an additional figure."
           },
           {
@@ -209,7 +255,7 @@
             "body_html": "<p>Published in the original release as Figure 2, \"Tariff Impact Tracker: Daily Effective Tariff Rate by Authority.\" The source data is a single aggregate ETR series (no per-authority breakdown columns despite the title), running daily from January 1, 2025 through the end of 2026. Section 122 Expires scenario only -- no counterpart exists for Section 122 Extended in the source.</p>",
             "section": "rates",
             "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure. Section 122 Expires scenario only.",
-            "figureNum": 4
+            "figureNum": 5
           },
           {
             "id": "consumer-prices",
@@ -242,7 +288,7 @@
             },
             "body_html": "<p>Consumer price effects by PCE spending category under the Section 122 Expires scenario.</p>",
             "section": "prices-households",
-            "figureNum": 5
+            "figureNum": 6
           },
           {
             "id": "distribution",
@@ -291,7 +337,7 @@
             },
             "body_html": "<p>Tariff burden by household income decile under the Section 122 Expires scenario.</p>",
             "section": "prices-households",
-            "figureNum": 6
+            "figureNum": 7
           },
           {
             "id": "real-gdp",
@@ -315,7 +361,7 @@
             },
             "body_html": "<p>Projected path of real GDP relative to baseline under the Section 122 Expires scenario.</p>",
             "section": "economy",
-            "figureNum": 7
+            "figureNum": 8
           },
           {
             "id": "gdp-by-category",
@@ -356,7 +402,7 @@
             },
             "body_html": "<p>Long-run change in real GDP under the Section 122 Expires scenario, by sector or trading partner.</p>",
             "section": "economy",
-            "figureNum": 8
+            "figureNum": 9
           },
           {
             "id": "revenue-by-year",
@@ -377,7 +423,7 @@
               "row_labels": {
                 "conventional": "Conventional",
                 "dynamic": "Dynamic",
-                "difference": "Difference (Dynamic \u2212 Conventional)"
+                "difference": "Difference (Dynamic − Conventional)"
               },
               "column_order": [
                 "2026",
@@ -408,7 +454,7 @@
             },
             "body_html": "<p>Net federal revenue impact by fiscal year under the Section 122 Expires scenario, including a 10-year total.</p>",
             "section": "fiscal",
-            "figureNum": 9
+            "figureNum": 10
           }
         ]
       }
@@ -762,7 +808,7 @@
               "row_labels": {
                 "conventional": "Conventional",
                 "dynamic": "Dynamic",
-                "difference": "Difference (Dynamic \u2212 Conventional)"
+                "difference": "Difference (Dynamic − Conventional)"
               },
               "column_order": [
                 "2026",
