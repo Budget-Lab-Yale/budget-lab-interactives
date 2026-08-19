@@ -1,7 +1,7 @@
 {
   "data_base_url": "./data/",
   "release": {
-    "updated": "July 16, 2026",
+    "updated": "August 19, 2026",
     "version": "1.0"
   },
   "tabs": [
@@ -9,7 +9,7 @@
       "id": "current-update",
       "label": "Current Update",
       "description": "Summary of the most significant findings in the current data release.",
-      "body_html": "<h2>Current Update</h2>\n<p class=\"current-update-date\">July 16, 2026</p>\n<p>The Budget Lab's labor market analysis, updated to incorporate June 2026 CPS microdata, does not provide clear evidence of labor market disruption associated with AI. Churn across occupations, AI exposure among the unemployed, and usage data all remain flat, lie within historical ranges, or continue along pre-AI trends. </p>\n<p>This data release completes the second quarter of 2026, allowing us to extend our comparisons of AI-exposed and unexposed workers by an additional quarter. One notable development is that the unemployment rate gap in the latest data (adjusting for the historical, pre-AI difference) has moved close to zero. On average since Q4 2022, excess unemployment for exposed workers has been somewhat positive—a pattern we do not observe for our other measures. </p>\n<p>Of course, these findings may change as new data become available. The Budget Lab plans to continue monitoring AI-relevant trends to assess how job impacts might change. </p>\n<h2>Introduction</h2>\n<p>This interactive tool contains The Budget Lab's ongoing analysis of potential AI impacts on the labor market. Major categories of analysis can be accessed by clicking tabs towards the top of the page with the following names: Occupational churn, AI metrics, and Comparisons of AI-exposed and unexposed workers. After selecting one of those tabs, users should note the options listed on the left-hand sidebar. Those options generate different views of the data: for example, occupational churn (i.e., dissimilarity) can be tracked for the entire labor force or for specific industries. </p>\n<p>Detailed descriptions of the analysis can be found in the Budget Lab documents that introduce each. Occupational churn, AI-exposure rates of the unemployed, and related analysis can be found in <a href=\"https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs\">Gimbel et al. (2025)</a>. Details of AI exposure metrics are discussed in <a href=\"https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know\">Gimbel, Kendall, and Kulsakdinun (2026)</a>. The synthetic differences-in-differences analysis of AI-exposed and unexposed workers is introduced in <a href=\"https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market\">Gimbel, Kendall, and Nunn (2026)</a>. </p>\n<h2>AI-Exposure Metrics and Crosswalks</h2>\n<p>The Budget Lab makes use of a collection of AI-exposure metrics which must be mapped to occupation codes. The crosswalked data are available in the data download linked in the sidebar. More detail about their construction can be found in <a href=\"https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know\">Gimbel, Kendall, and Kulsakdinun (2026)</a>. Exposure metrics are made available by <a href=\"https://github.com/AIOE-Data/AIOE\">Felten, Raj, and Seamans (2021)</a>, <a href=\"https://github.com/openai/GPTs-are-GPTs\">Eloundou et al. (2023)</a>, <a href=\"https://artificialminushuman.com/\">Eisfeldt et al. (2023)</a>, and <a href=\"https://github.com/microsoft/working-with-ai\">Tomlinson et al. (2025)</a>. Usage data are made available by <a href=\"https://www.anthropic.com/research/economic-index-march-2026-report\">Massenkoff et al. (2026)</a>. Occupation-level data are available at both the SOC and CPS code levels. </p>"
+      "body_html": "<h2>Current Update</h2>\n<p class=\"current-update-date\">August 19, 2026</p>\n<p>The Budget Lab's labor market analysis, updated to incorporate July 2026 CPS microdata, does not provide clear evidence of labor market disruption associated with AI. Churn across occupations, AI exposure among the unemployed, and usage data all remain flat, lie within historical ranges, or continue along pre-AI trends. </p>\n<p>Of course, these findings may change as new data become available. The Budget Lab plans to continue monitoring AI-relevant trends to assess how job impacts might change. </p>\n<h2>Introduction</h2>\n<p>This interactive tool contains The Budget Lab's ongoing analysis of potential AI impacts on the labor market. Major categories of analysis can be accessed by clicking tabs towards the top of the page with the following names: Occupational churn, AI metrics, and Comparisons of AI-exposed and unexposed workers. After selecting one of those tabs, users should note the options listed on the left-hand sidebar. Those options generate different views of the data: for example, occupational churn (i.e., dissimilarity) can be tracked for the entire labor force or for specific industries. </p>\n<p>Detailed descriptions of the analysis can be found in the Budget Lab documents that introduce each. Occupational churn, AI-exposure rates of the unemployed, and related analysis can be found in <a href=\"https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs\">Gimbel et al. (2025)</a>. Details of AI exposure metrics are discussed in <a href=\"https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know\">Gimbel, Kendall, and Kulsakdinun (2026)</a>. The synthetic differences-in-differences analysis of AI-exposed and unexposed workers is introduced in <a href=\"https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market\">Gimbel, Kendall, and Nunn (2026)</a>. </p>\n<h2>AI-Exposure Metrics and Crosswalks</h2>\n<p>The Budget Lab makes use of a collection of AI-exposure metrics which must be mapped to occupation codes. The crosswalked data are available in the data download linked in the sidebar. More detail about their construction can be found in <a href=\"https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know\">Gimbel, Kendall, and Kulsakdinun (2026)</a>. Exposure metrics are made available by <a href=\"https://github.com/AIOE-Data/AIOE\">Felten, Raj, and Seamans (2021)</a>, <a href=\"https://github.com/openai/GPTs-are-GPTs\">Eloundou et al. (2023)</a>, <a href=\"https://artificialminushuman.com/\">Eisfeldt et al. (2023)</a>, and <a href=\"https://github.com/microsoft/working-with-ai\">Tomlinson et al. (2025)</a>. Usage data are made available by <a href=\"https://www.anthropic.com/research/economic-index-march-2026-report\">Massenkoff et al. (2026)</a>. Occupation-level data are available at both the SOC and CPS code levels. </p>"
     },
     {
       "id": "occupational-churn",
@@ -690,7 +690,7 @@
             {
               "chartLetter": "b",
               "chartType": "line",
-              "title": "Difference in Employment Shares for AI-Exposed and Comparable Unexposed Occupations",
+              "title": "Event Study with SDID Point Estimates",
               "subtitle": "Percentage point difference",
               "source": "BLS via IPUMS-CPS and The Budget Lab analysis",
               "note": "95% confidence intervals and estimated impacts are calculated according to the procedure outlined in Clarke et al. (2022).",
@@ -746,7 +746,7 @@
             {
               "chartLetter": "b",
               "chartType": "line",
-              "title": "Difference in Real Hourly Wages for AI-Exposed and Comparable Unexposed Occupations",
+              "title": "Event Study with SDID Point Estimates",
               "subtitle": "Percent difference",
               "source": "BLS via IPUMS-CPS and The Budget Lab analysis",
               "note": "95% confidence intervals and estimated impacts are calculated according to the procedure outlined in Clarke et al. (2022).",
@@ -801,7 +801,7 @@
             {
               "chartLetter": "b",
               "chartType": "line",
-              "title": "Difference in Unemployment Rates for AI-Exposed and Comparable Unexposed Occupations",
+              "title": "Event Study with SDID Point Estimates",
               "subtitle": "Percentage point difference",
               "source": "BLS via IPUMS-CPS and The Budget Lab analysis",
               "note": "95% confidence intervals and estimated impacts are calculated according to the procedure outlined in Clarke et al. (2022).",
