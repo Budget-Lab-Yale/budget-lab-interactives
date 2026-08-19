@@ -120,6 +120,51 @@
             "figureNum": 1
           },
           {
+            "id": "current-tariff-policy",
+            "short_label": "Current Tariff Policy",
+            "figureType": "table",
+            "data": "previous-vintages/2026-02-20/current-policy/current-tariff-policy/data.csv",
+            "spec": {
+              "title": "Current Tariff Policy",
+              "subtitle": "Tariff actions in effect as of February 20, 2026.",
+              "data": "data.csv",
+              "stub": [
+                "category",
+                "item"
+              ],
+              "header": [
+                "column"
+              ],
+              "value": "value",
+              "column_order": [
+                "description"
+              ],
+              "header_labels": {
+                "description": "Details"
+              },
+              "row_order": [
+                "Rate",
+                "Exemptions",
+                "Steel",
+                "Aluminum",
+                "Copper",
+                "Automobiles",
+                "Auto parts",
+                "Medium/heavy trucks & buses",
+                "Lumber / wood products"
+              ],
+              "stub_header": "",
+              "source": "The Budget Lab analysis.",
+              "originalFigureId": "current-tariff-policy",
+              "vintageDate": "2026-02-20",
+              "scenarioTab": "current-policy"
+            },
+            "body_html": "<p>Tariff actions in effect as of February 20, 2026, under Current Policy: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B), each of which preempts Section 122 for the covered products.</p><p><em>Source: The Budget Lab analysis.</em></p>",
+            "section": "overview",
+            "figureNum": 2,
+            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original February 20, 2026 report's tariff-policy summary tables. Added only to the current-policy scenario per instruction, not the ieepa-upheld alternative scenario, since Section 122/232 tariffs are specific to the Current Policy scenario."
+          },
+          {
             "id": "etr-by-country",
             "short_label": "Effective Rate by Region",
             "figureType": "table",
@@ -166,7 +211,7 @@
             },
             "body_html": "<p>The average effective U.S. tariff rate by region as of February 20, 2026, under Current Policy, before and after trade substitution.</p>",
             "section": "rates",
-            "figureNum": 2
+            "figureNum": 3
           },
           {
             "id": "etr-historical",
@@ -204,7 +249,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution. This chart is identical across both scenario tabs, as only one current-rate reference line was published in the original release.</p>",
             "section": "rates",
-            "figureNum": 3
+            "figureNum": 4
           },
           {
             "id": "real-gdp",
@@ -228,7 +273,7 @@
             },
             "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter, under Current Policy.</p>",
             "section": "economy",
-            "figureNum": 4
+            "figureNum": 5
           },
           {
             "id": "gdp-by-category",
@@ -274,7 +319,7 @@
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner, under Current Policy.</p>",
             "section": "economy",
-            "figureNum": 5
+            "figureNum": 6
           },
           {
             "id": "revenue-by-year",
@@ -368,7 +413,7 @@
             ],
             "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, under Current Policy, including a 10-year total.</p>",
             "section": "fiscal",
-            "figureNum": 6
+            "figureNum": 7
           },
           {
             "id": "distribution",
@@ -417,7 +462,7 @@
             },
             "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2025 dollars per household, under Current Policy. Values are negative by convention.</p>",
             "section": "prices-households",
-            "figureNum": 7
+            "figureNum": 8
           },
           {
             "id": "consumer-prices",
@@ -449,7 +494,7 @@
             },
             "body_html": "<p>Short-run and long-run price effects for the commodities with the largest projected changes, under Current Policy.</p>",
             "section": "prices-households",
-            "figureNum": 8
+            "figureNum": 9
           }
         ]
       }
