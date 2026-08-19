@@ -43,6 +43,7 @@ time,series,value
 2026-04-02,Lowest Exposure Group,28.7423
 2026-05-02,Lowest Exposure Group,28.9491
 2026-06-02,Lowest Exposure Group,29.3456
+2026-07-02,Lowest Exposure Group,29.6296
 2022-11-02,Middle Exposure Group,45.8187
 2022-12-02,Middle Exposure Group,45.6886
 2023-01-02,Middle Exposure Group,45.5913
@@ -87,6 +88,7 @@ time,series,value
 2026-04-02,Middle Exposure Group,45.7508
 2026-05-02,Middle Exposure Group,45.6699
 2026-06-02,Middle Exposure Group,45.3121
+2026-07-02,Middle Exposure Group,45.0296
 2022-11-02,Highest Exposure Group,18.1557
 2022-12-02,Highest Exposure Group,18.3644
 2023-01-02,Highest Exposure Group,18.565
@@ -131,3 +133,4 @@ time,series,value
 2026-04-02,Highest Exposure Group,18.2729
 2026-05-02,Highest Exposure Group,18.1806
 2026-06-02,Highest Exposure Group,18.1829
+2026-07-02,Highest Exposure Group,18.1604

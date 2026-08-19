@@ -175,6 +175,10 @@ time,series,variant,value
 2026-06-02,15-26 Weeks,observed,29.1385
 2026-06-02,27+ Weeks,observed,28.2437
 2026-06-02,5-14 Weeks,observed,27.672
+2026-07-02,<5 Weeks,observed,30.837
+2026-07-02,15-26 Weeks,observed,29.3811
+2026-07-02,27+ Weeks,observed,28.7485
+2026-07-02,5-14 Weeks,observed,30.0104
 2022-11-02,<5 Weeks,missing-as-zero,5.4392
 2022-11-02,15-26 Weeks,missing-as-zero,6.5523
 2022-11-02,27+ Weeks,missing-as-zero,6.0299
@@ -351,3 +355,7 @@ time,series,variant,value
 2026-06-02,15-26 Weeks,missing-as-zero,6.6978
 2026-06-02,27+ Weeks,missing-as-zero,7.0568
 2026-06-02,5-14 Weeks,missing-as-zero,6.3495
+2026-07-02,<5 Weeks,missing-as-zero,6.8719
+2026-07-02,15-26 Weeks,missing-as-zero,6.9383
+2026-07-02,27+ Weeks,missing-as-zero,7.3619
+2026-07-02,5-14 Weeks,missing-as-zero,6.7881
