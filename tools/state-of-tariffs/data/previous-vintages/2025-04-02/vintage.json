@@ -4,7 +4,7 @@
   "label": "April 2, 2025",
   "published_at": "2025-04-02T00:00:00-0400",
   "version": "1.0",
-  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"Where We Stand: The Fiscal, Economic, and Distributional Effects of All U.S. Tariffs Enacted in 2025 Through April 2\" report, restructured to match the current interactive's data format. This report captured tariff policy immediately following the April 2 \u201cLiberation Day\u201d tariff announcement. The \u201cApril 2 Announcement Only\u201d scenario models the April 2nd action in isolation, without the other tariffs already in effect earlier in 2025 or any foreign retaliation. The \u201cAll 2025 Tariffs to Date\u201d scenario models the April 2nd action stacked together with every other US tariff enacted so far in 2025 (China, Canada, Mexico, autos, steel & aluminum) and all foreign retaliation announced as of publication.</p>",
+  "changes_html": "<h2>About This Vintage</h2><p> This report captured tariff policy immediately following the April 2 \u201cLiberation Day\u201d tariff announcement. The \u201cApril 2 Announcement Only\u201d scenario models the April 2nd action in isolation, without the other tariffs already in effect earlier in 2025 or any foreign retaliation. The \u201cAll 2025 Tariffs to Date\u201d scenario models the April 2nd action stacked together with every other US tariff enacted so far in 2025 (China, Canada, Mexico, autos, steel & aluminum) and all foreign retaliation announced as of publication.</p>",
   "scenarios": [
     {
       "id": "april-2-announcement-only",
