@@ -1,0 +1,10 @@
+category,item,column,value
+Panel A. Broad Tariffs under Section 122 Authority,Rate,description,15% flat rate
+Panel A. Broad Tariffs under Section 122 Authority,Exemptions,description,"Certain critical minerals, energy products, agricultural goods, pharmaceuticals, electronics, etc."
+Panel B. Product-Specific Tariffs under Section 232 Authority,Steel,description,"50%; preempts Section 122"
+Panel B. Product-Specific Tariffs under Section 232 Authority,Aluminum,description,"50%; preempts Section 122"
+Panel B. Product-Specific Tariffs under Section 232 Authority,Copper,description,"50% on semi-finished/derivative copper; preempts Section 122"
+Panel B. Product-Specific Tariffs under Section 232 Authority,Automobiles,description,"25%; preempts Section 122"
+Panel B. Product-Specific Tariffs under Section 232 Authority,Auto parts,description,"25% most; preempts Section 122"
+Panel B. Product-Specific Tariffs under Section 232 Authority,Medium/heavy trucks & buses,description,"25% on trucks/parts; 10% buses; preempts Section 122"
+Panel B. Product-Specific Tariffs under Section 232 Authority,Lumber / wood products,description,"10-25% various rates; preempts Section 122"
