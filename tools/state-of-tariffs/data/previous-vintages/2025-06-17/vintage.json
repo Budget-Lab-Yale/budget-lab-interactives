@@ -249,7 +249,7 @@
                 }
               }
             ],
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of June 17, 2025, before and after trade substitution. Published in the original release as Table 2/Figure 1; shown here as both a table and a stacked bar chart, with China, Canada, Mexico, and Rest of World stacking to the total for each substitution basis.</p>",
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of June 17, 2025, before and after trade substitution. </p>",
             "section": "rates",
             "figureNum": 3
           },
@@ -289,7 +289,7 @@
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (June 17, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
             "figureNum": 4,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure since it was published in the original June 17, 2025 release (Figure 2)."
+            "note": ""
           },
           {
             "id": "consumer-prices",
@@ -421,10 +421,10 @@
                 "Old Method": "amber"
               }
             },
-            "body_html": "<p>Published in the original release as a standalone Appendix rather than one of the seven numbered figures. Compares the distributional-effects methodology introduced in this release (\"New Method\") against the methodology used in prior releases (\"Old Method\"), both projected out to 2027, by household income decile and basis. The New Method series matches this vintage's main distribution figure exactly.</p>",
+            "body_html": "<p>Compares the distributional-effects methodology introduced in this release (\"New Method\") against the methodology used in prior releases (\"Old Method\"), both projected out to 2027, by household income decile and basis. </p>",
             "section": "prices-households",
             "figureNum": 7,
-            "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure since it was published as an Appendix in the original June 17, 2025 release."
+            "note": ""
           },
           {
             "id": "real-gdp",
