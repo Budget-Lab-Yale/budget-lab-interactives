@@ -4,7 +4,7 @@
   "label": "July 28, 2025",
   "published_at": "2025-07-28T00:00:00-0400",
   "version": "1.0",
-  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: July 28, 2025\" report, restructured to match the current interactive's data format.</p>",
+  "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-july-23-2025\">July 23 report</a>:</p><ul><li>On July 27, the US and the European Union agreed to a deal that set US tariffs on imports from the EU at 15% on most goods. Previously, TBL had assumed a 30% rate on the EU.</li><li>TBL&rsquo;s effective tariff rate calculation now incorporates the May actual USMCA shares from Canada and Mexico; previously, the model used the March actual shares. This adjustment primarily raises the Canada USMCA share and thus lowered the overall effective US tariff rate.</li><li>TBL made two largely-offsetting updates to its macroeconomic projections. The macroeconomic projections now use updated actual Q1 &amp; Q2 data on the effective tariff rate, which lowered the effective tariff rate relative to TBL&rsquo;s prior assumptions. Partially but not fully offsetting this channel, TBL incorporated uncertainty effects into its estimates by including changes in the VIX into its underlying shocks.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
   "scenarios": [
     {
       "id": "baseline",
