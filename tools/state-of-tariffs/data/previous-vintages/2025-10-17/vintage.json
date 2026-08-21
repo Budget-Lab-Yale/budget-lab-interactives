@@ -259,7 +259,7 @@
                 }
               }
             ],
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of October 17, 2025, before and after trade substitution. Published in the original release as Table 2/Figure 1; shown here as both a table and a stacked bar chart, with China, Canada, Mexico, and Rest of World stacking to the total for each substitution basis.</p>",
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of October 17, 2025, before and after trade substitution.</p>",
             "section": "rates",
             "figureNum": 3
           },
@@ -296,10 +296,10 @@
                 }
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current (October 17, 2025) average effective rate shown for reference, both pre- and post-substitution. Published in the original release as Figure 2.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (October 17, 2025) average effective rate shown for reference, both pre- and post-substitution. </p>",
             "section": "rates",
             "figureNum": 4,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure since it was published in the original October 17, 2025 release (Figure 2)."
+            "note": ""
           },
           {
             "id": "etr-since-2025",
@@ -318,10 +318,10 @@
                 "value": "value"
               }
             },
-            "body_html": "<p>Published in the original release as Figure 3. Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, from the January 2025 baseline (2.4%) to the current policy level (17.98%), held flat thereafter as a forward projection.</p>",
+            "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, from the January 2025 baseline (2.4%) to the current policy level (17.98%), held flat thereafter as a forward projection.</p>",
             "section": "rates",
             "figureNum": 5,
-            "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure since it was published as a figure in the original October 17, 2025 release."
+            "note": ""
           },
           {
             "id": "consumer-prices",
