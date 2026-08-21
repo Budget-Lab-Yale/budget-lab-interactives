@@ -229,7 +229,7 @@
                 }
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate under the Section 122 Expires scenario shown for reference, both pre- and post-substitution. Published in the original release as Figure 1.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate under the Section 122 Expires scenario shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
             "figureNum": 4,
             "note": "No direct analogue in the reference vintage structure; included as an additional figure."
@@ -251,7 +251,7 @@
                 "value": "value"
               }
             },
-            "body_html": "<p>Published in the original release as Figure 2, \"Tariff Impact Tracker: Daily Effective Tariff Rate by Authority.\" The source data is a single aggregate ETR series (no per-authority breakdown columns despite the title), running daily from January 1, 2025 through the end of 2026. Section 122 Expires scenario only -- no counterpart exists for Section 122 Extended in the source.</p>",
+            "body_html": "<p>"Tariff Impact Tracker: Daily Effective Tariff Rate by Authority.\" The source data is a single aggregate ETR series (no per-authority breakdown columns despite the title), running daily from January 1, 2025 through the end of 2026. Section 122 Expires scenario only -- no counterpart exists for Section 122 Extended in the source.</p>",
             "section": "rates",
             "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure. Section 122 Expires scenario only.",
             "figureNum": 5
@@ -636,7 +636,7 @@
                 }
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate under the Section 122 Extended scenario shown for reference, both pre- and post-substitution. Published in the original release as Figure 1.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate under the Section 122 Extended scenario shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
             "figureNum": 3,
             "note": "No direct analogue in the reference vintage structure; included as an additional figure."
