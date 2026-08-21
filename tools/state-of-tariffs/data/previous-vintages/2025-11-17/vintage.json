@@ -260,7 +260,7 @@
                 }
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current (November 17, 2025) average effective rate shown for reference, both pre- and post-substitution. Published in the original release as Figure 1. Baseline scenario only.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (November 17, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
             "figureNum": 4,
             "note": "No direct analogue in the reference vintage structure; included as an additional figure. Baseline scenario only."
@@ -282,7 +282,7 @@
                 "value": "value"
               }
             },
-            "body_html": "<p>Published in the original release as Figure 2. Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection. Baseline scenario only.</p>",
+            "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection. Baseline scenario only.</p>",
             "section": "rates",
             "figureNum": 5,
             "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure. Baseline scenario only."
@@ -485,7 +485,7 @@
                 "2026-35": "2026-35 Total"
               }
             },
-            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total. No fiscal year 2025 figures are published for this release.</p>",
+            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total.</p>",
             "section": "fiscal",
             "figureNum": 10
           }
@@ -857,7 +857,7 @@
                 "2026-35": "2026-35 Total"
               }
             },
-            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year under the IEEPA Invalidation scenario, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total. No fiscal year 2025 figures are published for this release.</p>",
+            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year under the IEEPA Invalidation scenario, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total. </p>",
             "section": "fiscal",
             "figureNum": 7
           }
