@@ -4,7 +4,7 @@
   "label": "May 29, 2025",
   "published_at": "2025-05-29T00:00:00-0400",
   "version": "1.0",
-  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: May 29, 2025\" report, restructured to match the current interactive's data format.</p>",
+ "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-may-23-2025\">May 23 report</a>:</p><ul><li>The U.S. Court of International Trade <a href=\"https://www.cit.uscourts.gov/sites/cit/files/25-66.pdf\">invalidated</a> tariffs announced under IEEPA authority, including the &ldquo;reciprocal&rdquo; tariffs and 25% tariffs on Canada and Mexico.</li><li>President Trump delayed the previously-announced 50% tariff on the EU.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
   "scenarios": [
     {
       "id": "baseline",
