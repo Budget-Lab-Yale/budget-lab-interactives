@@ -4,7 +4,7 @@
   "label": "May 23, 2025",
   "published_at": "2025-05-23T00:00:00-0400",
   "version": "1.0",
-  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: May 23, 2025\" report, restructured to match the current interactive's data format.</p>",
+ "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-may-12-2025\">May 12 report</a>:</p><ul><li>President Trump announced a 50% tariff on the EU to take effect on June 1. TBL interprets this policy as a expansion of the 10% &lsquo;reciprocal&rsquo; tariff rate currently levied on the EU, first announced on April 2 and modified April 9.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
   "scenarios": [
     {
       "id": "baseline",
