@@ -257,7 +257,7 @@
                 }
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution. Published in the original release as Figure 1.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
             "figureNum": 4,
             "note": "No direct analogue in the reference vintage structure; included as an additional figure."
@@ -641,7 +641,7 @@
                 }
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution. Published in the original release as Figure 1.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
             "figureNum": 3,
             "note": "No direct analogue in the reference vintage structure; included as an additional figure."
