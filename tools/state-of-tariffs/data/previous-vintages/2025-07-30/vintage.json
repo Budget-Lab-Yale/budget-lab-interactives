@@ -4,7 +4,7 @@
   "label": "July 30, 2025",
   "published_at": "2025-07-30T00:00:00-0400",
   "version": "1.0",
-  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: July 30, 2025\" report, restructured to match the current interactive's data format.</p>",
+  "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-july-28-2025\">July 28</a> report:</p><ul><li>On July 30, President Trump announced a 25% tariff on India, up from TBL&rsquo;s previously-assumed 10% rate. The president also announced an unspecified penalty on India for importing Russian oil; TBL did not attempt to model this provision due to lack of details so far.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
   "scenarios": [
     {
       "id": "baseline",
