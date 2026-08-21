@@ -4,7 +4,7 @@
   "label": "June 1, 2025",
   "published_at": "2025-06-01T00:00:00-0400",
   "version": "1.0",
-  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: June 1, 2025\" report, restructured to match the current interactive's data format.</p>",
+ "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-may-29-2025\">May 29 report</a>:</p><ul><li>On May 28, the U.S. Court of International Trade invalidated the Trump Administration&rsquo;s tariffs imposed under authority from the International Emergency Economic Powers Act. That case is ongoing; however, on May 29, a federal appeals court temporarily agreed to preserve the IEEPA tariffs. That means that as of today, June 1, those tariffs remain in place, and they are reflected in our analysis.</li><li>On May 30, the Trump Administration announced that the U.S. will double its current tariff rate on steel and aluminum imports from 25% to 50%.</li><li>TBL incorporated updated data on USMCA-compliant trade shares with Canada. Whereas before, TBL assumed that 38% of trade with Canada was USMCA-compliant, March Census data showed that the share rose substantially to 50%.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
   "scenarios": [
     {
       "id": "baseline",
