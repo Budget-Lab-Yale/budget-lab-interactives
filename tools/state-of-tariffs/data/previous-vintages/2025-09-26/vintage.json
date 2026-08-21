@@ -4,7 +4,7 @@
   "label": "September 26, 2025",
   "published_at": "2025-09-26T00:00:00-0400",
   "version": 1.0,
-  "changes_html": "<h2>About This Vintage</h2><p>This is a historical reconstruction of The Budget Lab's \"State of U.S. Tariffs: September 26, 2025\" report, restructured to match the current interactive's data format.</p>",
+  "changes_html": "<p>TBL has incorporated the following policy changes since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-september-4-2025\">September 4 report</a>:</p><ul><li>On September 25, President Trump made the following announcements on social media:<ol><li>A 100% tariff on branded/on-patent pharmaceuticals;</li><li>A 50% tariff on kitchen cabinets, bathroom vanities, and &ldquo;associated products;&rdquo;</li><li>A 30% tariff on upholstered furniture; and,</li><li>A 25% tariff on heavy trucks.</li></ol></li></ul><p>Although not stated explicitly by the president, TBL assumes that for all four of these changes, the Administration is claiming authority under Section 232 of the Trade Expansion Act of 1962. As a consequence, TBL further assumes that these new 232 tariffs do not &ldquo;stack&rdquo; with tariffs under other authorities like IEEPA.</p><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
   "scenarios": [
     {
       "id": "baseline",
