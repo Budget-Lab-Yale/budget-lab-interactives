@@ -278,9 +278,9 @@
                 }
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current (August 7, 2025) average effective rate shown for reference, both pre- and post-substitution. Published in the original release as Figure 2.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (August 7, 2025) average effective rate shown for reference, both pre- and post-substitution. </p>",
             "section": "rates",
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure since it was published in the original August 7, 2025 release (Figure 2).",
+            "note": "",
             "figureNum": 4
           },
           {
@@ -300,9 +300,9 @@
                 "value": "value"
               }
             },
-            "body_html": "<p>Published in the original release as Figure 3. Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, from the January 2025 baseline (2.4%) to the current policy level (18.61%), held flat thereafter as a forward projection.</p>",
+            "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, from the January 2025 baseline (2.4%) to the current policy level (18.61%), held flat thereafter as a forward projection.</p>",
             "section": "rates",
-            "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure since it was published as a figure in the original August 7, 2025 release.",
+            "note": "",
             "figureNum": 5
           },
           {
