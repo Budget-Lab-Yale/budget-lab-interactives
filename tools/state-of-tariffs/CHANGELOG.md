@@ -4,6 +4,14 @@ Entries are added at release.
 
 ## Unreleased
 
+- **State of Tariffs: August 24, 2026 vintage.** Refreshed all figures to the published
+  `2026082411` Tariff-Model artifact. The only policy change is the effective date of the Section
+  338 tariffs on Canadian products, which took effect August 22 rather than August 19; projected
+  effects are essentially unchanged (ten-year revenue moves by $0.04 billion). The alternative
+  scenarios are reduced to one: current law excluding the Section 338 actions. `tracker.yaml`
+  scenario colors re-pointed to the new scenario ids. August 11 release archived to
+  previous-vintages.
+
 - **State of Tariffs: August 11, 2026 vintage.** Refreshed all figures to the published
   `2026081111` Tariff-Model artifact. The default scenario now includes the Section 232 polysilicon
   action — a 15% tariff on polysilicon and derivative solar cells and modules (the UK capped at

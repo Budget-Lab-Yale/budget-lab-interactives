@@ -31,9 +31,9 @@ spec:
 This section presents projected effects under our default tariff policy scenario. This scenario can
 be thought of as a "current law" concept, where official policy, including changes officially
 scheduled to come into effect later this year, is taken as given. In addition to the tariffs
-currently in place as of early August 2026, this scenario includes scheduled tariff increases later
-this month (tariffs on Canadian products under Section 338), October (pharmaceutical tariffs under
-Section 232), and December (polysilicon tariffs under Section 232.)
+currently in place as of late August 2026 (including the Section 338 tariffs on Canadian products that
+took effect on August 22), this scenario includes scheduled tariff increases in October
+(pharmaceutical tariffs under Section 232) and December (polysilicon tariffs under Section 232.)
 
 This is not a forecast of where tariff policy will end up, but rather a useful scorekeeping
 benchmark. Alternative policy scenarios are explored in the next tab.
