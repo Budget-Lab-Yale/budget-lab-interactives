@@ -20,8 +20,8 @@ total:
     value_format: {decimals: 2}
     style: dashed
     labelSide: bottom
-    # Flip the Ex Section 338 total label above its line (default is below). Per-vintage visual tweak —
-    # re-check (scenario names/values change each release).
+    # Flip the Ex Section 338 total label above its line (default is below). Per-vintage visual
+    # tweak — keyed by display label, so re-check (scenario names/values change each release).
     series_overrides:
       Ex Section 338: {labelSide: top}
 spec:

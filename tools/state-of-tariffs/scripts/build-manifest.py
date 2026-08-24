@@ -75,6 +75,12 @@ def fail(msg: str) -> "None":
 # Release metadata (set in main()); used to resolve {date: ...} tokens in prose bodies.
 RELEASE: dict = {}
 
+# The release date as ISO `YYYY-MM-DD` (set in main() from the synced vintage's published_at).
+# This — not the wall clock — is what the `today`/`build` keyword resolves to, so rebuilding a
+# given vintage is reproducible on any day and never dirties the committed manifest. Falls back
+# to the wall clock only when no vintage has been synced yet.
+RELEASE_DATE_ISO: "str | None" = None
+
 # Model-run metadata from sync-model-data.py (set in main()): scenario definitions +
 # provenance. Empty until a vintage has been synced.
 SCENARIOS: list = []           # [{id, label, short_label, default}]
@@ -228,11 +234,14 @@ def apply_events(spec: dict, front: dict, tab_id: str, fig_id: str, config: Path
         else:
             fail(f"{config}: events group '{name}' must be a list or mapping")
 
-    # Resolve the `today`/`build` keyword (in a band start/end or an xAxis x) to the build date,
-    # so a projection band can begin on whatever day the manifest is generated. Done before the
-    # date-range filter below so resolved marker dates are filtered correctly.
+    # Resolve the `today`/`build` keyword (in a band start/end or an xAxis x) to the *release*
+    # date, so a projection band begins where the published data stops being actual. Deliberately
+    # not the wall clock: the built manifest is committed and served as-is, so a wall-clock date
+    # would make every rebuild dirty the file and would slide the band past the data on any later
+    # rebuild. Done before the date-range filter below so resolved marker dates are filtered
+    # correctly.
     from datetime import date
-    build_day = date.today().isoformat()
+    build_day = RELEASE_DATE_ISO or date.today().isoformat()
 
     def resolve_build_date(value):
         return build_day if value in ("today", "build") else value
@@ -764,6 +773,11 @@ def main() -> None:
 
     RELEASE.clear()
     RELEASE.update(release)  # available to {date: ...} substitution during tab build
+
+    # Same source, ISO form, for the `today`/`build` keyword in events.yaml. Left as None when no
+    # vintage has been synced so resolve falls back to the wall clock.
+    global RELEASE_DATE_ISO
+    RELEASE_DATE_ISO = (provenance.get("published_at") or "")[:10] or None
 
     manifest = {
         "release": release,
