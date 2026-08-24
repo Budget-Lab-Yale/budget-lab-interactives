@@ -1271,7 +1271,7 @@
               "style": "dashed",
               "labelSide": "bottom",
               "series_overrides": {
-                "Current law": {
+                "Ex Section 338": {
                   "labelSide": "top"
                 }
               }
