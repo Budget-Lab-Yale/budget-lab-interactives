@@ -16,6 +16,7 @@ spec:
     dynamic: "Dynamic"
     difference: "Difference (Dynamic \u2212 Conventional)"
   column_order:
+    - "2025"
     - "2026"
     - "2027"
     - "2028"
@@ -27,6 +28,7 @@ spec:
     - "2034"
     - "2035"
     - "2026-35"
+    - "2025-34"
   format:
     default:
       type: "number"
@@ -35,9 +37,10 @@ spec:
       prefix: "$"
   header_labels:
     "2026-35": "2026-35 Total"
+    "2025-34": "2025-34 Total"
 originalFigureId: "revenue-by-year"
-vintageDate: "2026-02-20"
-scenarioTab: "current-policy"
+vintageDate: "2025-09-26"
+scenarioTab: "default-scenario"
 ---
 
 **Net Revenue Impact by Fiscal Year**
@@ -45,8 +48,7 @@ scenarioTab: "current-policy"
 Billions of dollars.
 
 The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic
-basis, plus the difference between the two (the dynamic revenue effect), including a 10-year
-total.
+basis, through September 26, 2025, plus the difference between the two (the dynamic revenue effect).
 
 _Notes: Estimates are net of the offsetting reduction in income and payroll tax revenue._
 
