@@ -31008,8 +31008,9 @@ ${words.slice(bestI).join(" ")}`;
       v = v * 100;
       suffix = "%" + suffix;
     }
-    const neg = v < 0;
     const abs = Math.abs(v).toFixed(decimals);
+    // Sign after rounding: a value that rounds to zero prints as "0.0", not "-0.0".
+    const neg = v < 0 && Number(abs) !== 0;
     const grouped = rule.thousands ? groupThousands(abs) : abs;
     const prefix = rule.prefix ?? "";
     return `${neg ? "-" : ""}${prefix}${grouped}${suffix}`;

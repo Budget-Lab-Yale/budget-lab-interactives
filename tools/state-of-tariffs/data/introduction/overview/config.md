@@ -23,13 +23,9 @@ as separate reports. The tool has five tabs:
 
 {date: updated}
 
-This update reflects one new tariff policy change since our last post on July 24. On August 6,
-President Trump signed a proclamation imposing a tariff on imports of polysilicon (a key input into
-solar panels and semiconductors) and certain derivative products at a rate of 15 percent (the UK
-being an exception, with its rate capped at 10 percent). The action was taken under Section 232 of
-the Trade Expansion Act of 1962 and is scheduled to take effect on December 4, 2026. The
-proclamation also separately establishes minimum import prices for these products, the effects of
-which we do not model.
+This update reflects a change in the effective date of the Section 338 tariffs on Canadian products,
+which took effect on August 22 rather than August 19 as previously scheduled. No other official
+tariff policy changes have occurred since our last post on August 11.
 
-To help readers isolate the impact of this action, we have added an alternative scenario that holds
-everything else fixed but removes it (see the Alternative Scenarios tab).
+The Alternative Scenarios tab now shows a single alternative: current law excluding the Section 338
+actions, which isolates the effect of those tariffs.

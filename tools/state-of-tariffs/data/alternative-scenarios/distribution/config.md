@@ -20,10 +20,10 @@ total:
     value_format: {decimals: 2}
     style: dashed
     labelSide: bottom
-    # Flip the Ex polysilicon total label above its line (default is below). Per-vintage visual
+    # Flip the Ex Section 338 total label above its line (default is below). Per-vintage visual
     # tweak — keyed by display label, so re-check (scenario names/values change each release).
     series_overrides:
-      Ex polysilicon: {labelSide: top}
+      Ex Section 338: {labelSide: top}
 spec:
   chartType: bar
   data: data.csv
