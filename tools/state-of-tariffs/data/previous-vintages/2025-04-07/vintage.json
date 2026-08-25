@@ -4,7 +4,7 @@
   "label": "April 8, 2025",
   "published_at": "2025-04-08T00:00:00-0400",
   "version": "1.0",
-"changes_html": "<h2>About This Vintage</h2> <h2>Changes Incorporated Since the Last Update</h2><ul><li>Since the <a href=\"https://budgetlab.yale.edu/research/where-we-stand-fiscal-economic-and-distributional-effects-all-us-tariffs-enacted-2025-through-april\">April 2 report</a>, China has announced retaliatory tariffs of 34% on all US goods imports, effective April 10.</li><li>TBL revised its methodology for pro-rating the effects of currency appreciation on overall prices in cases where foreign retaliation against US tariffs is not complete. This revision lowered the PCE effect by 0.03 percentage point relative to the April 2 report.</li><li>TBL now reports the unemployment rate and payroll employment effects for 2025 Q4.</li></ul>",
+  "changes_html": "<h2>About This Vintage</h2> <h2>Changes Incorporated Since the Last Update</h2><ul><li>Since the <a href=\"https://budgetlab.yale.edu/research/where-we-stand-fiscal-economic-and-distributional-effects-all-us-tariffs-enacted-2025-through-april\">April 2 report</a>, China has announced retaliatory tariffs of 34% on all US goods imports, effective April 10.</li><li>TBL revised its methodology for pro-rating the effects of currency appreciation on overall prices in cases where foreign retaliation against US tariffs is not complete. This revision lowered the PCE effect by 0.03 percentage point relative to the April 2 report.</li><li>TBL now reports the unemployment rate and payroll employment effects for 2025 Q4.</li></ul>",
   "scenarios": [
     {
       "id": "baseline",
@@ -181,8 +181,16 @@
               },
               "series_labels": {
                 "historical": "Historical",
-                "projected": "Projected",
-                "current_average": "Current average effective rate"
+                "projected": "Projected"
+              },
+              "annotations": {
+                "yAxis": [
+                  {
+                    "y": 22.438661141351545,
+                    "label": "Current average effective rate",
+                    "style": "dashed"
+                  }
+                ]
               }
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 8, 2025) average effective rate shown for reference. This figure is not part of the current interactive's standard figure set and is included here as an extra, since it was published in this release.</p>",

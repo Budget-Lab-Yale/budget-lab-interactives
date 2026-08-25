@@ -4,7 +4,7 @@
   "label": "May 29, 2025",
   "published_at": "2025-05-29T00:00:00-0400",
   "version": "1.0",
- "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-may-23-2025\">May 23 report</a>:</p><ul><li>The U.S. Court of International Trade <a href=\"https://www.cit.uscourts.gov/sites/cit/files/25-66.pdf\">invalidated</a> tariffs announced under IEEPA authority, including the &ldquo;reciprocal&rdquo; tariffs and 25% tariffs on Canada and Mexico.</li><li>President Trump delayed the previously-announced 50% tariff on the EU.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+  "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-may-23-2025\">May 23 report</a>:</p><ul><li>The U.S. Court of International Trade <a href=\"https://www.cit.uscourts.gov/sites/cit/files/25-66.pdf\">invalidated</a> tariffs announced under IEEPA authority, including the &ldquo;reciprocal&rdquo; tariffs and 25% tariffs on Canada and Mexico.</li><li>President Trump delayed the previously-announced 50% tariff on the EU.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
   "scenarios": [
     {
       "id": "baseline",
@@ -274,17 +274,21 @@
               "series_labels": {
                 "historical": "Historical",
                 "projected_presub": "Projected (pre-substitution)",
-                "projected_postsub": "Projected (post-substitution)",
-                "current_average_presub": "Current average effective rate (pre-substitution)",
-                "current_average_postsub": "Current average effective rate (post-substitution)"
+                "projected_postsub": "Projected (post-substitution)"
               },
-              "series_styles": {
-                "current_average_presub": {
-                  "dashed": true
-                },
-                "current_average_postsub": {
-                  "dashed": true
-                }
+              "annotations": {
+                "yAxis": [
+                  {
+                    "y": 6.940320967595329,
+                    "label": "Current average effective rate (pre-substitution)",
+                    "style": "dashed"
+                  },
+                  {
+                    "y": 7.026701608698674,
+                    "label": "Current average effective rate (post-substitution)",
+                    "style": "dashed"
+                  }
+                ]
               }
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (May 29, 2025) average effective rate shown for reference, both pre- and post-substitution. This report reflects the removal of IEEPA tariffs per the May 28, 2025 court ruling.</p>",

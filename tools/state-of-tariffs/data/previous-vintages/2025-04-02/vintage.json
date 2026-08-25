@@ -4,7 +4,7 @@
   "label": "April 2, 2025",
   "published_at": "2025-04-02T00:00:00-0400",
   "version": "1.0",
-"changes_html": "<h2>About This Vintage</h2><p>On April 2, the White House announced its long-awaited comprehensive tariff policy, comprising a 10% minimum tariff on countries outside Canada and Mexico, with special higher rates for roughly 60 countries (see Appendix for full list). This analysis presents the fiscal and economic effects of both 1) the April 2nd policy, without considering the other tariffs that have gone into effect so far this year or international retaliation; and, 2) all US tariffs that have gone into effect in 2025, including the April 2nd policy, as well as incorporating the effects of all international retaliation implemented as of publication. Specifically, The Budget Lab assumed the following policies in effect:</p><ul><li>20% broad tariff on all Chinese imports (effective February 4; increased March 4);</li><li>10% tariff on Canadian potash and energy (effective April 2);</li><li>25% tariff on all Mexican imports and other Canadian imports (effective March 4);</li><li>25% tariff on all automobiles, with an exemption for US content (effective April 3);</li><li>25% tariff on all steel and aluminum imports (effective March 12); and,</li><li>The April 2nd announcement, as previously described.</li></ul><p>TBL treated each of these policies as independent from one another and stacked them together. Its methodology largely follows <a href=\"https://budgetlab.yale.edu/research/fiscal-economic-and-distributional-effects-illustrative-reciprocal-us-tariffs\">prior tariff analysis</a>. Note that certain commodities and products were carved out from the April 2nd announcement – the Budget Lab does not apply the rates from the April 2nd announcement to those commodities but does stack tariffs on those commodities from earlier announcements where applicable. All of Budget Lab's analysis may be adjusted moving forward with more detail from the Administration on implementation.</p>",
+  "changes_html": "<h2>About This Vintage</h2><p>On April 2, the White House announced its long-awaited comprehensive tariff policy, comprising a 10% minimum tariff on countries outside Canada and Mexico, with special higher rates for roughly 60 countries (see Appendix for full list). This analysis presents the fiscal and economic effects of both 1) the April 2nd policy, without considering the other tariffs that have gone into effect so far this year or international retaliation; and, 2) all US tariffs that have gone into effect in 2025, including the April 2nd policy, as well as incorporating the effects of all international retaliation implemented as of publication. Specifically, The Budget Lab assumed the following policies in effect:</p><ul><li>20% broad tariff on all Chinese imports (effective February 4; increased March 4);</li><li>10% tariff on Canadian potash and energy (effective April 2);</li><li>25% tariff on all Mexican imports and other Canadian imports (effective March 4);</li><li>25% tariff on all automobiles, with an exemption for US content (effective April 3);</li><li>25% tariff on all steel and aluminum imports (effective March 12); and,</li><li>The April 2nd announcement, as previously described.</li></ul><p>TBL treated each of these policies as independent from one another and stacked them together. Its methodology largely follows <a href=\"https://budgetlab.yale.edu/research/fiscal-economic-and-distributional-effects-illustrative-reciprocal-us-tariffs\">prior tariff analysis</a>. Note that certain commodities and products were carved out from the April 2nd announcement – the Budget Lab does not apply the rates from the April 2nd announcement to those commodities but does stack tariffs on those commodities from earlier announcements where applicable. All of Budget Lab's analysis may be adjusted moving forward with more detail from the Administration on implementation.</p>",
   "scenarios": [
     {
       "id": "april-2-announcement-only",
@@ -164,13 +164,16 @@
                 "value": "value"
               },
               "series_labels": {
-                "historical": "Historical",
-                "current_average": "Current average effective rate (April 2 Announcement Only)"
+                "historical": "Historical"
               },
-              "series_styles": {
-                "current_average": {
-                  "dashed": true
-                }
+              "annotations": {
+                "yAxis": [
+                  {
+                    "y": 15.186839563632496,
+                    "label": "Current average effective rate (April 2 Announcement Only)",
+                    "style": "dashed"
+                  }
+                ]
               }
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 2, 2025) average effective rate under the April 2 Announcement Only scenario shown for reference.</p>",
@@ -433,13 +436,16 @@
                 "value": "value"
               },
               "series_labels": {
-                "historical": "Historical",
-                "current_average": "Current average effective rate (All 2025 Tariffs to Date)"
+                "historical": "Historical"
               },
-              "series_styles": {
-                "current_average": {
-                  "dashed": true
-                }
+              "annotations": {
+                "yAxis": [
+                  {
+                    "y": 22.438661141351545,
+                    "label": "Current average effective rate (All 2025 Tariffs to Date)",
+                    "style": "dashed"
+                  }
+                ]
               }
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 2, 2025) average effective rate under the All 2025 Tariffs to Date scenario shown for reference.</p>",

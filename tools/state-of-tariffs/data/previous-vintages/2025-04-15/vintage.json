@@ -4,7 +4,7 @@
   "label": "April 15, 2025",
   "published_at": "2025-04-15T00:00:00-0400",
   "version": "1.0",
-"changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/fiscal-and-economic-effects-revised-april-9-tariffs\">April 10 report</a>:</p><ul><li>China has raised its broad retaliatory tariffs to US imports to 125% and suspended exports of certain minerals and magnets.</li><li><a href=\"https://www.supplychaindive.com/news/trump-electronics-tariff-exemption-list/745209/\">Clarifications from the Administration</a> about the semiconductor/electronics carve-out have allowed TBL to refine its estimate of the scope of the exemption. TBL had previously assumed a somewhat larger carve-out for non-semiconductor electronics than is present in the Administration's clarified announcement. These refinements thus have the effect of slightly increasing the weighted average tariff rate relative to what TBL assumed before.</li></ul>",
+  "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/fiscal-and-economic-effects-revised-april-9-tariffs\">April 10 report</a>:</p><ul><li>China has raised its broad retaliatory tariffs to US imports to 125% and suspended exports of certain minerals and magnets.</li><li><a href=\"https://www.supplychaindive.com/news/trump-electronics-tariff-exemption-list/745209/\">Clarifications from the Administration</a> about the semiconductor/electronics carve-out have allowed TBL to refine its estimate of the scope of the exemption. TBL had previously assumed a somewhat larger carve-out for non-semiconductor electronics than is present in the Administration's clarified announcement. These refinements thus have the effect of slightly increasing the weighted average tariff rate relative to what TBL assumed before.</li></ul>",
   "scenarios": [
     {
       "id": "baseline",
@@ -157,7 +157,7 @@
               "vintageDate": "2025-04-15",
               "scenarioTab": "default-scenario"
             },
-            "body_html": "<p>Tariff actions in effect or announced as of April 15, 2025, shown alongside the retaliatory actions announced in response.</p><p><em>Notes: * USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos\u2014which have already been tariffed separately this year\u2014as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. **** TBL simulated this as a prohibitive Chinese export tariff on these commodities.</em></p>",
+            "body_html": "<p>Tariff actions in effect or announced as of April 15, 2025, shown alongside the retaliatory actions announced in response.</p><p><em>Notes: * USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. **** TBL simulated this as a prohibitive Chinese export tariff on these commodities.</em></p>",
             "section": "overview",
             "figureNum": 2,
             "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original April 15, 2025 report's tariff-action timeline graphic."
@@ -280,17 +280,21 @@
               "series_labels": {
                 "historical": "Historical",
                 "projected_presub": "Projected (pre-substitution)",
-                "projected_postsub": "Projected (post-substitution)",
-                "current_average_presub": "Current average effective rate (pre-substitution)",
-                "current_average_postsub": "Current average effective rate (post-substitution)"
+                "projected_postsub": "Projected (post-substitution)"
               },
-              "series_styles": {
-                "current_average_presub": {
-                  "dashed": true
-                },
-                "current_average_postsub": {
-                  "dashed": true
-                }
+              "annotations": {
+                "yAxis": [
+                  {
+                    "y": 27.99412815312992,
+                    "label": "Current average effective rate (pre-substitution)",
+                    "style": "dashed"
+                  },
+                  {
+                    "y": 17.974991087042504,
+                    "label": "Current average effective rate (post-substitution)",
+                    "style": "dashed"
+                  }
+                ]
               }
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 15, 2025) average effective rate shown for reference, both pre- and post-substitution. This figure is not part of the current interactive's standard figure set and is included here as an extra, since it was published in this release.</p>",

@@ -161,7 +161,7 @@
               "vintageDate": "2025-09-04",
               "scenarioTab": "default-scenario"
             },
-            "body_html": "<p>Tariff actions in effect or announced as of September 4, 2025, shown alongside the retaliatory and negotiated deal tariffs announced in response.</p><p><em>Notes: * USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos\u2014which have already been tariffed separately this year\u2014as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. **** <a href=\"https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles\">Executive Order 14289</a> prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.</em></p>",
+            "body_html": "<p>Tariff actions in effect or announced as of September 4, 2025, shown alongside the retaliatory and negotiated deal tariffs announced in response.</p><p><em>Notes: * USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. **** <a href=\"https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles\">Executive Order 14289</a> prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.</em></p>",
             "section": "overview",
             "figureNum": 2,
             "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original September 4, 2025 report's tariff-action timeline graphic. Added only to the baseline scenario per instruction, not the no-ieepa alternative scenario."
@@ -284,17 +284,21 @@
               "series_labels": {
                 "historical": "Historical",
                 "projected_presub": "Projected (pre-substitution)",
-                "projected_postsub": "Projected (post-substitution)",
-                "current_average_presub": "Current average effective rate (pre-substitution)",
-                "current_average_postsub": "Current average effective rate (post-substitution)"
+                "projected_postsub": "Projected (post-substitution)"
               },
-              "series_styles": {
-                "current_average_presub": {
-                  "dashed": true
-                },
-                "current_average_postsub": {
-                  "dashed": true
-                }
+              "annotations": {
+                "yAxis": [
+                  {
+                    "y": 17.408042495988777,
+                    "label": "Current average effective rate (pre-substitution)",
+                    "style": "dashed"
+                  },
+                  {
+                    "y": 16.35168225652953,
+                    "label": "Current average effective rate (post-substitution)",
+                    "style": "dashed"
+                  }
+                ]
               }
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (as of September 3) average effective rate shown for reference, both pre- and post-substitution.</p>",
@@ -493,7 +497,7 @@
               "row_labels": {
                 "conventional": "Conventional",
                 "dynamic": "Dynamic",
-                "difference": "Difference (Dynamic \u2212 Conventional)"
+                "difference": "Difference (Dynamic − Conventional)"
               },
               "column_order": [
                 "2025",
@@ -761,17 +765,21 @@
               "series_labels": {
                 "historical": "Historical",
                 "projected_presub": "Projected (pre-substitution)",
-                "projected_postsub": "Projected (post-substitution)",
-                "current_average_presub": "Current average effective rate (pre-substitution)",
-                "current_average_postsub": "Current average effective rate (post-substitution)"
+                "projected_postsub": "Projected (post-substitution)"
               },
-              "series_styles": {
-                "current_average_presub": {
-                  "dashed": true
-                },
-                "current_average_postsub": {
-                  "dashed": true
-                }
+              "annotations": {
+                "yAxis": [
+                  {
+                    "y": 6.834476116588733,
+                    "label": "Current average effective rate (pre-substitution)",
+                    "style": "dashed"
+                  },
+                  {
+                    "y": 6.808006495960471,
+                    "label": "Current average effective rate (post-substitution)",
+                    "style": "dashed"
+                  }
+                ]
               }
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (as of September 3, No-IEEPA) average effective rate shown for reference, both pre- and post-substitution.</p>",
@@ -970,7 +978,7 @@
               "row_labels": {
                 "conventional": "Conventional",
                 "dynamic": "Dynamic",
-                "difference": "Difference (Dynamic \u2212 Conventional)"
+                "difference": "Difference (Dynamic − Conventional)"
               },
               "column_order": [
                 "2025",

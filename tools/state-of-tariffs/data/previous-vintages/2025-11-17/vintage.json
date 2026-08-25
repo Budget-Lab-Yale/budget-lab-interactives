@@ -247,17 +247,21 @@
               "series_labels": {
                 "historical": "Historical",
                 "projected_presub": "Projected (pre-substitution)",
-                "projected_postsub": "Projected (post-substitution)",
-                "current_average_presub": "Current average effective rate (pre-substitution)",
-                "current_average_postsub": "Current average effective rate (post-substitution)"
+                "projected_postsub": "Projected (post-substitution)"
               },
-              "series_styles": {
-                "current_average_presub": {
-                  "dashed": true
-                },
-                "current_average_postsub": {
-                  "dashed": true
-                }
+              "annotations": {
+                "yAxis": [
+                  {
+                    "y": 16.804955336938377,
+                    "label": "Current average effective rate (pre-substitution)",
+                    "style": "dashed"
+                  },
+                  {
+                    "y": 14.355874079073295,
+                    "label": "Current average effective rate (post-substitution)",
+                    "style": "dashed"
+                  }
+                ]
               }
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (November 17, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",

@@ -4,7 +4,7 @@
   "label": "April 10, 2025",
   "published_at": "2025-04-10T00:00:00-0400",
   "version": "1.0",
- "changes_html": "<h2>About This Vintage</h2><p><em>Note: Shortly after the Budget Lab's original publication, the White House clarified that the 125% China tariffs were on top of, not inclusive of, the 20% IEEPA tariffs already in place, making the maximum rate on Chinese imports 145%. This report revises our numbers to reflect the clarified policy.</em></p><h2>Introduction &amp; Current Tariffs</h2><p>On the afternoon of April 9, the Trump Administration announced a significant revision to US tariff policy:</p><ul><li>The special \"reciprocal\" tariff rate, announced April 2 and effective April 9, are suspended for 90 days. During that time, the 10% minimum tariff rate applies universally to the same countries and the same base as the April 2 announcement, other than China.</li><li>China's April 2 \"reciprocal\" tariff is raised to 125%; in tandem with the 20% IEEPA tariffs, that raises the maximum rate on the April 2 base to 145%. For commodities carved out of the April 2 announcement with separate tariffs already in place (steel, aluminum, automobiles), the rate is 45%. For other April 2 carve-outs (lumber, pharmaceuticals, semiconductors, etc.), the rate is currently 20%.</li></ul>",
+  "changes_html": "<h2>About This Vintage</h2><p><em>Note: Shortly after the Budget Lab's original publication, the White House clarified that the 125% China tariffs were on top of, not inclusive of, the 20% IEEPA tariffs already in place, making the maximum rate on Chinese imports 145%. This report revises our numbers to reflect the clarified policy.</em></p><h2>Introduction &amp; Current Tariffs</h2><p>On the afternoon of April 9, the Trump Administration announced a significant revision to US tariff policy:</p><ul><li>The special \"reciprocal\" tariff rate, announced April 2 and effective April 9, are suspended for 90 days. During that time, the 10% minimum tariff rate applies universally to the same countries and the same base as the April 2 announcement, other than China.</li><li>China's April 2 \"reciprocal\" tariff is raised to 125%; in tandem with the 20% IEEPA tariffs, that raises the maximum rate on the April 2 base to 145%. For commodities carved out of the April 2 announcement with separate tariffs already in place (steel, aluminum, automobiles), the rate is 45%. For other April 2 carve-outs (lumber, pharmaceuticals, semiconductors, etc.), the rate is currently 20%.</li></ul>",
   "scenarios": [
     {
       "id": "baseline",
@@ -280,17 +280,21 @@
               "series_labels": {
                 "historical": "Historical",
                 "projected_presub": "Projected (pre-substitution)",
-                "projected_postsub": "Projected (post-substitution)",
-                "current_average_presub": "Current average effective rate (pre-substitution)",
-                "current_average_postsub": "Current average effective rate (post-substitution)"
+                "projected_postsub": "Projected (post-substitution)"
               },
-              "series_styles": {
-                "current_average_presub": {
-                  "dashed": true
-                },
-                "current_average_postsub": {
-                  "dashed": true
-                }
+              "annotations": {
+                "yAxis": [
+                  {
+                    "y": 26.998254235650997,
+                    "label": "Current average effective rate (pre-substitution)",
+                    "style": "dashed"
+                  },
+                  {
+                    "y": 18.53588492447341,
+                    "label": "Current average effective rate (post-substitution)",
+                    "style": "dashed"
+                  }
+                ]
               }
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 10, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
