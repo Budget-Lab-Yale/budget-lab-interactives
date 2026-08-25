@@ -250,7 +250,7 @@
                 }
               }
             ],
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of June 1, 2025, before and after trade substitution. Published in the original release as Table 2/Figure 1; shown here as both a table and a stacked bar chart, with China, Canada, Mexico, and Rest of World stacking to the total for each substitution basis.</p>",
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of June 1, 2025, before and after trade substitution. Shown as both a table and a stacked bar chart, with China, Canada, Mexico, and Rest of World stacking to the total for each substitution basis.</p>",
             "section": "rates",
             "figureNum": 3
           },
@@ -294,7 +294,7 @@
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (June 1, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
             "figureNum": 4,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure since it was published in the original June 1, 2025 release (Figure 2)."
+            "note": ""
           },
           {
             "id": "consumer-prices",
