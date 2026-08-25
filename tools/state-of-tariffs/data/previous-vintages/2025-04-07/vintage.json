@@ -193,7 +193,7 @@
                 ]
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 8, 2025) average effective rate shown for reference. This figure is not part of the current interactive's standard figure set and is included here as an extra, since it was published in this release.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 8, 2025) average effective rate shown for reference.</p>",
             "section": "rates",
             "figureNum": 3,
             "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
@@ -235,9 +235,9 @@
               "header_labels": {
                 "postsub": "Long-run"
               },
-              "notes": "\"nec\" = \"Not elsewhere classified.\" Only long-run (post-substitution) values were published in this release. The \"basis\" field splits each commodity into its overall, domestic-price, and imported-price change, as delineated in the source workbook."
+              "notes": "\"nec\" = \"Not elsewhere classified.\" The \"basis\" field splits each commodity into its overall, domestic-price, and imported-price change, as delineated in the source workbook."
             },
-            "body_html": "<p>Long-run overall, domestic, and imported price effects for the commodities with the largest projected changes, as of the week of April 7, 2025. No short-run (pre-substitution) commodity-level breakdown was published in this release.</p>",
+            "body_html": "<p>Long-run overall, domestic, and imported price effects for the commodities with the largest projected changes, as of the week of April 7, 2025.</p>",
             "section": "prices-households",
             "figureNum": 4
           },
@@ -284,9 +284,9 @@
                   "2024 dollars"
                 ]
               },
-              "notes": "Decile 1 values were not published in this release."
+              "notes": "Decile 1 values are omitted."
             },
-            "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention. Decile 1 was not published in this release.</p>",
+            "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention. Decile 1 is not published.</p>",
             "section": "prices-households",
             "figureNum": 5
           },
@@ -332,9 +332,9 @@
                 "facet": "group",
                 "value": "value"
               },
-              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries. Only country-level effects were published in this release; no sector-level breakdown is available for this vintage."
+              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries."
             },
-            "body_html": "<p>The long-run change in real GDP, by trading partner. No sector-level breakdown was published in this release.</p>",
+            "body_html": "<p>The long-run change in real GDP, by trading partner.</p>",
             "section": "economy",
             "figureNum": 7
           }
