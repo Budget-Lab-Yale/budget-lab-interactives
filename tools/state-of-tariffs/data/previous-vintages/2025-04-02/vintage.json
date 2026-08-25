@@ -226,7 +226,7 @@
               "title": "Short-Run Distributional Effects of 2025 Tariffs",
               "subtitle": "Tariff burden by household income decile, post-substitution.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
-              "notes": "Decile 1 was not published in this release and is omitted.",
+              "notes": "Decile 1 was omitted due to insufficient data.",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -306,9 +306,9 @@
                 "x": "category",
                 "value": "value"
               },
-              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries. Only country-level effects were published in this release; no sector-level breakdown is available for this vintage."
+              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries."
             },
-            "body_html": "<p>The long-run change in real GDP under the April 2 Announcement Only scenario, by trading partner. No sector-level breakdown was published in this release.</p>",
+            "body_html": "<p>The long-run change in real GDP under the April 2 Announcement Only scenario, by trading partner.</p>",
             "section": "economy",
             "figureNum": 7
           }
@@ -498,7 +498,6 @@
               "title": "Short-Run Distributional Effects of 2025 Tariffs",
               "subtitle": "Tariff burden by household income decile, post-substitution.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
-              "notes": "Decile 1 was not published in this release and is omitted.",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -578,9 +577,9 @@
                 "x": "category",
                 "value": "value"
               },
-              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries. Only country-level effects were published in this release; no sector-level breakdown is available for this vintage."
+              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries."
             },
-            "body_html": "<p>The long-run change in real GDP under the All 2025 Tariffs to Date scenario, by trading partner. No sector-level breakdown was published in this release.</p>",
+            "body_html": "<p>The long-run change in real GDP under the All 2025 Tariffs to Date scenario, by trading partner.</p>",
             "section": "economy",
             "figureNum": 6
           }
