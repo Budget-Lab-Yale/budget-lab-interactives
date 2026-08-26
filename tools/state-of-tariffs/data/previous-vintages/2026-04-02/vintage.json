@@ -145,7 +145,7 @@
             "body_html": "<p>Tariff actions in effect as of April 2, 2026: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p><p><em>Notes: Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap.</em></p><p><em>Source: The Budget Lab analysis.</em></p>",
             "section": "overview",
             "figureNum": 2,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original April 2, 2026 report's tariff-policy summary tables, using a single dataset with a 'category' column to group Panel A (Section 122 broad tariff) and Panel B (Section 232 product tariffs) rows. Added only to the section-122-expires scenario per instruction, not the section-122-extended alternative scenario."
+            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original April 2, 2026 report's tariff-policy summary tables, using a single dataset with a 'category' column to group Panel A (Section 122 broad tariff) and Panel B (Section 232 product tariffs) rows."
           },
           {
             "id": "etr-by-country",
@@ -255,9 +255,9 @@
                 "value": "value"
               }
             },
-            "body_html": "<p>\"Tariff Impact Tracker: Daily Effective Tariff Rate by Authority.\" The source data is a single aggregate ETR series (no per-authority breakdown columns despite the title), running daily from January 1, 2025 through the end of 2026. Section 122 Expires scenario only -- no counterpart exists for Section 122 Extended in the source.</p>",
+            "body_html": "<p>\"Tariff Impact Tracker: Daily Effective Tariff Rate by Authority.\" The source data is a single aggregate ETR series (no per-authority breakdown columns despite the title), running daily from January 1, 2025 through the end of 2026.</p>",
             "section": "rates",
-            "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure. Section 122 Expires scenario only.",
+            "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure.",
             "figureNum": 5
           },
           {
