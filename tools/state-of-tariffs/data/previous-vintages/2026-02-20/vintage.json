@@ -251,7 +251,7 @@
                 ]
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution. This chart is identical across both scenario tabs, as only one current-rate reference line was published in the original release.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution. This chart is identical across both scenario tabs.</p>",
             "section": "rates",
             "figureNum": 4
           },
@@ -661,7 +661,7 @@
                 ]
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution. This chart is identical across both scenario tabs, as only one current-rate reference line was published in the original release.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution. This chart is identical across both scenario tabs.</p>",
             "section": "rates",
             "figureNum": 3
           },
