@@ -666,12 +666,12 @@
               "annotations": {
                 "yAxis": [
                   {
-                    "y": 11.3142299742279,
+                    "y": 13.7322299742279,
                     "label": "Current average effective rate (pre-substitution)",
                     "style": "dashed"
                   },
                   {
-                    "y": 9.75715433970314,
+                    "y": 12.1751543397031,
                     "label": "Current average effective rate (post-substitution)",
                     "style": "dashed"
                   }
