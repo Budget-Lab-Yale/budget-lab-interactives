@@ -18699,11 +18699,11 @@
                 "parts": [
                   {
                     "figureType": "table",
-                    "data": "previous-vintages/2025-04-15/baseline/etr-by-country/data.csv",
+                    "data": "previous-vintages/2025-04-15/baseline/etr-by-country/data-full.csv",
                     "spec": {
                       "title": "Average Effective Tariff Rate by Trading Partner",
                       "subtitle": "As of April 15, 2025, pre- and post-substitution. Percent.",
-                      "data": "data.csv",
+                      "data": "data-full.csv",
                       "stub": [
                         "category"
                       ],
