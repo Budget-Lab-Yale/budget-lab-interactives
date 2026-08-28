@@ -156,6 +156,9 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey"
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
@@ -173,6 +176,8 @@
                 "yAxis": [
                   {
                     "y": 15.186839563632496,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate (April 2 Announcement Only)",
                     "style": "dashed"
                   }
@@ -433,6 +438,9 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey"
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
@@ -450,6 +458,8 @@
                 "yAxis": [
                   {
                     "y": 22.438661141351545,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate (All 2025 Tariffs to Date)",
                     "style": "dashed"
                   }

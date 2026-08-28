@@ -17,6 +17,9 @@ spec:
     facet: substitution
     series: substitution
     value: value
+  series_labels:
+    presub: Pre-substitution
+    postsub: Post-substitution
   series_colors:
     presub: blue
     postsub: amber

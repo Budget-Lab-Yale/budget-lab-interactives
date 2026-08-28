@@ -102,8 +102,7 @@
                   },
                   "Change in payroll employment, 2025 Q4 (thousands)": {
                     "type": "number",
-                    "decimals": 0,
-                    "suffix": " jobs"
+                    "decimals": 0
                   },
                   "Conventional, % of GDP": {
                     "type": "number",
@@ -271,6 +270,15 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey",
+                "projected_presub": "amber",
+                "projected_postsub": "blue"
+              },
+              "series_styles": {
+                "projected_presub": { "dashed": true },
+                "projected_postsub": { "dashed": true }
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
@@ -289,11 +297,15 @@
                 "yAxis": [
                   {
                     "y": 17.408042495988777,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate (pre-substitution)",
                     "style": "dashed"
                   },
                   {
                     "y": 16.35168225652953,
+                    "color": "blue",
+                    "labelSide": "bottom",
                     "label": "Current average effective rate (post-substitution)",
                     "style": "dashed"
                   }
@@ -635,8 +647,7 @@
                   },
                   "Change in payroll employment, 2025 Q4 (thousands)": {
                     "type": "number",
-                    "decimals": 0,
-                    "suffix": " jobs"
+                    "decimals": 0
                   },
                   "Conventional, % of GDP": {
                     "type": "number",
@@ -760,6 +771,15 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey",
+                "projected_presub": "amber",
+                "projected_postsub": "blue"
+              },
+              "series_styles": {
+                "projected_presub": { "dashed": true },
+                "projected_postsub": { "dashed": true }
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
@@ -778,11 +798,15 @@
                 "yAxis": [
                   {
                     "y": 6.834476116588733,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate (pre-substitution)",
                     "style": "dashed"
                   },
                   {
                     "y": 6.808006495960471,
+                    "color": "blue",
+                    "labelSide": "bottom",
                     "label": "Current average effective rate (post-substitution)",
                     "style": "dashed"
                   }

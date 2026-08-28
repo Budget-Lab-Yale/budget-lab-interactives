@@ -102,8 +102,7 @@
                   },
                   "Change in payroll employment, 2025 Q4 (thousands)": {
                     "type": "number",
-                    "decimals": 0,
-                    "suffix": " jobs"
+                    "decimals": 0
                   },
                   "Conventional, % of GDP": {
                     "type": "number",
@@ -169,6 +168,13 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey",
+                "projected": "amber"
+              },
+              "series_styles": {
+                "projected": { "dashed": true }
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
@@ -187,6 +193,8 @@
                 "yAxis": [
                   {
                     "y": 22.438661141351545,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate",
                     "style": "dashed"
                   }
@@ -206,6 +214,12 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Long-Run Commodity Price Effects, Overall / Domestic / Imported",
+              "small_multiples": {
+                "pane_titles": {
+                  "presub": "Pre-substitution",
+                  "postsub": "Post-substitution"
+                }
+              },
               "subtitle": "Percent change to price level. Through week of April 7.",
               "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
