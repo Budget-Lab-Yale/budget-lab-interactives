@@ -356,7 +356,7 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Real GDP Level Effects of Trump Administration Tariffs",
-              "subtitle": "Percentage point change against baseline",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "GTAP v7, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -397,7 +397,7 @@
                   ]
                 }
               },
-              "subtitle": "Percentage points",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
@@ -750,7 +750,7 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Real GDP Level Effects of Trump Administration Tariffs",
-              "subtitle": "Percentage point change against baseline",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "GTAP v7, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -791,7 +791,7 @@
                   ]
                 }
               },
-              "subtitle": "Percentage points",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",

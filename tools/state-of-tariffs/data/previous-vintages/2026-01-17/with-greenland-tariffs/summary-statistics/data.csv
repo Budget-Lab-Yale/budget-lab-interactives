@@ -8,5 +8,5 @@ Household cost,Post-substitution,-1291.95776859023,usd,hh_cost_postsub
 Real GDP,"Q4-Q4 growth (p.p.), 2026",-0.386394920244815,pp,gdp_growth_2026
 Real GDP,Long-run,-0.331519722938538,pct,gdp_longrun
 Labor market,"Unemployment rate (p.p.), end of 2026",0.658526011560693,pp,unemployment_2026
-Revenue (10-year),Conventional,2806.93047777274,usd_b,revenue_conventional
-Revenue (10-year),Dynamic,2403.57947777274,usd_b,revenue_dynamic
+Revenue (10-year),Conventional,2806.93047777274,usd_bn,revenue_conventional
+Revenue (10-year),Dynamic,2403.57947777274,usd_bn,revenue_dynamic

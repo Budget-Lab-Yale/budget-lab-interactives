@@ -355,7 +355,7 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
-              "subtitle": "Percentage point change against baseline",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -396,7 +396,7 @@
                   ]
                 }
               },
-              "subtitle": "Percentage points",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "GTAP v7, The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
@@ -774,7 +774,7 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
-              "subtitle": "Percentage point change against baseline",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -815,7 +815,7 @@
                   ]
                 }
               },
-              "subtitle": "Percentage points",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "GTAP v7, The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",

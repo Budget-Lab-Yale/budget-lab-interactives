@@ -6,6 +6,6 @@ Real GDP,"Q4-Q4 growth (p.p.), 2025",-0.874821064403841,pp,gdp_growth_2025
 Real GDP,Long-run,-0.57,pct,gdp_longrun
 Labor market,"Unemployment rate (p.p.), end of 2025",0.456471920013428,pp,unemployment_2025
 Labor market,"Change in payroll employment, 2025 Q4 (thousands)",-611.831665039062,thousands,payroll_employment_2025
-Revenue (10-year),Conventional,3008.77450097518,usd_b,revenue_conventional
-Revenue (10-year),"Add'l 2026-35 Dynamic Revenue Effects ($bn)",-588.112,usd_b,revenue_dynamic
+Revenue (10-year),Conventional,3008.77450097518,usd_bn,revenue_conventional
+Revenue (10-year),Add'l 2026-35 Dynamic Revenue Effects ($bn),-588.112,usd_bn,revenue_dynamic
 Revenue (10-year),"Conventional, % of GDP",0.806287450283303,pct,revenue_pct_gdp

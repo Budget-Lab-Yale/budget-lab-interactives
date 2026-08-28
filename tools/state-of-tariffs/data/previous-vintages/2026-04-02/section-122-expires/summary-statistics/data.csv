@@ -1,8 +1,8 @@
 category,series,value,unit,metric
 Tariff rate,"Effective rate, pre-substitution",8.165615260365728,pct,etr_presub_level
 Tariff rate,"Effective rate, post-substitution",7.116328493901657,pct,etr_postsub_level
-Revenue (10-year),Conventional,1136.9850490571262,usd_b,revenue_conventional
-Revenue (10-year),Dynamic,1047.237049057126,usd_b,revenue_dynamic
+Revenue (10-year),Conventional,1136.9850490571262,usd_bn,revenue_conventional
+Revenue (10-year),Dynamic,1047.237049057126,usd_bn,revenue_dynamic
 Consumer price increase,Pre-substitution,0.5609560390014902,pct,price_presub
 Consumer price increase,Post-substitution,0.466199454335149,pct,price_postsub
 Household cost,Pre-substitution,-780.0048816708852,usd,hh_cost_presub

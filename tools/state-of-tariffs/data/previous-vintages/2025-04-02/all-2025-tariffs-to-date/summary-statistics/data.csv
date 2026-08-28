@@ -4,6 +4,6 @@ Consumer price increase,Pre-substitution,2.3060007611949453,pct,price_presub
 Household cost,"Average, per household (2024$)",3789.2554804267243,usd,hh_cost_2024
 Real GDP,"Q4-Q4 growth (p.p.), 2025",-0.8748210644038412,pp,gdp_growth_2025
 Real GDP,Long-run,-0.56,pct,gdp_longrun
-Revenue (10-year),Conventional,3071.8161745065336,usd_b,revenue_conventional
+Revenue (10-year),Conventional,3071.8161745065336,usd_bn,revenue_conventional
 Revenue (10-year),Conventional (% of GDP),0.8231812753927318,pct,revenue_conventional_pct_gdp
-Revenue (10-year), "Add'l 2026-35 Dynamic Revenue Effects ($bn)",-581.653,usd_b,revenue_dynamic
+Revenue (10-year)," ""Add'l 2026-35 Dynamic Revenue Effects ($bn)""",-581.653,usd_bn,revenue_dynamic
