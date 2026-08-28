@@ -15,6 +15,7 @@ spec:
       - {id: sector, label: Sector, color: blue}
       - {id: country, label: Trading Partner, color: amber}
   subtitle: Percent change in the level of real GDP versus baseline.
+  value_suffix: "%"
   source: GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.
   orientation: vertical
   xAxisType: categorical

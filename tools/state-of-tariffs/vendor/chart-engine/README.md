@@ -13,32 +13,29 @@ bundler or `node_modules` at deploy time.
 ## Source
 
 - Repo: `Budget-Lab-Yale/budget-lab-chart-engine` (`C:\dev\GitHub\budget-lab-chart-engine`)
-- Version: **1.6.1** (tag `v1.6.1`; cache-bust query in index.html is `?v=1.6.1`)
-- v1.6.1 fix (commit `8a631aa`): `staggerBarLabels` no longer hangs the tab — a floating-point
-  progress guard terminates the value-pill overlap loop. This unblocked the 3-scenario grouped-bar
-  distribution figure (hover + legend multi-select previously froze); the tool's tool-side
-  `coordinated_cursor: false` workaround was dropped on re-vendor.
+- Version: **1.13.0** (tag `v1.13.0`; cache-bust query in index.html is `?v=1.13.0`)
+- Re-vendored from 1.6.1 on 2026-08-28, alongside the vintage-fidelity repair. What that bump
+  required of this tool, and what it bought:
+  - **1.8.0 removed subtitle-based unit inference.** A subtitle containing "percent" used to append
+    `%` to every rendered value; nothing here set a value affix, so 171 archived chart parts and 10
+    live config figures would have silently lost their `%`. All were given an explicit
+    `value_suffix: "%"` in the same change. **Any new chart must set its own affix.**
+  - **1.13.0 renders links in `note` and `source`.** 1.6.1's `renderSourceLine` did
+    `p.textContent = note`; 1.13.0 routes both through a tokenizer that emits real anchors, guarded
+    by an explicit `https://`/`mailto:` scheme check. Note text still cannot carry a hard line
+    break — `\\` is a rich-text token for table CELLS and does not reach a note.
+  - **1.12.0 requires `xAxisType: categorical` on `bar` and `stacked`**, else a validation error.
+    All 147 archived bar/stacked parts were already categorical, so nothing refused.
+  - **1.11.0 refuses colours the engine cannot paint.** Every colour in the archive is a palette
+    token or valid hex.
+  - Hover-only changes land on the 22 figures using `barStack`; the legend/tooltip/PNG key redraw
+    from 1.11.0 touches every figure. `shading`, `valueLabels` and `highlightSeries` are unused.
+  - `live.js` halves, 1,507,434 -> 1,018,615 bytes, and the font stops being embedded twice.
+- **`CONFIG-SPEC.md` in the engine repo now matches what is vendored here.** While this tool ran
+  1.6.1 against a 1.13.0 spec, two documented features did not exist in the vendored build — note
+  links, and `\\` breaks in notes — and both produced wrong guidance before being caught.
+- v1.6.1 fix (commit `8a631aa`): `staggerBarLabels` no longer hangs the tab.
 - v1.6.0 added a histogram chart type (not used by this tool).
-- v1.3.1 tables: multi-tier header super-groups stay contiguous under `column_order` (which now
-  orders the leaf tier *within* each super-group), a new `column_group_order` to order the
-  super-groups, and `collapsible.control` (`"stub-header"` default → the expand/collapse-all
-  control in the top-left corner cell; `"footer"` for the old placement).
-- v1.3.1 bars (commits `36995da`, `39ee9ac`): the inline title-selector color accent now recolors
-  **no-series** bar charts — **standalone and faceted** (so `bar_color` needn't be driven from the
-  option color tool-side), and a **single-facet** small-multiples chart hovers with the bar-end
-  pill instead of the legacy tooltip. All three tool workarounds removed on re-vendor.
-- v1.3.0 added the features the State of Tariffs dashboard had been faking tool-side, so those
-  workarounds were removed on re-vendor:
-  - Tables: **`group_order`** + order-independent grouping (scenario-major CSV regroups
-    correctly); native **collapsible row groups** (`collapsible: {default, expanded, collapsed}`);
-    **`emphasis_rows`** now styles the stub cell too (HTML + PNG); **multi-tier header leaves**
-    keyed by full header path (no more collisions).
-  - Bars: **`bar_color`** (first-class single-series fill) and **`category_colors`** (per-x-category
-    fill, e.g. a distinct Total bar).
-  - Annotations: **`facet`** on xAxis/yAxis markers (per-pane reference lines), **`value_format`**
-    + **`{value}`** token in labels, and numeric `annotations.xAxis` honored on horizontal bars.
-  - Line/area: **`projected_field`** + **`projected_style`** (dashed projected runs / faded area).
-  - Chrome: **`legend: false`**.
 - Still includes the inline table math (rendered by the engine — **no MathJax at runtime**) and
   the 1.2.x faceted horizontal bars / sectioned category axis / variable pane widths.
 

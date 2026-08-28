@@ -8,6 +8,7 @@ spec:
   data: data.csv
   title: Statutory Tariff Rate by Authority — {scenario}
   subtitle: Import-weighted statutory rate, decomposed by tariff authority. Percent.
+  value_suffix: "%"
   source: The Budget Lab analysis.
   xAxisType: temporal
   yAxisPolicy:

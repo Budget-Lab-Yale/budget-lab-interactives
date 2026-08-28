@@ -353,13 +353,78 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 
 /* Sticky stub column: on a wide table that scrolls horizontally (e.g. revenue by year, with a
    column per year), keep the row labels pinned so rows stay identifiable while scrolling. The
-   scroll ancestor is the engine's .figure-canvas-scroll. */
-.tbl-table th.tbl-table-stub,
-.tbl-table-stub-header {
+   scroll ancestor is the engine's .figure-canvas-scroll.
+
+   GATED on the engine's own sticky-first flag, which a spec opts into with
+   `sticky.firstColumn`. The engine gates its group-title rule on the same class and says why:
+   "without it, a group title would pin while its row labels scrolled, which reads as a bug."
+   Pinning unconditionally here bypassed that flag, so the engine's companion rule never fired —
+   stubs pinned, group titles scrolled, and on a narrow table the single data column slid under
+   the pinned stub. Do not un-gate this. */
+.tbl-table--sticky-first th.tbl-table-stub,
+.tbl-table--sticky-first .tbl-table-stub-header {
   position: sticky;
   left: 0;
   z-index: 2;
   background: var(--tbl-bg);
+}
+
+/* Multi-tier header: let a banner (spanner) label wrap.
+
+   The engine sets `white-space: nowrap` on every `thead th`, and its
+   `header_max_lines` clamp — which sets `white-space: normal` — is applied to LEAF
+   headers only. So a tier-1 spanner keeps nowrap. Where that spanner covers a
+   single narrow data column but carries a long label (e.g. "Policy Immediately
+   Following SCOTUS Ruling (No IEEPA or Section 122)" over one ~50px column), the
+   label cannot wrap and, being centred, overflows BOTH sides of its cell into the
+   neighbours — landing on top of the adjacent banner's flanking rule, which reads
+   as a line struck through the text to its left.
+
+   Allowing the wrap keeps the label inside its own cell. Short labels are
+   unaffected: they only wrap when the cell is narrower than the text, which is
+   exactly the case this fixes. Explicit `\\` breaks still apply. */
+.tbl-table thead th.is-spanner,
+.tbl-table thead th.is-spanner > .tbl-table-spanner {
+  white-space: normal;
+}
+/* Keep the flanking rules from collapsing the label: the rules may shrink, the
+   text may not. */
+.tbl-table thead th.is-spanner > .tbl-table-spanner::before,
+.tbl-table thead th.is-spanner > .tbl-table-spanner::after {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* ...and the case the rule above does NOT cover, which is the one that actually
+   bites. The engine gives a header cell one of three treatments:
+
+     colSpan > 1                     -> .is-spanner + .tbl-table-spanner
+     header_max_lines AND a leaf     -> .tbl-table-header-clamp (wraps)
+     otherwise                       -> bare text, no wrapper at all
+
+   A group header sitting over a SINGLE column is a non-leaf with colSpan 1, so
+   it falls into the third branch: no wrapper, no clamp, and `nowrap` inherited
+   from `thead th`. The table is `table-layout: fixed` with engine-computed
+   column widths, so the cell cannot widen to fit — the centred label overflows
+   both sides into its neighbours, landing on the adjacent banner's flanking
+   rule. (The PNG export is unaffected: it measures and wraps text itself rather
+   than relying on CSS, which is why it already looked right.)
+
+   Target exactly that branch — a header cell carrying neither wrapper — so
+   clamped leaves and spanners keep their own behaviour.
+
+   Necessary but not sufficient, though: an ordinary LEAF header with no
+   header_max_lines lands in the same no-wrapper branch. Relaxing nowrap there
+   would change header height on tables this bug never touched, and desync the
+   live HTML from the PNG export, which lays out its own text.
+
+   `data-col` separates them. mount.ts stamps it on exactly the cells whose model
+   cell has a leafKey, and model.ts sets leafKey only when
+   `colSpan === 1 && valueTier === T - 1` — the BOTTOM tier. A single-column
+   group header is colSpan 1 in an UPPER tier, so it never carries the attribute
+   while every leaf header does. The stub corner is excluded by its own class. */
+.tbl-table thead th:not(:has(.tbl-table-header-clamp)):not(:has(.tbl-table-spanner)):not([data-col]):not(.tbl-table-stub-header) {
+  white-space: normal;
 }
 
 /* Per-figure markdown body — tool-supplied text appended below the engine's
@@ -378,7 +443,7 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 /* Emphasis rows (e.g. a Total row) are fully styled by the engine (bold + highlight across the
    whole row, stub included, in HTML and PNG). Re-assert only the highlight background on the
    sticky stub cell so the sticky background rule above doesn't overpaint it. */
-.tbl-table tbody tr:has(td.is-emphasis) th.tbl-table-stub {
+.tbl-table--sticky-first tbody tr:has(td.is-emphasis) th.tbl-table-stub {
   background: var(--tbl-bg-subtle);
 }
 .figure-description ul, .figure-description ol { margin: 0 0 8px; padding-left: 20px; }

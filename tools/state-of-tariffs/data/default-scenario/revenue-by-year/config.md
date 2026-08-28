@@ -26,7 +26,7 @@ parts:
     data: data.csv
     title: Net Revenue Impact by Fiscal Year
     subtitle: Conventional and dynamic estimates. Billions of dollars.
-    notes: "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds."
+    note: "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds."
     orientation: vertical
     xAxisType: categorical
     columns:
