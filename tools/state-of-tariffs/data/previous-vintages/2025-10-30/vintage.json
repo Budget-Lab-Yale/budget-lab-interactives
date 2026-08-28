@@ -109,6 +109,8 @@
             "data": "previous-vintages/2025-10-30/baseline/current-tariff-policy/data.csv",
             "spec": {
               "title": "Current Tariff Policy",
+              "column_width": 420,
+              "column_wrap": true,
               "subtitle": "Tariff actions in effect or announced as of October 30, 2025.",
               "data": "data.csv",
               "stub": [
@@ -140,14 +142,11 @@
               },
               "stub_header": "",
               "source": "The Budget Lab analysis.",
-              "originalFigureId": "current-tariff-policy",
-              "vintageDate": "2025-10-30",
-              "scenarioTab": "default-scenario"
+              "notes": "* USMCA-compliant trade remains duty-free. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
             },
-            "body_html": "<p>Tariff actions in effect or announced as of October 30, 2025, shown alongside the retaliatory and negotiated deal tariffs announced in response.</p><p><em>Notes: * USMCA-compliant trade remains duty-free. ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. **** <a href=\"https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles\">Executive Order 14289</a> prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.</em></p>",
+            "body_html": "<p>Tariff actions in effect or announced as of October 30, 2025, shown alongside the retaliatory and negotiated deal tariffs announced in response.</p>",
             "section": "overview",
-            "figureNum": 2,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original October 30, 2025 report's tariff-action timeline graphic. Added only to the baseline scenario per instruction, not the ieepa-invalidation alternative scenario."
+            "figureNum": 2
           },
           {
             "id": "etr-by-country",
@@ -213,13 +212,9 @@
                     "value": "value"
                   },
                   "x_order": [
-                    "presub",
-                    "postsub"
+                    "Pre-substitution",
+                    "Post-substitution"
                   ],
-                  "x_labels": {
-                    "presub": "Pre-substitution",
-                    "postsub": "Post-substitution"
-                  },
                   "series_order": [
                     "China",
                     "Canada",
@@ -256,7 +251,17 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey",
+                "projected_presub": "amber",
+                "projected_postsub": "blue"
+              },
+              "series_styles": {
+                "projected_presub": { "dashed": true },
+                "projected_postsub": { "dashed": true }
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "columns": {
@@ -273,11 +278,15 @@
                 "yAxis": [
                   {
                     "y": 17.87591681981466,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate (pre-substitution)",
                     "style": "dashed"
                   },
                   {
                     "y": 17.361361639064967,
+                    "color": "blue",
+                    "labelSide": "bottom",
                     "label": "Current average effective rate (post-substitution)",
                     "style": "dashed"
                   }
@@ -286,8 +295,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (October 30, 2025) average effective rate shown for reference, both pre- and post-substitution. </p>",
             "section": "rates",
-            "figureNum": 4,
-            "note": "No direct analogue in the reference vintage structure; included as an additional figure. Baseline scenario only -- no IEEPA Invalidation equivalent exists in the source."
+            "figureNum": 4
           },
           {
             "id": "etr-since-2025",
@@ -299,6 +307,7 @@
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since January 1, 2025",
               "subtitle": "Policy through October 30, pre-substitution. Percent of goods imports.",
+              "value_suffix": "%",
               "source": "The Budget Lab analysis.",
               "xAxisType": "temporal",
               "columns": {
@@ -306,10 +315,9 @@
                 "value": "value"
               }
             },
-            "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection. Baseline scenario only.</p>",
+            "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection.</p>",
             "section": "rates",
-            "figureNum": 5,
-            "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure. Baseline scenario only."
+            "figureNum": 5
           },
           {
             "id": "consumer-prices",
@@ -321,7 +329,9 @@
               "data": "data.csv",
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -352,7 +362,7 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Household Cost of Tariffs by Income Decile",
-              "subtitle": "Tariff burden by household income decile, post-substitution.",
+              "subtitle": "Tariff burden by household income decile, pre-substitution.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
@@ -402,6 +412,7 @@
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -443,7 +454,9 @@
                 }
               },
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -455,9 +468,6 @@
                 "mode": "shared",
                 "columns": 2,
                 "pane_widths": "equal-bar"
-              },
-              "category_colors": {
-                "Total": "#6b7280"
               }
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
@@ -472,9 +482,12 @@
             "spec": {
               "data": "data.csv",
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-              "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
+              "notes": "* FY2025 reflects actual tariff revenue to date. · Estimates are net of the offsetting reduction in income and payroll tax revenue.",
               "stub": [
                 "series"
               ],
@@ -672,7 +685,7 @@
                   "chartType": "stacked",
                   "data": "data.csv",
                   "title": "Average Effective US Tariff Rate, New 2025 Policy Through October 30, IEEPA Invalidation Scenario",
-                  "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution. IEEPA Invalidation scenario only.",
+                  "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
                   "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "orientation": "horizontal",
                   "xAxisType": "categorical",
@@ -682,13 +695,9 @@
                     "value": "value"
                   },
                   "x_order": [
-                    "presub",
-                    "postsub"
+                    "Pre-substitution",
+                    "Post-substitution"
                   ],
-                  "x_labels": {
-                    "presub": "Pre-substitution",
-                    "postsub": "Post-substitution"
-                  },
                   "series_order": [
                     "China",
                     "Canada",
@@ -726,7 +735,9 @@
               "data": "data.csv",
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run. IEEPA Invalidation scenario.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -757,7 +768,7 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Household Cost of Tariffs by Income Decile",
-              "subtitle": "Tariff burden by household income decile, post-substitution. IEEPA Invalidation scenario.",
+              "subtitle": "Tariff burden by household income decile, pre-substitution. IEEPA Invalidation scenario.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
@@ -807,6 +818,7 @@
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
               "subtitle": "Percent change in the level of real GDP versus baseline. IEEPA Invalidation scenario.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -853,7 +865,9 @@
                 }
               },
               "subtitle": "Percent change in the level of real GDP versus baseline. IEEPA Invalidation scenario.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -865,9 +879,6 @@
                 "mode": "shared",
                 "columns": 2,
                 "pane_widths": "equal-bar"
-              },
-              "category_colors": {
-                "Total": "#6b7280"
               }
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner, under the IEEPA Invalidation scenario.</p>",
@@ -882,9 +893,12 @@
             "spec": {
               "data": "data.csv",
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars. IEEPA Invalidation scenario.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-              "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
+              "notes": "* FY2025 reflects actual tariff revenue to date. · Estimates are net of the offsetting reduction in income and payroll tax revenue.",
               "stub": [
                 "series"
               ],
@@ -919,11 +933,10 @@
                 }
               },
               "header_labels": {
-                "2026-35": "2026-35 Total",
-                "2025-34": "2025-34 Total"
+                "2026-35": "2026-35 Total"
               }
             },
-            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year under the IEEPA Invalidation scenario, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total. No fiscal year 2025 figures are published for this scenario, since it is a hypothetical policy counterfactual that does not apply retroactively to a fiscal year already mostly over.</p>",
+            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year under the IEEPA Invalidation scenario, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total.</p>",
             "section": "fiscal",
             "figureNum": 7
           }

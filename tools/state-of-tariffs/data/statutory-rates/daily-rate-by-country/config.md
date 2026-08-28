@@ -8,6 +8,7 @@ spec:
   data: data.csv
   title: Statutory Tariff Rate by Trading Partner — {scenario}
   subtitle: Import-weighted statutory rate on imports from each partner. Percent.
+  value_suffix: "%"
   source: The Budget Lab analysis.
   xAxisType: temporal
   yAxisPolicy:

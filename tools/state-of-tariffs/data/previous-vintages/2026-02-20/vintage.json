@@ -1,7 +1,7 @@
 {
   "id": "2026-02-20",
   "date": "2026-02-20",
-  "label": "February 20, 2026 Update",
+  "label": "February 20, 2026 — SCOTUS Ruling Update",
   "published_at": "2026-02-20T00:00:00-0500",
   "version": "1.0",
   "changes_html": "<h2>SCOTUS Decision</h2><p>On February 20th, 2026, SCOTUS decided that the President&rsquo;s use of IEEPA to impose reciprocal tariffs on other countries exceeded his authority under that law and held that the IEEPA tariffs must be vacated. These tariffs made up most of the tariff regime that has been put in place over the course of 2025. The most <a href=\"https://www.cbp.gov/newsroom/stats/trade\">recent</a> estimates from the U.S. Customs and Border Protection imply that $142 billion will have been collected from tariffs enacted under IEEPA authority over the course of 2025. SCOTUS did not rule out allowing importers to claim refunds on any IEEPA tariffs they may have paid. While there are a range of questions regarding the process firms will go through to obtain refunds, it is likely that a substantial portion of the revenue raised via IEEPA in 2025 will be returned to firms.</p><h2>Changes Since the Last Report</h2><p>TBL has not made any substantial changes to the model since our <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-january-19-2026\">January 19th report</a>.</p>",
@@ -114,7 +114,7 @@
                 }
               }
             },
-            "body_html": "<h2>Current Policy</h2><p>This section presents projected effects as of February 20, 2026, across three policy scenarios: Current Policy with IEEPA refunds, Current Policy without refunds, and a counterfactual in which IEEPA tariffs remain upheld. Estimated impacts are measured against a January 2025 tariff-policy baseline. This table is identical across both scenario tabs.</p>",
+            "body_html": "<h2>Current Policy</h2><p>This section presents projected effects as of February 20, 2026, across three policy scenarios: Current Policy with IEEPA refunds, Current Policy without refunds, and a counterfactual in which IEEPA tariffs remain upheld. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
             "section": "overview",
             "lead": true,
             "figureNum": 1
@@ -126,6 +126,8 @@
             "data": "previous-vintages/2026-02-20/current-policy/current-tariff-policy/data.csv",
             "spec": {
               "title": "Current Tariff Policy",
+              "column_width": 420,
+              "column_wrap": true,
               "subtitle": "Tariff actions in effect as of February 20, 2026.",
               "data": "data.csv",
               "stub": [
@@ -137,14 +139,22 @@
               ],
               "value": "value",
               "column_order": [
-                "description"
+                "description",
+                "rate"
               ],
               "header_labels": {
-                "description": "Details"
+                "description": "Description",
+                "rate": "Current Tariff Rate"
               },
               "row_order": [
-                "Rate",
-                "Exemptions",
+                "Brazil",
+                "Canada",
+                "Mexico",
+                "China",
+                "European Union",
+                "United Kingdom",
+                "Trade-deal partners (Japan, Korea, Vietnam, etc.)",
+                "Other",
                 "Steel",
                 "Aluminum",
                 "Copper",
@@ -154,15 +164,11 @@
                 "Lumber / wood products"
               ],
               "stub_header": "",
-              "source": "The Budget Lab analysis.",
-              "originalFigureId": "current-tariff-policy",
-              "vintageDate": "2026-02-20",
-              "scenarioTab": "current-policy"
+              "source": "The Budget Lab analysis."
             },
-            "body_html": "<p>Tariff actions in effect as of February 20, 2026, under Current Policy: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B), each of which preempts Section 122 for the covered products.</p><p><em>Source: The Budget Lab analysis.</em></p>",
+            "body_html": "<p>Tariff actions in effect as of February 20, 2026: broad tariffs applied under IEEPA authority by trading region, which the Supreme Court ruled must be vacated, and product-specific tariffs applied under Section 232 authority by sector, which are unaffected by the ruling. The Description column applies only to the IEEPA rows; the Current Tariff Rate column applies only to the Section 232 rows.</p>",
             "section": "overview",
-            "figureNum": 2,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original February 20, 2026 report's tariff-policy summary tables. Added only to the current-policy scenario per instruction, not the ieepa-upheld alternative scenario, since Section 122/232 tariffs are specific to the Current Policy scenario."
+            "figureNum": 2
           },
           {
             "id": "etr-by-country",
@@ -222,7 +228,17 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey",
+                "projected_presub": "amber",
+                "projected_postsub": "blue"
+              },
+              "series_styles": {
+                "projected_presub": { "dashed": true },
+                "projected_postsub": { "dashed": true }
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "columns": {
@@ -235,23 +251,26 @@
                 "projected_presub": "Projected (pre-substitution)",
                 "projected_postsub": "Projected (post-substitution)"
               },
-              "notes": "The source workbook provides a single current-rate reference line (reflecting Current Policy), used identically on both scenario tabs; no separate IEEPA Upheld reference line was published.",
               "annotations": {
                 "yAxis": [
                   {
                     "y": 9.1373188222435,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate (pre-substitution)",
                     "style": "dashed"
                   },
                   {
                     "y": 7.96842395688365,
+                    "color": "blue",
+                    "labelSide": "bottom",
                     "label": "Current average effective rate (post-substitution)",
                     "style": "dashed"
                   }
                 ]
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution. This chart is identical across both scenario tabs.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
             "figureNum": 4
           },
@@ -265,6 +284,7 @@
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -306,7 +326,9 @@
                 }
               },
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -318,8 +340,7 @@
                 "mode": "shared",
                 "columns": 2,
                 "pane_widths": "equal-bar"
-              },
-              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries."
+              }
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner, under Current Policy.</p>",
             "section": "economy",
@@ -336,6 +357,9 @@
             "spec": {
               "data": "data.csv",
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars.",
               "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -386,7 +410,7 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Household Cost of Tariffs by Income Decile",
-              "subtitle": "Tariff burden by household income decile, post-substitution.",
+              "subtitle": "Tariff burden by household income decile, pre-substitution.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
@@ -436,7 +460,9 @@
               "data": "data.csv",
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -569,7 +595,7 @@
                 }
               }
             },
-            "body_html": "<h2>IEEPA Upheld</h2><p>This section presents projected effects as of February 20, 2026, across three policy scenarios: Current Policy with IEEPA refunds, Current Policy without refunds, and a counterfactual in which IEEPA tariffs remain upheld. Estimated impacts are measured against a January 2025 tariff-policy baseline. This table is identical across both scenario tabs.</p>",
+            "body_html": "<h2>IEEPA Upheld</h2><p>This section presents projected effects as of February 20, 2026, across three policy scenarios: Current Policy with IEEPA refunds, Current Policy without refunds, and a counterfactual in which IEEPA tariffs remain upheld. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
             "section": "overview",
             "lead": true,
             "figureNum": 1
@@ -632,7 +658,17 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey",
+                "projected_presub": "amber",
+                "projected_postsub": "blue"
+              },
+              "series_styles": {
+                "projected_presub": { "dashed": true },
+                "projected_postsub": { "dashed": true }
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "columns": {
@@ -645,23 +681,26 @@
                 "projected_presub": "Projected (pre-substitution)",
                 "projected_postsub": "Projected (post-substitution)"
               },
-              "notes": "The source workbook provides a single current-rate reference line (reflecting Current Policy), used identically on both scenario tabs; no separate IEEPA Upheld reference line was published.",
               "annotations": {
                 "yAxis": [
                   {
                     "y": 9.1373188222435,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate (pre-substitution)",
                     "style": "dashed"
                   },
                   {
                     "y": 7.96842395688365,
+                    "color": "blue",
+                    "labelSide": "bottom",
                     "label": "Current average effective rate (post-substitution)",
                     "style": "dashed"
                   }
                 ]
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution. This chart is identical across both scenario tabs.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
             "figureNum": 3
           },
@@ -675,6 +714,7 @@
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -716,7 +756,9 @@
                 }
               },
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -728,8 +770,7 @@
                 "mode": "shared",
                 "columns": 2,
                 "pane_widths": "equal-bar"
-              },
-              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries."
+              }
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner, under the IEEPA Upheld scenario.</p>",
             "section": "economy",
@@ -746,6 +787,9 @@
             "spec": {
               "data": "data.csv",
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars.",
               "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -796,7 +840,7 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Household Cost of Tariffs by Income Decile",
-              "subtitle": "Tariff burden by household income decile, post-substitution.",
+              "subtitle": "Tariff burden by household income decile, pre-substitution.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
@@ -846,7 +890,9 @@
               "data": "data.csv",
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {

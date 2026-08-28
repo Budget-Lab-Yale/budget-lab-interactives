@@ -92,6 +92,11 @@
                   }
                 },
                 "rows": {
+                  "Q4 2026 level change (%)": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  },
                   "Long-run": {
                     "type": "number",
                     "decimals": 2,
@@ -137,6 +142,8 @@
             "data": "previous-vintages/2026-03-09/section-122-expires/current-tariff-policy/data.csv",
             "spec": {
               "title": "Current Tariff Policy",
+              "column_width": 420,
+              "column_wrap": true,
               "subtitle": "Tariff actions in effect as of March 9, 2026.",
               "data": "data.csv",
               "stub": [
@@ -166,14 +173,11 @@
               ],
               "stub_header": "",
               "source": "The Budget Lab analysis.",
-              "originalFigureId": "current-tariff-policy",
-              "vintageDate": "2026-03-09",
-              "scenarioTab": "section-122-expires"
+              "notes": "Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap."
             },
-            "body_html": "<p>Tariff actions in effect as of March 9, 2026: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p><p><em>Notes: Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap.</em></p><p><em>Source: The Budget Lab analysis.</em></p>",
+            "body_html": "<p>Tariff actions in effect as of March 9, 2026: the broad flat tariff applied under Section 122 authority, and product-specific tariffs applied under Section 232 authority by sector.</p>",
             "section": "overview",
-            "figureNum": 2,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original March 9, 2026 report's tariff-policy summary tables, using a single dataset with a 'category' column to group Panel A (Section 122 broad tariff) and Panel B (Section 232 product tariffs) rows. Added only to the section-122-expires scenario per instruction, not the section-122-extended alternative scenario."
+            "figureNum": 2
           },
           {
             "id": "etr-by-country",
@@ -233,7 +237,17 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey",
+                "projected_presub": "amber",
+                "projected_postsub": "blue"
+              },
+              "series_styles": {
+                "projected_presub": { "dashed": true },
+                "projected_postsub": { "dashed": true }
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "columns": {
@@ -250,11 +264,15 @@
                 "yAxis": [
                   {
                     "y": 7.29447751484948,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate (pre-substitution)",
                     "style": "dashed"
                   },
                   {
                     "y": 6.24957852233089,
+                    "color": "blue",
+                    "labelSide": "bottom",
                     "label": "Current average effective rate (post-substitution)",
                     "style": "dashed"
                   }
@@ -263,8 +281,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
-            "figureNum": 4,
-            "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+            "figureNum": 4
           },
           {
             "id": "distribution",
@@ -324,7 +341,8 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
-              "subtitle": "Percentage point change against baseline",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -365,8 +383,10 @@
                   ]
                 }
               },
-              "subtitle": "Percentage points",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7, The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -392,6 +412,9 @@
             "spec": {
               "data": "data.csv",
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars.",
               "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -525,6 +548,11 @@
                   }
                 },
                 "rows": {
+                  "Q4 2026 level change (%)": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  },
                   "Long-run": {
                     "type": "number",
                     "decimals": 2,
@@ -621,7 +649,17 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey",
+                "projected_presub": "amber",
+                "projected_postsub": "blue"
+              },
+              "series_styles": {
+                "projected_presub": { "dashed": true },
+                "projected_postsub": { "dashed": true }
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "columns": {
@@ -638,11 +676,15 @@
                 "yAxis": [
                   {
                     "y": 10.4882425637849,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate (pre-substitution)",
                     "style": "dashed"
                   },
                   {
                     "y": 9.14835051661042,
+                    "color": "blue",
+                    "labelSide": "bottom",
                     "label": "Current average effective rate (post-substitution)",
                     "style": "dashed"
                   }
@@ -651,8 +693,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
-            "figureNum": 3,
-            "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+            "figureNum": 3
           },
           {
             "id": "distribution",
@@ -712,7 +753,8 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
-              "subtitle": "Percentage point change against baseline",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -753,8 +795,10 @@
                   ]
                 }
               },
-              "subtitle": "Percentage points",
+              "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7, The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -780,6 +824,9 @@
             "spec": {
               "data": "data.csv",
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars, if Section 122 tariffs are extended.",
               "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",

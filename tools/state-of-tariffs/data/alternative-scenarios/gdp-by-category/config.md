@@ -16,6 +16,7 @@ spec:
       - {id: sector, label: Sector}
       - {id: country, label: Trading Partner}
   subtitle: Percent change in the level of real GDP versus baseline, by scenario.
+  value_suffix: "%"
   source: GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.
   orientation: vertical
   xAxisType: categorical

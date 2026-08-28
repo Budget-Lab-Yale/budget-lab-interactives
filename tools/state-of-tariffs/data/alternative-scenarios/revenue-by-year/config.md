@@ -33,7 +33,7 @@ parts:
     data: data.csv
     title: Net Revenue Impact by Fiscal Year
     subtitle: Billions of dollars, by scenario.
-    notes: "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds."
+    note: "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds."
     orientation: vertical
     xAxisType: categorical
     columns:

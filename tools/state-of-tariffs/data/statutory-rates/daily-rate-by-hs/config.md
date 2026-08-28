@@ -8,6 +8,7 @@ spec:
   data: data.csv
   title: Statutory Tariff Rate for Selected Products — {scenario}
   subtitle: Import-weighted statutory rate by product group. Percent.
+  value_suffix: "%"
   note: "Product groups are based on underlying HTS product codes. Most groups follow HS chapters; semiconductors are HTS headings 8541–8542 and are excluded from the broader electronics category. Chapter 99 tariff provisions are assigned to the underlying product group."
   source: The Budget Lab analysis.
   xAxisType: temporal

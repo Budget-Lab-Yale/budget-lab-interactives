@@ -4,7 +4,7 @@
   "label": "June 17, 2025",
   "published_at": "2025-06-17T00:00:00-0400",
   "version": "1.0",
-  "changes_html": "<h2>About This Vintage</h2> <h2>Changes Since the Last Update</h2><p>Since the June 1 report:</p><ul><li>The Department of Commerce issued a <a href=\"https://public-inspection.federalregister.gov/2025-11067.pdf\">notice</a> expanding the 50% steel &amp; aluminum tariffs to cover &ldquo;steel derivatives&rdquo; including many household appliances like refrigerators, freezers, dish washers, washing machines, and dryers.</li><li>China ended export restrictions on rare earths and magnets as a result of the <a href=\"https://www.csis.org/analysis/trump-strikes-deal-restore-rare-earths-access\">June 11 US-China deal</a> (which otherwise ossified tariffs already assumed by TBL).</li><li>TBL changed its tariff distributional analysis to be more internally consistent with the concepts and definitions used in its tax model. The changes have the effect of reducing the regressivity of tariffs. See the Methodological Appendix for more detail.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+  "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the June 1 report:</p><ul><li>The Department of Commerce issued a <a href=\"https://public-inspection.federalregister.gov/2025-11067.pdf\">notice</a> expanding the 50% steel &amp; aluminum tariffs to cover &ldquo;steel derivatives&rdquo; including many household appliances like refrigerators, freezers, dish washers, washing machines, and dryers.</li><li>China ended export restrictions on rare earths and magnets as a result of the <a href=\"https://www.csis.org/analysis/trump-strikes-deal-restore-rare-earths-access\">June 11 US-China deal</a> (which otherwise ossified tariffs already assumed by TBL).</li><li>TBL changed its tariff distributional analysis to be more internally consistent with the concepts and definitions used in its tax model. The changes have the effect of reducing the regressivity of tariffs. See the Methodological Appendix for more detail.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
   "scenarios": [
     {
       "id": "baseline",
@@ -43,6 +43,9 @@
             "data": "previous-vintages/2025-06-17/baseline/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
+              "group_notes": {
+                "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+              },
               "subtitle": "Projected effects of tariff policy as of June 17, 2025.",
               "data": "data.csv",
               "stub": [
@@ -52,6 +55,7 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "notes": "Increases steel & aluminum tariffs to 50%.",
               "group_labels": {
                 "Tariff rate": "Tariff rates, as of June 17, 2025",
                 "Consumer price increase": "Consumer price increase",
@@ -74,7 +78,7 @@
                   "Tariff rate": {
                     "type": "number",
                     "decimals": 1,
-                    "suffix": "%"
+                    "suffix": " p.p."
                   },
                   "Household cost": {
                     "type": "currency",
@@ -101,8 +105,7 @@
                   },
                   "Change in payroll employment, 2025 Q4 (thousands)": {
                     "type": "number",
-                    "decimals": 0,
-                    "suffix": " jobs"
+                    "decimals": 0
                   }
                 }
               }
@@ -119,6 +122,8 @@
             "data": "previous-vintages/2025-06-17/baseline/current-tariff-policy/data.csv",
             "spec": {
               "title": "Current Tariff Policy",
+              "column_width": 420,
+              "column_wrap": true,
               "subtitle": "Tariff actions in effect or announced as of June 17, 2025.",
               "data": "data.csv",
               "stub": [
@@ -146,14 +151,11 @@
               },
               "stub_header": "",
               "source": "The Budget Lab analysis.",
-              "originalFigureId": "current-tariff-policy",
-              "vintageDate": "2025-06-17",
-              "scenarioTab": "default-scenario"
+              "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
             },
-            "body_html": "<p>Tariff actions in effect or announced as of June 17, 2025, shown alongside the retaliatory actions announced in response.</p><p><em>Notes: * USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. **** <a href=\"https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles\">Executive Order 14289</a> prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.</em></p>",
+            "body_html": "<p>Tariff actions in effect or announced as of June 17, 2025, shown alongside the retaliatory actions announced in response.</p>",
             "section": "overview",
-            "figureNum": 2,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original June 17, 2025 report's tariff-action timeline graphic."
+            "figureNum": 2
           },
           {
             "id": "etr-by-country",
@@ -219,13 +221,9 @@
                     "value": "value"
                   },
                   "x_order": [
-                    "presub",
-                    "postsub"
+                    "Pre-substitution",
+                    "Post-substitution"
                   ],
-                  "x_labels": {
-                    "presub": "Pre-substitution",
-                    "postsub": "Post-substitution"
-                  },
                   "series_order": [
                     "China",
                     "Canada",
@@ -262,8 +260,19 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey",
+                "projected_presub": "amber",
+                "projected_postsub": "blue"
+              },
+              "series_styles": {
+                "projected_presub": { "dashed": true },
+                "projected_postsub": { "dashed": true }
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "note": "* Includes 50% steel & aluminum tariff.",
               "xAxisType": "temporal",
               "columns": {
                 "x": "year",
@@ -279,11 +288,15 @@
                 "yAxis": [
                   {
                     "y": 15.821947635455782,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate (pre-substitution)",
                     "style": "dashed"
                   },
                   {
                     "y": 14.715204966895712,
+                    "color": "blue",
+                    "labelSide": "bottom",
                     "label": "Current average effective rate (post-substitution)",
                     "style": "dashed"
                   }
@@ -292,8 +305,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (June 17, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
-            "figureNum": 4,
-            "note": ""
+            "figureNum": 4
           },
           {
             "id": "consumer-prices",
@@ -305,7 +317,9 @@
               "data": "data.csv",
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -336,7 +350,7 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Household Cost of Tariffs by Income Decile",
-              "subtitle": "Tariff burden by household income decile, post-substitution.",
+              "subtitle": "Tariff burden by household income decile, pre-substitution.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
@@ -385,6 +399,7 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Comparison of 2027 Distributional Effects of 2025 Tariffs to Date",
+              "note": "Insufficient data for first decile.",
               "subtitle": "Through June 16. By household income decile.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",
@@ -427,8 +442,7 @@
             },
             "body_html": "<p>Compares the distributional-effects methodology introduced in this release (\"New Method\") against the methodology used in prior releases (\"Old Method\"), both projected out to 2027, by household income decile and basis. </p>",
             "section": "prices-households",
-            "figureNum": 7,
-            "note": ""
+            "figureNum": 7
           },
           {
             "id": "real-gdp",
@@ -440,6 +454,7 @@
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -481,7 +496,9 @@
                 }
               },
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {

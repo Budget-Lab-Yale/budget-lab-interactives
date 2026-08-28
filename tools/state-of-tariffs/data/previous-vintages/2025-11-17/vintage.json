@@ -114,6 +114,12 @@
             "data": "previous-vintages/2025-11-17/baseline/current-tariff-policy/data.csv",
             "spec": {
               "title": "Current Tariff Policy",
+              "group_notes": {
+                "Broad Tariffs under IEEPA Authority": "The Reciprocal and Fentanyl Tariff columns apply to these rows only.",
+                "Product-Specific Tariffs under Section 232 Authority": "The Current Tariff Rate column applies to these rows only."
+              },
+              "column_width": 420,
+              "column_wrap": true,
               "subtitle": "Tariff actions in effect as of November 17, 2025.",
               "data": "data.csv",
               "stub": [
@@ -151,15 +157,11 @@
                 "Lumber / wood products"
               ],
               "stub_header": "",
-              "source": "The Budget Lab analysis.",
-              "originalFigureId": "current-tariff-policy",
-              "vintageDate": "2025-11-17",
-              "scenarioTab": "default-scenario"
+              "source": "The Budget Lab analysis."
             },
-            "body_html": "<p>Tariff actions in effect as of November 17, 2025: broad tariffs applied under IEEPA authority by trading region (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B). The “Reciprocal” and “Fentanyl” Tariff columns apply only to Panel A rows; the Current Tariff Rate column applies only to Panel B rows.</p><p><em>Source: The Budget Lab analysis.</em></p>",
+            "body_html": "<p>Tariff actions in effect as of November 17, 2025: broad tariffs applied under IEEPA authority by trading region, and product-specific tariffs applied under Section 232 authority by sector.</p>",
             "section": "overview",
-            "figureNum": 2,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original November 17, 2025 report's tariff-policy summary tables. Uses a single dataset with a 'category' column to group Panel A (IEEPA broad tariffs by region) and Panel B (Section 232 product tariffs by sector) rows, rendered as one grouped table (same stub-grouping mechanism as summary-statistics) rather than two separate table parts. Added only to the baseline scenario per instruction, not the ieepa-invalidation alternative scenario."
+            "figureNum": 2
           },
           {
             "id": "etr-by-country",
@@ -236,8 +238,19 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey",
+                "projected_presub": "amber",
+                "projected_postsub": "blue"
+              },
+              "series_styles": {
+                "projected_presub": { "dashed": true },
+                "projected_postsub": { "dashed": true }
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "note": "TBL's method for calculating effective tariff rates (ETR) changed slightly on November 17. All else equal this change leads to a 0.9pp increase in the ETR. Values prior to November 17 do not reflect this change.",
               "xAxisType": "temporal",
               "columns": {
                 "x": "year",
@@ -253,11 +266,15 @@
                 "yAxis": [
                   {
                     "y": 16.804955336938377,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate (pre-substitution)",
                     "style": "dashed"
                   },
                   {
                     "y": 14.355874079073295,
+                    "color": "blue",
+                    "labelSide": "bottom",
                     "label": "Current average effective rate (post-substitution)",
                     "style": "dashed"
                   }
@@ -266,8 +283,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (November 17, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
-            "figureNum": 4,
-            "note": "No direct analogue in the reference vintage structure; included as an additional figure. Baseline scenario only."
+            "figureNum": 4
           },
           {
             "id": "etr-since-2025",
@@ -279,6 +295,7 @@
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since January 1, 2025",
               "subtitle": "Policy through November 17, pre-substitution. Percent of goods imports.",
+              "value_suffix": "%",
               "source": "The Budget Lab analysis.",
               "xAxisType": "temporal",
               "columns": {
@@ -286,10 +303,9 @@
                 "value": "value"
               }
             },
-            "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection. Baseline scenario only.</p>",
+            "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection.</p>",
             "section": "rates",
-            "figureNum": 5,
-            "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure. Baseline scenario only."
+            "figureNum": 5
           },
           {
             "id": "consumer-prices",
@@ -301,7 +317,9 @@
               "data": "data.csv",
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -332,7 +350,7 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Household Cost of Tariffs by Income Decile",
-              "subtitle": "Tariff burden by household income decile, post-substitution.",
+              "subtitle": "Tariff burden by household income decile, pre-substitution.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
@@ -382,6 +400,7 @@
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -423,7 +442,9 @@
                 }
               },
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -449,6 +470,9 @@
             "spec": {
               "data": "data.csv",
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -673,7 +697,9 @@
               "data": "data.csv",
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -704,7 +730,7 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Household Cost of Tariffs by Income Decile",
-              "subtitle": "Tariff burden by household income decile, post-substitution.",
+              "subtitle": "Tariff burden by household income decile, pre-substitution.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
@@ -754,6 +780,7 @@
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -795,7 +822,9 @@
                 }
               },
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -821,6 +850,9 @@
             "spec": {
               "data": "data.csv",
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars. IEEPA Invalidation scenario.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",

@@ -4,7 +4,7 @@
   "label": "May 29, 2025",
   "published_at": "2025-05-29T00:00:00-0400",
   "version": "1.0",
-  "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-may-23-2025\">May 23 report</a>:</p><ul><li>The U.S. Court of International Trade <a href=\"https://www.cit.uscourts.gov/sites/cit/files/25-66.pdf\">invalidated</a> tariffs announced under IEEPA authority, including the &ldquo;reciprocal&rdquo; tariffs and 25% tariffs on Canada and Mexico.</li><li>President Trump delayed the previously-announced 50% tariff on the EU.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+  "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-may-23-2025\">May 23 report</a>:</p><ul><li>The U.S. Court of International Trade <a href=\"https://www.cit.uscourts.gov/sites/cit/files/25-66.pdf\">invalidated</a> tariffs announced under IEEPA authority, including the &ldquo;reciprocal&rdquo; tariffs and 25% tariffs on Canada and Mexico.</li><li>President Trump delayed the previously-announced 50% tariff on the EU.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
   "scenarios": [
     {
       "id": "baseline",
@@ -43,6 +43,9 @@
             "data": "previous-vintages/2025-05-29/baseline/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
+              "group_notes": {
+                "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+              },
               "subtitle": "Projected effects of tariff policy as of May 29, 2025.",
               "data": "data.csv",
               "stub": [
@@ -52,6 +55,7 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "notes": "Removes all IEEPA tariffs per May 28 court ruling.",
               "group_labels": {
                 "Tariff rate": "Tariff rates, as of May 29, 2025",
                 "Consumer price increase": "Consumer price increase",
@@ -74,7 +78,7 @@
                   "Tariff rate": {
                     "type": "number",
                     "decimals": 1,
-                    "suffix": "%"
+                    "suffix": " p.p."
                   },
                   "Household cost": {
                     "type": "currency",
@@ -101,8 +105,7 @@
                   },
                   "Change in payroll employment, 2025 Q4 (thousands)": {
                     "type": "number",
-                    "decimals": 0,
-                    "suffix": " jobs"
+                    "decimals": 0
                   }
                 }
               }
@@ -119,6 +122,8 @@
             "data": "previous-vintages/2025-05-29/baseline/current-tariff-policy/data.csv",
             "spec": {
               "title": "Current Tariff Policy",
+              "column_width": 420,
+              "column_wrap": true,
               "subtitle": "Tariff actions in effect or announced as of May 29, 2025.",
               "data": "data.csv",
               "stub": [
@@ -147,14 +152,11 @@
               },
               "stub_header": "",
               "source": "The Budget Lab analysis.",
-              "originalFigureId": "current-tariff-policy",
-              "vintageDate": "2025-05-29",
-              "scenarioTab": "default-scenario"
+              "notes": "* TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · ** TBL simulated this as a prohibitive Chinese export tariff on these commodities."
             },
-            "body_html": "<p>Tariff actions in effect or announced as of May 29, 2025, shown alongside the retaliatory actions announced in response. On May 28, 2025, the Court of International Trade ruled the IEEPA-based tariffs (the China/Canada/Mexico fentanyl-trafficking tariffs and the April 2 worldwide reciprocal tariffs) unlawful; only the Section 232 tariffs on automobiles and steel and aluminum remain reflected here on the U.S. side, while retaliatory actions taken in response to the now-enjoined tariffs are shown as originally announced.</p><p><em>Notes: * TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. ** TBL simulated this as a prohibitive Chinese export tariff on these commodities.</em></p>",
+            "body_html": "<p>Tariff actions in effect or announced as of May 29, 2025, shown alongside the retaliatory actions announced in response. On May 28, 2025, the Court of International Trade ruled the IEEPA-based tariffs (the China/Canada/Mexico fentanyl-trafficking tariffs and the April 2 worldwide reciprocal tariffs) unlawful; only the Section 232 tariffs on automobiles and steel and aluminum remain reflected here on the U.S. side, while retaliatory actions taken in response to the now-enjoined tariffs are shown as originally announced.</p>",
             "section": "overview",
-            "figureNum": 2,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original May 29, 2025 report's tariff-action timeline graphic. Reflects the May 28, 2025 CIT ruling vacating the IEEPA-based tariffs."
+            "figureNum": 2
           },
           {
             "id": "etr-by-country",
@@ -220,13 +222,9 @@
                     "value": "value"
                   },
                   "x_order": [
-                    "presub",
-                    "postsub"
+                    "Pre-substitution",
+                    "Post-substitution"
                   ],
-                  "x_labels": {
-                    "presub": "Pre-substitution",
-                    "postsub": "Post-substitution"
-                  },
                   "series_order": [
                     "China",
                     "Canada",
@@ -263,8 +261,19 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey",
+                "projected_presub": "amber",
+                "projected_postsub": "blue"
+              },
+              "series_styles": {
+                "projected_presub": { "dashed": true },
+                "projected_postsub": { "dashed": true }
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "note": "* Assumes removal of all 2025 IEEPA tariffs.",
               "xAxisType": "temporal",
               "columns": {
                 "x": "year",
@@ -280,11 +289,15 @@
                 "yAxis": [
                   {
                     "y": 6.940320967595329,
+                    "color": "amber",
+                    "labelSide": "bottom",
                     "label": "Current average effective rate (pre-substitution)",
                     "style": "dashed"
                   },
                   {
                     "y": 7.026701608698674,
+                    "color": "blue",
+                    "labelSide": "top",
                     "label": "Current average effective rate (post-substitution)",
                     "style": "dashed"
                   }
@@ -293,8 +306,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (May 29, 2025) average effective rate shown for reference, both pre- and post-substitution. This report reflects the removal of IEEPA tariffs per the May 28, 2025 court ruling.</p>",
             "section": "rates",
-            "figureNum": 4,
-            "note": ""
+            "figureNum": 4
           },
           {
             "id": "consumer-prices",
@@ -306,7 +318,9 @@
               "data": "data.csv",
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -337,7 +351,8 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Household Cost of Tariffs by Income Decile",
-              "subtitle": "Tariff burden by household income decile, post-substitution.",
+              "note": "Insufficient data for first decile.",
+              "subtitle": "Tariff burden by household income decile, pre-substitution.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
@@ -387,6 +402,7 @@
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -428,7 +444,9 @@
                 }
               },
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {

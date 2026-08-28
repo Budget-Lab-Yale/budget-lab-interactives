@@ -69,17 +69,17 @@ Labor market,"Unemployment rate (p.p.), end of 2026",pct10,expires,0.04036846112
 Labor market,"Unemployment rate (p.p.), end of 2026",pct10,extended,0.114461805973387,pp,unemployment_2026
 Labor market,"Unemployment rate (p.p.), end of 2026",pct15,expires,0.044564780321128,pp,unemployment_2026
 Labor market,"Unemployment rate (p.p.), end of 2026",pct15,extended,0.155768641755185,pp,unemployment_2026
-Revenue (10-year),Conventional,current,only,1607.76978419395,usd_b,revenue_conventional
-Revenue (10-year),Conventional,before_scotus,only,2318.3004077690803,usd_b,revenue_conventional
-Revenue (10-year),Conventional,immediately_following_scotus,only,875.0848738471,usd_b,revenue_conventional
-Revenue (10-year),Conventional,pct10,expires,898.7040579945719,usd_b,revenue_conventional
-Revenue (10-year),Conventional,pct10,extended,1607.76978419395,usd_b,revenue_conventional
-Revenue (10-year),Conventional,pct15,expires,910.5136500683079,usd_b,revenue_conventional
-Revenue (10-year),Conventional,pct15,extended,1886.43501730652,usd_b,revenue_conventional
-Revenue (10-year),Dynamic,current,only,1487.65078419395,usd_b,revenue_dynamic
-Revenue (10-year),Dynamic,before_scotus,only,2098.63840776908,usd_b,revenue_dynamic
-Revenue (10-year),Dynamic,immediately_following_scotus,only,810.8278738471,usd_b,revenue_dynamic
-Revenue (10-year),Dynamic,pct10,expires,833.000057994572,usd_b,revenue_dynamic
-Revenue (10-year),Dynamic,pct10,extended,1487.65078419395,usd_b,revenue_dynamic
-Revenue (10-year),Dynamic,pct15,expires,844.082650068308,usd_b,revenue_dynamic
-Revenue (10-year),Dynamic,pct15,extended,1727.1420173065198,usd_b,revenue_dynamic
+Revenue (10-year),Conventional,current,only,1607.76978419395,usd_bn,revenue_conventional
+Revenue (10-year),Conventional,before_scotus,only,2318.3004077690803,usd_bn,revenue_conventional
+Revenue (10-year),Conventional,immediately_following_scotus,only,875.0848738471,usd_bn,revenue_conventional
+Revenue (10-year),Conventional,pct10,expires,898.7040579945719,usd_bn,revenue_conventional
+Revenue (10-year),Conventional,pct10,extended,1607.76978419395,usd_bn,revenue_conventional
+Revenue (10-year),Conventional,pct15,expires,910.5136500683079,usd_bn,revenue_conventional
+Revenue (10-year),Conventional,pct15,extended,1886.43501730652,usd_bn,revenue_conventional
+Revenue (10-year),Dynamic,current,only,1487.65078419395,usd_bn,revenue_dynamic
+Revenue (10-year),Dynamic,before_scotus,only,2098.63840776908,usd_bn,revenue_dynamic
+Revenue (10-year),Dynamic,immediately_following_scotus,only,810.8278738471,usd_bn,revenue_dynamic
+Revenue (10-year),Dynamic,pct10,expires,833.000057994572,usd_bn,revenue_dynamic
+Revenue (10-year),Dynamic,pct10,extended,1487.65078419395,usd_bn,revenue_dynamic
+Revenue (10-year),Dynamic,pct15,expires,844.082650068308,usd_bn,revenue_dynamic
+Revenue (10-year),Dynamic,pct15,extended,1727.1420173065198,usd_bn,revenue_dynamic

@@ -109,6 +109,8 @@
             "data": "previous-vintages/2026-01-17/baseline/current-tariff-policy/data.csv",
             "spec": {
               "title": "Current Tariff Policy",
+              "column_width": 420,
+              "column_wrap": true,
               "subtitle": "Tariff actions in effect as of January 19, 2026.",
               "data": "data.csv",
               "stub": [
@@ -142,15 +144,11 @@
                 "Lumber / wood products"
               ],
               "stub_header": "",
-              "source": "The Budget Lab analysis.",
-              "originalFigureId": "current-tariff-policy",
-              "vintageDate": "2026-01-19",
-              "scenarioTab": "default-scenario"
+              "source": "The Budget Lab analysis."
             },
-            "body_html": "<p>Tariff actions in effect as of January 19, 2026: broad tariffs applied under IEEPA authority by trading region (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p><p><em>Source: The Budget Lab analysis.</em></p>",
+            "body_html": "<p>Tariff actions in effect as of January 19, 2026: broad tariffs applied under IEEPA authority by trading region, and product-specific tariffs applied under Section 232 authority by sector.</p>",
             "section": "overview",
-            "figureNum": 2,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original January 19, 2026 report's tariff-policy summary tables, using a single dataset with a 'category' column to group Panel A and Panel B rows. Added only to the default-scenario per instruction, not the with-greenland-tariffs alternative scenario."
+            "figureNum": 2
           },
           {
             "id": "etr-by-country",
@@ -197,7 +195,7 @@
               ],
               "source": "GTAP v7, The Budget Lab analysis."
             },
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of January 19, 2026, before and after trade substitution -- shown as a table with three metrics (own tariff rate, import share, and additive contribution to the total).</p>",
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of January 19, 2026, before and after trade substitution.</p>",
             "section": "rates",
             "figureNum": 3
           },
@@ -210,7 +208,17 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey",
+                "projected_presub": "amber",
+                "projected_postsub": "blue"
+              },
+              "series_styles": {
+                "projected_presub": { "dashed": true },
+                "projected_postsub": { "dashed": true }
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "columns": {
@@ -227,11 +235,15 @@
                 "yAxis": [
                   {
                     "y": 16.8777713913239,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate (pre-substitution)",
                     "style": "dashed"
                   },
                   {
                     "y": 14.3491128685741,
+                    "color": "blue",
+                    "labelSide": "bottom",
                     "label": "Current average effective rate (post-substitution)",
                     "style": "dashed"
                   }
@@ -240,8 +252,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (January 19, 2026) average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
-            "figureNum": 4,
-            "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+            "figureNum": 4
           },
           {
             "id": "consumer-prices",
@@ -253,7 +264,9 @@
               "data": "data.csv",
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change to price level",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -262,7 +275,6 @@
                 "series": "substitution",
                 "value": "value"
               },
-              "notes": "'nec' = 'Not elsewhere classified.'",
               "series_colors": {
                 "presub": "blue",
                 "postsub": "amber"
@@ -334,7 +346,8 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
-              "subtitle": "US tariffs implemented through January 19. Percentage point change against baseline",
+              "subtitle": "US tariffs implemented through January 19. Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -375,8 +388,10 @@
                   ]
                 }
               },
-              "subtitle": "U.S. tariffs implemented through January 19, 2026, plus foreign retaliation. Percentage points.",
+              "subtitle": "U.S. tariffs implemented through January 19, 2026, plus foreign retaliation. Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7, The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -401,6 +416,9 @@
             "data": "previous-vintages/2026-01-17/baseline/revenue-by-year/data.csv",
             "spec": {
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars.",
               "data": "data.csv",
               "stub": [
@@ -455,7 +473,7 @@
       "tab": {
         "id": "with-greenland-tariffs",
         "label": "Projected Effects:\nWith Greenland Tariffs",
-        "description": "Projected effects of tariff policy as of January 19, 2026, under the counterfactual scenario in which new tariffs on Greenland-linked goods are not imposed.",
+        "description": "Projected effects of tariff policy as of January 19, 2026, under the scenario in which the announced Greenland tariffs take effect.",
         "sections": [
           {
             "id": "overview",
@@ -590,7 +608,7 @@
               ],
               "source": "GTAP v7, The Budget Lab analysis."
             },
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of January 19, 2026, before and after trade substitution -- shown as a table with three metrics (own tariff rate, import share, and additive contribution to the total).</p>",
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of January 19, 2026, before and after trade substitution.</p>",
             "section": "rates",
             "figureNum": 2
           },
@@ -603,7 +621,17 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
+              "series_colors": {
+                "historical": "grey",
+                "projected_presub": "amber",
+                "projected_postsub": "blue"
+              },
+              "series_styles": {
+                "projected_presub": { "dashed": true },
+                "projected_postsub": { "dashed": true }
+              },
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "columns": {
@@ -620,11 +648,15 @@
                 "yAxis": [
                   {
                     "y": 17.4812952234447,
+                    "color": "amber",
+                    "labelSide": "top",
                     "label": "Current average effective rate (pre-substitution)",
                     "style": "dashed"
                   },
                   {
                     "y": 14.772501977848002,
+                    "color": "blue",
+                    "labelSide": "bottom",
                     "label": "Current average effective rate (post-substitution)",
                     "style": "dashed"
                   }
@@ -633,8 +665,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (January 19, 2026) average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
-            "figureNum": 3,
-            "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+            "figureNum": 3
           },
           {
             "id": "consumer-prices",
@@ -646,7 +677,9 @@
               "data": "data.csv",
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change to price level",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -655,7 +688,6 @@
                 "series": "substitution",
                 "value": "value"
               },
-              "notes": "'nec' = 'Not elsewhere classified.'",
               "series_colors": {
                 "presub": "blue",
                 "postsub": "amber"
@@ -727,7 +759,8 @@
               "chartType": "line",
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
-              "subtitle": "US tariffs implemented through January 19. Percentage point change against baseline",
+              "subtitle": "US tariffs implemented through January 19. Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -768,8 +801,10 @@
                   ]
                 }
               },
-              "subtitle": "U.S. tariffs implemented through January 19, 2026, plus foreign retaliation. Percentage points.",
+              "subtitle": "U.S. tariffs implemented through January 19, 2026, plus foreign retaliation. Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7, The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -794,6 +829,9 @@
             "data": "previous-vintages/2026-01-17/with-greenland-tariffs/revenue-by-year/data.csv",
             "spec": {
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars.",
               "data": "data.csv",
               "stub": [

@@ -18,9 +18,5 @@ FTROW,0.01,country,ftrow,Trading partners,ieepa_invalidation,level
 Japan,0.01,country,japan,Trading partners,ieepa_invalidation,level
 EU,0.03,country,eu,Trading partners,ieepa_invalidation,level
 UK,0.04,country,uk,Trading partners,ieepa_invalidation,level
-"World Total
-",-0.03917422260721892,country,"world_total
-",Trading partners,ieepa_invalidation,level
-"World ex USA
-",-0.020521039495713378,country,"world_ex_usa
-",Trading partners,ieepa_invalidation,level
+World Total,-0.03917422260721892,country,world_total,Trading partners,ieepa_invalidation,level
+World ex USA,-0.020521039495713378,country,world_ex_usa,Trading partners,ieepa_invalidation,level
