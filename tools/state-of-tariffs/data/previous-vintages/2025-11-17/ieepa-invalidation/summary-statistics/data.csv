@@ -3,8 +3,8 @@ Tariff rate,"Effective rate, pre-substitution",9.267761520740645,pct,etr_presub_
 Tariff rate,"Effective rate, post-substitution",8.03397448385099,pct,etr_postsub_level
 Consumer price increase,Pre-substitution,0.5879919381386239,pct,price_presub
 Consumer price increase,Post-substitution,0.46202863339721895,pct,price_postsub
-Household cost,Pre-substitution,-791.6065982321486,usd,hh_cost_presub
-Household cost,Post-substitution,-622.0236895207117,usd,hh_cost_postsub
+Household cost,Pre-substitution,791.6065982321486,usd,hh_cost_presub
+Household cost,Post-substitution,622.0236895207117,usd,hh_cost_postsub
 Real GDP,"Q4-Q4 growth (p.p.), 2025",-0.49753813609727526,pp,gdp_growth_2025
 Real GDP,"Q4-Q4 growth (p.p.), 2026",0.09988449027134028,pp,gdp_growth_2026
 Real GDP,Long-run,-0.1,pct,gdp_longrun

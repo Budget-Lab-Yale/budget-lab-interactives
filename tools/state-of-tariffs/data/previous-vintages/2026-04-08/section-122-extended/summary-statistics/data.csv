@@ -5,8 +5,8 @@ Revenue (10-year),Conventional,1874.320476150918,usd_bn,revenue_conventional
 Revenue (10-year),Dynamic,1715.7004761509181,usd_bn,revenue_dynamic
 Consumer price increase,Pre-substitution,1.062638612264202,pct,price_presub
 Consumer price increase,Post-substitution,0.8686474360961214,pct,price_postsub
-Household cost,Pre-substitution,-1477.590483727462,usd,hh_cost_presub
-Household cost,Post-substitution,-1207.847306202319,usd,hh_cost_postsub
+Household cost,Pre-substitution,1477.590483727462,usd,hh_cost_presub
+Household cost,Post-substitution,1207.847306202319,usd,hh_cost_postsub
 Real GDP,"Q4-Q4 growth (p.p.), 2026",0.1506436834034286,pp,gdp_growth_2026
 Real GDP,Q4 2026 level change (%),-0.12,pct,gdp_q4_2026
 Real GDP,Long-run,-0.17663651704788208,pct,gdp_longrun

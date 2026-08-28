@@ -11,12 +11,12 @@ Consumer price increase,Pre-substitution,ieepa_upheld,1.2,pct,price_presub
 Consumer price increase,Post-substitution,current_with_refunds,0.5,pct,price_postsub
 Consumer price increase,Post-substitution,current_without_refunds,0.5,pct,price_postsub
 Consumer price increase,Post-substitution,ieepa_upheld,0.8999999999999999,pct,price_postsub
-Household cost,Pre-substitution,current_with_refunds,-781,usd,hh_cost_presub
-Household cost,Pre-substitution,current_without_refunds,-781,usd,hh_cost_presub
-Household cost,Pre-substitution,ieepa_upheld,-1681,usd,hh_cost_presub
-Household cost,Post-substitution,current_with_refunds,-618,usd,hh_cost_postsub
-Household cost,Post-substitution,current_without_refunds,-618,usd,hh_cost_postsub
-Household cost,Post-substitution,ieepa_upheld,-1253,usd,hh_cost_postsub
+Household cost,Pre-substitution,current_with_refunds,781.0,usd,hh_cost_presub
+Household cost,Pre-substitution,current_without_refunds,781.0,usd,hh_cost_presub
+Household cost,Pre-substitution,ieepa_upheld,1681.0,usd,hh_cost_presub
+Household cost,Post-substitution,current_with_refunds,618.0,usd,hh_cost_postsub
+Household cost,Post-substitution,current_without_refunds,618.0,usd,hh_cost_postsub
+Household cost,Post-substitution,ieepa_upheld,1253.0,usd,hh_cost_postsub
 Real GDP,"Q4-Q4 growth (p.p.), 2026",current_with_refunds,0,pp,gdp_growth_2026
 Real GDP,"Q4-Q4 growth (p.p.), 2026",current_without_refunds,-0.2,pp,gdp_growth_2026
 Real GDP,"Q4-Q4 growth (p.p.), 2026",ieepa_upheld,-0.4,pp,gdp_growth_2026

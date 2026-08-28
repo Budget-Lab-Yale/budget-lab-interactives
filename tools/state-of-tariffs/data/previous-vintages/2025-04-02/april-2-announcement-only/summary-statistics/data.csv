@@ -1,7 +1,7 @@
 category,series,value,unit,metric
 Tariff rate,"Increase, post-substitution",11.511308908062322,pct,etr_increase_postsub
 Consumer price increase,Pre-substitution,1.3073140812072064,pct,price_presub
-Household cost,"Average, per household (2024$)",2148.198357179403,usd,hh_cost_2024
+Household cost,"Average, per household (2024$)",-2148.198357179403,usd,hh_cost_2024
 Real GDP,"Q4-Q4 growth (p.p.), 2025",-0.5401677555812112,pp,gdp_growth_2025
 Real GDP,Long-run,-0.35,pct,gdp_longrun
 Revenue (10-year),Conventional,1408.2506111447674,usd_bn,revenue_conventional
