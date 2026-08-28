@@ -384,6 +384,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
@@ -944,6 +947,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars, by scenario.",
                   "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",

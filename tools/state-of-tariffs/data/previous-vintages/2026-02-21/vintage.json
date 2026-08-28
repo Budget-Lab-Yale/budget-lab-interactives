@@ -135,6 +135,8 @@
             "data": "previous-vintages/2026-02-21/section-122-expires/current-tariff-policy/data.csv",
             "spec": {
               "title": "Current Tariff Policy",
+              "column_width": 420,
+              "column_wrap": true,
               "subtitle": "Tariff actions in effect as of February 21, 2026.",
               "data": "data.csv",
               "stub": [
@@ -165,7 +167,7 @@
               "stub_header": "",
               "source": "The Budget Lab analysis."
             },
-            "body_html": "<p>Tariff actions in effect as of February 21, 2026: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p><p><em>Notes: Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap.</em></p>",
+            "body_html": "<p>Tariff actions in effect as of February 21, 2026: the broad flat tariff applied under Section 122 authority, and product-specific tariffs applied under Section 232 authority by sector.</p><p><em>Notes: Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap.</em></p>",
             "section": "overview",
             "figureNum": 2
           },
@@ -436,6 +438,9 @@
             "spec": {
               "data": "data.csv",
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars.",
               "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -872,6 +877,9 @@
             "spec": {
               "data": "data.csv",
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars, if Section 122 tariffs are extended.",
               "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",

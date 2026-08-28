@@ -121,6 +121,8 @@
             "data": "previous-vintages/2025-07-13/baseline/current-tariff-policy/data.csv",
             "spec": {
               "title": "Current Tariff Policy",
+              "column_width": 420,
+              "column_wrap": true,
               "subtitle": "Tariff actions in effect or announced as of July 13, 2025.",
               "data": "data.csv",
               "stub": [

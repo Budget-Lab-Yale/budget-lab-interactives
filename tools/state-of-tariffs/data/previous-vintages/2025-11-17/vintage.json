@@ -114,6 +114,12 @@
             "data": "previous-vintages/2025-11-17/baseline/current-tariff-policy/data.csv",
             "spec": {
               "title": "Current Tariff Policy",
+              "group_notes": {
+                "Broad Tariffs under IEEPA Authority": "The Reciprocal and Fentanyl Tariff columns apply to these rows only.",
+                "Product-Specific Tariffs under Section 232 Authority": "The Current Tariff Rate column applies to these rows only."
+              },
+              "column_width": 420,
+              "column_wrap": true,
               "subtitle": "Tariff actions in effect as of November 17, 2025.",
               "data": "data.csv",
               "stub": [
@@ -153,7 +159,7 @@
               "stub_header": "",
               "source": "The Budget Lab analysis."
             },
-            "body_html": "<p>Tariff actions in effect as of November 17, 2025: broad tariffs applied under IEEPA authority by trading region (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B). The “Reciprocal” and “Fentanyl” Tariff columns apply only to Panel A rows; the Current Tariff Rate column applies only to Panel B rows.</p>",
+            "body_html": "<p>Tariff actions in effect as of November 17, 2025: broad tariffs applied under IEEPA authority by trading region, and product-specific tariffs applied under Section 232 authority by sector.</p>",
             "section": "overview",
             "figureNum": 2
           },
@@ -464,6 +470,9 @@
             "spec": {
               "data": "data.csv",
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -841,6 +850,9 @@
             "spec": {
               "data": "data.csv",
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars. IEEPA Invalidation scenario.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",

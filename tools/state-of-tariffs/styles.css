@@ -353,9 +353,16 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 
 /* Sticky stub column: on a wide table that scrolls horizontally (e.g. revenue by year, with a
    column per year), keep the row labels pinned so rows stay identifiable while scrolling. The
-   scroll ancestor is the engine's .figure-canvas-scroll. */
-.tbl-table th.tbl-table-stub,
-.tbl-table-stub-header {
+   scroll ancestor is the engine's .figure-canvas-scroll.
+
+   GATED on the engine's own sticky-first flag, which a spec opts into with
+   `sticky.firstColumn`. The engine gates its group-title rule on the same class and says why:
+   "without it, a group title would pin while its row labels scrolled, which reads as a bug."
+   Pinning unconditionally here bypassed that flag, so the engine's companion rule never fired —
+   stubs pinned, group titles scrolled, and on a narrow table the single data column slid under
+   the pinned stub. Do not un-gate this. */
+.tbl-table--sticky-first th.tbl-table-stub,
+.tbl-table--sticky-first .tbl-table-stub-header {
   position: sticky;
   left: 0;
   z-index: 2;
@@ -378,7 +385,7 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 /* Emphasis rows (e.g. a Total row) are fully styled by the engine (bold + highlight across the
    whole row, stub included, in HTML and PNG). Re-assert only the highlight background on the
    sticky stub cell so the sticky background rule above doesn't overpaint it. */
-.tbl-table tbody tr:has(td.is-emphasis) th.tbl-table-stub {
+.tbl-table--sticky-first tbody tr:has(td.is-emphasis) th.tbl-table-stub {
   background: var(--tbl-bg-subtle);
 }
 .figure-description ul, .figure-description ol { margin: 0 0 8px; padding-left: 20px; }

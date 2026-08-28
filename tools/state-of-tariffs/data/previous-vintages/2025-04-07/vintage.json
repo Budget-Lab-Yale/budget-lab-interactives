@@ -129,6 +129,8 @@
             "data": "previous-vintages/2025-04-07/baseline/current-tariff-policy/data.csv",
             "spec": {
               "title": "Current Tariff Policy",
+              "column_width": 420,
+              "column_wrap": true,
               "subtitle": "Tariff actions in effect or announced as of April 8, 2025.",
               "data": "data.csv",
               "stub": [

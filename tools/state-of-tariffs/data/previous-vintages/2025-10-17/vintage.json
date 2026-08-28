@@ -128,6 +128,8 @@
             "data": "previous-vintages/2025-10-17/baseline/current-tariff-policy/data.csv",
             "spec": {
               "title": "Current Tariff Policy",
+              "column_width": 420,
+              "column_wrap": true,
               "subtitle": "Tariff actions in effect or announced as of October 17, 2025.",
               "data": "data.csv",
               "stub": [
@@ -498,6 +500,9 @@
             "spec": {
               "data": "data.csv",
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "notes": "* FY2025 reflects actual tariff revenue to date. · Estimates are net of the offsetting reduction in income and payroll tax revenue.",

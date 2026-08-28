@@ -109,6 +109,8 @@
             "data": "previous-vintages/2026-01-17/baseline/current-tariff-policy/data.csv",
             "spec": {
               "title": "Current Tariff Policy",
+              "column_width": 420,
+              "column_wrap": true,
               "subtitle": "Tariff actions in effect as of January 19, 2026.",
               "data": "data.csv",
               "stub": [
@@ -144,7 +146,7 @@
               "stub_header": "",
               "source": "The Budget Lab analysis."
             },
-            "body_html": "<p>Tariff actions in effect as of January 19, 2026: broad tariffs applied under IEEPA authority by trading region (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p>",
+            "body_html": "<p>Tariff actions in effect as of January 19, 2026: broad tariffs applied under IEEPA authority by trading region, and product-specific tariffs applied under Section 232 authority by sector.</p>",
             "section": "overview",
             "figureNum": 2
           },
@@ -414,6 +416,9 @@
             "data": "previous-vintages/2026-01-17/baseline/revenue-by-year/data.csv",
             "spec": {
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars.",
               "data": "data.csv",
               "stub": [
@@ -824,6 +829,9 @@
             "data": "previous-vintages/2026-01-17/with-greenland-tariffs/revenue-by-year/data.csv",
             "spec": {
               "title": "Net Revenue Impact by Fiscal Year",
+              "sticky": {
+                "firstColumn": true
+              },
               "subtitle": "Billions of dollars.",
               "data": "data.csv",
               "stub": [

@@ -1956,6 +1956,9 @@
                     "spec": {
                       "data": "data.csv",
                       "title": "Net Revenue Impact by Fiscal Year",
+                      "sticky": {
+                        "firstColumn": true
+                      },
                       "subtitle": "Billions of dollars.",
                       "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
                       "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
@@ -2516,6 +2519,9 @@
                     "spec": {
                       "data": "data.csv",
                       "title": "Net Revenue Impact by Fiscal Year",
+                      "sticky": {
+                        "firstColumn": true
+                      },
                       "subtitle": "Billions of dollars, by scenario.",
                       "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
                       "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
@@ -2751,6 +2757,8 @@
                 "data": "previous-vintages/2026-04-08/section-122-expires/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect as of April 8, 2026.",
                   "data": "data.csv",
                   "stub": [
@@ -2783,7 +2791,7 @@
                   "source": "The Budget Lab analysis.",
                   "notes": "Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap."
                 },
-                "body_html": "<p>Tariff actions in effect as of April 8, 2026: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p>",
+                "body_html": "<p>Tariff actions in effect as of April 8, 2026: the broad flat tariff applied under Section 122 authority, and product-specific tariffs applied under Section 232 authority by sector.</p>",
                 "section": "overview",
                 "figureNum": 2
               },
@@ -3074,6 +3082,9 @@
                 "data": "previous-vintages/2026-04-08/section-122-expires/revenue-by-year/data.csv",
                 "spec": {
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "data": "data.csv",
                   "stub": [
@@ -3488,6 +3499,9 @@
                 "data": "previous-vintages/2026-04-08/section-122-extended/revenue-by-year/data.csv",
                 "spec": {
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "data": "data.csv",
                   "stub": [
@@ -3654,6 +3668,8 @@
                 "data": "previous-vintages/2026-04-02/section-122-expires/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect as of April 2, 2026.",
                   "data": "data.csv",
                   "stub": [
@@ -3685,7 +3701,7 @@
                   "source": "The Budget Lab analysis.",
                   "notes": "Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap."
                 },
-                "body_html": "<p>Tariff actions in effect as of April 2, 2026: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p>",
+                "body_html": "<p>Tariff actions in effect as of April 2, 2026: the broad flat tariff applied under Section 122 authority, and product-specific tariffs applied under Section 232 authority by sector.</p>",
                 "section": "overview",
                 "figureNum": 2
               },
@@ -3976,6 +3992,9 @@
                 "data": "previous-vintages/2026-04-02/section-122-expires/revenue-by-year/data.csv",
                 "spec": {
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "data": "data.csv",
                   "stub": [
@@ -4390,6 +4409,9 @@
                 "data": "previous-vintages/2026-04-02/section-122-extended/revenue-by-year/data.csv",
                 "spec": {
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "data": "data.csv",
                   "stub": [
@@ -4584,6 +4606,8 @@
                 "data": "previous-vintages/2026-03-09/section-122-expires/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect as of March 9, 2026.",
                   "data": "data.csv",
                   "stub": [
@@ -4615,7 +4639,7 @@
                   "source": "The Budget Lab analysis.",
                   "notes": "Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap."
                 },
-                "body_html": "<p>Tariff actions in effect as of March 9, 2026: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p>",
+                "body_html": "<p>Tariff actions in effect as of March 9, 2026: the broad flat tariff applied under Section 122 authority, and product-specific tariffs applied under Section 232 authority by sector.</p>",
                 "section": "overview",
                 "figureNum": 2
               },
@@ -4856,6 +4880,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -5269,6 +5296,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars, if Section 122 tariffs are extended.",
                   "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -5455,6 +5485,8 @@
                 "data": "previous-vintages/2026-02-21/section-122-expires/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect as of February 21, 2026.",
                   "data": "data.csv",
                   "stub": [
@@ -5485,7 +5517,7 @@
                   "stub_header": "",
                   "source": "The Budget Lab analysis."
                 },
-                "body_html": "<p>Tariff actions in effect as of February 21, 2026: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p><p><em>Notes: Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap.</em></p>",
+                "body_html": "<p>Tariff actions in effect as of February 21, 2026: the broad flat tariff applied under Section 122 authority, and product-specific tariffs applied under Section 232 authority by sector.</p><p><em>Notes: Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap.</em></p>",
                 "section": "overview",
                 "figureNum": 2
               },
@@ -5760,6 +5792,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -6200,6 +6235,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars, if Section 122 tariffs are extended.",
                   "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -6377,6 +6415,8 @@
                 "data": "previous-vintages/2026-02-20/current-policy/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect as of February 20, 2026.",
                   "data": "data.csv",
                   "stub": [
@@ -6611,6 +6651,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -7043,6 +7086,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -7283,6 +7329,8 @@
                 "data": "previous-vintages/2026-01-17/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect as of January 19, 2026.",
                   "data": "data.csv",
                   "stub": [
@@ -7318,7 +7366,7 @@
                   "stub_header": "",
                   "source": "The Budget Lab analysis."
                 },
-                "body_html": "<p>Tariff actions in effect as of January 19, 2026: broad tariffs applied under IEEPA authority by trading region (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p>",
+                "body_html": "<p>Tariff actions in effect as of January 19, 2026: broad tariffs applied under IEEPA authority by trading region, and product-specific tariffs applied under Section 232 authority by sector.</p>",
                 "section": "overview",
                 "figureNum": 2
               },
@@ -7592,6 +7640,9 @@
                 "data": "previous-vintages/2026-01-17/baseline/revenue-by-year/data.csv",
                 "spec": {
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "data": "data.csv",
                   "stub": [
@@ -8006,6 +8057,9 @@
                 "data": "previous-vintages/2026-01-17/with-greenland-tariffs/revenue-by-year/data.csv",
                 "spec": {
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "data": "data.csv",
                   "stub": [
@@ -8172,6 +8226,12 @@
                 "data": "previous-vintages/2025-11-17/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "group_notes": {
+                    "Broad Tariffs under IEEPA Authority": "The Reciprocal and Fentanyl Tariff columns apply to these rows only.",
+                    "Product-Specific Tariffs under Section 232 Authority": "The Current Tariff Rate column applies to these rows only."
+                  },
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect as of November 17, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -8211,7 +8271,7 @@
                   "stub_header": "",
                   "source": "The Budget Lab analysis."
                 },
-                "body_html": "<p>Tariff actions in effect as of November 17, 2025: broad tariffs applied under IEEPA authority by trading region (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B). The “Reciprocal” and “Fentanyl” Tariff columns apply only to Panel A rows; the Current Tariff Rate column applies only to Panel B rows.</p>",
+                "body_html": "<p>Tariff actions in effect as of November 17, 2025: broad tariffs applied under IEEPA authority by trading region, and product-specific tariffs applied under Section 232 authority by sector.</p>",
                 "section": "overview",
                 "figureNum": 2
               },
@@ -8526,6 +8586,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -8903,6 +8966,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars. IEEPA Invalidation scenario.",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -9063,6 +9129,8 @@
                 "data": "previous-vintages/2025-10-30/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of October 30, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -9441,6 +9509,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "* FY2025 reflects actual tariff revenue to date. · Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -9852,6 +9923,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars. IEEPA Invalidation scenario.",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "* FY2025 reflects actual tariff revenue to date. · Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -10032,6 +10106,8 @@
                 "data": "previous-vintages/2025-10-17/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of October 17, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -10406,6 +10482,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "* FY2025 reflects actual tariff revenue to date. · Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -10588,6 +10667,8 @@
                 "data": "previous-vintages/2025-09-26/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of September 26, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -10962,6 +11043,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "* FY2025 reflects actual tariff revenue to date. · Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -11144,6 +11228,8 @@
                 "data": "previous-vintages/2025-09-04/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of September 4, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -11519,6 +11605,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -12022,6 +12111,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -12188,6 +12280,8 @@
                 "data": "previous-vintages/2025-08-07/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of August 7, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -12561,6 +12655,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -12743,6 +12840,8 @@
                 "data": "previous-vintages/2025-08-01/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of August 1, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -13119,6 +13218,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "Congressional Budget Office, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -13294,6 +13396,8 @@
                 "data": "previous-vintages/2025-07-30/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of July 30, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -13668,6 +13772,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -13843,6 +13950,8 @@
                 "data": "previous-vintages/2025-07-28/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of July 28, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -14217,6 +14326,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -14392,6 +14504,8 @@
                 "data": "previous-vintages/2025-07-22/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of July 22, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -14766,6 +14880,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
@@ -14941,6 +15058,8 @@
                 "data": "previous-vintages/2025-07-13/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of July 13, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -15414,6 +15533,8 @@
                 "data": "previous-vintages/2025-07-11/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of July 11, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -15926,6 +16047,8 @@
                 "data": "previous-vintages/2025-07-10/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of July 10, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -16398,6 +16521,8 @@
                 "data": "previous-vintages/2025-07-07/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of July 7, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -16870,6 +16995,8 @@
                 "data": "previous-vintages/2025-06-17/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of June 17, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -17394,6 +17521,8 @@
                 "data": "previous-vintages/2025-06-01/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of June 1, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -17866,6 +17995,8 @@
                 "data": "previous-vintages/2025-05-29/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of May 29, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -18338,6 +18469,8 @@
                 "data": "previous-vintages/2025-05-23/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of May 23, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -18817,6 +18950,8 @@
                 "data": "previous-vintages/2025-05-12/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of May 12, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -19296,6 +19431,8 @@
                 "data": "previous-vintages/2025-04-15/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of April 15, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -19752,6 +19889,8 @@
                 "data": "previous-vintages/2025-04-10/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of April 10, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -20218,6 +20357,8 @@
                 "data": "previous-vintages/2025-04-07/baseline/current-tariff-policy/data.csv",
                 "spec": {
                   "title": "Current Tariff Policy",
+                  "column_width": 420,
+                  "column_wrap": true,
                   "subtitle": "Tariff actions in effect or announced as of April 8, 2025.",
                   "data": "data.csv",
                   "stub": [
