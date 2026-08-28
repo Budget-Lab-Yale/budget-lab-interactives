@@ -305,6 +305,19 @@ def check_internal(vdir, scid, figs) -> None:
                         f'published separately and are different estimands, so this is '
                         f'informational - but they agree exactly in most vintages.')
 
+    # Windows the summary itself names, e.g. a series labelled
+    # "Add'l 2026-35 Dynamic Revenue Effects ($bn)". These disambiguate which
+    # revenue-by-year total a vintage's summary is quoting.
+    window_labels = set()
+    ss = figs.get('summary-statistics')
+    if ss:
+        for _p, srows, _c in rows_for(ss):
+            for r in srows:
+                for key in ('series', 'category', 'metric'):
+                    m = re.search(r'\d{4}-\d{2,4}', str(r.get(key) or ''))
+                    if m:
+                        window_labels.add(m.group(0))
+
     # summary revenue vs the revenue-by-year total for the matching window
     rby = figs.get('revenue-by-year')
     if rby and not multi:
@@ -323,14 +336,30 @@ def check_internal(vdir, scid, figs) -> None:
                 and not re.search(r"add'?l|additional|effects|feedback|% of gdp", lab, re.I))
             if len(hits) == 1 and totals.get(ser):
                 # published rounding is legitimate; only flag a real disagreement
-                best = None
+                cands = []
                 for cat, v in totals[ser]:
                     try:
-                        fv = float(v)
+                        cands.append((cat, float(v)))
                     except (TypeError, ValueError):
                         continue
-                    if best is None or abs(fv - hits[0]) < abs(best[1] - hits[0]):
-                        best = (cat, fv)
+                # Choose by PERIOD, never by nearest value: picking whichever
+                # total sits closest to the summary is self-defeating, because a
+                # wrong intended total is masked the moment the other window
+                # happens to be nearer. Several vintages publish both a 2025-34
+                # and a 2026-35 total, so this is not hypothetical.
+                best = cands[0] if len(cands) == 1 else None
+                if best is None and cands:
+                    named = {w for w in window_labels if w in {c for c, _ in cands}}
+                    if len(named) == 1:
+                        w = named.pop()
+                        best = next(c for c in cands if c[0] == w)
+                    else:
+                        add('INFO', where,
+                            f'{ser} revenue total not checked: the summary does not '
+                            f'name a budget window and this vintage publishes more '
+                            f'than one ({", ".join(sorted(c for c, _ in cands))}). '
+                            f'Guessing the nearest would validate against whichever '
+                            f'total happens to agree.')
                 if best:
                     gap = abs(best[1] - hits[0])
                     # The reports print Table 1 in trillions to 1-2 decimals and
@@ -372,7 +401,7 @@ def main() -> int:
 
     # INFO never gates: it flags quantities that are published separately and
     # need not agree, so failing on it would make the gate unpassable.
-    if args.strict and (errs or (warns and not args.errors_only)):
+    if args.strict and (errs or warns):
         return 1
     return 0
 

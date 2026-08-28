@@ -26,3 +26,12 @@ if ! grep -q "app\.js?v=$stamp" index.html; then
   exit 1
 fi
 echo "state-of-tariffs: asset stamp OK (?v=$stamp)"
+
+# Vintage integrity. The archive reproduces published reports, and several of its
+# invariants are invisible at runtime: the chart renderer reads spec.note while the
+# table renderer reads spec.notes (text in the wrong one renders nowhere), a duplicate
+# JSON key is silently swallowed by json.loads, and a spec can name a CSV column that
+# does not exist. None of that shows up as a broken build, so it is gated here.
+# Stdlib-only by design, so this needs no pip install.
+python scripts/validate-vintages.py --strict
+
