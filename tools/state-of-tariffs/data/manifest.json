@@ -1907,6 +1907,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
                   "orientation": "vertical",
                   "xAxisType": "categorical",
@@ -2402,6 +2403,7 @@
                   "data": "data.csv",
                   "title": "Effect on Real GDP over Time",
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "yAxisPolicy": {
@@ -3029,6 +3031,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -3258,6 +3261,7 @@
                   "data": "data.csv",
                   "title": "US Average Effective Tariff Rate Since 1790",
                   "subtitle": "Customs duty revenue as a percentage of goods imports",
+                  "value_suffix": "%",
                   "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "columns": {
@@ -3299,6 +3303,7 @@
                   "data": "data.csv",
                   "title": "Consumer Price Effects by PCE Spending Category",
                   "subtitle": "Percent change in consumer prices",
+                  "value_suffix": "%",
                   "source": "BEA, GTAP v7, The Budget Lab analysis.",
                   "note": "I-O price model (Barbiero & Stein 2025). Pre-sub = welfare-relevant tariff price effect. Post-sub = after partial equilibrium trade substitution.",
                   "orientation": "horizontal",
@@ -3381,6 +3386,7 @@
                   "data": "data.csv",
                   "title": "US Real GDP Level Effects of Trump Administration Tariffs",
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7, The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "yAxisPolicy": {
@@ -3422,6 +3428,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -3892,6 +3899,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -4121,6 +4129,7 @@
                   "data": "data.csv",
                   "title": "US Average Effective Tariff Rate Since 1790",
                   "subtitle": "Customs duty revenue as a percentage of goods imports",
+                  "value_suffix": "%",
                   "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "columns": {
@@ -4162,6 +4171,7 @@
                   "data": "data.csv",
                   "title": "Consumer Price Effects by PCE Spending Category",
                   "subtitle": "Percent change in consumer prices",
+                  "value_suffix": "%",
                   "source": "BEA, GTAP v7, The Budget Lab analysis.",
                   "note": "I-O price model (Barbiero & Stein 2025). Pre-sub = welfare-relevant tariff price effect. Post-sub = after partial equilibrium trade substitution.",
                   "orientation": "horizontal",
@@ -4244,6 +4254,7 @@
                   "data": "data.csv",
                   "title": "US Real GDP Level Effects of Trump Administration Tariffs",
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7, The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "yAxisPolicy": {
@@ -4285,6 +4296,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -4727,6 +4739,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7, The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -4989,6 +5002,7 @@
                   "data": "data.csv",
                   "title": "US Average Effective Tariff Rate Since 1790",
                   "subtitle": "Customs duty revenue as a percentage of goods imports",
+                  "value_suffix": "%",
                   "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "columns": {
@@ -5079,6 +5093,7 @@
                   "data": "data.csv",
                   "title": "Effect on Real GDP over Time",
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "yAxisPolicy": {
@@ -5120,6 +5135,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7, The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -5593,6 +5609,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7, The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -5848,6 +5865,7 @@
                   "data": "data.csv",
                   "title": "US Average Effective Tariff Rate Since 1790",
                   "subtitle": "Customs duty revenue as a percentage of goods imports",
+                  "value_suffix": "%",
                   "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "columns": {
@@ -5889,6 +5907,7 @@
                   "data": "data.csv",
                   "title": "Consumer Price Effects, Selected Commodities",
                   "subtitle": "Percent change to price level",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "\"nec\" = \"Not elsewhere classified\"",
                   "orientation": "horizontal",
@@ -5971,6 +5990,7 @@
                   "data": "data.csv",
                   "title": "Effect on Real GDP over Time",
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "yAxisPolicy": {
@@ -6012,6 +6032,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7, The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -6402,6 +6423,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -6731,6 +6753,7 @@
                   "data": "data.csv",
                   "title": "US Average Effective Tariff Rate Since 1790",
                   "subtitle": "Customs duty revenue as a percentage of goods imports.",
+                  "value_suffix": "%",
                   "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
                   "note": "The source workbook provides a single current-rate reference line (reflecting Current Policy), used identically on both scenario tabs; no separate IEEPA Upheld reference line was published.",
                   "xAxisType": "temporal",
@@ -6773,6 +6796,7 @@
                   "data": "data.csv",
                   "title": "Effect on Real GDP over Time",
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "yAxisPolicy": {
@@ -6814,6 +6838,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -6944,6 +6969,7 @@
                   "data": "data.csv",
                   "title": "Consumer Price Effects, Selected Commodities",
                   "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "\"nec\" = \"Not elsewhere classified\"",
                   "orientation": "horizontal",
@@ -7578,6 +7604,7 @@
                   "data": "data.csv",
                   "title": "US Average Effective Tariff Rate Since 1790",
                   "subtitle": "Customs duty revenue as a percentage of goods imports.",
+                  "value_suffix": "%",
                   "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "columns": {
@@ -7619,6 +7646,7 @@
                   "data": "data.csv",
                   "title": "Consumer Price Effects, Selected Commodities",
                   "subtitle": "Percent change to price level",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "\"nec\" = \"Not elsewhere classified\"",
                   "orientation": "horizontal",
@@ -7701,6 +7729,7 @@
                   "data": "data.csv",
                   "title": "Effect on Real GDP over Time",
                   "subtitle": "US tariffs implemented through January 19. Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "yAxisPolicy": {
@@ -7742,6 +7771,7 @@
                     }
                   },
                   "subtitle": "U.S. tariffs implemented through January 19, 2026, plus foreign retaliation. Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7, The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -8243,6 +8273,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -8494,6 +8525,7 @@
                   "data": "data.csv",
                   "title": "Consumer Price Effects, Selected Commodities",
                   "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "\"nec\" = \"Not elsewhere classified\"",
                   "orientation": "horizontal",
@@ -8576,6 +8608,7 @@
                   "data": "data.csv",
                   "title": "Effect on Real GDP over Time",
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "yAxisPolicy": {
@@ -8617,6 +8650,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -9138,6 +9172,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -9552,6 +9587,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline. IEEPA Invalidation scenario.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -10094,6 +10130,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -10250,7 +10287,7 @@
                       "Tariff rate": {
                         "type": "number",
                         "decimals": 1,
-                        "suffix": "%"
+                        "suffix": " p.p."
                       },
                       "Household cost": {
                         "type": "currency",
@@ -10635,6 +10672,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -10791,7 +10829,7 @@
                       "Tariff rate": {
                         "type": "number",
                         "decimals": 1,
-                        "suffix": "%"
+                        "suffix": " p.p."
                       },
                       "Household cost": {
                         "type": "currency",
@@ -11177,6 +11215,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -11323,7 +11362,7 @@
                       "Tariff rate": {
                         "type": "number",
                         "decimals": 1,
-                        "suffix": "%"
+                        "suffix": " p.p."
                       },
                       "Household cost": {
                         "type": "currency",
@@ -11476,6 +11515,7 @@
                   "data": "data.csv",
                   "title": "US Average Effective Tariff Rate Since 1790",
                   "subtitle": "Customs duty revenue as a percentage of goods imports.",
+                  "value_suffix": "%",
                   "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "columns": {
@@ -11539,6 +11579,7 @@
                   "data": "data.csv",
                   "title": "Consumer Price Effects, Selected Commodities",
                   "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "\"nec\" = \"Not elsewhere classified\"",
                   "orientation": "horizontal",
@@ -11621,6 +11662,7 @@
                   "data": "data.csv",
                   "title": "Effect on Real GDP over Time",
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "yAxisPolicy": {
@@ -11662,6 +11704,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -12185,6 +12228,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -12341,7 +12385,7 @@
                       "Tariff rate": {
                         "type": "number",
                         "decimals": 1,
-                        "suffix": "%"
+                        "suffix": " p.p."
                       },
                       "Household cost": {
                         "type": "currency",
@@ -12728,6 +12772,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -13262,6 +13307,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -13796,6 +13842,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -14330,6 +14377,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -14842,6 +14890,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -15299,6 +15348,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -15794,6 +15844,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -16250,6 +16301,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -16758,6 +16810,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -17214,6 +17267,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -17670,6 +17724,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -18126,6 +18181,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -18589,6 +18645,7 @@
                     }
                   },
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -19034,6 +19091,7 @@
                   "data": "data.csv",
                   "title": "Long-Run Change in Real GDP by Trading Partner",
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -19474,6 +19532,7 @@
                   "data": "data.csv",
                   "title": "Long-Run Change in Real GDP by Trading Partner",
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -19580,7 +19639,7 @@
                       "Tariff rate": {
                         "type": "number",
                         "decimals": 1,
-                        "suffix": "%"
+                        "suffix": " p.p."
                       },
                       "Household cost": {
                         "type": "currency",
@@ -19830,6 +19889,7 @@
                   "data": "data.csv",
                   "title": "Long-Run Change in Real GDP by Trading Partner",
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",
@@ -20295,6 +20355,7 @@
                   "data": "data.csv",
                   "title": "US Average Effective Tariff Rate Since 1790",
                   "subtitle": "Customs duty revenue as a percentage of goods imports.",
+                  "value_suffix": "%",
                   "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
                   "note": "* Through April 2.",
                   "xAxisType": "temporal",
@@ -20330,6 +20391,7 @@
                   "data": "data.csv",
                   "title": "Commodity Price Effects",
                   "subtitle": "Percent change to price level.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "\"nec\" = \"Not elsewhere classified\"",
                   "orientation": "horizontal",
@@ -20413,6 +20475,7 @@
                   "data": "data.csv",
                   "title": "U.S. Real GDP Level Effects of 2025 Tariffs to Date",
                   "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
                   "source": "S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
                   "xAxisType": "temporal",
                   "yAxisPolicy": {
@@ -20437,6 +20500,7 @@
                   "data": "data.csv",
                   "title": "Long-Run Change in Real GDP Level from 2025 Tariffs",
                   "subtitle": "Percent change in the level of real GDP versus baseline, by trading partner.",
+                  "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                   "note": "FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
                   "orientation": "vertical",

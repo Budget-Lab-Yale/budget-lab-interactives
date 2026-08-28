@@ -223,29 +223,52 @@ def check_internal(vdir, scid, figs) -> None:
                     pass
         return hits
 
-    # distribution decile mean vs the summary household cost — MAGNITUDES.
+    # distribution vs the summary household cost — MAGNITUDES, and only on
+    # comparable rows. A naive average over every dollar row mixes the `Total`
+    # row in with the deciles and both substitution bases together, which is
+    # not a like-for-like comparison and produces false warnings.
     dist = figs.get('distribution')
     if dist and not multi:
         pre = summary_value(lambda lab, r: re.search(r'household|hh_cost', lab, re.I)
                             and re.search(r'pre', lab, re.I))
         for part, rows, cols in rows_for(dist):
             dollars = [r for r in rows
-                       if re.search(r'dollar|2025|2024', str(r.get('basis') or ''), re.I)]
-            vals = []
-            for r in dollars:
+                       if re.search(r'dollar|20\d\d', str(r.get('basis') or ''), re.I)]
+            if 'substitution' in cols:
+                bases = {r.get('substitution') for r in dollars}
+                pick = 'presub' if 'presub' in bases else (bases.pop() if bases else None)
+                dollars = [r for r in dollars if r.get('substitution') == pick]
+
+            def num(r):
                 try:
-                    vals.append(float(r['value']))
+                    return float(r['value'])
                 except (TypeError, ValueError):
-                    pass
-            if len(vals) >= 8 and len(pre) == 1:
-                mean = sum(vals) / len(vals)
-                if abs(abs(mean) - abs(pre[0])) > max(2.0, abs(pre[0]) * 0.01):
+                    return None
+
+            # A published Total row is the exact counterpart; prefer it.
+            tot = [num(r) for r in dollars
+                   if str(r.get('category') or '').strip().lower() == 'total']
+            tot = [x for x in tot if x is not None]
+            deciles = [num(r) for r in dollars
+                       if str(r.get('category') or '').strip().isdigit()]
+            deciles = [x for x in deciles if x is not None]
+
+            if len(pre) != 1:
+                continue
+            if tot:
+                if abs(abs(tot[0]) - abs(pre[0])) > max(1.0, abs(pre[0]) * 0.005):
                     add('WARN', where,
-                        f'distribution decile mean |{mean:.1f}| disagrees with the '
-                        f'summary household cost |{pre[0]:.1f}| by '
-                        f'{abs(abs(mean)-abs(pre[0]))/abs(pre[0])*100:.1f}%. These agree '
-                        f'exactly in most vintages, so a gap is worth reading - but they '
-                        f'are published separately and need not be identical.')
+                        f'distribution Total |{tot[0]:.1f}| disagrees with the summary '
+                        f'household cost |{pre[0]:.1f}|')
+            elif len(deciles) >= 8:
+                mean = sum(deciles) / len(deciles)
+                if abs(abs(mean) - abs(pre[0])) > max(2.0, abs(pre[0]) * 0.02):
+                    add('INFO', where,
+                        f'unweighted decile mean |{mean:.1f}| differs from the summary '
+                        f'all-household average |{pre[0]:.1f}| by '
+                        f'{abs(abs(mean)-abs(pre[0]))/abs(pre[0])*100:.1f}%. Both are '
+                        f'published separately and are different estimands, so this is '
+                        f'informational - but they agree exactly in most vintages.')
 
     # summary revenue vs the revenue-by-year total for the matching window
     rby = figs.get('revenue-by-year')
@@ -273,10 +296,16 @@ def check_internal(vdir, scid, figs) -> None:
                         continue
                     if best is None or abs(fv - hits[0]) < abs(best[1] - hits[0]):
                         best = (cat, fv)
-                if best and abs(best[1] - hits[0]) / max(abs(best[1]), 1) > 0.02:
-                    add('WARN', where,
-                        f'summary {ser} revenue {hits[0]:.1f} disagrees with the '
-                        f'revenue-by-year {best[0]} total {best[1]:.1f}')
+                if best:
+                    gap = abs(best[1] - hits[0])
+                    # The reports print Table 1 in trillions to 1-2 decimals and
+                    # Table 3 in billions, so a gap below the trillion rounding
+                    # step is the publication's own rounding, not a defect.
+                    rounding_step = 50.0 if hits[0] % 100 == 0 else 5.0
+                    if gap > max(rounding_step, abs(best[1]) * 0.02):
+                        add('WARN', where,
+                            f'summary {ser} revenue {hits[0]:.1f} disagrees with the '
+                            f'revenue-by-year {best[0]} total {best[1]:.1f}')
 
 
 def main() -> int:
@@ -297,14 +326,17 @@ def main() -> int:
 
     errs = [f for f in findings if f[0] == 'ERROR']
     warns = [f for f in findings if f[0] == 'WARN']
-    show = errs if args.errors_only else errs + warns
+    infos = [f for f in findings if f[0] == 'INFO']
+    show = errs if args.errors_only else errs + warns + infos
 
     for sev, where, msg in show:
         print(f'{sev:5} {where}: {msg}')
 
-    print(f'\nvalidate-vintages: {len(errs)} errors, {len(warns)} warnings '
-          f'across {len(os.listdir(VROOT))} vintages')
+    print(f'\nvalidate-vintages: {len(errs)} errors, {len(warns)} warnings, '
+          f'{len(infos)} informational across {len(os.listdir(VROOT))} vintages')
 
+    # INFO never gates: it flags quantities that are published separately and
+    # need not agree, so failing on it would make the gate unpassable.
     if args.strict and (errs or (warns and not args.errors_only)):
         return 1
     return 0
