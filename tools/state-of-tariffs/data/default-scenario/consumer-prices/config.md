@@ -6,6 +6,7 @@ spec:
   data: data.csv
   title: Consumer Price Effects by Spending Category
   subtitle: Percent change in consumer prices, pre- and post-substitution.
+  value_suffix: "%"
   source: GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.
   orientation: horizontal
   xAxisType: categorical

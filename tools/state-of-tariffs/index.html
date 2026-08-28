@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../../assets/style-guide/fonts.css">
   <link rel="stylesheet" href="../../assets/style-guide/colors.css">
-  <!-- Vendored chart engine 1.6.1 figure/table styles + design tokens (see vendor/chart-engine/).
+  <!-- Vendored chart engine 1.13.0 figure/table styles + design tokens (see vendor/chart-engine/).
        The ?v= query busts the browser/CDN cache on re-vendor — bump it whenever VERSION changes. -->
-  <link rel="stylesheet" href="vendor/chart-engine/chart-engine.css?v=1.6.1">
+  <link rel="stylesheet" href="vendor/chart-engine/chart-engine.css?v=1.13.0">
   <link rel="stylesheet" href="styles.css?v=7142f91350">
 
   <script>
@@ -38,9 +38,9 @@
     </div>
   </div>
 
-  <!-- Vendored chart engine 1.6.1 (IIFE): exposes window.BudgetLabChart. Plain script so the
+  <!-- Vendored chart engine 1.13.0 (IIFE): exposes window.BudgetLabChart. Plain script so the
        global is set before app.js (a module) runs. ?v= busts cache on re-vendor. -->
-  <script src="vendor/chart-engine/live.js?v=1.6.1"></script>
+  <script src="vendor/chart-engine/live.js?v=1.13.0"></script>
   <!-- app.js + styles.css ?v= are auto-stamped with a content hash by build-manifest.py (don't
        hand-edit); app.js propagates that version to render.js / download-all.js. -->
   <script type="module" src="app.js?v=7142f91350"></script>

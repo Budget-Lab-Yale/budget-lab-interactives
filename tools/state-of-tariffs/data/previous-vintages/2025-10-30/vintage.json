@@ -254,6 +254,7 @@
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "columns": {
@@ -295,6 +296,7 @@
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since January 1, 2025",
               "subtitle": "Policy through October 30, pre-substitution. Percent of goods imports.",
+              "value_suffix": "%",
               "source": "The Budget Lab analysis.",
               "xAxisType": "temporal",
               "columns": {
@@ -316,6 +318,7 @@
               "data": "data.csv",
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
@@ -398,6 +401,8 @@
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -723,6 +728,7 @@
               "data": "data.csv",
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run. IEEPA Invalidation scenario.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
@@ -805,6 +811,8 @@
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
               "subtitle": "Percent change in the level of real GDP versus baseline. IEEPA Invalidation scenario.",
+              "value_suffix": "%",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {

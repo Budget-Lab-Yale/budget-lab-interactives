@@ -209,6 +209,8 @@
               "data": "data.csv",
               "title": "US Average Effective Tariff Rate Since 1790",
               "subtitle": "Customs duty revenue as a percentage of goods imports",
+              "value_suffix": "%",
+              "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "columns": {
@@ -250,6 +252,7 @@
               "data": "data.csv",
               "title": "Tariff Impact Tracker: Daily Effective Tariff Rate",
               "subtitle": "Percent",
+              "value_suffix": "%",
               "source": "The Budget Lab analysis.",
               "xAxisType": "temporal",
               "columns": {
@@ -271,6 +274,8 @@
               "data": "data.csv",
               "title": "Consumer Price Effects by PCE Spending Category",
               "subtitle": "Percent change in consumer prices",
+              "value_suffix": "%",
+              "value_suffix": "%",
               "source": "BEA, GTAP v7, The Budget Lab analysis.",
               "note": "I-O price model (Barbiero & Stein 2025). Pre-sub = welfare-relevant tariff price effect. Post-sub = after partial equilibrium trade substitution.",
               "orientation": "horizontal",
@@ -353,6 +358,10 @@
               "data": "data.csv",
               "title": "US Real GDP Level Effects of Trump Administration Tariffs",
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
+              "value_suffix": "%",
+              "value_suffix": "%",
+              "value_suffix": "%",
               "source": "GTAP v7, The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
