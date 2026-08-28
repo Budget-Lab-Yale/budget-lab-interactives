@@ -89,6 +89,11 @@
                   }
                 },
                 "rows": {
+                  "Q4 2026 level change (%)": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  },
                   "Long-run": {
                     "type": "number",
                     "decimals": 2,
@@ -546,6 +551,11 @@
                   }
                 },
                 "rows": {
+                  "Q4 2026 level change (%)": {
+                    "type": "number",
+                    "decimals": 2,
+                    "suffix": "%"
+                  },
                   "Long-run": {
                     "type": "number",
                     "decimals": 2,
