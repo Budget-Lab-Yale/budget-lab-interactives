@@ -369,6 +369,32 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   background: var(--tbl-bg);
 }
 
+/* Multi-tier header: let a banner (spanner) label wrap.
+
+   The engine sets `white-space: nowrap` on every `thead th`, and its
+   `header_max_lines` clamp — which sets `white-space: normal` — is applied to LEAF
+   headers only. So a tier-1 spanner keeps nowrap. Where that spanner covers a
+   single narrow data column but carries a long label (e.g. "Policy Immediately
+   Following SCOTUS Ruling (No IEEPA or Section 122)" over one ~50px column), the
+   label cannot wrap and, being centred, overflows BOTH sides of its cell into the
+   neighbours — landing on top of the adjacent banner's flanking rule, which reads
+   as a line struck through the text to its left.
+
+   Allowing the wrap keeps the label inside its own cell. Short labels are
+   unaffected: they only wrap when the cell is narrower than the text, which is
+   exactly the case this fixes. Explicit `\\` breaks still apply. */
+.tbl-table thead th.is-spanner,
+.tbl-table thead th.is-spanner > .tbl-table-spanner {
+  white-space: normal;
+}
+/* Keep the flanking rules from collapsing the label: the rules may shrink, the
+   text may not. */
+.tbl-table thead th.is-spanner > .tbl-table-spanner::before,
+.tbl-table thead th.is-spanner > .tbl-table-spanner::after {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
 /* Per-figure markdown body — tool-supplied text appended below the engine's
    figure card (the engine renders the figure + source line; the prose is ours). */
 .figure-description {
