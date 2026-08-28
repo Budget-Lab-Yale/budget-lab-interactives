@@ -137,14 +137,22 @@
               ],
               "value": "value",
               "column_order": [
-                "description"
+                "description",
+                "rate"
               ],
               "header_labels": {
-                "description": "Details"
+                "description": "Description",
+                "rate": "Current Tariff Rate"
               },
               "row_order": [
-                "Rate",
-                "Exemptions",
+                "Brazil",
+                "Canada",
+                "Mexico",
+                "China",
+                "European Union",
+                "United Kingdom",
+                "Trade-deal partners (Japan, Korea, Vietnam, etc.)",
+                "Other",
                 "Steel",
                 "Aluminum",
                 "Copper",
@@ -159,10 +167,10 @@
               "vintageDate": "2026-02-20",
               "scenarioTab": "current-policy"
             },
-            "body_html": "<p>Tariff actions in effect as of February 20, 2026, under Current Policy: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B), each of which preempts Section 122 for the covered products.</p><p><em>Source: The Budget Lab analysis.</em></p>",
+            "body_html": "<p>Tariff actions in effect as of February 20, 2026: broad tariffs applied under IEEPA authority by trading region, which the Supreme Court ruled must be vacated, and product-specific tariffs applied under Section 232 authority by sector, which are unaffected by the ruling. The Description column applies only to the IEEPA rows; the Current Tariff Rate column applies only to the Section 232 rows.</p><p><em>Source: The Budget Lab analysis.</em></p>",
             "section": "overview",
             "figureNum": 2,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original February 20, 2026 report's tariff-policy summary tables. Added only to the current-policy scenario per instruction, not the ieepa-upheld alternative scenario, since Section 122/232 tariffs are specific to the Current Policy scenario."
+            "note": "Reproduces the published February 20, 2026 report Figure 1, 'Current Tariff Policy as of February 20, 2026' (Datawrapper 1btrp). Kept on the current-policy tab only: the published panel heading marks the IEEPA tariffs REPEALED, which is a Current Policy statement, and the report publishes no IEEPA-Upheld variant of this table."
           },
           {
             "id": "etr-by-country",
