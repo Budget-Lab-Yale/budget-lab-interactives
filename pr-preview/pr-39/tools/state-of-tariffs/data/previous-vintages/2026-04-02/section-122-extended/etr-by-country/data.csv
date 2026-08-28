@@ -1,0 +1,55 @@
+category,value,country_code,substitution,metric
+China,23.18119659491112,chn,presub,rate
+China,22.90595126785932,chn,postsub,rate
+China,13.38082913438446,chn,presub,import_share
+China,13.31575949592855,chn,postsub,import_share
+China,3.101836307670805,chn,presub,contribution
+China,3.050101381082743,chn,postsub,contribution
+Canada,6.090329695575217,ca,presub,rate
+Canada,3.927612717183254,ca,postsub,rate
+Canada,12.563817739953432,ca,presub,import_share
+Canada,14.60854379718947,ca,postsub,import_share
+Canada,0.765177922714331,ca,presub,contribution
+Canada,0.573767023973699,ca,postsub,contribution
+Mexico,9.791111323297441,mx,presub,rate
+Mexico,8.396363704814846,mx,postsub,rate
+Mexico,15.73784723824988,mx,presub,import_share
+Mexico,16.61529290318261,mx,postsub,import_share
+Mexico,1.540910142987538,mx,presub,contribution
+Mexico,1.395080422771501,mx,postsub,contribution
+EU,8.603404034051087,eu,presub,rate
+EU,7.179151070177607,eu,postsub,rate
+EU,18.00468203492716,eu,presub,import_share
+EU,17.10003325921285,eu,postsub,import_share
+EU,1.549015540510994,eu,presub,contribution
+EU,1.227637220729506,eu,postsub,contribution
+Japan,12.12548820962698,jpn,presub,rate
+Japan,11.39255560289926,jpn,postsub,rate
+Japan,4.637448378582677,jpn,presub,import_share
+Japan,4.215428826150832,jpn,postsub,import_share
+Japan,0.5623132563725801,jpn,presub,contribution
+Japan,0.4802450729198772,jpn,postsub,contribution
+UK,7.365134112495075,uk,presub,rate
+UK,6.990486708083576,uk,postsub,rate
+UK,1.994973759797959,uk,presub,import_share
+UK,2.073193314411326,uk,postsub,import_share
+UK,0.146932492918205,uk,presub,contribution
+UK,0.1449263030768011,uk,postsub,contribution
+FTA Partners,8.53139543123449,fta_partners,presub,rate
+FTA Partners,7.485067445187893,fta_partners,postsub,rate
+FTA Partners,9.236821713906023,fta_partners,presub,import_share
+FTA Partners,9.652253597322304,fta_partners,postsub,import_share
+FTA Partners,0.7880297856914537,fta_partners,presub,contribution
+FTA Partners,0.722477691740149,fta_partners,postsub,contribution
+Rest of World,10.51556919682394,row,presub,rate
+Rest of World,9.103511990404513,row,postsub,rate
+Rest of World,24.44358000019841,row,presub,import_share
+Rest of World,22.41949480660206,row,postsub,import_share
+Rest of World,2.570381569101881,row,presub,contribution
+Rest of World,2.040961397907135,row,postsub,contribution
+Total,11.02459701796779,total,presub,rate
+Total,9.63519651420141,total,postsub,rate
+Total,100,total,presub,import_share
+Total,100,total,postsub,import_share
+Total,11.02459701796779,total,presub,contribution
+Total,9.63519651420141,total,postsub,contribution

@@ -1,0 +1,843 @@
+{
+  "data_base_url": "./data/",
+  "release": {
+    "updated": "August 19, 2026",
+    "version": "1.0"
+  },
+  "tabs": [
+    {
+      "id": "current-update",
+      "label": "Current Update",
+      "description": "Summary of the most significant findings in the current data release.",
+      "body_html": "<h2>Current Update</h2>\n<p class=\"current-update-date\">August 19, 2026</p>\n<p>The Budget Lab's labor market analysis, updated to incorporate July 2026 CPS microdata, does not provide clear evidence of labor market disruption associated with AI. Churn across occupations, AI exposure among the unemployed, and usage data all remain flat, lie within historical ranges, or continue along pre-AI trends. </p>\n<p>Of course, these findings may change as new data become available. The Budget Lab plans to continue monitoring AI-relevant trends to assess how job impacts might change. </p>\n<h2>Introduction</h2>\n<p>This interactive tool contains The Budget Lab's ongoing analysis of potential AI impacts on the labor market. Major categories of analysis can be accessed by clicking tabs towards the top of the page with the following names: Occupational churn, AI metrics, and Comparisons of AI-exposed and unexposed workers. After selecting one of those tabs, users should note the options listed on the left-hand sidebar. Those options generate different views of the data: for example, occupational churn (i.e., dissimilarity) can be tracked for the entire labor force or for specific industries. </p>\n<p>Detailed descriptions of the analysis can be found in the Budget Lab documents that introduce each. Occupational churn, AI-exposure rates of the unemployed, and related analysis can be found in <a href=\"https://budgetlab.yale.edu/research/evaluating-impact-ai-labor-market-current-state-affairs\">Gimbel et al. (2025)</a>. Details of AI exposure metrics are discussed in <a href=\"https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know\">Gimbel, Kendall, and Kulsakdinun (2026)</a>. The synthetic differences-in-differences analysis of AI-exposed and unexposed workers is introduced in <a href=\"https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market\">Gimbel, Kendall, and Nunn (2026)</a>. </p>\n<h2>AI-Exposure Metrics and Crosswalks</h2>\n<p>The Budget Lab makes use of a collection of AI-exposure metrics which must be mapped to occupation codes. The crosswalked data are available in the data download linked in the sidebar. More detail about their construction can be found in <a href=\"https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know\">Gimbel, Kendall, and Kulsakdinun (2026)</a>. Exposure metrics are made available by <a href=\"https://github.com/AIOE-Data/AIOE\">Felten, Raj, and Seamans (2021)</a>, <a href=\"https://github.com/openai/GPTs-are-GPTs\">Eloundou et al. (2023)</a>, <a href=\"https://artificialminushuman.com/\">Eisfeldt et al. (2023)</a>, and <a href=\"https://github.com/microsoft/working-with-ai\">Tomlinson et al. (2025)</a>. Usage data are made available by <a href=\"https://www.anthropic.com/research/economic-index-march-2026-report\">Massenkoff et al. (2026)</a>. Occupation-level data are available at both the SOC and CPS code levels. </p>"
+    },
+    {
+      "id": "occupational-churn",
+      "label": "Occupational Churn",
+      "description": "Estimates of occupational \"churn\" in the form of a dissimilarity index. Interpreted as the percentage point shift in the occupational composition of the labor force. Updated monthly.",
+      "figureDefaults": {
+        "yAxisPolicy": {
+          "includeZero": true,
+          "tickCount": 5
+        },
+        "series_colors": {
+          "All Sectors": "black",
+          "Information": "blue",
+          "Financial Activities": "amber",
+          "Professional and Business Services": "violet",
+          "Natural Resources and Mining": "green",
+          "Construction": "red",
+          "Manufacturing": "rose",
+          "Trade, Transportation, and Utilities": "russet",
+          "Education and Health Services": "red-light",
+          "Leisure and Hospitality": "green-light",
+          "Other Services": "rose-light"
+        }
+      },
+      "sections": [
+        {
+          "id": "by-time-period",
+          "label": "Overall Labor Force",
+          "figures": [
+            "total-labor-force-recent",
+            "total-labor-force-historical"
+          ]
+        },
+        {
+          "id": "by-industry",
+          "label": "By Industry",
+          "figures": [
+            "selected-industries-recent",
+            "by-industry-recent",
+            "major-industries-historical"
+          ]
+        },
+        {
+          "id": "by-group",
+          "label": "By Demographic Group",
+          "figures": [
+            "new-vs-older-grads-recent",
+            "new-vs-older-grads-historical"
+          ]
+        }
+      ],
+      "toggles": [
+        {
+          "id": "variant",
+          "label": "Baseline",
+          "options": [
+            {
+              "id": "indexed",
+              "label": "Fixed"
+            },
+            {
+              "id": "rolling",
+              "label": "Rolling 12-month"
+            }
+          ],
+          "default": "indexed",
+          "applies_to_figures": [
+            "total-labor-force-recent",
+            "selected-industries-recent",
+            "by-industry-recent",
+            "major-industries-historical"
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "short_label": "Total Labor Force, Recent",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Changes in the Occupational Mix From Recent Baselines",
+              "subtitle": "Dissimilarity index (percentage points). {variant} baseline.",
+              "source": "CPS, The Budget Lab analysis",
+              "note": "Dissimilarity index is calculated using a 12-month moving average of employment data",
+              "xAxisType": "numeric",
+              "data": "occupational-churn/total-labor-force-recent/data.csv",
+              "variants": [
+                {
+                  "id": "rolling",
+                  "xAxisType": "temporal"
+                },
+                {
+                  "id": "indexed",
+                  "x_axis_title": "Months from baseline"
+                }
+              ]
+            }
+          ],
+          "id": "total-labor-force-recent",
+          "tab": "occupational-churn",
+          "figureNum": 1,
+          "section": "by-time-period",
+          "description_html": "<p>The figure shows an occupational dissimilarity index for the entire labor force, calculated either on a rolling year-over-year basis or from a fixed base period. Index values can be interpreted as the percentage point change in the occupational composition of the labor force.</p>"
+        },
+        {
+          "short_label": "Total Labor Force, Historical",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Changes in the Occupational Mix Over Different Periods of Technological Change",
+              "subtitle": "Dissimilarity index (percentage points). {variant} baseline.",
+              "source": "CPS, The Budget Lab analysis",
+              "note": "Dissimilarity index is calculated using a 12-month moving average of employment data",
+              "xAxisType": "numeric",
+              "x_axis_title": "Months from baseline",
+              "data": "occupational-churn/total-labor-force-historical/data.csv"
+            }
+          ],
+          "id": "total-labor-force-historical",
+          "tab": "occupational-churn",
+          "figureNum": 2,
+          "section": "by-time-period",
+          "description_html": "<p>The figure shows an occupational dissimilarity index for the entire labor force, calculated from specific historical base periods. Index values can be interpreted as the percentage point change in the occupational composition of the labor force.</p>"
+        },
+        {
+          "short_label": "Selected Industries, Recent",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Changes in the Occupational Mix in Selected Industries",
+              "subtitle": "Dissimilarity index (percentage points). {variant} baseline.",
+              "source": "CPS, The Budget Lab analysis",
+              "note": "Dissimilarity index is calculated using a 12-month moving average of employment data",
+              "xAxisType": "numeric",
+              "yAxisPolicy": {
+                "min": 0,
+                "max": 16,
+                "tickCount": 5,
+                "autoWiden": {
+                  "step": 4
+                }
+              },
+              "data": "occupational-churn/selected-industries-recent/data.csv",
+              "variants": [
+                {
+                  "id": "rolling",
+                  "xAxisType": "temporal"
+                },
+                {
+                  "id": "indexed",
+                  "x_axis_title": "Months from baseline"
+                }
+              ]
+            }
+          ],
+          "id": "selected-industries-recent",
+          "tab": "occupational-churn",
+          "figureNum": 3,
+          "section": "by-industry",
+          "description_html": "<p>The figure shows an occupational dissimilarity index for selected industries, calculated either on a rolling year-over-year basis or from a fixed base period. Index values can be interpreted as the percentage point change in the occupational composition of each industry.</p>"
+        },
+        {
+          "short_label": "By Industry, Recent",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Changes in the Occupational Mix Within the {industry} Industry",
+              "subtitle": "Dissimilarity index (percentage points). {variant} baseline.",
+              "source": "CPS, The Budget Lab analysis",
+              "note": "Dissimilarity index is calculated using a 12-month moving average of employment data",
+              "xAxisType": "numeric",
+              "yAxisPolicy": {
+                "min": 0,
+                "max": 16,
+                "tickCount": 5,
+                "autoWiden": {
+                  "step": 4
+                }
+              },
+              "data": "occupational-churn/by-industry-recent/data.csv",
+              "variants": [
+                {
+                  "id": "rolling",
+                  "xAxisType": "temporal"
+                },
+                {
+                  "id": "indexed",
+                  "x_axis_title": "Months from baseline"
+                }
+              ],
+              "selectors": [
+                {
+                  "id": "industry",
+                  "kind": "single",
+                  "ui": "title-inline",
+                  "default": "information",
+                  "options": [
+                    {
+                      "id": "natural-resources-and-mining",
+                      "label": "Natural Resources and Mining"
+                    },
+                    {
+                      "id": "construction",
+                      "label": "Construction"
+                    },
+                    {
+                      "id": "manufacturing",
+                      "label": "Manufacturing"
+                    },
+                    {
+                      "id": "trade-transportation-and-utilities",
+                      "label": "Trade, Transportation, and Utilities"
+                    },
+                    {
+                      "id": "information",
+                      "label": "Information"
+                    },
+                    {
+                      "id": "financial-activities",
+                      "label": "Financial Activities"
+                    },
+                    {
+                      "id": "professional-and-business-services",
+                      "label": "Professional and Business Services"
+                    },
+                    {
+                      "id": "education-and-health-services",
+                      "label": "Education and Health Services"
+                    },
+                    {
+                      "id": "leisure-and-hospitality",
+                      "label": "Leisure and Hospitality"
+                    },
+                    {
+                      "id": "other-services",
+                      "label": "Other Services"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "id": "by-industry-recent",
+          "tab": "occupational-churn",
+          "figureNum": 4,
+          "section": "by-industry",
+          "description_html": "<p>The figure shows an occupational dissimilarity index for selected industries, calculated either on a rolling year-over-year basis or from a fixed base period. Index values can be interpreted as the percentage point change in the occupational composition of each industry.</p>"
+        },
+        {
+          "short_label": "Major Industries, Historical",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Changes in the Occupational Mix Since 2004 by Major Industry",
+              "subtitle": "Dissimilarity index (percentage points). {variant} baseline.",
+              "source": "CPS, The Budget Lab analysis",
+              "note": "Dissimilarity index is calculated using a 12-month moving average of employment data",
+              "xAxisType": "numeric",
+              "data": "occupational-churn/major-industries-historical/data.csv",
+              "variants": [
+                {
+                  "id": "rolling",
+                  "xAxisType": "temporal"
+                },
+                {
+                  "id": "indexed",
+                  "x_axis_title": "Months from baseline"
+                }
+              ]
+            }
+          ],
+          "id": "major-industries-historical",
+          "tab": "occupational-churn",
+          "figureNum": 5,
+          "section": "by-industry",
+          "description_html": "<p>The figure shows an occupational dissimilarity index for major industries, calculated either on a rolling year-over-year basis or from 2004. Index values can be interpreted as the percentage point change in the occupational composition of each industry.</p>"
+        },
+        {
+          "short_label": "New vs Older Grads, Recent",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Dissimilarity in the Occupational Mix Between Recent College Graduates (Ages 20-24) and Older College Graduates (Ages 25-34)",
+              "subtitle": "Dissimilarity index (percentage points)",
+              "source": "CPS, The Budget Lab analysis",
+              "note": "Dissimilarity index is calculated using a 3-month moving average of employment data",
+              "xAxisType": "temporal",
+              "data": "occupational-churn/new-vs-older-grads-recent/data.csv"
+            }
+          ],
+          "id": "new-vs-older-grads-recent",
+          "tab": "occupational-churn",
+          "figureNum": 6,
+          "section": "by-group",
+          "description_html": "<p>The figure shows an occupational dissimilarity index for recent college graduates and older college graduates. Index values can be interpreted as the percentage point difference between the occupational compositions of the two groups at a point in time.</p>"
+        },
+        {
+          "short_label": "New vs Older Grads, Historical",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Dissimilarity in the Occupational Mix Between Recent College Graduates (Ages 20-24) and Older College Graduates (Ages 25-34)",
+              "subtitle": "Dissimilarity index (percentage points)",
+              "source": "CPS, The Budget Lab analysis",
+              "note": "Dissimilarity index is calculated using a 3-month moving average of employment data",
+              "xAxisType": "numeric",
+              "x_axis_title": "Months from baseline",
+              "data": "occupational-churn/new-vs-older-grads-historical/data.csv"
+            }
+          ],
+          "id": "new-vs-older-grads-historical",
+          "tab": "occupational-churn",
+          "figureNum": 7,
+          "section": "by-group",
+          "description_html": "<p>The figure shows an occupational dissimilarity index for recent college graduates and older college graduates. Index values can be interpreted as the percentage point difference between the occupational compositions of the two groups at a point in time, starting alternatively in 2015 or 2022.</p>"
+        }
+      ]
+    },
+    {
+      "id": "ai-metrics",
+      "label": "AI Metrics",
+      "description": "Estimates of how AI exposure or usage in the labor market are changing over time. Updated monthly.",
+      "figureDefaults": {
+        "yAxisPolicy": {
+          "min": 0,
+          "max": 80,
+          "tickCount": 5
+        }
+      },
+      "sections": [
+        {
+          "id": "exposure",
+          "label": "Exposure",
+          "figures": [
+            "workers-by-exposure-level",
+            "task-exposure-among-unemployed",
+            "highest-exposure-share-among-unemployed"
+          ]
+        },
+        {
+          "id": "auto-vs-aug",
+          "label": "Automation Versus Augmentation",
+          "figures": [
+            "automation-vs-augmentation-usage",
+            "automated-vs-augmented-occupations",
+            "automated-tasks-by-unemployment-duration",
+            "automated-occupations-by-unemployment-duration",
+            "augmented-tasks-by-unemployment-duration",
+            "augmented-occupations-by-unemployment-duration"
+          ]
+        }
+      ],
+      "toggles": [
+        {
+          "id": "panel",
+          "label": "Task coverage",
+          "options": [
+            {
+              "id": "observed",
+              "label": "Observed tasks only"
+            },
+            {
+              "id": "missing-as-zero",
+              "label": "Missing tasks coded as zeros"
+            }
+          ],
+          "default": "observed",
+          "applies_to_figures": [
+            "automation-vs-augmentation-usage",
+            "automated-vs-augmented-occupations",
+            "automated-tasks-by-unemployment-duration",
+            "automated-occupations-by-unemployment-duration",
+            "augmented-tasks-by-unemployment-duration",
+            "augmented-occupations-by-unemployment-duration"
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "short_label": "Workers by Exposure Level",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Shares of Workers in AI Exposure Groups",
+              "subtitle": "Percent. Three-month moving average.",
+              "source": "CPS, Eloundou et al. (2023), The Budget Lab analysis",
+              "note": "Lowest, middle, and highest exposure groups correspond to the first two quintiles, 3rd and 4th quintiles, and top quintile, respectively.",
+              "xAxisType": "temporal",
+              "data": "ai-metrics/workers-by-exposure-level/data.csv"
+            }
+          ],
+          "id": "workers-by-exposure-level",
+          "tab": "ai-metrics",
+          "figureNum": 1,
+          "section": "exposure",
+          "description_html": "<p>Using the Eloundou et al. (2023) \"GPT-Beta\" exposure metric, the figure shows the shares of all workers who are in each of three groups: the lowest (bottom 40%), middle (next 40%), and top (top 20%) by AI-exposure rating. Shares do not sum to 100% because some workers are in occupations without exposure ratings.</p>"
+        },
+        {
+          "short_label": "Task Exposure Among Unemployed",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Proportion of Tasks Exposed to AI Amongst Unemployed Workers by Duration of Unemployment",
+              "subtitle": "Percent. Three-month moving average.",
+              "source": "CPS, Eloundou et al. (2023), The Budget Lab analysis",
+              "series_order": [
+                "<5 Weeks",
+                "5-14 Weeks",
+                "15-26 Weeks",
+                "27+ Weeks"
+              ],
+              "xAxisType": "temporal",
+              "data": "ai-metrics/task-exposure-among-unemployed/data.csv"
+            }
+          ],
+          "id": "task-exposure-among-unemployed",
+          "tab": "ai-metrics",
+          "figureNum": 2,
+          "section": "exposure",
+          "description_html": "<p>Using the Eloundou et al. (2023) \"GPT-Beta\" exposure metric, the figure shows the share of AI-exposed tasks within each of several unemployed groups, distinguished by duration of their unemployment.</p>"
+        },
+        {
+          "short_label": "Highest Exposure Share Among Unemployed",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Proportion of Workers With the Highest Exposure to AI by Duration of Unemployment",
+              "subtitle": "Percent. Three-month moving average.",
+              "source": "CPS, Eloundou et al. (2023), The Budget Lab analysis",
+              "note": "Highest exposure corresponds to the top quintile.",
+              "series_order": [
+                "<5 Weeks",
+                "5-14 Weeks",
+                "15-26 Weeks",
+                "27+ Weeks"
+              ],
+              "xAxisType": "temporal",
+              "data": "ai-metrics/highest-exposure-share-among-unemployed/data.csv"
+            }
+          ],
+          "id": "highest-exposure-share-among-unemployed",
+          "tab": "ai-metrics",
+          "figureNum": 3,
+          "section": "exposure",
+          "description_html": "<p>Using the Eloundou et al. (2023) \"GPT-Beta\" exposure metric, the figure shows the share of unemployed workers in the highest 20% of AI-exposure, distinguished by duration of their unemployment.</p>"
+        },
+        {
+          "short_label": "Automation vs Augmentation Usage",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Proportion of AI Usage Indicating Automation or Augmentation of Tasks Amongst Employed Workers",
+              "subtitle": "Percent. Three-month moving average. {panel}.",
+              "source": "CPS, Anthropic, The Budget Lab analysis",
+              "xAxisType": "temporal",
+              "data": "ai-metrics/automation-vs-augmentation-usage/data.csv",
+              "variants": [
+                {
+                  "id": "observed"
+                },
+                {
+                  "id": "missing-as-zero"
+                }
+              ]
+            }
+          ],
+          "id": "automation-vs-augmentation-usage",
+          "tab": "ai-metrics",
+          "figureNum": 4,
+          "section": "auto-vs-aug",
+          "description_html": "<p>Using aggregated Anthropic data on how AI is used by their customers across Claude and Claude API, the figure shows the shares of AI usage that are associated with augmentation or automation of work tasks. Results can be shown with observed tasks only or with missing tasks coded as zeroes.</p>"
+        },
+        {
+          "short_label": "Automated vs Augmented Occupations",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Proportion of Workers in Occupations Automated and Augmented by AI (As Defined by Usage)",
+              "subtitle": "Percent. Three-month moving average. {panel}.",
+              "source": "CPS, Anthropic, The Budget Lab analysis",
+              "note": "Occupations are considered automated (augmented) if more than half of AI usage indicates task automation (augmentation).",
+              "xAxisType": "temporal",
+              "data": "ai-metrics/automated-vs-augmented-occupations/data.csv",
+              "variants": [
+                {
+                  "id": "observed"
+                },
+                {
+                  "id": "missing-as-zero"
+                }
+              ]
+            }
+          ],
+          "id": "automated-vs-augmented-occupations",
+          "tab": "ai-metrics",
+          "figureNum": 5,
+          "section": "auto-vs-aug",
+          "description_html": "<p>Using aggregated Anthropic data on how AI is used by their customers across Claude and Claude API, the figure shows the shares of workers in occupations where more than half of their tasks are either automated or augmented. Results can be shown with observed tasks only or with missing tasks coded as zeroes.</p>"
+        },
+        {
+          "short_label": "Automated Tasks by Unemployment Duration",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Proportion of Occupation-Level AI Usage Automating Tasks Amongst Unemployed Workers by Duration of Unemployment",
+              "subtitle": "Percent. Three-month moving average. {panel}.",
+              "source": "CPS, Anthropic, The Budget Lab analysis",
+              "series_order": [
+                "<5 Weeks",
+                "5-14 Weeks",
+                "15-26 Weeks",
+                "27+ Weeks"
+              ],
+              "xAxisType": "temporal",
+              "data": "ai-metrics/automated-tasks-by-unemployment-duration/data.csv",
+              "variants": [
+                {
+                  "id": "observed"
+                },
+                {
+                  "id": "missing-as-zero"
+                }
+              ]
+            }
+          ],
+          "id": "automated-tasks-by-unemployment-duration",
+          "tab": "ai-metrics",
+          "figureNum": 6,
+          "section": "auto-vs-aug",
+          "description_html": "<p>Using aggregated Anthropic data on how AI is used by their customers across Claude and Claude API, the figure shows the shares of automated tasks for unemployed workers, distinguished by duration of their unemployment. Results can be shown with observed tasks only or with missing tasks coded as zeroes.</p>"
+        },
+        {
+          "short_label": "Automated Occupations by Unemployment Duration",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Proportion of Workers in Occupations Automated by AI by Duration of Unemployment",
+              "subtitle": "Percent. Three-month moving average. {panel}.",
+              "source": "CPS, Anthropic, The Budget Lab analysis",
+              "note": "Occupations are considered automated if more than half of AI usage indicates task automation.",
+              "series_order": [
+                "<5 Weeks",
+                "5-14 Weeks",
+                "15-26 Weeks",
+                "27+ Weeks"
+              ],
+              "xAxisType": "temporal",
+              "data": "ai-metrics/automated-occupations-by-unemployment-duration/data.csv",
+              "variants": [
+                {
+                  "id": "observed"
+                },
+                {
+                  "id": "missing-as-zero"
+                }
+              ]
+            }
+          ],
+          "id": "automated-occupations-by-unemployment-duration",
+          "tab": "ai-metrics",
+          "figureNum": 7,
+          "section": "auto-vs-aug",
+          "description_html": "<p>Using aggregated Anthropic data on how AI is used by their customers across Claude and Claude API, the figure shows the shares of unemployed workers in occupations where more than half of their tasks are automated, distinguished by duration of their unemployment. Results can be shown with observed tasks only or with missing tasks coded as zeroes.</p>"
+        },
+        {
+          "short_label": "Augmented Tasks by Unemployment Duration",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Proportion of Occupation-Level AI Usage Augmenting Tasks Amongst Unemployed Workers by Duration of Unemployment",
+              "subtitle": "Percent. Three-month moving average. {panel}.",
+              "source": "CPS, Anthropic, The Budget Lab analysis",
+              "series_order": [
+                "<5 Weeks",
+                "5-14 Weeks",
+                "15-26 Weeks",
+                "27+ Weeks"
+              ],
+              "xAxisType": "temporal",
+              "data": "ai-metrics/augmented-tasks-by-unemployment-duration/data.csv",
+              "variants": [
+                {
+                  "id": "observed"
+                },
+                {
+                  "id": "missing-as-zero"
+                }
+              ]
+            }
+          ],
+          "id": "augmented-tasks-by-unemployment-duration",
+          "tab": "ai-metrics",
+          "figureNum": 8,
+          "section": "auto-vs-aug",
+          "description_html": "<p>Using aggregated Anthropic data on how AI is used by their customers across Claude and Claude API, the figure shows the shares of augmented tasks for unemployed workers, distinguished by duration of their unemployment. Results can be shown with observed tasks only or with missing tasks coded as zeroes.</p>"
+        },
+        {
+          "short_label": "Augmented Occupations by Unemployment Duration",
+          "charts": [
+            {
+              "chartType": "line",
+              "title": "Proportion of Workers in Occupations Augmented by AI by Duration of Unemployment",
+              "subtitle": "Percent. Three-month moving average. {panel}.",
+              "source": "CPS, Anthropic, The Budget Lab analysis",
+              "note": "Occupations are considered augmented if more than half of AI usage indicates task augmentation.",
+              "series_order": [
+                "<5 Weeks",
+                "5-14 Weeks",
+                "15-26 Weeks",
+                "27+ Weeks"
+              ],
+              "xAxisType": "temporal",
+              "data": "ai-metrics/augmented-occupations-by-unemployment-duration/data.csv",
+              "variants": [
+                {
+                  "id": "observed"
+                },
+                {
+                  "id": "missing-as-zero"
+                }
+              ]
+            }
+          ],
+          "id": "augmented-occupations-by-unemployment-duration",
+          "tab": "ai-metrics",
+          "figureNum": 9,
+          "section": "auto-vs-aug",
+          "description_html": "<p>Using aggregated Anthropic data on how AI is used by their customers across Claude and Claude API, the figure shows the shares of unemployed workers in occupations where more than half of their tasks are augmented, distinguished by duration of their unemployment. Results can be shown with observed tasks only or with missing tasks coded as zeroes.</p>"
+        }
+      ]
+    },
+    {
+      "id": "comparisons",
+      "label": "Comparisons of AI-Exposed and Unexposed Workers",
+      "description": "Synthetic differences-in-differences estimates of how AI-exposed and AI-unexposed labor market outcomes have evolved since late 2022. Updated quarterly.",
+      "figureDefaults": {
+        "xAxisType": "quarterly",
+        "xAxisPolicy": {
+          "markers": [
+            {
+              "x": "2022Q4",
+              "label": "Treatment"
+            }
+          ]
+        }
+      },
+      "figures": [
+        {
+          "short_label": "Employment Shares",
+          "charts": [
+            {
+              "chartLetter": "a",
+              "chartType": "line",
+              "title": "Employment Shares for AI-Exposed and Comparable Unexposed Occupations",
+              "subtitle": "Employment share (percentage points)",
+              "source": "BLS via IPUMS-CPS and The Budget Lab analysis",
+              "note": "Employment share is employed workers in an occupation as a share of the population in percentage point form",
+              "xAxisType": "quarterly",
+              "series_order": [
+                "Synthetic",
+                "Treated"
+              ],
+              "series_colors": {
+                "Treated": "#0072B2",
+                "Synthetic": "#0072B2"
+              },
+              "series_styles": {
+                "Synthetic": {
+                  "dashed": true
+                }
+              },
+              "series_labels": {
+                "Treated": "AI-Exposed",
+                "Synthetic": "Synthetic AI-Unexposed"
+              },
+              "data": "comparisons/employment-shares/data.csv"
+            },
+            {
+              "chartLetter": "b",
+              "chartType": "line",
+              "title": "Event Study with SDID Point Estimates",
+              "subtitle": "Percentage point difference",
+              "source": "BLS via IPUMS-CPS and The Budget Lab analysis",
+              "note": "95% confidence intervals and estimated impacts are calculated according to the procedure outlined in Clarke et al. (2022).",
+              "xAxisType": "quarterly",
+              "series_order": [
+                "Difference"
+              ],
+              "confidence_bands": [
+                {
+                  "series": "Difference",
+                  "lower": "lower_ci",
+                  "upper": "upper_ci"
+                }
+              ],
+              "data": "comparisons/employment-shares/data.csv"
+            }
+          ],
+          "id": "employment-shares",
+          "tab": "comparisons",
+          "figureNum": 1,
+          "description_html": "<p>The first panel shows the average employment share of AI-exposed and synthetic AI-unexposed occupations over time, with the vertical dashed line corresponding to the late 2022 introduction of modern large-language models. The second panel shows the difference in exposed and synthetic unexposed outcomes, along with confidence intervals for those point estimates. Estimates are generated using synthetic differences-in-differences.</p>"
+        },
+        {
+          "short_label": "Real Hourly Wages",
+          "charts": [
+            {
+              "chartLetter": "a",
+              "chartType": "line",
+              "title": "Real Hourly Wages for AI-Exposed and Comparable Unexposed Occupations",
+              "subtitle": "Log wages",
+              "source": "BLS via IPUMS-CPS and The Budget Lab analysis",
+              "note": "2022 dollars",
+              "xAxisType": "quarterly",
+              "series_order": [
+                "Synthetic",
+                "Treated"
+              ],
+              "series_colors": {
+                "Treated": "#0072B2",
+                "Synthetic": "#0072B2"
+              },
+              "series_styles": {
+                "Synthetic": {
+                  "dashed": true
+                }
+              },
+              "series_labels": {
+                "Treated": "AI-Exposed",
+                "Synthetic": "Synthetic AI-Unexposed"
+              },
+              "data": "comparisons/real-hourly-wages/data.csv"
+            },
+            {
+              "chartLetter": "b",
+              "chartType": "line",
+              "title": "Event Study with SDID Point Estimates",
+              "subtitle": "Percent difference",
+              "source": "BLS via IPUMS-CPS and The Budget Lab analysis",
+              "note": "95% confidence intervals and estimated impacts are calculated according to the procedure outlined in Clarke et al. (2022).",
+              "xAxisType": "quarterly",
+              "series_order": [
+                "Difference"
+              ],
+              "confidence_bands": [
+                {
+                  "series": "Difference",
+                  "lower": "lower_ci",
+                  "upper": "upper_ci"
+                }
+              ],
+              "data": "comparisons/real-hourly-wages/data.csv"
+            }
+          ],
+          "id": "real-hourly-wages",
+          "tab": "comparisons",
+          "figureNum": 2,
+          "description_html": "<p>The first panel shows the average log real hourly wages of AI-exposed and synthetic AI-unexposed occupations over time, with the vertical dashed line corresponding to the late 2022 introduction of modern large-language models. The second panel shows the difference in exposed and synthetic unexposed outcomes, along with confidence intervals for those point estimates. Estimates are generated using synthetic differences-in-differences.</p>"
+        },
+        {
+          "short_label": "Unemployment Rate",
+          "charts": [
+            {
+              "chartLetter": "a",
+              "chartType": "line",
+              "title": "Unemployment Rates for AI-Exposed and Comparable Unexposed Occupations",
+              "subtitle": "Log rate",
+              "source": "BLS via IPUMS-CPS and The Budget Lab analysis",
+              "xAxisType": "quarterly",
+              "series_order": [
+                "Synthetic",
+                "Treated"
+              ],
+              "series_colors": {
+                "Treated": "#0072B2",
+                "Synthetic": "#0072B2"
+              },
+              "series_styles": {
+                "Synthetic": {
+                  "dashed": true
+                }
+              },
+              "series_labels": {
+                "Treated": "AI-Exposed",
+                "Synthetic": "Synthetic AI-Unexposed"
+              },
+              "data": "comparisons/unemployment-rate/data.csv"
+            },
+            {
+              "chartLetter": "b",
+              "chartType": "line",
+              "title": "Event Study with SDID Point Estimates",
+              "subtitle": "Percentage point difference",
+              "source": "BLS via IPUMS-CPS and The Budget Lab analysis",
+              "note": "95% confidence intervals and estimated impacts are calculated according to the procedure outlined in Clarke et al. (2022).",
+              "xAxisType": "quarterly",
+              "series_order": [
+                "Difference"
+              ],
+              "confidence_bands": [
+                {
+                  "series": "Difference",
+                  "lower": "lower_ci",
+                  "upper": "upper_ci"
+                }
+              ],
+              "data": "comparisons/unemployment-rate/data.csv"
+            }
+          ],
+          "id": "unemployment-rate",
+          "tab": "comparisons",
+          "figureNum": 3,
+          "description_html": "<p>The first panel shows the average log unemployment rate of AI-exposed and synthetic AI-unexposed occupations over time, with the vertical dashed line corresponding to the late 2022 introduction of modern large-language models. The second panel shows the difference in exposed and synthetic unexposed outcomes, along with confidence intervals for those point estimates. Estimates are generated using synthetic differences-in-differences.</p>"
+        }
+      ]
+    }
+  ],
+  "additional_downloads": {
+    "label": "Crosswalks",
+    "files": [
+      {
+        "path": "crosswalks/cps_2020_data.csv",
+        "description": "Metrics in 2020 CPS occ codes"
+      },
+      {
+        "path": "crosswalks/soc_data.csv",
+        "description": "Metrics in SOC 2018 codes"
+      }
+    ]
+  }
+}
