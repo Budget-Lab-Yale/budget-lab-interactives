@@ -9947,6 +9947,9 @@
                 "data": "previous-vintages/2025-10-17/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of October 17, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -9956,7 +9959,6 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of October 17, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -10501,6 +10503,9 @@
                 "data": "previous-vintages/2025-09-26/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of September 26, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -10510,7 +10515,6 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of September 26, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -11055,6 +11059,9 @@
                 "data": "previous-vintages/2025-09-04/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of September 3, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -11064,7 +11071,6 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of September 3, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -11600,6 +11606,9 @@
                 "data": "previous-vintages/2025-09-04/no-ieepa/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of September 3, 2025, under the No-IEEPA scenario.",
                   "data": "data.csv",
                   "stub": [
@@ -11609,7 +11618,6 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of September 3, 2025, under the No-IEEPA scenario",
                     "Consumer price increase": "Consumer price increase",
@@ -12111,6 +12119,9 @@
                 "data": "previous-vintages/2025-08-07/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of August 7, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -12120,7 +12131,6 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of August 7, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -12648,6 +12658,9 @@
                 "data": "previous-vintages/2025-08-01/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of August 1, 2025 (through July 31).",
                   "data": "data.csv",
                   "stub": [
@@ -12657,7 +12670,6 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of August 1, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -13204,6 +13216,9 @@
                 "data": "previous-vintages/2025-07-30/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of July 30, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -13213,7 +13228,6 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of July 30, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -13751,6 +13765,9 @@
                 "data": "previous-vintages/2025-07-28/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of July 28, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -13760,7 +13777,6 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of July 28, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -14298,6 +14314,9 @@
                 "data": "previous-vintages/2025-07-22/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of July 22, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -14307,7 +14326,6 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of July 22, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -14845,6 +14863,9 @@
                 "data": "previous-vintages/2025-07-13/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of July 13, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -14854,7 +14875,6 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of July 13, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -15315,6 +15335,9 @@
                 "data": "previous-vintages/2025-07-11/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of July 11, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -15324,7 +15347,7 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "* Incorporates 35% Canada tariff. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+                  "notes": "Incorporates 35% Canada tariff.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of July 11, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -15785,6 +15808,9 @@
                 "data": "previous-vintages/2025-07-10/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of July 10, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -15794,7 +15820,7 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "* Incorporates July 9 letters & 50% copper tariff. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+                  "notes": "Incorporates July 9 letters & 50% copper tariff.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of July 10, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -16293,6 +16319,9 @@
                 "data": "previous-vintages/2025-07-07/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of July 7, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -16302,7 +16331,7 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "* Incorporates US-Vietnam framework and July 7 announcement. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+                  "notes": "Incorporates US-Vietnam framework and July 7 announcement.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of July 7, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -16762,6 +16791,9 @@
                 "data": "previous-vintages/2025-06-17/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of June 17, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -16771,7 +16803,7 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "* Increases steel & aluminum tariffs to 50%. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+                  "notes": "Increases steel & aluminum tariffs to 50%.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of June 17, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -17283,6 +17315,9 @@
                 "data": "previous-vintages/2025-06-01/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of June 1, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -17292,7 +17327,7 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "* Increases steel & aluminum tariffs to 50%. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+                  "notes": "Increases steel & aluminum tariffs to 50%.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of June 1, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -17752,6 +17787,9 @@
                 "data": "previous-vintages/2025-05-29/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of May 29, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -17761,7 +17799,7 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "* Removes all IEEPA tariffs per May 28 court ruling. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+                  "notes": "Removes all IEEPA tariffs per May 28 court ruling.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of May 29, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -18221,6 +18259,9 @@
                 "data": "previous-vintages/2025-05-23/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of May 23, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -18230,7 +18271,7 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "* Includes effects of EU 'reciprocal' tariff set to 50% · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+                  "notes": "Includes effects of EU 'reciprocal' tariff set to 50%",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of May 23, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -18690,6 +18731,9 @@
                 "data": "previous-vintages/2025-05-12/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of May 12, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -18699,7 +18743,7 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "* Includes effects of May 12 lower US-China Tariffs & May 8 US-UK trade deal. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+                  "notes": "Includes effects of May 12 lower US-China Tariffs & May 8 US-UK trade deal.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of May 12, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -19166,6 +19210,9 @@
                 "data": "previous-vintages/2025-04-15/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of April 15, 2025.",
                   "data": "data.csv",
                   "stub": [
@@ -19175,7 +19222,7 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "* Includes 125% China retaliatory tariffs & China mineral & magnet export controls. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+                  "notes": "Includes 125% China retaliatory tariffs & China mineral & magnet export controls.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of April 15, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -19619,6 +19666,9 @@
                 "data": "previous-vintages/2025-04-10/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of April 10, 2025, incorporating the revised April 9 tariff announcement.",
                   "data": "data.csv",
                   "stub": [
@@ -19628,7 +19678,7 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "* Includes late-afternoon April 9 announcement & retaliation implemented or planned to be implemented by the week of April 7, including additional 50% tariffs of US and China on each other. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+                  "notes": "Includes late-afternoon April 9 announcement & retaliation implemented or planned to be implemented by the week of April 7, including additional 50% tariffs of US and China on each other.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of April 10, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -20082,6 +20132,9 @@
                 "data": "previous-vintages/2025-04-07/baseline/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of April 8, 2025 (through the week of April 7).",
                   "data": "data.csv",
                   "stub": [
@@ -20091,7 +20144,7 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "* Includes retaliation implemented or planned to be implemented by the week of April 7. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+                  "notes": "Includes retaliation implemented or planned to be implemented by the week of April 7.",
                   "group_labels": {
                     "Tariff rate": "Tariff rates, as of April 8, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -20455,6 +20508,9 @@
                 "data": "previous-vintages/2025-04-02/april-2-announcement-only/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of April 2, 2025, under the April 2 Announcement Only scenario.",
                   "data": "data.csv",
                   "stub": [
@@ -20464,7 +20520,7 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "* Includes retaliation announced as of April 2. · ** Not including retaliation. · *** Pre-substitution. · **** Post-substitution. · ***** Under relaxed conventional assumptions",
+                  "notes": "Includes retaliation announced as of April 2. · Not including retaliation.",
                   "group_labels": {
                     "Tariff rate": "Tariff rate increase, as of April 2, 2025",
                     "Consumer price increase": "Consumer price increase",
@@ -20781,6 +20837,9 @@
                 "data": "previous-vintages/2025-04-02/all-2025-tariffs-to-date/summary-statistics/data.csv",
                 "spec": {
                   "title": "Summary of Results",
+                  "group_notes": {
+                    "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+                  },
                   "subtitle": "Projected effects of tariff policy as of April 2, 2025, under the All 2025 Tariffs to Date scenario.",
                   "data": "data.csv",
                   "stub": [
@@ -20790,7 +20849,7 @@
                   "header": [],
                   "value": "value",
                   "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-                  "notes": "* Includes retaliation announced as of April 2. · ** Not including retaliation. · *** Pre-substitution. · **** Post-substitution. · ***** Under relaxed conventional assumptions",
+                  "notes": "Includes retaliation announced as of April 2. · Not including retaliation.",
                   "group_labels": {
                     "Tariff rate": "Tariff rate increase, as of April 2, 2025",
                     "Consumer price increase": "Consumer price increase",

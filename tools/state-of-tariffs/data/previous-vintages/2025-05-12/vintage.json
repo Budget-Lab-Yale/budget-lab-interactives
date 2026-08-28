@@ -43,6 +43,9 @@
             "data": "previous-vintages/2025-05-12/baseline/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
+              "group_notes": {
+                "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+              },
               "subtitle": "Projected effects of tariff policy as of May 12, 2025.",
               "data": "data.csv",
               "stub": [
@@ -52,7 +55,7 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-              "notes": "* Includes effects of May 12 lower US-China Tariffs & May 8 US-UK trade deal. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+              "notes": "Includes effects of May 12 lower US-China Tariffs & May 8 US-UK trade deal.",
               "group_labels": {
                 "Tariff rate": "Tariff rates, as of May 12, 2025",
                 "Consumer price increase": "Consumer price increase",

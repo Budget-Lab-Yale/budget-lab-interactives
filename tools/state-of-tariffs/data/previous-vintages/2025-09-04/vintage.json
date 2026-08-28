@@ -43,6 +43,9 @@
             "data": "previous-vintages/2025-09-04/baseline/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
+              "group_notes": {
+                "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+              },
               "subtitle": "Projected effects of tariff policy as of September 3, 2025.",
               "data": "data.csv",
               "stub": [
@@ -52,7 +55,6 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-              "notes": "** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
               "group_labels": {
                 "Tariff rate": "Tariff rates, as of September 3, 2025",
                 "Consumer price increase": "Consumer price increase",
@@ -584,6 +586,9 @@
             "data": "previous-vintages/2025-09-04/no-ieepa/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
+              "group_notes": {
+                "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+              },
               "subtitle": "Projected effects of tariff policy as of September 3, 2025, under the No-IEEPA scenario.",
               "data": "data.csv",
               "stub": [
@@ -593,7 +598,6 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-              "notes": "** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
               "group_labels": {
                 "Tariff rate": "Tariff rates, as of September 3, 2025, under the No-IEEPA scenario",
                 "Consumer price increase": "Consumer price increase",

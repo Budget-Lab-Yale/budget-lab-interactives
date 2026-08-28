@@ -43,6 +43,9 @@
             "data": "previous-vintages/2025-04-07/baseline/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
+              "group_notes": {
+                "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+              },
               "subtitle": "Projected effects of tariff policy as of April 8, 2025 (through the week of April 7).",
               "data": "data.csv",
               "stub": [
@@ -52,7 +55,7 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-              "notes": "* Includes retaliation implemented or planned to be implemented by the week of April 7. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+              "notes": "Includes retaliation implemented or planned to be implemented by the week of April 7.",
               "group_labels": {
                 "Tariff rate": "Tariff rates, as of April 8, 2025",
                 "Consumer price increase": "Consumer price increase",

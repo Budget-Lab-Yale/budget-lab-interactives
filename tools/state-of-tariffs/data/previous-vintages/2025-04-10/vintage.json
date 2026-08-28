@@ -43,6 +43,9 @@
             "data": "previous-vintages/2025-04-10/baseline/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
+              "group_notes": {
+                "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+              },
               "subtitle": "Projected effects of tariff policy as of April 10, 2025, incorporating the revised April 9 tariff announcement.",
               "data": "data.csv",
               "stub": [
@@ -52,7 +55,7 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-              "notes": "* Includes late-afternoon April 9 announcement & retaliation implemented or planned to be implemented by the week of April 7, including additional 50% tariffs of US and China on each other. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+              "notes": "Includes late-afternoon April 9 announcement & retaliation implemented or planned to be implemented by the week of April 7, including additional 50% tariffs of US and China on each other.",
               "group_labels": {
                 "Tariff rate": "Tariff rates, as of April 10, 2025",
                 "Consumer price increase": "Consumer price increase",

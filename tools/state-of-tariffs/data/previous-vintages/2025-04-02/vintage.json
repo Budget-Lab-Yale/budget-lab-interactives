@@ -43,6 +43,9 @@
             "data": "previous-vintages/2025-04-02/april-2-announcement-only/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
+              "group_notes": {
+                "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+              },
               "subtitle": "Projected effects of tariff policy as of April 2, 2025, under the April 2 Announcement Only scenario.",
               "data": "data.csv",
               "stub": [
@@ -52,7 +55,7 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-              "notes": "* Includes retaliation announced as of April 2. · ** Not including retaliation. · *** Pre-substitution. · **** Post-substitution. · ***** Under relaxed conventional assumptions",
+              "notes": "Includes retaliation announced as of April 2. · Not including retaliation.",
               "group_labels": {
                 "Tariff rate": "Tariff rate increase, as of April 2, 2025",
                 "Consumer price increase": "Consumer price increase",
@@ -369,6 +372,9 @@
             "data": "previous-vintages/2025-04-02/all-2025-tariffs-to-date/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
+              "group_notes": {
+                "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+              },
               "subtitle": "Projected effects of tariff policy as of April 2, 2025, under the All 2025 Tariffs to Date scenario.",
               "data": "data.csv",
               "stub": [
@@ -378,7 +384,7 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-              "notes": "* Includes retaliation announced as of April 2. · ** Not including retaliation. · *** Pre-substitution. · **** Post-substitution. · ***** Under relaxed conventional assumptions",
+              "notes": "Includes retaliation announced as of April 2. · Not including retaliation.",
               "group_labels": {
                 "Tariff rate": "Tariff rate increase, as of April 2, 2025",
                 "Consumer price increase": "Consumer price increase",

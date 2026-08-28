@@ -43,6 +43,9 @@
             "data": "previous-vintages/2025-05-29/baseline/summary-statistics/data.csv",
             "spec": {
               "title": "Summary of Results",
+              "group_notes": {
+                "Revenue (10-year)": "Conventional revenue is scored under relaxed conventional assumptions."
+              },
               "subtitle": "Projected effects of tariff policy as of May 29, 2025.",
               "data": "data.csv",
               "stub": [
@@ -52,7 +55,7 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
-              "notes": "* Removes all IEEPA tariffs per May 28 court ruling. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
+              "notes": "Removes all IEEPA tariffs per May 28 court ruling.",
               "group_labels": {
                 "Tariff rate": "Tariff rates, as of May 29, 2025",
                 "Consumer price increase": "Consumer price increase",
