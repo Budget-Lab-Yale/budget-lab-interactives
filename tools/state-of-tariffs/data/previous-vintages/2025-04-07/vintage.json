@@ -250,7 +250,7 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Household Cost of Tariffs by Income Decile",
-              "subtitle": "Tariff burden by household income decile, post-substitution. Through week of April 7.",
+              "subtitle": "Tariff burden by household income decile, pre-substitution. Through week of April 7.",
               "source": "GTAP v7, Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",

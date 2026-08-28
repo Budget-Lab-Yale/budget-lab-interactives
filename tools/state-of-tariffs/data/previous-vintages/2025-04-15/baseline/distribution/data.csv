@@ -1,21 +1,21 @@
 category,value,substitution,basis
-1,,postsub,% of after-tax income
-2,-5.067242142143167,postsub,% of after-tax income
-3,-4.569340759444764,postsub,% of after-tax income
-4,-3.770049368037309,postsub,% of after-tax income
-5,-3.5312389710782948,postsub,% of after-tax income
-6,-3.2946693842070816,postsub,% of after-tax income
-7,-3.0617702197836376,postsub,% of after-tax income
-8,-2.8514028761422012,postsub,% of after-tax income
-9,-2.661321916868599,postsub,% of after-tax income
-10,-2.066354879149116,postsub,% of after-tax income
-1,,postsub,2024 dollars
-2,-2177.9961264002204,postsub,2024 dollars
-3,-2960.198911731954,postsub,2024 dollars
-4,-3252.360499764647,postsub,2024 dollars
-5,-3848.2982757791115,postsub,2024 dollars
-6,-4562.2626820868945,postsub,2024 dollars
-7,-5316.914274787072,postsub,2024 dollars
-8,-6121.524980484166,postsub,2024 dollars
-9,-7424.707348810346,postsub,2024 dollars
-10,-10424.738770440426,postsub,2024 dollars
+1,,presub,% of after-tax income
+2,-5.067242142143167,presub,% of after-tax income
+3,-4.569340759444764,presub,% of after-tax income
+4,-3.770049368037309,presub,% of after-tax income
+5,-3.5312389710782948,presub,% of after-tax income
+6,-3.2946693842070816,presub,% of after-tax income
+7,-3.0617702197836376,presub,% of after-tax income
+8,-2.8514028761422012,presub,% of after-tax income
+9,-2.661321916868599,presub,% of after-tax income
+10,-2.066354879149116,presub,% of after-tax income
+1,,presub,2024 dollars
+2,-2177.9961264002204,presub,2024 dollars
+3,-2960.198911731954,presub,2024 dollars
+4,-3252.360499764647,presub,2024 dollars
+5,-3848.2982757791115,presub,2024 dollars
+6,-4562.2626820868945,presub,2024 dollars
+7,-5316.914274787072,presub,2024 dollars
+8,-6121.524980484166,presub,2024 dollars
+9,-7424.707348810346,presub,2024 dollars
+10,-10424.738770440426,presub,2024 dollars
