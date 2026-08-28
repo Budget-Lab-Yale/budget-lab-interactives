@@ -4,7 +4,7 @@
   "label": "June 17, 2025",
   "published_at": "2025-06-17T00:00:00-0400",
   "version": "1.0",
-  "changes_html": "<h2>About This Vintage</h2> <h2>Changes Since the Last Update</h2><p>Since the June 1 report:</p><ul><li>The Department of Commerce issued a <a href=\"https://public-inspection.federalregister.gov/2025-11067.pdf\">notice</a> expanding the 50% steel &amp; aluminum tariffs to cover &ldquo;steel derivatives&rdquo; including many household appliances like refrigerators, freezers, dish washers, washing machines, and dryers.</li><li>China ended export restrictions on rare earths and magnets as a result of the <a href=\"https://www.csis.org/analysis/trump-strikes-deal-restore-rare-earths-access\">June 11 US-China deal</a> (which otherwise ossified tariffs already assumed by TBL).</li><li>TBL changed its tariff distributional analysis to be more internally consistent with the concepts and definitions used in its tax model. The changes have the effect of reducing the regressivity of tariffs. See the Methodological Appendix for more detail.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+  "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the June 1 report:</p><ul><li>The Department of Commerce issued a <a href=\"https://public-inspection.federalregister.gov/2025-11067.pdf\">notice</a> expanding the 50% steel &amp; aluminum tariffs to cover &ldquo;steel derivatives&rdquo; including many household appliances like refrigerators, freezers, dish washers, washing machines, and dryers.</li><li>China ended export restrictions on rare earths and magnets as a result of the <a href=\"https://www.csis.org/analysis/trump-strikes-deal-restore-rare-earths-access\">June 11 US-China deal</a> (which otherwise ossified tariffs already assumed by TBL).</li><li>TBL changed its tariff distributional analysis to be more internally consistent with the concepts and definitions used in its tax model. The changes have the effect of reducing the regressivity of tariffs. See the Methodological Appendix for more detail.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
   "scenarios": [
     {
       "id": "baseline",
@@ -399,6 +399,7 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Comparison of 2027 Distributional Effects of 2025 Tariffs to Date",
+              "note": "Insufficient data for first decile.",
               "subtitle": "Through June 16. By household income decile.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",

@@ -468,9 +468,6 @@
                 "mode": "shared",
                 "columns": 2,
                 "pane_widths": "equal-bar"
-              },
-              "category_colors": {
-                "Total": "#6b7280"
               }
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
@@ -882,9 +879,6 @@
                 "mode": "shared",
                 "columns": 2,
                 "pane_widths": "equal-bar"
-              },
-              "category_colors": {
-                "Total": "#6b7280"
               }
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner, under the IEEPA Invalidation scenario.</p>",
@@ -939,8 +933,7 @@
                 }
               },
               "header_labels": {
-                "2026-35": "2026-35 Total",
-                "2025-34": "2025-34 Total"
+                "2026-35": "2026-35 Total"
               }
             },
             "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year under the IEEPA Invalidation scenario, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total.</p>",

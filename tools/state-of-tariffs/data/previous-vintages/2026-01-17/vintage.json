@@ -473,7 +473,7 @@
       "tab": {
         "id": "with-greenland-tariffs",
         "label": "Projected Effects:\nWith Greenland Tariffs",
-        "description": "Projected effects of tariff policy as of January 19, 2026, under the counterfactual scenario in which new tariffs on Greenland-linked goods are not imposed.",
+        "description": "Projected effects of tariff policy as of January 19, 2026, under the scenario in which the announced Greenland tariffs take effect.",
         "sections": [
           {
             "id": "overview",

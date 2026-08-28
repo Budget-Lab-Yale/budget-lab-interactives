@@ -7695,7 +7695,7 @@
           "tab": {
             "id": "with-greenland-tariffs",
             "label": "Projected Effects:\nWith Greenland Tariffs",
-            "description": "Projected effects of tariff policy as of January 19, 2026, under the counterfactual scenario in which new tariffs on Greenland-linked goods are not imposed.",
+            "description": "Projected effects of tariff policy as of January 19, 2026, under the scenario in which the announced Greenland tariffs take effect.",
             "sections": [
               {
                 "id": "overview",
@@ -9490,9 +9490,6 @@
                     "mode": "shared",
                     "columns": 2,
                     "pane_widths": "equal-bar"
-                  },
-                  "category_colors": {
-                    "Total": "#6b7280"
                   }
                 },
                 "body_html": "<p>The long-run change in real GDP, by sector or by trading partner.</p>",
@@ -9904,9 +9901,6 @@
                     "mode": "shared",
                     "columns": 2,
                     "pane_widths": "equal-bar"
-                  },
-                  "category_colors": {
-                    "Total": "#6b7280"
                   }
                 },
                 "body_html": "<p>The long-run change in real GDP, by sector or by trading partner, under the IEEPA Invalidation scenario.</p>",
@@ -9961,8 +9955,7 @@
                     }
                   },
                   "header_labels": {
-                    "2026-35": "2026-35 Total",
-                    "2025-34": "2025-34 Total"
+                    "2026-35": "2026-35 Total"
                   }
                 },
                 "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year under the IEEPA Invalidation scenario, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total.</p>",
@@ -12170,7 +12163,7 @@
       "label": "August 7, 2025",
       "published_at": "2025-08-07T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-august-1-2025\">August 1</a> report:</p><ul><li>On Wednesday, August 6, the Trump Administration <a href=\"https://www.cnbc.com/2025/08/06/trump-trade-india-tariffs-russia.html\">increased the tariff rate for India</a> to 50%, up from 25% previously.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+      "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-august-1-2025\">August 1</a> report:</p><ul><li>On Wednesday, August 6, the Trump Administration <a href=\"https://www.cnbc.com/2025/08/06/trump-trade-india-tariffs-russia.html\">increased the tariff rate for India</a> to 50%, up from 25% previously.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
       "scenarios": [
         {
           "id": "baseline",
@@ -13831,7 +13824,7 @@
       "label": "July 28, 2025",
       "published_at": "2025-07-28T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-july-23-2025\">July 23 report</a>:</p><ul><li>On July 27, the US and the European Union agreed to a deal that set US tariffs on imports from the EU at 15% on most goods. Previously, TBL had assumed a 30% rate on the EU.</li><li>TBL&rsquo;s effective tariff rate calculation now incorporates the May actual USMCA shares from Canada and Mexico; previously, the model used the March actual shares. This adjustment primarily raises the Canada USMCA share and thus lowered the overall effective US tariff rate.</li><li>TBL made two largely-offsetting updates to its macroeconomic projections. The macroeconomic projections now use updated actual Q1 &amp; Q2 data on the effective tariff rate, which lowered the effective tariff rate relative to TBL&rsquo;s prior assumptions. Partially but not fully offsetting this channel, TBL incorporated uncertainty effects into its estimates by including changes in the VIX into its underlying shocks.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+      "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-july-23-2025\">July 23 report</a>:</p><ul><li>On July 27, the US and the European Union agreed to a deal that set US tariffs on imports from the EU at 15% on most goods. Previously, TBL had assumed a 30% rate on the EU.</li><li>TBL&rsquo;s effective tariff rate calculation now incorporates the May actual USMCA shares from Canada and Mexico; previously, the model used the March actual shares. This adjustment primarily raises the Canada USMCA share and thus lowered the overall effective US tariff rate.</li><li>TBL made two largely-offsetting updates to its macroeconomic projections. The macroeconomic projections now use updated actual Q1 &amp; Q2 data on the effective tariff rate, which lowered the effective tariff rate relative to TBL&rsquo;s prior assumptions. Partially but not fully offsetting this channel, TBL incorporated uncertainty effects into its estimates by including changes in the VIX into its underlying shocks.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
       "scenarios": [
         {
           "id": "baseline",
@@ -14385,7 +14378,7 @@
       "label": "July 22, 2025",
       "published_at": "2025-07-22T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-july-14-2025\">July 14 report</a>:</p><ul><li>On July 22, the <a href=\"https://www.cnbc.com/2025/07/22/trump-indonesia-trade-tariffs-framework.html\">US and Indonesia agreed to a joint framework</a> that would set tariffs on Indonesia at 19% beginning August 1. This is a cut from the 32% threatened by the US in President Trump&rsquo;s July 7 letter and which TBL previously assumed.</li><li>Also on July 22, President Trump announced the US and the Philippines had <a href=\"https://www.cnbc.com/2025/07/22/trump-philippines-trade-tariffs-military.html\">concluded a trade deal</a>, setting the US tariff rate at 19%. This is lower than the 20% threatened in President Trump&rsquo;s July 9 letter and previously-assumed by TBL.</li><li>On July 22, President Trump also announced a trade deal with Japan. <a href=\"https://www.cnn.com/2025/07/22/business/japan-trade-agreement-us\">The deal</a> would set the US tariff rate at 15%, down from the 25% laid out in President Trump&rsquo;s July 7 letter and previously-assumed by TBL.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+      "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-july-14-2025\">July 14 report</a>:</p><ul><li>On July 22, the <a href=\"https://www.cnbc.com/2025/07/22/trump-indonesia-trade-tariffs-framework.html\">US and Indonesia agreed to a joint framework</a> that would set tariffs on Indonesia at 19% beginning August 1. This is a cut from the 32% threatened by the US in President Trump&rsquo;s July 7 letter and which TBL previously assumed.</li><li>Also on July 22, President Trump announced the US and the Philippines had <a href=\"https://www.cnbc.com/2025/07/22/trump-philippines-trade-tariffs-military.html\">concluded a trade deal</a>, setting the US tariff rate at 19%. This is lower than the 20% threatened in President Trump&rsquo;s July 9 letter and previously-assumed by TBL.</li><li>On July 22, President Trump also announced a trade deal with Japan. <a href=\"https://www.cnn.com/2025/07/22/business/japan-trade-agreement-us\">The deal</a> would set the US tariff rate at 15%, down from the 25% laid out in President Trump&rsquo;s July 7 letter and previously-assumed by TBL.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
       "scenarios": [
         {
           "id": "baseline",
@@ -14939,7 +14932,7 @@
       "label": "July 13, 2025",
       "published_at": "2025-07-13T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-tariffs-july-11-2025\">July 11 report</a>:</p><ul><li>On July 12, President Trump announced 30% tariffs on the EU and Mexico, to go into effect August 1, up from prior 10% and 25% rates respectively.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+      "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-tariffs-july-11-2025\">July 11 report</a>:</p><ul><li>On July 12, President Trump announced 30% tariffs on the EU and Mexico, to go into effect August 1, up from prior 10% and 25% rates respectively.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
       "scenarios": [
         {
           "id": "baseline",
@@ -15413,7 +15406,7 @@
       "label": "July 11, 2025",
       "published_at": "2025-07-11T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-july-10-2025\">July 10 report</a>:</p><ul><li>On the evening of July 10, President Trump announced a 35% tariff on Canadian imports to go into effect August 1, up from the prior 25% rate.</li><li>President Trump also announced that &ldquo;all remaining countries&rdquo; who had not received a letter on July 7 or July 9 would see a tariff rate of 15% or 20%. TBL has not incorporated this announcement into this report, but will follow-up next week with a sensitivity analysis of different possible rates.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+      "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-july-10-2025\">July 10 report</a>:</p><ul><li>On the evening of July 10, President Trump announced a 35% tariff on Canadian imports to go into effect August 1, up from the prior 25% rate.</li><li>President Trump also announced that &ldquo;all remaining countries&rdquo; who had not received a letter on July 7 or July 9 would see a tariff rate of 15% or 20%. TBL has not incorporated this announcement into this report, but will follow-up next week with a sensitivity analysis of different possible rates.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
       "scenarios": [
         {
           "id": "baseline",
@@ -15888,7 +15881,7 @@
       "label": "July 10, 2025",
       "published_at": "2025-07-10T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-july-7-2025\">July 7 report</a>:</p><ul><li>On July 8, President Trump announced a 50% commodity tariff on copper imports under Section 232 authority, further announcing on July 9 that the tariff would go into effect August 1.</li><li>July 9 Letters: The White House sent letters to 8 more countries on July 9, in addition to the ones released July 7. All rates in these letters take effect August 1. The targeted countries and the announced rates are summarized below. TBL assumed these tariffs apply to the same scope of goods imports as the &ldquo;reciprocal&rdquo; April 2 tariffs: that is, most goods but with specific commodity carve-outs.</li></ul>",
+      "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-july-7-2025\">July 7 report</a>:</p><ul><li>On July 8, President Trump announced a 50% commodity tariff on copper imports under Section 232 authority, further announcing on July 9 that the tariff would go into effect August 1.</li><li>July 9 Letters: The White House sent letters to 8 more countries on July 9, in addition to the ones released July 7. All rates in these letters take effect August 1. The targeted countries and the announced rates are summarized below. TBL assumed these tariffs apply to the same scope of goods imports as the &ldquo;reciprocal&rdquo; April 2 tariffs: that is, most goods but with specific commodity carve-outs.</li></ul>",
       "scenarios": [
         {
           "id": "baseline",
@@ -16401,7 +16394,7 @@
       "label": "July 7, 2025",
       "published_at": "2025-07-07T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the June 17 report:</p><ul><li>On July 2, President Trump announced that the US had reached agreement on a framework of a trade deal with Vietnam. The framework involves 20% tariffs on Vietnamese exports to the US, and 40% tariffs on goods suspected of being transshipped from China.</li><li>July 7 Letters: The White House sent letters to 14 countries outlining new tariff rates: Japan, South Korea, Malaysia, Kazakhstan, Tunisia (25%), South Africa, Bosnia (30%), Indonesia (32%), Bangladesh, Serbia (35%), Cambodia, Thailand (36%), Laos, and Myanmar (40%). TBL assumed these tariffs apply to the same scope of goods imports as the &ldquo;reciprocal&rdquo; April 2 tariffs: that is, most goods but with specific commodity carve-outs.</li><li>With actual tariff revenue data for Q2 now in hand, TBL has updated its economic modeling to incorporate the actual average effective tariff rate for Q2 (7.8%). This may be revised slightly in the future as new data is released.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+      "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the June 17 report:</p><ul><li>On July 2, President Trump announced that the US had reached agreement on a framework of a trade deal with Vietnam. The framework involves 20% tariffs on Vietnamese exports to the US, and 40% tariffs on goods suspected of being transshipped from China.</li><li>July 7 Letters: The White House sent letters to 14 countries outlining new tariff rates: Japan, South Korea, Malaysia, Kazakhstan, Tunisia (25%), South Africa, Bosnia (30%), Indonesia (32%), Bangladesh, Serbia (35%), Cambodia, Thailand (36%), Laos, and Myanmar (40%). TBL assumed these tariffs apply to the same scope of goods imports as the &ldquo;reciprocal&rdquo; April 2 tariffs: that is, most goods but with specific commodity carve-outs.</li><li>With actual tariff revenue data for Q2 now in hand, TBL has updated its economic modeling to incorporate the actual average effective tariff rate for Q2 (7.8%). This may be revised slightly in the future as new data is released.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
       "scenarios": [
         {
           "id": "baseline",
@@ -16875,7 +16868,7 @@
       "label": "June 17, 2025",
       "published_at": "2025-06-17T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2> <h2>Changes Since the Last Update</h2><p>Since the June 1 report:</p><ul><li>The Department of Commerce issued a <a href=\"https://public-inspection.federalregister.gov/2025-11067.pdf\">notice</a> expanding the 50% steel &amp; aluminum tariffs to cover &ldquo;steel derivatives&rdquo; including many household appliances like refrigerators, freezers, dish washers, washing machines, and dryers.</li><li>China ended export restrictions on rare earths and magnets as a result of the <a href=\"https://www.csis.org/analysis/trump-strikes-deal-restore-rare-earths-access\">June 11 US-China deal</a> (which otherwise ossified tariffs already assumed by TBL).</li><li>TBL changed its tariff distributional analysis to be more internally consistent with the concepts and definitions used in its tax model. The changes have the effect of reducing the regressivity of tariffs. See the Methodological Appendix for more detail.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+      "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the June 1 report:</p><ul><li>The Department of Commerce issued a <a href=\"https://public-inspection.federalregister.gov/2025-11067.pdf\">notice</a> expanding the 50% steel &amp; aluminum tariffs to cover &ldquo;steel derivatives&rdquo; including many household appliances like refrigerators, freezers, dish washers, washing machines, and dryers.</li><li>China ended export restrictions on rare earths and magnets as a result of the <a href=\"https://www.csis.org/analysis/trump-strikes-deal-restore-rare-earths-access\">June 11 US-China deal</a> (which otherwise ossified tariffs already assumed by TBL).</li><li>TBL changed its tariff distributional analysis to be more internally consistent with the concepts and definitions used in its tax model. The changes have the effect of reducing the regressivity of tariffs. See the Methodological Appendix for more detail.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
       "scenarios": [
         {
           "id": "baseline",
@@ -17274,6 +17267,7 @@
                   "chartType": "bar",
                   "data": "data.csv",
                   "title": "Comparison of 2027 Distributional Effects of 2025 Tariffs to Date",
+                  "note": "Insufficient data for first decile.",
                   "subtitle": "Through June 16. By household income decile.",
                   "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
                   "orientation": "vertical",
@@ -17401,7 +17395,7 @@
       "label": "June 1, 2025",
       "published_at": "2025-06-01T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-may-29-2025\">May 29 report</a>:</p><ul><li>On May 28, the U.S. Court of International Trade invalidated the Trump Administration&rsquo;s tariffs imposed under authority from the International Emergency Economic Powers Act. That case is ongoing; however, on May 29, a federal appeals court temporarily agreed to preserve the IEEPA tariffs. That means that as of today, June 1, those tariffs remain in place, and they are reflected in our analysis.</li><li>On May 30, the Trump Administration announced that the U.S. will double its current tariff rate on steel and aluminum imports from 25% to 50%.</li><li>TBL incorporated updated data on USMCA-compliant trade shares with Canada. Whereas before, TBL assumed that 38% of trade with Canada was USMCA-compliant, March Census data showed that the share rose substantially to 50%.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+      "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-may-29-2025\">May 29 report</a>:</p><ul><li>On May 28, the U.S. Court of International Trade invalidated the Trump Administration&rsquo;s tariffs imposed under authority from the International Emergency Economic Powers Act. That case is ongoing; however, on May 29, a federal appeals court temporarily agreed to preserve the IEEPA tariffs. That means that as of today, June 1, those tariffs remain in place, and they are reflected in our analysis.</li><li>On May 30, the Trump Administration announced that the U.S. will double its current tariff rate on steel and aluminum imports from 25% to 50%.</li><li>TBL incorporated updated data on USMCA-compliant trade shares with Canada. Whereas before, TBL assumed that 38% of trade with Canada was USMCA-compliant, March Census data showed that the share rose substantially to 50%.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
       "scenarios": [
         {
           "id": "baseline",
@@ -17876,7 +17870,7 @@
       "label": "May 29, 2025",
       "published_at": "2025-05-29T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-may-23-2025\">May 23 report</a>:</p><ul><li>The U.S. Court of International Trade <a href=\"https://www.cit.uscourts.gov/sites/cit/files/25-66.pdf\">invalidated</a> tariffs announced under IEEPA authority, including the &ldquo;reciprocal&rdquo; tariffs and 25% tariffs on Canada and Mexico.</li><li>President Trump delayed the previously-announced 50% tariff on the EU.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+      "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-may-23-2025\">May 23 report</a>:</p><ul><li>The U.S. Court of International Trade <a href=\"https://www.cit.uscourts.gov/sites/cit/files/25-66.pdf\">invalidated</a> tariffs announced under IEEPA authority, including the &ldquo;reciprocal&rdquo; tariffs and 25% tariffs on Canada and Mexico.</li><li>President Trump delayed the previously-announced 50% tariff on the EU.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
       "scenarios": [
         {
           "id": "baseline",
@@ -18351,7 +18345,7 @@
       "label": "May 23, 2025",
       "published_at": "2025-05-23T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-may-12-2025\">May 12 report</a>:</p><ul><li>President Trump announced a 50% tariff on the EU to take effect on June 1. TBL interprets this policy as a expansion of the 10% &lsquo;reciprocal&rsquo; tariff rate currently levied on the EU, first announced on April 2 and modified April 9.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+      "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-may-12-2025\">May 12 report</a>:</p><ul><li>President Trump announced a 50% tariff on the EU to take effect on June 1. TBL interprets this policy as a expansion of the 10% &lsquo;reciprocal&rsquo; tariff rate currently levied on the EU, first announced on April 2 and modified April 9.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
       "scenarios": [
         {
           "id": "baseline",
@@ -18826,7 +18820,7 @@
       "label": "May 12, 2025",
       "published_at": "2025-05-12T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2> <h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-april-15-2025\">April 15 report</a>:</p><ul><li>The US and China agreed to a 90-day temporary reduction in tariffs as trade talks continue. The US 125% tariff on Chinese imports announced April 2 will be reduced to 10%. The 20% broad US tariff on Chinese imports announced February 4 and increased March 4 will remain. China will lower their 125% retaliation list to 10%.</li><li>The US and the UK announced a trade deal on May 8 that included following tariff provisions, among other agreements:<ul><li>The first 100,000 UK auto imports into the US will be tariffed at 10% rather than 25%.</li><li>US tariffs on UK steel &amp; aluminum will be zeroed out.</li><li>UK tariffs on US ethanol will be zeroed out.</li></ul></li><li>The Administration <a href=\"https://www.whitehouse.gov/presidential-actions/2025/04/amendments-to-adjusting-imports-of-automobiles-and-automobile-parts-into-the-united-states/\">modified</a> the 25% auto &amp; auto part tariff to allow for a temporary offset against tariffs on parts for autos assembled in the US, equal to 3.75% of the MSRP (covering parts up to 15% of vehicle value) through April 30, 2026 and 2.5% of MSRP (covering parts up to 10% of vehicle value) through April 30, 2027. TBL modeled this as a short-run reduction in the effective tariff rate on autos.</li><li>TBL has added analysis of the long-run US sectoral output effects of tariffs.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
+      "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-april-15-2025\">April 15 report</a>:</p><ul><li>The US and China agreed to a 90-day temporary reduction in tariffs as trade talks continue. The US 125% tariff on Chinese imports announced April 2 will be reduced to 10%. The 20% broad US tariff on Chinese imports announced February 4 and increased March 4 will remain. China will lower their 125% retaliation list to 10%.</li><li>The US and the UK announced a trade deal on May 8 that included following tariff provisions, among other agreements:<ul><li>The first 100,000 UK auto imports into the US will be tariffed at 10% rather than 25%.</li><li>US tariffs on UK steel &amp; aluminum will be zeroed out.</li><li>UK tariffs on US ethanol will be zeroed out.</li></ul></li><li>The Administration <a href=\"https://www.whitehouse.gov/presidential-actions/2025/04/amendments-to-adjusting-imports-of-automobiles-and-automobile-parts-into-the-united-states/\">modified</a> the 25% auto &amp; auto part tariff to allow for a temporary offset against tariffs on parts for autos assembled in the US, equal to 3.75% of the MSRP (covering parts up to 15% of vehicle value) through April 30, 2026 and 2.5% of MSRP (covering parts up to 10% of vehicle value) through April 30, 2027. TBL modeled this as a short-run reduction in the effective tariff rate on autos.</li><li>TBL has added analysis of the long-run US sectoral output effects of tariffs.</li></ul><p>TBL analyzes tariffs on a &ldquo;real-time current policy&rdquo; basis, where policy as it stands as of date certain is assumed to continue in perpetuity, even if framed as a temporary policy.</p>",
       "scenarios": [
         {
           "id": "baseline",
@@ -19308,7 +19302,7 @@
       "label": "April 15, 2025",
       "published_at": "2025-04-15T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/fiscal-and-economic-effects-revised-april-9-tariffs\">April 10 report</a>:</p><ul><li>China has raised its broad retaliatory tariffs to US imports to 125% and suspended exports of certain minerals and magnets.</li><li><a href=\"https://www.supplychaindive.com/news/trump-electronics-tariff-exemption-list/745209/\">Clarifications from the Administration</a> about the semiconductor/electronics carve-out have allowed TBL to refine its estimate of the scope of the exemption. TBL had previously assumed a somewhat larger carve-out for non-semiconductor electronics than is present in the Administration's clarified announcement. These refinements thus have the effect of slightly increasing the weighted average tariff rate relative to what TBL assumed before.</li></ul>",
+      "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/fiscal-and-economic-effects-revised-april-9-tariffs\">April 10 report</a>:</p><ul><li>China has raised its broad retaliatory tariffs to US imports to 125% and suspended exports of certain minerals and magnets.</li><li><a href=\"https://www.supplychaindive.com/news/trump-electronics-tariff-exemption-list/745209/\">Clarifications from the Administration</a> about the semiconductor/electronics carve-out have allowed TBL to refine its estimate of the scope of the exemption. TBL had previously assumed a somewhat larger carve-out for non-semiconductor electronics than is present in the Administration's clarified announcement. These refinements thus have the effect of slightly increasing the weighted average tariff rate relative to what TBL assumed before.</li></ul>",
       "scenarios": [
         {
           "id": "baseline",
@@ -20225,7 +20219,7 @@
       "label": "April 8, 2025",
       "published_at": "2025-04-08T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>About This Vintage</h2> <h2>Changes Incorporated Since the Last Update</h2><ul><li>Since the <a href=\"https://budgetlab.yale.edu/research/where-we-stand-fiscal-economic-and-distributional-effects-all-us-tariffs-enacted-2025-through-april\">April 2 report</a>, China has announced retaliatory tariffs of 34% on all US goods imports, effective April 10.</li><li>TBL revised its methodology for pro-rating the effects of currency appreciation on overall prices in cases where foreign retaliation against US tariffs is not complete. This revision lowered the PCE effect by 0.03 percentage point relative to the April 2 report.</li><li>TBL now reports the unemployment rate and payroll employment effects for 2025 Q4.</li></ul>",
+      "changes_html": "<h2>Changes Incorporated Since the Last Update</h2><ul><li>Since the <a href=\"https://budgetlab.yale.edu/research/where-we-stand-fiscal-economic-and-distributional-effects-all-us-tariffs-enacted-2025-through-april\">April 2 report</a>, China has announced retaliatory tariffs of 34% on all US goods imports, effective April 10.</li><li>TBL revised its methodology for pro-rating the effects of currency appreciation on overall prices in cases where foreign retaliation against US tariffs is not complete. This revision lowered the PCE effect by 0.03 percentage point relative to the April 2 report.</li><li>TBL now reports the unemployment rate and payroll employment effects for 2025 Q4.</li></ul>",
       "scenarios": [
         {
           "id": "baseline",
@@ -20474,9 +20468,6 @@
                     "overall": "blue",
                     "domestic": "green",
                     "imported": "amber"
-                  },
-                  "header_labels": {
-                    "postsub": "Long-run"
                   }
                 },
                 "body_html": "<p>Long-run overall, domestic, and imported price effects for the commodities with the largest projected changes, as of the week of April 7, 2025.</p>",

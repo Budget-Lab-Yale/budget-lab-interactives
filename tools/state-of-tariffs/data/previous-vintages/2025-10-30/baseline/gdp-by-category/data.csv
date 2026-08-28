@@ -18,9 +18,5 @@ FTROW,0.02,country,ftrow,Trading partners
 Japan,0.0,country,japan,Trading partners
 EU,0.04,country,eu,Trading partners
 UK,0.08,country,uk,Trading partners
-"World Total
-",-0.10392155661520519,country,"world_total
-",Trading partners
-"World ex USA
-",-0.02586469847580819,country,"world_ex_usa
-",Trading partners
+World Total,-0.10392155661520519,country,world_total,Trading partners
+World ex USA,-0.02586469847580819,country,world_ex_usa,Trading partners

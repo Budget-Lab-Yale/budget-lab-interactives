@@ -4,7 +4,7 @@
   "label": "July 10, 2025",
   "published_at": "2025-07-10T00:00:00-0400",
   "version": "1.0",
-  "changes_html": "<h2>About This Vintage</h2><h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-july-7-2025\">July 7 report</a>:</p><ul><li>On July 8, President Trump announced a 50% commodity tariff on copper imports under Section 232 authority, further announcing on July 9 that the tariff would go into effect August 1.</li><li>July 9 Letters: The White House sent letters to 8 more countries on July 9, in addition to the ones released July 7. All rates in these letters take effect August 1. The targeted countries and the announced rates are summarized below. TBL assumed these tariffs apply to the same scope of goods imports as the &ldquo;reciprocal&rdquo; April 2 tariffs: that is, most goods but with specific commodity carve-outs.</li></ul>",
+  "changes_html": "<h2>Changes Since the Last Update</h2><p>Since the <a href=\"https://budgetlab.yale.edu/research/state-us-tariffs-july-7-2025\">July 7 report</a>:</p><ul><li>On July 8, President Trump announced a 50% commodity tariff on copper imports under Section 232 authority, further announcing on July 9 that the tariff would go into effect August 1.</li><li>July 9 Letters: The White House sent letters to 8 more countries on July 9, in addition to the ones released July 7. All rates in these letters take effect August 1. The targeted countries and the announced rates are summarized below. TBL assumed these tariffs apply to the same scope of goods imports as the &ldquo;reciprocal&rdquo; April 2 tariffs: that is, most goods but with specific commodity carve-outs.</li></ul>",
   "scenarios": [
     {
       "id": "baseline",
