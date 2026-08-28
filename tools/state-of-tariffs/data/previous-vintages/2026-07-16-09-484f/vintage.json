@@ -123,10 +123,6 @@
                 "presub",
                 "postsub"
               ],
-              "header_labels": {
-                "presub": "Pre-substitution",
-                "postsub": "Post-substitution"
-              },
               "format": {
                 "default": {
                   "type": "number",
@@ -152,7 +148,12 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Consumer Price Effects by Spending Category",
+              "series_labels": {
+                "presub": "Pre-substitution",
+                "postsub": "Post-substitution"
+              },
               "subtitle": "Percent change in consumer prices, pre- and post-substitution.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
               "orientation": "horizontal",
               "xAxisType": "categorical",
@@ -205,7 +206,7 @@
                 }
               }
             },
-            "body_html": "<p>The consumer-price effect by PCE spending category, grouped as durable goods, nondurable goods,\nand services, with the total at the top.</p>\n<p><em>TODO (TK): the \"Total\" row is placeholder data added on the dashboard side (the summary overall\nprice effect) — pending an aggregate PCE row from the modelers. It lives directly in <code>data.csv</code>\nand will be overwritten on the next model sync.</em></p>",
+            "body_html": "<p>The consumer-price effect by PCE spending category, grouped as durable goods, nondurable goods,\nand services, with the total at the top.</p>",
             "section": "prices-households",
             "figureNum": 3
           },
@@ -296,6 +297,7 @@
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -337,6 +339,7 @@
                 }
               },
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
@@ -381,6 +384,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars.",
                   "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
@@ -429,7 +435,6 @@
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
                   "subtitle": "Conventional and dynamic estimates. Billions of dollars.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
                   "orientation": "vertical",
                   "xAxisType": "categorical",
                   "columns": {
@@ -456,7 +461,8 @@
                   "series_labels": {
                     "conventional": "Conventional",
                     "dynamic": "Dynamic"
-                  }
+                  },
+                  "note": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds."
                 },
                 "total": {
                   "column": "category",
@@ -676,6 +682,7 @@
               "data": "data.csv",
               "title": "Consumer Price Effects by Spending Category",
               "subtitle": "Percent change in consumer prices, by scenario.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
               "orientation": "horizontal",
               "xAxisType": "categorical",
@@ -831,6 +838,7 @@
               "data": "data.csv",
               "title": "Effect on Real GDP over Time",
               "subtitle": "Percent change in the level of real GDP versus baseline.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
               "xAxisType": "temporal",
               "yAxisPolicy": {
@@ -884,6 +892,7 @@
                 }
               },
               "subtitle": "Percent change in the level of real GDP versus baseline, by scenario.",
+              "value_suffix": "%",
               "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
               "orientation": "vertical",
               "xAxisType": "categorical",
@@ -938,6 +947,9 @@
                 "spec": {
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
+                  "sticky": {
+                    "firstColumn": true
+                  },
                   "subtitle": "Billions of dollars, by scenario.",
                   "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
                   "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
@@ -990,7 +1002,6 @@
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
                   "subtitle": "Billions of dollars, by scenario.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
                   "orientation": "vertical",
                   "xAxisType": "categorical",
                   "columns": {
@@ -1021,7 +1032,8 @@
                   "series_colors": {
                     "tracker_actual_2026-07-01": "blue",
                     "tracker_new_301_2026-07-01": "amber"
-                  }
+                  },
+                  "note": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds."
                 },
                 "total": {
                   "column": "category",

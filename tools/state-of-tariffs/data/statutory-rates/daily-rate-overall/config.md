@@ -8,6 +8,7 @@ spec:
   data: data.csv
   title: Daily Statutory Tariff Rate — {scenario}
   subtitle: Import-weighted average statutory tariff rate. Percent.
+  value_suffix: "%"
   source: The Budget Lab analysis.
   xAxisType: temporal
   yAxisPolicy:

@@ -7,6 +7,7 @@ spec:
   data: data.csv
   title: Effect on Real GDP over Time
   subtitle: Percent change in the level of real GDP versus baseline.
+  value_suffix: "%"
   source: GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.
   xAxisType: temporal
   yAxisPolicy:

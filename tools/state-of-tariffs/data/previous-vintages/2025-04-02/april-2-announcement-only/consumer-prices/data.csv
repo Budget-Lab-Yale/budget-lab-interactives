@@ -1,0 +1,196 @@
+category,measure,value
+Leather products,price,8.342587406504844
+Leather products,domestic,1.5139195763298712
+Leather products,imported,9.710458270765244
+Wearing apparel,price,8.021992672693811
+Wearing apparel,domestic,1.667092615817364
+Wearing apparel,imported,9.062144475725159
+Crops nec,price,7.277500457510416
+Crops nec,domestic,1.659968288399341
+Crops nec,imported,7.53397624455924
+"Wool, silk-worm cocoons",price,5.585472695729972
+"Wool, silk-worm cocoons",domestic,5.58191053202096
+"Wool, silk-worm cocoons",imported,6.016494504520359
+Processed rice,price,5.328996908681147
+Processed rice,domestic,4.652185803968969
+Processed rice,imported,9.863631310252737
+Textiles,price,4.5951911846247855
+Textiles,domestic,1.4248654836045846
+Textiles,imported,8.659619976606862
+Electrical equipment,price,4.242536977432651
+Electrical equipment,domestic,1.0722112764124498
+Electrical equipment,imported,6.251597309315115
+Mineral products nec,price,3.1596392098931663
+Mineral products nec,domestic,0.8834165998348424
+Mineral products nec,imported,7.355868059108667
+Rubber and plastic products,price,3.09552026313096
+Rubber and plastic products,domestic,1.2075734973548855
+Rubber and plastic products,imported,6.92128408660927
+Machinery and equipment nec,price,3.0919580994219484
+Machinery and equipment nec,domestic,1.1862005151008166
+Machinery and equipment nec,imported,6.433267658474699
+Transport equipment nec,price,3.074147280876892
+Transport equipment nec,domestic,1.488984430366791
+Transport equipment nec,imported,5.94881339404914
+Metal products,price,2.5683200341972636
+Metal products,domestic,0.7908003434005445
+Metal products,imported,7.013900343043568
+Fishing,price,2.4222713221277936
+Fishing,domestic,1.5994115053461464
+Fishing,imported,5.350369890935215
+Manufactures nec,price,2.3260929019844845
+Manufactures nec,domestic,0.8442327990357165
+Manufactures nec,imported,7.469857297797035
+"Vegetables, fruit, nuts",price,2.2192279907141406
+"Vegetables, fruit, nuts",domestic,1.0757734401214614
+"Vegetables, fruit, nuts",imported,4.762612878948325
+Wood products,price,1.8558872923949714
+Wood products,domestic,1.065086948994427
+Wood products,imported,6.6363109898883526
+Vegetable oils and fats,price,1.8024548367597995
+Vegetable oils and fats,domestic,1.179076187682794
+Vegetable oils and fats,imported,5.895380938413969
+Food products nec,price,1.759708872251662
+Food products nec,domestic,1.09714642237553
+Food products nec,imported,6.782359701957822
+Chemical products,price,1.7561467085426505
+Chemical products,domestic,0.9902815111051863
+Chemical products,imported,6.340651402040402
+Beverages and tobacco products,price,1.5780385230920775
+Beverages and tobacco products,domestic,1.065086948994427
+Beverages and tobacco products,imported,6.148294561753784
+"Paper products, publishing",price,1.5317303948749283
+"Paper products, publishing",domestic,1.0579626215764042
+"Paper products, publishing",imported,5.556975386057879
+Cereal grains nec,price,1.350060045715344
+Cereal grains nec,domestic,1.0579626215764042
+Cereal grains nec,imported,5.542726731221834
+Sugar,price,1.3144384086252292
+Sugar,domestic,1.0864599312484957
+Sugar,imported,6.055678305319485
+Paddy rice,price,1.2823789352441262
+Paddy rice,domestic,0.9867193473961748
+Paddy rice,imported,9.632090669166992
+Animal products nec,price,1.2289464796089544
+Animal products nec,domestic,0.9475355465970489
+Animal products nec,imported,6.664808299560445
+Bovine meat products,price,1.1256437320476218
+Bovine meat products,domestic,0.9404112191790259
+Bovine meat products,imported,5.514229421549742
+Dairy products,price,1.0722112764124498
+Dairy products,domestic,0.9689085288511176
+Dairy products,imported,7.045959816424671
+Forestry,price,1.0472761304493696
+Forestry,domestic,1.079335603830473
+Forestry,imported,0.7017462506752579
+Wheat,price,1.0365896393223353
+Wheat,domestic,1.0223409844862894
+Wheat,imported,2.9993418429876506
+Raw milk,price,1.004530165941232
+Raw milk,domestic,0.9974058385232092
+Raw milk,imported,9.0443336571801
+Oil seeds,price,1.004530165941232
+Oil seeds,domestic,0.9297247280519915
+Oil seeds,imported,6.073489123864542
+Meat products nec,price,0.9902815111051863
+Meat products nec,domestic,0.9047895820889112
+Meat products nec,imported,4.979904865198024
+"Bovine cattle, sheep and goats",price,0.9867193473961748
+"Bovine cattle, sheep and goats",domestic,0.9689085288511176
+"Bovine cattle, sheep and goats",imported,4.025244991182952
+Motor vehicles and parts,price,0.9582220377240832
+Motor vehicles and parts,domestic,1.065086948994427
+Motor vehicles and parts,imported,0.8192976530726361
+"Sugar cane, sugar beet",price,0.9582220377240832
+"Sugar cane, sugar beet",domestic,0.9546598740150718
+"Sugar cane, sugar beet",imported,8.014868345275788
+Plant-based fibers,price,0.9190382369249571
+Plant-based fibers,domestic,0.9012274183798997
+Plant-based fibers,imported,9.571533886113796
+Construction,price,0.8976652546708883
+Construction,domestic,0.8834165998348424
+Construction,imported,7.548224899395287
+Water,price,0.7587408700194412
+Water,domestic,0.7551787063104299
+Water,imported,7.580284372776391
+Human health and social work,price,0.6910597595482236
+Human health and social work,domestic,0.6910597595482236
+Human health and social work,imported,0.231540641085745
+Warehousing and support,price,0.6874975958392121
+Warehousing and support,domestic,0.6874975958392121
+Warehousing and support,imported,0.26716227817585964
+Accommodation & food services,price,0.6803732684211892
+Accommodation & food services,domestic,0.6981840869662465
+Accommodation & food services,imported,0.5129515740976505
+Recreational and other services,price,0.6590002861671205
+Recreational and other services,domestic,0.6625624498761319
+Recreational and other services,imported,0.23510280479475648
+Public Administration,price,0.655438122458109
+Public Administration,domestic,0.6625624498761319
+Public Administration,imported,-0.15673520319650433
+Metals nec,price,0.6340651402040403
+Metals nec,domestic,0.6839354321302006
+Metals nec,imported,0.6055678305319484
+Trade,price,0.6340651402040403
+Trade,domestic,0.6376273039130517
+Trade,imported,-0.24578929592179083
+Communication,price,0.6305029764950287
+Communication,domestic,0.648313795040086
+Communication,imported,0.13536222094243555
+Business services nec,price,0.6233786490770058
+Business services nec,domestic,0.6269408127860173
+Business services nec,imported,0.12823789352441262
+Education,price,0.6198164853679943
+Education,domestic,0.6305029764950287
+Education,imported,0.3669028620281805
+Real estate activities,price,0.602005666822937
+Real estate activities,domestic,0.602005666822937
+Real estate activities,imported,-0.07836760159825217
+Ferrous metals,price,0.5948813394049141
+Ferrous metals,domestic,0.7017462506752579
+Ferrous metals,imported,0.3526542071921347
+Transport nec,price,0.5806326845688682
+Transport nec,domestic,0.5806326845688682
+Transport nec,imported,0.2742866055938825
+"Gas manufacture, distribution",price,0.5770705208598569
+"Gas manufacture, distribution",domestic,0.5770705208598569
+"Gas manufacture, distribution",imported,-0.20660549512266477
+Electricity,price,0.569946193441834
+Electricity,domestic,0.5450110474787536
+Electricity,imported,3.369806868724843
+Financial services nec,price,0.569946193441834
+Financial services nec,domestic,0.5735083571508454
+Financial services nec,imported,0.17810818545057308
+Water transport,price,0.5663840297328224
+Water transport,domestic,0.5735083571508454
+Water transport,imported,-0.06768111047121778
+Dwellings,price,0.5663840297328224
+Dwellings,domestic,0.5663840297328224
+Dwellings,imported,0.5663840297328224
+Insurance,price,0.5307623926427077
+Insurance,domestic,0.5628218660238109
+Insurance,imported,-0.10330274756133238
+Air transport,price,0.45951911846247856
+Air transport,domestic,0.5200759015156734
+Air transport,imported,0.22797847737673355
+Minerals nec,price,0.4381461362084098
+Minerals nec,domestic,0.4559569547534671
+Minerals nec,imported,0.324156897520043
+Coal,price,0.3918380079912608
+Coal,domestic,0.3989623354092837
+Coal,imported,-0.10330274756133238
+Basic pharmaceutical products,price,0.30634607897498567
+Basic pharmaceutical products,domestic,0.6839354321302006
+Basic pharmaceutical products,imported,-0.07124327418022924
+"Petroleum, coal products",price,0.2422271322127794
+"Petroleum, coal products",domestic,0.2493514596308023
+"Petroleum, coal products",imported,0.19948116770464186
+Oil,price,0.185232512868596
+Oil,domestic,0.22441631366772208
+Oil,imported,0.16029736690551577
+Natural gas,price,0.13536222094243555
+Natural gas,domestic,0.06411894676220631
+Natural gas,imported,0.14961087577848137
+"Computer, electronic and optical",price,0.007124327418022923
+"Computer, electronic and optical",domestic,0.6411894676220631
+"Computer, electronic and optical",imported,-0.092616256434298

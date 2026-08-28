@@ -13,6 +13,8 @@ Entries are added at release.
   previous-vintages.
 - Table cells no longer print negative zero ("-0.0%") when a small negative value rounds to zero
   (local patch to the vendored chart engine's `formatCell`; needs to go upstream).
+  Re-applied on top of the 1.13.0 re-vendor, which does not carry it: v1.13.0 upstream still
+  has the unguarded `const neg = v < 0`. The engine cache tag is `1.13.0-p1`.
 
 - **State of Tariffs: August 11, 2026 vintage.** Refreshed all figures to the published
   `2026081111` Tariff-Model artifact. The default scenario now includes the Section 232 polysilicon

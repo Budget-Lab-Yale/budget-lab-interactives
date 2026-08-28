@@ -1,0 +1,131 @@
+category,group,substitution,value,scenario,measure
+Metals nec,Commodities,presub,19.243564934320496,ieepa_invalidation,level
+Metals nec,Commodities,postsub,16.34865805892698,ieepa_invalidation,level
+Metal products,Commodities,presub,18.19364591682766,ieepa_invalidation,level
+Metal products,Commodities,postsub,13.29668859283062,ieepa_invalidation,level
+Electrical equipment,Commodities,presub,15.023159702524959,ieepa_invalidation,level
+Electrical equipment,Commodities,postsub,13.181208667086432,ieepa_invalidation,level
+Motor vehicles and parts,Commodities,presub,14.167404694832822,ieepa_invalidation,level
+Motor vehicles and parts,Commodities,postsub,14.039059544043246,ieepa_invalidation,level
+Transport equipment nec,Commodities,presub,7.294509791594938,ieepa_invalidation,level
+Transport equipment nec,Commodities,postsub,7.4732009088737845,ieepa_invalidation,level
+Machinery and equipment nec,Commodities,presub,6.827014144120404,ieepa_invalidation,level
+Machinery and equipment nec,Commodities,postsub,7.242241057385411,ieepa_invalidation,level
+"Computer, electronic and optical",Commodities,presub,6.6656512958866205,ieepa_invalidation,level
+"Computer, electronic and optical",Commodities,postsub,5.576030700219292,ieepa_invalidation,level
+Manufactures nec,Commodities,presub,3.434374032490733,ieepa_invalidation,level
+Manufactures nec,Commodities,postsub,3.4314035078272567,ieepa_invalidation,level
+Ferrous metals,Commodities,presub,1.9206307018464783,ieepa_invalidation,level
+Ferrous metals,Commodities,postsub,2.788015350109646,ieepa_invalidation,level
+Wood products,Commodities,presub,0.6706420992902381,ieepa_invalidation,level
+Wood products,Commodities,postsub,0.8743480092059835,ieepa_invalidation,level
+Forestry,Commodities,presub,0.22300122384096668,ieepa_invalidation,level
+Forestry,Commodities,postsub,-0.9073422737043226,ieepa_invalidation,level
+Mineral products nec,Commodities,presub,0.19903060207775297,ieepa_invalidation,level
+Mineral products nec,Commodities,postsub,0.16497132249169505,ieepa_invalidation,level
+Rubber and plastic products,Commodities,presub,0.17673694490486605,ieepa_invalidation,level
+Rubber and plastic products,Commodities,postsub,0.21446271923920354,ieepa_invalidation,level
+Wearing apparel,Commodities,presub,0.0,ieepa_invalidation,level
+Wearing apparel,Commodities,postsub,0.0,ieepa_invalidation,level
+Leather products,Commodities,presub,0.0,ieepa_invalidation,level
+Leather products,Commodities,postsub,0.08248566124584752,ieepa_invalidation,level
+Crops nec,Commodities,presub,0.0,ieepa_invalidation,level
+Crops nec,Commodities,postsub,0.032994264498339004,ieepa_invalidation,level
+Textiles,Commodities,presub,0.0,ieepa_invalidation,level
+Textiles,Commodities,postsub,0.0,ieepa_invalidation,level
+Processed rice,Commodities,presub,0.0,ieepa_invalidation,level
+Processed rice,Commodities,postsub,-0.5114110997242546,ieepa_invalidation,level
+Fishing,Commodities,presub,0.0,ieepa_invalidation,level
+Fishing,Commodities,postsub,-1.0558164639468481,ieepa_invalidation,level
+"Vegetables, fruit, nuts",Commodities,presub,0.0,ieepa_invalidation,level
+"Vegetables, fruit, nuts",Commodities,postsub,-1.2372849186877126,ieepa_invalidation,level
+Chemical products,Commodities,presub,0.0,ieepa_invalidation,level
+Chemical products,Commodities,postsub,0.13197705799335602,ieepa_invalidation,level
+Vegetable oils and fats,Commodities,presub,0.0,ieepa_invalidation,level
+Vegetable oils and fats,Commodities,postsub,-1.0393193316976788,ieepa_invalidation,level
+Food products nec,Commodities,presub,0.0,ieepa_invalidation,level
+Food products nec,Commodities,postsub,-0.197965586990034,ieepa_invalidation,level
+Beverages and tobacco products,Commodities,presub,0.0,ieepa_invalidation,level
+Beverages and tobacco products,Commodities,postsub,0.6103938932192716,ieepa_invalidation,level
+Paddy rice,Commodities,presub,0.0,ieepa_invalidation,level
+Paddy rice,Commodities,postsub,-0.6763824222159496,ieepa_invalidation,level
+"Paper products, publishing",Commodities,presub,0.0,ieepa_invalidation,level
+"Paper products, publishing",Commodities,postsub,0.098982793495017,ieepa_invalidation,level
+Animal products nec,Commodities,presub,0.0,ieepa_invalidation,level
+Animal products nec,Commodities,postsub,-1.0063250671993396,ieepa_invalidation,level
+Cereal grains nec,Commodities,presub,0.0,ieepa_invalidation,level
+Cereal grains nec,Commodities,postsub,-0.7093766867142887,ieepa_invalidation,level
+Sugar,Commodities,presub,0.0,ieepa_invalidation,level
+Sugar,Commodities,postsub,0.016497132249169502,ieepa_invalidation,level
+Bovine meat products,Commodities,presub,0.0,ieepa_invalidation,level
+Bovine meat products,Commodities,postsub,-0.41242830622923754,ieepa_invalidation,level
+Oil,Commodities,presub,0.0,ieepa_invalidation,level
+Oil,Commodities,postsub,-0.34643977723255953,ieepa_invalidation,level
+Dairy products,Commodities,presub,0.0,ieepa_invalidation,level
+Dairy products,Commodities,postsub,0.1484741902425255,ieepa_invalidation,level
+Meat products nec,Commodities,presub,0.0,ieepa_invalidation,level
+Meat products nec,Commodities,postsub,-0.4289254384784071,ieepa_invalidation,level
+Oil seeds,Commodities,presub,0.0,ieepa_invalidation,level
+Oil seeds,Commodities,postsub,-1.9631587376511705,ieepa_invalidation,level
+Basic pharmaceutical products,Commodities,presub,0.0,ieepa_invalidation,level
+Basic pharmaceutical products,Commodities,postsub,0.1814684547408645,ieepa_invalidation,level
+"Wool, silk-worm cocoons",Commodities,presub,0.0,ieepa_invalidation,level
+"Wool, silk-worm cocoons",Commodities,postsub,-1.0228221994485092,ieepa_invalidation,level
+"Petroleum, coal products",Commodities,presub,0.0,ieepa_invalidation,level
+"Petroleum, coal products",Commodities,postsub,-0.2804512482358816,ieepa_invalidation,level
+Electricity,Commodities,presub,0.0,ieepa_invalidation,level
+Electricity,Commodities,postsub,0.0494913967475085,ieepa_invalidation,level
+Minerals nec,Commodities,presub,0.0,ieepa_invalidation,level
+Minerals nec,Commodities,postsub,-0.9733308027010005,ieepa_invalidation,level
+Plant-based fibers,Commodities,presub,0.0,ieepa_invalidation,level
+Plant-based fibers,Commodities,postsub,-0.6598852899667802,ieepa_invalidation,level
+Natural gas,Commodities,presub,0.0,ieepa_invalidation,level
+Natural gas,Commodities,postsub,0.9073422737043226,ieepa_invalidation,level
+"Bovine cattle, sheep and goats",Commodities,presub,0.0,ieepa_invalidation,level
+"Bovine cattle, sheep and goats",Commodities,postsub,-0.8743480092059835,ieepa_invalidation,level
+"Sugar cane, sugar beet",Commodities,presub,0.0,ieepa_invalidation,level
+"Sugar cane, sugar beet",Commodities,postsub,-1.9796558699003401,ieepa_invalidation,level
+Wheat,Commodities,presub,0.0,ieepa_invalidation,level
+Wheat,Commodities,postsub,-0.8248566124584751,ieepa_invalidation,level
+Coal,Commodities,presub,0.0,ieepa_invalidation,level
+Coal,Commodities,postsub,-0.49491396747508504,ieepa_invalidation,level
+Construction,Commodities,presub,0.0,ieepa_invalidation,level
+Construction,Commodities,postsub,0.725873818963458,ieepa_invalidation,level
+Raw milk,Commodities,presub,0.0,ieepa_invalidation,level
+Raw milk,Commodities,postsub,-0.1814684547408645,ieepa_invalidation,level
+Water,Commodities,presub,0.0,ieepa_invalidation,level
+Water,Commodities,postsub,0.6103938932192716,ieepa_invalidation,level
+"Gas manufacture, distribution",Commodities,presub,0.0,ieepa_invalidation,level
+"Gas manufacture, distribution",Commodities,postsub,0.13197705799335602,ieepa_invalidation,level
+Air transport,Commodities,presub,0.0,ieepa_invalidation,level
+Air transport,Commodities,postsub,-0.06598852899667801,ieepa_invalidation,level
+Accommodation & food services,Commodities,presub,0.0,ieepa_invalidation,level
+Accommodation & food services,Commodities,postsub,0.0,ieepa_invalidation,level
+Communication,Commodities,presub,0.0,ieepa_invalidation,level
+Communication,Commodities,postsub,0.26395411598671203,ieepa_invalidation,level
+Water transport,Commodities,presub,0.0,ieepa_invalidation,level
+Water transport,Commodities,postsub,0.21446271923920354,ieepa_invalidation,level
+Financial services nec,Commodities,presub,0.0,ieepa_invalidation,level
+Financial services nec,Commodities,postsub,0.0,ieepa_invalidation,level
+Insurance,Commodities,presub,0.0,ieepa_invalidation,level
+Insurance,Commodities,postsub,-0.016497132249169502,ieepa_invalidation,level
+Business services nec,Commodities,presub,0.0,ieepa_invalidation,level
+Business services nec,Commodities,postsub,0.1814684547408645,ieepa_invalidation,level
+Transport nec,Commodities,presub,0.0,ieepa_invalidation,level
+Transport nec,Commodities,postsub,0.1814684547408645,ieepa_invalidation,level
+Warehousing and support,Commodities,presub,0.0,ieepa_invalidation,level
+Warehousing and support,Commodities,postsub,0.6268910254684411,ieepa_invalidation,level
+Recreational and other services,Commodities,presub,0.0,ieepa_invalidation,level
+Recreational and other services,Commodities,postsub,0.098982793495017,ieepa_invalidation,level
+Human health and social work,Commodities,presub,0.0,ieepa_invalidation,level
+Human health and social work,Commodities,postsub,0.1484741902425255,ieepa_invalidation,level
+Public Administration,Commodities,presub,0.0,ieepa_invalidation,level
+Public Administration,Commodities,postsub,0.26395411598671203,ieepa_invalidation,level
+Real estate activities,Commodities,presub,0.0,ieepa_invalidation,level
+Real estate activities,Commodities,postsub,0.0494913967475085,ieepa_invalidation,level
+Trade,Commodities,presub,0.0,ieepa_invalidation,level
+Trade,Commodities,postsub,0.16497132249169505,ieepa_invalidation,level
+Dwellings,Commodities,presub,0.0,ieepa_invalidation,level
+Dwellings,Commodities,postsub,-0.0494913967475085,ieepa_invalidation,level
+Education,Commodities,presub,0.0,ieepa_invalidation,level
+Education,Commodities,postsub,0.0494913967475085,ieepa_invalidation,level
