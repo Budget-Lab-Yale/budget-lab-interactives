@@ -1,6 +1,6 @@
 category,series,value,unit,metric
-Tariff rate,"Effective rate, pre-substitution",15.994503076721328,pct,etr_presub_level
-Tariff rate,"Effective rate, post-substitution",15.121076439532903,pct,etr_postsub_level
+Tariff rate,"Additional effective rate, pre-substitution (p.p.)",15.994503076721328,pp,etr_addl_presub
+Tariff rate,"Additional effective rate, post-substitution (p.p.)",15.121076439532903,pp,etr_addl_postsub
 Consumer price increase,Pre-substitution,1.8333038941351392,pct,price_presub
 Household cost,Pre-substitution,-2434.64,usd,hh_cost_presub
 Real GDP,"Q4-Q4 growth (p.p.), 2025",-0.5299163694379772,pp,gdp_growth_2025
