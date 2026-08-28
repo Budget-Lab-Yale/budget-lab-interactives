@@ -2839,12 +2839,12 @@
                   "annotations": {
                     "yAxis": [
                       {
-                        "y": 12.075873175834033,
+                        "y": 9.657873175834032,
                         "label": "Current average effective rate (pre-substitution)",
                         "style": "dashed"
                       },
                       {
-                        "y": 10.630036253754135,
+                        "y": 8.212036253754134,
                         "label": "Current average effective rate (post-substitution)",
                         "style": "dashed"
                       }
@@ -3250,12 +3250,12 @@
                   "annotations": {
                     "yAxis": [
                       {
-                        "y": 14.65590204279976,
+                        "y": 12.23790204279976,
                         "label": "Current average effective rate (pre-substitution)",
                         "style": "dashed"
                       },
                       {
-                        "y": 12.94798926720054,
+                        "y": 10.52998926720054,
                         "label": "Current average effective rate (post-substitution)",
                         "style": "dashed"
                       }
@@ -3694,12 +3694,12 @@
                   "annotations": {
                     "yAxis": [
                       {
-                        "y": 10.583615260365729,
+                        "y": 8.165615260365728,
                         "label": "Current average effective rate (pre-substitution)",
                         "style": "dashed"
                       },
                       {
-                        "y": 9.534328493901658,
+                        "y": 7.116328493901657,
                         "label": "Current average effective rate (post-substitution)",
                         "style": "dashed"
                       }
@@ -4105,12 +4105,12 @@
                   "annotations": {
                     "yAxis": [
                       {
-                        "y": 13.442597017967792,
+                        "y": 11.024597017967789,
                         "label": "Current average effective rate (pre-substitution)",
                         "style": "dashed"
                       },
                       {
-                        "y": 12.05319651420141,
+                        "y": 9.63519651420141,
                         "label": "Current average effective rate (post-substitution)",
                         "style": "dashed"
                       }
