@@ -5289,7 +5289,6 @@
                     }
                   },
                   "header_labels": {
-                    "current": "Current",
                     "before_scotus": "Policy Before\\\\SCOTUS Ruling",
                     "immediately_following_scotus": "Policy Immediately\\\\Following SCOTUS Ruling\\\\(No IEEPA or Section 122)",
                     "pct10": "10% Section\\\\122",
@@ -5299,7 +5298,6 @@
                     "only": ""
                   },
                   "column_group_order": [
-                    "current",
                     "before_scotus",
                     "immediately_following_scotus",
                     "pct10",
@@ -5755,7 +5753,6 @@
                     }
                   },
                   "header_labels": {
-                    "current": "Current",
                     "before_scotus": "Policy Before\\\\SCOTUS Ruling",
                     "immediately_following_scotus": "Policy Immediately\\\\Following SCOTUS Ruling\\\\(No IEEPA or Section 122)",
                     "pct10": "10% Section\\\\122",
@@ -5765,7 +5762,6 @@
                     "only": ""
                   },
                   "column_group_order": [
-                    "current",
                     "before_scotus",
                     "immediately_following_scotus",
                     "pct10",
