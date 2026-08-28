@@ -81,11 +81,29 @@ def check_vintage(vdir: str) -> None:
     vj = os.path.join(VROOT, vdir, 'vintage.json')
     if not os.path.isfile(vj):
         return
+    # json.loads silently keeps the LAST of any duplicate key. That is exactly
+    # how 49 duplicate `value_suffix` keys once passed every check while 64
+    # charts silently lost their suffix — the file parsed, round-tripped and
+    # validated clean. An object_pairs_hook is the only way to see them.
+    dupes: list[str] = []
+
+    def _spot_dupes(pairs):
+        seen = set()
+        for k, _ in pairs:
+            if k in seen:
+                dupes.append(k)
+            seen.add(k)
+        return dict(pairs)
+
     try:
-        doc = json.loads(io.open(vj, encoding='utf-8').read())
+        doc = json.loads(io.open(vj, encoding='utf-8').read(),
+                         object_pairs_hook=_spot_dupes)
     except Exception as e:                                   # noqa: BLE001
         add('ERROR', vdir, f'vintage.json does not parse: {e}')
         return
+    for k in sorted(set(dupes)):
+        add('ERROR', vdir, f'duplicate JSON key {k!r} — json.loads keeps only the last, '
+                           f'so an earlier value is silently discarded')
 
     unit_of_metric: dict[str, set] = defaultdict(set)
 
@@ -179,13 +197,22 @@ def check_vintage(vdir: str) -> None:
                     if bad:
                         add('WARN', where, f'substitution values outside '
                                            f'{sorted(allowed)}: {sorted(bad)}')
+                    # Normalise before comparing. A rendered axis carries the
+                    # display strings, so testing against the raw {'presub'}
+                    # would never fire there and the check would silently cover
+                    # nothing on exactly the charts a reader looks at.
+                    norm = set()
+                    for x in tags:
+                        s = str(x).lower()
+                        norm.add('postsub' if s.startswith('post')
+                                 else 'presub' if s.startswith('pre') else s)
                     st = (spec.get('subtitle') or '').lower()
-                    if 'post-substitution' in st and tags == {'presub'}:
+                    if 'post-substitution' in st and norm == {'presub'}:
                         add('ERROR', where, 'subtitle says post-substitution but the '
-                                            'data is tagged presub only')
-                    if re.search(r'(?<!post-)\bpre-substitution', st) and tags == {'postsub'}:
+                                            'data holds the pre-substitution basis only')
+                    if re.search(r'(?<!post-)\bpre-substitution', st) and norm == {'postsub'}:
                         add('ERROR', where, 'subtitle says pre-substitution but the '
-                                            'data is tagged postsub only')
+                                            'data holds the post-substitution basis only')
 
         # 6 — internal agreement
         check_internal(vdir, scid, figs)
