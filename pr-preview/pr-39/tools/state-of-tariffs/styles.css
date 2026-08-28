@@ -411,8 +411,19 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
    than relying on CSS, which is why it already looked right.)
 
    Target exactly that branch — a header cell carrying neither wrapper — so
-   clamped leaves and spanners keep their own behaviour. */
-.tbl-table thead th:not(:has(.tbl-table-header-clamp)):not(:has(.tbl-table-spanner)) {
+   clamped leaves and spanners keep their own behaviour.
+
+   Necessary but not sufficient, though: an ordinary LEAF header with no
+   header_max_lines lands in the same no-wrapper branch. Relaxing nowrap there
+   would change header height on tables this bug never touched, and desync the
+   live HTML from the PNG export, which lays out its own text.
+
+   `data-col` separates them. mount.ts stamps it on exactly the cells whose model
+   cell has a leafKey, and model.ts sets leafKey only when
+   `colSpan === 1 && valueTier === T - 1` — the BOTTOM tier. A single-column
+   group header is colSpan 1 in an UPPER tier, so it never carries the attribute
+   while every leaf header does. The stub corner is excluded by its own class. */
+.tbl-table thead th:not(:has(.tbl-table-header-clamp)):not(:has(.tbl-table-spanner)):not([data-col]):not(.tbl-table-stub-header) {
   white-space: normal;
 }
 
