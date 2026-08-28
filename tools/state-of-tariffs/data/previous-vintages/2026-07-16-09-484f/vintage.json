@@ -206,7 +206,7 @@
                 }
               }
             },
-            "body_html": "<p>The consumer-price effect by PCE spending category, grouped as durable goods, nondurable goods,\nand services, with the total at the top.</p>\n<p><em>TODO (TK): the \"Total\" row is placeholder data added on the dashboard side (the summary overall\nprice effect) — pending an aggregate PCE row from the modelers. It lives directly in <code>data.csv</code>\nand will be overwritten on the next model sync.</em></p>",
+            "body_html": "<p>The consumer-price effect by PCE spending category, grouped as durable goods, nondurable goods,\nand services, with the total at the top.</p>",
             "section": "prices-households",
             "figureNum": 3
           },

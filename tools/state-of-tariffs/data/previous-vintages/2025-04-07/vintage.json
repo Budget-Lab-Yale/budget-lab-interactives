@@ -228,7 +228,7 @@
               "subtitle": "Percent change to price level. Through week of April 7.",
               "value_suffix": "%",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-              "note": "\"nec\" = \"Not elsewhere classified\" · The \"basis\" field splits each commodity into its overall, domestic-price, and imported-price change, as delineated in the source workbook.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -271,7 +271,7 @@
               "title": "Household Cost of Tariffs by Income Decile",
               "subtitle": "Tariff burden by household income decile, pre-substitution. Through week of April 7.",
               "source": "GTAP v7, Census, BLS, BEA, The Budget Lab analysis.",
-              "note": "Decile 1 values are omitted.",
+              "note": "Insufficient data for first decile.",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -305,7 +305,7 @@
                 ]
               }
             },
-            "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention. Decile 1 is not published.</p>",
+            "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention.</p>",
             "section": "prices-households",
             "figureNum": 5
           },
@@ -361,16 +361,6 @@
           }
         ]
       }
-    }
-  ],
-  "omitted_figures": [
-    {
-      "id": "etr-by-country",
-      "reason": "Not published in the April 8, 2025 (week of April 7) release. This report did not include a country-level pre-/post-substitution effective tariff rate table."
-    },
-    {
-      "id": "revenue-by-year",
-      "reason": "Not published in the April 8, 2025 (week of April 7) release. This report gave only a single aggregate 2026-35 conventional and dynamic revenue figure (see summary-statistics), not a year-by-year breakdown."
     }
   ]
 }

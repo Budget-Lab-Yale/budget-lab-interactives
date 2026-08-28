@@ -195,7 +195,7 @@
               ],
               "source": "GTAP v7, The Budget Lab analysis."
             },
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of January 19, 2026, before and after trade substitution -- shown as a table with three metrics (own tariff rate, import share, and additive contribution to the total).</p>",
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of January 19, 2026, before and after trade substitution.</p>",
             "section": "rates",
             "figureNum": 3
           },
@@ -608,7 +608,7 @@
               ],
               "source": "GTAP v7, The Budget Lab analysis."
             },
-            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of January 19, 2026, before and after trade substitution -- shown as a table with three metrics (own tariff rate, import share, and additive contribution to the total).</p>",
+            "body_html": "<p>The average effective U.S. tariff rate by trading partner as of January 19, 2026, before and after trade substitution.</p>",
             "section": "rates",
             "figureNum": 2
           },

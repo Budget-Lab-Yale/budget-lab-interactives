@@ -1778,7 +1778,7 @@
                     }
                   }
                 },
-                "body_html": "<p>The consumer-price effect by PCE spending category, grouped as durable goods, nondurable goods,\nand services, with the total at the top.</p>\n<p><em>TODO (TK): the \"Total\" row is placeholder data added on the dashboard side (the summary overall\nprice effect) — pending an aggregate PCE row from the modelers. It lives directly in <code>data.csv</code>\nand will be overwritten on the next model sync.</em></p>",
+                "body_html": "<p>The consumer-price effect by PCE spending category, grouped as durable goods, nondurable goods,\nand services, with the total at the top.</p>",
                 "section": "prices-households",
                 "figureNum": 3
               },
@@ -2840,7 +2840,7 @@
                   ],
                   "source": "GTAP v7, The Budget Lab analysis."
                 },
-                "body_html": "<p>The average effective U.S. tariff rate by trading partner under the Section 122 Expires scenario, before and after trade substitution -- shown as a table with three metrics (own tariff rate, import share, and additive contribution to the total).</p>",
+                "body_html": "<p>The average effective U.S. tariff rate by trading partner under the Section 122 Expires scenario, before and after trade substitution.</p>",
                 "section": "rates",
                 "figureNum": 3
               },
@@ -2921,7 +2921,7 @@
                     "value": "value"
                   }
                 },
-                "body_html": "<p> \"Tariff Impact Tracker: Daily Effective Tariff Rate by Authority.\" The source data is a single aggregate ETR series (no per-authority breakdown columns despite the title), running daily from January 1, 2025 through the end of 2026. Section 122 Expires scenario only -- no counterpart exists for Section 122 Extended in the source.</p>",
+                "body_html": "<p>The US average effective tariff rate for each day from January 1, 2025 through the end of 2026.</p>",
                 "section": "rates",
                 "figureNum": 5
               },
@@ -3279,7 +3279,7 @@
                   ],
                   "source": "GTAP v7, The Budget Lab analysis."
                 },
-                "body_html": "<p>The average effective U.S. tariff rate by trading partner under the Section 122 Extended scenario, before and after trade substitution -- shown as a table with three metrics (own tariff rate, import share, and additive contribution to the total).</p>",
+                "body_html": "<p>The average effective U.S. tariff rate by trading partner under the Section 122 Extended scenario, before and after trade substitution.</p>",
                 "section": "rates",
                 "figureNum": 2
               },
@@ -3558,7 +3558,7 @@
       "label": "April 2, 2026",
       "published_at": "2026-04-02T00:00:00-0400",
       "version": "1.0",
-      "changes_html": "<h2>Changes Since the Last Report</h2><p>This report reflects several changes, the code behind which is available to view in our <a href=\"https://github.com/Budget-Lab-Yale/Tariff-Model\">public GitHub repository</a>, since our update published on <a href=\"https://budgetlab.yale.edu/research/state-tariffs-march-9-2026\">March 9</a>:</p><ul><li><strong>New input-output price model.</strong> Prior to this update, our consumer price estimates were based on a top-down formula which applied an overall average effective tariff rate shock to an estimated import content share of goods parameter. We have since replaced this approach with a Leontief input-output price model based on the methodology described in <a href=\"https://www.bostonfed.org/publications/current-policy-perspectives/2025/the-impact-of-tariffs-on-inflation.aspx\">Barbiero and Stein (2025)</a>. The new model uses Bureau of Economic Analysis use tables and requirements matrices to trace tariff shocks through the full production network. Rather than assume all commodities share the same exposure to import shocks, this approach allows the import content assumption to vary with changes in composition of the tariff regime.</li><li><strong>Consumer prices by spending category.</strong> In prior reports, our disaggregation for the aggregate price impact was reported in terms of commodities&mdash;essential product types like &ldquo;metals&rdquo; or &ldquo;wheat&rdquo;. We have since updated our breakout to instead report consumption categories, which more clearly reflect the types of final goods and services households actually spend their money on rather than product types. For example, increases in wheat prices previously appeared as a standalone commodity category, but are now reflected in consumer-facing categories such as food at home (e.g., bread or cereal). This approach better captures how upstream price changes translate into the prices households ultimately pay.</li><li><strong>Inclusion of daily tariff rate figures.</strong> In 2025, our State of Tariffs report typically included a chart showing the overall effective tariff rate for each day of the year. In recent months, however, we discontinued this series: it became increasingly difficult to report a concept-consistent series because we had made several methodological improvements to our measure of ETRs over the year. Yesterday&rsquo;s release of the Budget Lab&rsquo;s <a href=\"https://budgetlab.yale.edu/research/introducing-tariff-rate-tracker-open-source-tool-daily-effective-tariff-rates\">Daily Tariff Rate Tracker</a>, an open-source tool that parses the official Harmonized Tariff Schedule for every day since 2025 and calculates country- and product-level tariff rates, allows us to reintroduce that figure and add a tariff authority breakout of the overall ETR.</li><li><strong>Improved USMCA estimates.</strong> We now estimate USMCA eligibility at a more fine-grained degree of product detail. This change slightly increases our estimated overall ETR.</li></ul><p>We analyze two scenarios for tariff policy: one where Source Section 122 expires at the end of 150 days as scheduled, and another where it is extended. Both scenarios assume that the invalidated IEEPA duties are refunded to importers over the course of 2026.</p>",
+      "changes_html": "<h2>Changes Since the Last Report</h2><p>This report reflects several changes, the code behind which is available to view in our <a href=\"https://github.com/Budget-Lab-Yale/Tariff-Model\">public GitHub repository</a>, since our update published on <a href=\"https://budgetlab.yale.edu/research/state-tariffs-march-9-2026\">March 9</a>:</p><ul><li><strong>New input-output price model.</strong> Prior to this update, our consumer price estimates were based on a top-down formula which applied an overall average effective tariff rate shock to an estimated import content share of goods parameter. We have since replaced this approach with a Leontief input-output price model based on the methodology described in <a href=\"https://www.bostonfed.org/publications/current-policy-perspectives/2025/the-impact-of-tariffs-on-inflation.aspx\">Barbiero and Stein (2025)</a>. The new model uses Bureau of Economic Analysis use tables and requirements matrices to trace tariff shocks through the full production network. Rather than assume all commodities share the same exposure to import shocks, this approach allows the import content assumption to vary with changes in composition of the tariff regime.</li><li><strong>Consumer prices by spending category.</strong> In prior reports, our disaggregation for the aggregate price impact was reported in terms of commodities&mdash;essential product types like &ldquo;metals&rdquo; or &ldquo;wheat&rdquo;. We have since updated our breakout to instead report consumption categories, which more clearly reflect the types of final goods and services households actually spend their money on rather than product types. For example, increases in wheat prices previously appeared as a standalone commodity category, but are now reflected in consumer-facing categories such as food at home (e.g., bread or cereal). This approach better captures how upstream price changes translate into the prices households ultimately pay.</li><li><strong>Inclusion of daily tariff rate figures.</strong> In 2025, our State of Tariffs report typically included a chart showing the overall effective tariff rate for each day of the year. In recent months, however, we discontinued this series: it became increasingly difficult to report a concept-consistent series because we had made several methodological improvements to our measure of ETRs over the year. Yesterday&rsquo;s release of the Budget Lab&rsquo;s <a href=\"https://budgetlab.yale.edu/research/introducing-tariff-rate-tracker-open-source-tool-daily-effective-tariff-rates\">Daily Tariff Rate Tracker</a>, an open-source tool that parses the official Harmonized Tariff Schedule for every day since 2025 and calculates country- and product-level tariff rates, allows us to reintroduce that figure and add a tariff authority breakout of the overall ETR.</li><li><strong>Improved USMCA estimates.</strong> We now estimate USMCA eligibility at a more fine-grained degree of product detail. This change slightly increases our estimated overall ETR.</li></ul><p>We analyze two scenarios for tariff policy: one where Section 122 expires at the end of 150 days as scheduled, and another where it is extended. Both scenarios assume that the invalidated IEEPA duties are refunded to importers over the course of 2026.</p>",
       "scenarios": [
         {
           "id": "section-122-expires",
@@ -3750,7 +3750,7 @@
                   ],
                   "source": "GTAP v7, The Budget Lab analysis."
                 },
-                "body_html": "<p>The average effective U.S. tariff rate by trading partner under the Section 122 Expires scenario, before and after trade substitution -- shown as a table with three metrics (own tariff rate, import share, and additive contribution to the total).</p>",
+                "body_html": "<p>The average effective U.S. tariff rate by trading partner under the Section 122 Expires scenario, before and after trade substitution.</p>",
                 "section": "rates",
                 "figureNum": 3
               },
@@ -3831,7 +3831,7 @@
                     "value": "value"
                   }
                 },
-                "body_html": "<p>\"Tariff Impact Tracker: Daily Effective Tariff Rate by Authority.\" The source data is a single aggregate ETR series (no per-authority breakdown columns despite the title), running daily from January 1, 2025 through the end of 2026.</p>",
+                "body_html": "<p>The US average effective tariff rate for each day from January 1, 2025 through the end of 2026.</p>",
                 "section": "rates",
                 "figureNum": 5
               },
@@ -4189,7 +4189,7 @@
                   ],
                   "source": "GTAP v7, The Budget Lab analysis."
                 },
-                "body_html": "<p>The average effective U.S. tariff rate by trading partner under the Section 122 Extended scenario, before and after trade substitution -- shown as a table with three metrics (own tariff rate, import share, and additive contribution to the total).</p>",
+                "body_html": "<p>The average effective U.S. tariff rate by trading partner under the Section 122 Extended scenario, before and after trade substitution.</p>",
                 "section": "rates",
                 "figureNum": 2
               },
@@ -6403,7 +6403,7 @@
                     }
                   }
                 },
-                "body_html": "<h2>Current Policy</h2><p>This section presents projected effects as of February 20, 2026, across three policy scenarios: Current Policy with IEEPA refunds, Current Policy without refunds, and a counterfactual in which IEEPA tariffs remain upheld. Estimated impacts are measured against a January 2025 tariff-policy baseline. This table is identical across both scenario tabs.</p>",
+                "body_html": "<h2>Current Policy</h2><p>This section presents projected effects as of February 20, 2026, across three policy scenarios: Current Policy with IEEPA refunds, Current Policy without refunds, and a counterfactual in which IEEPA tariffs remain upheld. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
                 "section": "overview",
                 "lead": true,
                 "figureNum": 1
@@ -6533,7 +6533,6 @@
                   "subtitle": "Customs duty revenue as a percentage of goods imports.",
                   "value_suffix": "%",
                   "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
-                  "note": "The source workbook provides a single current-rate reference line (reflecting Current Policy), used identically on both scenario tabs; no separate IEEPA Upheld reference line was published.",
                   "xAxisType": "temporal",
                   "columns": {
                     "x": "year",
@@ -6564,7 +6563,7 @@
                     ]
                   }
                 },
-                "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution. This chart is identical across both scenario tabs.</p>",
+                "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
                 "figureNum": 4
               },
@@ -6889,7 +6888,7 @@
                     }
                   }
                 },
-                "body_html": "<h2>IEEPA Upheld</h2><p>This section presents projected effects as of February 20, 2026, across three policy scenarios: Current Policy with IEEPA refunds, Current Policy without refunds, and a counterfactual in which IEEPA tariffs remain upheld. Estimated impacts are measured against a January 2025 tariff-policy baseline. This table is identical across both scenario tabs.</p>",
+                "body_html": "<h2>IEEPA Upheld</h2><p>This section presents projected effects as of February 20, 2026, across three policy scenarios: Current Policy with IEEPA refunds, Current Policy without refunds, and a counterfactual in which IEEPA tariffs remain upheld. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
                 "section": "overview",
                 "lead": true,
                 "figureNum": 1
@@ -6968,7 +6967,6 @@
                   "subtitle": "Customs duty revenue as a percentage of goods imports.",
                   "value_suffix": "%",
                   "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
-                  "note": "The source workbook provides a single current-rate reference line (reflecting Current Policy), used identically on both scenario tabs; no separate IEEPA Upheld reference line was published.",
                   "xAxisType": "temporal",
                   "columns": {
                     "x": "year",
@@ -6999,7 +6997,7 @@
                     ]
                   }
                 },
-                "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution. This chart is identical across both scenario tabs.</p>",
+                "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
                 "figureNum": 3
               },
@@ -7415,7 +7413,7 @@
                   ],
                   "source": "GTAP v7, The Budget Lab analysis."
                 },
-                "body_html": "<p>The average effective U.S. tariff rate by trading partner as of January 19, 2026, before and after trade substitution -- shown as a table with three metrics (own tariff rate, import share, and additive contribution to the total).</p>",
+                "body_html": "<p>The average effective U.S. tariff rate by trading partner as of January 19, 2026, before and after trade substitution.</p>",
                 "section": "rates",
                 "figureNum": 3
               },
@@ -7832,7 +7830,7 @@
                   ],
                   "source": "GTAP v7, The Budget Lab analysis."
                 },
-                "body_html": "<p>The average effective U.S. tariff rate by trading partner as of January 19, 2026, before and after trade substitution -- shown as a table with three metrics (own tariff rate, import share, and additive contribution to the total).</p>",
+                "body_html": "<p>The average effective U.S. tariff rate by trading partner as of January 19, 2026, before and after trade substitution.</p>",
                 "section": "rates",
                 "figureNum": 2
               },
@@ -8419,7 +8417,7 @@
                     "value": "value"
                   }
                 },
-                "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection. Baseline scenario only.</p>",
+                "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection.</p>",
                 "section": "rates",
                 "figureNum": 5
               },
@@ -9339,7 +9337,7 @@
                     "value": "value"
                   }
                 },
-                "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection. Baseline scenario only.</p>",
+                "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection.</p>",
                 "section": "rates",
                 "figureNum": 5
               },
@@ -9712,7 +9710,7 @@
                       "chartType": "stacked",
                       "data": "data.csv",
                       "title": "Average Effective US Tariff Rate, New 2025 Policy Through October 30, IEEPA Invalidation Scenario",
-                      "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution. IEEPA Invalidation scenario only.",
+                      "subtitle": "Contribution to the increase in the US average effective tariff rate from new 2025 tariffs, by trading partner. Pre- and post-substitution.",
                       "source": "Census Bureau, GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
                       "orientation": "horizontal",
                       "xAxisType": "categorical",
@@ -9967,7 +9965,7 @@
                     "2025-34": "2025-34 Total"
                   }
                 },
-                "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year under the IEEPA Invalidation scenario, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total. No fiscal year 2025 figures are published for this scenario, since it is a hypothetical policy counterfactual that does not apply retroactively to a fiscal year already mostly over.</p>",
+                "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year under the IEEPA Invalidation scenario, on a conventional and a dynamic basis, plus the difference between the two, including a 10-year total.</p>",
                 "section": "fiscal",
                 "figureNum": 7
               }
@@ -17754,6 +17752,7 @@
                   "chartType": "bar",
                   "data": "data.csv",
                   "title": "Household Cost of Tariffs by Income Decile",
+                  "note": "Insufficient data for first decile.",
                   "subtitle": "Tariff burden by household income decile, pre-substitution.",
                   "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
                   "orientation": "vertical",
@@ -18228,6 +18227,7 @@
                   "chartType": "bar",
                   "data": "data.csv",
                   "title": "Household Cost of Tariffs by Income Decile",
+                  "note": "Insufficient data for first decile.",
                   "subtitle": "Tariff burden by household income decile, pre-substitution.",
                   "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
                   "orientation": "vertical",
@@ -18702,6 +18702,7 @@
                   "chartType": "bar",
                   "data": "data.csv",
                   "title": "Household Cost of Tariffs by Income Decile",
+                  "note": "Insufficient data for first decile.",
                   "subtitle": "Tariff burden by household income decile, pre-substitution.",
                   "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
                   "orientation": "vertical",
@@ -19183,6 +19184,7 @@
                   "chartType": "bar",
                   "data": "data.csv",
                   "title": "Household Cost of Tariffs by Income Decile",
+                  "note": "Insufficient data for first decile.",
                   "subtitle": "Tariff burden by household income decile, pre-substitution.",
                   "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
                   "orientation": "vertical",
@@ -19663,6 +19665,7 @@
                   "chartType": "bar",
                   "data": "data.csv",
                   "title": "Household Cost of Tariffs by Income Decile",
+                  "note": "Insufficient data for first decile.",
                   "subtitle": "Tariff burden by household income decile, pre-substitution.",
                   "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
                   "orientation": "vertical",
@@ -20123,7 +20126,7 @@
                   "title": "Household Cost of Tariffs by Income Decile",
                   "subtitle": "Tariff burden by household income decile, pre-substitution. Through April 9.",
                   "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
-                  "note": "Decile 1 values are not published.",
+                  "note": "Insufficient data for first decile.",
                   "orientation": "vertical",
                   "xAxisType": "categorical",
                   "columns": {
@@ -20157,7 +20160,7 @@
                     ]
                   }
                 },
-                "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention. Decile 1 was not published.</p>",
+                "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention.</p>",
                 "section": "prices-households",
                 "figureNum": 6
               },
@@ -20213,16 +20216,6 @@
               }
             ]
           }
-        }
-      ],
-      "omitted_figures": [
-        {
-          "id": "etr-since-2025",
-          "reason": "Not published; no daily post-January-1 effective tariff rate tracker figure are included."
-        },
-        {
-          "id": "revenue-by-year",
-          "reason": "Not published; only a single aggregate 2026-35 conventional and dynamic revenue figure was given (see summary-statistics), not a year-by-year breakdown."
         }
       ]
     },
@@ -20458,7 +20451,7 @@
                   "subtitle": "Percent change to price level. Through week of April 7.",
                   "value_suffix": "%",
                   "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "note": "\"nec\" = \"Not elsewhere classified\" · The \"basis\" field splits each commodity into its overall, domestic-price, and imported-price change, as delineated in the source workbook.",
+                  "note": "\"nec\" = \"Not elsewhere classified\"",
                   "orientation": "horizontal",
                   "xAxisType": "categorical",
                   "columns": {
@@ -20501,7 +20494,7 @@
                   "title": "Household Cost of Tariffs by Income Decile",
                   "subtitle": "Tariff burden by household income decile, pre-substitution. Through week of April 7.",
                   "source": "GTAP v7, Census, BLS, BEA, The Budget Lab analysis.",
-                  "note": "Decile 1 values are omitted.",
+                  "note": "Insufficient data for first decile.",
                   "orientation": "vertical",
                   "xAxisType": "categorical",
                   "columns": {
@@ -20535,7 +20528,7 @@
                     ]
                   }
                 },
-                "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention. Decile 1 is not published.</p>",
+                "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention.</p>",
                 "section": "prices-households",
                 "figureNum": 5
               },
@@ -20591,16 +20584,6 @@
               }
             ]
           }
-        }
-      ],
-      "omitted_figures": [
-        {
-          "id": "etr-by-country",
-          "reason": "Not published in the April 8, 2025 (week of April 7) release. This report did not include a country-level pre-/post-substitution effective tariff rate table."
-        },
-        {
-          "id": "revenue-by-year",
-          "reason": "Not published in the April 8, 2025 (week of April 7) release. This report gave only a single aggregate 2026-35 conventional and dynamic revenue figure (see summary-statistics), not a year-by-year breakdown."
         }
       ]
     },
@@ -20752,7 +20735,7 @@
                     }
                   }
                 },
-                "body_html": "<p>Country-by-country tariff rates as announced by the White House on April 2, 2025: the tariff rate attributed to each country ('Tariffs Charged to the U.S.A.') and the discounted reciprocal tariff rate the US applied in response. This appendix is specific to the April 2nd announcement and is not duplicated under the All 2025 Tariffs to Date scenario.</p>",
+                "body_html": "<p>Country-by-country tariff rates as announced by the White House on April 2, 2025: the tariff rate attributed to each country ('Tariffs Charged to the U.S.A.') and the discounted reciprocal tariff rate the US applied in response.</p>",
                 "section": "rates",
                 "figureNum": 2
               },
@@ -20835,7 +20818,7 @@
                     "imported": "green"
                   }
                 },
-                "body_html": "<p>Percent change in producer/consumer prices by commodity under the April 2 Announcement Only scenario, overall and split between domestically-produced and imported goods. The published report charted only a subset of the largest movers; this data file includes all commodities.</p>",
+                "body_html": "<p>Percent change in producer/consumer prices by commodity under the April 2 Announcement Only scenario, overall and split between domestically-produced and imported goods.</p>",
                 "section": "prices-households",
                 "figureNum": 4
               },
@@ -20850,7 +20833,7 @@
                   "title": "Short-Run Distributional Effects of 2025 Tariffs",
                   "subtitle": "Tariff burden by household income decile, pre-substitution.",
                   "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
-                  "note": "Decile 1 was omitted due to insufficient data.",
+                  "note": "Insufficient data for first decile.",
                   "orientation": "vertical",
                   "xAxisType": "categorical",
                   "columns": {
@@ -20885,7 +20868,7 @@
                     ]
                   }
                 },
-                "body_html": "<p>The short-run tariff burden by household income decile under the April 2 Announcement Only scenario, as a share of after-tax income and in dollars per household. Values are negative by convention. Decile 1 was not published in the original release.</p>",
+                "body_html": "<p>The short-run tariff burden by household income decile under the April 2 Announcement Only scenario, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
                 "section": "prices-households",
                 "figureNum": 5
               },
@@ -21127,7 +21110,7 @@
                     "imported": "green"
                   }
                 },
-                "body_html": "<p>Percent change in producer/consumer prices by commodity under the All 2025 Tariffs to Date scenario, overall and split between domestically-produced and imported goods. The published report charted only a subset of the largest movers; this data file includes all commodities.</p>",
+                "body_html": "<p>Percent change in producer/consumer prices by commodity under the All 2025 Tariffs to Date scenario, overall and split between domestically-produced and imported goods.</p>",
                 "section": "prices-households",
                 "figureNum": 3
               },
@@ -21140,6 +21123,7 @@
                   "chartType": "bar",
                   "data": "data.csv",
                   "title": "Short-Run Distributional Effects of 2025 Tariffs",
+                  "note": "Insufficient data for first decile.",
                   "subtitle": "Tariff burden by household income decile, pre-substitution.",
                   "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
                   "orientation": "vertical",
@@ -21176,7 +21160,7 @@
                     ]
                   }
                 },
-                "body_html": "<p>The short-run tariff burden by household income decile under the All 2025 Tariffs to Date scenario, as a share of after-tax income and in dollars per household. Values are negative by convention. Decile 1 was not published in the original release.</p>",
+                "body_html": "<p>The short-run tariff burden by household income decile under the All 2025 Tariffs to Date scenario, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
                 "section": "prices-households",
                 "figureNum": 4
               },

@@ -359,7 +359,7 @@
               "title": "Household Cost of Tariffs by Income Decile",
               "subtitle": "Tariff burden by household income decile, pre-substitution. Through April 9.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
-              "note": "Decile 1 values are not published.",
+              "note": "Insufficient data for first decile.",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -393,7 +393,7 @@
                 ]
               }
             },
-            "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention. Decile 1 was not published.</p>",
+            "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention.</p>",
             "section": "prices-households",
             "figureNum": 6
           },
@@ -449,16 +449,6 @@
           }
         ]
       }
-    }
-  ],
-  "omitted_figures": [
-    {
-      "id": "etr-since-2025",
-      "reason": "Not published; no daily post-January-1 effective tariff rate tracker figure are included."
-    },
-    {
-      "id": "revenue-by-year",
-      "reason": "Not published; only a single aggregate 2026-35 conventional and dynamic revenue figure was given (see summary-statistics), not a year-by-year breakdown."
     }
   ]
 }

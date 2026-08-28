@@ -114,7 +114,7 @@
                 }
               }
             },
-            "body_html": "<h2>Current Policy</h2><p>This section presents projected effects as of February 20, 2026, across three policy scenarios: Current Policy with IEEPA refunds, Current Policy without refunds, and a counterfactual in which IEEPA tariffs remain upheld. Estimated impacts are measured against a January 2025 tariff-policy baseline. This table is identical across both scenario tabs.</p>",
+            "body_html": "<h2>Current Policy</h2><p>This section presents projected effects as of February 20, 2026, across three policy scenarios: Current Policy with IEEPA refunds, Current Policy without refunds, and a counterfactual in which IEEPA tariffs remain upheld. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
             "section": "overview",
             "lead": true,
             "figureNum": 1
@@ -240,7 +240,6 @@
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
-              "note": "The source workbook provides a single current-rate reference line (reflecting Current Policy), used identically on both scenario tabs; no separate IEEPA Upheld reference line was published.",
               "xAxisType": "temporal",
               "columns": {
                 "x": "year",
@@ -271,7 +270,7 @@
                 ]
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution. This chart is identical across both scenario tabs.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
             "figureNum": 4
           },
@@ -596,7 +595,7 @@
                 }
               }
             },
-            "body_html": "<h2>IEEPA Upheld</h2><p>This section presents projected effects as of February 20, 2026, across three policy scenarios: Current Policy with IEEPA refunds, Current Policy without refunds, and a counterfactual in which IEEPA tariffs remain upheld. Estimated impacts are measured against a January 2025 tariff-policy baseline. This table is identical across both scenario tabs.</p>",
+            "body_html": "<h2>IEEPA Upheld</h2><p>This section presents projected effects as of February 20, 2026, across three policy scenarios: Current Policy with IEEPA refunds, Current Policy without refunds, and a counterfactual in which IEEPA tariffs remain upheld. Estimated impacts are measured against a January 2025 tariff-policy baseline.</p>",
             "section": "overview",
             "lead": true,
             "figureNum": 1
@@ -671,7 +670,6 @@
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "value_suffix": "%",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
-              "note": "The source workbook provides a single current-rate reference line (reflecting Current Policy), used identically on both scenario tabs; no separate IEEPA Upheld reference line was published.",
               "xAxisType": "temporal",
               "columns": {
                 "x": "year",
@@ -702,7 +700,7 @@
                 ]
               }
             },
-            "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution. This chart is identical across both scenario tabs.</p>",
+            "body_html": "<p>The US average effective tariff rate since 1790, with the current (February 20, 2026) average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
             "figureNum": 3
           },

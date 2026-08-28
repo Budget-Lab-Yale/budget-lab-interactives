@@ -146,7 +146,7 @@
                 }
               }
             },
-            "body_html": "<p>Country-by-country tariff rates as announced by the White House on April 2, 2025: the tariff rate attributed to each country ('Tariffs Charged to the U.S.A.') and the discounted reciprocal tariff rate the US applied in response. This appendix is specific to the April 2nd announcement and is not duplicated under the All 2025 Tariffs to Date scenario.</p>",
+            "body_html": "<p>Country-by-country tariff rates as announced by the White House on April 2, 2025: the tariff rate attributed to each country ('Tariffs Charged to the U.S.A.') and the discounted reciprocal tariff rate the US applied in response.</p>",
             "section": "rates",
             "figureNum": 2
           },
@@ -229,7 +229,7 @@
                 "imported": "green"
               }
             },
-            "body_html": "<p>Percent change in producer/consumer prices by commodity under the April 2 Announcement Only scenario, overall and split between domestically-produced and imported goods. The published report charted only a subset of the largest movers; this data file includes all commodities.</p>",
+            "body_html": "<p>Percent change in producer/consumer prices by commodity under the April 2 Announcement Only scenario, overall and split between domestically-produced and imported goods.</p>",
             "section": "prices-households",
             "figureNum": 4
           },
@@ -244,7 +244,7 @@
               "title": "Short-Run Distributional Effects of 2025 Tariffs",
               "subtitle": "Tariff burden by household income decile, pre-substitution.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
-              "note": "Decile 1 was omitted due to insufficient data.",
+              "note": "Insufficient data for first decile.",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -279,7 +279,7 @@
                 ]
               }
             },
-            "body_html": "<p>The short-run tariff burden by household income decile under the April 2 Announcement Only scenario, as a share of after-tax income and in dollars per household. Values are negative by convention. Decile 1 was not published in the original release.</p>",
+            "body_html": "<p>The short-run tariff burden by household income decile under the April 2 Announcement Only scenario, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
             "section": "prices-households",
             "figureNum": 5
           },
@@ -521,7 +521,7 @@
                 "imported": "green"
               }
             },
-            "body_html": "<p>Percent change in producer/consumer prices by commodity under the All 2025 Tariffs to Date scenario, overall and split between domestically-produced and imported goods. The published report charted only a subset of the largest movers; this data file includes all commodities.</p>",
+            "body_html": "<p>Percent change in producer/consumer prices by commodity under the All 2025 Tariffs to Date scenario, overall and split between domestically-produced and imported goods.</p>",
             "section": "prices-households",
             "figureNum": 3
           },
@@ -534,6 +534,7 @@
               "chartType": "bar",
               "data": "data.csv",
               "title": "Short-Run Distributional Effects of 2025 Tariffs",
+              "note": "Insufficient data for first decile.",
               "subtitle": "Tariff burden by household income decile, pre-substitution.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
               "orientation": "vertical",
@@ -570,7 +571,7 @@
                 ]
               }
             },
-            "body_html": "<p>The short-run tariff burden by household income decile under the All 2025 Tariffs to Date scenario, as a share of after-tax income and in dollars per household. Values are negative by convention. Decile 1 was not published in the original release.</p>",
+            "body_html": "<p>The short-run tariff burden by household income decile under the All 2025 Tariffs to Date scenario, as a share of after-tax income and in dollars per household. Values are negative by convention.</p>",
             "section": "prices-households",
             "figureNum": 4
           },
