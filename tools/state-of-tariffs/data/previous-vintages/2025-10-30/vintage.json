@@ -210,13 +210,9 @@
                     "value": "value"
                   },
                   "x_order": [
-                    "presub",
-                    "postsub"
+                    "Pre-substitution",
+                    "Post-substitution"
                   ],
-                  "x_labels": {
-                    "presub": "Pre-substitution",
-                    "postsub": "Post-substitution"
-                  },
                   "series_order": [
                     "China",
                     "Canada",
@@ -697,13 +693,9 @@
                     "value": "value"
                   },
                   "x_order": [
-                    "presub",
-                    "postsub"
+                    "Pre-substitution",
+                    "Post-substitution"
                   ],
-                  "x_labels": {
-                    "presub": "Pre-substitution",
-                    "postsub": "Post-substitution"
-                  },
                   "series_order": [
                     "China",
                     "Canada",

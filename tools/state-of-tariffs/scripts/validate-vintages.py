@@ -167,10 +167,18 @@ def check_vintage(vdir: str) -> None:
                 # 7 — substitution honesty
                 if 'substitution' in cols:
                     tags = {r.get('substitution') for r in rows if r.get('substitution')}
-                    bad = tags - {'presub', 'postsub'}
+                    # Where `substitution` is the rendered x category, its values ARE
+                    # the axis labels - there is no axis-tick relabel field, so the
+                    # display string has to live in the data. The canonical
+                    # presub/postsub vocabulary applies only where the column is
+                    # metadata.
+                    rendered = (spec.get('columns') or {}).get('x') == 'substitution'
+                    allowed = ({'Pre-substitution', 'Post-substitution'} if rendered
+                               else {'presub', 'postsub'})
+                    bad = tags - allowed
                     if bad:
                         add('WARN', where, f'substitution values outside '
-                                           f'{{presub, postsub}}: {sorted(bad)}')
+                                           f'{sorted(allowed)}: {sorted(bad)}')
                     st = (spec.get('subtitle') or '').lower()
                     if 'post-substitution' in st and tags == {'presub'}:
                         add('ERROR', where, 'subtitle says post-substitution but the '

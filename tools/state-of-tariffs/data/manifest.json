@@ -9164,13 +9164,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -9655,13 +9651,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -10138,13 +10130,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -10696,13 +10684,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -11255,13 +11239,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -11760,13 +11740,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -12301,13 +12277,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -12860,13 +12832,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -13411,13 +13379,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -13962,13 +13926,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -14513,13 +14473,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -15064,13 +15020,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -15538,13 +15490,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -16050,13 +15998,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -16523,13 +16467,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -16995,13 +16935,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -17521,13 +17457,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -17994,13 +17926,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -18467,13 +18395,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -18947,13 +18871,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -19426,13 +19346,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -19883,13 +19799,9 @@
                         "value": "value"
                       },
                       "x_order": [
-                        "presub",
-                        "postsub"
+                        "Pre-substitution",
+                        "Post-substitution"
                       ],
-                      "x_labels": {
-                        "presub": "Pre-substitution",
-                        "postsub": "Post-substitution"
-                      },
                       "series_order": [
                         "China",
                         "Canada",
@@ -20675,11 +20587,18 @@
                   "annotations": {
                     "yAxis": [
                       {
-                        "y": 15.186839563632496,
+                        "y": 22.438661141351545,
+                        "label": "Current average effective rate (All 2025 Tariffs to Date)",
+                        "style": "dashed",
                         "color": "amber",
-                        "labelSide": "top",
+                        "labelSide": "top"
+                      },
+                      {
+                        "y": 15.186839563632496,
                         "label": "Current average effective rate (April 2 Announcement Only)",
-                        "style": "dashed"
+                        "style": "dashed",
+                        "color": "blue",
+                        "labelSide": "bottom"
                       }
                     ]
                   }
@@ -20958,10 +20877,17 @@
                     "yAxis": [
                       {
                         "y": 22.438661141351545,
-                        "color": "amber",
-                        "labelSide": "top",
                         "label": "Current average effective rate (All 2025 Tariffs to Date)",
-                        "style": "dashed"
+                        "style": "dashed",
+                        "color": "amber",
+                        "labelSide": "top"
+                      },
+                      {
+                        "y": 15.186839563632496,
+                        "label": "Current average effective rate (April 2 Announcement Only)",
+                        "style": "dashed",
+                        "color": "blue",
+                        "labelSide": "bottom"
                       }
                     ]
                   }

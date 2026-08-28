@@ -1,11 +1,11 @@
 category,value,country_code,substitution
-China,3.9,chn,presub
-China,2.2,chn,postsub
-Canada,1.4,ca,presub
-Canada,1.9,ca,postsub
-Mexico,1.7,mx,presub
-Mexico,2.0,mx,postsub
-Rest of World,8.2,row,presub
-Rest of World,8.0,row,postsub
-Total,15.2,total,presub
-Total,14.1,total,postsub
+China,3.9,chn,Pre-substitution
+China,2.2,chn,Post-substitution
+Canada,1.4,ca,Pre-substitution
+Canada,1.9,ca,Post-substitution
+Mexico,1.7,mx,Pre-substitution
+Mexico,2.0,mx,Post-substitution
+Rest of World,8.2,row,Pre-substitution
+Rest of World,8.0,row,Post-substitution
+Total,15.2,total,Pre-substitution
+Total,14.1,total,Post-substitution

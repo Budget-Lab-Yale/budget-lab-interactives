@@ -175,13 +175,20 @@
               "annotations": {
                 "yAxis": [
                   {
-                    "y": 15.186839563632496,
-                    "color": "amber",
-                    "labelSide": "top",
-                    "label": "Current average effective rate (April 2 Announcement Only)",
-                    "style": "dashed"
+                   "y": 22.438661141351545,
+                   "label": "Current average effective rate (All 2025 Tariffs to Date)",
+                   "style": "dashed",
+                   "color": "amber",
+                   "labelSide": "top"
+                  },
+                  {
+                   "y": 15.186839563632496,
+                   "label": "Current average effective rate (April 2 Announcement Only)",
+                   "style": "dashed",
+                   "color": "blue",
+                   "labelSide": "bottom"
                   }
-                ]
+                 ]
               }
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 2, 2025) average effective rate under the April 2 Announcement Only scenario shown for reference.</p>",
@@ -457,13 +464,20 @@
               "annotations": {
                 "yAxis": [
                   {
-                    "y": 22.438661141351545,
-                    "color": "amber",
-                    "labelSide": "top",
-                    "label": "Current average effective rate (All 2025 Tariffs to Date)",
-                    "style": "dashed"
+                   "y": 22.438661141351545,
+                   "label": "Current average effective rate (All 2025 Tariffs to Date)",
+                   "style": "dashed",
+                   "color": "amber",
+                   "labelSide": "top"
+                  },
+                  {
+                   "y": 15.186839563632496,
+                   "label": "Current average effective rate (April 2 Announcement Only)",
+                   "style": "dashed",
+                   "color": "blue",
+                   "labelSide": "bottom"
                   }
-                ]
+                 ]
               }
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 2, 2025) average effective rate under the All 2025 Tariffs to Date scenario shown for reference.</p>",
