@@ -154,15 +154,11 @@
               },
               "stub_header": "",
               "source": "The Budget Lab analysis.",
-              "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** TBL simulated this as a prohibitive Chinese export tariff on these commodities.",
-              "originalFigureId": "current-tariff-policy",
-              "vintageDate": "2025-04-15",
-              "scenarioTab": "default-scenario"
+              "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** TBL simulated this as a prohibitive Chinese export tariff on these commodities."
             },
             "body_html": "<p>Tariff actions in effect or announced as of April 15, 2025, shown alongside the retaliatory actions announced in response.</p>",
             "section": "overview",
-            "figureNum": 2,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original April 15, 2025 report's tariff-action timeline graphic."
+            "figureNum": 2
           },
           {
             "id": "etr-by-country",
@@ -302,8 +298,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 15, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
-            "figureNum": 4,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
+            "figureNum": 4
           },
           {
             "id": "consumer-prices",

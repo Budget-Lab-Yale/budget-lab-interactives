@@ -151,15 +151,11 @@
                 "Lumber / wood products"
               ],
               "stub_header": "",
-              "source": "The Budget Lab analysis.",
-              "originalFigureId": "current-tariff-policy",
-              "vintageDate": "2025-11-17",
-              "scenarioTab": "default-scenario"
+              "source": "The Budget Lab analysis."
             },
             "body_html": "<p>Tariff actions in effect as of November 17, 2025: broad tariffs applied under IEEPA authority by trading region (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B). The “Reciprocal” and “Fentanyl” Tariff columns apply only to Panel A rows; the Current Tariff Rate column applies only to Panel B rows.</p>",
             "section": "overview",
-            "figureNum": 2,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original November 17, 2025 report's tariff-policy summary tables. Uses a single dataset with a 'category' column to group Panel A (IEEPA broad tariffs by region) and Panel B (Section 232 product tariffs by sector) rows, rendered as one grouped table (same stub-grouping mechanism as summary-statistics) rather than two separate table parts. Added only to the baseline scenario per instruction, not the ieepa-invalidation alternative scenario."
+            "figureNum": 2
           },
           {
             "id": "etr-by-country",
@@ -267,8 +263,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (November 17, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
-            "figureNum": 4,
-            "note": "No direct analogue in the reference vintage structure; included as an additional figure. Baseline scenario only."
+            "figureNum": 4
           },
           {
             "id": "etr-since-2025",
@@ -289,8 +284,7 @@
             },
             "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection. Baseline scenario only.</p>",
             "section": "rates",
-            "figureNum": 5,
-            "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure. Baseline scenario only."
+            "figureNum": 5
           },
           {
             "id": "consumer-prices",

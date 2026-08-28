@@ -180,8 +180,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 2, 2025) average effective rate under the April 2 Announcement Only scenario shown for reference.</p>",
             "section": "rates",
-            "figureNum": 3,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
+            "figureNum": 3
           },
           {
             "id": "consumer-prices",
@@ -454,8 +453,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 2, 2025) average effective rate under the All 2025 Tariffs to Date scenario shown for reference.</p>",
             "section": "rates",
-            "figureNum": 2,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
+            "figureNum": 2
           },
           {
             "id": "consumer-prices",

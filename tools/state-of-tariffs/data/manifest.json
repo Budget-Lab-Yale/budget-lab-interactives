@@ -2761,15 +2761,11 @@
                   ],
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2026-04-08",
-                  "scenarioTab": "section-122-expires"
+                  "notes": "Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap."
                 },
                 "body_html": "<p>Tariff actions in effect as of April 8, 2026: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original April 8, 2026 report's tariff-policy summary tables, using a single dataset with a 'category' column to group Panel A (Section 122 broad tariff) and Panel B (Section 232 product tariffs) rows. Added only to the section-122-expires scenario per instruction, not the section-122-extended alternative scenario."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -2859,8 +2855,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate under the Section 122 Expires scenario shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+                "figureNum": 4
               },
               {
                 "id": "etr-tracker",
@@ -2881,7 +2876,6 @@
                 },
                 "body_html": "<p> \"Tariff Impact Tracker: Daily Effective Tariff Rate by Authority.\" The source data is a single aggregate ETR series (no per-authority breakdown columns despite the title), running daily from January 1, 2025 through the end of 2026. Section 122 Expires scenario only -- no counterpart exists for Section 122 Extended in the source.</p>",
                 "section": "rates",
-                "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure. Section 122 Expires scenario only.",
                 "figureNum": 5
               },
               {
@@ -3275,8 +3269,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate under the Section 122 Extended scenario shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 3,
-                "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+                "figureNum": 3
               },
               {
                 "id": "consumer-prices",
@@ -3627,15 +3620,11 @@
                   ],
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2026-04-02",
-                  "scenarioTab": "section-122-expires"
+                  "notes": "Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap."
                 },
                 "body_html": "<p>Tariff actions in effect as of April 2, 2026: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original April 2, 2026 report's tariff-policy summary tables, using a single dataset with a 'category' column to group Panel A (Section 122 broad tariff) and Panel B (Section 232 product tariffs) rows."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -3725,8 +3714,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate under the Section 122 Expires scenario shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+                "figureNum": 4
               },
               {
                 "id": "etr-tracker",
@@ -3747,7 +3735,6 @@
                 },
                 "body_html": "<p>\"Tariff Impact Tracker: Daily Effective Tariff Rate by Authority.\" The source data is a single aggregate ETR series (no per-authority breakdown columns despite the title), running daily from January 1, 2025 through the end of 2026.</p>",
                 "section": "rates",
-                "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure.",
                 "figureNum": 5
               },
               {
@@ -4141,8 +4128,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate under the Section 122 Extended scenario shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 3,
-                "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+                "figureNum": 3
               },
               {
                 "id": "consumer-prices",
@@ -4521,15 +4507,11 @@
                   ],
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2026-03-09",
-                  "scenarioTab": "section-122-expires"
+                  "notes": "Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap."
                 },
                 "body_html": "<p>Tariff actions in effect as of March 9, 2026: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original March 9, 2026 report's tariff-policy summary tables, using a single dataset with a 'category' column to group Panel A (Section 122 broad tariff) and Panel B (Section 232 product tariffs) rows. Added only to the section-122-expires scenario per instruction, not the section-122-extended alternative scenario."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -4619,8 +4601,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+                "figureNum": 4
               },
               {
                 "id": "distribution",
@@ -5013,8 +4994,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 3,
-                "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+                "figureNum": 3
               },
               {
                 "id": "distribution",
@@ -5357,15 +5337,11 @@
                     "Lumber/wood products"
                   ],
                   "stub_header": "",
-                  "source": "The Budget Lab analysis.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2026-02-21",
-                  "scenarioTab": "section-122-expires"
+                  "source": "The Budget Lab analysis."
                 },
                 "body_html": "<p>Tariff actions in effect as of February 21, 2026: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p><p><em>Notes: Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap.</em></p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original February 21, 2026 report's tariff-policy summary tables, using a single dataset with a 'category' column to group Panel A (Section 122 broad tariff) and Panel B (Section 232 product tariffs) rows. Added only to the section-122-expires scenario per instruction, not the section-122-extended alternative scenario."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -5455,8 +5431,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+                "figureNum": 4
               },
               {
                 "id": "consumer-prices",
@@ -5875,8 +5850,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 3,
-                "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+                "figureNum": 3
               },
               {
                 "id": "consumer-prices",
@@ -6251,15 +6225,11 @@
                     "Lumber / wood products"
                   ],
                   "stub_header": "",
-                  "source": "The Budget Lab analysis.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2026-02-20",
-                  "scenarioTab": "current-policy"
+                  "source": "The Budget Lab analysis."
                 },
                 "body_html": "<p>Tariff actions in effect as of February 20, 2026: broad tariffs applied under IEEPA authority by trading region, which the Supreme Court ruled must be vacated, and product-specific tariffs applied under Section 232 authority by sector, which are unaffected by the ruling. The Description column applies only to the IEEPA rows; the Current Tariff Rate column applies only to the Section 232 rows.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "Reproduces the published February 20, 2026 report Figure 1, 'Current Tariff Policy as of February 20, 2026' (Datawrapper 1btrp). Kept on the current-policy tab only: the published panel heading marks the IEEPA tariffs REPEALED, which is a Current Policy statement, and the report publishes no IEEPA-Upheld variant of this table."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -7116,15 +7086,11 @@
                     "Lumber / wood products"
                   ],
                   "stub_header": "",
-                  "source": "The Budget Lab analysis.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2026-01-19",
-                  "scenarioTab": "default-scenario"
+                  "source": "The Budget Lab analysis."
                 },
                 "body_html": "<p>Tariff actions in effect as of January 19, 2026: broad tariffs applied under IEEPA authority by trading region (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original January 19, 2026 report's tariff-policy summary tables, using a single dataset with a 'category' column to group Panel A and Panel B rows. Added only to the default-scenario per instruction, not the with-greenland-tariffs alternative scenario."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -7214,8 +7180,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (January 19, 2026) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+                "figureNum": 4
               },
               {
                 "id": "consumer-prices",
@@ -7608,8 +7573,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (January 19, 2026) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 3,
-                "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+                "figureNum": 3
               },
               {
                 "id": "consumer-prices",
@@ -7973,15 +7937,11 @@
                     "Lumber / wood products"
                   ],
                   "stub_header": "",
-                  "source": "The Budget Lab analysis.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-11-17",
-                  "scenarioTab": "default-scenario"
+                  "source": "The Budget Lab analysis."
                 },
                 "body_html": "<p>Tariff actions in effect as of November 17, 2025: broad tariffs applied under IEEPA authority by trading region (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B). The “Reciprocal” and “Fentanyl” Tariff columns apply only to Panel A rows; the Current Tariff Rate column applies only to Panel B rows.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original November 17, 2025 report's tariff-policy summary tables. Uses a single dataset with a 'category' column to group Panel A (IEEPA broad tariffs by region) and Panel B (Section 232 product tariffs by sector) rows, rendered as one grouped table (same stub-grouping mechanism as summary-statistics) rather than two separate table parts. Added only to the baseline scenario per instruction, not the ieepa-invalidation alternative scenario."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -8089,8 +8049,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (November 17, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": "No direct analogue in the reference vintage structure; included as an additional figure. Baseline scenario only."
+                "figureNum": 4
               },
               {
                 "id": "etr-since-2025",
@@ -8111,8 +8070,7 @@
                 },
                 "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection. Baseline scenario only.</p>",
                 "section": "rates",
-                "figureNum": 5,
-                "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure. Baseline scenario only."
+                "figureNum": 5
               },
               {
                 "id": "consumer-prices",
@@ -8839,15 +8797,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-10-30",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of October 30, 2025, shown alongside the retaliatory and negotiated deal tariffs announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original October 30, 2025 report's tariff-action timeline graphic. Added only to the baseline scenario per instruction, not the ieepa-invalidation alternative scenario."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -8986,8 +8940,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (October 30, 2025) average effective rate shown for reference, both pre- and post-substitution. </p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": "No direct analogue in the reference vintage structure; included as an additional figure. Baseline scenario only -- no IEEPA Invalidation equivalent exists in the source."
+                "figureNum": 4
               },
               {
                 "id": "etr-since-2025",
@@ -9008,8 +8961,7 @@
                 },
                 "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, held flat thereafter as a forward projection. Baseline scenario only.</p>",
                 "section": "rates",
-                "figureNum": 5,
-                "note": "No counterpart anywhere in the previous-vintages structure; included as an additional figure. Baseline scenario only."
+                "figureNum": 5
               },
               {
                 "id": "consumer-prices",
@@ -9795,15 +9747,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-10-17",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of October 17, 2025, shown alongside the retaliatory and negotiated deal tariffs announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original October 17, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -9942,8 +9890,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (October 17, 2025) average effective rate shown for reference, both pre- and post-substitution. </p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": ""
+                "figureNum": 4
               },
               {
                 "id": "etr-since-2025",
@@ -9964,8 +9911,7 @@
                 },
                 "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, from the January 2025 baseline (2.4%) to the current policy level (17.98%), held flat thereafter as a forward projection.</p>",
                 "section": "rates",
-                "figureNum": 5,
-                "note": ""
+                "figureNum": 5
               },
               {
                 "id": "consumer-prices",
@@ -10339,15 +10285,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-09-26",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of September 26, 2025, shown alongside the retaliatory and negotiated deal tariffs announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original September 26, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -10880,15 +10822,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-09-04",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of September 4, 2025, shown alongside the retaliatory and negotiated deal tariffs announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original September 4, 2025 report's tariff-action timeline graphic. Added only to the baseline scenario per instruction, not the no-ieepa alternative scenario."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -11887,15 +11825,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-08-07",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of August 7, 2025, shown alongside the retaliatory and negotiated deal tariffs announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original August 7, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -12034,7 +11968,6 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (August 7, 2025) average effective rate shown for reference, both pre- and post-substitution. </p>",
                 "section": "rates",
-                "note": "",
                 "figureNum": 4
               },
               {
@@ -12056,7 +11989,6 @@
                 },
                 "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, from the January 2025 baseline (2.4%) to the current policy level (18.61%), held flat thereafter as a forward projection.</p>",
                 "section": "rates",
-                "note": "",
                 "figureNum": 5
               },
               {
@@ -12429,15 +12361,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-08-01",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of August 1, 2025, shown alongside the retaliatory and negotiated deal tariffs announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original August 1, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -12965,15 +12893,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-07-30",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of July 30, 2025, shown alongside the retaliatory actions announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original July 30, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -13113,8 +13037,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (July 30, 2025) average effective rate shown for reference, both pre- and post-substitution. </p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": ""
+                "figureNum": 4
               },
               {
                 "id": "etr-since-2025",
@@ -13135,8 +13058,7 @@
                 },
                 "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, from the January 2025 baseline (2.4%) to the current policy level (18.41%), held flat thereafter as a forward projection.</p>",
                 "section": "rates",
-                "figureNum": 5,
-                "note": ""
+                "figureNum": 5
               },
               {
                 "id": "consumer-prices",
@@ -13501,15 +13423,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-07-28",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of July 28, 2025, shown alongside the retaliatory actions announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original July 28, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -13649,8 +13567,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (July 28, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": ""
+                "figureNum": 4
               },
               {
                 "id": "etr-since-2025",
@@ -13671,8 +13588,7 @@
                 },
                 "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, from the January 2025 baseline (2.4%) to the current policy level (18.21%), held flat thereafter as a forward projection.</p>",
                 "section": "rates",
-                "figureNum": 5,
-                "note": ""
+                "figureNum": 5
               },
               {
                 "id": "consumer-prices",
@@ -14037,15 +13953,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-07-22",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of July 22, 2025, shown alongside the retaliatory actions announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original July 22/23, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -14185,8 +14097,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (July 22, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": ""
+                "figureNum": 4
               },
               {
                 "id": "etr-since-2025",
@@ -14207,8 +14118,7 @@
                 },
                 "body_html": "<p>Tracks the daily rise in the pre-substitution average effective tariff rate as each 2025 tariff action took effect, from the January 2025 baseline (2.4%) to the current policy level (20.24%), held flat thereafter as a forward projection.</p>",
                 "section": "rates",
-                "figureNum": 5,
-                "note": ""
+                "figureNum": 5
               },
               {
                 "id": "consumer-prices",
@@ -14573,15 +14483,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-07-13",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of July 13, 2025, shown alongside the retaliatory actions announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original July 13, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -14721,8 +14627,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (July 13, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": ""
+                "figureNum": 4
               },
               {
                 "id": "consumer-prices",
@@ -15032,15 +14937,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-07-11",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of July 11, 2025, shown alongside the retaliatory actions announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original July 11, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -15180,8 +15081,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (July 11, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": ""
+                "figureNum": 4
               },
               {
                 "id": "consumer-prices",
@@ -15529,15 +15429,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-07-10",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of July 10, 2025, shown alongside the retaliatory actions announced in response.</p>",
                 "section": "overview",
-                "figureNum": 3,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original July 10, 2025 report's tariff-action timeline graphic."
+                "figureNum": 3
               },
               {
                 "id": "etr-by-country",
@@ -15677,8 +15573,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (July 10, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 5,
-                "note": ""
+                "figureNum": 5
               },
               {
                 "id": "consumer-prices",
@@ -15987,15 +15882,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-07-07",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of July 7, 2025, shown alongside the retaliatory actions announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original July 7, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -16135,8 +16026,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (July 7, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": ""
+                "figureNum": 4
               },
               {
                 "id": "consumer-prices",
@@ -16444,15 +16334,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-06-17",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of June 17, 2025, shown alongside the retaliatory actions announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original June 17, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -16592,8 +16478,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (June 17, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": ""
+                "figureNum": 4
               },
               {
                 "id": "consumer-prices",
@@ -16728,8 +16613,7 @@
                 },
                 "body_html": "<p>Compares the distributional-effects methodology introduced in this release (\"New Method\") against the methodology used in prior releases (\"Old Method\"), both projected out to 2027, by household income decile and basis. </p>",
                 "section": "prices-households",
-                "figureNum": 7,
-                "note": ""
+                "figureNum": 7
               },
               {
                 "id": "real-gdp",
@@ -16956,15 +16840,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-06-01",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of June 1, 2025, shown alongside the retaliatory actions announced in response. The Federal Circuit stayed the May 28, 2025 Court of International Trade ruling against the IEEPA-based tariffs pending appeal, so those tariffs (on China, Canada, and Mexico, and the April 2 worldwide reciprocal tariffs) remain in effect and are shown here alongside the Section 232 steel, aluminum, and auto tariffs.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original June 1, 2025 report's tariff-action timeline graphic. Reflects the Federal Circuit's May 29, 2025 stay of the CIT ruling, restoring the IEEPA-based tariffs pending appeal."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -17104,8 +16984,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (June 1, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": ""
+                "figureNum": 4
               },
               {
                 "id": "consumer-prices",
@@ -17414,15 +17293,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · ** TBL simulated this as a prohibitive Chinese export tariff on these commodities.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-05-29",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · ** TBL simulated this as a prohibitive Chinese export tariff on these commodities."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of May 29, 2025, shown alongside the retaliatory actions announced in response. On May 28, 2025, the Court of International Trade ruled the IEEPA-based tariffs (the China/Canada/Mexico fentanyl-trafficking tariffs and the April 2 worldwide reciprocal tariffs) unlawful; only the Section 232 tariffs on automobiles and steel and aluminum remain reflected here on the U.S. side, while retaliatory actions taken in response to the now-enjoined tariffs are shown as originally announced.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original May 29, 2025 report's tariff-action timeline graphic. Reflects the May 28, 2025 CIT ruling vacating the IEEPA-based tariffs."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -17562,8 +17437,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (May 29, 2025) average effective rate shown for reference, both pre- and post-substitution. This report reflects the removal of IEEPA tariffs per the May 28, 2025 court ruling.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": ""
+                "figureNum": 4
               },
               {
                 "id": "consumer-prices",
@@ -17872,15 +17746,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** TBL simulated this as a prohibitive Chinese export tariff on these commodities.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-05-23",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** TBL simulated this as a prohibitive Chinese export tariff on these commodities."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of May 23, 2025, shown alongside the retaliatory actions announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original May 23, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -18020,8 +17890,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (May 23, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
+                "figureNum": 4
               },
               {
                 "id": "consumer-prices",
@@ -18337,15 +18206,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** TBL simulated this as a prohibitive Chinese export tariff on these commodities.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-05-12",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** TBL simulated this as a prohibitive Chinese export tariff on these commodities."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of May 12, 2025, shown alongside the retaliatory actions announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original May 12, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -18485,8 +18350,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (May 12, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": ""
+                "figureNum": 4
               },
               {
                 "id": "consumer-prices",
@@ -18801,15 +18665,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** TBL simulated this as a prohibitive Chinese export tariff on these commodities.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-04-15",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** TBL simulated this as a prohibitive Chinese export tariff on these commodities."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of April 15, 2025, shown alongside the retaliatory actions announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original April 15, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -18949,8 +18809,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 15, 2025) average effective rate shown for reference, both pre- and post-substitution.</p>",
                 "section": "rates",
-                "figureNum": 4,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
+                "figureNum": 4
               },
               {
                 "id": "consumer-prices",
@@ -19243,15 +19102,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-04-10",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of April 10, 2025, shown alongside the retaliatory actions announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original April 10, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-by-country",
@@ -19694,15 +19549,11 @@
                   },
                   "stub_header": "",
                   "source": "The Budget Lab analysis.",
-                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. All of Budget Lab’s analysis may be adjusted moving forward with more detail from the Administration on implementation.",
-                  "originalFigureId": "current-tariff-policy",
-                  "vintageDate": "2025-04-08",
-                  "scenarioTab": "default-scenario"
+                  "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. All of Budget Lab’s analysis may be adjusted moving forward with more detail from the Administration on implementation."
                 },
                 "body_html": "<p>Tariff actions in effect or announced as of April 8, 2025, shown alongside the retaliatory actions announced in response.</p>",
                 "section": "overview",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original April 8, 2025 report's tariff-action timeline graphic."
+                "figureNum": 2
               },
               {
                 "id": "etr-historical",
@@ -19738,8 +19589,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 8, 2025) average effective rate shown for reference.</p>",
                 "section": "rates",
-                "figureNum": 3,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
+                "figureNum": 3
               },
               {
                 "id": "consumer-prices",
@@ -20078,8 +19928,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 2, 2025) average effective rate under the April 2 Announcement Only scenario shown for reference.</p>",
                 "section": "rates",
-                "figureNum": 3,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
+                "figureNum": 3
               },
               {
                 "id": "consumer-prices",
@@ -20352,8 +20201,7 @@
                 },
                 "body_html": "<p>The US average effective tariff rate since 1790, with the current (April 2, 2025) average effective rate under the All 2025 Tariffs to Date scenario shown for reference.</p>",
                 "section": "rates",
-                "figureNum": 2,
-                "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure."
+                "figureNum": 2
               },
               {
                 "id": "consumer-prices",

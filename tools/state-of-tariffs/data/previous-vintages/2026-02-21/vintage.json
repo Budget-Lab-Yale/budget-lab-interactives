@@ -163,15 +163,11 @@
                 "Lumber/wood products"
               ],
               "stub_header": "",
-              "source": "The Budget Lab analysis.",
-              "originalFigureId": "current-tariff-policy",
-              "vintageDate": "2026-02-21",
-              "scenarioTab": "section-122-expires"
+              "source": "The Budget Lab analysis."
             },
             "body_html": "<p>Tariff actions in effect as of February 21, 2026: the broad flat tariff applied under Section 122 authority (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B).</p><p><em>Notes: Section 232 tariffs are assumed to preempt Section 122 for all countries where they overlap.</em></p>",
             "section": "overview",
-            "figureNum": 2,
-            "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original February 21, 2026 report's tariff-policy summary tables, using a single dataset with a 'category' column to group Panel A (Section 122 broad tariff) and Panel B (Section 232 product tariffs) rows. Added only to the section-122-expires scenario per instruction, not the section-122-extended alternative scenario."
+            "figureNum": 2
           },
           {
             "id": "etr-by-country",
@@ -261,8 +257,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
-            "figureNum": 4,
-            "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+            "figureNum": 4
           },
           {
             "id": "consumer-prices",
@@ -681,8 +676,7 @@
             },
             "body_html": "<p>The US average effective tariff rate since 1790, with the current average effective rate shown for reference, both pre- and post-substitution.</p>",
             "section": "rates",
-            "figureNum": 3,
-            "note": "No direct analogue in the reference vintage structure; included as an additional figure."
+            "figureNum": 3
           },
           {
             "id": "consumer-prices",
