@@ -74,7 +74,7 @@
                   "Tariff rate": {
                     "type": "number",
                     "decimals": 1,
-                    "suffix": "%"
+                    "suffix": " p.p."
                   },
                   "Household cost": {
                     "type": "currency",
@@ -462,90 +462,55 @@
           {
             "id": "revenue-by-year",
             "short_label": "Revenue by Year",
-            "figureType": "composite",
-            "parts": [
-              {
-                "figureType": "table",
-                "spec": {
-                  "data": "data.csv",
-                  "title": "Net Revenue Impact by Fiscal Year",
-                  "subtitle": "Billions of dollars.",
-                  "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
-                  "stub": [
-                    "series"
-                  ],
-                  "header": [
-                    "category"
-                  ],
-                  "value": "value",
-                  "row_labels": {
-                    "conventional": "Conventional",
-                    "dynamic": "Dynamic"
-                  },
-                  "column_order": [
-                    "2026",
-                    "2027",
-                    "2028",
-                    "2029",
-                    "2030",
-                    "2031",
-                    "2032",
-                    "2033",
-                    "2034",
-                    "2035"
-                  ],
-                  "format": {
-                    "default": {
-                      "type": "number",
-                      "decimals": 1,
-                      "thousands": true,
-                      "prefix": "$"
-                    }
-                  }
-                },
-                "data": "previous-vintages/2025-08-07/baseline/revenue-by-year/data.csv"
+            "figureType": "table",
+            "data": "previous-vintages/2025-08-07/baseline/revenue-by-year/data.csv",
+            "spec": {
+              "data": "data.csv",
+              "title": "Net Revenue Impact by Fiscal Year",
+              "subtitle": "Billions of dollars.",
+              "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
+              "stub": [
+                "series"
+              ],
+              "header": [
+                "category"
+              ],
+              "value": "value",
+              "row_labels": {
+                "conventional": "Conventional",
+                "dynamic": "Dynamic",
+                "difference": "Difference (Dynamic − Conventional)"
               },
-              {
-                "figureType": "chart",
-                "spec": {
-                  "chartType": "bar",
-                  "data": "data.csv",
-                  "title": "Net Revenue Impact by Fiscal Year",
-                  "subtitle": "Conventional and dynamic estimates. Billions of dollars.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue.",
-                  "orientation": "vertical",
-                  "xAxisType": "categorical",
-                  "columns": {
-                    "x": "category",
-                    "series": "series",
-                    "value": "value"
-                  },
-                  "x_order": [
-                    "2026",
-                    "2027",
-                    "2028",
-                    "2029",
-                    "2030",
-                    "2031",
-                    "2032",
-                    "2033",
-                    "2034",
-                    "2035"
-                  ],
-                  "series_order": [
-                    "conventional",
-                    "dynamic"
-                  ],
-                  "series_labels": {
-                    "conventional": "Conventional",
-                    "dynamic": "Dynamic"
-                  }
-                },
-                "data": "previous-vintages/2025-08-07/baseline/revenue-by-year/data.csv"
+              "column_order": [
+                "2025",
+                "2026",
+                "2027",
+                "2028",
+                "2029",
+                "2030",
+                "2031",
+                "2032",
+                "2033",
+                "2034",
+                "2035",
+                "2026-35",
+                "2025-34"
+              ],
+              "format": {
+                "default": {
+                  "type": "number",
+                  "decimals": 1,
+                  "thousands": true,
+                  "prefix": "$"
+                }
+              },
+              "header_labels": {
+                "2026-35": "2026-35 Total",
+                "2025-34": "2025-34 Total"
               }
-            ],
-            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis.</p>",
+            },
+            "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis, plus the difference between the two (the dynamic revenue effect), including 10- and 11-year totals.</p>",
             "section": "fiscal",
             "figureNum": 10
           }
