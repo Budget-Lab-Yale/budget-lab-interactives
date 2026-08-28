@@ -395,6 +395,27 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   min-width: 0;
 }
 
+/* ...and the case the rule above does NOT cover, which is the one that actually
+   bites. The engine gives a header cell one of three treatments:
+
+     colSpan > 1                     -> .is-spanner + .tbl-table-spanner
+     header_max_lines AND a leaf     -> .tbl-table-header-clamp (wraps)
+     otherwise                       -> bare text, no wrapper at all
+
+   A group header sitting over a SINGLE column is a non-leaf with colSpan 1, so
+   it falls into the third branch: no wrapper, no clamp, and `nowrap` inherited
+   from `thead th`. The table is `table-layout: fixed` with engine-computed
+   column widths, so the cell cannot widen to fit — the centred label overflows
+   both sides into its neighbours, landing on the adjacent banner's flanking
+   rule. (The PNG export is unaffected: it measures and wraps text itself rather
+   than relying on CSS, which is why it already looked right.)
+
+   Target exactly that branch — a header cell carrying neither wrapper — so
+   clamped leaves and spanners keep their own behaviour. */
+.tbl-table thead th:not(:has(.tbl-table-header-clamp)):not(:has(.tbl-table-spanner)) {
+  white-space: normal;
+}
+
 /* Per-figure markdown body — tool-supplied text appended below the engine's
    figure card (the engine renders the figure + source line; the prose is ours). */
 .figure-description {
