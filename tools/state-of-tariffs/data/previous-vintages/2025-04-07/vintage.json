@@ -52,6 +52,7 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "notes": "* Includes retaliation implemented or planned to be implemented by the week of April 7. · ** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
               "group_labels": {
                 "Tariff rate": "Tariff rates, as of April 8, 2025",
                 "Consumer price increase": "Consumer price increase",
@@ -153,11 +154,12 @@
               },
               "stub_header": "",
               "source": "The Budget Lab analysis.",
+              "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. All of Budget Lab’s analysis may be adjusted moving forward with more detail from the Administration on implementation.",
               "originalFigureId": "current-tariff-policy",
               "vintageDate": "2025-04-08",
               "scenarioTab": "default-scenario"
             },
-            "body_html": "<p>Tariff actions in effect or announced as of April 8, 2025, shown alongside the retaliatory actions announced in response.</p><p><em>Notes: * USMCA-compliant trade remains duty-free. TBL assumes that 49% of imports by value from Mexico are USMCA-compliant, while 38% of imports from Canada are compliant. ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. All of Budget Lab's analysis may be adjusted moving forward with more detail from the Administration on implementation.</em></p>",
+            "body_html": "<p>Tariff actions in effect or announced as of April 8, 2025, shown alongside the retaliatory actions announced in response.</p>",
             "section": "overview",
             "figureNum": 2,
             "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original April 8, 2025 report's tariff-action timeline graphic."
@@ -173,6 +175,7 @@
               "title": "US Average Effective Tariff Rate Since 1790",
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "note": "* As of week of April 7, 2025",
               "xAxisType": "temporal",
               "columns": {
                 "x": "year",
@@ -209,6 +212,7 @@
               "title": "Long-Run Commodity Price Effects, Overall / Domestic / Imported",
               "subtitle": "Percent change to price level. Through week of April 7.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\" · The \"basis\" field splits each commodity into its overall, domestic-price, and imported-price change, as delineated in the source workbook.",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -234,8 +238,7 @@
               },
               "header_labels": {
                 "postsub": "Long-run"
-              },
-              "notes": "\"nec\" = \"Not elsewhere classified.\" The \"basis\" field splits each commodity into its overall, domestic-price, and imported-price change, as delineated in the source workbook."
+              }
             },
             "body_html": "<p>Long-run overall, domestic, and imported price effects for the commodities with the largest projected changes, as of the week of April 7, 2025.</p>",
             "section": "prices-households",
@@ -252,6 +255,7 @@
               "title": "Household Cost of Tariffs by Income Decile",
               "subtitle": "Tariff burden by household income decile, pre-substitution. Through week of April 7.",
               "source": "GTAP v7, Census, BLS, BEA, The Budget Lab analysis.",
+              "note": "Decile 1 values are omitted.",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -283,8 +287,7 @@
                   "% of after-tax income",
                   "2024 dollars"
                 ]
-              },
-              "notes": "Decile 1 values are omitted."
+              }
             },
             "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2024 dollars per household. Values are negative by convention. Decile 1 is not published.</p>",
             "section": "prices-households",
@@ -325,14 +328,14 @@
               "title": "Long-Run Change in Real GDP by Trading Partner",
               "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
                 "x": "category",
                 "facet": "group",
                 "value": "value"
-              },
-              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries."
+              }
             },
             "body_html": "<p>The long-run change in real GDP, by trading partner.</p>",
             "section": "economy",

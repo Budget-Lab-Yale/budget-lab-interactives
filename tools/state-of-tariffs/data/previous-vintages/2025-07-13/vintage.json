@@ -52,6 +52,7 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "notes": "** Pre-substitution. *** Post-substitution. · **** Under relaxed conventional assumptions.",
               "group_labels": {
                 "Tariff rate": "Tariff rates, as of July 13, 2025",
                 "Consumer price increase": "Consumer price increase",
@@ -148,11 +149,12 @@
               },
               "stub_header": "",
               "source": "The Budget Lab analysis.",
+              "notes": "* USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. · ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. · *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. · **** Executive Order 14289 (https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles) prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.",
               "originalFigureId": "current-tariff-policy",
               "vintageDate": "2025-07-13",
               "scenarioTab": "default-scenario"
             },
-            "body_html": "<p>Tariff actions in effect or announced as of July 13, 2025, shown alongside the retaliatory actions announced in response.</p><p><em>Notes: * USMCA-compliant trade remains duty-free. TBL assumes that 48% of imports by value from Mexico are USMCA-compliant, while 50% of imports from Canada are compliant. ** TBL assumes that 40% of automobile content in imported motor vehicles from Canada and Mexico are of US origin. For the purposes of the auto tariff rebate, TBL assumes that 1/3 of imported autos are assembled in the US. *** The tariffs announced on April 2 apply to most imported goods but exempt steel, aluminum, and autos—which have already been tariffed separately this year—as well as copper, pharmaceuticals, semiconductors, lumber, energy, and critical minerals. The Administration clarified the scope of the semiconductor exemption on April 13. TBL carved out these commodities in its analysis of the April 2 announcement but does stack tariffs on those commodities from earlier announcements where applicable. **** <a href=\"https://www.federalregister.gov/documents/2025/05/02/2025-07835/addressing-certain-tariffs-on-imported-articles\">Executive Order 14289</a> prevents many tariffs from stacking with one another and establishes the stacking order for tariffs, with the Section 232 automobile tariffs being the highest priority.</em></p>",
+            "body_html": "<p>Tariff actions in effect or announced as of July 13, 2025, shown alongside the retaliatory actions announced in response.</p>",
             "section": "overview",
             "figureNum": 2,
             "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original July 13, 2025 report's tariff-action timeline graphic."
@@ -266,6 +268,7 @@
               "title": "US Average Effective Tariff Rate Since 1790",
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "note": "* Incorporates US-Vietnam framework and July 7 announcements.",
               "xAxisType": "temporal",
               "columns": {
                 "x": "year",
@@ -308,6 +311,7 @@
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -430,6 +434,7 @@
               },
               "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {

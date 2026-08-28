@@ -156,7 +156,7 @@
               "vintageDate": "2025-11-17",
               "scenarioTab": "default-scenario"
             },
-            "body_html": "<p>Tariff actions in effect as of November 17, 2025: broad tariffs applied under IEEPA authority by trading region (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B). The “Reciprocal” and “Fentanyl” Tariff columns apply only to Panel A rows; the Current Tariff Rate column applies only to Panel B rows.</p><p><em>Source: The Budget Lab analysis.</em></p>",
+            "body_html": "<p>Tariff actions in effect as of November 17, 2025: broad tariffs applied under IEEPA authority by trading region (Panel A), and product-specific tariffs applied under Section 232 authority by sector (Panel B). The “Reciprocal” and “Fentanyl” Tariff columns apply only to Panel A rows; the Current Tariff Rate column applies only to Panel B rows.</p>",
             "section": "overview",
             "figureNum": 2,
             "note": "No direct analogue in the reference (2025-10-30) vintage structure; included as an additional figure reconstructed from the original November 17, 2025 report's tariff-policy summary tables. Uses a single dataset with a 'category' column to group Panel A (IEEPA broad tariffs by region) and Panel B (Section 232 product tariffs by sector) rows, rendered as one grouped table (same stub-grouping mechanism as summary-statistics) rather than two separate table parts. Added only to the baseline scenario per instruction, not the ieepa-invalidation alternative scenario."
@@ -238,6 +238,7 @@
               "title": "US Average Effective Tariff Rate Since 1790",
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "note": "TBL's method for calculating effective tariff rates (ETR) changed slightly on November 17. All else equal this change leads to a 0.9pp increase in the ETR. Values prior to November 17 do not reflect this change.",
               "xAxisType": "temporal",
               "columns": {
                 "x": "year",
@@ -302,6 +303,7 @@
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -424,6 +426,7 @@
               },
               "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -674,6 +677,7 @@
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -796,6 +800,7 @@
               },
               "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {

@@ -167,7 +167,7 @@
               "vintageDate": "2026-02-20",
               "scenarioTab": "current-policy"
             },
-            "body_html": "<p>Tariff actions in effect as of February 20, 2026: broad tariffs applied under IEEPA authority by trading region, which the Supreme Court ruled must be vacated, and product-specific tariffs applied under Section 232 authority by sector, which are unaffected by the ruling. The Description column applies only to the IEEPA rows; the Current Tariff Rate column applies only to the Section 232 rows.</p><p><em>Source: The Budget Lab analysis.</em></p>",
+            "body_html": "<p>Tariff actions in effect as of February 20, 2026: broad tariffs applied under IEEPA authority by trading region, which the Supreme Court ruled must be vacated, and product-specific tariffs applied under Section 232 authority by sector, which are unaffected by the ruling. The Description column applies only to the IEEPA rows; the Current Tariff Rate column applies only to the Section 232 rows.</p>",
             "section": "overview",
             "figureNum": 2,
             "note": "Reproduces the published February 20, 2026 report Figure 1, 'Current Tariff Policy as of February 20, 2026' (Datawrapper 1btrp). Kept on the current-policy tab only: the published panel heading marks the IEEPA tariffs REPEALED, which is a Current Policy statement, and the report publishes no IEEPA-Upheld variant of this table."
@@ -232,6 +232,7 @@
               "title": "US Average Effective Tariff Rate Since 1790",
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "note": "The source workbook provides a single current-rate reference line (reflecting Current Policy), used identically on both scenario tabs; no separate IEEPA Upheld reference line was published.",
               "xAxisType": "temporal",
               "columns": {
                 "x": "year",
@@ -243,7 +244,6 @@
                 "projected_presub": "Projected (pre-substitution)",
                 "projected_postsub": "Projected (post-substitution)"
               },
-              "notes": "The source workbook provides a single current-rate reference line (reflecting Current Policy), used identically on both scenario tabs; no separate IEEPA Upheld reference line was published.",
               "annotations": {
                 "yAxis": [
                   {
@@ -315,6 +315,7 @@
               },
               "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -326,8 +327,7 @@
                 "mode": "shared",
                 "columns": 2,
                 "pane_widths": "equal-bar"
-              },
-              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries."
+              }
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner, under Current Policy.</p>",
             "section": "economy",
@@ -445,6 +445,7 @@
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -642,6 +643,7 @@
               "title": "US Average Effective Tariff Rate Since 1790",
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "note": "The source workbook provides a single current-rate reference line (reflecting Current Policy), used identically on both scenario tabs; no separate IEEPA Upheld reference line was published.",
               "xAxisType": "temporal",
               "columns": {
                 "x": "year",
@@ -653,7 +655,6 @@
                 "projected_presub": "Projected (pre-substitution)",
                 "projected_postsub": "Projected (post-substitution)"
               },
-              "notes": "The source workbook provides a single current-rate reference line (reflecting Current Policy), used identically on both scenario tabs; no separate IEEPA Upheld reference line was published.",
               "annotations": {
                 "yAxis": [
                   {
@@ -725,6 +726,7 @@
               },
               "subtitle": "Percent change in the level of real GDP versus baseline.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "Real value added by sector. · FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -736,8 +738,7 @@
                 "mode": "shared",
                 "columns": 2,
                 "pane_widths": "equal-bar"
-              },
-              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries."
+              }
             },
             "body_html": "<p>The long-run change in real GDP, by sector or by trading partner, under the IEEPA Upheld scenario.</p>",
             "section": "economy",
@@ -855,6 +856,7 @@
               "title": "Consumer Price Effects, Selected Commodities",
               "subtitle": "Percent change in producer/consumer prices, short-run and long-run.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {

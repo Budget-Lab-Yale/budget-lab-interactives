@@ -429,7 +429,6 @@
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
                   "subtitle": "Conventional and dynamic estimates. Billions of dollars.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
                   "orientation": "vertical",
                   "xAxisType": "categorical",
                   "columns": {
@@ -456,7 +455,8 @@
                   "series_labels": {
                     "conventional": "Conventional",
                     "dynamic": "Dynamic"
-                  }
+                  },
+                  "note": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds."
                 },
                 "total": {
                   "column": "category",
@@ -990,7 +990,6 @@
                   "data": "data.csv",
                   "title": "Net Revenue Impact by Fiscal Year",
                   "subtitle": "Billions of dollars, by scenario.",
-                  "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
                   "orientation": "vertical",
                   "xAxisType": "categorical",
                   "columns": {
@@ -1021,7 +1020,8 @@
                   "series_colors": {
                     "tracker_actual_2026-07-01": "blue",
                     "tracker_new_301_2026-07-01": "amber"
-                  }
+                  },
+                  "note": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds."
                 },
                 "total": {
                   "column": "category",

@@ -52,6 +52,7 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "notes": "* Includes retaliation announced as of April 2. · ** Not including retaliation. · *** Pre-substitution. · **** Post-substitution. · ***** Under relaxed conventional assumptions",
               "group_labels": {
                 "Tariff rate": "Tariff rate increase, as of April 2, 2025",
                 "Consumer price increase": "Consumer price increase",
@@ -157,6 +158,7 @@
               "title": "US Average Effective Tariff Rate Since 1790",
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "note": "* Through April 2.",
               "xAxisType": "temporal",
               "columns": {
                 "x": "year",
@@ -192,7 +194,7 @@
               "title": "Commodity Price Effects",
               "subtitle": "Percent change to price level.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-              "notes": "'nec' = 'Not elsewhere classified.'",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -226,7 +228,7 @@
               "title": "Short-Run Distributional Effects of 2025 Tariffs",
               "subtitle": "Tariff burden by household income decile, pre-substitution.",
               "source": "GTAP v7 [Corong et al (2017)], Census, BLS, BEA, The Budget Lab analysis.",
-              "notes": "Decile 1 was omitted due to insufficient data.",
+              "note": "Decile 1 was omitted due to insufficient data.",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
@@ -300,13 +302,13 @@
               "title": "Long-Run Change in Real GDP Level from 2025 Tariffs",
               "subtitle": "Percent change in the level of real GDP versus baseline, by trading partner.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
                 "x": "category",
                 "value": "value"
-              },
-              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries."
+              }
             },
             "body_html": "<p>The long-run change in real GDP under the April 2 Announcement Only scenario, by trading partner.</p>",
             "section": "economy",
@@ -361,6 +363,7 @@
               "header": [],
               "value": "value",
               "source": "Congressional Budget Office, S&P Global, GTAP v7 [Corong et al (2017)], GTAP-RD, The Budget Lab analysis.",
+              "notes": "* Includes retaliation announced as of April 2. · ** Not including retaliation. · *** Pre-substitution. · **** Post-substitution. · ***** Under relaxed conventional assumptions",
               "group_labels": {
                 "Tariff rate": "Tariff rate increase, as of April 2, 2025",
                 "Consumer price increase": "Consumer price increase",
@@ -429,6 +432,7 @@
               "title": "US Average Effective Tariff Rate Since 1790",
               "subtitle": "Customs duty revenue as a percentage of goods imports.",
               "source": "Historical Statistics of the United States Ea424-434, Monthly Treasury Statement, Bureau of Economic Analysis, The Budget Lab analysis.",
+              "note": "* Through April 2.",
               "xAxisType": "temporal",
               "columns": {
                 "x": "year",
@@ -464,7 +468,7 @@
               "title": "Commodity Price Effects",
               "subtitle": "Percent change to price level.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
-              "notes": "'nec' = 'Not elsewhere classified.'",
+              "note": "\"nec\" = \"Not elsewhere classified\"",
               "orientation": "horizontal",
               "xAxisType": "categorical",
               "columns": {
@@ -571,13 +575,13 @@
               "title": "Long-Run Change in Real GDP Level from 2025 Tariffs",
               "subtitle": "Percent change in the level of real GDP versus baseline, by trading partner.",
               "source": "GTAP v7 [Corong et al (2017)], The Budget Lab analysis.",
+              "note": "FTROW = countries with a comprehensive free trade agreement with the US · ROW = all other countries",
               "orientation": "vertical",
               "xAxisType": "categorical",
               "columns": {
                 "x": "category",
                 "value": "value"
-              },
-              "notes": "FTROW = countries with a comprehensive free trade agreement with the US. ROW = all other countries."
+              }
             },
             "body_html": "<p>The long-run change in real GDP under the All 2025 Tariffs to Date scenario, by trading partner.</p>",
             "section": "economy",
