@@ -1,211 +1,127 @@
 category,group,substitution,value,scenario,measure
-Total,Total,presub,0.4053566079682058,tracker_actual_2026-07-21,level
-Total,Total,postsub,0.34636935710901967,tracker_actual_2026-07-21,level
-Motor vehicles and parts,Durable goods,presub,2.9989787371305923,tracker_actual_2026-07-21,level
-Motor vehicles and parts,Durable goods,postsub,2.5705561254831912,tracker_actual_2026-07-21,level
-Furnishings and durable household equipment,Durable goods,presub,2.432900815490679,tracker_actual_2026-07-21,level
-Furnishings and durable household equipment,Durable goods,postsub,1.9088512570210705,tracker_actual_2026-07-21,level
-Recreational goods and vehicles,Durable goods,presub,1.220423136330692,tracker_actual_2026-07-21,level
-Recreational goods and vehicles,Durable goods,postsub,0.9989075823215668,tracker_actual_2026-07-21,level
-Net foreign travel,Services,presub,0.6992444573754101,tracker_actual_2026-07-21,level
-Net foreign travel,Services,postsub,0.5786443390200415,tracker_actual_2026-07-21,level
-Other durable goods,Durable goods,presub,0.5141152875903656,tracker_actual_2026-07-21,level
-Other durable goods,Durable goods,postsub,0.4298023893979145,tracker_actual_2026-07-21,level
-Transportation services,Services,presub,0.5107671647732948,tracker_actual_2026-07-21,level
-Transportation services,Services,postsub,0.4697538445762443,tracker_actual_2026-07-21,level
-Other nondurable goods,Nondurable goods,presub,0.471303033273922,tracker_actual_2026-07-21,level
-Other nondurable goods,Nondurable goods,postsub,0.4014239477119803,tracker_actual_2026-07-21,level
-Food and beverages purchased for off-premises consumption,Nondurable goods,presub,0.35318374067223307,tracker_actual_2026-07-21,level
-Food and beverages purchased for off-premises consumption,Nondurable goods,postsub,0.3196568872516431,tracker_actual_2026-07-21,level
-Communication,Services,presub,0.3514927165904775,tracker_actual_2026-07-21,level
-Communication,Services,postsub,0.30193672210534245,tracker_actual_2026-07-21,level
-Household utilities,Services,presub,0.27456832012161675,tracker_actual_2026-07-21,level
-Household utilities,Services,postsub,0.2442775543396057,tracker_actual_2026-07-21,level
-Recreation services,Services,presub,0.23851908115822015,tracker_actual_2026-07-21,level
-Recreation services,Services,postsub,0.2101783269381992,tracker_actual_2026-07-21,level
-Other services,Services,presub,0.2344900172047462,tracker_actual_2026-07-21,level
-Other services,Services,postsub,0.20974420660619303,tracker_actual_2026-07-21,level
-Final consumption expenditures of NPISH,Services,presub,0.22647489531884596,tracker_actual_2026-07-21,level
-Final consumption expenditures of NPISH,Services,postsub,0.2045464717963064,tracker_actual_2026-07-21,level
-Food services and accommodations,Services,presub,0.21806965533825207,tracker_actual_2026-07-21,level
-Food services and accommodations,Services,postsub,0.1954168308596471,tracker_actual_2026-07-21,level
-Health care,Services,presub,0.16658124143316835,tracker_actual_2026-07-21,level
-Health care,Services,postsub,0.1480060525475909,tracker_actual_2026-07-21,level
-Education,Services,presub,0.1553242849119546,tracker_actual_2026-07-21,level
-Education,Services,postsub,0.13826274255450624,tracker_actual_2026-07-21,level
-Gasoline and other energy goods,Nondurable goods,presub,0.12455469142455686,tracker_actual_2026-07-21,level
-Gasoline and other energy goods,Nondurable goods,postsub,0.1140544949370896,tracker_actual_2026-07-21,level
-Clothing and footwear,Nondurable goods,presub,0.11710784312221131,tracker_actual_2026-07-21,level
-Clothing and footwear,Nondurable goods,postsub,0.07292068602162086,tracker_actual_2026-07-21,level
-Financial services and insurance,Services,presub,0.07237323242524063,tracker_actual_2026-07-21,level
-Financial services and insurance,Services,postsub,0.06360792738586983,tracker_actual_2026-07-21,level
-Housing,Services,presub,0.04477953548994245,tracker_actual_2026-07-21,level
-Housing,Services,postsub,0.03983521635046629,tracker_actual_2026-07-21,level
-Total,Total,presub,0.3846728799431472,tracker_no_s338_2026-07-21,level
-Total,Total,postsub,0.32919732374256955,tracker_no_s338_2026-07-21,level
-Motor vehicles and parts,Durable goods,presub,2.95756918762755,tracker_no_s338_2026-07-21,level
-Motor vehicles and parts,Durable goods,postsub,2.5330063476159013,tracker_no_s338_2026-07-21,level
-Furnishings and durable household equipment,Durable goods,presub,2.298007831758536,tracker_no_s338_2026-07-21,level
-Furnishings and durable household equipment,Durable goods,postsub,1.8210019440453769,tracker_no_s338_2026-07-21,level
-Recreational goods and vehicles,Durable goods,presub,1.182059150935952,tracker_no_s338_2026-07-21,level
-Recreational goods and vehicles,Durable goods,postsub,0.9644618349956732,tracker_no_s338_2026-07-21,level
-Net foreign travel,Services,presub,0.6626282157928992,tracker_no_s338_2026-07-21,level
-Net foreign travel,Services,postsub,0.540807896381768,tracker_no_s338_2026-07-21,level
-Transportation services,Services,presub,0.501211362989335,tracker_no_s338_2026-07-21,level
-Transportation services,Services,postsub,0.4609132187120298,tracker_no_s338_2026-07-21,level
-Other durable goods,Durable goods,presub,0.4678884512154154,tracker_no_s338_2026-07-21,level
-Other durable goods,Durable goods,postsub,0.39645986581052506,tracker_no_s338_2026-07-21,level
-Other nondurable goods,Nondurable goods,presub,0.42691377605766045,tracker_no_s338_2026-07-21,level
-Other nondurable goods,Nondurable goods,postsub,0.3562840256331428,tracker_no_s338_2026-07-21,level
-Communication,Services,presub,0.34005061441521095,tracker_no_s338_2026-07-21,level
-Communication,Services,postsub,0.29075318711241765,tracker_no_s338_2026-07-21,level
-Food and beverages purchased for off-premises consumption,Nondurable goods,presub,0.3175581710003887,tracker_no_s338_2026-07-21,level
-Food and beverages purchased for off-premises consumption,Nondurable goods,postsub,0.28839260638976577,tracker_no_s338_2026-07-21,level
-Household utilities,Services,presub,0.26635209610050625,tracker_no_s338_2026-07-21,level
-Household utilities,Services,postsub,0.23592997931230533,tracker_no_s338_2026-07-21,level
-Recreation services,Services,presub,0.2283290964771877,tracker_no_s338_2026-07-21,level
-Recreation services,Services,postsub,0.20062700381031792,tracker_no_s338_2026-07-21,level
-Other services,Services,presub,0.22245915715013864,tracker_no_s338_2026-07-21,level
-Other services,Services,postsub,0.1989904553011546,tracker_no_s338_2026-07-21,level
-Final consumption expenditures of NPISH,Services,presub,0.21603429581077024,tracker_no_s338_2026-07-21,level
-Final consumption expenditures of NPISH,Services,postsub,0.19506155218623208,tracker_no_s338_2026-07-21,level
-Food services and accommodations,Services,presub,0.20181468998091337,tracker_no_s338_2026-07-21,level
-Food services and accommodations,Services,postsub,0.18069021362416288,tracker_no_s338_2026-07-21,level
-Health care,Services,presub,0.15414432600223987,tracker_no_s338_2026-07-21,level
-Health care,Services,postsub,0.1361187326225537,tracker_no_s338_2026-07-21,level
-Education,Services,presub,0.1471717923437793,tracker_no_s338_2026-07-21,level
-Education,Services,postsub,0.13046968365229236,tracker_no_s338_2026-07-21,level
-Gasoline and other energy goods,Nondurable goods,presub,0.120248311702776,tracker_no_s338_2026-07-21,level
-Gasoline and other energy goods,Nondurable goods,postsub,0.1097733921657968,tracker_no_s338_2026-07-21,level
-Financial services and insurance,Services,presub,0.06903829021665714,tracker_no_s338_2026-07-21,level
-Financial services and insurance,Services,postsub,0.06040332240699335,tracker_no_s338_2026-07-21,level
-Clothing and footwear,Nondurable goods,presub,0.06162913198371165,tracker_no_s338_2026-07-21,level
-Clothing and footwear,Nondurable goods,postsub,0.05788606731898214,tracker_no_s338_2026-07-21,level
-Housing,Services,presub,0.04188334069505376,tracker_no_s338_2026-07-21,level
-Housing,Services,postsub,0.03745653842123669,tracker_no_s338_2026-07-21,level
-Total,Total,presub,0.8265216856372718,tracker_new_301_2026-07-21,level
-Total,Total,postsub,0.7196820790669637,tracker_new_301_2026-07-21,level
-Clothing and footwear,Nondurable goods,presub,4.549880977152238,tracker_new_301_2026-07-21,level
-Clothing and footwear,Nondurable goods,postsub,4.259444756962139,tracker_new_301_2026-07-21,level
-Furnishings and durable household equipment,Durable goods,presub,3.61556526565259,tracker_new_301_2026-07-21,level
-Furnishings and durable household equipment,Durable goods,postsub,2.716458386414456,tracker_new_301_2026-07-21,level
-Motor vehicles and parts,Durable goods,presub,3.2278128716961816,tracker_new_301_2026-07-21,level
-Motor vehicles and parts,Durable goods,postsub,2.780725437892433,tracker_new_301_2026-07-21,level
-Other durable goods,Durable goods,presub,2.682311434630003,tracker_new_301_2026-07-21,level
-Other durable goods,Durable goods,postsub,2.3345227571263196,tracker_new_301_2026-07-21,level
-Recreational goods and vehicles,Durable goods,presub,1.8843244778702577,tracker_new_301_2026-07-21,level
-Recreational goods and vehicles,Durable goods,postsub,1.5884861729611297,tracker_new_301_2026-07-21,level
-Other nondurable goods,Nondurable goods,presub,1.317315351864725,tracker_new_301_2026-07-21,level
-Other nondurable goods,Nondurable goods,postsub,1.0958369612199497,tracker_new_301_2026-07-21,level
-Net foreign travel,Services,presub,1.0655689447335166,tracker_new_301_2026-07-21,level
-Net foreign travel,Services,postsub,0.9041863286392362,tracker_new_301_2026-07-21,level
-Food and beverages purchased for off-premises consumption,Nondurable goods,presub,0.9747670261196816,tracker_new_301_2026-07-21,level
-Food and beverages purchased for off-premises consumption,Nondurable goods,postsub,0.8585010419001681,tracker_new_301_2026-07-21,level
-Transportation services,Services,presub,0.5978625220672131,tracker_new_301_2026-07-21,level
-Transportation services,Services,postsub,0.5504612760734742,tracker_new_301_2026-07-21,level
-Communication,Services,presub,0.48695925840117976,tracker_new_301_2026-07-21,level
-Communication,Services,postsub,0.4277291846979349,tracker_new_301_2026-07-21,level
-Food services and accommodations,Services,presub,0.46725065291734585,tracker_new_301_2026-07-21,level
-Food services and accommodations,Services,postsub,0.4213946662642926,tracker_new_301_2026-07-21,level
-Recreation services,Services,presub,0.39718372293757714,tracker_new_301_2026-07-21,level
-Recreation services,Services,postsub,0.35540620967938186,tracker_new_301_2026-07-21,level
-Other services,Services,presub,0.39279522436004954,tracker_new_301_2026-07-21,level
-Other services,Services,postsub,0.35386056993086834,tracker_new_301_2026-07-21,level
-Health care,Services,presub,0.3684250751137246,tracker_new_301_2026-07-21,level
-Health care,Services,postsub,0.3364064228029753,tracker_new_301_2026-07-21,level
-Final consumption expenditures of NPISH,Services,presub,0.3666457955581554,tracker_new_301_2026-07-21,level
-Final consumption expenditures of NPISH,Services,postsub,0.33528460394956894,tracker_new_301_2026-07-21,level
-Household utilities,Services,presub,0.36006771567056006,tracker_new_301_2026-07-21,level
-Household utilities,Services,postsub,0.32229497709566146,tracker_new_301_2026-07-21,level
-Education,Services,presub,0.2493284297953025,tracker_new_301_2026-07-21,level
-Education,Services,postsub,0.22480862937451604,tracker_new_301_2026-07-21,level
-Gasoline and other energy goods,Nondurable goods,presub,0.1957052373532177,tracker_new_301_2026-07-21,level
-Gasoline and other energy goods,Nondurable goods,postsub,0.18180681677707544,tracker_new_301_2026-07-21,level
-Financial services and insurance,Services,presub,0.1054002249419018,tracker_new_301_2026-07-21,level
-Financial services and insurance,Services,postsub,0.09472748814889412,tracker_new_301_2026-07-21,level
-Housing,Services,presub,0.06378690044855846,tracker_new_301_2026-07-21,level
-Housing,Services,postsub,0.05773635345930408,tracker_new_301_2026-07-21,level
-Total,Total,presub,-0.02068372802505858,tracker_no_s338_2026-07-21,delta_vs_default
-Total,Total,postsub,-0.017172033366450123,tracker_no_s338_2026-07-21,delta_vs_default
-Motor vehicles and parts,Durable goods,presub,-0.04140954950304243,tracker_no_s338_2026-07-21,delta_vs_default
-Motor vehicles and parts,Durable goods,postsub,-0.03754977786728997,tracker_no_s338_2026-07-21,delta_vs_default
-Furnishings and durable household equipment,Durable goods,presub,-0.1348929837321431,tracker_no_s338_2026-07-21,delta_vs_default
-Furnishings and durable household equipment,Durable goods,postsub,-0.08784931297569365,tracker_no_s338_2026-07-21,delta_vs_default
-Recreational goods and vehicles,Durable goods,presub,-0.038363985394740174,tracker_no_s338_2026-07-21,delta_vs_default
-Recreational goods and vehicles,Durable goods,postsub,-0.03444574732589367,tracker_no_s338_2026-07-21,delta_vs_default
-Net foreign travel,Services,presub,-0.03661624158251087,tracker_no_s338_2026-07-21,delta_vs_default
-Net foreign travel,Services,postsub,-0.03783644263827357,tracker_no_s338_2026-07-21,delta_vs_default
-Transportation services,Services,presub,-0.009555801783959761,tracker_no_s338_2026-07-21,delta_vs_default
-Transportation services,Services,postsub,-0.008840625864214524,tracker_no_s338_2026-07-21,delta_vs_default
-Other durable goods,Durable goods,presub,-0.04622683637495023,tracker_no_s338_2026-07-21,delta_vs_default
-Other durable goods,Durable goods,postsub,-0.03334252358738943,tracker_no_s338_2026-07-21,delta_vs_default
-Other nondurable goods,Nondurable goods,presub,-0.044389257216261524,tracker_no_s338_2026-07-21,delta_vs_default
-Other nondurable goods,Nondurable goods,postsub,-0.04513992207883749,tracker_no_s338_2026-07-21,delta_vs_default
-Communication,Services,presub,-0.011442102175266533,tracker_no_s338_2026-07-21,delta_vs_default
-Communication,Services,postsub,-0.011183534992924793,tracker_no_s338_2026-07-21,delta_vs_default
-Food and beverages purchased for off-premises consumption,Nondurable goods,presub,-0.03562556967184438,tracker_no_s338_2026-07-21,delta_vs_default
-Food and beverages purchased for off-premises consumption,Nondurable goods,postsub,-0.031264280861877325,tracker_no_s338_2026-07-21,delta_vs_default
-Household utilities,Services,presub,-0.008216224021110496,tracker_no_s338_2026-07-21,delta_vs_default
-Household utilities,Services,postsub,-0.00834757502730038,tracker_no_s338_2026-07-21,delta_vs_default
-Recreation services,Services,presub,-0.010189984681032466,tracker_no_s338_2026-07-21,delta_vs_default
-Recreation services,Services,postsub,-0.00955132312788129,tracker_no_s338_2026-07-21,delta_vs_default
-Other services,Services,presub,-0.012030860054607545,tracker_no_s338_2026-07-21,delta_vs_default
-Other services,Services,postsub,-0.010753751305038417,tracker_no_s338_2026-07-21,delta_vs_default
-Final consumption expenditures of NPISH,Services,presub,-0.010440599508075715,tracker_no_s338_2026-07-21,delta_vs_default
-Final consumption expenditures of NPISH,Services,postsub,-0.009484919610074305,tracker_no_s338_2026-07-21,delta_vs_default
-Food services and accommodations,Services,presub,-0.016254965357338697,tracker_no_s338_2026-07-21,delta_vs_default
-Food services and accommodations,Services,postsub,-0.014726617235484213,tracker_no_s338_2026-07-21,delta_vs_default
-Health care,Services,presub,-0.01243691543092848,tracker_no_s338_2026-07-21,delta_vs_default
-Health care,Services,postsub,-0.011887319925037193,tracker_no_s338_2026-07-21,delta_vs_default
-Education,Services,presub,-0.008152492568175296,tracker_no_s338_2026-07-21,delta_vs_default
-Education,Services,postsub,-0.0077930589022138785,tracker_no_s338_2026-07-21,delta_vs_default
-Gasoline and other energy goods,Nondurable goods,presub,-0.004306379721780856,tracker_no_s338_2026-07-21,delta_vs_default
-Gasoline and other energy goods,Nondurable goods,postsub,-0.004281102771292802,tracker_no_s338_2026-07-21,delta_vs_default
-Financial services and insurance,Services,presub,-0.0033349422085834912,tracker_no_s338_2026-07-21,delta_vs_default
-Financial services and insurance,Services,postsub,-0.0032046049788764797,tracker_no_s338_2026-07-21,delta_vs_default
-Clothing and footwear,Nondurable goods,presub,-0.05547871113849966,tracker_no_s338_2026-07-21,delta_vs_default
-Clothing and footwear,Nondurable goods,postsub,-0.015034618702638718,tracker_no_s338_2026-07-21,delta_vs_default
-Housing,Services,presub,-0.0028961947948886874,tracker_no_s338_2026-07-21,delta_vs_default
-Housing,Services,postsub,-0.0023786779292295987,tracker_no_s338_2026-07-21,delta_vs_default
-Total,Total,presub,0.421165077669066,tracker_new_301_2026-07-21,delta_vs_default
-Total,Total,postsub,0.373312721957944,tracker_new_301_2026-07-21,delta_vs_default
-Clothing and footwear,Nondurable goods,presub,4.432773134030027,tracker_new_301_2026-07-21,delta_vs_default
-Clothing and footwear,Nondurable goods,postsub,4.186524070940519,tracker_new_301_2026-07-21,delta_vs_default
-Furnishings and durable household equipment,Durable goods,presub,1.1826644501619108,tracker_new_301_2026-07-21,delta_vs_default
-Furnishings and durable household equipment,Durable goods,postsub,0.8076071293933853,tracker_new_301_2026-07-21,delta_vs_default
-Motor vehicles and parts,Durable goods,presub,0.22883413456558932,tracker_new_301_2026-07-21,delta_vs_default
-Motor vehicles and parts,Durable goods,postsub,0.21016931240924164,tracker_new_301_2026-07-21,delta_vs_default
-Other durable goods,Durable goods,presub,2.1681961470396374,tracker_new_301_2026-07-21,delta_vs_default
-Other durable goods,Durable goods,postsub,1.9047203677284053,tracker_new_301_2026-07-21,delta_vs_default
-Recreational goods and vehicles,Durable goods,presub,0.6639013415395656,tracker_new_301_2026-07-21,delta_vs_default
-Recreational goods and vehicles,Durable goods,postsub,0.5895785906395629,tracker_new_301_2026-07-21,delta_vs_default
-Other nondurable goods,Nondurable goods,presub,0.846012318590803,tracker_new_301_2026-07-21,delta_vs_default
-Other nondurable goods,Nondurable goods,postsub,0.6944130135079694,tracker_new_301_2026-07-21,delta_vs_default
-Net foreign travel,Services,presub,0.3663244873581065,tracker_new_301_2026-07-21,delta_vs_default
-Net foreign travel,Services,postsub,0.32554198961919467,tracker_new_301_2026-07-21,delta_vs_default
-Food and beverages purchased for off-premises consumption,Nondurable goods,presub,0.6215832854474486,tracker_new_301_2026-07-21,delta_vs_default
-Food and beverages purchased for off-premises consumption,Nondurable goods,postsub,0.538844154648525,tracker_new_301_2026-07-21,delta_vs_default
-Transportation services,Services,presub,0.08709535729391837,tracker_new_301_2026-07-21,delta_vs_default
-Transportation services,Services,postsub,0.08070743149722986,tracker_new_301_2026-07-21,delta_vs_default
-Communication,Services,presub,0.13546654181070228,tracker_new_301_2026-07-21,delta_vs_default
-Communication,Services,postsub,0.12579246259259247,tracker_new_301_2026-07-21,delta_vs_default
-Food services and accommodations,Services,presub,0.2491809975790938,tracker_new_301_2026-07-21,delta_vs_default
-Food services and accommodations,Services,postsub,0.22597783540464553,tracker_new_301_2026-07-21,delta_vs_default
-Recreation services,Services,presub,0.158664641779357,tracker_new_301_2026-07-21,delta_vs_default
-Recreation services,Services,postsub,0.14522788274118265,tracker_new_301_2026-07-21,delta_vs_default
-Other services,Services,presub,0.15830520715530336,tracker_new_301_2026-07-21,delta_vs_default
-Other services,Services,postsub,0.1441163633246753,tracker_new_301_2026-07-21,delta_vs_default
-Health care,Services,presub,0.20184383368055622,tracker_new_301_2026-07-21,delta_vs_default
-Health care,Services,postsub,0.1884003702553844,tracker_new_301_2026-07-21,delta_vs_default
-Final consumption expenditures of NPISH,Services,presub,0.14017090023930945,tracker_new_301_2026-07-21,delta_vs_default
-Final consumption expenditures of NPISH,Services,postsub,0.13073813215326255,tracker_new_301_2026-07-21,delta_vs_default
-Household utilities,Services,presub,0.08549939554894331,tracker_new_301_2026-07-21,delta_vs_default
-Household utilities,Services,postsub,0.07801742275605575,tracker_new_301_2026-07-21,delta_vs_default
-Education,Services,presub,0.0940041448833479,tracker_new_301_2026-07-21,delta_vs_default
-Education,Services,postsub,0.0865458868200098,tracker_new_301_2026-07-21,delta_vs_default
-Gasoline and other energy goods,Nondurable goods,presub,0.07115054592866085,tracker_new_301_2026-07-21,delta_vs_default
-Gasoline and other energy goods,Nondurable goods,postsub,0.06775232183998584,tracker_new_301_2026-07-21,delta_vs_default
-Financial services and insurance,Services,presub,0.03302699251666116,tracker_new_301_2026-07-21,delta_vs_default
-Financial services and insurance,Services,postsub,0.031119560763024287,tracker_new_301_2026-07-21,delta_vs_default
-Housing,Services,presub,0.019007364958616012,tracker_new_301_2026-07-21,delta_vs_default
-Housing,Services,postsub,0.01790113710883779,tracker_new_301_2026-07-21,delta_vs_default
+Total,Total,presub,0.7948890515653713,tracker_actual_2026-08-24,level
+Total,Total,postsub,0.667877234518191,tracker_actual_2026-08-24,level
+Clothing and footwear,Nondurable goods,presub,3.868757331714637,tracker_actual_2026-08-24,level
+Clothing and footwear,Nondurable goods,postsub,3.305363682602784,tracker_actual_2026-08-24,level
+Furnishings and durable household equipment,Durable goods,presub,3.5666622761285627,tracker_actual_2026-08-24,level
+Furnishings and durable household equipment,Durable goods,postsub,2.6533687629370983,tracker_actual_2026-08-24,level
+Motor vehicles and parts,Durable goods,presub,3.2325091113087097,tracker_actual_2026-08-24,level
+Motor vehicles and parts,Durable goods,postsub,2.775063437755608,tracker_actual_2026-08-24,level
+Other durable goods,Durable goods,presub,2.4523851324752584,tracker_actual_2026-08-24,level
+Other durable goods,Durable goods,postsub,2.06182227432904,tracker_actual_2026-08-24,level
+Recreational goods and vehicles,Durable goods,presub,1.8396673364995155,tracker_actual_2026-08-24,level
+Recreational goods and vehicles,Durable goods,postsub,1.5551423424907715,tracker_actual_2026-08-24,level
+Other nondurable goods,Nondurable goods,presub,1.4296941435777368,tracker_actual_2026-08-24,level
+Other nondurable goods,Nondurable goods,postsub,1.0963169904670722,tracker_actual_2026-08-24,level
+Net foreign travel,Services,presub,1.063359011109317,tracker_actual_2026-08-24,level
+Net foreign travel,Services,postsub,0.886065840458357,tracker_actual_2026-08-24,level
+Food and beverages purchased for off-premises consumption,Nondurable goods,presub,0.8355017362061854,tracker_actual_2026-08-24,level
+Food and beverages purchased for off-premises consumption,Nondurable goods,postsub,0.7382451441939445,tracker_actual_2026-08-24,level
+Transportation services,Services,presub,0.5951704395862648,tracker_actual_2026-08-24,level
+Transportation services,Services,postsub,0.54496059046124945,tracker_actual_2026-08-24,level
+Communication,Services,presub,0.4821424881809648,tracker_actual_2026-08-24,level
+Communication,Services,postsub,0.41995367832692593,tracker_actual_2026-08-24,level
+Food services and accommodations,Services,presub,0.4341222311145742,tracker_actual_2026-08-24,level
+Food services and accommodations,Services,postsub,0.38789226487832223,tracker_actual_2026-08-24,level
+Recreation services,Services,presub,0.3912278557303871,tracker_actual_2026-08-24,level
+Recreation services,Services,postsub,0.344878260270649,tracker_actual_2026-08-24,level
+Other services,Services,presub,0.38279561952517904,tracker_actual_2026-08-24,level
+Other services,Services,postsub,0.33847960016097506,tracker_actual_2026-08-24,level
+Health care,Services,presub,0.3681396207335418,tracker_actual_2026-08-24,level
+Health care,Services,postsub,0.3229762617709408,tracker_actual_2026-08-24,level
+Household utilities,Services,presub,0.35674816488304495,tracker_actual_2026-08-24,level
+Household utilities,Services,postsub,0.31578682752887377,tracker_actual_2026-08-24,level
+Final consumption expenditures of NPISH,Services,presub,0.35653313366926437,tracker_actual_2026-08-24,level
+Final consumption expenditures of NPISH,Services,postsub,0.32044823782628146,tracker_actual_2026-08-24,level
+Education,Services,presub,0.24087382724025216,tracker_actual_2026-08-24,level
+Education,Services,postsub,0.21421237473171195,tracker_actual_2026-08-24,level
+Gasoline and other energy goods,Nondurable goods,presub,0.19870161803410472,tracker_actual_2026-08-24,level
+Gasoline and other energy goods,Nondurable goods,postsub,0.17850538288711618,tracker_actual_2026-08-24,level
+Financial services and insurance,Services,presub,0.10432733252658316,tracker_actual_2026-08-24,level
+Financial services and insurance,Services,postsub,0.09272197842747394,tracker_actual_2026-08-24,level
+Housing,Services,presub,0.0631000358635675,tracker_actual_2026-08-24,level
+Housing,Services,postsub,0.05626457928342553,tracker_actual_2026-08-24,level
+Total,Total,presub,0.7747977858867192,tracker_no_s338_2026-08-24,level
+Total,Total,postsub,0.6433845736555959,tracker_no_s338_2026-08-24,level
+Clothing and footwear,Nondurable goods,presub,3.815033701834266,tracker_no_s338_2026-08-24,level
+Clothing and footwear,Nondurable goods,postsub,3.250990784793248,tracker_no_s338_2026-08-24,level
+Furnishings and durable household equipment,Durable goods,presub,3.435739725533808,tracker_no_s338_2026-08-24,level
+Furnishings and durable household equipment,Durable goods,postsub,2.5007605198237206,tracker_no_s338_2026-08-24,level
+Motor vehicles and parts,Durable goods,presub,3.192342832074694,tracker_no_s338_2026-08-24,level
+Motor vehicles and parts,Durable goods,postsub,2.7281337385222275,tracker_no_s338_2026-08-24,level
+Other durable goods,Durable goods,presub,2.4075035854456206,tracker_no_s338_2026-08-24,level
+Other durable goods,Durable goods,postsub,2.010210767143721,tracker_no_s338_2026-08-24,level
+Recreational goods and vehicles,Durable goods,presub,1.8024346788379315,tracker_no_s338_2026-08-24,level
+Recreational goods and vehicles,Durable goods,postsub,1.5139802509161446,tracker_no_s338_2026-08-24,level
+Other nondurable goods,Nondurable goods,presub,1.3857718354223043,tracker_no_s338_2026-08-24,level
+Other nondurable goods,Nondurable goods,postsub,1.0374858820259023,tracker_no_s338_2026-08-24,level
+Net foreign travel,Services,presub,1.0277733997053802,tracker_no_s338_2026-08-24,level
+Net foreign travel,Services,postsub,0.8336373374093823,tracker_no_s338_2026-08-24,level
+Food and beverages purchased for off-premises consumption,Nondurable goods,presub,0.8014568935831758,tracker_no_s338_2026-08-24,level
+Food and beverages purchased for off-premises consumption,Nondurable goods,postsub,0.7027379343102211,tracker_no_s338_2026-08-24,level
+Transportation services,Services,presub,0.5858983491838458,tracker_no_s338_2026-08-24,level
+Transportation services,Services,postsub,0.5337663738977505,tracker_no_s338_2026-08-24,level
+Communication,Services,presub,0.471049888477765,tracker_no_s338_2026-08-24,level
+Communication,Services,postsub,0.4051717927723493,tracker_no_s338_2026-08-24,level
+Food services and accommodations,Services,presub,0.41848383842334014,tracker_no_s338_2026-08-24,level
+Food services and accommodations,Services,postsub,0.368566485426588,tracker_no_s338_2026-08-24,level
+Recreation services,Services,presub,0.3813531480857943,tracker_no_s338_2026-08-24,level
+Recreation services,Services,postsub,0.33191670560438663,tracker_no_s338_2026-08-24,level
+Other services,Services,presub,0.3711360832074376,tracker_no_s338_2026-08-24,level
+Other services,Services,postsub,0.3222686405808137,tracker_no_s338_2026-08-24,level
+Health care,Services,presub,0.35601560247444747,tracker_no_s338_2026-08-24,level
+Health care,Services,postsub,0.3053406592789667,tracker_no_s338_2026-08-24,level
+Household utilities,Services,presub,0.3487782088098919,tracker_no_s338_2026-08-24,level
+Household utilities,Services,postsub,0.3052320632311442,tracker_no_s338_2026-08-24,level
+Final consumption expenditures of NPISH,Services,presub,0.3464287503671145,tracker_no_s338_2026-08-24,level
+Final consumption expenditures of NPISH,Services,postsub,0.30648594678425517,tracker_no_s338_2026-08-24,level
+Education,Services,presub,0.23299417129050168,tracker_no_s338_2026-08-24,level
+Education,Services,postsub,0.2040118899192475,tracker_no_s338_2026-08-24,level
+Gasoline and other energy goods,Nondurable goods,presub,0.194496294105416,tracker_no_s338_2026-08-24,level
+Gasoline and other energy goods,Nondurable goods,postsub,0.1733347049778835,tracker_no_s338_2026-08-24,level
+Financial services and insurance,Services,presub,0.10109741716614708,tracker_no_s338_2026-08-24,level
+Financial services and insurance,Services,postsub,0.08838759676247007,tracker_no_s338_2026-08-24,level
+Housing,Services,presub,0.06030022471892334,tracker_no_s338_2026-08-24,level
+Housing,Services,postsub,0.05256599873066249,tracker_no_s338_2026-08-24,level
+Total,Total,presub,-0.020091265678652048,tracker_no_s338_2026-08-24,delta_vs_default
+Total,Total,postsub,-0.02449266086259516,tracker_no_s338_2026-08-24,delta_vs_default
+Clothing and footwear,Nondurable goods,presub,-0.05372362988037116,tracker_no_s338_2026-08-24,delta_vs_default
+Clothing and footwear,Nondurable goods,postsub,-0.054372897809535914,tracker_no_s338_2026-08-24,delta_vs_default
+Furnishings and durable household equipment,Durable goods,presub,-0.13092255059475466,tracker_no_s338_2026-08-24,delta_vs_default
+Furnishings and durable household equipment,Durable goods,postsub,-0.15260824311337773,tracker_no_s338_2026-08-24,delta_vs_default
+Motor vehicles and parts,Durable goods,presub,-0.04016627923401561,tracker_no_s338_2026-08-24,delta_vs_default
+Motor vehicles and parts,Durable goods,postsub,-0.04692969923338053,tracker_no_s338_2026-08-24,delta_vs_default
+Other durable goods,Durable goods,presub,-0.04488154702963776,tracker_no_s338_2026-08-24,delta_vs_default
+Other durable goods,Durable goods,postsub,-0.05161150718531937,tracker_no_s338_2026-08-24,delta_vs_default
+Recreational goods and vehicles,Durable goods,presub,-0.03723265766158401,tracker_no_s338_2026-08-24,delta_vs_default
+Recreational goods and vehicles,Durable goods,postsub,-0.04116209157462691,tracker_no_s338_2026-08-24,delta_vs_default
+Other nondurable goods,Nondurable goods,presub,-0.04392230815543252,tracker_no_s338_2026-08-24,delta_vs_default
+Other nondurable goods,Nondurable goods,postsub,-0.0588311084411699,tracker_no_s338_2026-08-24,delta_vs_default
+Net foreign travel,Services,presub,-0.03558561140393679,tracker_no_s338_2026-08-24,delta_vs_default
+Net foreign travel,Services,postsub,-0.05242850304897473,tracker_no_s338_2026-08-24,delta_vs_default
+Food and beverages purchased for off-premises consumption,Nondurable goods,presub,-0.03404484262300955,tracker_no_s338_2026-08-24,delta_vs_default
+Food and beverages purchased for off-premises consumption,Nondurable goods,postsub,-0.035507209883723356,tracker_no_s338_2026-08-24,delta_vs_default
+Transportation services,Services,presub,-0.009272090402419053,tracker_no_s338_2026-08-24,delta_vs_default
+Transportation services,Services,postsub,-0.011194216563498949,tracker_no_s338_2026-08-24,delta_vs_default
+Communication,Services,presub,-0.011092599703199757,tracker_no_s338_2026-08-24,delta_vs_default
+Communication,Services,postsub,-0.014781885554576601,tracker_no_s338_2026-08-24,delta_vs_default
+Food services and accommodations,Services,presub,-0.01563839269123407,tracker_no_s338_2026-08-24,delta_vs_default
+Food services and accommodations,Services,postsub,-0.01932577945173425,tracker_no_s338_2026-08-24,delta_vs_default
+Recreation services,Services,presub,-0.009874707644592806,tracker_no_s338_2026-08-24,delta_vs_default
+Recreation services,Services,postsub,-0.012961554666262365,tracker_no_s338_2026-08-24,delta_vs_default
+Other services,Services,presub,-0.01165953631774147,tracker_no_s338_2026-08-24,delta_vs_default
+Other services,Services,postsub,-0.016210959580161333,tracker_no_s338_2026-08-24,delta_vs_default
+Health care,Services,presub,-0.012124018259094316,tracker_no_s338_2026-08-24,delta_vs_default
+Health care,Services,postsub,-0.0176356024919741,tracker_no_s338_2026-08-24,delta_vs_default
+Household utilities,Services,presub,-0.00796995607315304,tracker_no_s338_2026-08-24,delta_vs_default
+Household utilities,Services,postsub,-0.010554764297729557,tracker_no_s338_2026-08-24,delta_vs_default
+Final consumption expenditures of NPISH,Services,presub,-0.010104383302149855,tracker_no_s338_2026-08-24,delta_vs_default
+Final consumption expenditures of NPISH,Services,postsub,-0.013962291042026287,tracker_no_s338_2026-08-24,delta_vs_default
+Education,Services,presub,-0.007879655949750486,tracker_no_s338_2026-08-24,delta_vs_default
+Education,Services,postsub,-0.010200484812464439,tracker_no_s338_2026-08-24,delta_vs_default
+Gasoline and other energy goods,Nondurable goods,presub,-0.00420532392868872,tracker_no_s338_2026-08-24,delta_vs_default
+Gasoline and other energy goods,Nondurable goods,postsub,-0.005170677909232674,tracker_no_s338_2026-08-24,delta_vs_default
+Financial services and insurance,Services,presub,-0.0032299153604360836,tracker_no_s338_2026-08-24,delta_vs_default
+Financial services and insurance,Services,postsub,-0.00433438166500387,tracker_no_s338_2026-08-24,delta_vs_default
+Housing,Services,presub,-0.002799811144644157,tracker_no_s338_2026-08-24,delta_vs_default
+Housing,Services,postsub,-0.0036985805527630367,tracker_no_s338_2026-08-24,delta_vs_default

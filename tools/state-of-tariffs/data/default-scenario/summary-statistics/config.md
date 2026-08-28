@@ -28,17 +28,14 @@ spec:
 
 ## Default Scenario
 
-This section presents projected effects under our default tariff policy scenario. Under this
-scenario, Section 122 tariffs expire as scheduled at the end of July and are not replaced, and
-scheduled changes to pharmaceutical tariffs are assumed to take effect in October. This scenario
-can be thought of as a "current law" concept, where official policy, including changes that are
-officially scheduled to come into effect later this year, is taken as given. The default scenario
-also incorporates two recently proclaimed actions: the 25% tariff on imports from Brazil and the
-new Section 338 tariffs on imports from Canada. The Canada tariffs are scheduled to take effect
-August 19, 2026; consistent with the current-law convention above, they are included here even
-though they are not yet in effect.
+This section presents projected effects under our default tariff policy scenario. This scenario can
+be thought of as a "current law" concept, where official policy, including changes officially
+scheduled to come into effect later this year, is taken as given. In addition to the tariffs
+currently in place as of late August 2026 (including the Section 338 tariffs on Canadian products that
+took effect on August 22), this scenario includes scheduled tariff increases in October
+(pharmaceutical tariffs under Section 232) and December (polysilicon tariffs under Section 232.)
 
-This is not a forecast of where tariff policy will end up but rather a useful scorekeeping
+This is not a forecast of where tariff policy will end up, but rather a useful scorekeeping
 benchmark. Alternative policy scenarios are explored in the next tab.
 
 Estimated impacts are measured against a January 2025 tariff-policy baseline. That is, these

@@ -4,6 +4,39 @@ Entries are added at release.
 
 ## Unreleased
 
+- **State of Tariffs: August 24, 2026 vintage.** Refreshed all figures to the published
+  `2026082411` Tariff-Model artifact. The only policy change is the effective date of the Section
+  338 tariffs on Canadian products, which took effect August 22 rather than August 19; projected
+  effects are essentially unchanged (ten-year revenue moves by $0.04 billion). The alternative
+  scenarios are reduced to one: current law excluding the Section 338 actions. `tracker.yaml`
+  scenario colors re-pointed to the new scenario ids. August 11 release archived to
+  previous-vintages.
+- Table cells no longer print negative zero ("-0.0%") when a small negative value rounds to zero
+  (local patch to the vendored chart engine's `formatCell`; needs to go upstream).
+  Re-applied on top of the 1.13.0 re-vendor, which does not carry it: v1.13.0 upstream still
+  has the unguarded `const neg = v < 0`. The engine cache tag is `1.13.0-p1`.
+
+- **State of Tariffs: August 11, 2026 vintage.** Refreshed all figures to the published
+  `2026081111` Tariff-Model artifact. The default scenario now includes the Section 232 polysilicon
+  action — a 15% tariff on polysilicon and derivative solar cells and modules (the UK capped at
+  10%), announced August 6 and effective December 4, 2026. It covers about $18 billion of imports,
+  raises the overall statutory rate by 0.09pp to 11.8% at end-2026, and raises $8 billion over ten
+  years. The alternative scenarios are now current law excluding the new forced-labor Section 301
+  action, and current law excluding the polysilicon action; the Section 122-retained scenario is
+  retired. The tracker was also rerun, revising the daily statutory rate history by small amounts
+  (January 2025 moves from 2.675% to 2.678%). July 24 release archived to previous-vintages.
+
+- Updated `tracker.yaml` scenario colors and the `events.yaml` marker list for the new vintage —
+  both are keyed to the vintage-dated scenario ids and need re-pointing every release.
+
+- **State of Tariffs: July 24, 2026 vintage.** Refreshed all figures to the published
+  `2026072409` Tariff-Model artifact. The default scenario now incorporates the finalized
+  Section 301 "forced-labor" tariffs (replacing the Section 122 surcharge on July 24); adds two
+  alternatives — current law excluding new Section 301, and a Section 122-retained regime. Also
+  corrects an error in the statutory tariff rate calculation in which the Section 232 metal tariffs
+  were over-applied to certain products (revises both historical and projected rates). July 21
+  release archived to previous-vintages.
+
 - Cache-busting is now automatic: `build-manifest.py` stamps a content hash of the runtime JS+CSS
   as `?v=` on `app.js`/`styles.css` in `index.html`, and `app.js` propagates that version to its
   module imports (`render.js`, `download-all.js` → `zip-store.js`) via `import.meta.url` — so one
@@ -63,4 +96,3 @@ Entries are added at release.
   in `events.yaml`, resolved by `build-manifest.py`).
 - Placeholders remain for the modelers: Tab 2 policy-change markers, an aggregate PCE-total
   bar, and an all-household decile total; Introduction and Methodology copy are drafts (TK).
-

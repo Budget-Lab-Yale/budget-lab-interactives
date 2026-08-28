@@ -21,13 +21,11 @@ as separate reports. The tool has five tabs:
 
 ## Changes since the last update
 
-Two tariff actions have been formally proclaimed since our last update (published on 07-20-2026) and are now reflected in
-our current-law (default) scenario:
+{date: updated}
 
-- **Brazil 25% tariff moved into current law.** The 25% tariff on imports from Brazil has been
-  formally proclaimed. In our previous update it appeared only as part of the Section 301 alternative scenario. But it is now part of current law, the default scenario. 
-- **New Section 338 tariffs on Canada.** The administration has proclaimed new 50% tariffs
-  on certain imports from Canada under Section 338 authority, scheduled to take effect August 19, 2026. These tariffs cover alcoholic beverages, dairy products, and a broad range of consumer goods; we estimate that these tariffs cover about 5% of Canadian imports per 2024 trade patterns. Crucially, the tariff applies regardless of USMCA eligibility. 
-  
-  Because officially scheduled policy is treated as current law, these tariffs are included in the
-  default scenario. To help readers interested in the incremental impact of this action, we've added a **Current Law ex-S338** alternative scenario that is identical to current law but omits these new tariffs on Canadian imports. Comparing this scenario to the default current law scenario shows the incremental impact of this action.
+This update reflects a change in the effective date of the Section 338 tariffs on Canadian products,
+which took effect on August 22 rather than August 19 as previously scheduled. No other official
+tariff policy changes have occurred since our last post on August 11.
+
+The Alternative Scenarios tab now shows a single alternative: current law excluding the Section 338
+actions, which isolates the effect of those tariffs.

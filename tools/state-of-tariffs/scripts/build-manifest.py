@@ -51,6 +51,7 @@ import csv
 import hashlib
 import html
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -73,6 +74,12 @@ def fail(msg: str) -> "None":
 
 # Release metadata (set in main()); used to resolve {date: ...} tokens in prose bodies.
 RELEASE: dict = {}
+
+# The release date as ISO `YYYY-MM-DD` (set in main() from the synced vintage's published_at).
+# This — not the wall clock — is what the `today`/`build` keyword resolves to, so rebuilding a
+# given vintage is reproducible on any day and never dirties the committed manifest. Falls back
+# to the wall clock only when no vintage has been synced yet.
+RELEASE_DATE_ISO: "str | None" = None
 
 # Model-run metadata from sync-model-data.py (set in main()): scenario definitions +
 # provenance. Empty until a vintage has been synced.
@@ -227,11 +234,14 @@ def apply_events(spec: dict, front: dict, tab_id: str, fig_id: str, config: Path
         else:
             fail(f"{config}: events group '{name}' must be a list or mapping")
 
-    # Resolve the `today`/`build` keyword (in a band start/end or an xAxis x) to the build date,
-    # so a projection band can begin on whatever day the manifest is generated. Done before the
-    # date-range filter below so resolved marker dates are filtered correctly.
+    # Resolve the `today`/`build` keyword (in a band start/end or an xAxis x) to the *release*
+    # date, so a projection band begins where the published data stops being actual. Deliberately
+    # not the wall clock: the built manifest is committed and served as-is, so a wall-clock date
+    # would make every rebuild dirty the file and would slide the band past the data on any later
+    # rebuild. Done before the date-range filter below so resolved marker dates are filtered
+    # correctly.
     from datetime import date
-    build_day = date.today().isoformat()
+    build_day = RELEASE_DATE_ISO or date.today().isoformat()
 
     def resolve_build_date(value):
         return build_day if value in ("today", "build") else value
@@ -698,7 +708,12 @@ def stamp_assets() -> None:
     """Stamp a content hash of the tool's runtime JS+CSS as the ?v= cache-bust on app.js and
     styles.css in index.html, so every deploy that changes any of them serves fresh files. Hash is
     computed over LF-normalized bytes so it matches regardless of a checkout's line endings (the CI
-    validate hook recomputes it the same way)."""
+    validate hook recomputes it the same way).
+
+    index.html is hand-maintained source, not a build output, so it is rewritten only when the stamp
+    actually changes — a data-only build (the common case, and the only one the dev server triggers
+    on a data/ edit) leaves it untouched — and any rewrite goes through a temp file + atomic
+    replace. An interrupted build therefore cannot leave it truncated."""
     tool = DATA_DIR.parent
     h = hashlib.sha256()
     for name in ASSET_FILES:
@@ -708,16 +723,34 @@ def stamp_assets() -> None:
     stamp = h.hexdigest()[:10]
 
     index = tool / "index.html"
-    text = index.read_text(encoding="utf-8")
+    original = index.read_text(encoding="utf-8")
 
-    def restamp(s: str, filename: str) -> str:
+    def restamp(s: str, filename: str) -> tuple[str, int]:
         pat = re.compile(r'((?:href|src)="' + re.escape(filename) + r')(\?v=[^"]*)?(")')
-        return pat.sub(lambda m: f"{m.group(1)}?v={stamp}{m.group(3)}", s)
+        return pat.subn(lambda m: f"{m.group(1)}?v={stamp}{m.group(3)}", s)
 
-    text = restamp(text, "app.js")
-    text = restamp(text, "styles.css")
-    with open(index, "w", encoding="utf-8", newline="") as f:
+    text, n_app = restamp(original, "app.js")
+    text, n_css = restamp(text, "styles.css")
+
+    # A reference we can't find means index.html isn't the file we expect — most likely empty or
+    # truncated. Fail loudly: without this, a broken index would compare equal to itself and sail
+    # straight through the unchanged check below, silently "succeeding" on a corrupt file.
+    if not n_app or not n_css:
+        missing = ", ".join(n for n, c in (("app.js", n_app), ("styles.css", n_css)) if not c)
+        fail(f"index.html ({len(original)} bytes) has no {missing} reference to stamp; it looks "
+             f"empty or corrupt. Restore it (e.g. git checkout <good-ref> -- index.html), then "
+             f"re-run. data/manifest.json was already written and is fine.")
+
+    if text == original:
+        print(f"build-manifest: asset stamp unchanged (?v={stamp})")
+        return
+
+    # Temp file + atomic replace: an interrupted write leaves either the old file or the new one,
+    # never a truncated one. .tmp is already gitignored.
+    tmp = index.parent / (index.name + ".tmp")
+    with open(tmp, "w", encoding="utf-8", newline="") as f:
         f.write(text)
+    os.replace(tmp, index)
     print(f"build-manifest: stamped assets ?v={stamp}")
 
 
@@ -740,6 +773,11 @@ def main() -> None:
 
     RELEASE.clear()
     RELEASE.update(release)  # available to {date: ...} substitution during tab build
+
+    # Same source, ISO form, for the `today`/`build` keyword in events.yaml. Left as None when no
+    # vintage has been synced so resolve falls back to the wall clock.
+    global RELEASE_DATE_ISO
+    RELEASE_DATE_ISO = (provenance.get("published_at") or "")[:10] or None
 
     manifest = {
         "release": release,

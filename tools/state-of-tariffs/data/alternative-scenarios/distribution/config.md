@@ -17,13 +17,13 @@ total:
   value: Total
   annotation:
     label: All households ({value})
+    value_format: {decimals: 2}
     style: dashed
     labelSide: bottom
-    # Current Law and Current Law ex-S338 totals sit almost on top of each other, so their labels
-    # collide. Flip the ex-S338 label above its line to separate them. Per-vintage visual tweak —
-    # re-check (scenario names/values change each release).
+    # Flip the Ex Section 338 total label above its line (default is below). Per-vintage visual
+    # tweak — keyed by display label, so re-check (scenario names/values change each release).
     series_overrides:
-      Current Law ex-S338: {labelSide: top}
+      Ex Section 338: {labelSide: top}
 spec:
   chartType: bar
   data: data.csv

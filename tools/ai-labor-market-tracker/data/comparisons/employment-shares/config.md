@@ -24,7 +24,7 @@ charts:
   data: data.csv
 - chartLetter: b
   chartType: line
-  title: Difference in Employment Shares for AI-Exposed and Comparable Unexposed Occupations
+  title: Event Study with SDID Point Estimates
   subtitle: Percentage point difference
   source: BLS via IPUMS-CPS and The Budget Lab analysis
   note: 95% confidence intervals and estimated impacts are calculated according to

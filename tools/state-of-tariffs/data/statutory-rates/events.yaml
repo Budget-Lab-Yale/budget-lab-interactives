@@ -6,11 +6,16 @@
 # A named group is either a flat list (treated as xAxis reference lines) OR a mapping with
 # `xAxis` and/or `bands` keys. Each xAxis entry is an engine annotation ({x, label, style?,
 # color?, labelSide?}); x is the effective date (YYYY-MM-DD). A date of `today` (in an xAxis x or
-# a band start/end) resolves to the build date when the manifest is generated.
+# a band start/end) resolves to the release date of the synced vintage (model-meta.json
+# `published_at`), NOT the wall clock — so rebuilding a vintage yields the same manifest on any day.
 projection:
   xAxis:
   - x: '2026-07-23'
     label: Section 122 expiry
+    color: red
+    style: dashed
+  - x: '2026-07-23'
+    label: 'Section 301 "forced labor" enacted'
     color: red
     style: dashed
   bands:

@@ -23,7 +23,7 @@ charts:
   data: data.csv
 - chartLetter: b
   chartType: line
-  title: Difference in Real Hourly Wages for AI-Exposed and Comparable Unexposed Occupations
+  title: Event Study with SDID Point Estimates
   subtitle: Percent difference
   source: BLS via IPUMS-CPS and The Budget Lab analysis
   note: 95% confidence intervals and estimated impacts are calculated according to

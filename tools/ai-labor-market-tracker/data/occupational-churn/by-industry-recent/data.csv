@@ -43,7 +43,7 @@ time,industry,series,variant,value
 41,natural-resources-and-mining,Baseline Nov 2022 (AI),indexed,10.41779
 42,natural-resources-and-mining,Baseline Nov 2022 (AI),indexed,10.451606
 43,natural-resources-and-mining,Baseline Nov 2022 (AI),indexed,10.252067
-44,natural-resources-and-mining,Baseline Nov 2022 (AI),indexed,
+44,natural-resources-and-mining,Baseline Nov 2022 (AI),indexed,9.945839
 45,natural-resources-and-mining,Baseline Nov 2022 (AI),indexed,
 46,natural-resources-and-mining,Baseline Nov 2022 (AI),indexed,
 47,natural-resources-and-mining,Baseline Nov 2022 (AI),indexed,
@@ -65,6 +65,7 @@ time,industry,series,variant,value
 63,natural-resources-and-mining,Baseline Nov 2022 (AI),indexed,
 64,natural-resources-and-mining,Baseline Nov 2022 (AI),indexed,
 65,natural-resources-and-mining,Baseline Nov 2022 (AI),indexed,
+66,natural-resources-and-mining,Baseline Nov 2022 (AI),indexed,
 0,natural-resources-and-mining,Baseline Jan 2021,indexed,0.0
 1,natural-resources-and-mining,Baseline Jan 2021,indexed,1.472572
 2,natural-resources-and-mining,Baseline Jan 2021,indexed,2.431731
@@ -131,6 +132,7 @@ time,industry,series,variant,value
 63,natural-resources-and-mining,Baseline Jan 2021,indexed,9.073977
 64,natural-resources-and-mining,Baseline Jan 2021,indexed,9.391624
 65,natural-resources-and-mining,Baseline Jan 2021,indexed,9.234707
+66,natural-resources-and-mining,Baseline Jan 2021,indexed,9.239754
 0,natural-resources-and-mining,Baseline Jan 2022,indexed,0.0
 1,natural-resources-and-mining,Baseline Jan 2022,indexed,1.299659
 2,natural-resources-and-mining,Baseline Jan 2022,indexed,2.425859
@@ -185,7 +187,7 @@ time,industry,series,variant,value
 51,natural-resources-and-mining,Baseline Jan 2022,indexed,10.197208
 52,natural-resources-and-mining,Baseline Jan 2022,indexed,10.247301
 53,natural-resources-and-mining,Baseline Jan 2022,indexed,9.949714
-54,natural-resources-and-mining,Baseline Jan 2022,indexed,
+54,natural-resources-and-mining,Baseline Jan 2022,indexed,9.9344
 55,natural-resources-and-mining,Baseline Jan 2022,indexed,
 56,natural-resources-and-mining,Baseline Jan 2022,indexed,
 57,natural-resources-and-mining,Baseline Jan 2022,indexed,
@@ -197,6 +199,7 @@ time,industry,series,variant,value
 63,natural-resources-and-mining,Baseline Jan 2022,indexed,
 64,natural-resources-and-mining,Baseline Jan 2022,indexed,
 65,natural-resources-and-mining,Baseline Jan 2022,indexed,
+66,natural-resources-and-mining,Baseline Jan 2022,indexed,
 0,natural-resources-and-mining,Baseline Jul 2022,indexed,0.0
 1,natural-resources-and-mining,Baseline Jul 2022,indexed,1.420177
 2,natural-resources-and-mining,Baseline Jul 2022,indexed,2.584976
@@ -245,7 +248,7 @@ time,industry,series,variant,value
 45,natural-resources-and-mining,Baseline Jul 2022,indexed,9.894831
 46,natural-resources-and-mining,Baseline Jul 2022,indexed,9.830654
 47,natural-resources-and-mining,Baseline Jul 2022,indexed,9.630451
-48,natural-resources-and-mining,Baseline Jul 2022,indexed,
+48,natural-resources-and-mining,Baseline Jul 2022,indexed,9.599535
 49,natural-resources-and-mining,Baseline Jul 2022,indexed,
 50,natural-resources-and-mining,Baseline Jul 2022,indexed,
 51,natural-resources-and-mining,Baseline Jul 2022,indexed,
@@ -263,6 +266,7 @@ time,industry,series,variant,value
 63,natural-resources-and-mining,Baseline Jul 2022,indexed,
 64,natural-resources-and-mining,Baseline Jul 2022,indexed,
 65,natural-resources-and-mining,Baseline Jul 2022,indexed,
+66,natural-resources-and-mining,Baseline Jul 2022,indexed,
 2022-01-02,natural-resources-and-mining,12-Month Rolling Baseline,rolling,7.835675
 2022-02-02,natural-resources-and-mining,12-Month Rolling Baseline,rolling,7.978879
 2022-03-02,natural-resources-and-mining,12-Month Rolling Baseline,rolling,7.412763
@@ -317,6 +321,7 @@ time,industry,series,variant,value
 2026-04-02,natural-resources-and-mining,12-Month Rolling Baseline,rolling,8.059082
 2026-05-02,natural-resources-and-mining,12-Month Rolling Baseline,rolling,8.053651
 2026-06-02,natural-resources-and-mining,12-Month Rolling Baseline,rolling,8.205691
+2026-07-02,natural-resources-and-mining,12-Month Rolling Baseline,rolling,9.039321
 0,construction,Baseline Nov 2022 (AI),indexed,0.0
 1,construction,Baseline Nov 2022 (AI),indexed,0.828379
 2,construction,Baseline Nov 2022 (AI),indexed,1.518836
@@ -361,7 +366,7 @@ time,industry,series,variant,value
 41,construction,Baseline Nov 2022 (AI),indexed,8.825072
 42,construction,Baseline Nov 2022 (AI),indexed,8.968635
 43,construction,Baseline Nov 2022 (AI),indexed,9.104766
-44,construction,Baseline Nov 2022 (AI),indexed,
+44,construction,Baseline Nov 2022 (AI),indexed,9.134179
 45,construction,Baseline Nov 2022 (AI),indexed,
 46,construction,Baseline Nov 2022 (AI),indexed,
 47,construction,Baseline Nov 2022 (AI),indexed,
@@ -383,6 +388,7 @@ time,industry,series,variant,value
 63,construction,Baseline Nov 2022 (AI),indexed,
 64,construction,Baseline Nov 2022 (AI),indexed,
 65,construction,Baseline Nov 2022 (AI),indexed,
+66,construction,Baseline Nov 2022 (AI),indexed,
 0,construction,Baseline Jan 2021,indexed,0.0
 1,construction,Baseline Jan 2021,indexed,1.060834
 2,construction,Baseline Jan 2021,indexed,1.610231
@@ -449,6 +455,7 @@ time,industry,series,variant,value
 63,construction,Baseline Jan 2021,indexed,8.196157
 64,construction,Baseline Jan 2021,indexed,8.187378
 65,construction,Baseline Jan 2021,indexed,8.25654
+66,construction,Baseline Jan 2021,indexed,8.340386
 0,construction,Baseline Jan 2022,indexed,0.0
 1,construction,Baseline Jan 2022,indexed,0.761039
 2,construction,Baseline Jan 2022,indexed,1.360985
@@ -503,7 +510,7 @@ time,industry,series,variant,value
 51,construction,Baseline Jan 2022,indexed,9.192186
 52,construction,Baseline Jan 2022,indexed,9.294624
 53,construction,Baseline Jan 2022,indexed,9.301354
-54,construction,Baseline Jan 2022,indexed,
+54,construction,Baseline Jan 2022,indexed,9.251197
 55,construction,Baseline Jan 2022,indexed,
 56,construction,Baseline Jan 2022,indexed,
 57,construction,Baseline Jan 2022,indexed,
@@ -515,6 +522,7 @@ time,industry,series,variant,value
 63,construction,Baseline Jan 2022,indexed,
 64,construction,Baseline Jan 2022,indexed,
 65,construction,Baseline Jan 2022,indexed,
+66,construction,Baseline Jan 2022,indexed,
 0,construction,Baseline Jul 2022,indexed,0.0
 1,construction,Baseline Jul 2022,indexed,0.804277
 2,construction,Baseline Jul 2022,indexed,1.444218
@@ -563,7 +571,7 @@ time,industry,series,variant,value
 45,construction,Baseline Jul 2022,indexed,9.121774
 46,construction,Baseline Jul 2022,indexed,9.256589
 47,construction,Baseline Jul 2022,indexed,9.344433
-48,construction,Baseline Jul 2022,indexed,
+48,construction,Baseline Jul 2022,indexed,9.35776
 49,construction,Baseline Jul 2022,indexed,
 50,construction,Baseline Jul 2022,indexed,
 51,construction,Baseline Jul 2022,indexed,
@@ -581,6 +589,7 @@ time,industry,series,variant,value
 63,construction,Baseline Jul 2022,indexed,
 64,construction,Baseline Jul 2022,indexed,
 65,construction,Baseline Jul 2022,indexed,
+66,construction,Baseline Jul 2022,indexed,
 2022-01-02,construction,12-Month Rolling Baseline,rolling,5.463851
 2022-02-02,construction,12-Month Rolling Baseline,rolling,5.55685
 2022-03-02,construction,12-Month Rolling Baseline,rolling,5.373646
@@ -635,6 +644,7 @@ time,industry,series,variant,value
 2026-04-02,construction,12-Month Rolling Baseline,rolling,5.73191
 2026-05-02,construction,12-Month Rolling Baseline,rolling,5.629058
 2026-06-02,construction,12-Month Rolling Baseline,rolling,5.808387
+2026-07-02,construction,12-Month Rolling Baseline,rolling,5.797052
 0,manufacturing,Baseline Nov 2022 (AI),indexed,0.0
 1,manufacturing,Baseline Nov 2022 (AI),indexed,1.018469
 2,manufacturing,Baseline Nov 2022 (AI),indexed,1.759104
@@ -679,7 +689,7 @@ time,industry,series,variant,value
 41,manufacturing,Baseline Nov 2022 (AI),indexed,8.99463
 42,manufacturing,Baseline Nov 2022 (AI),indexed,9.051864
 43,manufacturing,Baseline Nov 2022 (AI),indexed,9.090629
-44,manufacturing,Baseline Nov 2022 (AI),indexed,
+44,manufacturing,Baseline Nov 2022 (AI),indexed,9.098054
 45,manufacturing,Baseline Nov 2022 (AI),indexed,
 46,manufacturing,Baseline Nov 2022 (AI),indexed,
 47,manufacturing,Baseline Nov 2022 (AI),indexed,
@@ -701,6 +711,7 @@ time,industry,series,variant,value
 63,manufacturing,Baseline Nov 2022 (AI),indexed,
 64,manufacturing,Baseline Nov 2022 (AI),indexed,
 65,manufacturing,Baseline Nov 2022 (AI),indexed,
+66,manufacturing,Baseline Nov 2022 (AI),indexed,
 0,manufacturing,Baseline Jan 2021,indexed,0.0
 1,manufacturing,Baseline Jan 2021,indexed,0.957141
 2,manufacturing,Baseline Jan 2021,indexed,1.762341
@@ -767,6 +778,7 @@ time,industry,series,variant,value
 63,manufacturing,Baseline Jan 2021,indexed,9.228539
 64,manufacturing,Baseline Jan 2021,indexed,9.30885
 65,manufacturing,Baseline Jan 2021,indexed,9.345914
+66,manufacturing,Baseline Jan 2021,indexed,9.256663
 0,manufacturing,Baseline Jan 2022,indexed,0.0
 1,manufacturing,Baseline Jan 2022,indexed,1.020151
 2,manufacturing,Baseline Jan 2022,indexed,1.736778
@@ -821,7 +833,7 @@ time,industry,series,variant,value
 51,manufacturing,Baseline Jan 2022,indexed,9.367003
 52,manufacturing,Baseline Jan 2022,indexed,9.412
 53,manufacturing,Baseline Jan 2022,indexed,9.464529
-54,manufacturing,Baseline Jan 2022,indexed,
+54,manufacturing,Baseline Jan 2022,indexed,9.492018
 55,manufacturing,Baseline Jan 2022,indexed,
 56,manufacturing,Baseline Jan 2022,indexed,
 57,manufacturing,Baseline Jan 2022,indexed,
@@ -833,6 +845,7 @@ time,industry,series,variant,value
 63,manufacturing,Baseline Jan 2022,indexed,
 64,manufacturing,Baseline Jan 2022,indexed,
 65,manufacturing,Baseline Jan 2022,indexed,
+66,manufacturing,Baseline Jan 2022,indexed,
 0,manufacturing,Baseline Jul 2022,indexed,0.0
 1,manufacturing,Baseline Jul 2022,indexed,1.093502
 2,manufacturing,Baseline Jul 2022,indexed,1.9082
@@ -881,7 +894,7 @@ time,industry,series,variant,value
 45,manufacturing,Baseline Jul 2022,indexed,8.442958
 46,manufacturing,Baseline Jul 2022,indexed,8.59233
 47,manufacturing,Baseline Jul 2022,indexed,8.713705
-48,manufacturing,Baseline Jul 2022,indexed,
+48,manufacturing,Baseline Jul 2022,indexed,8.788408
 49,manufacturing,Baseline Jul 2022,indexed,
 50,manufacturing,Baseline Jul 2022,indexed,
 51,manufacturing,Baseline Jul 2022,indexed,
@@ -899,6 +912,7 @@ time,industry,series,variant,value
 63,manufacturing,Baseline Jul 2022,indexed,
 64,manufacturing,Baseline Jul 2022,indexed,
 65,manufacturing,Baseline Jul 2022,indexed,
+66,manufacturing,Baseline Jul 2022,indexed,
 2022-01-02,manufacturing,12-Month Rolling Baseline,rolling,6.368782
 2022-02-02,manufacturing,12-Month Rolling Baseline,rolling,6.088124
 2022-03-02,manufacturing,12-Month Rolling Baseline,rolling,5.666694
@@ -953,6 +967,7 @@ time,industry,series,variant,value
 2026-04-02,manufacturing,12-Month Rolling Baseline,rolling,7.06086
 2026-05-02,manufacturing,12-Month Rolling Baseline,rolling,7.043913
 2026-06-02,manufacturing,12-Month Rolling Baseline,rolling,7.315705
+2026-07-02,manufacturing,12-Month Rolling Baseline,rolling,7.257483
 0,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,0.0
 1,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,0.785798
 2,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,1.305592
@@ -997,7 +1012,7 @@ time,industry,series,variant,value
 41,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,6.339914
 42,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,6.488814
 43,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,6.633128
-44,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,
+44,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,6.776174
 45,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,
 46,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,
 47,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,
@@ -1019,6 +1034,7 @@ time,industry,series,variant,value
 63,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,
 64,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,
 65,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,
+66,trade-transportation-and-utilities,Baseline Nov 2022 (AI),indexed,
 0,trade-transportation-and-utilities,Baseline Jan 2021,indexed,0.0
 1,trade-transportation-and-utilities,Baseline Jan 2021,indexed,0.726007
 2,trade-transportation-and-utilities,Baseline Jan 2021,indexed,1.437051
@@ -1085,6 +1101,7 @@ time,industry,series,variant,value
 63,trade-transportation-and-utilities,Baseline Jan 2021,indexed,8.571049
 64,trade-transportation-and-utilities,Baseline Jan 2021,indexed,8.667629
 65,trade-transportation-and-utilities,Baseline Jan 2021,indexed,8.743512
+66,trade-transportation-and-utilities,Baseline Jan 2021,indexed,8.8192
 0,trade-transportation-and-utilities,Baseline Jan 2022,indexed,0.0
 1,trade-transportation-and-utilities,Baseline Jan 2022,indexed,0.736067
 2,trade-transportation-and-utilities,Baseline Jan 2022,indexed,1.353078
@@ -1139,7 +1156,7 @@ time,industry,series,variant,value
 51,trade-transportation-and-utilities,Baseline Jan 2022,indexed,7.739119
 52,trade-transportation-and-utilities,Baseline Jan 2022,indexed,7.810399
 53,trade-transportation-and-utilities,Baseline Jan 2022,indexed,7.909326
-54,trade-transportation-and-utilities,Baseline Jan 2022,indexed,
+54,trade-transportation-and-utilities,Baseline Jan 2022,indexed,7.984749
 55,trade-transportation-and-utilities,Baseline Jan 2022,indexed,
 56,trade-transportation-and-utilities,Baseline Jan 2022,indexed,
 57,trade-transportation-and-utilities,Baseline Jan 2022,indexed,
@@ -1151,6 +1168,7 @@ time,industry,series,variant,value
 63,trade-transportation-and-utilities,Baseline Jan 2022,indexed,
 64,trade-transportation-and-utilities,Baseline Jan 2022,indexed,
 65,trade-transportation-and-utilities,Baseline Jan 2022,indexed,
+66,trade-transportation-and-utilities,Baseline Jan 2022,indexed,
 0,trade-transportation-and-utilities,Baseline Jul 2022,indexed,0.0
 1,trade-transportation-and-utilities,Baseline Jul 2022,indexed,0.665508
 2,trade-transportation-and-utilities,Baseline Jul 2022,indexed,1.19653
@@ -1199,7 +1217,7 @@ time,industry,series,variant,value
 45,trade-transportation-and-utilities,Baseline Jul 2022,indexed,6.918756
 46,trade-transportation-and-utilities,Baseline Jul 2022,indexed,7.079324
 47,trade-transportation-and-utilities,Baseline Jul 2022,indexed,7.204575
-48,trade-transportation-and-utilities,Baseline Jul 2022,indexed,
+48,trade-transportation-and-utilities,Baseline Jul 2022,indexed,7.343166
 49,trade-transportation-and-utilities,Baseline Jul 2022,indexed,
 50,trade-transportation-and-utilities,Baseline Jul 2022,indexed,
 51,trade-transportation-and-utilities,Baseline Jul 2022,indexed,
@@ -1217,6 +1235,7 @@ time,industry,series,variant,value
 63,trade-transportation-and-utilities,Baseline Jul 2022,indexed,
 64,trade-transportation-and-utilities,Baseline Jul 2022,indexed,
 65,trade-transportation-and-utilities,Baseline Jul 2022,indexed,
+66,trade-transportation-and-utilities,Baseline Jul 2022,indexed,
 2022-01-02,trade-transportation-and-utilities,12-Month Rolling Baseline,rolling,5.668676
 2022-02-02,trade-transportation-and-utilities,12-Month Rolling Baseline,rolling,5.574266
 2022-03-02,trade-transportation-and-utilities,12-Month Rolling Baseline,rolling,5.522208
@@ -1271,6 +1290,7 @@ time,industry,series,variant,value
 2026-04-02,trade-transportation-and-utilities,12-Month Rolling Baseline,rolling,5.441027
 2026-05-02,trade-transportation-and-utilities,12-Month Rolling Baseline,rolling,5.548747
 2026-06-02,trade-transportation-and-utilities,12-Month Rolling Baseline,rolling,5.672527
+2026-07-02,trade-transportation-and-utilities,12-Month Rolling Baseline,rolling,5.473026
 0,information,Baseline Nov 2022 (AI),indexed,0.0
 1,information,Baseline Nov 2022 (AI),indexed,1.913316
 2,information,Baseline Nov 2022 (AI),indexed,3.452663
@@ -1315,7 +1335,7 @@ time,industry,series,variant,value
 41,information,Baseline Nov 2022 (AI),indexed,13.355181
 42,information,Baseline Nov 2022 (AI),indexed,13.557206
 43,information,Baseline Nov 2022 (AI),indexed,14.060832
-44,information,Baseline Nov 2022 (AI),indexed,
+44,information,Baseline Nov 2022 (AI),indexed,14.039469
 45,information,Baseline Nov 2022 (AI),indexed,
 46,information,Baseline Nov 2022 (AI),indexed,
 47,information,Baseline Nov 2022 (AI),indexed,
@@ -1337,6 +1357,7 @@ time,industry,series,variant,value
 63,information,Baseline Nov 2022 (AI),indexed,
 64,information,Baseline Nov 2022 (AI),indexed,
 65,information,Baseline Nov 2022 (AI),indexed,
+66,information,Baseline Nov 2022 (AI),indexed,
 0,information,Baseline Jan 2021,indexed,0.0
 1,information,Baseline Jan 2021,indexed,1.863284
 2,information,Baseline Jan 2021,indexed,3.493852
@@ -1403,6 +1424,7 @@ time,industry,series,variant,value
 63,information,Baseline Jan 2021,indexed,13.267816
 64,information,Baseline Jan 2021,indexed,13.541348
 65,information,Baseline Jan 2021,indexed,13.435372
+66,information,Baseline Jan 2021,indexed,13.722979
 0,information,Baseline Jan 2022,indexed,0.0
 1,information,Baseline Jan 2022,indexed,1.690303
 2,information,Baseline Jan 2022,indexed,2.848388
@@ -1457,7 +1479,7 @@ time,industry,series,variant,value
 51,information,Baseline Jan 2022,indexed,13.669295
 52,information,Baseline Jan 2022,indexed,13.78699
 53,information,Baseline Jan 2022,indexed,14.164014
-54,information,Baseline Jan 2022,indexed,
+54,information,Baseline Jan 2022,indexed,14.258933
 55,information,Baseline Jan 2022,indexed,
 56,information,Baseline Jan 2022,indexed,
 57,information,Baseline Jan 2022,indexed,
@@ -1469,6 +1491,7 @@ time,industry,series,variant,value
 63,information,Baseline Jan 2022,indexed,
 64,information,Baseline Jan 2022,indexed,
 65,information,Baseline Jan 2022,indexed,
+66,information,Baseline Jan 2022,indexed,
 0,information,Baseline Jul 2022,indexed,0.0
 1,information,Baseline Jul 2022,indexed,1.960074
 2,information,Baseline Jul 2022,indexed,3.243458
@@ -1517,7 +1540,7 @@ time,industry,series,variant,value
 45,information,Baseline Jul 2022,indexed,13.682306
 46,information,Baseline Jul 2022,indexed,13.929885
 47,information,Baseline Jul 2022,indexed,14.23091
-48,information,Baseline Jul 2022,indexed,
+48,information,Baseline Jul 2022,indexed,14.235558
 49,information,Baseline Jul 2022,indexed,
 50,information,Baseline Jul 2022,indexed,
 51,information,Baseline Jul 2022,indexed,
@@ -1535,6 +1558,7 @@ time,industry,series,variant,value
 63,information,Baseline Jul 2022,indexed,
 64,information,Baseline Jul 2022,indexed,
 65,information,Baseline Jul 2022,indexed,
+66,information,Baseline Jul 2022,indexed,
 2022-01-02,information,12-Month Rolling Baseline,rolling,10.368441
 2022-02-02,information,12-Month Rolling Baseline,rolling,9.928051
 2022-03-02,information,12-Month Rolling Baseline,rolling,10.102501
@@ -1589,6 +1613,7 @@ time,industry,series,variant,value
 2026-04-02,information,12-Month Rolling Baseline,rolling,12.468939
 2026-05-02,information,12-Month Rolling Baseline,rolling,12.548876
 2026-06-02,information,12-Month Rolling Baseline,rolling,12.819543
+2026-07-02,information,12-Month Rolling Baseline,rolling,12.892498
 0,financial-activities,Baseline Nov 2022 (AI),indexed,0.0
 1,financial-activities,Baseline Nov 2022 (AI),indexed,0.924442
 2,financial-activities,Baseline Nov 2022 (AI),indexed,1.740085
@@ -1633,7 +1658,7 @@ time,industry,series,variant,value
 41,financial-activities,Baseline Nov 2022 (AI),indexed,8.670105
 42,financial-activities,Baseline Nov 2022 (AI),indexed,8.709718
 43,financial-activities,Baseline Nov 2022 (AI),indexed,8.522311
-44,financial-activities,Baseline Nov 2022 (AI),indexed,
+44,financial-activities,Baseline Nov 2022 (AI),indexed,8.425371
 45,financial-activities,Baseline Nov 2022 (AI),indexed,
 46,financial-activities,Baseline Nov 2022 (AI),indexed,
 47,financial-activities,Baseline Nov 2022 (AI),indexed,
@@ -1655,6 +1680,7 @@ time,industry,series,variant,value
 63,financial-activities,Baseline Nov 2022 (AI),indexed,
 64,financial-activities,Baseline Nov 2022 (AI),indexed,
 65,financial-activities,Baseline Nov 2022 (AI),indexed,
+66,financial-activities,Baseline Nov 2022 (AI),indexed,
 0,financial-activities,Baseline Jan 2021,indexed,0.0
 1,financial-activities,Baseline Jan 2021,indexed,1.026433
 2,financial-activities,Baseline Jan 2021,indexed,1.74812
@@ -1721,6 +1747,7 @@ time,industry,series,variant,value
 63,financial-activities,Baseline Jan 2021,indexed,9.589924
 64,financial-activities,Baseline Jan 2021,indexed,9.615737
 65,financial-activities,Baseline Jan 2021,indexed,9.461772
+66,financial-activities,Baseline Jan 2021,indexed,9.425627
 0,financial-activities,Baseline Jan 2022,indexed,0.0
 1,financial-activities,Baseline Jan 2022,indexed,1.156115
 2,financial-activities,Baseline Jan 2022,indexed,1.97784
@@ -1775,7 +1802,7 @@ time,industry,series,variant,value
 51,financial-activities,Baseline Jan 2022,indexed,9.153006
 52,financial-activities,Baseline Jan 2022,indexed,9.162577
 53,financial-activities,Baseline Jan 2022,indexed,9.014744
-54,financial-activities,Baseline Jan 2022,indexed,
+54,financial-activities,Baseline Jan 2022,indexed,8.912967
 55,financial-activities,Baseline Jan 2022,indexed,
 56,financial-activities,Baseline Jan 2022,indexed,
 57,financial-activities,Baseline Jan 2022,indexed,
@@ -1787,6 +1814,7 @@ time,industry,series,variant,value
 63,financial-activities,Baseline Jan 2022,indexed,
 64,financial-activities,Baseline Jan 2022,indexed,
 65,financial-activities,Baseline Jan 2022,indexed,
+66,financial-activities,Baseline Jan 2022,indexed,
 0,financial-activities,Baseline Jul 2022,indexed,0.0
 1,financial-activities,Baseline Jul 2022,indexed,0.928183
 2,financial-activities,Baseline Jul 2022,indexed,1.644773
@@ -1835,7 +1863,7 @@ time,industry,series,variant,value
 45,financial-activities,Baseline Jul 2022,indexed,8.773475
 46,financial-activities,Baseline Jul 2022,indexed,8.811159
 47,financial-activities,Baseline Jul 2022,indexed,8.61812
-48,financial-activities,Baseline Jul 2022,indexed,
+48,financial-activities,Baseline Jul 2022,indexed,8.535377
 49,financial-activities,Baseline Jul 2022,indexed,
 50,financial-activities,Baseline Jul 2022,indexed,
 51,financial-activities,Baseline Jul 2022,indexed,
@@ -1853,6 +1881,7 @@ time,industry,series,variant,value
 63,financial-activities,Baseline Jul 2022,indexed,
 64,financial-activities,Baseline Jul 2022,indexed,
 65,financial-activities,Baseline Jul 2022,indexed,
+66,financial-activities,Baseline Jul 2022,indexed,
 2022-01-02,financial-activities,12-Month Rolling Baseline,rolling,6.397333
 2022-02-02,financial-activities,12-Month Rolling Baseline,rolling,6.583838
 2022-03-02,financial-activities,12-Month Rolling Baseline,rolling,6.367021
@@ -1907,6 +1936,7 @@ time,industry,series,variant,value
 2026-04-02,financial-activities,12-Month Rolling Baseline,rolling,6.742921
 2026-05-02,financial-activities,12-Month Rolling Baseline,rolling,6.757702
 2026-06-02,financial-activities,12-Month Rolling Baseline,rolling,6.657549
+2026-07-02,financial-activities,12-Month Rolling Baseline,rolling,6.475058
 0,professional-and-business-services,Baseline Nov 2022 (AI),indexed,0.0
 1,professional-and-business-services,Baseline Nov 2022 (AI),indexed,0.899573
 2,professional-and-business-services,Baseline Nov 2022 (AI),indexed,1.645671
@@ -1951,7 +1981,7 @@ time,industry,series,variant,value
 41,professional-and-business-services,Baseline Nov 2022 (AI),indexed,7.765236
 42,professional-and-business-services,Baseline Nov 2022 (AI),indexed,8.053513
 43,professional-and-business-services,Baseline Nov 2022 (AI),indexed,8.259744
-44,professional-and-business-services,Baseline Nov 2022 (AI),indexed,
+44,professional-and-business-services,Baseline Nov 2022 (AI),indexed,8.385325
 45,professional-and-business-services,Baseline Nov 2022 (AI),indexed,
 46,professional-and-business-services,Baseline Nov 2022 (AI),indexed,
 47,professional-and-business-services,Baseline Nov 2022 (AI),indexed,
@@ -1973,6 +2003,7 @@ time,industry,series,variant,value
 63,professional-and-business-services,Baseline Nov 2022 (AI),indexed,
 64,professional-and-business-services,Baseline Nov 2022 (AI),indexed,
 65,professional-and-business-services,Baseline Nov 2022 (AI),indexed,
+66,professional-and-business-services,Baseline Nov 2022 (AI),indexed,
 0,professional-and-business-services,Baseline Jan 2021,indexed,0.0
 1,professional-and-business-services,Baseline Jan 2021,indexed,0.836449
 2,professional-and-business-services,Baseline Jan 2021,indexed,1.509832
@@ -2039,6 +2070,7 @@ time,industry,series,variant,value
 63,professional-and-business-services,Baseline Jan 2021,indexed,9.038109
 64,professional-and-business-services,Baseline Jan 2021,indexed,9.166975
 65,professional-and-business-services,Baseline Jan 2021,indexed,9.368221
+66,professional-and-business-services,Baseline Jan 2021,indexed,9.376782
 0,professional-and-business-services,Baseline Jan 2022,indexed,0.0
 1,professional-and-business-services,Baseline Jan 2022,indexed,0.873975
 2,professional-and-business-services,Baseline Jan 2022,indexed,1.499861
@@ -2093,7 +2125,7 @@ time,industry,series,variant,value
 51,professional-and-business-services,Baseline Jan 2022,indexed,8.037584
 52,professional-and-business-services,Baseline Jan 2022,indexed,8.27194
 53,professional-and-business-services,Baseline Jan 2022,indexed,8.548636
-54,professional-and-business-services,Baseline Jan 2022,indexed,
+54,professional-and-business-services,Baseline Jan 2022,indexed,8.654925
 55,professional-and-business-services,Baseline Jan 2022,indexed,
 56,professional-and-business-services,Baseline Jan 2022,indexed,
 57,professional-and-business-services,Baseline Jan 2022,indexed,
@@ -2105,6 +2137,7 @@ time,industry,series,variant,value
 63,professional-and-business-services,Baseline Jan 2022,indexed,
 64,professional-and-business-services,Baseline Jan 2022,indexed,
 65,professional-and-business-services,Baseline Jan 2022,indexed,
+66,professional-and-business-services,Baseline Jan 2022,indexed,
 0,professional-and-business-services,Baseline Jul 2022,indexed,0.0
 1,professional-and-business-services,Baseline Jul 2022,indexed,1.069229
 2,professional-and-business-services,Baseline Jul 2022,indexed,1.813475
@@ -2153,7 +2186,7 @@ time,industry,series,variant,value
 45,professional-and-business-services,Baseline Jul 2022,indexed,8.096393
 46,professional-and-business-services,Baseline Jul 2022,indexed,8.342804
 47,professional-and-business-services,Baseline Jul 2022,indexed,8.579201
-48,professional-and-business-services,Baseline Jul 2022,indexed,
+48,professional-and-business-services,Baseline Jul 2022,indexed,8.673013
 49,professional-and-business-services,Baseline Jul 2022,indexed,
 50,professional-and-business-services,Baseline Jul 2022,indexed,
 51,professional-and-business-services,Baseline Jul 2022,indexed,
@@ -2171,6 +2204,7 @@ time,industry,series,variant,value
 63,professional-and-business-services,Baseline Jul 2022,indexed,
 64,professional-and-business-services,Baseline Jul 2022,indexed,
 65,professional-and-business-services,Baseline Jul 2022,indexed,
+66,professional-and-business-services,Baseline Jul 2022,indexed,
 2022-01-02,professional-and-business-services,12-Month Rolling Baseline,rolling,6.339744
 2022-02-02,professional-and-business-services,12-Month Rolling Baseline,rolling,6.337304
 2022-03-02,professional-and-business-services,12-Month Rolling Baseline,rolling,6.191383
@@ -2225,6 +2259,7 @@ time,industry,series,variant,value
 2026-04-02,professional-and-business-services,12-Month Rolling Baseline,rolling,6.197673
 2026-05-02,professional-and-business-services,12-Month Rolling Baseline,rolling,6.145013
 2026-06-02,professional-and-business-services,12-Month Rolling Baseline,rolling,6.104025
+2026-07-02,professional-and-business-services,12-Month Rolling Baseline,rolling,6.165349
 0,education-and-health-services,Baseline Nov 2022 (AI),indexed,0.0
 1,education-and-health-services,Baseline Nov 2022 (AI),indexed,0.707047
 2,education-and-health-services,Baseline Nov 2022 (AI),indexed,1.274237
@@ -2269,7 +2304,7 @@ time,industry,series,variant,value
 41,education-and-health-services,Baseline Nov 2022 (AI),indexed,6.593775
 42,education-and-health-services,Baseline Nov 2022 (AI),indexed,6.611621
 43,education-and-health-services,Baseline Nov 2022 (AI),indexed,6.665478
-44,education-and-health-services,Baseline Nov 2022 (AI),indexed,
+44,education-and-health-services,Baseline Nov 2022 (AI),indexed,6.693503
 45,education-and-health-services,Baseline Nov 2022 (AI),indexed,
 46,education-and-health-services,Baseline Nov 2022 (AI),indexed,
 47,education-and-health-services,Baseline Nov 2022 (AI),indexed,
@@ -2291,6 +2326,7 @@ time,industry,series,variant,value
 63,education-and-health-services,Baseline Nov 2022 (AI),indexed,
 64,education-and-health-services,Baseline Nov 2022 (AI),indexed,
 65,education-and-health-services,Baseline Nov 2022 (AI),indexed,
+66,education-and-health-services,Baseline Nov 2022 (AI),indexed,
 0,education-and-health-services,Baseline Jan 2021,indexed,0.0
 1,education-and-health-services,Baseline Jan 2021,indexed,0.653061
 2,education-and-health-services,Baseline Jan 2021,indexed,1.205818
@@ -2357,6 +2393,7 @@ time,industry,series,variant,value
 63,education-and-health-services,Baseline Jan 2021,indexed,7.734021
 64,education-and-health-services,Baseline Jan 2021,indexed,7.837079
 65,education-and-health-services,Baseline Jan 2021,indexed,7.975133
+66,education-and-health-services,Baseline Jan 2021,indexed,8.092849
 0,education-and-health-services,Baseline Jan 2022,indexed,0.0
 1,education-and-health-services,Baseline Jan 2022,indexed,0.622292
 2,education-and-health-services,Baseline Jan 2022,indexed,1.095911
@@ -2411,7 +2448,7 @@ time,industry,series,variant,value
 51,education-and-health-services,Baseline Jan 2022,indexed,6.77999
 52,education-and-health-services,Baseline Jan 2022,indexed,6.818621
 53,education-and-health-services,Baseline Jan 2022,indexed,6.901401
-54,education-and-health-services,Baseline Jan 2022,indexed,
+54,education-and-health-services,Baseline Jan 2022,indexed,6.991845
 55,education-and-health-services,Baseline Jan 2022,indexed,
 56,education-and-health-services,Baseline Jan 2022,indexed,
 57,education-and-health-services,Baseline Jan 2022,indexed,
@@ -2423,6 +2460,7 @@ time,industry,series,variant,value
 63,education-and-health-services,Baseline Jan 2022,indexed,
 64,education-and-health-services,Baseline Jan 2022,indexed,
 65,education-and-health-services,Baseline Jan 2022,indexed,
+66,education-and-health-services,Baseline Jan 2022,indexed,
 0,education-and-health-services,Baseline Jul 2022,indexed,0.0
 1,education-and-health-services,Baseline Jul 2022,indexed,0.66779
 2,education-and-health-services,Baseline Jul 2022,indexed,1.125527
@@ -2471,7 +2509,7 @@ time,industry,series,variant,value
 45,education-and-health-services,Baseline Jul 2022,indexed,6.629535
 46,education-and-health-services,Baseline Jul 2022,indexed,6.675874
 47,education-and-health-services,Baseline Jul 2022,indexed,6.705326
-48,education-and-health-services,Baseline Jul 2022,indexed,
+48,education-and-health-services,Baseline Jul 2022,indexed,6.763001
 49,education-and-health-services,Baseline Jul 2022,indexed,
 50,education-and-health-services,Baseline Jul 2022,indexed,
 51,education-and-health-services,Baseline Jul 2022,indexed,
@@ -2489,6 +2527,7 @@ time,industry,series,variant,value
 63,education-and-health-services,Baseline Jul 2022,indexed,
 64,education-and-health-services,Baseline Jul 2022,indexed,
 65,education-and-health-services,Baseline Jul 2022,indexed,
+66,education-and-health-services,Baseline Jul 2022,indexed,
 2022-01-02,education-and-health-services,12-Month Rolling Baseline,rolling,4.031015
 2022-02-02,education-and-health-services,12-Month Rolling Baseline,rolling,3.804481
 2022-03-02,education-and-health-services,12-Month Rolling Baseline,rolling,3.554708
@@ -2543,6 +2582,7 @@ time,industry,series,variant,value
 2026-04-02,education-and-health-services,12-Month Rolling Baseline,rolling,4.415189
 2026-05-02,education-and-health-services,12-Month Rolling Baseline,rolling,4.564396
 2026-06-02,education-and-health-services,12-Month Rolling Baseline,rolling,4.539066
+2026-07-02,education-and-health-services,12-Month Rolling Baseline,rolling,4.643011
 0,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,0.0
 1,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,0.797343
 2,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,1.451844
@@ -2587,7 +2627,7 @@ time,industry,series,variant,value
 41,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,5.341218
 42,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,5.310608
 43,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,5.171186
-44,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,
+44,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,5.166675
 45,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,
 46,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,
 47,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,
@@ -2609,6 +2649,7 @@ time,industry,series,variant,value
 63,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,
 64,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,
 65,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,
+66,leisure-and-hospitality,Baseline Nov 2022 (AI),indexed,
 0,leisure-and-hospitality,Baseline Jan 2021,indexed,0.0
 1,leisure-and-hospitality,Baseline Jan 2021,indexed,0.976786
 2,leisure-and-hospitality,Baseline Jan 2021,indexed,1.727565
@@ -2675,6 +2716,7 @@ time,industry,series,variant,value
 63,leisure-and-hospitality,Baseline Jan 2021,indexed,7.23995
 64,leisure-and-hospitality,Baseline Jan 2021,indexed,7.214733
 65,leisure-and-hospitality,Baseline Jan 2021,indexed,7.059156
+66,leisure-and-hospitality,Baseline Jan 2021,indexed,6.934167
 0,leisure-and-hospitality,Baseline Jan 2022,indexed,0.0
 1,leisure-and-hospitality,Baseline Jan 2022,indexed,0.853518
 2,leisure-and-hospitality,Baseline Jan 2022,indexed,1.374895
@@ -2729,7 +2771,7 @@ time,industry,series,variant,value
 51,leisure-and-hospitality,Baseline Jan 2022,indexed,6.318633
 52,leisure-and-hospitality,Baseline Jan 2022,indexed,6.325189
 53,leisure-and-hospitality,Baseline Jan 2022,indexed,6.224049
-54,leisure-and-hospitality,Baseline Jan 2022,indexed,
+54,leisure-and-hospitality,Baseline Jan 2022,indexed,6.302803
 55,leisure-and-hospitality,Baseline Jan 2022,indexed,
 56,leisure-and-hospitality,Baseline Jan 2022,indexed,
 57,leisure-and-hospitality,Baseline Jan 2022,indexed,
@@ -2741,6 +2783,7 @@ time,industry,series,variant,value
 63,leisure-and-hospitality,Baseline Jan 2022,indexed,
 64,leisure-and-hospitality,Baseline Jan 2022,indexed,
 65,leisure-and-hospitality,Baseline Jan 2022,indexed,
+66,leisure-and-hospitality,Baseline Jan 2022,indexed,
 0,leisure-and-hospitality,Baseline Jul 2022,indexed,0.0
 1,leisure-and-hospitality,Baseline Jul 2022,indexed,0.763746
 2,leisure-and-hospitality,Baseline Jul 2022,indexed,1.399199
@@ -2789,7 +2832,7 @@ time,industry,series,variant,value
 45,leisure-and-hospitality,Baseline Jul 2022,indexed,5.787217
 46,leisure-and-hospitality,Baseline Jul 2022,indexed,5.760498
 47,leisure-and-hospitality,Baseline Jul 2022,indexed,5.744955
-48,leisure-and-hospitality,Baseline Jul 2022,indexed,
+48,leisure-and-hospitality,Baseline Jul 2022,indexed,5.774219
 49,leisure-and-hospitality,Baseline Jul 2022,indexed,
 50,leisure-and-hospitality,Baseline Jul 2022,indexed,
 51,leisure-and-hospitality,Baseline Jul 2022,indexed,
@@ -2807,6 +2850,7 @@ time,industry,series,variant,value
 63,leisure-and-hospitality,Baseline Jul 2022,indexed,
 64,leisure-and-hospitality,Baseline Jul 2022,indexed,
 65,leisure-and-hospitality,Baseline Jul 2022,indexed,
+66,leisure-and-hospitality,Baseline Jul 2022,indexed,
 2022-01-02,leisure-and-hospitality,12-Month Rolling Baseline,rolling,4.802716
 2022-02-02,leisure-and-hospitality,12-Month Rolling Baseline,rolling,5.23421
 2022-03-02,leisure-and-hospitality,12-Month Rolling Baseline,rolling,5.474655
@@ -2861,6 +2905,7 @@ time,industry,series,variant,value
 2026-04-02,leisure-and-hospitality,12-Month Rolling Baseline,rolling,5.300909
 2026-05-02,leisure-and-hospitality,12-Month Rolling Baseline,rolling,5.183432
 2026-06-02,leisure-and-hospitality,12-Month Rolling Baseline,rolling,5.121511
+2026-07-02,leisure-and-hospitality,12-Month Rolling Baseline,rolling,4.925006
 0,other-services,Baseline Nov 2022 (AI),indexed,0.0
 1,other-services,Baseline Nov 2022 (AI),indexed,1.114526
 2,other-services,Baseline Nov 2022 (AI),indexed,2.02841
@@ -2905,7 +2950,7 @@ time,industry,series,variant,value
 41,other-services,Baseline Nov 2022 (AI),indexed,10.314223
 42,other-services,Baseline Nov 2022 (AI),indexed,10.441751
 43,other-services,Baseline Nov 2022 (AI),indexed,10.371225
-44,other-services,Baseline Nov 2022 (AI),indexed,
+44,other-services,Baseline Nov 2022 (AI),indexed,10.382211
 45,other-services,Baseline Nov 2022 (AI),indexed,
 46,other-services,Baseline Nov 2022 (AI),indexed,
 47,other-services,Baseline Nov 2022 (AI),indexed,
@@ -2927,6 +2972,7 @@ time,industry,series,variant,value
 63,other-services,Baseline Nov 2022 (AI),indexed,
 64,other-services,Baseline Nov 2022 (AI),indexed,
 65,other-services,Baseline Nov 2022 (AI),indexed,
+66,other-services,Baseline Nov 2022 (AI),indexed,
 0,other-services,Baseline Jan 2021,indexed,0.0
 1,other-services,Baseline Jan 2021,indexed,1.16662
 2,other-services,Baseline Jan 2021,indexed,2.153815
@@ -2993,6 +3039,7 @@ time,industry,series,variant,value
 63,other-services,Baseline Jan 2021,indexed,12.367553
 64,other-services,Baseline Jan 2021,indexed,12.586349
 65,other-services,Baseline Jan 2021,indexed,12.671574
+66,other-services,Baseline Jan 2021,indexed,13.024946
 0,other-services,Baseline Jan 2022,indexed,0.0
 1,other-services,Baseline Jan 2022,indexed,1.166235
 2,other-services,Baseline Jan 2022,indexed,2.12553
@@ -3047,7 +3094,7 @@ time,industry,series,variant,value
 51,other-services,Baseline Jan 2022,indexed,10.53724
 52,other-services,Baseline Jan 2022,indexed,10.653421
 53,other-services,Baseline Jan 2022,indexed,10.896734
-54,other-services,Baseline Jan 2022,indexed,
+54,other-services,Baseline Jan 2022,indexed,11.304319
 55,other-services,Baseline Jan 2022,indexed,
 56,other-services,Baseline Jan 2022,indexed,
 57,other-services,Baseline Jan 2022,indexed,
@@ -3059,6 +3106,7 @@ time,industry,series,variant,value
 63,other-services,Baseline Jan 2022,indexed,
 64,other-services,Baseline Jan 2022,indexed,
 65,other-services,Baseline Jan 2022,indexed,
+66,other-services,Baseline Jan 2022,indexed,
 0,other-services,Baseline Jul 2022,indexed,0.0
 1,other-services,Baseline Jul 2022,indexed,1.324102
 2,other-services,Baseline Jul 2022,indexed,2.38139
@@ -3107,7 +3155,7 @@ time,industry,series,variant,value
 45,other-services,Baseline Jul 2022,indexed,10.064971
 46,other-services,Baseline Jul 2022,indexed,10.201308
 47,other-services,Baseline Jul 2022,indexed,10.259644
-48,other-services,Baseline Jul 2022,indexed,
+48,other-services,Baseline Jul 2022,indexed,10.5323
 49,other-services,Baseline Jul 2022,indexed,
 50,other-services,Baseline Jul 2022,indexed,
 51,other-services,Baseline Jul 2022,indexed,
@@ -3125,6 +3173,7 @@ time,industry,series,variant,value
 63,other-services,Baseline Jul 2022,indexed,
 64,other-services,Baseline Jul 2022,indexed,
 65,other-services,Baseline Jul 2022,indexed,
+66,other-services,Baseline Jul 2022,indexed,
 2022-01-02,other-services,12-Month Rolling Baseline,rolling,7.508412
 2022-02-02,other-services,12-Month Rolling Baseline,rolling,8.005476
 2022-03-02,other-services,12-Month Rolling Baseline,rolling,8.195857
@@ -3179,3 +3228,4 @@ time,industry,series,variant,value
 2026-04-02,other-services,12-Month Rolling Baseline,rolling,10.121702
 2026-05-02,other-services,12-Month Rolling Baseline,rolling,9.664531
 2026-06-02,other-services,12-Month Rolling Baseline,rolling,9.327525
+2026-07-02,other-services,12-Month Rolling Baseline,rolling,9.316102
