@@ -1,0 +1,41 @@
+category,group,substitution,value
+Motor vehicles and parts,Durable goods,presub,4.186710325221799
+Motor vehicles and parts,Durable goods,postsub,3.560785045359045
+Clothing and footwear,Nondurable goods,presub,3.614154367112205
+Clothing and footwear,Nondurable goods,postsub,2.422144661841214
+Recreational goods and vehicles,Durable goods,presub,1.621904954002266
+Recreational goods and vehicles,Durable goods,postsub,1.386037210721128
+Furnishings and durable household equipment,Durable goods,presub,1.614971172018937
+Furnishings and durable household equipment,Durable goods,postsub,1.362792163862628
+Other durable goods,Durable goods,presub,1.312388095579206
+Other durable goods,Durable goods,postsub,1.01735658270578
+Transportation services,Services,presub,0.642629965104146
+Transportation services,Services,postsub,0.612371822525184
+Net foreign travel,Services,presub,0.4901037973986864
+Net foreign travel,Services,postsub,0.4195741709853495
+Communication,Services,presub,0.3622807532013918
+Communication,Services,postsub,0.3211845349653968
+Food and beverages purchased for off-premises consumption,Nondurable goods,presub,0.3504233345033515
+Food and beverages purchased for off-premises consumption,Nondurable goods,postsub,0.3180495355826554
+Other nondurable goods,Nondurable goods,presub,0.3268533230854863
+Other nondurable goods,Nondurable goods,postsub,0.2827897780751732
+Gasoline and other energy goods,Nondurable goods,presub,0.2964876260943878
+Gasoline and other energy goods,Nondurable goods,postsub,0.2713140114812375
+Other services,Services,presub,0.2609154461944483
+Other services,Services,postsub,0.2376172368351196
+Household utilities,Services,presub,0.2598171161281996
+Household utilities,Services,postsub,0.2356143616748527
+Final consumption expenditures of NPISH,Services,presub,0.2572444579563301
+Final consumption expenditures of NPISH,Services,postsub,0.2354211827193752
+Recreation services,Services,presub,0.2368836766228755
+Recreation services,Services,postsub,0.2126074822612415
+Food services and accommodations,Services,presub,0.2182913042433107
+Food services and accommodations,Services,postsub,0.1987483999446963
+Health care,Services,presub,0.1669543640397077
+Health care,Services,postsub,0.1517848005756643
+Education,Services,presub,0.1637006959979442
+Education,Services,postsub,0.1486346750307953
+Financial services and insurance,Services,presub,0.07878139350601458
+Financial services and insurance,Services,postsub,0.07117600454145702
+Housing,Services,presub,0.0410570889258902
+Housing,Services,postsub,0.03742313416488065

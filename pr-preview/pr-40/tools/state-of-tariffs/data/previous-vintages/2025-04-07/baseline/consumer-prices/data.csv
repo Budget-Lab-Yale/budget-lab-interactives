@@ -1,0 +1,196 @@
+category,group,substitution,basis,value
+Leather products,Commodities,postsub,overall,35.203657388258655
+Leather products,Commodities,postsub,domestic,4.589156023169224
+Leather products,Commodities,postsub,imported,42.220235413156864
+Wearing apparel,Commodities,postsub,overall,32.703775028269106
+Wearing apparel,Commodities,postsub,domestic,5.108455257369954
+Wearing apparel,Commodities,postsub,imported,37.67938629549469
+Crops nec,Commodities,postsub,overall,25.977038436413164
+Crops nec,Commodities,postsub,domestic,2.246271106077568
+Crops nec,Commodities,postsub,imported,27.13640416858223
+Metals nec,Commodities,postsub,overall,23.489232802800373
+Metals nec,Commodities,postsub,domestic,8.248404115327842
+Metals nec,Commodities,postsub,imported,36.1214885928925
+"Wool, silk-worm cocoons",Commodities,postsub,overall,21.013503895564345
+"Wool, silk-worm cocoons",Commodities,postsub,domestic,21.001427169187583
+"Wool, silk-worm cocoons",Commodities,postsub,imported,22.426480881645393
+Processed rice,Commodities,postsub,overall,19.745447626004427
+Processed rice,Commodities,postsub,domestic,17.378409256159248
+Processed rice,Commodities,postsub,imported,35.602189358691774
+Electrical equipment,Commodities,postsub,overall,18.948383685138193
+Electrical equipment,Commodities,postsub,domestic,5.132608710123475
+Electrical equipment,Commodities,postsub,imported,28.476920796402712
+Textiles,Commodities,postsub,overall,17.958092122243784
+Textiles,Commodities,postsub,domestic,4.275161137373435
+Textiles,Commodities,postsub,imported,37.4257750415827
+Motor vehicles and parts,Commodities,postsub,overall,15.796358100803543
+Motor vehicles and parts,Commodities,postsub,domestic,7.040731477651732
+Motor vehicles and parts,Commodities,postsub,imported,29.914051235237284
+Machinery and equipment nec,Commodities,postsub,overall,12.366567809803385
+Machinery and equipment nec,Commodities,postsub,domestic,5.096378530993191
+Machinery and equipment nec,Commodities,postsub,imported,25.554353013226525
+Ferrous metals,Commodities,postsub,overall,12.028419471254074
+Ferrous metals,Commodities,postsub,domestic,4.685769834183313
+Ferrous metals,Commodities,postsub,imported,34.62397452217412
+Rubber and plastic products,Commodities,postsub,overall,11.871422028356177
+Rubber and plastic products,Commodities,postsub,domestic,3.4539437437536793
+Rubber and plastic products,Commodities,postsub,imported,30.421273743061256
+Mineral products nec,Commodities,postsub,overall,11.726501311835046
+Mineral products nec,Commodities,postsub,domestic,2.1979642005705236
+Mineral products nec,Commodities,postsub,imported,30.385043563930974
+Transport equipment nec,Commodities,postsub,overall,11.267585709518123
+Transport equipment nec,Commodities,postsub,domestic,5.313759605774893
+Transport equipment nec,Commodities,postsub,imported,22.366097249761587
+Metal products,Commodities,postsub,overall,10.687902843433589
+Metal products,Commodities,postsub,domestic,3.9732429779544076
+Metal products,Commodities,postsub,imported,28.066312099592835
+"Computer, electronic and optical",Commodities,postsub,overall,8.695242991268005
+"Computer, electronic and optical",Commodities,postsub,domestic,1.932276220281779
+"Computer, electronic and optical",Commodities,postsub,imported,9.975375987204682
+Manufactures nec,Commodities,postsub,overall,8.514092095616586
+Manufactures nec,Commodities,postsub,domestic,2.463652180859268
+Manufactures nec,Commodities,postsub,imported,31.20626095755073
+Fishing,Commodities,postsub,overall,6.6180460544650925
+Fishing,Commodities,postsub,domestic,2.8501074249156235
+Fishing,Commodities,postsub,imported,20.33720721846572
+"Vegetables, fruit, nuts",Commodities,postsub,overall,6.243667536785497
+"Vegetables, fruit, nuts",Commodities,postsub,domestic,0.5917595924612947
+"Vegetables, fruit, nuts",Commodities,postsub,imported,19.371069108324832
+Wood products,Commodities,postsub,overall,5.663984670700964
+Wood products,Commodities,postsub,domestic,2.7293401611480124
+Wood products,Commodities,postsub,imported,23.911918225987012
+Chemical products,Commodities,postsub,overall,5.386219964035458
+Chemical products,Commodities,postsub,domestic,2.6085728973804017
+Chemical products,Commodities,postsub,imported,22.341943797008067
+Beverages and tobacco products,Commodities,postsub,overall,5.289606153021369
+Beverages and tobacco products,Commodities,postsub,domestic,3.2727928481022626
+Beverages and tobacco products,Commodities,postsub,imported,23.52546298193066
+Food products nec,Commodities,postsub,overall,5.144685436500236
+Food products nec,Commodities,postsub,domestic,2.4757289072360287
+Food products nec,Commodities,postsub,imported,26.134035879311057
+"Paper products, publishing",Commodities,postsub,overall,4.64953965505303
+"Paper products, publishing",Commodities,postsub,domestic,2.765570340278296
+"Paper products, publishing",Commodities,postsub,imported,21.146347885708717
+Natural gas,Commodities,postsub,overall,4.251007684619913
+Natural gas,Commodities,postsub,domestic,1.7148951455000785
+Natural gas,Commodities,postsub,imported,4.866920729834731
+Vegetable oils and fats,Commodities,postsub,overall,3.7437851767959467
+Vegetable oils and fats,Commodities,postsub,domestic,1.3767468069507671
+Vegetable oils and fats,Commodities,postsub,imported,19.8782916161488
+Sugar,Commodities,postsub,overall,3.417713564623396
+Sugar,Commodities,postsub,domestic,2.511959086366313
+Sugar,Commodities,postsub,imported,23.01824047410669
+Dairy products,Commodities,postsub,overall,2.48780563361279
+Dairy products,Commodities,postsub,domestic,2.1134271159331957
+Dairy products,Commodities,postsub,imported,25.61473664511033
+Cereal grains nec,Commodities,postsub,overall,2.4032685489754626
+Cereal grains nec,Commodities,postsub,domestic,1.437130438834573
+Cereal grains nec,Commodities,postsub,imported,16.11035298659933
+Bovine meat products,Commodities,postsub,overall,2.1738107478170012
+Bovine meat products,Commodities,postsub,domestic,1.4733606179648562
+Bovine meat products,Commodities,postsub,imported,19.47975964571568
+Paddy rice,Commodities,postsub,overall,2.1617340214402403
+Paddy rice,Commodities,postsub,domestic,1.0506751947782171
+Paddy rice,Commodities,postsub,imported,36.459636931441814
+Construction,Commodities,postsub,overall,2.1134271159331957
+Construction,Commodities,postsub,domestic,2.05304348404939
+Construction,Commodities,postsub,imported,26.81033255640968
+Animal products nec,Commodities,postsub,overall,1.7390485982536008
+Animal products nec,Commodities,postsub,domestic,0.519299234200728
+Animal products nec,Commodities,postsub,imported,26.339340227715997
+Raw milk,Commodities,postsub,overall,1.7269718718768396
+Raw milk,Commodities,postsub,domestic,1.7028184191233176
+Raw milk,Commodities,postsub,imported,33.11438372507899
+Basic pharmaceutical products,Commodities,postsub,overall,1.7148951455000785
+Basic pharmaceutical products,Commodities,postsub,domestic,1.1714424585458283
+Basic pharmaceutical products,Commodities,postsub,imported,2.282501285207851
+Water,Commodities,postsub,overall,1.6303580608627508
+Water,Commodities,postsub,domestic,1.6182813344859899
+Water,Commodities,postsub,imported,28.066312099592835
+Meat products nec,Commodities,postsub,overall,1.557897702602184
+Meat products nec,Commodities,postsub,domestic,1.2680562695599173
+Meat products nec,Commodities,postsub,imported,14.455841472983058
+Warehousing and support,Commodities,postsub,overall,1.4854373443416176
+Warehousing and support,Commodities,postsub,domestic,1.4854373443416176
+Warehousing and support,Commodities,postsub,imported,-0.9057544782570838
+"Petroleum, coal products",Commodities,postsub,overall,1.3646700805740062
+"Petroleum, coal products",Commodities,postsub,domestic,1.2076726376761118
+"Petroleum, coal products",Commodities,postsub,imported,2.1738107478170012
+Oil,Commodities,postsub,overall,1.3042864486902008
+Oil,Commodities,postsub,domestic,0.519299234200728
+Oil,Commodities,postsub,imported,1.9081227675282566
+Forestry,Commodities,postsub,overall,1.2559795431831564
+Forestry,Commodities,postsub,domestic,0.8453708463732781
+Forestry,Commodities,postsub,imported,6.15913045214817
+Water transport,Commodities,postsub,overall,1.231826090429634
+Water transport,Commodities,postsub,domestic,1.243902816806395
+Water transport,Commodities,postsub,imported,-0.1932276220281779
+Transport nec,Commodities,postsub,overall,1.1835191849225895
+Transport nec,Commodities,postsub,domestic,1.1955959112993506
+Transport nec,Commodities,postsub,imported,0.3381483385493113
+Wheat,Commodities,postsub,overall,1.1714424585458283
+Wheat,Commodities,postsub,domestic,1.1110588266620227
+Wheat,Commodities,postsub,imported,10.36183123126104
+Human health and social work,Commodities,postsub,overall,1.147289005792306
+Human health and social work,Commodities,postsub,domestic,1.147289005792306
+Human health and social work,Commodities,postsub,imported,-0.2656879802887446
+Public Administration,Commodities,postsub,overall,1.0869053739085006
+Public Administration,Commodities,postsub,domestic,1.0869053739085006
+Public Administration,Commodities,postsub,imported,0.9902915628944116
+Communication,Commodities,postsub,overall,1.038598468401456
+Communication,Commodities,postsub,domestic,1.0869053739085006
+Communication,Commodities,postsub,imported,-0.3623017913028335
+Accommodation & food services,Commodities,postsub,overall,1.038598468401456
+Accommodation & food services,Commodities,postsub,domestic,1.123135553038784
+Accommodation & food services,Commodities,postsub,imported,0.1932276220281779
+Plant-based fibers,Commodities,postsub,overall,0.9902915628944116
+Plant-based fibers,Commodities,postsub,domestic,0.9178312046338449
+Plant-based fibers,Commodities,postsub,imported,34.636051248550885
+Recreational and other services,Commodities,postsub,overall,0.9782148365176506
+Recreational and other services,Commodities,postsub,domestic,0.9782148365176506
+Recreational and other services,Commodities,postsub,imported,-0.8091406672429949
+Trade,Commodities,postsub,overall,0.9419846573873671
+Trade,Commodities,postsub,domestic,0.9540613837641283
+Trade,Commodities,postsub,imported,-1.9201994939050175
+Business services nec,Commodities,postsub,overall,0.9299079310106061
+Business services nec,Commodities,postsub,domestic,0.9419846573873671
+Business services nec,Commodities,postsub,imported,-0.09661381101408895
+Electricity,Commodities,postsub,overall,0.9178312046338449
+Electricity,Commodities,postsub,domestic,0.9540613837641283
+Electricity,Commodities,postsub,imported,-2.59649617100364
+"Bovine cattle, sheep and goats",Commodities,postsub,overall,0.8936777518803226
+"Bovine cattle, sheep and goats",Commodities,postsub,domestic,0.8091406672429949
+"Bovine cattle, sheep and goats",Commodities,postsub,imported,15.02344761269083
+"Gas manufacture, distribution",Commodities,postsub,overall,0.8453708463732781
+"Gas manufacture, distribution",Commodities,postsub,domestic,0.8453708463732781
+"Gas manufacture, distribution",Commodities,postsub,imported,1.5458209762254231
+Minerals nec,Commodities,postsub,overall,0.8212173936197561
+Minerals nec,Commodities,postsub,domestic,0.012076726376761118
+Minerals nec,Commodities,postsub,imported,6.678429686348898
+Education,Commodities,postsub,overall,0.7487570353591892
+Education,Commodities,postsub,domestic,0.8212173936197561
+Education,Commodities,postsub,imported,-1.0869053739085006
+Real estate activities,Commodities,postsub,overall,0.724603582605667
+Real estate activities,Commodities,postsub,domestic,0.724603582605667
+Real estate activities,Commodities,postsub,imported,0.7970639408662338
+Air transport,Commodities,postsub,overall,0.724603582605667
+Air transport,Commodities,postsub,domestic,1.0506751947782171
+Air transport,Commodities,postsub,imported,-0.519299234200728
+Financial services nec,Commodities,postsub,overall,0.5917595924612947
+Financial services nec,Commodities,postsub,domestic,0.5917595924612947
+Financial services nec,Commodities,postsub,imported,-0.024153452753522237
+Insurance,Commodities,postsub,overall,0.5555294133310114
+Insurance,Commodities,postsub,domestic,0.5313759605774891
+Insurance,Commodities,postsub,imported,1.0989821002852618
+Coal,Commodities,postsub,overall,0.5313759605774891
+Coal,Commodities,postsub,domestic,0.519299234200728
+Coal,Commodities,postsub,imported,1.9201994939050175
+Dwellings,Commodities,postsub,overall,0.4951457814472058
+Dwellings,Commodities,postsub,domestic,0.4951457814472058
+Dwellings,Commodities,postsub,imported,0.4951457814472058
+"Sugar cane, sugar beet",Commodities,postsub,overall,-0.8695242991268004
+"Sugar cane, sugar beet",Commodities,postsub,domestic,-0.8695242991268004
+"Sugar cane, sugar beet",Commodities,postsub,imported,29.901974508860526
+Oil seeds,Commodities,postsub,overall,-0.9661381101408895
+Oil seeds,Commodities,postsub,domestic,-1.2680562695599173
+Oil seeds,Commodities,postsub,imported,19.75752435238119
