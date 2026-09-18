@@ -1,0 +1,78 @@
+/*
+ * Budget Lab font stack — Mallory with Source Sans 3 web-safe fallback.
+ *
+ * Maps Mallory's bumped CSS weights to its actual installed variants so
+ * it renders at the original-design weights when locally installed. The
+ * weight bumps elsewhere are calibrated for Source Sans 3 (Mallory's
+ * public fallback), which reads lighter at the same nominal weight.
+ * If Mallory isn't installed, these rules silently fail to resolve and
+ * the stack falls through to Source Sans 3 as intended.
+ *
+ * Source Sans 3 is loaded from Google Fonts.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap');
+
+@font-face {
+  font-family: 'Mallory';
+  src: local('Mallory Book'), local('MalloryBook'), local('Mallory-Book');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mallory';
+  src: local('Mallory Book'), local('MalloryBook'), local('Mallory-Book');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mallory';
+  src: local('Mallory Medium'), local('MalloryMedium'), local('Mallory-Medium');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mallory';
+  src: local('Mallory Bold'), local('MalloryBold'), local('Mallory-Bold');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mallory';
+  src: local('Mallory Bold'), local('MalloryBold'), local('Mallory-Bold');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mallory';
+  src: local('Mallory Black'), local('MalloryBlack'), local('Mallory-Black');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Mallory Compact — narrower variant for tight legend / label contexts.
+   Falls through to regular Mallory then Source Sans 3 if not installed. */
+@font-face {
+  font-family: 'Mallory Compact';
+  src: local('Mallory Compact Book'), local('MalloryCompact-Book');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mallory Compact';
+  src: local('Mallory Compact Medium'), local('MalloryCompact-Medium');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mallory Compact';
+  src: local('Mallory Compact Bold'), local('MalloryCompact-Bold');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --tbl-font-sans: 'Mallory', system-ui, -apple-system, 'Segoe UI', 'Source Sans 3', Arial, sans-serif;
+  --tbl-font-sans-compact: 'Mallory Compact', 'Mallory', system-ui, -apple-system, 'Segoe UI', 'Source Sans 3', Arial, sans-serif;
+  --tbl-font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', monospace;
+}
