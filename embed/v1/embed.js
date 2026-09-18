@@ -1,6 +1,6 @@
 /**
  * Budget Lab Interactives — embed loader
- * @version 1.0.0
+ * @version 1.1.0
  * Snippet: <script src=".../embed/v1/embed.js" data-tool="..."></script>
  * Docs: https://github.com/Budget-Lab-Yale/budget-lab-interactives#embedding
  * MIT licensed.
@@ -38,7 +38,14 @@
   iframe.src       = toolsBase + tool + '/';
   iframe.title     = me.getAttribute('data-title') || tool;
   iframe.scrolling = 'no';
-  iframe.loading   = 'lazy';
+  // MUST stay 'eager'. A non-scrolling renderer — a PDF builder, a card scraper — never brings a
+  // below-fold iframe near the viewport, so 'lazy' leaves it an empty 100px box forever. Measured
+  // under Chromium page.pdf() on a 16,000px article with three tools: with 'lazy', 0 of 3 even
+  // issued a request, because on a long page the first embed is already below the fold too; with
+  // 'eager', 3 of 3. A taller viewport is not a workaround (still 0 of 3 at 1280x4000), and it
+  // makes `networkidle` useless as a wait signal, since it fires having loaded nothing.
+  // Eager costs nothing measurable here — a page carries one or two tools, not thirteen figures.
+  iframe.loading   = 'eager';
   iframe.style.cssText = 'position:absolute !important;top:0 !important;left:0 !important;width:100% !important;height:100% !important;border:0 !important;display:block !important;';
 
   wrapper.appendChild(iframe);
