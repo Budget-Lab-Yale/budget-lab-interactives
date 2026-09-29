@@ -1,0 +1,583 @@
+row,year,value
+Business income taxes,FY1960,22179414
+Business income taxes,FY1961,21764940
+Business income taxes,FY1962,21295711
+Business income taxes,FY1963,22336134
+Business income taxes,FY1964,24300863
+Business income taxes,FY1965,26131334
+Business income taxes,FY1966,30834243
+Business income taxes,FY1967,34917825
+Business income taxes,FY1968,29896520
+Business income taxes,FY1969,38337646
+Business income taxes,FY1970,35036983
+Business income taxes,FY1971,30319953
+Business income taxes,FY1972,34925546
+Business income taxes,FY1973,39045309
+Business income taxes,FY1974,41744444
+Business income taxes,FY1975,45746660
+Business income taxes,FY1976,46782956
+Business income taxes,FY1977,60049804
+Business income taxes,FY1978,65380145
+Business income taxes,FY1979,71447876
+Business income taxes,FY1980,72379610
+Business income taxes,FY1981,73733156
+Business income taxes,FY1982,65990832
+Business income taxes,FY1983,61779556
+Business income taxes,FY1984,74179370
+Business income taxes,FY1985,77412769
+Business income taxes,FY1986,80441620
+Business income taxes,FY1987,102858985
+Business income taxes,FY1988,109682554
+Business income taxes,FY1989,117014564
+Business income taxes,FY1990,110016539
+Business income taxes,FY1991,113598569
+Business income taxes,FY1992,117950796
+Business income taxes,FY1993,131547509
+Business income taxes,FY1994,154204684
+Business income taxes,FY1995,174422173
+Business income taxes,FY1996,189054791
+Business income taxes,FY1997,204492336
+Business income taxes,FY1998,213270011
+Business income taxes,FY1999,216324889
+Business income taxes,FY2000,235654894
+Business income taxes,FY2001,186731643
+Business income taxes,FY2002,211437773
+Business income taxes,FY2003,194146298
+Business income taxes,FY2004,230619359
+Business income taxes,FY2005,307094837
+Business income taxes,FY2006,380924573
+Business income taxes,FY2007,395535825
+Business income taxes,FY2008,354315825
+Business income taxes,FY2009,225481588
+Business income taxes,FY2010,277937220
+Business income taxes,FY2011,242848122
+Business income taxes,FY2012,281461580
+Business income taxes,FY2013,311993954
+Business income taxes,FY2014,353141112
+Business income taxes,FY2015,389888722
+Business income taxes,FY2016,345552427
+Business income taxes,FY2017,338529154
+Business income taxes,FY2018,262742024
+Business income taxes,FY2019,277057735
+Business income taxes,FY2020,263563107
+Business income taxes,FY2021,419008841
+Business income taxes,FY2022,475871099
+Business income taxes,FY2023,456940780
+Business income taxes,FY2024,565085519
+Business income taxes,FY2025,486383988
+Employment taxes,FY1960,11158589
+Employment taxes,FY1961,12502451
+Employment taxes,FY1962,12708171
+Employment taxes,FY1963,15004486
+Employment taxes,FY1964,17002504
+Employment taxes,FY1965,17104306
+Employment taxes,FY1966,20256133
+Employment taxes,FY1967,26958241
+Employment taxes,FY1968,28085898
+Employment taxes,FY1969,33068657
+Employment taxes,FY1970,37449188
+Employment taxes,FY1971,39918690
+Employment taxes,FY1972,43714001
+Employment taxes,FY1973,52081709
+Employment taxes,FY1974,62093632
+Employment taxes,FY1975,70140809
+Employment taxes,FY1976,74202853
+Employment taxes,FY1977,86076316
+Employment taxes,FY1978,97291653
+Employment taxes,FY1979,112849874
+Employment taxes,FY1980,128330480
+Employment taxes,FY1981,152885816
+Employment taxes,FY1982,168717936
+Employment taxes,FY1983,173847854
+Employment taxes,FY1984,199210028
+Employment taxes,FY1985,225214568
+Employment taxes,FY1986,243978380
+Employment taxes,FY1987,277000469
+Employment taxes,FY1988,318038990
+Employment taxes,FY1989,345625586
+Employment taxes,FY1990,367219321
+Employment taxes,FY1991,384451220
+Employment taxes,FY1992,400080904
+Employment taxes,FY1993,411510516
+Employment taxes,FY1994,443831352
+Employment taxes,FY1995,465405305
+Employment taxes,FY1996,492365178
+Employment taxes,FY1997,528596833
+Employment taxes,FY1998,557799193
+Employment taxes,FY1999,598669865
+Employment taxes,FY2000,639651814
+Employment taxes,FY2001,682222895
+Employment taxes,FY2002,688077238
+Employment taxes,FY2003,695975801
+Employment taxes,FY2004,717247296
+Employment taxes,FY2005,771441662
+Employment taxes,FY2006,814819218
+Employment taxes,FY2007,849732729
+Employment taxes,FY2008,883197626
+Employment taxes,FY2009,858163864
+Employment taxes,FY2010,824188337
+Employment taxes,FY2011,767504822
+Employment taxes,FY2012,784396853
+Employment taxes,FY2013,897847151
+Employment taxes,FY2014,976223247
+Employment taxes,FY2015,1022358916
+Employment taxes,FY2016,1073907715
+Employment taxes,FY2017,1123473137
+Employment taxes,FY2018,1133199527
+Employment taxes,FY2019,1207553842
+Employment taxes,FY2020,1268076594
+Employment taxes,FY2021,1258170886
+Employment taxes,FY2022,1417809803
+Employment taxes,FY2023,1566109766
+Employment taxes,FY2024,1661154748
+Employment taxes,FY2025,1694434489
+Estate and gift taxes,FY1966,3093922
+Estate and gift taxes,FY1967,3014406
+Estate and gift taxes,FY1968,3081979
+Estate and gift taxes,FY1969,3530065
+Estate and gift taxes,FY1970,3680076
+Estate and gift taxes,FY1971,3784283
+Estate and gift taxes,FY1972,5489969
+Estate and gift taxes,FY1973,4975862
+Estate and gift taxes,FY1974,5100675
+Estate and gift taxes,FY1975,4688079
+Estate and gift taxes,FY1976,5307466
+Estate and gift taxes,FY1977,7425325
+Estate and gift taxes,FY1978,5381499
+Estate and gift taxes,FY1979,5519074
+Estate and gift taxes,FY1980,6498381
+Estate and gift taxes,FY1981,6910386
+Estate and gift taxes,FY1982,8143373
+Estate and gift taxes,FY1983,6225877
+Estate and gift taxes,FY1984,6176667
+Estate and gift taxes,FY1985,6579703
+Estate and gift taxes,FY1986,7194956
+Estate and gift taxes,FY1987,7667670
+Estate and gift taxes,FY1988,7784445
+Estate and gift taxes,FY1989,8973146
+Estate and gift taxes,FY1990,11761939
+Estate and gift taxes,FY1991,11473141
+Estate and gift taxes,FY1992,11479116
+Estate and gift taxes,FY1993,12890965
+Estate and gift taxes,FY1994,15606793
+Estate and gift taxes,FY1995,15144394
+Estate and gift taxes,FY1996,17591817
+Estate and gift taxes,FY1997,20356401
+Estate and gift taxes,FY1998,24630962
+Estate and gift taxes,FY1999,28385607
+Estate and gift taxes,FY2000,29721620
+Estate and gift taxes,FY2001,29247916
+Estate and trust income tax,FY2008,25585005
+Estate and trust income tax,FY2009,14960969
+Estate and trust income tax,FY2010,12301939
+Estate and trust income tax,FY2011,15021758
+Estate and trust income tax,FY2012,16434225
+Estate and trust income tax,FY2013,24696073
+Estate and trust income tax,FY2014,29410796
+Estate and trust income tax,FY2015,33445382
+Estate and trust income tax,FY2016,29695397
+Estate and trust income tax,FY2017,29024308
+Estate and trust income tax,FY2018,38455955
+Estate and trust income tax,FY2019,39468515
+Estate and trust income tax,FY2020,33727249
+Estate and trust income tax,FY2021,54003650
+Estate and trust income tax,FY2022,85160093
+Estate and trust income tax,FY2023,52250447
+Estate and trust income tax,FY2024,58819824
+Estate and trust income tax,FY2025,74578854
+Estate tax,FY1960,1439259
+Estate tax,FY1961,1745480
+Estate tax,FY1962,1796227
+Estate tax,FY1963,1971614
+Estate tax,FY1964,2110992
+Estate tax,FY1965,2454332
+Estate tax,FY1966,2646968
+Estate tax,FY1967,2728580
+Estate tax,FY1968,2710254
+Estate tax,FY1969,3136691
+Estate tax,FY1970,3241321
+Estate tax,FY1971,3352641
+Estate tax,FY1972,5126522
+Estate tax,FY1973,4338924
+Estate tax,FY1974,4659825
+Estate tax,FY1975,4312657
+Estate tax,FY1976,4875735
+Estate tax,FY1977,5649460
+Estate tax,FY1978,5242080
+Estate tax,FY1979,5344176
+Estate tax,FY1980,6282247
+Estate tax,FY1981,6694641
+Estate tax,FY1982,8035335
+Estate tax,FY1983,6077202
+Estate tax,FY1984,6024985
+Estate tax,FY1985,6303418
+Estate tax,FY1986,6814417
+Estate tax,FY1987,7164681
+Estate tax,FY1988,7348679
+Estate tax,FY1989,8143689
+Estate tax,FY1990,9633736
+Estate tax,FY1991,10237247
+Estate tax,FY1992,10411450
+Estate tax,FY1993,11433495
+Estate tax,FY1994,13500126
+Estate tax,FY1995,13326051
+Estate tax,FY1996,15350591
+Estate tax,FY1997,17595484
+Estate tax,FY1998,21314933
+Estate tax,FY1999,23627320
+Estate tax,FY2000,25618377
+Estate tax,FY2001,25289663
+Estate tax,FY2002,25532186
+Estate tax,FY2003,20887883
+Estate tax,FY2004,24130143
+Estate tax,FY2005,23565164
+Estate tax,FY2006,26717493
+Estate tax,FY2007,24557815
+Estate tax,FY2008,26543433
+Estate tax,FY2009,21583131
+Estate tax,FY2010,16930741
+Estate tax,FY2011,2506991
+Estate tax,FY2012,12340655
+Estate tax,FY2013,14051771
+Estate tax,FY2014,17572338
+Estate tax,FY2015,17952938
+Estate tax,FY2016,19879671
+Estate tax,FY2017,21831660
+Estate tax,FY2018,22664503
+Estate tax,FY2019,16001974
+Estate tax,FY2020,17115476
+Estate tax,FY2021,23425026
+Estate tax,FY2022,28909393
+Estate tax,FY2023,33780186
+Estate tax,FY2024,29416540
+Estate tax,FY2025,28137049
+Excise taxes,FY1960,11864741
+Excise taxes,FY1961,12064302
+Excise taxes,FY1962,12752176
+Excise taxes,FY1963,13409737
+Excise taxes,FY1964,13950232
+Excise taxes,FY1965,14792779
+Excise taxes,FY1966,13398112
+Excise taxes,FY1967,14113748
+Excise taxes,FY1968,14320396
+Excise taxes,FY1969,15542787
+Excise taxes,FY1970,15904264
+Excise taxes,FY1971,16871851
+Excise taxes,FY1972,16847036
+Excise taxes,FY1973,16572318
+Excise taxes,FY1974,17109853
+Excise taxes,FY1975,16847741
+Excise taxes,FY1976,17257720
+Excise taxes,FY1977,17832707
+Excise taxes,FY1978,18664949
+Excise taxes,FY1979,19049504
+Excise taxes,FY1980,24619021
+Excise taxes,FY1981,40419598
+Excise taxes,FY1982,36779428
+Excise taxes,FY1983,35765538
+Excise taxes,FY1984,38017486
+Excise taxes,FY1985,37004944
+Excise taxes,FY1986,33672086
+Excise taxes,FY1987,33310980
+Excise taxes,FY1988,25934040
+Excise taxes,FY1989,25977333
+Excise taxes,FY1990,27139445
+Excise taxes,FY1991,30451596
+Excise taxes,FY1992,33565587
+Excise taxes,FY1993,34962476
+Excise taxes,FY1994,43004794
+Excise taxes,FY1995,44980627
+Excise taxes,FY1996,42221611
+Excise taxes,FY1997,44805621
+Excise taxes,FY1998,45642716
+Excise taxes,FY1999,58585763
+Excise taxes,FY2000,54810895
+Excise taxes,FY2001,52418848
+Excise taxes,FY2002,52136835
+Excise taxes,FY2003,52771160
+Excise taxes,FY2004,54807225
+Excise taxes,FY2005,57252098
+Excise taxes,FY2006,57989543
+Excise taxes,FY2007,53049612
+Excise taxes,FY2008,51707840
+Excise taxes,FY2009,46631646
+Excise taxes,FY2010,47190057
+Excise taxes,FY2011,49337563
+Excise taxes,FY2012,56174937
+Excise taxes,FY2013,61033674
+Excise taxes,FY2014,71158076
+Excise taxes,FY2015,77201882
+Excise taxes,FY2016,75832669
+Excise taxes,FY2017,63503608
+Excise taxes,FY2018,73718206
+Excise taxes,FY2019,80756624
+Excise taxes,FY2020,72059841
+Excise taxes,FY2021,58289822
+Excise taxes,FY2022,70679117
+Excise taxes,FY2023,74248765
+Excise taxes,FY2024,77947724
+Excise taxes,FY2025,90611934
+Gift tax,FY1960,187089
+Gift tax,FY1961,170912
+Gift tax,FY1962,238960
+Gift tax,FY1963,215843
+Gift tax,FY1964,305312
+Gift tax,FY1965,291201
+Gift tax,FY1966,446954
+Gift tax,FY1967,285826
+Gift tax,FY1968,371725
+Gift tax,FY1969,393373
+Gift tax,FY1970,438755
+Gift tax,FY1971,431642
+Gift tax,FY1972,363447
+Gift tax,FY1973,636938
+Gift tax,FY1974,440849
+Gift tax,FY1975,375421
+Gift tax,FY1976,431730
+Gift tax,FY1977,1775866
+Gift tax,FY1978,139419
+Gift tax,FY1979,174899
+Gift tax,FY1980,216134
+Gift tax,FY1981,215745
+Gift tax,FY1982,108038
+Gift tax,FY1983,148675
+Gift tax,FY1984,151682
+Gift tax,FY1985,276284
+Gift tax,FY1986,380538
+Gift tax,FY1987,502989
+Gift tax,FY1988,435766
+Gift tax,FY1989,829457
+Gift tax,FY1990,2128202
+Gift tax,FY1991,1235894
+Gift tax,FY1992,1067666
+Gift tax,FY1993,1457470
+Gift tax,FY1994,2106667
+Gift tax,FY1995,1818343
+Gift tax,FY1996,2241226
+Gift tax,FY1997,2760917
+Gift tax,FY1998,3316029
+Gift tax,FY1999,4758287
+Gift tax,FY2000,4103243
+Gift tax,FY2001,3958253
+Gift tax,FY2002,1709329
+Gift tax,FY2003,1939025
+Gift tax,FY2004,1449319
+Gift tax,FY2005,2040367
+Gift tax,FY2006,1970032
+Gift tax,FY2007,2420138
+Gift tax,FY2008,3280502
+Gift tax,FY2009,3094191
+Gift tax,FY2010,2820095
+Gift tax,FY2011,6572384
+Gift tax,FY2012,2109594
+Gift tax,FY2013,5778377
+Gift tax,FY2014,2582617
+Gift tax,FY2015,2089101
+Gift tax,FY2016,2457466
+Gift tax,FY2017,1948783
+Gift tax,FY2018,1201166
+Gift tax,FY2019,1563070
+Gift tax,FY2020,1082111
+Gift tax,FY2021,4620713
+Gift tax,FY2022,4445883
+Gift tax,FY2023,1654075
+Gift tax,FY2024,3451349
+Gift tax,FY2025,2974087
+"Income taxes, total",FY1960,67125126
+"Income taxes, total",FY1961,67917941
+"Income taxes, total",FY1962,71945305
+"Income taxes, total",FY1963,75323714
+"Income taxes, total",FY1964,78891218
+"Income taxes, total",FY1965,79792016
+"Income taxes, total",FY1966,92131794
+"Income taxes, total",FY1967,104288420
+"Income taxes, total",FY1968,108148565
+"Income taxes, total",FY1969,135778052
+"Income taxes, total",FY1970,138688568
+"Income taxes, total",FY1971,131072374
+"Income taxes, total",FY1972,143804732
+"Income taxes, total",FY1973,164157315
+"Income taxes, total",FY1974,184648094
+"Income taxes, total",FY1975,202146097
+"Income taxes, total",FY1976,205751753
+"Income taxes, total",FY1977,246805067
+"Income taxes, total",FY1978,278438289
+"Income taxes, total",FY1979,322993733
+"Income taxes, total",FY1980,359927392
+"Income taxes, total",FY1981,406583302
+"Income taxes, total",FY1982,418599768
+"Income taxes, total",FY1983,411407523
+"Income taxes, total",FY1984,437071049
+"Income taxes, total",FY1985,474072327
+"Income taxes, total",FY1986,497406391
+"Income taxes, total",FY1987,568311471
+"Income taxes, total",FY1988,583349120
+"Income taxes, total",FY1989,632746069
+"Income taxes, total",FY1990,650244947
+"Income taxes, total",FY1991,660475445
+"Income taxes, total",FY1992,675673952
+"Income taxes, total",FY1993,717321668
+"Income taxes, total",FY1994,774023837
+"Income taxes, total",FY1995,850201510
+"Income taxes, total",FY1996,934368068
+"Income taxes, total",FY1997,1029513216
+"Income taxes, total",FY1998,1141335868
+"Income taxes, total",FY1999,1218510654
+"Income taxes, total",FY2000,1372732596
+"Income taxes, total",FY2001,1364941523
+"Income taxes, total",FY2002,1249171681
+"Income taxes, total",FY2003,1181355176
+"Income taxes, total",FY2004,1220868119
+"Income taxes, total",FY2005,1414595831
+"Income taxes, total",FY2006,1617183944
+"Income taxes, total",FY2007,1761777263
+"Income taxes, total",FY2008,1780306008
+"Income taxes, total",FY2009,1415864347
+"Income taxes, total",FY2010,1453926748
+"Income taxes, total",FY2011,1589030349
+"Income taxes, total",FY2012,1669298095
+"Income taxes, total",FY2013,1876348448
+"Income taxes, total",FY2014,1996765080
+"Income taxes, total",FY2015,2183074421
+"Income taxes, total",FY2016,2161371562
+"Income taxes, total",FY2017,2205956951
+"Income taxes, total",FY2018,2234683225
+"Income taxes, total",FY2019,2258708451
+"Income taxes, total",FY2020,2134733934
+"Income taxes, total",FY2021,2767063065
+"Income taxes, total",FY2022,3379669998
+"Income taxes, total",FY2023,3018542376
+"Income taxes, total",FY2024,3328519117
+"Income taxes, total",FY2025,3497604748
+Individual income tax,FY1960,44945711
+Individual income tax,FY1961,46153001
+Individual income tax,FY1962,50649594
+Individual income tax,FY1963,52987581
+Individual income tax,FY1964,54590354
+Individual income tax,FY1965,53660683
+Individual income tax,FY1966,61297552
+Individual income tax,FY1967,69370595
+Individual income tax,FY1968,78252045
+Individual income tax,FY1969,97440406
+Individual income tax,FY1970,103651585
+Individual income tax,FY1971,100752421
+Individual income tax,FY1972,108879186
+Individual income tax,FY1973,125112006
+Individual income tax,FY1974,142903650
+Individual income tax,FY1975,156399437
+Individual income tax,FY1976,158968797
+Individual income tax,FY1977,186755263
+Individual income tax,FY1978,213058144
+Individual income tax,FY1979,251545857
+Individual income tax,FY1980,287547782
+Individual income tax,FY1981,332850146
+Individual income tax,FY1982,352608936
+Individual income tax,FY1983,349627967
+Individual income tax,FY1984,362891679
+Individual income tax,FY1985,396659558
+Individual income tax,FY1986,416964771
+Individual income tax,FY1987,465452486
+Individual income tax,FY1988,473666566
+Individual income tax,FY1989,515731504
+Individual income tax,FY1990,540228408
+Individual income tax,FY1991,546876876
+Individual income tax,FY1992,557723156
+Individual income tax,FY1993,585774159
+Individual income tax,FY1994,619819153
+Individual income tax,FY1995,675779337
+Individual income tax,FY1996,745313276
+Individual income tax,FY1997,825020880
+Individual income tax,FY1998,928065857
+Individual income tax,FY1999,1002185765
+Individual income tax,FY2000,1137077702
+Individual income tax,FY2001,1178209880
+Individual income tax,FY2002,1037733908
+Individual income tax,FY2003,987208878
+Individual income tax,FY2004,990248760
+Individual income tax,FY2005,1107500994
+Individual income tax,FY2006,1236259371
+Individual income tax,FY2007,1366241437
+Individual income tax,FY2008,1400405178
+Individual income tax,FY2009,1175421788
+Individual income tax,FY2010,1163687589
+Individual income tax,FY2011,1331160469
+Individual income tax,FY2012,1371402290
+Individual income tax,FY2013,1539658421
+Individual income tax,FY2014,1614213171
+Individual income tax,FY2015,1759740317
+Individual income tax,FY2016,1786123738
+Individual income tax,FY2017,1838403489
+Individual income tax,FY2018,1933485246
+Individual income tax,FY2019,1942182201
+Individual income tax,FY2020,1837443578
+Individual income tax,FY2021,2294050574
+Individual income tax,FY2022,2818638806
+Individual income tax,FY2023,2509351149
+Individual income tax,FY2024,2704613774
+Individual income tax,FY2025,2936641906
+Total internal revenue collections,FY1960,91774803
+Total internal revenue collections,FY1961,94401086
+Total internal revenue collections,FY1962,99440839
+Total internal revenue collections,FY1963,105925395
+Total internal revenue collections,FY1964,112260257
+Total internal revenue collections,FY1965,114434634
+Total internal revenue collections,FY1966,128879961
+Total internal revenue collections,FY1967,148374815
+Total internal revenue collections,FY1968,153636838
+Total internal revenue collections,FY1969,187919560
+Total internal revenue collections,FY1970,195722096
+Total internal revenue collections,FY1971,191647198
+Total internal revenue collections,FY1972,209855737
+Total internal revenue collections,FY1973,237787204
+Total internal revenue collections,FY1974,268952254
+Total internal revenue collections,FY1975,293822726
+Total internal revenue collections,FY1976,302519792
+Total internal revenue collections,FY1977,358139417
+Total internal revenue collections,FY1978,399776389
+Total internal revenue collections,FY1979,460412185
+Total internal revenue collections,FY1980,519375273
+Total internal revenue collections,FY1981,606799103
+Total internal revenue collections,FY1982,632240506
+Total internal revenue collections,FY1983,627246793
+Total internal revenue collections,FY1984,680475229
+Total internal revenue collections,FY1985,742871541
+Total internal revenue collections,FY1986,782251812
+Total internal revenue collections,FY1987,886290590
+Total internal revenue collections,FY1988,935106594
+Total internal revenue collections,FY1989,1013322133
+Total internal revenue collections,FY1990,1056365652
+Total internal revenue collections,FY1991,1086851401
+Total internal revenue collections,FY1992,1120799558
+Total internal revenue collections,FY1993,1176685625
+Total internal revenue collections,FY1994,1276466776
+Total internal revenue collections,FY1995,1375731835
+Total internal revenue collections,FY1996,1486546674
+Total internal revenue collections,FY1997,1623272071
+Total internal revenue collections,FY1998,1769408739
+Total internal revenue collections,FY1999,1904151888
+Total internal revenue collections,FY2000,2096916925
+Total internal revenue collections,FY2001,2128831182
+Total internal revenue collections,FY2002,2016627269
+Total internal revenue collections,FY2003,1952929045
+Total internal revenue collections,FY2004,2018502103
+Total internal revenue collections,FY2005,2268895122
+Total internal revenue collections,FY2006,2518680230
+Total internal revenue collections,FY2007,2691537557
+Total internal revenue collections,FY2008,2745035410
+Total internal revenue collections,FY2009,2345337177
+Total internal revenue collections,FY2010,2345055978
+Total internal revenue collections,FY2011,2414952112
+Total internal revenue collections,FY2012,2524320134
+Total internal revenue collections,FY2013,2855059420
+Total internal revenue collections,FY2014,3064301358
+Total internal revenue collections,FY2015,3302677258
+Total internal revenue collections,FY2016,3333449083
+Total internal revenue collections,FY2017,3416714139
+Total internal revenue collections,FY2018,3465466627
+Total internal revenue collections,FY2019,3564583961
+Total internal revenue collections,FY2020,3493067956
+Total internal revenue collections,FY2021,4111569512
+Total internal revenue collections,FY2022,4901514194
+Total internal revenue collections,FY2023,4694335168
+Total internal revenue collections,FY2024,5100489478
+Total internal revenue collections,FY2025,5313762307

@@ -1,0 +1,919 @@
+type,measure,value,year
+C or other corporation (FY2003-),Returns filed,2560000,2003
+C or other corporation (FY2003-),Returns filed,2540889,2004
+C or other corporation (FY2003-),Returns filed,2494145,2005
+C or other corporation (FY2003-),Returns filed,2453741,2006
+C or other corporation (FY2003-),Returns filed,2508000,2007
+C or other corporation (FY2003-),Returns filed,2538000,2008
+C or other corporation (FY2003-),Returns filed,2476000,2009
+C or other corporation (FY2003-),Returns filed,2356000,2010
+C or other corporation (FY2003-),Returns filed,2313000,2011
+C or other corporation (FY2003-),Returns filed,2263000,2012
+C or other corporation (FY2003-),Returns filed,2248000,2013
+C or other corporation (FY2003-),Returns filed,2221000,2014
+C or other corporation (FY2003-),Returns filed,2216000,2015
+C or other corporation (FY2003-),Returns filed,2208000,2016
+C or other corporation (FY2003-),Returns filed,2050182,2017
+C or other corporation (FY2003-),Returns filed,2127673,2018
+C or other corporation (FY2003-),Returns filed,2146904,2019
+C or other corporation (FY2003-),Returns filed,1819301,2020
+C or other corporation (FY2003-),Returns filed,2143717,2021
+C or other corporation (FY2003-),Returns filed,2260757,2022
+C or other corporation (FY2003-),Returns filed,2464836,2023
+C or other corporation (FY2003-),Returns filed,2252027,2024
+C or other corporation (FY2003-),Returns filed,2350205,2025
+Corporation (to FY2003),Returns filed,4630000,1994
+Corporation (to FY2003),Returns filed,4781000,1995
+Corporation (to FY2003),Returns filed,4874000,1996
+Corporation (to FY2003),Returns filed,5158000,1997
+Corporation (to FY2003),Returns filed,5311411,1998
+Corporation (to FY2003),Returns filed,5402864,1999
+Corporation (to FY2003),Returns filed,5458000,2000
+Corporation (to FY2003),Returns filed,5491000,2001
+Corporation (to FY2003),Returns filed,5711000,2002
+Corporation (to FY2003),Returns filed,5891000,2003
+Employee plans (to FY2002),Returns filed,1176000,1994
+Employee plans (to FY2002),Returns filed,1262000,1995
+Employee plans (to FY2002),Returns filed,855000,1996
+Employee plans (to FY2002),Returns filed,1337000,1997
+Employee plans (to FY2002),Returns filed,1661505,1998
+Employee plans (to FY2002),Returns filed,1414000,1999
+Employee plans (to FY2002),Returns filed,1164000,2000
+Employee plans (to FY2002),Returns filed,883000,2001
+Employee plans (to FY2002),Returns filed,0,2002
+Employment taxes,Returns filed,29225000,1994
+Employment taxes,Returns filed,29006000,1995
+Employment taxes,Returns filed,28562000,1996
+Employment taxes,Returns filed,28918000,1997
+Employment taxes,Returns filed,29273517,1998
+Employment taxes,Returns filed,29048000,1999
+Employment taxes,Returns filed,28911000,2000
+Employment taxes,Returns filed,28899000,2001
+Employment taxes,Returns filed,29141000,2002
+Employment taxes,Returns filed,29916000,2003
+Employment taxes,Returns filed,30429670.750000004,2004
+Employment taxes,Returns filed,30871575,2005
+Employment taxes,Returns filed,31182071,2006
+Employment taxes,Returns filed,30740000,2007
+Employment taxes,Returns filed,30683000,2008
+Employment taxes,Returns filed,30223000,2009
+Employment taxes,Returns filed,29787000,2010
+Employment taxes,Returns filed,29446000,2011
+Employment taxes,Returns filed,29590000,2012
+Employment taxes,Returns filed,29958000,2013
+Employment taxes,Returns filed,30066000,2014
+Employment taxes,Returns filed,30196000,2015
+Employment taxes,Returns filed,30460000,2016
+Employment taxes,Returns filed,30680601,2017
+Employment taxes,Returns filed,30942654,2018
+Employment taxes,Returns filed,31566173,2019
+Employment taxes,Returns filed,28028002,2020
+Employment taxes,Returns filed,33865353,2021
+Employment taxes,Returns filed,31180674,2022
+Employment taxes,Returns filed,36286127,2023
+Employment taxes,Returns filed,33662190,2024
+Employment taxes,Returns filed,34143809,2025
+Estate and trust,Returns filed,3066000,1994
+Estate and trust,Returns filed,3187000,1995
+Estate and trust,Returns filed,3259000,1996
+Estate and trust,Returns filed,3310000,1997
+Estate and trust,Returns filed,3387880,1998
+Estate and trust,Returns filed,3390050,1999
+Estate and trust,Returns filed,3530000,2000
+Estate and trust,Returns filed,3868000,2001
+Estate and trust,Returns filed,3684000,2002
+Estate and trust,Returns filed,3688000,2003
+Estate and trust,Returns filed,3734651,2004
+Estate and trust,Returns filed,3684256,2005
+Estate and trust,Returns filed,3697436,2006
+Estate and trust,Returns filed,3718000,2007
+Estate and trust,Returns filed,3075000,2008
+Estate and trust,Returns filed,3143000,2009
+Estate and trust,Returns filed,3074000,2010
+Estate and trust,Returns filed,3106000,2011
+Estate and trust,Returns filed,3061000,2012
+Estate and trust,Returns filed,3192000,2013
+Estate and trust,Returns filed,3206000,2014
+Estate and trust,Returns filed,3203000,2015
+Estate and trust,Returns filed,3207000,2016
+Estate and trust,Returns filed,2994547,2017
+Estate and trust,Returns filed,3096806,2018
+Estate and trust,Returns filed,3116479,2019
+Estate and trust,Returns filed,2820317,2020
+Estate and trust,Returns filed,3241024,2021
+Estate and trust,Returns filed,2973224,2022
+Estate and trust,Returns filed,3370406,2023
+Estate and trust,Returns filed,3165460,2024
+Estate and trust,Returns filed,3187009,2025
+Estate and trust estimated tax,Returns filed,654000,1994
+Estate and trust estimated tax,Returns filed,583000,1995
+Estate and trust estimated tax,Returns filed,664000,1996
+Estate and trust estimated tax,Returns filed,814000,1997
+Estate and trust estimated tax,Returns filed,1028334,1998
+Estate and trust estimated tax,Returns filed,914022,1999
+Estate and trust estimated tax,Returns filed,892000,2000
+Estate and trust estimated tax,Returns filed,885000,2001
+Estate and trust estimated tax,Returns filed,670000,2002
+Estate and trust estimated tax,Returns filed,633000,2003
+Estate and trust estimated tax,Returns filed,691526,2004
+Estate and trust estimated tax,Returns filed,502900,2005
+Estate and trust estimated tax,Returns filed,638524,2006
+Estate and trust estimated tax,Returns filed,780000,2007
+Estate and trust estimated tax,Returns filed,922000,2008
+Estate and trust estimated tax,Returns filed,542000,2009
+Estate and trust estimated tax,Returns filed,343000,2010
+Estate and trust estimated tax,Returns filed,382000,2011
+Estate and trust estimated tax,Returns filed,400000,2012
+Estate and trust estimated tax,Returns filed,541000,2013
+Estate and trust estimated tax,Returns filed,618000,2014
+Estate and trust estimated tax,Returns filed,748000,2015
+Estate and trust estimated tax,Returns filed,646000,2016
+Estate and trust estimated tax,Returns filed,552691,2017
+Estate and trust estimated tax,Returns filed,696167,2018
+Estate and trust estimated tax,Returns filed,754655,2019
+Estate and trust estimated tax,Returns filed,633707,2020
+Estate and trust estimated tax,Returns filed,644024,2021
+Estate and trust estimated tax,Returns filed,794141,2022
+Estate and trust estimated tax,Returns filed,550179,2023
+Estate and trust estimated tax,Returns filed,588398,2024
+Estate and trust estimated tax,Returns filed,755971,2025
+Estate tax,Returns filed,78000,1994
+Estate tax,Returns filed,83000,1995
+Estate tax,Returns filed,86000,1996
+Estate tax,Returns filed,97000,1997
+Estate tax,Returns filed,108710,1998
+Estate tax,Returns filed,117000,1999
+Estate tax,Returns filed,121000,2000
+Estate tax,Returns filed,122000,2001
+Estate tax,Returns filed,121000,2002
+Estate tax,Returns filed,92000,2003
+Estate tax,Returns filed,73340,2004
+Estate tax,Returns filed,65703,2005
+Estate tax,Returns filed,58279,2006
+Estate tax,Returns filed,50000,2007
+Estate tax,Returns filed,46000,2008
+Estate tax,Returns filed,47000,2009
+Estate tax,Returns filed,29000,2010
+Estate tax,Returns filed,11000,2011
+Estate tax,Returns filed,27000,2012
+Estate tax,Returns filed,32000,2013
+Estate tax,Returns filed,34000,2014
+Estate tax,Returns filed,36000,2015
+Estate tax,Returns filed,36000,2016
+Estate tax,Returns filed,34340,2017
+Estate tax,Returns filed,34092,2018
+Estate tax,Returns filed,25742,2019
+Estate tax,Returns filed,15023,2020
+Estate tax,Returns filed,28473,2021
+Estate tax,Returns filed,27088,2022
+Estate tax,Returns filed,49633,2023
+Estate tax,Returns filed,31516,2024
+Estate tax,Returns filed,28495,2025
+Excise taxes,Returns filed,852000,1994
+Excise taxes,Returns filed,787000,1995
+Excise taxes,Returns filed,765000,1996
+Excise taxes,Returns filed,821000,1997
+Excise taxes,Returns filed,815002,1998
+Excise taxes,Returns filed,762000,1999
+Excise taxes,Returns filed,916000,2000
+Excise taxes,Returns filed,765000,2001
+Excise taxes,Returns filed,885000,2002
+Excise taxes,Returns filed,812000,2003
+Excise taxes,Returns filed,647263,2004
+Excise taxes,Returns filed,1063649,2005
+Excise taxes,Returns filed,942145,2006
+Excise taxes,Returns filed,907000,2007
+Excise taxes,Returns filed,865000,2008
+Excise taxes,Returns filed,809000,2009
+Excise taxes,Returns filed,837000,2010
+Excise taxes,Returns filed,522000,2011
+Excise taxes,Returns filed,1197000,2012
+Excise taxes,Returns filed,909000,2013
+Excise taxes,Returns filed,987000,2014
+Excise taxes,Returns filed,1025000,2015
+Excise taxes,Returns filed,1015000,2016
+Excise taxes,Returns filed,1018165,2017
+Excise taxes,Returns filed,1049493,2018
+Excise taxes,Returns filed,1073183,2019
+Excise taxes,Returns filed,902342,2020
+Excise taxes,Returns filed,1276921,2021
+Excise taxes,Returns filed,1166197,2022
+Excise taxes,Returns filed,1241344,2023
+Excise taxes,Returns filed,1174267,2024
+Excise taxes,Returns filed,1173356,2025
+Form 1040 (to FY2000),Returns filed,68138000,1994
+Form 1040 (to FY2000),Returns filed,67950000,1995
+Form 1040 (to FY2000),Returns filed,66183000,1996
+Form 1040 (to FY2000),Returns filed,68345000,1997
+Form 1040 (to FY2000),Returns filed,71245852,1998
+Form 1040 (to FY2000),Returns filed,74878470,1999
+Form 1040 (to FY2000),Returns filed,71460000,2000
+Form 1040A (to FY2000),Returns filed,23310000,1994
+Form 1040A (to FY2000),Returns filed,24773000,1995
+Form 1040A (to FY2000),Returns filed,23306000,1996
+Form 1040A (to FY2000),Returns filed,22715000,1997
+Form 1040A (to FY2000),Returns filed,22720815,1998
+Form 1040A (to FY2000),Returns filed,23078374,1999
+Form 1040A (to FY2000),Returns filed,28563000,2000
+Form 1040EZ (to FY2000),Returns filed,18895000,1994
+Form 1040EZ (to FY2000),Returns filed,20271000,1995
+Form 1040EZ (to FY2000),Returns filed,21425000,1996
+Form 1040EZ (to FY2000),Returns filed,20896000,1997
+Form 1040EZ (to FY2000),Returns filed,21071596,1998
+Form 1040EZ (to FY2000),Returns filed,20238165,1999
+Form 1040EZ (to FY2000),Returns filed,21861000,2000
+Gift tax,Returns filed,214000,1994
+Gift tax,Returns filed,215000,1995
+Gift tax,Returns filed,226000,1996
+Gift tax,Returns filed,251000,1997
+Gift tax,Returns filed,257721.99999999997,1998
+Gift tax,Returns filed,286000,1999
+Gift tax,Returns filed,305000,2000
+Gift tax,Returns filed,304000,2001
+Gift tax,Returns filed,279000,2002
+Gift tax,Returns filed,287000,2003
+Gift tax,Returns filed,249019,2004
+Gift tax,Returns filed,276570,2005
+Gift tax,Returns filed,255651,2006
+Gift tax,Returns filed,253000,2007
+Gift tax,Returns filed,252000,2008
+Gift tax,Returns filed,245000,2009
+Gift tax,Returns filed,230000,2010
+Gift tax,Returns filed,208000,2011
+Gift tax,Returns filed,249000,2012
+Gift tax,Returns filed,313000,2013
+Gift tax,Returns filed,335000,2014
+Gift tax,Returns filed,238000,2015
+Gift tax,Returns filed,249000,2016
+Gift tax,Returns filed,244900,2017
+Gift tax,Returns filed,245584,2018
+Gift tax,Returns filed,239618,2019
+Gift tax,Returns filed,158095,2020
+Gift tax,Returns filed,282054,2021
+Gift tax,Returns filed,270142,2022
+Gift tax,Returns filed,516991,2023
+Gift tax,Returns filed,313197,2024
+Gift tax,Returns filed,311332,2025
+"Income tax returns, total",Returns filed,161009000,1994
+"Income tax returns, total",Returns filed,161898000,1995
+"Income tax returns, total",Returns filed,165297000,1996
+"Income tax returns, total",Returns filed,170431000,1997
+"Income tax returns, total",Returns filed,176966061,1998
+"Income tax returns, total",Returns filed,176128282,1999
+"Income tax returns, total",Returns filed,178747000,2000
+"Income tax returns, total",Returns filed,179631000,2001
+"Income tax returns, total",Returns filed,177022000,2002
+"Income tax returns, total",Returns filed,171909000,2003
+"Income tax returns, total",Returns filed,173320392,2004
+"Income tax returns, total",Returns filed,174493897,2005
+"Income tax returns, total",Returns filed,177403539,2006
+"Income tax returns, total",Returns filed,183091000,2007
+"Income tax returns, total",Returns filed,197409000,2008
+"Income tax returns, total",Returns filed,182522000,2009
+"Income tax returns, total",Returns filed,178347000,2010
+"Income tax returns, total",Returns filed,180752000,2011
+"Income tax returns, total",Returns filed,182332000,2012
+"Income tax returns, total",Returns filed,185035000,2013
+"Income tax returns, total",Returns filed,185540000,2014
+"Income tax returns, total",Returns filed,187730000,2015
+"Income tax returns, total",Returns filed,188711000,2016
+"Income tax returns, total",Returns filed,187407264,2017
+"Income tax returns, total",Returns filed,190613300,2018
+"Income tax returns, total",Returns filed,191471082,2019
+"Income tax returns, total",Returns filed,189562923,2020
+"Income tax returns, total",Returns filed,197225579,2021
+"Income tax returns, total",Returns filed,189448392,2022
+"Income tax returns, total",Returns filed,192332006,2023
+"Income tax returns, total",Returns filed,190316136,2024
+"Income tax returns, total",Returns filed,193733779,2025
+Individual estimated tax,Returns filed,36221000,1994
+Individual estimated tax,Returns filed,35475000,1995
+Individual estimated tax,Returns filed,36044000,1996
+Individual estimated tax,Returns filed,38634000,1997
+Individual estimated tax,Returns filed,42412730,1998
+Individual estimated tax,Returns filed,39227680,1999
+Individual estimated tax,Returns filed,39230000,2000
+Individual estimated tax,Returns filed,37470000,2001
+Individual estimated tax,Returns filed,33817000,2002
+Individual estimated tax,Returns filed,28588000,2003
+Individual estimated tax,Returns filed,29026851,2004
+Individual estimated tax,Returns filed,28669403,2005
+Individual estimated tax,Returns filed,30098907,2006
+Individual estimated tax,Returns filed,29996000,2007
+Individual estimated tax,Returns filed,28782000,2008
+Individual estimated tax,Returns filed,24197000,2009
+Individual estimated tax,Returns filed,23390000,2010
+Individual estimated tax,Returns filed,23224000,2011
+Individual estimated tax,Returns filed,22158000,2012
+Individual estimated tax,Returns filed,24806000,2013
+Individual estimated tax,Returns filed,23608000,2014
+Individual estimated tax,Returns filed,24122000,2015
+Individual estimated tax,Returns filed,23101000,2016
+Individual estimated tax,Returns filed,22230026,2017
+Individual estimated tax,Returns filed,22387449,2018
+Individual estimated tax,Returns filed,22225590,2019
+Individual estimated tax,Returns filed,17579898,2020
+Individual estimated tax,Returns filed,13215644,2021
+Individual estimated tax,Returns filed,12682195,2022
+Individual estimated tax,Returns filed,11799634,2023
+Individual estimated tax,Returns filed,12076801,2024
+Individual estimated tax,Returns filed,13315355,2025
+Other individual returns (FY2000-),Returns filed,550000,2000
+Other individual returns (FY2000-),Returns filed,633000,2001
+Other individual returns (FY2000-),Returns filed,620000,2002
+Other individual returns (FY2000-),Returns filed,685000,2003
+Other individual returns (FY2000-),Returns filed,719101,2004
+Other individual returns (FY2000-),Returns filed,739717,2005
+Other individual returns (FY2000-),Returns filed,745710,2006
+Other individual returns (FY2000-),Returns filed,763000,2007
+Other individual returns (FY2000-),Returns filed,1038000,2008
+Other individual returns (FY2000-),Returns filed,1120000,2009
+Other individual returns (FY2000-),Returns filed,860000,2010
+Other individual returns (FY2000-),Returns filed,826000,2011
+Other individual returns (FY2000-),Returns filed,844000,2012
+Other individual returns (FY2000-),Returns filed,872000,2013
+Other individual returns (FY2000-),Returns filed,877000,2014
+Other individual returns (FY2000-),Returns filed,858000,2015
+Other individual returns (FY2000-),Returns filed,907000,2016
+Other individual returns (FY2000-),Returns filed,853003,2017
+Other individual returns (FY2000-),Returns filed,1003266,2018
+Other individual returns (FY2000-),Returns filed,963873,2019
+Other individual returns (FY2000-),Returns filed,615179,2020
+Other individual returns (FY2000-),Returns filed,1012280,2021
+Other individual returns (FY2000-),Returns filed,924847,2022
+Other individual returns (FY2000-),Returns filed,1343410,2023
+Other individual returns (FY2000-),Returns filed,1201663,2024
+Other individual returns (FY2000-),Returns filed,1289488,2025
+"Other individual returns, incl. 1040PC (to FY2000)",Returns filed,4546000,1994
+"Other individual returns, incl. 1040PC (to FY2000)",Returns filed,3305000,1995
+"Other individual returns, incl. 1040PC (to FY2000)",Returns filed,7919000,1996
+"Other individual returns, incl. 1040PC (to FY2000)",Returns filed,8789000,1997
+"Other individual returns, incl. 1040PC (to FY2000)",Returns filed,7961706,1998
+"Other individual returns, incl. 1040PC (to FY2000)",Returns filed,7032223,1999
+"Other individual returns, incl. 1040PC (to FY2000)",Returns filed,5707000,2000
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,127041000,2000
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,129150000,2001
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,130285000,2002
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,130043000,2003
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,130582596,2004
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,132104915,2005
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,133171358,2006
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,138131000,2007
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,153308000,2008
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,142983000,2009
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,140307000,2010
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,142782000,2011
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,145400000,2012
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,145125000,2013
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,146568000,2014
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,147983000,2015
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,149804000,2016
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,149837784,2017
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,151934683,2018
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,153130682,2019
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,156580123,2020
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,166902984,2021
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,159646520,2022
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,161803524,2023
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,159851009,2024
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Returns filed,161465322,2025
+"Individual income tax returns, total",Returns filed,114889000,1994
+"Individual income tax returns, total",Returns filed,116298000,1995
+"Individual income tax returns, total",Returns filed,118833000,1996
+"Individual income tax returns, total",Returns filed,120745000,1997
+"Individual income tax returns, total",Returns filed,122999969,1998
+"Individual income tax returns, total",Returns filed,125227232,1999
+"Individual income tax returns, total",Returns filed,127590000,2000
+"Individual income tax returns, total",Returns filed,129783000,2001
+"Individual income tax returns, total",Returns filed,130905000,2002
+"Individual income tax returns, total",Returns filed,130728000,2003
+"Individual income tax returns, total",Returns filed,131301697,2004
+"Individual income tax returns, total",Returns filed,132844632,2005
+"Individual income tax returns, total",Returns filed,133917068,2006
+"Individual income tax returns, total",Returns filed,138894000,2007
+"Individual income tax returns, total",Returns filed,154346000,2008
+"Individual income tax returns, total",Returns filed,144103000,2009
+"Individual income tax returns, total",Returns filed,141167000,2010
+"Individual income tax returns, total",Returns filed,143608000,2011
+"Individual income tax returns, total",Returns filed,146244000,2012
+"Individual income tax returns, total",Returns filed,145996000,2013
+"Individual income tax returns, total",Returns filed,147445000,2014
+"Individual income tax returns, total",Returns filed,148841000,2015
+"Individual income tax returns, total",Returns filed,150711000,2016
+"Individual income tax returns, total",Returns filed,150690787,2017
+"Individual income tax returns, total",Returns filed,152937949,2018
+"Individual income tax returns, total",Returns filed,154094555,2019
+"Individual income tax returns, total",Returns filed,157195302,2020
+"Individual income tax returns, total",Returns filed,167915264,2021
+"Individual income tax returns, total",Returns filed,160571367,2022
+"Individual income tax returns, total",Returns filed,163146934,2023
+"Individual income tax returns, total",Returns filed,161052672,2024
+"Individual income tax returns, total",Returns filed,162754810,2025
+Partnership,Returns filed,1550000,1994
+Partnership,Returns filed,1572000,1995
+Partnership,Returns filed,1623000,1996
+Partnership,Returns filed,1770000,1997
+Partnership,Returns filed,1825737,1998
+Partnership,Returns filed,1966434,1999
+Partnership,Returns filed,2048000,2000
+Partnership,Returns filed,2134000,2001
+Partnership,Returns filed,2236000,2002
+Partnership,Returns filed,2381000,2003
+Partnership,Returns filed,2520846,2004
+Partnership,Returns filed,2664585,2005
+Partnership,Returns filed,2773205,2006
+Partnership,Returns filed,3097000,2007
+Partnership,Returns filed,3307000,2008
+Partnership,Returns filed,3565000,2009
+Partnership,Returns filed,3509000,2010
+Partnership,Returns filed,3574000,2011
+Partnership,Returns filed,3626000,2012
+Partnership,Returns filed,3686000,2013
+Partnership,Returns filed,3799000,2014
+Partnership,Returns filed,3883000,2015
+Partnership,Returns filed,4006000,2016
+Partnership,Returns filed,4046325,2017
+Partnership,Returns filed,4239198,2018
+Partnership,Returns filed,3946342,2019
+Partnership,Returns filed,4470095,2020
+Partnership,Returns filed,4710457,2021
+Partnership,Returns filed,4582871,2022
+Partnership,Returns filed,5117987,2023
+Partnership,Returns filed,5100408,2024
+Partnership,Returns filed,5215815,2025
+S corporation (FY2003-),Returns filed,3330000,2003
+S corporation (FY2003-),Returns filed,3503932,2004
+S corporation (FY2003-),Returns filed,3633976,2005
+S corporation (FY2003-),Returns filed,3824658,2006
+S corporation (FY2003-),Returns filed,4099000,2007
+S corporation (FY2003-),Returns filed,4440000,2008
+S corporation (FY2003-),Returns filed,4496000,2009
+S corporation (FY2003-),Returns filed,4508000,2010
+S corporation (FY2003-),Returns filed,4545000,2011
+S corporation (FY2003-),Returns filed,4580000,2012
+S corporation (FY2003-),Returns filed,4566000,2013
+S corporation (FY2003-),Returns filed,4643000,2014
+S corporation (FY2003-),Returns filed,4717000,2015
+S corporation (FY2003-),Returns filed,4832000,2016
+S corporation (FY2003-),Returns filed,4842706,2017
+S corporation (FY2003-),Returns filed,5128058,2018
+S corporation (FY2003-),Returns filed,5186557,2019
+S corporation (FY2003-),Returns filed,5044303,2020
+S corporation (FY2003-),Returns filed,5355449,2021
+S corporation (FY2003-),Returns filed,5583837,2022
+S corporation (FY2003-),Returns filed,5882030,2023
+S corporation (FY2003-),Returns filed,6080370,2024
+S corporation (FY2003-),Returns filed,6154614,2025
+Supplemental documents,Returns filed,11898000,1994
+Supplemental documents,Returns filed,11937000,1995
+Supplemental documents,Returns filed,12573000,1996
+Supplemental documents,Returns filed,14048000,1997
+Supplemental documents,Returns filed,14694826,1998
+Supplemental documents,Returns filed,15873000,1999
+Supplemental documents,Returns filed,15260000,2000
+Supplemental documents,Returns filed,16609000,2001
+Supplemental documents,Returns filed,18413000,2002
+Supplemental documents,Returns filed,18465000,2003
+Supplemental documents,Returns filed,18876994,2004
+Supplemental documents,Returns filed,19090135,2005
+Supplemental documents,Returns filed,17470645,2006
+Supplemental documents,Returns filed,19496000,2007
+Supplemental documents,Returns filed,20221000,2008
+Supplemental documents,Returns filed,21525000,2009
+Supplemental documents,Returns filed,19836000,2010
+Supplemental documents,Returns filed,22243000,2011
+Supplemental documents,Returns filed,22583000,2012
+Supplemental documents,Returns filed,22365000,2013
+Supplemental documents,Returns filed,21446000,2014
+Supplemental documents,Returns filed,22445000,2015
+Supplemental documents,Returns filed,22275000,2016
+Supplemental documents,Returns filed,24497831,2017
+Supplemental documents,Returns filed,25832784,2018
+Supplemental documents,Returns filed,27069174,2019
+Supplemental documents,Returns filed,20133739,2020
+Supplemental documents,Returns filed,26616251,2021
+Supplemental documents,Returns filed,38984864,2022
+Supplemental documents,Returns filed,39268497,2023
+Supplemental documents,Returns filed,39316832,2024
+Supplemental documents,Returns filed,40253171,2025
+Tax-exempt organizations,Returns filed,522000,1994
+Tax-exempt organizations,Returns filed,560000,1995
+Tax-exempt organizations,Returns filed,573000,1996
+Tax-exempt organizations,Returns filed,607000,1997
+Tax-exempt organizations,Returns filed,675940,1998
+Tax-exempt organizations,Returns filed,677000,1999
+Tax-exempt organizations,Returns filed,707000,2000
+Tax-exempt organizations,Returns filed,715000,2001
+Tax-exempt organizations,Returns filed,748000,2002
+Tax-exempt organizations,Returns filed,789000,2003
+Tax-exempt organizations,Returns filed,796142,2004
+Tax-exempt organizations,Returns filed,815407,2005
+Tax-exempt organizations,Returns filed,832699.0000000001,2006
+Tax-exempt organizations,Returns filed,901000,2007
+Tax-exempt organizations,Returns filed,901000,2008
+Tax-exempt organizations,Returns filed,1132000,2009
+Tax-exempt organizations,Returns filed,1343000,2010
+Tax-exempt organizations,Returns filed,1385000,2011
+Tax-exempt organizations,Returns filed,1367000,2012
+Tax-exempt organizations,Returns filed,1463000,2013
+Tax-exempt organizations,Returns filed,1467000,2014
+Tax-exempt organizations,Returns filed,1580000,2015
+Tax-exempt organizations,Returns filed,1500000,2016
+Tax-exempt organizations,Returns filed,1528487,2017
+Tax-exempt organizations,Returns filed,1603499,2018
+Tax-exempt organizations,Returns filed,1590421,2019
+Tax-exempt organizations,Returns filed,1360719,2020
+Tax-exempt organizations,Returns filed,1722803,2021
+Tax-exempt organizations,Returns filed,1751682,2022
+Tax-exempt organizations,Returns filed,1789884,2023
+Tax-exempt organizations,Returns filed,1805833,2024
+Tax-exempt organizations,Returns filed,1798413,2025
+"United States, total",Returns filed,204975000,1994
+"United States, total",Returns filed,205747000,1995
+"United States, total",Returns filed,208938000,1996
+"United States, total",Returns filed,216510000,1997
+"United States, total",Returns filed,224453283,1998
+"United States, total",Returns filed,224304536.3761619,1999
+"United States, total",Returns filed,226130000,2000
+"United States, total",Returns filed,227929000,2001
+"United States, total",Returns filed,226609000,2002
+"United States, total",Returns filed,222271000,2003
+"United States, total",Returns filed,224392820.7499999,2004
+"United States, total",Returns filed,226676936.0000001,2005
+"United States, total",Returns filed,228145029,2006
+"United States, total",Returns filed,235438000,2007
+"United States, total",Returns filed,250379000,2008
+"United States, total",Returns filed,236503000,2009
+"United States, total",Returns filed,230409000,2010
+"United States, total",Returns filed,234567000,2011
+"United States, total",Returns filed,237345000,2012
+"United States, total",Returns filed,240076000,2013
+"United States, total",Returns filed,239875000,2014
+"United States, total",Returns filed,243249000,2015
+"United States, total",Returns filed,244246000,2016
+"United States, total",Returns filed,245411588,2017
+"United States, total",Returns filed,250321406,2018
+"United States, total",Returns filed,253035393,2019
+"United States, total",Returns filed,240160843,2020
+"United States, total",Returns filed,261017434,2021
+"United States, total",Returns filed,262829039,2022
+"United States, total",Returns filed,271484482,2023
+"United States, total",Returns filed,266619971,2024
+"United States, total",Returns filed,271442355,2025
+C or other corporation (FY2003-),Change from prior year,-1.8,2005
+C or other corporation (FY2003-),Change from prior year,-1.619953932108999,2006
+C or other corporation (FY2003-),Change from prior year,2.2,2007
+C or other corporation (FY2003-),Change from prior year,1.2,2008
+C or other corporation (FY2003-),Change from prior year,-2.4,2009
+C or other corporation (FY2003-),Change from prior year,-4.8,2010
+C or other corporation (FY2003-),Change from prior year,-1.8,2011
+C or other corporation (FY2003-),Change from prior year,-2.1616947686986596,2012
+C or other corporation (FY2003-),Change from prior year,-0.6628369421122404,2013
+C or other corporation (FY2003-),Change from prior year,-1.2,2014
+C or other corporation (FY2003-),Change from prior year,-0.2,2015
+C or other corporation (FY2003-),Change from prior year,-0.36101083032490977,2016
+C or other corporation (FY2003-),Change from prior year,-7.1,2017
+C or other corporation (FY2003-),Change from prior year,3.8,2018
+C or other corporation (FY2003-),Change from prior year,0.9,2019
+C or other corporation (FY2003-),Change from prior year,-15.3,2020
+C or other corporation (FY2003-),Change from prior year,17.8,2021
+C or other corporation (FY2003-),Change from prior year,5.5,2022
+C or other corporation (FY2003-),Change from prior year,9,2023
+C or other corporation (FY2003-),Change from prior year,-8.6,2024
+C or other corporation (FY2003-),Change from prior year,4.4,2025
+Employment taxes,Change from prior year,1.5,2005
+Employment taxes,Change from prior year,1.0057666316020455,2006
+Employment taxes,Change from prior year,-1.4,2007
+Employment taxes,Change from prior year,-0.2,2008
+Employment taxes,Change from prior year,-1.5,2009
+Employment taxes,Change from prior year,-1.4,2010
+Employment taxes,Change from prior year,-1.1,2011
+Employment taxes,Change from prior year,0.48903076818583174,2012
+Employment taxes,Change from prior year,1.2436633997972286,2013
+Employment taxes,Change from prior year,0.4,2014
+Employment taxes,Change from prior year,0.4,2015
+Employment taxes,Change from prior year,0.8742879851635978,2016
+Employment taxes,Change from prior year,0.7,2017
+Employment taxes,Change from prior year,0.9,2018
+Employment taxes,Change from prior year,2,2019
+Employment taxes,Change from prior year,-11.2,2020
+Employment taxes,Change from prior year,20.8,2021
+Employment taxes,Change from prior year,-7.9,2022
+Employment taxes,Change from prior year,16.4,2023
+Employment taxes,Change from prior year,-7.2,2024
+Employment taxes,Change from prior year,1.4,2025
+Estate and trust,Change from prior year,-1.3,2005
+Estate and trust,Change from prior year,0.35773844162838553,2006
+Estate and trust,Change from prior year,0.6,2007
+Estate and trust,Change from prior year,-17.3,2008
+Estate and trust,Change from prior year,2.2,2009
+Estate and trust,Change from prior year,-2.2,2010
+Estate and trust,Change from prior year,1,2011
+Estate and trust,Change from prior year,-1.4488087572440438,2012
+Estate and trust,Change from prior year,4.279647174126103,2013
+Estate and trust,Change from prior year,0.4,2014
+Estate and trust,Change from prior year,-0.1,2015
+Estate and trust,Change from prior year,0.1248829222603809,2016
+Estate and trust,Change from prior year,-6.6,2017
+Estate and trust,Change from prior year,3.4,2018
+Estate and trust,Change from prior year,0.6,2019
+Estate and trust,Change from prior year,-9.5,2020
+Estate and trust,Change from prior year,14.9,2021
+Estate and trust,Change from prior year,-8.3,2022
+Estate and trust,Change from prior year,13.4,2023
+Estate and trust,Change from prior year,-6.1,2024
+Estate and trust,Change from prior year,0.7,2025
+Estate and trust estimated tax,Change from prior year,-27.3,2005
+Estate and trust estimated tax,Change from prior year,26.96838337641679,2006
+Estate and trust estimated tax,Change from prior year,22.2,2007
+Estate and trust estimated tax,Change from prior year,18.2,2008
+Estate and trust estimated tax,Change from prior year,-41.2,2009
+Estate and trust estimated tax,Change from prior year,-36.7,2010
+Estate and trust estimated tax,Change from prior year,11.4,2011
+Estate and trust estimated tax,Change from prior year,4.712041884816754,2012
+Estate and trust estimated tax,Change from prior year,35.25,2013
+Estate and trust estimated tax,Change from prior year,14.2,2014
+Estate and trust estimated tax,Change from prior year,21,2015
+Estate and trust estimated tax,Change from prior year,-13.636363636363637,2016
+Estate and trust estimated tax,Change from prior year,-14.4,2017
+Estate and trust estimated tax,Change from prior year,26,2018
+Estate and trust estimated tax,Change from prior year,8.4,2019
+Estate and trust estimated tax,Change from prior year,-16,2020
+Estate and trust estimated tax,Change from prior year,1.6,2021
+Estate and trust estimated tax,Change from prior year,23.3,2022
+Estate and trust estimated tax,Change from prior year,-30.7,2023
+Estate and trust estimated tax,Change from prior year,6.9,2024
+Estate and trust estimated tax,Change from prior year,28.5,2025
+Estate tax,Change from prior year,-10.4,2005
+Estate tax,Change from prior year,-11.299331841772824,2006
+Estate tax,Change from prior year,-14.3,2007
+Estate tax,Change from prior year,-8,2008
+Estate tax,Change from prior year,2.2,2009
+Estate tax,Change from prior year,-38.3,2010
+Estate tax,Change from prior year,-62.1,2011
+Estate tax,Change from prior year,145.45454545454547,2012
+Estate tax,Change from prior year,18.51851851851852,2013
+Estate tax,Change from prior year,6.3,2014
+Estate tax,Change from prior year,5.9,2015
+Estate tax,Change from prior year,0,2016
+Estate tax,Change from prior year,-3.5,2017
+Estate tax,Change from prior year,-0.7,2018
+Estate tax,Change from prior year,-24.5,2019
+Estate tax,Change from prior year,-41.6,2020
+Estate tax,Change from prior year,89.5,2021
+Estate tax,Change from prior year,-4.9,2022
+Estate tax,Change from prior year,83.2,2023
+Estate tax,Change from prior year,-36.5,2024
+Estate tax,Change from prior year,-9.6,2025
+Excise taxes,Change from prior year,64.3,2005
+Excise taxes,Change from prior year,-11.423317278538308,2006
+Excise taxes,Change from prior year,-3.7,2007
+Excise taxes,Change from prior year,-4.6,2008
+Excise taxes,Change from prior year,-6.5,2009
+Excise taxes,Change from prior year,3.5,2010
+Excise taxes,Change from prior year,-37.6,2011
+Excise taxes,Change from prior year,129.31034482758622,2012
+Excise taxes,Change from prior year,-24.06015037593985,2013
+Excise taxes,Change from prior year,8.6,2014
+Excise taxes,Change from prior year,3.9,2015
+Excise taxes,Change from prior year,-0.975609756097561,2016
+Excise taxes,Change from prior year,0.3,2017
+Excise taxes,Change from prior year,3.1,2018
+Excise taxes,Change from prior year,2.3,2019
+Excise taxes,Change from prior year,-15.9,2020
+Excise taxes,Change from prior year,41.5,2021
+Excise taxes,Change from prior year,-10.4,2022
+Excise taxes,Change from prior year,6.4,2023
+Excise taxes,Change from prior year,-5.4,2024
+Excise taxes,Change from prior year,-0.1,2025
+Gift tax,Change from prior year,11.1,2005
+Gift tax,Change from prior year,-7.563727085367171,2006
+Gift tax,Change from prior year,-1.2,2007
+Gift tax,Change from prior year,-0.4,2008
+Gift tax,Change from prior year,-2.8,2009
+Gift tax,Change from prior year,-6.1,2010
+Gift tax,Change from prior year,-9.6,2011
+Gift tax,Change from prior year,19.71153846153846,2012
+Gift tax,Change from prior year,25.702811244979916,2013
+Gift tax,Change from prior year,7,2014
+Gift tax,Change from prior year,-29,2015
+Gift tax,Change from prior year,4.621848739495799,2016
+Gift tax,Change from prior year,-1.8,2017
+Gift tax,Change from prior year,0.3,2018
+Gift tax,Change from prior year,-2.4,2019
+Gift tax,Change from prior year,-34,2020
+Gift tax,Change from prior year,78.4,2021
+Gift tax,Change from prior year,-4.2,2022
+Gift tax,Change from prior year,91.4,2023
+Gift tax,Change from prior year,-39.4,2024
+Gift tax,Change from prior year,-0.6,2025
+"Income tax returns, total",Change from prior year,0.7,2005
+"Income tax returns, total",Change from prior year,1.667474937533198,2006
+"Income tax returns, total",Change from prior year,3.2,2007
+"Income tax returns, total",Change from prior year,7.8,2008
+"Income tax returns, total",Change from prior year,-7.5,2009
+"Income tax returns, total",Change from prior year,-2.3,2010
+"Income tax returns, total",Change from prior year,1.3,2011
+"Income tax returns, total",Change from prior year,0.8741258741258742,2012
+"Income tax returns, total",Change from prior year,1.4824605664392427,2013
+"Income tax returns, total",Change from prior year,0.3,2014
+"Income tax returns, total",Change from prior year,1.2,2015
+"Income tax returns, total",Change from prior year,0.5225589943003249,2016
+"Income tax returns, total",Change from prior year,-0.7,2017
+"Income tax returns, total",Change from prior year,1.7,2018
+"Income tax returns, total",Change from prior year,0.5,2019
+"Income tax returns, total",Change from prior year,-1,2020
+"Income tax returns, total",Change from prior year,4,2021
+"Income tax returns, total",Change from prior year,-3.9,2022
+"Income tax returns, total",Change from prior year,1.5,2023
+"Income tax returns, total",Change from prior year,-1,2024
+"Income tax returns, total",Change from prior year,1.8,2025
+Individual estimated tax,Change from prior year,-1.2,2005
+Individual estimated tax,Change from prior year,4.98616591353507,2006
+Individual estimated tax,Change from prior year,-0.3,2007
+Individual estimated tax,Change from prior year,-4,2008
+Individual estimated tax,Change from prior year,-15.9,2009
+Individual estimated tax,Change from prior year,-3.3,2010
+Individual estimated tax,Change from prior year,-0.7,2011
+Individual estimated tax,Change from prior year,-4.59007922838443,2012
+Individual estimated tax,Change from prior year,11.950537052080511,2013
+Individual estimated tax,Change from prior year,-4.8,2014
+Individual estimated tax,Change from prior year,2.2,2015
+Individual estimated tax,Change from prior year,-4.2326506923140705,2016
+Individual estimated tax,Change from prior year,-3.8,2017
+Individual estimated tax,Change from prior year,0.7,2018
+Individual estimated tax,Change from prior year,-0.7,2019
+Individual estimated tax,Change from prior year,-20.9,2020
+Individual estimated tax,Change from prior year,-24.8,2021
+Individual estimated tax,Change from prior year,-4,2022
+Individual estimated tax,Change from prior year,-7,2023
+Individual estimated tax,Change from prior year,2.3,2024
+Individual estimated tax,Change from prior year,10.3,2025
+Other individual returns (FY2000-),Change from prior year,2.9,2005
+Other individual returns (FY2000-),Change from prior year,0.8101747019468326,2006
+Other individual returns (FY2000-),Change from prior year,2.3,2007
+Other individual returns (FY2000-),Change from prior year,36,2008
+Other individual returns (FY2000-),Change from prior year,7.9,2009
+Other individual returns (FY2000-),Change from prior year,-23.2,2010
+Other individual returns (FY2000-),Change from prior year,-4,2011
+Other individual returns (FY2000-),Change from prior year,2.1791767554479415,2012
+Other individual returns (FY2000-),Change from prior year,3.3175355450236967,2013
+Other individual returns (FY2000-),Change from prior year,0.6,2014
+Other individual returns (FY2000-),Change from prior year,-2.2,2015
+Other individual returns (FY2000-),Change from prior year,5.710955710955711,2016
+Other individual returns (FY2000-),Change from prior year,-5.9,2017
+Other individual returns (FY2000-),Change from prior year,17.6,2018
+Other individual returns (FY2000-),Change from prior year,-3.9,2019
+Other individual returns (FY2000-),Change from prior year,-36.2,2020
+Other individual returns (FY2000-),Change from prior year,64.6,2021
+Other individual returns (FY2000-),Change from prior year,-8.6,2022
+Other individual returns (FY2000-),Change from prior year,45.3,2023
+Other individual returns (FY2000-),Change from prior year,-10.6,2024
+Other individual returns (FY2000-),Change from prior year,7.3,2025
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,1.2,2005
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,0.8072697370873744,2006
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,3.7,2007
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,11,2008
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,-6.7,2009
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,-1.9,2010
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,1.8,2011
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,1.833564454903279,2012
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,-0.1891334250343879,2013
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,1,2014
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,1,2015
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,1.2305467519917828,2016
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,0,2017
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,1.4,2018
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,0.8,2019
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,2.3,2020
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,6.6,2021
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,-4.4,2022
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,1.4,2023
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,-1.2,2024
+"Forms 1040, 1040A, 1040EZ and 1040PC (FY2000-)",Change from prior year,1,2025
+"Individual income tax returns, total",Change from prior year,1.2,2005
+"Individual income tax returns, total",Change from prior year,0.8072859127646097,2006
+"Individual income tax returns, total",Change from prior year,3.7,2007
+"Individual income tax returns, total",Change from prior year,11.1,2008
+"Individual income tax returns, total",Change from prior year,-6.6,2009
+"Individual income tax returns, total",Change from prior year,-2,2010
+"Individual income tax returns, total",Change from prior year,1.7,2011
+"Individual income tax returns, total",Change from prior year,1.8355523369171631,2012
+"Individual income tax returns, total",Change from prior year,-0.1695796066847187,2013
+"Individual income tax returns, total",Change from prior year,1,2014
+"Individual income tax returns, total",Change from prior year,0.9,2015
+"Individual income tax returns, total",Change from prior year,1.2563742517182763,2016
+"Individual income tax returns, total",Change from prior year,0,2017
+"Individual income tax returns, total",Change from prior year,1.5,2018
+"Individual income tax returns, total",Change from prior year,0.8,2019
+"Individual income tax returns, total",Change from prior year,2,2020
+"Individual income tax returns, total",Change from prior year,6.8,2021
+"Individual income tax returns, total",Change from prior year,-4.4,2022
+"Individual income tax returns, total",Change from prior year,1.6,2023
+"Individual income tax returns, total",Change from prior year,-1.3,2024
+"Individual income tax returns, total",Change from prior year,1.1,2025
+Partnership,Change from prior year,5.7,2005
+Partnership,Change from prior year,4.076432164858688,2006
+Partnership,Change from prior year,11.7,2007
+Partnership,Change from prior year,6.8,2008
+Partnership,Change from prior year,7.8,2009
+Partnership,Change from prior year,-1.6,2010
+Partnership,Change from prior year,1.9,2011
+Partnership,Change from prior year,1.454952434247342,2012
+Partnership,Change from prior year,1.654715940430226,2013
+Partnership,Change from prior year,3.1,2014
+Partnership,Change from prior year,2.2,2015
+Partnership,Change from prior year,3.1676538758691732,2016
+Partnership,Change from prior year,1,2017
+Partnership,Change from prior year,4.8,2018
+Partnership,Change from prior year,-6.9,2019
+Partnership,Change from prior year,13.3,2020
+Partnership,Change from prior year,5.4,2021
+Partnership,Change from prior year,-2.7,2022
+Partnership,Change from prior year,11.7,2023
+Partnership,Change from prior year,-0.3,2024
+Partnership,Change from prior year,2.3,2025
+S corporation (FY2003-),Change from prior year,3.7,2005
+S corporation (FY2003-),Change from prior year,5.247200311724672,2006
+S corporation (FY2003-),Change from prior year,7.2,2007
+S corporation (FY2003-),Change from prior year,8.3,2008
+S corporation (FY2003-),Change from prior year,1.3,2009
+S corporation (FY2003-),Change from prior year,0.3,2010
+S corporation (FY2003-),Change from prior year,0.8,2011
+S corporation (FY2003-),Change from prior year,0.77007700770077,2012
+S corporation (FY2003-),Change from prior year,-0.3056768558951965,2013
+S corporation (FY2003-),Change from prior year,1.7,2014
+S corporation (FY2003-),Change from prior year,1.6,2015
+S corporation (FY2003-),Change from prior year,2.4379902480390077,2016
+S corporation (FY2003-),Change from prior year,0.2,2017
+S corporation (FY2003-),Change from prior year,5.9,2018
+S corporation (FY2003-),Change from prior year,1.1,2019
+S corporation (FY2003-),Change from prior year,-2.7,2020
+S corporation (FY2003-),Change from prior year,6.2,2021
+S corporation (FY2003-),Change from prior year,4.3,2022
+S corporation (FY2003-),Change from prior year,5.3,2023
+S corporation (FY2003-),Change from prior year,3.4,2024
+S corporation (FY2003-),Change from prior year,1.2,2025
+Supplemental documents,Change from prior year,1.1,2005
+Supplemental documents,Change from prior year,-8.483386838280598,2006
+Supplemental documents,Change from prior year,11.6,2007
+Supplemental documents,Change from prior year,3.7,2008
+Supplemental documents,Change from prior year,6.5,2009
+Supplemental documents,Change from prior year,-7.8,2010
+Supplemental documents,Change from prior year,12.1,2011
+Supplemental documents,Change from prior year,1.524074989884458,2012
+Supplemental documents,Change from prior year,-0.9609423434593924,2013
+Supplemental documents,Change from prior year,-4.1,2014
+Supplemental documents,Change from prior year,4.7,2015
+Supplemental documents,Change from prior year,-0.7574069948763644,2016
+Supplemental documents,Change from prior year,10,2017
+Supplemental documents,Change from prior year,5.4,2018
+Supplemental documents,Change from prior year,4.8,2019
+Supplemental documents,Change from prior year,-25.6,2020
+Supplemental documents,Change from prior year,32.2,2021
+Supplemental documents,Change from prior year,12.8,2022
+Supplemental documents,Change from prior year,0.7,2023
+Supplemental documents,Change from prior year,0.1,2024
+Supplemental documents,Change from prior year,2.4,2025
+Tax-exempt organizations,Change from prior year,2.4,2005
+Tax-exempt organizations,Change from prior year,2.120658763047169,2006
+Tax-exempt organizations,Change from prior year,8.2,2007
+Tax-exempt organizations,Change from prior year,0,2008
+Tax-exempt organizations,Change from prior year,25.6,2009
+Tax-exempt organizations,Change from prior year,18.6,2010
+Tax-exempt organizations,Change from prior year,3.1,2011
+Tax-exempt organizations,Change from prior year,-1.2996389891696751,2012
+Tax-exempt organizations,Change from prior year,7.022677395757132,2013
+Tax-exempt organizations,Change from prior year,0.3,2014
+Tax-exempt organizations,Change from prior year,7.7,2015
+Tax-exempt organizations,Change from prior year,-5.063291139240507,2016
+Tax-exempt organizations,Change from prior year,1.9,2017
+Tax-exempt organizations,Change from prior year,4.9,2018
+Tax-exempt organizations,Change from prior year,-0.8,2019
+Tax-exempt organizations,Change from prior year,-14.4,2020
+Tax-exempt organizations,Change from prior year,26.6,2021
+Tax-exempt organizations,Change from prior year,-0.3,2022
+Tax-exempt organizations,Change from prior year,2.2,2023
+Tax-exempt organizations,Change from prior year,0.9,2024
+Tax-exempt organizations,Change from prior year,-0.4,2025
+"United States, total",Change from prior year,1,2005
+"United States, total",Change from prior year,0.6476587454843504,2006
+"United States, total",Change from prior year,3.2,2007
+"United States, total",Change from prior year,6.3,2008
+"United States, total",Change from prior year,-5.5,2009
+"United States, total",Change from prior year,-2.6,2010
+"United States, total",Change from prior year,1.8,2011
+"United States, total",Change from prior year,1.184309813400862,2012
+"United States, total",Change from prior year,1.1506456845520234,2013
+"United States, total",Change from prior year,-0.1,2014
+"United States, total",Change from prior year,1.4,2015
+"United States, total",Change from prior year,0.4098680775666087,2016
+"United States, total",Change from prior year,0.5,2017
+"United States, total",Change from prior year,2,2018
+"United States, total",Change from prior year,1.1,2019
+"United States, total",Change from prior year,-5.1,2020
+"United States, total",Change from prior year,8.7,2021
+"United States, total",Change from prior year,-2.3,2022
+"United States, total",Change from prior year,3.3,2023
+"United States, total",Change from prior year,-1.8,2024
+"United States, total",Change from prior year,1.8,2025

@@ -1,0 +1,540 @@
+time,series,value,variant,source_book
+1994,"Individual income tax, millions",114.889,levels,1995
+1995,"Individual income tax, millions",116.298,levels,1995
+1996,"Individual income tax, millions",118.833,levels,1996
+1997,"Individual income tax, millions",120.745,levels,1997
+1998,"Individual income tax, millions",122.999969,levels,1998
+1999,"Individual income tax, millions",125.227232,levels,1999
+2000,"Individual income tax, millions",127.59,levels,2000
+2001,"Individual income tax, millions",129.783,levels,2001
+2002,"Individual income tax, millions",130.905,levels,2002
+2003,"Individual income tax, millions",130.728,levels,2003
+2004,"Individual income tax, millions",131.301697,levels,2004
+2005,"Individual income tax, millions",132.844632,levels,2005
+2006,"Individual income tax, millions",133.917068,levels,2006
+2007,"Individual income tax, millions",138.894,levels,2007
+2008,"Individual income tax, millions",154.346,levels,2008
+2009,"Individual income tax, millions",144.103,levels,2009
+2010,"Individual income tax, millions",141.167,levels,2010
+2011,"Individual income tax, millions",143.608,levels,2011
+2012,"Individual income tax, millions",146.244,levels,2012
+2013,"Individual income tax, millions",145.996,levels,2013
+2014,"Individual income tax, millions",147.445,levels,2014
+2015,"Individual income tax, millions",148.841,levels,2015
+2016,"Individual income tax, millions",150.711,levels,2016
+2017,"Individual income tax, millions",150.690787,levels,2017
+2018,"Individual income tax, millions",152.937949,levels,2018
+2019,"Individual income tax, millions",154.094555,levels,2019
+2020,"Individual income tax, millions",157.195302,levels,2020
+2021,"Individual income tax, millions",167.915264,levels,2021
+2022,"Individual income tax, millions",160.571367,levels,2022
+2023,"Individual income tax, millions",163.146934,levels,2023
+2024,"Individual income tax, millions",161.052672,levels,2024
+2025,"Individual income tax, millions",162.75481,levels,2025
+1994,"Employment tax, millions",29.225,levels,1995
+1995,"Employment tax, millions",29.006,levels,1995
+1996,"Employment tax, millions",28.562,levels,1996
+1997,"Employment tax, millions",28.918,levels,1997
+1998,"Employment tax, millions",29.273517,levels,1998
+1999,"Employment tax, millions",29.048,levels,1999
+2000,"Employment tax, millions",28.911,levels,2000
+2001,"Employment tax, millions",28.899,levels,2001
+2002,"Employment tax, millions",29.141,levels,2002
+2003,"Employment tax, millions",29.916,levels,2003
+2004,"Employment tax, millions",30.429670750000003,levels,2004
+2005,"Employment tax, millions",30.871575,levels,2005
+2006,"Employment tax, millions",31.182071,levels,2006
+2007,"Employment tax, millions",30.74,levels,2007
+2008,"Employment tax, millions",30.683,levels,2008
+2009,"Employment tax, millions",30.223,levels,2009
+2010,"Employment tax, millions",29.787,levels,2010
+2011,"Employment tax, millions",29.446,levels,2011
+2012,"Employment tax, millions",29.59,levels,2012
+2013,"Employment tax, millions",29.958,levels,2013
+2014,"Employment tax, millions",30.066,levels,2014
+2015,"Employment tax, millions",30.196,levels,2015
+2016,"Employment tax, millions",30.46,levels,2016
+2017,"Employment tax, millions",30.680601,levels,2017
+2018,"Employment tax, millions",30.942654,levels,2018
+2019,"Employment tax, millions",31.566173,levels,2019
+2020,"Employment tax, millions",28.028002,levels,2020
+2021,"Employment tax, millions",33.865353,levels,2021
+2022,"Employment tax, millions",31.180674,levels,2022
+2023,"Employment tax, millions",36.286127,levels,2023
+2024,"Employment tax, millions",33.66219,levels,2024
+2025,"Employment tax, millions",34.143809,levels,2025
+1994,"Supplemental documents, millions",11.898,levels,1995
+1995,"Supplemental documents, millions",11.937,levels,1995
+1996,"Supplemental documents, millions",12.573,levels,1996
+1997,"Supplemental documents, millions",14.048,levels,1997
+1998,"Supplemental documents, millions",14.694826,levels,1998
+1999,"Supplemental documents, millions",15.873,levels,1999
+2000,"Supplemental documents, millions",15.26,levels,2000
+2001,"Supplemental documents, millions",16.609,levels,2001
+2002,"Supplemental documents, millions",18.413,levels,2002
+2003,"Supplemental documents, millions",18.465,levels,2003
+2004,"Supplemental documents, millions",18.876994,levels,2004
+2005,"Supplemental documents, millions",19.090135,levels,2005
+2006,"Supplemental documents, millions",17.470645,levels,2006
+2007,"Supplemental documents, millions",19.496,levels,2007
+2008,"Supplemental documents, millions",20.221,levels,2008
+2009,"Supplemental documents, millions",21.525,levels,2009
+2010,"Supplemental documents, millions",19.836,levels,2010
+2011,"Supplemental documents, millions",22.243,levels,2011
+2012,"Supplemental documents, millions",22.583,levels,2012
+2013,"Supplemental documents, millions",22.365,levels,2013
+2014,"Supplemental documents, millions",21.446,levels,2014
+2015,"Supplemental documents, millions",22.445,levels,2015
+2016,"Supplemental documents, millions",22.275,levels,2016
+2017,"Supplemental documents, millions",24.497831,levels,2017
+2018,"Supplemental documents, millions",25.832784,levels,2018
+2019,"Supplemental documents, millions",27.069174,levels,2019
+2020,"Supplemental documents, millions",20.133739,levels,2020
+2021,"Supplemental documents, millions",26.616251,levels,2021
+2022,"Supplemental documents, millions",38.984864,levels,2022
+2023,"Supplemental documents, millions",39.268497000000004,levels,2023
+2024,"Supplemental documents, millions",39.316832,levels,2024
+2025,"Supplemental documents, millions",40.253171,levels,2025
+1994,"Individual estimated tax, millions",36.221,levels,1995
+1995,"Individual estimated tax, millions",35.475,levels,1995
+1996,"Individual estimated tax, millions",36.044,levels,1996
+1997,"Individual estimated tax, millions",38.634,levels,1997
+1998,"Individual estimated tax, millions",42.41273,levels,1998
+1999,"Individual estimated tax, millions",39.22768,levels,1999
+2000,"Individual estimated tax, millions",39.23,levels,2000
+2001,"Individual estimated tax, millions",37.47,levels,2001
+2002,"Individual estimated tax, millions",33.817,levels,2002
+2003,"Individual estimated tax, millions",28.588,levels,2003
+2004,"Individual estimated tax, millions",29.026851,levels,2004
+2005,"Individual estimated tax, millions",28.669403,levels,2005
+2006,"Individual estimated tax, millions",30.098907,levels,2006
+2007,"Individual estimated tax, millions",29.996,levels,2007
+2008,"Individual estimated tax, millions",28.782,levels,2008
+2009,"Individual estimated tax, millions",24.197,levels,2009
+2010,"Individual estimated tax, millions",23.39,levels,2010
+2011,"Individual estimated tax, millions",23.224,levels,2011
+2012,"Individual estimated tax, millions",22.158,levels,2012
+2013,"Individual estimated tax, millions",24.806,levels,2013
+2014,"Individual estimated tax, millions",23.608,levels,2014
+2015,"Individual estimated tax, millions",24.122,levels,2015
+2016,"Individual estimated tax, millions",23.101,levels,2016
+2017,"Individual estimated tax, millions",22.230026,levels,2017
+2018,"Individual estimated tax, millions",22.387449,levels,2018
+2019,"Individual estimated tax, millions",22.22559,levels,2019
+2020,"Individual estimated tax, millions",17.579898,levels,2020
+2021,"Individual estimated tax, millions",13.215644,levels,2021
+2022,"Individual estimated tax, millions",12.682195,levels,2022
+2023,"Individual estimated tax, millions",11.799634,levels,2023
+2024,"Individual estimated tax, millions",12.076801,levels,2024
+2025,"Individual estimated tax, millions",13.315355,levels,2025
+1994,"Estate and trust, millions",3.066,levels,1995
+1995,"Estate and trust, millions",3.187,levels,1995
+1996,"Estate and trust, millions",3.259,levels,1996
+1997,"Estate and trust, millions",3.31,levels,1997
+1998,"Estate and trust, millions",3.38788,levels,1998
+1999,"Estate and trust, millions",3.39005,levels,1999
+2000,"Estate and trust, millions",3.53,levels,2000
+2001,"Estate and trust, millions",3.868,levels,2001
+2002,"Estate and trust, millions",3.684,levels,2002
+2003,"Estate and trust, millions",3.688,levels,2003
+2004,"Estate and trust, millions",3.734651,levels,2004
+2005,"Estate and trust, millions",3.684256,levels,2005
+2006,"Estate and trust, millions",3.697436,levels,2006
+2007,"Estate and trust, millions",3.718,levels,2007
+2008,"Estate and trust, millions",3.075,levels,2008
+2009,"Estate and trust, millions",3.143,levels,2009
+2010,"Estate and trust, millions",3.074,levels,2010
+2011,"Estate and trust, millions",3.106,levels,2011
+2012,"Estate and trust, millions",3.061,levels,2012
+2013,"Estate and trust, millions",3.192,levels,2013
+2014,"Estate and trust, millions",3.206,levels,2014
+2015,"Estate and trust, millions",3.203,levels,2015
+2016,"Estate and trust, millions",3.207,levels,2016
+2017,"Estate and trust, millions",2.994547,levels,2017
+2018,"Estate and trust, millions",3.096806,levels,2018
+2019,"Estate and trust, millions",3.116479,levels,2019
+2020,"Estate and trust, millions",2.820317,levels,2020
+2021,"Estate and trust, millions",3.241024,levels,2021
+2022,"Estate and trust, millions",2.973224,levels,2022
+2023,"Estate and trust, millions",3.370406,levels,2023
+2024,"Estate and trust, millions",3.16546,levels,2024
+2025,"Estate and trust, millions",3.187009,levels,2025
+1994,"Estate and trust estimated tax, millions",0.654,levels,1995
+1995,"Estate and trust estimated tax, millions",0.583,levels,1995
+1996,"Estate and trust estimated tax, millions",0.664,levels,1996
+1997,"Estate and trust estimated tax, millions",0.814,levels,1997
+1998,"Estate and trust estimated tax, millions",1.028334,levels,1998
+1999,"Estate and trust estimated tax, millions",0.914022,levels,1999
+2000,"Estate and trust estimated tax, millions",0.892,levels,2000
+2001,"Estate and trust estimated tax, millions",0.885,levels,2001
+2002,"Estate and trust estimated tax, millions",0.67,levels,2002
+2003,"Estate and trust estimated tax, millions",0.633,levels,2003
+2004,"Estate and trust estimated tax, millions",0.691526,levels,2004
+2005,"Estate and trust estimated tax, millions",0.5029,levels,2005
+2006,"Estate and trust estimated tax, millions",0.638524,levels,2006
+2007,"Estate and trust estimated tax, millions",0.78,levels,2007
+2008,"Estate and trust estimated tax, millions",0.922,levels,2008
+2009,"Estate and trust estimated tax, millions",0.542,levels,2009
+2010,"Estate and trust estimated tax, millions",0.343,levels,2010
+2011,"Estate and trust estimated tax, millions",0.382,levels,2011
+2012,"Estate and trust estimated tax, millions",0.4,levels,2012
+2013,"Estate and trust estimated tax, millions",0.541,levels,2013
+2014,"Estate and trust estimated tax, millions",0.618,levels,2014
+2015,"Estate and trust estimated tax, millions",0.748,levels,2015
+2016,"Estate and trust estimated tax, millions",0.646,levels,2016
+2017,"Estate and trust estimated tax, millions",0.552691,levels,2017
+2018,"Estate and trust estimated tax, millions",0.696167,levels,2018
+2019,"Estate and trust estimated tax, millions",0.754655,levels,2019
+2020,"Estate and trust estimated tax, millions",0.633707,levels,2020
+2021,"Estate and trust estimated tax, millions",0.644024,levels,2021
+2022,"Estate and trust estimated tax, millions",0.794141,levels,2022
+2023,"Estate and trust estimated tax, millions",0.550179,levels,2023
+2024,"Estate and trust estimated tax, millions",0.588398,levels,2024
+2025,"Estate and trust estimated tax, millions",0.755971,levels,2025
+1994,"Tax-exempt organizations, millions",0.522,levels,1995
+1995,"Tax-exempt organizations, millions",0.56,levels,1995
+1996,"Tax-exempt organizations, millions",0.573,levels,1996
+1997,"Tax-exempt organizations, millions",0.607,levels,1997
+1998,"Tax-exempt organizations, millions",0.67594,levels,1998
+1999,"Tax-exempt organizations, millions",0.677,levels,1999
+2000,"Tax-exempt organizations, millions",0.707,levels,2000
+2001,"Tax-exempt organizations, millions",0.715,levels,2001
+2002,"Tax-exempt organizations, millions",0.748,levels,2002
+2003,"Tax-exempt organizations, millions",0.789,levels,2003
+2004,"Tax-exempt organizations, millions",0.796142,levels,2004
+2005,"Tax-exempt organizations, millions",0.815407,levels,2005
+2006,"Tax-exempt organizations, millions",0.8326990000000001,levels,2006
+2007,"Tax-exempt organizations, millions",0.901,levels,2007
+2008,"Tax-exempt organizations, millions",0.901,levels,2008
+2009,"Tax-exempt organizations, millions",1.132,levels,2009
+2010,"Tax-exempt organizations, millions",1.343,levels,2010
+2011,"Tax-exempt organizations, millions",1.385,levels,2011
+2012,"Tax-exempt organizations, millions",1.367,levels,2012
+2013,"Tax-exempt organizations, millions",1.463,levels,2013
+2014,"Tax-exempt organizations, millions",1.467,levels,2014
+2015,"Tax-exempt organizations, millions",1.58,levels,2015
+2016,"Tax-exempt organizations, millions",1.5,levels,2016
+2017,"Tax-exempt organizations, millions",1.528487,levels,2017
+2018,"Tax-exempt organizations, millions",1.603499,levels,2018
+2019,"Tax-exempt organizations, millions",1.590421,levels,2019
+2020,"Tax-exempt organizations, millions",1.360719,levels,2020
+2021,"Tax-exempt organizations, millions",1.722803,levels,2021
+2022,"Tax-exempt organizations, millions",1.751682,levels,2022
+2023,"Tax-exempt organizations, millions",1.789884,levels,2023
+2024,"Tax-exempt organizations, millions",1.805833,levels,2024
+2025,"Tax-exempt organizations, millions",1.798413,levels,2025
+1994,"Excise tax, millions",0.852,levels,1995
+1995,"Excise tax, millions",0.787,levels,1995
+1996,"Excise tax, millions",0.765,levels,1996
+1997,"Excise tax, millions",0.821,levels,1997
+1998,"Excise tax, millions",0.815002,levels,1998
+1999,"Excise tax, millions",0.762,levels,1999
+2000,"Excise tax, millions",0.916,levels,2000
+2001,"Excise tax, millions",0.765,levels,2001
+2002,"Excise tax, millions",0.885,levels,2002
+2003,"Excise tax, millions",0.812,levels,2003
+2004,"Excise tax, millions",0.647263,levels,2004
+2005,"Excise tax, millions",1.063649,levels,2005
+2006,"Excise tax, millions",0.942145,levels,2006
+2007,"Excise tax, millions",0.907,levels,2007
+2008,"Excise tax, millions",0.865,levels,2008
+2009,"Excise tax, millions",0.809,levels,2009
+2010,"Excise tax, millions",0.837,levels,2010
+2011,"Excise tax, millions",0.522,levels,2011
+2012,"Excise tax, millions",1.197,levels,2012
+2013,"Excise tax, millions",0.909,levels,2013
+2014,"Excise tax, millions",0.987,levels,2014
+2015,"Excise tax, millions",1.025,levels,2015
+2016,"Excise tax, millions",1.015,levels,2016
+2017,"Excise tax, millions",1.018165,levels,2017
+2018,"Excise tax, millions",1.049493,levels,2018
+2019,"Excise tax, millions",1.073183,levels,2019
+2020,"Excise tax, millions",0.902342,levels,2020
+2021,"Excise tax, millions",1.276921,levels,2021
+2022,"Excise tax, millions",1.166197,levels,2022
+2023,"Excise tax, millions",1.241344,levels,2023
+2024,"Excise tax, millions",1.174267,levels,2024
+2025,"Excise tax, millions",1.173356,levels,2025
+1994,"Gift tax, thousands",214,levels,1995
+1995,"Gift tax, thousands",215,levels,1995
+1996,"Gift tax, thousands",226,levels,1996
+1997,"Gift tax, thousands",251,levels,1997
+1998,"Gift tax, thousands",257.722,levels,1998
+1999,"Gift tax, thousands",286,levels,1999
+2000,"Gift tax, thousands",305,levels,2000
+2001,"Gift tax, thousands",304,levels,2001
+2002,"Gift tax, thousands",279,levels,2002
+2003,"Gift tax, thousands",287,levels,2003
+2004,"Gift tax, thousands",249.019,levels,2004
+2005,"Gift tax, thousands",276.57,levels,2005
+2006,"Gift tax, thousands",255.651,levels,2006
+2007,"Gift tax, thousands",253,levels,2007
+2008,"Gift tax, thousands",252,levels,2008
+2009,"Gift tax, thousands",245,levels,2009
+2010,"Gift tax, thousands",230,levels,2010
+2011,"Gift tax, thousands",208,levels,2011
+2012,"Gift tax, thousands",249,levels,2012
+2013,"Gift tax, thousands",313,levels,2013
+2014,"Gift tax, thousands",335,levels,2014
+2015,"Gift tax, thousands",238,levels,2015
+2016,"Gift tax, thousands",249,levels,2016
+2017,"Gift tax, thousands",244.9,levels,2017
+2018,"Gift tax, thousands",245.584,levels,2018
+2019,"Gift tax, thousands",239.618,levels,2019
+2020,"Gift tax, thousands",158.095,levels,2020
+2021,"Gift tax, thousands",282.054,levels,2021
+2022,"Gift tax, thousands",270.142,levels,2022
+2023,"Gift tax, thousands",516.991,levels,2023
+2024,"Gift tax, thousands",313.197,levels,2024
+2025,"Gift tax, thousands",311.332,levels,2025
+1994,"Estate tax, thousands",78,levels,1995
+1995,"Estate tax, thousands",83,levels,1995
+1996,"Estate tax, thousands",86,levels,1996
+1997,"Estate tax, thousands",97,levels,1997
+1998,"Estate tax, thousands",108.71,levels,1998
+1999,"Estate tax, thousands",117,levels,1999
+2000,"Estate tax, thousands",121,levels,2000
+2001,"Estate tax, thousands",122,levels,2001
+2002,"Estate tax, thousands",121,levels,2002
+2003,"Estate tax, thousands",92,levels,2003
+2004,"Estate tax, thousands",73.34,levels,2004
+2005,"Estate tax, thousands",65.703,levels,2005
+2006,"Estate tax, thousands",58.279,levels,2006
+2007,"Estate tax, thousands",50,levels,2007
+2008,"Estate tax, thousands",46,levels,2008
+2009,"Estate tax, thousands",47,levels,2009
+2010,"Estate tax, thousands",29,levels,2010
+2011,"Estate tax, thousands",11,levels,2011
+2012,"Estate tax, thousands",27,levels,2012
+2013,"Estate tax, thousands",32,levels,2013
+2014,"Estate tax, thousands",34,levels,2014
+2015,"Estate tax, thousands",36,levels,2015
+2016,"Estate tax, thousands",36,levels,2016
+2017,"Estate tax, thousands",34.34,levels,2017
+2018,"Estate tax, thousands",34.092,levels,2018
+2019,"Estate tax, thousands",25.742,levels,2019
+2020,"Estate tax, thousands",15.023,levels,2020
+2021,"Estate tax, thousands",28.473,levels,2021
+2022,"Estate tax, thousands",27.088,levels,2022
+2023,"Estate tax, thousands",49.633,levels,2023
+2024,"Estate tax, thousands",31.516,levels,2024
+2025,"Estate tax, thousands",28.495,levels,2025
+1994,"Employee plans (to FY2002), millions",1.176,levels,1995
+1995,"Employee plans (to FY2002), millions",1.262,levels,1995
+1996,"Employee plans (to FY2002), millions",0.855,levels,1996
+1997,"Employee plans (to FY2002), millions",1.337,levels,1997
+1998,"Employee plans (to FY2002), millions",1.661505,levels,1998
+1999,"Employee plans (to FY2002), millions",1.414,levels,1999
+2000,"Employee plans (to FY2002), millions",1.164,levels,2000
+2001,"Employee plans (to FY2002), millions",0.883,levels,2001
+2002,"Employee plans (to FY2002), millions",0,levels,2002
+2005,Individual income tax,1.2,pct,2005
+2006,Individual income tax,0.8072859127646097,pct,2006
+2007,Individual income tax,3.7,pct,2007
+2008,Individual income tax,11.1,pct,2008
+2009,Individual income tax,-6.6,pct,2009
+2010,Individual income tax,-2,pct,2010
+2011,Individual income tax,1.7,pct,2011
+2012,Individual income tax,1.8355523369171631,pct,2012
+2013,Individual income tax,-0.1695796066847187,pct,2013
+2014,Individual income tax,1,pct,2014
+2015,Individual income tax,0.9,pct,2015
+2016,Individual income tax,1.2563742517182763,pct,2016
+2017,Individual income tax,0,pct,2017
+2018,Individual income tax,1.5,pct,2018
+2019,Individual income tax,0.8,pct,2019
+2020,Individual income tax,2,pct,2020
+2021,Individual income tax,6.8,pct,2021
+2022,Individual income tax,-4.4,pct,2022
+2023,Individual income tax,1.6,pct,2023
+2024,Individual income tax,-1.3,pct,2024
+2025,Individual income tax,1.1,pct,2025
+2005,Employment tax,1.5,pct,2005
+2006,Employment tax,1.0057666316020455,pct,2006
+2007,Employment tax,-1.4,pct,2007
+2008,Employment tax,-0.2,pct,2008
+2009,Employment tax,-1.5,pct,2009
+2010,Employment tax,-1.4,pct,2010
+2011,Employment tax,-1.1,pct,2011
+2012,Employment tax,0.48903076818583174,pct,2012
+2013,Employment tax,1.2436633997972286,pct,2013
+2014,Employment tax,0.4,pct,2014
+2015,Employment tax,0.4,pct,2015
+2016,Employment tax,0.8742879851635978,pct,2016
+2017,Employment tax,0.7,pct,2017
+2018,Employment tax,0.9,pct,2018
+2019,Employment tax,2,pct,2019
+2020,Employment tax,-11.2,pct,2020
+2021,Employment tax,20.8,pct,2021
+2022,Employment tax,-7.9,pct,2022
+2023,Employment tax,16.4,pct,2023
+2024,Employment tax,-7.2,pct,2024
+2025,Employment tax,1.4,pct,2025
+2005,Supplemental documents,1.1,pct,2005
+2006,Supplemental documents,-8.483386838280598,pct,2006
+2007,Supplemental documents,11.6,pct,2007
+2008,Supplemental documents,3.7,pct,2008
+2009,Supplemental documents,6.5,pct,2009
+2010,Supplemental documents,-7.8,pct,2010
+2011,Supplemental documents,12.1,pct,2011
+2012,Supplemental documents,1.524074989884458,pct,2012
+2013,Supplemental documents,-0.9609423434593924,pct,2013
+2014,Supplemental documents,-4.1,pct,2014
+2015,Supplemental documents,4.7,pct,2015
+2016,Supplemental documents,-0.7574069948763644,pct,2016
+2017,Supplemental documents,10,pct,2017
+2018,Supplemental documents,5.4,pct,2018
+2019,Supplemental documents,4.8,pct,2019
+2020,Supplemental documents,-25.6,pct,2020
+2021,Supplemental documents,32.2,pct,2021
+2022,Supplemental documents,12.8,pct,2022
+2023,Supplemental documents,0.7,pct,2023
+2024,Supplemental documents,0.1,pct,2024
+2025,Supplemental documents,2.4,pct,2025
+2005,Individual estimated tax,-1.2,pct,2005
+2006,Individual estimated tax,4.98616591353507,pct,2006
+2007,Individual estimated tax,-0.3,pct,2007
+2008,Individual estimated tax,-4,pct,2008
+2009,Individual estimated tax,-15.9,pct,2009
+2010,Individual estimated tax,-3.3,pct,2010
+2011,Individual estimated tax,-0.7,pct,2011
+2012,Individual estimated tax,-4.59007922838443,pct,2012
+2013,Individual estimated tax,11.950537052080511,pct,2013
+2014,Individual estimated tax,-4.8,pct,2014
+2015,Individual estimated tax,2.2,pct,2015
+2016,Individual estimated tax,-4.2326506923140705,pct,2016
+2017,Individual estimated tax,-3.8,pct,2017
+2018,Individual estimated tax,0.7,pct,2018
+2019,Individual estimated tax,-0.7,pct,2019
+2020,Individual estimated tax,-20.9,pct,2020
+2021,Individual estimated tax,-24.8,pct,2021
+2022,Individual estimated tax,-4,pct,2022
+2023,Individual estimated tax,-7,pct,2023
+2024,Individual estimated tax,2.3,pct,2024
+2025,Individual estimated tax,10.3,pct,2025
+2005,Estate and trust,-1.3,pct,2005
+2006,Estate and trust,0.35773844162838553,pct,2006
+2007,Estate and trust,0.6,pct,2007
+2008,Estate and trust,-17.3,pct,2008
+2009,Estate and trust,2.2,pct,2009
+2010,Estate and trust,-2.2,pct,2010
+2011,Estate and trust,1,pct,2011
+2012,Estate and trust,-1.4488087572440438,pct,2012
+2013,Estate and trust,4.279647174126103,pct,2013
+2014,Estate and trust,0.4,pct,2014
+2015,Estate and trust,-0.1,pct,2015
+2016,Estate and trust,0.1248829222603809,pct,2016
+2017,Estate and trust,-6.6,pct,2017
+2018,Estate and trust,3.4,pct,2018
+2019,Estate and trust,0.6,pct,2019
+2020,Estate and trust,-9.5,pct,2020
+2021,Estate and trust,14.9,pct,2021
+2022,Estate and trust,-8.3,pct,2022
+2023,Estate and trust,13.4,pct,2023
+2024,Estate and trust,-6.1,pct,2024
+2025,Estate and trust,0.7,pct,2025
+2005,Estate and trust estimated tax,-27.3,pct,2005
+2006,Estate and trust estimated tax,26.96838337641679,pct,2006
+2007,Estate and trust estimated tax,22.2,pct,2007
+2008,Estate and trust estimated tax,18.2,pct,2008
+2009,Estate and trust estimated tax,-41.2,pct,2009
+2010,Estate and trust estimated tax,-36.7,pct,2010
+2011,Estate and trust estimated tax,11.4,pct,2011
+2012,Estate and trust estimated tax,4.712041884816754,pct,2012
+2013,Estate and trust estimated tax,35.25,pct,2013
+2014,Estate and trust estimated tax,14.2,pct,2014
+2015,Estate and trust estimated tax,21,pct,2015
+2016,Estate and trust estimated tax,-13.636363636363637,pct,2016
+2017,Estate and trust estimated tax,-14.4,pct,2017
+2018,Estate and trust estimated tax,26,pct,2018
+2019,Estate and trust estimated tax,8.4,pct,2019
+2020,Estate and trust estimated tax,-16,pct,2020
+2021,Estate and trust estimated tax,1.6,pct,2021
+2022,Estate and trust estimated tax,23.3,pct,2022
+2023,Estate and trust estimated tax,-30.7,pct,2023
+2024,Estate and trust estimated tax,6.9,pct,2024
+2025,Estate and trust estimated tax,28.5,pct,2025
+2005,Tax-exempt organizations,2.4,pct,2005
+2006,Tax-exempt organizations,2.120658763047169,pct,2006
+2007,Tax-exempt organizations,8.2,pct,2007
+2008,Tax-exempt organizations,0,pct,2008
+2009,Tax-exempt organizations,25.6,pct,2009
+2010,Tax-exempt organizations,18.6,pct,2010
+2011,Tax-exempt organizations,3.1,pct,2011
+2012,Tax-exempt organizations,-1.2996389891696751,pct,2012
+2013,Tax-exempt organizations,7.022677395757132,pct,2013
+2014,Tax-exempt organizations,0.3,pct,2014
+2015,Tax-exempt organizations,7.7,pct,2015
+2016,Tax-exempt organizations,-5.063291139240507,pct,2016
+2017,Tax-exempt organizations,1.9,pct,2017
+2018,Tax-exempt organizations,4.9,pct,2018
+2019,Tax-exempt organizations,-0.8,pct,2019
+2020,Tax-exempt organizations,-14.4,pct,2020
+2021,Tax-exempt organizations,26.6,pct,2021
+2022,Tax-exempt organizations,-0.3,pct,2022
+2023,Tax-exempt organizations,2.2,pct,2023
+2024,Tax-exempt organizations,0.9,pct,2024
+2025,Tax-exempt organizations,-0.4,pct,2025
+2005,Excise tax,64.3,pct,2005
+2006,Excise tax,-11.423317278538308,pct,2006
+2007,Excise tax,-3.7,pct,2007
+2008,Excise tax,-4.6,pct,2008
+2009,Excise tax,-6.5,pct,2009
+2010,Excise tax,3.5,pct,2010
+2011,Excise tax,-37.6,pct,2011
+2012,Excise tax,129.31034482758622,pct,2012
+2013,Excise tax,-24.06015037593985,pct,2013
+2014,Excise tax,8.6,pct,2014
+2015,Excise tax,3.9,pct,2015
+2016,Excise tax,-0.975609756097561,pct,2016
+2017,Excise tax,0.3,pct,2017
+2018,Excise tax,3.1,pct,2018
+2019,Excise tax,2.3,pct,2019
+2020,Excise tax,-15.9,pct,2020
+2021,Excise tax,41.5,pct,2021
+2022,Excise tax,-10.4,pct,2022
+2023,Excise tax,6.4,pct,2023
+2024,Excise tax,-5.4,pct,2024
+2025,Excise tax,-0.1,pct,2025
+2005,Gift tax,11.1,pct,2005
+2006,Gift tax,-7.563727085367171,pct,2006
+2007,Gift tax,-1.2,pct,2007
+2008,Gift tax,-0.4,pct,2008
+2009,Gift tax,-2.8,pct,2009
+2010,Gift tax,-6.1,pct,2010
+2011,Gift tax,-9.6,pct,2011
+2012,Gift tax,19.71153846153846,pct,2012
+2013,Gift tax,25.702811244979916,pct,2013
+2014,Gift tax,7,pct,2014
+2015,Gift tax,-29,pct,2015
+2016,Gift tax,4.621848739495799,pct,2016
+2017,Gift tax,-1.8,pct,2017
+2018,Gift tax,0.3,pct,2018
+2019,Gift tax,-2.4,pct,2019
+2020,Gift tax,-34,pct,2020
+2021,Gift tax,78.4,pct,2021
+2022,Gift tax,-4.2,pct,2022
+2023,Gift tax,91.4,pct,2023
+2024,Gift tax,-39.4,pct,2024
+2025,Gift tax,-0.6,pct,2025
+2005,Estate tax,-10.4,pct,2005
+2006,Estate tax,-11.299331841772824,pct,2006
+2007,Estate tax,-14.3,pct,2007
+2008,Estate tax,-8,pct,2008
+2009,Estate tax,2.2,pct,2009
+2010,Estate tax,-38.3,pct,2010
+2011,Estate tax,-62.1,pct,2011
+2012,Estate tax,145.45454545454547,pct,2012
+2013,Estate tax,18.51851851851852,pct,2013
+2014,Estate tax,6.3,pct,2014
+2015,Estate tax,5.9,pct,2015
+2016,Estate tax,0,pct,2016
+2017,Estate tax,-3.5,pct,2017
+2018,Estate tax,-0.7,pct,2018
+2019,Estate tax,-24.5,pct,2019
+2020,Estate tax,-41.6,pct,2020
+2021,Estate tax,89.5,pct,2021
+2022,Estate tax,-4.9,pct,2022
+2023,Estate tax,83.2,pct,2023
+2024,Estate tax,-36.5,pct,2024
+2025,Estate tax,-9.6,pct,2025

@@ -524,3 +524,19 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   .tracker-header { flex-direction: column-reverse; align-items: stretch; gap: 8px; }
   .tracker-logo-link { align-self: flex-end; }
 }
+
+/* --- Tile-grid map (tilemap.js) ----------------------------------------------
+   One square per state; the engine has no map type, so this tool draws it. */
+.chart-tilemap .tilemap-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 10px 0 6px; }
+.chart-tilemap .tilemap-canvas { max-width: 720px; margin: 0 auto; }
+.chart-tilemap .tilemap-svg { width: 100%; height: auto; display: block; }
+.chart-tilemap .tilemap-abbr { font-size: 13px; font-weight: 700; }
+.chart-tilemap .tilemap-value { font-size: 10px; }
+.chart-tilemap .tilemap-tile:hover rect { stroke: #101F5B; stroke-width: 2; }
+
+/* A toggle with four or more options wraps to two per row: four pills in one row
+   of the 240px sidebar clip the last one (1-5 and 1-8 "Measure as"). */
+.toggle-group:has(label:nth-of-type(4)) { flex-wrap: wrap; }
+.toggle-group:has(label:nth-of-type(4)) label { flex: 1 1 50%; border-bottom: 1px solid var(--tbl-border); }
+.toggle-group:has(label:nth-of-type(4)) label:nth-of-type(2n) { border-right: none; }
+.toggle-group:has(label:nth-of-type(4)) label:nth-last-of-type(-n+2) { border-bottom: none; }

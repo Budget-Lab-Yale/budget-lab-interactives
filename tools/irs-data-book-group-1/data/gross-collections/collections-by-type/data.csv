@@ -1,0 +1,661 @@
+time,series,value,dollars,source_book
+1960,Individual income taxes,0.044945711000000006,nominal,2025
+1961,Individual income taxes,0.046153001000000006,nominal,2025
+1962,Individual income taxes,0.050649594000000006,nominal,2025
+1963,Individual income taxes,0.052987581000000006,nominal,2025
+1964,Individual income taxes,0.054590354,nominal,2025
+1965,Individual income taxes,0.053660683,nominal,2025
+1966,Individual income taxes,0.061297552000000005,nominal,2025
+1967,Individual income taxes,0.06937059500000001,nominal,2025
+1968,Individual income taxes,0.078252045,nominal,2025
+1969,Individual income taxes,0.09744040600000001,nominal,2025
+1970,Individual income taxes,0.103651585,nominal,2025
+1971,Individual income taxes,0.10075242100000001,nominal,2025
+1972,Individual income taxes,0.108879186,nominal,2025
+1973,Individual income taxes,0.125112006,nominal,2025
+1974,Individual income taxes,0.14290365000000002,nominal,2025
+1975,Individual income taxes,0.156399437,nominal,2025
+1976,Individual income taxes,0.15896879700000002,nominal,2025
+1977,Individual income taxes,0.186755263,nominal,2025
+1978,Individual income taxes,0.213058144,nominal,2025
+1979,Individual income taxes,0.25154585700000004,nominal,2025
+1980,Individual income taxes,0.28754778200000003,nominal,2025
+1981,Individual income taxes,0.332850146,nominal,2025
+1982,Individual income taxes,0.35260893600000004,nominal,2025
+1983,Individual income taxes,0.34962796700000004,nominal,2025
+1984,Individual income taxes,0.362891679,nominal,2025
+1985,Individual income taxes,0.396659558,nominal,2025
+1986,Individual income taxes,0.416964771,nominal,2025
+1987,Individual income taxes,0.46545248600000005,nominal,2025
+1988,Individual income taxes,0.473666566,nominal,2025
+1989,Individual income taxes,0.515731504,nominal,2025
+1990,Individual income taxes,0.540228408,nominal,2025
+1991,Individual income taxes,0.546876876,nominal,2025
+1992,Individual income taxes,0.557723156,nominal,2025
+1993,Individual income taxes,0.5857741590000001,nominal,2025
+1994,Individual income taxes,0.619819153,nominal,2025
+1995,Individual income taxes,0.675779337,nominal,2025
+1996,Individual income taxes,0.7453132760000001,nominal,1996
+1997,Individual income taxes,0.8250208800000001,nominal,2025
+1998,Individual income taxes,0.9280658570000001,nominal,2025
+1999,Individual income taxes,1.0021857650000001,nominal,2025
+2000,Individual income taxes,1.137077702,nominal,2025
+2001,Individual income taxes,1.17820988,nominal,2025
+2002,Individual income taxes,1.037733908,nominal,2025
+2003,Individual income taxes,0.987208878,nominal,2025
+2004,Individual income taxes,0.9902487600000001,nominal,2025
+2005,Individual income taxes,1.107500994,nominal,2025
+2006,Individual income taxes,1.236259371,nominal,2025
+2007,Individual income taxes,1.366241437,nominal,2025
+2008,Individual income taxes,1.4259901830000001,nominal,2025
+2009,Individual income taxes,1.190382757,nominal,2025
+2010,Individual income taxes,1.1759895280000001,nominal,2025
+2011,Individual income taxes,1.3461822270000001,nominal,2025
+2012,Individual income taxes,1.387836515,nominal,2025
+2013,Individual income taxes,1.564354494,nominal,2025
+2014,Individual income taxes,1.6436239670000001,nominal,2025
+2015,Individual income taxes,1.7931856990000001,nominal,2025
+2016,Individual income taxes,1.8158191350000001,nominal,2025
+2017,Individual income taxes,1.8674277970000002,nominal,2025
+2018,Individual income taxes,1.9719412010000001,nominal,2025
+2019,Individual income taxes,1.981650716,nominal,2025
+2020,Individual income taxes,1.871170827,nominal,2025
+2021,Individual income taxes,2.348054224,nominal,2025
+2022,Individual income taxes,2.9037988990000003,nominal,2025
+2023,Individual income taxes,2.561601596,nominal,2025
+2024,Individual income taxes,2.763433598,nominal,2025
+2025,Individual income taxes,3.01122076,nominal,2025
+1960,Employment taxes,0.011158589,nominal,2025
+1961,Employment taxes,0.012502451000000001,nominal,2025
+1962,Employment taxes,0.012708171,nominal,2025
+1963,Employment taxes,0.015004486000000001,nominal,2025
+1964,Employment taxes,0.017002504,nominal,2025
+1965,Employment taxes,0.017104306,nominal,2025
+1966,Employment taxes,0.020256133000000003,nominal,2025
+1967,Employment taxes,0.026958241,nominal,2025
+1968,Employment taxes,0.028085898,nominal,2025
+1969,Employment taxes,0.033068657,nominal,2025
+1970,Employment taxes,0.037449188,nominal,2025
+1971,Employment taxes,0.03991869,nominal,2025
+1972,Employment taxes,0.043714001,nominal,2025
+1973,Employment taxes,0.052081709000000004,nominal,2025
+1974,Employment taxes,0.062093632,nominal,2025
+1975,Employment taxes,0.070140809,nominal,2025
+1976,Employment taxes,0.074202853,nominal,2025
+1977,Employment taxes,0.086076316,nominal,2025
+1978,Employment taxes,0.097291653,nominal,2025
+1979,Employment taxes,0.112849874,nominal,2025
+1980,Employment taxes,0.12833048,nominal,2025
+1981,Employment taxes,0.152885816,nominal,2025
+1982,Employment taxes,0.168717936,nominal,2025
+1983,Employment taxes,0.17384785400000002,nominal,2025
+1984,Employment taxes,0.199210028,nominal,2025
+1985,Employment taxes,0.225214568,nominal,2025
+1986,Employment taxes,0.24397838000000002,nominal,2025
+1987,Employment taxes,0.277000469,nominal,2025
+1988,Employment taxes,0.31803899,nominal,2025
+1989,Employment taxes,0.34562558600000004,nominal,2025
+1990,Employment taxes,0.36721932100000004,nominal,2025
+1991,Employment taxes,0.38445122000000004,nominal,2025
+1992,Employment taxes,0.400080904,nominal,2025
+1993,Employment taxes,0.41151051600000005,nominal,2025
+1994,Employment taxes,0.443831352,nominal,2025
+1995,Employment taxes,0.46540530500000005,nominal,2025
+1996,Employment taxes,0.492365178,nominal,2025
+1997,Employment taxes,0.528596833,nominal,1997
+1998,Employment taxes,0.557799193,nominal,2025
+1999,Employment taxes,0.5986698650000001,nominal,2025
+2000,Employment taxes,0.639651814,nominal,2025
+2001,Employment taxes,0.682222895,nominal,2025
+2002,Employment taxes,0.6880772380000001,nominal,2025
+2003,Employment taxes,0.695975801,nominal,2025
+2004,Employment taxes,0.717247296,nominal,2025
+2005,Employment taxes,0.7714416620000001,nominal,2025
+2006,Employment taxes,0.814819218,nominal,2025
+2007,Employment taxes,0.8497327290000001,nominal,2025
+2008,Employment taxes,0.8831976260000001,nominal,2025
+2009,Employment taxes,0.858163864,nominal,2025
+2010,Employment taxes,0.824188337,nominal,2025
+2011,Employment taxes,0.767504822,nominal,2025
+2012,Employment taxes,0.7843968530000001,nominal,2025
+2013,Employment taxes,0.897847151,nominal,2025
+2014,Employment taxes,0.9762232470000001,nominal,2025
+2015,Employment taxes,1.0223589160000002,nominal,2025
+2016,Employment taxes,1.073907715,nominal,2025
+2017,Employment taxes,1.1234731370000002,nominal,2025
+2018,Employment taxes,1.1331995270000002,nominal,2025
+2019,Employment taxes,1.207553842,nominal,2025
+2020,Employment taxes,1.268076594,nominal,2025
+2021,Employment taxes,1.258170886,nominal,2025
+2022,Employment taxes,1.4178098030000001,nominal,2025
+2023,Employment taxes,1.566109766,nominal,2025
+2024,Employment taxes,1.6611547480000002,nominal,2025
+2025,Employment taxes,1.694434489,nominal,2025
+1960,Business income taxes,0.022179414,nominal,2025
+1961,Business income taxes,0.02176494,nominal,2025
+1962,Business income taxes,0.021295711000000002,nominal,2025
+1963,Business income taxes,0.022336134,nominal,2025
+1964,Business income taxes,0.024300863000000002,nominal,2025
+1965,Business income taxes,0.026131334000000003,nominal,2025
+1966,Business income taxes,0.030834243,nominal,2025
+1967,Business income taxes,0.034917825,nominal,2025
+1968,Business income taxes,0.029896520000000003,nominal,2025
+1969,Business income taxes,0.038337646,nominal,2025
+1970,Business income taxes,0.035036983,nominal,2025
+1971,Business income taxes,0.030319953,nominal,2025
+1972,Business income taxes,0.034925546,nominal,2025
+1973,Business income taxes,0.039045309,nominal,2025
+1974,Business income taxes,0.041744444000000006,nominal,2025
+1975,Business income taxes,0.04574666,nominal,2025
+1976,Business income taxes,0.046782956,nominal,2025
+1977,Business income taxes,0.060049804000000005,nominal,2025
+1978,Business income taxes,0.065380145,nominal,2025
+1979,Business income taxes,0.07144787600000001,nominal,2025
+1980,Business income taxes,0.07237961000000001,nominal,2025
+1981,Business income taxes,0.07373315600000001,nominal,2025
+1982,Business income taxes,0.065990832,nominal,2025
+1983,Business income taxes,0.061779556000000006,nominal,2025
+1984,Business income taxes,0.07417937000000001,nominal,2025
+1985,Business income taxes,0.077412769,nominal,2025
+1986,Business income taxes,0.08044162,nominal,2025
+1987,Business income taxes,0.102858985,nominal,2025
+1988,Business income taxes,0.109682554,nominal,2025
+1989,Business income taxes,0.117014564,nominal,2025
+1990,Business income taxes,0.11001653900000001,nominal,2025
+1991,Business income taxes,0.11359856900000001,nominal,2025
+1992,Business income taxes,0.11795079600000001,nominal,2025
+1993,Business income taxes,0.131547509,nominal,2025
+1994,Business income taxes,0.154204684,nominal,2025
+1995,Business income taxes,0.174422173,nominal,2025
+1996,Business income taxes,0.189054791,nominal,1996
+1997,Business income taxes,0.20449233600000002,nominal,1997
+1998,Business income taxes,0.213270011,nominal,2025
+1999,Business income taxes,0.21632488900000002,nominal,2025
+2000,Business income taxes,0.235654894,nominal,2025
+2001,Business income taxes,0.186731643,nominal,2025
+2002,Business income taxes,0.21143777300000002,nominal,2025
+2003,Business income taxes,0.19414629800000002,nominal,2025
+2004,Business income taxes,0.23061935900000002,nominal,2025
+2005,Business income taxes,0.307094837,nominal,2025
+2006,Business income taxes,0.38092457300000004,nominal,2025
+2007,Business income taxes,0.395535825,nominal,2025
+2008,Business income taxes,0.35431582500000003,nominal,2008
+2009,Business income taxes,0.225481588,nominal,2025
+2010,Business income taxes,0.27793722000000004,nominal,2025
+2011,Business income taxes,0.24284812200000003,nominal,2025
+2012,Business income taxes,0.28146158000000004,nominal,2025
+2013,Business income taxes,0.311993954,nominal,2025
+2014,Business income taxes,0.35314111200000003,nominal,2025
+2015,Business income taxes,0.389888722,nominal,2025
+2016,Business income taxes,0.345552427,nominal,2025
+2017,Business income taxes,0.338529154,nominal,2025
+2018,Business income taxes,0.262742024,nominal,2025
+2019,Business income taxes,0.277057735,nominal,2025
+2020,Business income taxes,0.263563107,nominal,2025
+2021,Business income taxes,0.419008841,nominal,2025
+2022,Business income taxes,0.475871099,nominal,2025
+2023,Business income taxes,0.45694078000000005,nominal,2025
+2024,Business income taxes,0.565085519,nominal,2025
+2025,Business income taxes,0.48638398800000004,nominal,2025
+1960,Excise taxes,0.011864741000000002,nominal,2025
+1961,Excise taxes,0.012064302,nominal,2025
+1962,Excise taxes,0.012752176,nominal,2025
+1963,Excise taxes,0.013409737000000001,nominal,2025
+1964,Excise taxes,0.013950232000000002,nominal,2025
+1965,Excise taxes,0.014792779,nominal,2025
+1966,Excise taxes,0.013398112,nominal,2025
+1967,Excise taxes,0.014113748,nominal,2025
+1968,Excise taxes,0.014320396,nominal,2025
+1969,Excise taxes,0.015542787,nominal,2025
+1970,Excise taxes,0.015904264,nominal,2025
+1971,Excise taxes,0.016871851,nominal,2025
+1972,Excise taxes,0.016847036000000003,nominal,2025
+1973,Excise taxes,0.016572318000000003,nominal,2025
+1974,Excise taxes,0.017109853,nominal,2025
+1975,Excise taxes,0.016847741,nominal,2025
+1976,Excise taxes,0.01725772,nominal,2025
+1977,Excise taxes,0.017832707,nominal,2025
+1978,Excise taxes,0.018664949,nominal,2025
+1979,Excise taxes,0.019049504000000002,nominal,2025
+1980,Excise taxes,0.024619021,nominal,2025
+1981,Excise taxes,0.040419598,nominal,2025
+1982,Excise taxes,0.036779428,nominal,2025
+1983,Excise taxes,0.035765538,nominal,2025
+1984,Excise taxes,0.038017486,nominal,2025
+1985,Excise taxes,0.037004944000000005,nominal,2025
+1986,Excise taxes,0.033672086000000004,nominal,2025
+1987,Excise taxes,0.033310980000000004,nominal,2025
+1988,Excise taxes,0.025934040000000002,nominal,2025
+1989,Excise taxes,0.025977333000000002,nominal,2025
+1990,Excise taxes,0.027139445,nominal,2025
+1991,Excise taxes,0.030451596,nominal,2025
+1992,Excise taxes,0.033565587,nominal,2025
+1993,Excise taxes,0.034962476,nominal,2025
+1994,Excise taxes,0.043004794000000006,nominal,2025
+1995,Excise taxes,0.044980627,nominal,2025
+1996,Excise taxes,0.042221611,nominal,2025
+1997,Excise taxes,0.044805621000000004,nominal,1997
+1998,Excise taxes,0.045642716,nominal,2025
+1999,Excise taxes,0.058585763000000006,nominal,2025
+2000,Excise taxes,0.054810895000000005,nominal,2025
+2001,Excise taxes,0.052418848000000004,nominal,2025
+2002,Excise taxes,0.052136835000000006,nominal,2025
+2003,Excise taxes,0.052771160000000004,nominal,2025
+2004,Excise taxes,0.054807225,nominal,2025
+2005,Excise taxes,0.057252098,nominal,2025
+2006,Excise taxes,0.057989543000000005,nominal,2025
+2007,Excise taxes,0.053049612,nominal,2025
+2008,Excise taxes,0.051707840000000005,nominal,2025
+2009,Excise taxes,0.046631646000000006,nominal,2025
+2010,Excise taxes,0.047190057,nominal,2025
+2011,Excise taxes,0.049337563,nominal,2025
+2012,Excise taxes,0.056174937,nominal,2025
+2013,Excise taxes,0.061033674,nominal,2025
+2014,Excise taxes,0.071158076,nominal,2025
+2015,Excise taxes,0.077201882,nominal,2025
+2016,Excise taxes,0.075832669,nominal,2025
+2017,Excise taxes,0.063503608,nominal,2025
+2018,Excise taxes,0.07371820600000001,nominal,2025
+2019,Excise taxes,0.080756624,nominal,2025
+2020,Excise taxes,0.072059841,nominal,2025
+2021,Excise taxes,0.058289822000000005,nominal,2025
+2022,Excise taxes,0.070679117,nominal,2025
+2023,Excise taxes,0.07424876500000001,nominal,2025
+2024,Excise taxes,0.07794772400000001,nominal,2025
+2025,Excise taxes,0.090611934,nominal,2025
+1960,Estate and gift taxes,0.0016263480000000001,nominal,2025
+1961,Estate and gift taxes,0.001916392,nominal,2025
+1962,Estate and gift taxes,0.002035187,nominal,2025
+1963,Estate and gift taxes,0.0021874570000000003,nominal,2025
+1964,Estate and gift taxes,0.002416304,nominal,2025
+1965,Estate and gift taxes,0.002745533,nominal,2025
+1966,Estate and gift taxes,0.0030939220000000003,nominal,2025
+1967,Estate and gift taxes,0.0030144060000000003,nominal,2025
+1968,Estate and gift taxes,0.0030819790000000003,nominal,2025
+1969,Estate and gift taxes,0.0035300640000000003,nominal,2025
+1970,Estate and gift taxes,0.0036800760000000004,nominal,2025
+1971,Estate and gift taxes,0.0037842830000000003,nominal,2025
+1972,Estate and gift taxes,0.005489969,nominal,2025
+1973,Estate and gift taxes,0.004975862,nominal,2025
+1974,Estate and gift taxes,0.005100674,nominal,2025
+1975,Estate and gift taxes,0.004688078,nominal,2025
+1976,Estate and gift taxes,0.005307465,nominal,2025
+1977,Estate and gift taxes,0.007425326,nominal,2025
+1978,Estate and gift taxes,0.0053814990000000005,nominal,2025
+1979,Estate and gift taxes,0.005519075,nominal,2025
+1980,Estate and gift taxes,0.006498381,nominal,2025
+1981,Estate and gift taxes,0.006910386,nominal,2025
+1982,Estate and gift taxes,0.008143373,nominal,2025
+1983,Estate and gift taxes,0.006225877,nominal,2025
+1984,Estate and gift taxes,0.006176667,nominal,2025
+1985,Estate and gift taxes,0.006579702000000001,nominal,2025
+1986,Estate and gift taxes,0.007194955,nominal,2025
+1987,Estate and gift taxes,0.0076676700000000006,nominal,2025
+1988,Estate and gift taxes,0.007784445,nominal,2025
+1989,Estate and gift taxes,0.008973146000000001,nominal,2025
+1990,Estate and gift taxes,0.011761938000000001,nominal,2025
+1991,Estate and gift taxes,0.011473141000000001,nominal,2025
+1992,Estate and gift taxes,0.011479116000000001,nominal,2025
+1993,Estate and gift taxes,0.012890965,nominal,2025
+1994,Estate and gift taxes,0.015606793,nominal,2025
+1995,Estate and gift taxes,0.015144394,nominal,2025
+1996,Estate and gift taxes,0.017591817000000003,nominal,2025
+1997,Estate and gift taxes,0.020356401,nominal,2025
+1998,Estate and gift taxes,0.024630962000000003,nominal,2025
+1999,Estate and gift taxes,0.028385607,nominal,2025
+2000,Estate and gift taxes,0.02972162,nominal,2025
+2001,Estate and gift taxes,0.029247916000000002,nominal,2025
+2002,Estate and gift taxes,0.027241515,nominal,2025
+2003,Estate and gift taxes,0.022826908,nominal,2025
+2004,Estate and gift taxes,0.025579462,nominal,2025
+2005,Estate and gift taxes,0.025605531,nominal,2025
+2006,Estate and gift taxes,0.028687525000000002,nominal,2025
+2007,Estate and gift taxes,0.026977953000000002,nominal,2007
+2008,Estate and gift taxes,0.029823935000000003,nominal,2025
+2009,Estate and gift taxes,0.024677322,nominal,2025
+2010,Estate and gift taxes,0.019750836,nominal,2025
+2011,Estate and gift taxes,0.009079375,nominal,2025
+2012,Estate and gift taxes,0.014450249,nominal,2025
+2013,Estate and gift taxes,0.019830148000000002,nominal,2025
+2014,Estate and gift taxes,0.020154955000000002,nominal,2025
+2015,Estate and gift taxes,0.020042039,nominal,2025
+2016,Estate and gift taxes,0.022337137,nominal,2025
+2017,Estate and gift taxes,0.023780443000000002,nominal,2025
+2018,Estate and gift taxes,0.023865669000000003,nominal,2025
+2019,Estate and gift taxes,0.017565044000000002,nominal,2025
+2020,Estate and gift taxes,0.018197587,nominal,2025
+2021,Estate and gift taxes,0.028045739,nominal,2025
+2022,Estate and gift taxes,0.033355276,nominal,2025
+2023,Estate and gift taxes,0.035434261,nominal,2025
+2024,Estate and gift taxes,0.032867889000000004,nominal,2025
+2025,Estate and gift taxes,0.031111136,nominal,2025
+1960,Individual income taxes,0.3735474840789196,real,2025
+1961,Individual income taxes,0.3789467824637367,real,2025
+1962,Individual income taxes,0.4111367645072098,real,2025
+1963,Individual income taxes,0.42548466277920755,real,2025
+1964,Individual income taxes,0.43246415391095006,real,2025
+1965,Individual income taxes,0.4182040237977855,real,2025
+1966,Individual income taxes,0.4676366974708531,real,2025
+1967,Individual income taxes,0.5134636181631783,real,2025
+1968,Individual income taxes,0.5598395319993988,real,2025
+1969,Individual income taxes,0.666623120918632,real,2025
+1970,Individual income taxes,0.6730585675979975,real,2025
+1971,Individual income taxes,0.6226963015170787,real,2025
+1972,Individual income taxes,0.6426514392245138,real,2025
+1973,Individual income taxes,0.7074628869661741,real,2025
+1974,Individual income taxes,0.7536201030933414,real,2025
+1975,Individual income taxes,0.7482341262547798,real,2025
+1976,Individual income taxes,0.7112142362306886,real,2025
+1977,Individual income taxes,0.779385729634585,real,2025
+1978,Individual income taxes,0.8323567355228622,real,2025
+1979,Individual income taxes,0.9097720062211362,real,2025
+1980,Individual income taxes,0.9560792324076831,real,2025
+1981,Individual income taxes,1.008240645235158,real,2025
+1982,Individual income taxes,0.998393973040803,real,2025
+1983,Individual income taxes,0.948607250588471,real,2025
+1984,Individual income taxes,0.9506362708496897,real,2025
+1985,Individual income taxes,1.005427458929893,real,2025
+1986,Individual income taxes,1.0335199456729218,real,2025
+1987,Individual income taxes,1.128858007121908,real,2025
+1988,Individual income taxes,1.1122164716667353,real,2025
+1989,Individual income taxes,1.1644327876167953,real,2025
+1990,Individual income taxes,1.1763701637317014,real,2025
+1991,Individual income taxes,1.1499376698509978,real,2025
+1992,Individual income taxes,1.1439933279658314,real,2025
+1993,Individual income taxes,1.174106684545702,real,2025
+1994,Individual income taxes,1.2157255483675375,real,2025
+1995,Individual income taxes,1.2979688368550875,real,2025
+1996,Individual income taxes,1.404980419510037,real,1996
+1997,Individual income taxes,1.528118948406246,real,2025
+1998,Individual income taxes,1.6978578683681802,real,2025
+1999,Individual income taxes,1.8102803789812523,real,2025
+2000,Individual income taxes,2.012410837692076,real,2025
+2001,Individual income taxes,2.03692741355213,real,2025
+2002,Individual income taxes,1.7655843880898927,real,2025
+2003,Individual income taxes,1.6484299799215856,real,2025
+2004,Individual income taxes,1.6138456007892223,real,2025
+2005,Individual income taxes,1.7514248597218247,real,2025
+2006,Individual income taxes,1.8935757368437665,real,2025
+2007,Individual income taxes,2.0372846829606246,real,2025
+2008,Individual income taxes,2.08217068753161,real,2025
+2009,Individual income taxes,1.7204339708198633,real,2025
+2010,Individual income taxes,1.6854551045294106,real,2025
+2011,Individual income taxes,1.891442361356194,real,2025
+2012,Individual income taxes,1.915042536304856,real,2025
+2013,Individual income taxes,2.120340786252331,real,2025
+2014,Individual income taxes,2.1886970152073677,real,2025
+2015,Individual income taxes,2.361864736091457,real,2025
+2016,Individual income taxes,2.3724581138966694,real,2025
+2017,Individual income taxes,2.400404284640293,real,2025
+2018,Individual income taxes,2.479792023439348,real,2025
+2019,Individual income taxes,2.4469549533683077,real,2025
+2020,Individual income taxes,2.2811768120524785,real,2025
+2021,Individual income taxes,2.7684013158527128,real,2025
+2022,Individual income taxes,3.197301704235549,real,2025
+2023,Individual income taxes,2.6955008877104834,real,2025
+2024,Individual income taxes,2.8358276865257843,real,2025
+2025,Individual income taxes,3.01122076,real,2025
+1960,Employment taxes,0.09273994679538403,real,2025
+1961,Employment taxes,0.10265342397476011,real,2025
+1962,Employment taxes,0.10315573917027554,real,2025
+1963,Employment taxes,0.1204844332464496,real,2025
+1964,Employment taxes,0.1346936403220163,real,2025
+1965,Employment taxes,0.13330224651573302,real,2025
+1966,Employment taxes,0.154533269773161,real,2025
+1967,Employment taxes,0.1995380890588431,real,2025
+1968,Employment taxes,0.20093527258109167,real,2025
+1969,Employment taxes,0.2262339848412348,real,2025
+1970,Employment taxes,0.24317521852645205,real,2025
+1971,Employment taxes,0.24671586427096168,real,2025
+1972,Employment taxes,0.2580186965845964,real,2025
+1973,Employment taxes,0.29450312072585727,real,2025
+1974,Employment taxes,0.32745846134286977,real,2025
+1975,Employment taxes,0.33556224973443094,real,2025
+1976,Employment taxes,0.33197788760100544,real,2025
+1977,Employment taxes,0.3592222852103349,real,2025
+1978,Employment taxes,0.38009043524148545,real,2025
+1979,Employment taxes,0.40814687824805806,real,2025
+1980,Employment taxes,0.4266911953190079,real,2025
+1981,Employment taxes,0.46310838563112317,real,2025
+1982,Employment taxes,0.4777161133723619,real,2025
+1983,Employment taxes,0.4716823319904666,real,2025
+1984,Employment taxes,0.5218534595657738,real,2025
+1985,Employment taxes,0.570859585383377,real,2025
+1986,Employment taxes,0.6047429892895376,real,2025
+1987,Employment taxes,0.6718069122251372,real,2025
+1988,Employment taxes,0.7467873578188167,real,2025
+1989,Employment taxes,0.7803629630073335,real,2025
+1990,Employment taxes,0.7996355733484757,real,2025
+1991,Employment taxes,0.8083994030462048,real,2025
+1992,Employment taxes,0.820639917670082,real,2025
+1993,Employment taxes,0.8248183027077695,real,2025
+1994,Employment taxes,0.870539593978803,real,2025
+1995,Employment taxes,0.8939036003656875,real,2025
+1996,Employment taxes,0.9281512306491827,real,2025
+1997,Employment taxes,0.9790768405459412,real,1997
+1998,Employment taxes,1.0204704134530735,real,2025
+1999,Employment taxes,1.0813966311892838,real,2025
+2000,Employment taxes,1.13206181123671,real,2025
+2001,Employment taxes,1.179449044323407,real,2025
+2002,Employment taxes,1.1706839487920186,real,2025
+2003,Employment taxes,1.1621323523676206,real,2025
+2004,Employment taxes,1.168924860181158,real,2025
+2005,Employment taxes,1.2199737173797258,real,2025
+2006,Employment taxes,1.2480567891434908,real,2025
+2007,Employment taxes,1.2670875194674918,real,2025
+2008,Employment taxes,1.2896079019884148,real,2025
+2009,Employment taxes,1.2402853245929848,real,2025
+2010,Employment taxes,1.1812455864745217,real,2025
+2011,Employment taxes,1.078376391962234,real,2025
+2012,Employment taxes,1.082370526069252,real,2025
+2013,Employment taxes,1.216950468316138,real,2025
+2014,Employment taxes,1.2999669935361466,real,2025
+2015,Employment taxes,1.3465830519815496,real,2025
+2016,Employment taxes,1.4031139021056642,real,2025
+2017,Employment taxes,1.4441199472694102,real,2025
+2018,Employment taxes,1.4250420583508274,real,2025
+2019,Employment taxes,1.4910951921462787,real,2025
+2020,Employment taxes,1.545934171481867,real,2025
+2021,Employment taxes,1.4834077938951264,real,2025
+2022,Employment taxes,1.5611155789661892,real,2025
+2023,Employment taxes,1.6479729990397216,real,2025
+2024,Employment taxes,1.70467227053746,real,2025
+2025,Employment taxes,1.694434489,real,2025
+1960,Business income taxes,0.18433492570725526,real,2025
+1961,Business income taxes,0.17870460868874552,real,2025
+1962,Business income taxes,0.17286317672004634,real,2025
+1963,Business income taxes,0.1793567900897607,real,2025
+1964,Business income taxes,0.19251115602952332,real,2025
+1965,Business income taxes,0.20365430358021872,real,2025
+1966,Business income taxes,0.23523326943845604,real,2025
+1967,Business income taxes,0.258452918890038,real,2025
+1968,Business income taxes,0.21388902699233825,real,2025
+1969,Business income taxes,0.2622809394410129,real,2025
+1970,Business income taxes,0.22751163516636422,real,2025
+1971,Business income taxes,0.187391254799442,real,2025
+1972,Business income taxes,0.20614548314681524,real,2025
+1973,Business income taxes,0.22078702045290796,real,2025
+1974,Business income taxes,0.22014449729488514,real,2025
+1975,Business income taxes,0.21885764316513803,real,2025
+1976,Business income taxes,0.20930336612004372,real,2025
+1977,Business income taxes,0.2506058439967704,real,2025
+1978,Business income taxes,0.2554213748347089,real,2025
+1979,Business income taxes,0.2584072672234827,real,2025
+1980,Business income taxes,0.24065788819323067,real,2025
+1981,Business income taxes,0.2233460482864399,real,2025
+1982,Business income taxes,0.18684962920153603,real,2025
+1983,Business income taxes,0.16761969948398456,real,2025
+1984,Business income taxes,0.1943213464279498,real,2025
+1985,Business income taxes,0.19622097099295613,real,2025
+1986,Business income taxes,0.1993885923092573,real,2025
+1987,Business income taxes,0.24946303288555693,real,2025
+1988,Business income taxes,0.2575456069096424,real,2025
+1989,Business income taxes,0.264198703964154,real,2025
+1990,Business income taxes,0.23956565793301474,real,2025
+1991,Business income taxes,0.23886779541629002,real,2025
+1992,Business income taxes,0.2419388942356535,real,2025
+1993,Business income taxes,0.26366955127536773,real,2025
+1994,Business income taxes,0.3024601177768749,real,2025
+1995,Business income taxes,0.335012529408763,real,2025
+1996,Business income taxes,0.3563847419907791,real,1996
+1997,Business income taxes,0.37876449071865526,real,1997
+1998,Business income taxes,0.39016861091498845,real,2025
+1999,Business income taxes,0.3907546043043201,real,2025
+2000,Business income taxes,0.417064253222668,real,2025
+2001,Business income taxes,0.3228277143664163,real,2025
+2002,Business income taxes,0.3597369500826744,real,2025
+2003,Business income taxes,0.32418324555828215,real,2025
+2004,Business income taxes,0.3758490320947035,real,2025
+2005,Business income taxes,0.4856460939790557,real,2025
+2006,Business income taxes,0.5834613236677922,real,2025
+2007,Business income taxes,0.5898072302682575,real,2025
+2008,Business income taxes,0.517357015313744,real,2008
+2009,Business income taxes,0.32588357106856886,real,2025
+2010,Business income taxes,0.39834598441059743,real,2025
+2011,Business income taxes,0.34121177364689503,real,2025
+2012,Business income taxes,0.38838212729658017,real,2025
+2013,Business income taxes,0.4228795380251796,real,2025
+2014,Business income taxes,0.47025287614427363,real,2025
+2015,Business income taxes,0.5135354492315553,real,2025
+2016,Business income taxes,0.4514814517652037,real,2025
+2017,Business income taxes,0.43514765767259994,real,2025
+2018,Business income taxes,0.3304082165366298,real,2025
+2019,Business income taxes,0.3421126596899501,real,2025
+2020,Business income taxes,0.32131435544281617,real,2025
+2021,Business income taxes,0.49401952259954285,real,2025
+2022,Business income taxes,0.5239699885391903,real,2025
+2023,Business income taxes,0.48082585521668325,real,2025
+2024,Business income taxes,0.5798891499310026,real,2025
+2025,Business income taxes,0.48638398800000004,real,2025
+1960,Excise taxes,0.09860883388401631,real,2025
+1961,Excise taxes,0.09905592976653509,real,2025
+1962,Excise taxes,0.10351293992734656,real,2025
+1963,Excise taxes,0.10767876769847,real,2025
+1964,Excise taxes,0.11051357678943538,real,2025
+1965,Excise taxes,0.11528738277430016,real,2025
+1966,Excise taxes,0.10221368788144437,real,2025
+1967,Excise taxes,0.10446639694993709,real,2025
+1968,Excise taxes,0.10245257864744702,real,2025
+1969,Excise taxes,0.10633351812710572,real,2025
+1970,Excise taxes,0.10327387802647107,real,2025
+1971,Excise taxes,0.10427579916364713,real,2025
+1972,Excise taxes,0.09943839892472375,real,2025
+1973,Excise taxes,0.09371043044423326,real,2025
+1974,Excise taxes,0.0902309295932743,real,2025
+1975,Excise taxes,0.08060166333272561,real,2025
+1976,Excise taxes,0.07720971901726777,real,2025
+1977,Excise taxes,0.07442123522138581,real,2025
+1978,Excise taxes,0.07291857390037487,real,2025
+1979,Excise taxes,0.06889680346274818,real,2025
+1980,Excise taxes,0.08185677711229443,real,2025
+1981,Excise taxes,0.12243552258398499,real,2025
+1982,Excise taxes,0.10413904895220283,real,2025
+1983,Excise taxes,0.09703871506365358,real,2025
+1984,Excise taxes,0.09959115408132653,real,2025
+1985,Excise taxes,0.09379778216200955,real,2025
+1986,Excise taxes,0.08346214096205734,real,2025
+1987,Excise taxes,0.0807888401697735,real,2025
+1988,Excise taxes,0.06089571976432042,real,2025
+1989,Excise taxes,0.05865233759316703,real,2025
+1990,Excise taxes,0.059097287157541534,real,2025
+1991,Excise taxes,0.06403166578117296,real,2025
+1992,Excise taxes,0.0688492259361321,real,2025
+1993,Excise taxes,0.07007765048896374,real,2025
+1994,Excise taxes,0.08435045370094105,real,2025
+1995,Excise taxes,0.08639425462072474,real,2025
+1996,Excise taxes,0.07959141296064821,real,2025
+1997,Excise taxes,0.08298980074929597,real,1997
+1998,Excise taxes,0.0835014497190949,real,2025
+1999,Excise taxes,0.1058253479049823,real,2025
+2000,Excise taxes,0.0970048387437312,real,2025
+2001,Excise taxes,0.09062340274894166,real,2025
+2002,Excise taxes,0.08870480304322743,real,2025
+2003,Excise taxes,0.08811667333814109,real,2025
+2004,Excise taxes,0.08932139330092681,real,2025
+2005,Excise taxes,0.09053964578963634,real,2025
+2006,Excise taxes,0.08882245440666374,real,2025
+2007,Excise taxes,0.07910546338128972,real,2025
+2008,Excise taxes,0.07550160586454366,real,2025
+2009,Excise taxes,0.06739569052212523,real,2025
+2010,Excise taxes,0.06763386965609429,real,2025
+2011,Excise taxes,0.06932134059758313,real,2025
+2012,Excise taxes,0.07751445697423914,real,2025
+2013,Excise taxes,0.08272561546208493,real,2025
+2014,Excise taxes,0.09475614354381034,real,2025
+2015,Excise taxes,0.10168517558297445,real,2025
+2016,Excise taxes,0.09907915794019344,real,2025
+2017,Excise taxes,0.0816279660066116,real,2025
+2018,Excise taxes,0.09270348382008309,real,2025
+2019,Excise taxes,0.09971879480001254,real,2025
+2020,Excise taxes,0.0878494020949101,real,2025
+2021,Excise taxes,0.0687248268273469,real,2025
+2022,Excise taxes,0.07782304116024935,real,2025
+2023,Excise taxes,0.07812987479451394,real,2025
+2024,Excise taxes,0.07998973233185333,real,2025
+2025,Excise taxes,0.090611934,real,2025
+1960,Estate and gift taxes,0.013516711386249573,real,2025
+1961,Estate and gift taxes,0.015734850748692273,real,2025
+1962,Estate and gift taxes,0.016520175825044812,real,2025
+1963,Estate and gift taxes,0.017565048006041587,real,2025
+1964,Estate and gift taxes,0.01914193238152741,real,2025
+1965,Estate and gift taxes,0.021397285384340065,real,2025
+1966,Estate and gift taxes,0.02360341349867311,real,2025
+1967,Estate and gift taxes,0.02231187164205228,real,2025
+1968,Estate and gift taxes,0.022049438848428502,real,2025
+1969,Estate and gift taxes,0.024150374339804267,real,2025
+1970,Estate and gift taxes,0.02389646700734744,real,2025
+1971,Estate and gift taxes,0.023388609470674206,real,2025
+1972,Estate and gift taxes,0.03240414085340392,real,2025
+1973,Estate and gift taxes,0.028136689740753427,real,2025
+1974,Estate and gift taxes,0.02689903627881811,real,2025
+1975,Estate and gift taxes,0.022428341261511418,real,2025
+1976,Estate and gift taxes,0.023745192374426228,real,2025
+1977,Estate and gift taxes,0.030988112620336995,real,2025
+1978,Estate and gift taxes,0.02102396489410678,real,2025
+1979,Estate and gift taxes,0.0199609725046472,real,2025
+1980,Estate and gift taxes,0.021606729410879863,real,2025
+1981,Estate and gift taxes,0.02093233884134755,real,2025
+1982,Estate and gift taxes,0.023057539651868613,real,2025
+1983,Estate and gift taxes,0.01689198983178596,real,2025
+1984,Estate and gift taxes,0.01618048586658373,real,2025
+1985,Estate and gift taxes,0.016677810805143727,real,2025
+1986,Estate and gift taxes,0.017833951493995925,real,2025
+1987,Estate and gift taxes,0.018596335685847946,real,2025
+1988,Estate and gift taxes,0.018278655436667995,real,2025
+1989,Estate and gift taxes,0.020259816065982462,real,2025
+1990,Estate and gift taxes,0.025612116515838838,real,2025
+1991,Estate and gift taxes,0.024124986091772414,real,2025
+1992,Estate and gift taxes,0.023545789651498394,real,2025
+1993,Estate and gift taxes,0.02583823124356137,real,2025
+1994,Estate and gift taxes,0.030611472534124235,real,2025
+1995,Estate and gift taxes,0.029087825550154645,real,2025
+1996,Estate and gift taxes,0.03316210676033067,real,2025
+1997,Estate and gift taxes,0.03770450281143897,real,2025
+1998,Estate and gift taxes,0.045061320079548675,real,2025
+1999,Estate and gift taxes,0.05127383484395519,real,2025
+2000,Estate and gift taxes,0.0526016032998997,real,2025
+2001,Estate and gift taxes,0.0505647447886534,real,2025
+2002,Estate and gift taxes,0.04634829142724382,real,2025
+2003,Estate and gift taxes,0.038116107274424126,real,2025
+2004,Estate and gift taxes,0.04168781006022677,real,2025
+2005,Estate and gift taxes,0.04049311357979498,real,2025
+2006,Estate and gift taxes,0.043940618420678465,real,2025
+2007,Estate and gift taxes,0.04022844640491726,real,2007
+2008,Estate and gift taxes,0.04354765129813523,real,2025
+2009,Estate and gift taxes,0.035665589767661904,real,2025
+2010,Estate and gift taxes,0.028307350161134465,real,2025
+2011,Estate and gift taxes,0.012756901811063943,real,2025
+2012,Estate and gift taxes,0.01993955426024852,real,2025
+2013,Estate and gift taxes,0.02687796900452417,real,2025
+2014,Estate and gift taxes,0.02683891859441279,real,2025
+2015,Estate and gift taxes,0.026398038518747793,real,2025
+2016,Estate and gift taxes,0.029184581710485998,real,2025
+2017,Estate and gift taxes,0.030567541813154374,real,2025
+2018,Estate and gift taxes,0.030011998121562515,real,2025
+2019,Estate and gift taxes,0.021689428452199684,real,2025
+2020,Estate and gift taxes,0.02218499396245003,real,2025
+2021,Estate and gift taxes,0.03306646837967645,real,2025
+2022,Estate and gift taxes,0.03672667581655664,real,2025
+2023,Estate and gift taxes,0.037286470359017124,real,2025
+2024,Estate and gift taxes,0.03372893406641438,real,2025
+2025,Estate and gift taxes,0.031111136,real,2025

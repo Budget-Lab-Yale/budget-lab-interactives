@@ -1,0 +1,2671 @@
+time,series,value,state
+2000,Alabama,34.355,Alabama
+2001,Alabama,38.398,Alabama
+2002,Alabama,43.729,Alabama
+2003,Alabama,48.599,Alabama
+2004,Alabama,53.228,Alabama
+2005,Alabama,60.429,Alabama
+2006,Alabama,63.488,Alabama
+2007,Alabama,64.85,Alabama
+2008,Alabama,63.111,Alabama
+2009,Alabama,73.018,Alabama
+2010,Alabama,75.653,Alabama
+2011,Alabama,80.556,Alabama
+2012,Alabama,83.332,Alabama
+2013,Alabama,85.86,Alabama
+2014,Alabama,87.181,Alabama
+2015,Alabama,88.144,Alabama
+2016,Alabama,89.01,Alabama
+2017,Alabama,89.106,Alabama
+2018,Alabama,89.614,Alabama
+2019,Alabama,90.662,Alabama
+2020,Alabama,95.803,Alabama
+2021,Alabama,91.162,Alabama
+2022,Alabama,94.304,Alabama
+2023,Alabama,91.329,Alabama
+2024,Alabama,93.725,Alabama
+2025,Alabama,93.871,Alabama
+2000,Alaska,23.944,Alaska
+2001,Alaska,26.441,Alaska
+2002,Alaska,31.935,Alaska
+2003,Alaska,37.953,Alaska
+2004,Alaska,43.409,Alaska
+2005,Alaska,48.477,Alaska
+2006,Alaska,51.365,Alaska
+2007,Alaska,53.849,Alaska
+2008,Alaska,57.217,Alaska
+2009,Alaska,63.189,Alaska
+2010,Alaska,67.297,Alaska
+2011,Alaska,76.316,Alaska
+2012,Alaska,80.526,Alaska
+2013,Alaska,82.731,Alaska
+2014,Alaska,84.373,Alaska
+2015,Alaska,84.893,Alaska
+2016,Alaska,85.868,Alaska
+2017,Alaska,86.236,Alaska
+2018,Alaska,86.493,Alaska
+2019,Alaska,88.035,Alaska
+2020,Alaska,94.246,Alaska
+2021,Alaska,88.832,Alaska
+2022,Alaska,92.777,Alaska
+2023,Alaska,90.037,Alaska
+2024,Alaska,93.106,Alaska
+2025,Alaska,93.367,Alaska
+2000,Arizona,25.669,Arizona
+2001,Arizona,29.272,Arizona
+2002,Arizona,34.698,Arizona
+2003,Arizona,42.151,Arizona
+2004,Arizona,46.236,Arizona
+2005,Arizona,50.399,Arizona
+2006,Arizona,52.927,Arizona
+2007,Arizona,55.323,Arizona
+2008,Arizona,57.794,Arizona
+2009,Arizona,65.395,Arizona
+2010,Arizona,67.877,Arizona
+2011,Arizona,75.373,Arizona
+2012,Arizona,78.937,Arizona
+2013,Arizona,81.619,Arizona
+2014,Arizona,83.364,Arizona
+2015,Arizona,84.845,Arizona
+2016,Arizona,86.164,Arizona
+2017,Arizona,86.653,Arizona
+2018,Arizona,87.572,Arizona
+2019,Arizona,88.805,Arizona
+2020,Arizona,94.549,Arizona
+2021,Arizona,89.832,Arizona
+2022,Arizona,93.55,Arizona
+2023,Arizona,91.033,Arizona
+2024,Arizona,93.511,Arizona
+2025,Arizona,93.729,Arizona
+2000,Arkansas,36.578,Arkansas
+2001,Arkansas,40.965,Arkansas
+2002,Arkansas,46.472,Arkansas
+2003,Arkansas,51.507,Arkansas
+2004,Arkansas,56.116,Arkansas
+2005,Arkansas,60.018,Arkansas
+2006,Arkansas,61.754,Arkansas
+2007,Arkansas,63.091,Arkansas
+2008,Arkansas,61.381,Arkansas
+2009,Arkansas,70.876,Arkansas
+2010,Arkansas,73.62,Arkansas
+2011,Arkansas,81.738,Arkansas
+2012,Arkansas,84.165,Arkansas
+2013,Arkansas,86.298,Arkansas
+2014,Arkansas,87.596,Arkansas
+2015,Arkansas,88.823,Arkansas
+2016,Arkansas,89.656,Arkansas
+2017,Arkansas,89.829,Arkansas
+2018,Arkansas,90.311,Arkansas
+2019,Arkansas,91.36,Arkansas
+2020,Arkansas,95.939,Arkansas
+2021,Arkansas,91.523,Arkansas
+2022,Arkansas,95.36,Arkansas
+2023,Arkansas,92.531,Arkansas
+2024,Arkansas,94.723,Arkansas
+2025,Arkansas,94.717,Arkansas
+2000,California,21.383,California
+2001,California,23.985,California
+2002,California,28.125,California
+2003,California,32.199,California
+2004,California,49.904,California
+2005,California,55.211,California
+2006,California,57.708,California
+2007,California,58.575,California
+2008,California,60.509,California
+2009,California,67.455,California
+2010,California,69.599,California
+2011,California,74.807,California
+2012,California,78.422,California
+2013,California,80.686,California
+2014,California,83.115,California
+2015,California,84.959,California
+2016,California,86.18,California
+2017,California,86.8,California
+2018,California,87.547,California
+2019,California,88.934,California
+2020,California,94.1,California
+2021,California,89.951,California
+2022,California,93.19,California
+2023,California,90.949,California
+2024,California,92.882,California
+2025,California,93.422,California
+2000,Colorado,25.628,Colorado
+2001,Colorado,28.588,Colorado
+2002,Colorado,33.283,Colorado
+2003,Colorado,37.897,Colorado
+2004,Colorado,42.171,Colorado
+2005,Colorado,46.202,Colorado
+2006,Colorado,48.269,Colorado
+2007,Colorado,50.545,Colorado
+2008,Colorado,53.487,Colorado
+2009,Colorado,62.244,Colorado
+2010,Colorado,65.69,Colorado
+2011,Colorado,75.046,Colorado
+2012,Colorado,79.448,Colorado
+2013,Colorado,81.796,Colorado
+2014,Colorado,83.7,Colorado
+2015,Colorado,85.224,Colorado
+2016,Colorado,86.679,Colorado
+2017,Colorado,86.885,Colorado
+2018,Colorado,87.565,Colorado
+2019,Colorado,88.889,Colorado
+2020,Colorado,94.684,Colorado
+2021,Colorado,90.428,Colorado
+2022,Colorado,93.344,Colorado
+2023,Colorado,91.422,Colorado
+2024,Colorado,93.436,Colorado
+2025,Colorado,94.199,Colorado
+2000,Connecticut,23.398,Connecticut
+2001,Connecticut,26.143,Connecticut
+2002,Connecticut,30.432,Connecticut
+2003,Connecticut,34.434,Connecticut
+2004,Connecticut,38.406,Connecticut
+2005,Connecticut,45.985,Connecticut
+2006,Connecticut,55.159,Connecticut
+2007,Connecticut,58.678,Connecticut
+2008,Connecticut,60.952,Connecticut
+2009,Connecticut,68.828,Connecticut
+2010,Connecticut,71.929,Connecticut
+2011,Connecticut,77.88,Connecticut
+2012,Connecticut,81.109,Connecticut
+2013,Connecticut,83.211,Connecticut
+2014,Connecticut,84.755,Connecticut
+2015,Connecticut,85.869,Connecticut
+2016,Connecticut,87.198,Connecticut
+2017,Connecticut,87.653,Connecticut
+2018,Connecticut,88.472,Connecticut
+2019,Connecticut,89.587,Connecticut
+2020,Connecticut,94.946,Connecticut
+2021,Connecticut,90.87,Connecticut
+2022,Connecticut,94.181,Connecticut
+2023,Connecticut,90.869,Connecticut
+2024,Connecticut,93.667,Connecticut
+2025,Connecticut,94.271,Connecticut
+2000,Delaware,28.875,Delaware
+2001,Delaware,32.066,Delaware
+2002,Delaware,36.742,Delaware
+2003,Delaware,41.267,Delaware
+2004,Delaware,45.916,Delaware
+2005,Delaware,50.777,Delaware
+2006,Delaware,53.013,Delaware
+2007,Delaware,56.013,Delaware
+2008,Delaware,57.656,Delaware
+2009,Delaware,65.622,Delaware
+2010,Delaware,68.607,Delaware
+2011,Delaware,77.397,Delaware
+2012,Delaware,80.766,Delaware
+2013,Delaware,82.584,Delaware
+2014,Delaware,84.337,Delaware
+2015,Delaware,85.497,Delaware
+2016,Delaware,86.511,Delaware
+2017,Delaware,86.957,Delaware
+2018,Delaware,87.801,Delaware
+2019,Delaware,88.897,Delaware
+2020,Delaware,94.976,Delaware
+2021,Delaware,90.464,Delaware
+2022,Delaware,93.154,Delaware
+2023,Delaware,90.297,Delaware
+2024,Delaware,93.399,Delaware
+2025,Delaware,93.739,Delaware
+2004,District of Columbia,40.418,District of Columbia
+2005,District of Columbia,44.941,District of Columbia
+2006,District of Columbia,48.465,District of Columbia
+2007,District of Columbia,51.643,District of Columbia
+2008,District of Columbia,53.585,District of Columbia
+2009,District of Columbia,60.545,District of Columbia
+2010,District of Columbia,64.135,District of Columbia
+2011,District of Columbia,71.052,District of Columbia
+2012,District of Columbia,75.514,District of Columbia
+2013,District of Columbia,78.036,District of Columbia
+2014,District of Columbia,80.487,District of Columbia
+2015,District of Columbia,82.191,District of Columbia
+2016,District of Columbia,83.764,District of Columbia
+2017,District of Columbia,84.696,District of Columbia
+2018,District of Columbia,85.709,District of Columbia
+2019,District of Columbia,86.971,District of Columbia
+2020,District of Columbia,94.102,District of Columbia
+2021,District of Columbia,88.844,District of Columbia
+2022,District of Columbia,92.421,District of Columbia
+2023,District of Columbia,89.735,District of Columbia
+2024,District of Columbia,92.708,District of Columbia
+2025,District of Columbia,93.09,District of Columbia
+2000,Florida,30.386,Florida
+2001,Florida,33.229,Florida
+2002,Florida,37.911,Florida
+2003,Florida,41.78,Florida
+2004,Florida,45.559,Florida
+2005,Florida,49.548,Florida
+2006,Florida,51.949,Florida
+2007,Florida,54.341,Florida
+2008,Florida,55.714,Florida
+2009,Florida,63.341,Florida
+2010,Florida,67.152,Florida
+2011,Florida,77.206,Florida
+2012,Florida,80.91,Florida
+2013,Florida,82.185,Florida
+2014,Florida,83.825,Florida
+2015,Florida,84.987,Florida
+2016,Florida,86.023,Florida
+2017,Florida,86.148,Florida
+2018,Florida,86.216,Florida
+2019,Florida,88.154,Florida
+2020,Florida,92.574,Florida
+2021,Florida,88.889,Florida
+2022,Florida,94.658,Florida
+2023,Florida,90.094,Florida
+2024,Florida,93.131,Florida
+2025,Florida,93.316,Florida
+2000,Georgia,36.74,Georgia
+2001,Georgia,41.203,Georgia
+2002,Georgia,46.445,Georgia
+2003,Georgia,51.1,Georgia
+2004,Georgia,54.563,Georgia
+2005,Georgia,57.725,Georgia
+2006,Georgia,59.776,Georgia
+2007,Georgia,61.502,Georgia
+2008,Georgia,62.198,Georgia
+2009,Georgia,69.995,Georgia
+2010,Georgia,73.826,Georgia
+2011,Georgia,80.26,Georgia
+2012,Georgia,83.094,Georgia
+2013,Georgia,84.66,Georgia
+2014,Georgia,86.264,Georgia
+2015,Georgia,87.292,Georgia
+2016,Georgia,88.603,Georgia
+2017,Georgia,88.785,Georgia
+2018,Georgia,89.164,Georgia
+2019,Georgia,90.293,Georgia
+2020,Georgia,95.684,Georgia
+2021,Georgia,91.476,Georgia
+2022,Georgia,93.954,Georgia
+2023,Georgia,91.144,Georgia
+2024,Georgia,93.433,Georgia
+2025,Georgia,93.584,Georgia
+2000,Hawaii,22.281,Hawaii
+2001,Hawaii,24.69,Hawaii
+2002,Hawaii,29.132,Hawaii
+2003,Hawaii,33.139,Hawaii
+2004,Hawaii,37.262,Hawaii
+2005,Hawaii,40.839,Hawaii
+2006,Hawaii,43.387,Hawaii
+2007,Hawaii,45.264,Hawaii
+2008,Hawaii,48.504,Hawaii
+2009,Hawaii,54.785,Hawaii
+2010,Hawaii,58.771,Hawaii
+2011,Hawaii,68.178,Hawaii
+2012,Hawaii,73.698,Hawaii
+2013,Hawaii,76.077,Hawaii
+2014,Hawaii,78.438,Hawaii
+2015,Hawaii,80.423,Hawaii
+2016,Hawaii,82.123,Hawaii
+2017,Hawaii,82.629,Hawaii
+2018,Hawaii,83.519,Hawaii
+2019,Hawaii,84.672,Hawaii
+2020,Hawaii,91.516,Hawaii
+2021,Hawaii,85.814,Hawaii
+2022,Hawaii,89.978,Hawaii
+2023,Hawaii,86.893,Hawaii
+2024,Hawaii,90.312,Hawaii
+2025,Hawaii,90.867,Hawaii
+2000,Idaho,26.307,Idaho
+2001,Idaho,31.14,Idaho
+2002,Idaho,39.005,Idaho
+2003,Idaho,45.511,Idaho
+2004,Idaho,52.708,Idaho
+2005,Idaho,57.611,Idaho
+2006,Idaho,60.393,Idaho
+2007,Idaho,62.422,Idaho
+2008,Idaho,64.006,Idaho
+2009,Idaho,72.23,Idaho
+2010,Idaho,74.993,Idaho
+2011,Idaho,81.603,Idaho
+2012,Idaho,84.493,Idaho
+2013,Idaho,85.707,Idaho
+2014,Idaho,87.211,Idaho
+2015,Idaho,88.255,Idaho
+2016,Idaho,89.273,Idaho
+2017,Idaho,89.323,Idaho
+2018,Idaho,89.856,Idaho
+2019,Idaho,90.836,Idaho
+2020,Idaho,95.537,Idaho
+2021,Idaho,91.779,Idaho
+2022,Idaho,94.327,Idaho
+2023,Idaho,92.387,Idaho
+2024,Idaho,94.391,Idaho
+2025,Idaho,94.756,Idaho
+2000,Illinois,28.603,Illinois
+2001,Illinois,31.245,Illinois
+2002,Illinois,35.658,Illinois
+2003,Illinois,40.748,Illinois
+2004,Illinois,44.795,Illinois
+2005,Illinois,48.332,Illinois
+2006,Illinois,49.603,Illinois
+2007,Illinois,51.868,Illinois
+2008,Illinois,53.471,Illinois
+2009,Illinois,61.591,Illinois
+2010,Illinois,65.436,Illinois
+2011,Illinois,76.622,Illinois
+2012,Illinois,80.799,Illinois
+2013,Illinois,83.002,Illinois
+2014,Illinois,84.599,Illinois
+2015,Illinois,85.94,Illinois
+2016,Illinois,86.998,Illinois
+2017,Illinois,87.371,Illinois
+2018,Illinois,87.995,Illinois
+2019,Illinois,89.282,Illinois
+2020,Illinois,94.39,Illinois
+2021,Illinois,90.618,Illinois
+2022,Illinois,94.445,Illinois
+2023,Illinois,90.81,Illinois
+2024,Illinois,93.729,Illinois
+2025,Illinois,94.121,Illinois
+2000,Indiana,34.19,Indiana
+2001,Indiana,37.545,Indiana
+2002,Indiana,42.63,Indiana
+2003,Indiana,46.879,Indiana
+2004,Indiana,50.57,Indiana
+2005,Indiana,54.154,Indiana
+2006,Indiana,55.377,Indiana
+2007,Indiana,57.705,Indiana
+2008,Indiana,63.646,Indiana
+2009,Indiana,72.641,Indiana
+2010,Indiana,76.407,Indiana
+2011,Indiana,82.321,Indiana
+2012,Indiana,85.224,Indiana
+2013,Indiana,86.859,Indiana
+2014,Indiana,88.125,Indiana
+2015,Indiana,89.179,Indiana
+2016,Indiana,90.011,Indiana
+2017,Indiana,90.058,Indiana
+2018,Indiana,90.598,Indiana
+2019,Indiana,91.626,Indiana
+2020,Indiana,95.993,Indiana
+2021,Indiana,92.163,Indiana
+2022,Indiana,95.703,Indiana
+2023,Indiana,92.564,Indiana
+2024,Indiana,94.896,Indiana
+2025,Indiana,95.2,Indiana
+2000,Iowa,34.576,Iowa
+2001,Iowa,41.134,Iowa
+2002,Iowa,51.72,Iowa
+2003,Iowa,58.887,Iowa
+2004,Iowa,63.846,Iowa
+2005,Iowa,67.387,Iowa
+2006,Iowa,68.897,Iowa
+2007,Iowa,70.518,Iowa
+2008,Iowa,70.283,Iowa
+2009,Iowa,78.047,Iowa
+2010,Iowa,80.632,Iowa
+2011,Iowa,86.79,Iowa
+2012,Iowa,89.334,Iowa
+2013,Iowa,90.171,Iowa
+2014,Iowa,91.21,Iowa
+2015,Iowa,91.86,Iowa
+2016,Iowa,92.566,Iowa
+2017,Iowa,92.851,Iowa
+2018,Iowa,93.107,Iowa
+2019,Iowa,93.845,Iowa
+2020,Iowa,97.007,Iowa
+2021,Iowa,91.795,Iowa
+2022,Iowa,96.722,Iowa
+2023,Iowa,94.069,Iowa
+2024,Iowa,96.004,Iowa
+2025,Iowa,96.228,Iowa
+2000,Kansas,30.718,Kansas
+2001,Kansas,34.545,Kansas
+2002,Kansas,40.305,Kansas
+2003,Kansas,45.613,Kansas
+2004,Kansas,50.298,Kansas
+2005,Kansas,54.711,Kansas
+2006,Kansas,56.992,Kansas
+2007,Kansas,59.564,Kansas
+2008,Kansas,62.491,Kansas
+2009,Kansas,72.769,Kansas
+2010,Kansas,79.313,Kansas
+2011,Kansas,84.187,Kansas
+2012,Kansas,86.921,Kansas
+2013,Kansas,88.379,Kansas
+2014,Kansas,89.225,Kansas
+2015,Kansas,90.451,Kansas
+2016,Kansas,91.267,Kansas
+2017,Kansas,91.409,Kansas
+2018,Kansas,91.776,Kansas
+2019,Kansas,92.717,Kansas
+2020,Kansas,96.411,Kansas
+2021,Kansas,93.03,Kansas
+2022,Kansas,95.657,Kansas
+2023,Kansas,93.655,Kansas
+2024,Kansas,95.159,Kansas
+2025,Kansas,95.452,Kansas
+2000,Kentucky,33.816,Kentucky
+2001,Kentucky,37.587,Kentucky
+2002,Kentucky,42.845,Kentucky
+2003,Kentucky,48.177,Kentucky
+2004,Kentucky,52.836,Kentucky
+2005,Kentucky,56.762,Kentucky
+2006,Kentucky,58.7,Kentucky
+2007,Kentucky,61.642,Kentucky
+2008,Kentucky,60.726,Kentucky
+2009,Kentucky,70.833,Kentucky
+2010,Kentucky,73.931,Kentucky
+2011,Kentucky,82.216,Kentucky
+2012,Kentucky,85.498,Kentucky
+2013,Kentucky,87.145,Kentucky
+2014,Kentucky,88.364,Kentucky
+2015,Kentucky,89.479,Kentucky
+2016,Kentucky,90.225,Kentucky
+2017,Kentucky,90.571,Kentucky
+2018,Kentucky,91.203,Kentucky
+2019,Kentucky,92.313,Kentucky
+2020,Kentucky,96.589,Kentucky
+2021,Kentucky,92.728,Kentucky
+2022,Kentucky,95.9,Kentucky
+2023,Kentucky,93.22,Kentucky
+2024,Kentucky,95.426,Kentucky
+2025,Kentucky,95.788,Kentucky
+2000,Louisiana,34.448,Louisiana
+2001,Louisiana,37.587,Louisiana
+2002,Louisiana,41.319,Louisiana
+2003,Louisiana,45.576,Louisiana
+2004,Louisiana,49.146,Louisiana
+2005,Louisiana,52.648,Louisiana
+2006,Louisiana,57.16,Louisiana
+2007,Louisiana,55.265,Louisiana
+2008,Louisiana,56.997,Louisiana
+2009,Louisiana,65.735,Louisiana
+2010,Louisiana,70.022,Louisiana
+2011,Louisiana,77.947,Louisiana
+2012,Louisiana,81.743,Louisiana
+2013,Louisiana,83.34,Louisiana
+2014,Louisiana,85.12,Louisiana
+2015,Louisiana,86.514,Louisiana
+2016,Louisiana,87.734,Louisiana
+2017,Louisiana,87.567,Louisiana
+2018,Louisiana,88.369,Louisiana
+2019,Louisiana,89.431,Louisiana
+2020,Louisiana,93.378,Louisiana
+2021,Louisiana,89.286,Louisiana
+2022,Louisiana,94.492,Louisiana
+2023,Louisiana,90.229,Louisiana
+2024,Louisiana,92.781,Louisiana
+2025,Louisiana,92.694,Louisiana
+2000,Maine,23.89,Maine
+2001,Maine,26.024,Maine
+2002,Maine,30.281,Maine
+2003,Maine,34.656,Maine
+2004,Maine,38.975,Maine
+2005,Maine,43.185,Maine
+2006,Maine,44.515,Maine
+2007,Maine,46.963,Maine
+2008,Maine,49.157,Maine
+2009,Maine,60.797,Maine
+2010,Maine,65.217,Maine
+2011,Maine,74.511,Maine
+2012,Maine,78.676,Maine
+2013,Maine,81.132,Maine
+2014,Maine,83.145,Maine
+2015,Maine,84.57,Maine
+2016,Maine,85.864,Maine
+2017,Maine,86.232,Maine
+2018,Maine,87.022,Maine
+2019,Maine,88.448,Maine
+2020,Maine,94.474,Maine
+2021,Maine,90.025,Maine
+2022,Maine,93.403,Maine
+2023,Maine,89.565,Maine
+2024,Maine,93.283,Maine
+2025,Maine,93.829,Maine
+2004,Maryland,40.714,Maryland
+2005,Maryland,44.751,Maryland
+2006,Maryland,46.971,Maryland
+2007,Maryland,49.522,Maryland
+2008,Maryland,51.602,Maryland
+2009,Maryland,60.075,Maryland
+2010,Maryland,64.602,Maryland
+2011,Maryland,72.434,Maryland
+2012,Maryland,76.756,Maryland
+2013,Maryland,78.791,Maryland
+2014,Maryland,79.416,Maryland
+2015,Maryland,81.571,Maryland
+2016,Maryland,83.044,Maryland
+2017,Maryland,83.708,Maryland
+2018,Maryland,84.579,Maryland
+2019,Maryland,85.476,Maryland
+2020,Maryland,93.046,Maryland
+2021,Maryland,87.806,Maryland
+2022,Maryland,91.157,Maryland
+2023,Maryland,87.422,Maryland
+2024,Maryland,90.911,Maryland
+2025,Maryland,91.524,Maryland
+2000,Massachusetts,23.361,Massachusetts
+2001,Massachusetts,25.723,Massachusetts
+2002,Massachusetts,29.658,Massachusetts
+2003,Massachusetts,35.134,Massachusetts
+2004,Massachusetts,39.453,Massachusetts
+2005,Massachusetts,50.397,Massachusetts
+2006,Massachusetts,55.358,Massachusetts
+2007,Massachusetts,58.51,Massachusetts
+2008,Massachusetts,60.401,Massachusetts
+2009,Massachusetts,69.025,Massachusetts
+2010,Massachusetts,72.312,Massachusetts
+2011,Massachusetts,78.183,Massachusetts
+2012,Massachusetts,81.456,Massachusetts
+2013,Massachusetts,83.353,Massachusetts
+2014,Massachusetts,84.844,Massachusetts
+2015,Massachusetts,85.969,Massachusetts
+2016,Massachusetts,87.087,Massachusetts
+2017,Massachusetts,87.733,Massachusetts
+2018,Massachusetts,88.5,Massachusetts
+2019,Massachusetts,89.522,Massachusetts
+2020,Massachusetts,95.067,Massachusetts
+2021,Massachusetts,90.881,Massachusetts
+2022,Massachusetts,93.934,Massachusetts
+2023,Massachusetts,90.486,Massachusetts
+2024,Massachusetts,93.421,Massachusetts
+2025,Massachusetts,93.971,Massachusetts
+2000,Michigan,27.832,Michigan
+2001,Michigan,31.281,Michigan
+2002,Michigan,37.158,Michigan
+2003,Michigan,42.729,Michigan
+2004,Michigan,60.027,Michigan
+2005,Michigan,64.468,Michigan
+2006,Michigan,65.318,Michigan
+2007,Michigan,66.537,Michigan
+2008,Michigan,66.874,Michigan
+2009,Michigan,74.525,Michigan
+2010,Michigan,76.869,Michigan
+2011,Michigan,81.504,Michigan
+2012,Michigan,83.881,Michigan
+2013,Michigan,84.969,Michigan
+2014,Michigan,86.298,Michigan
+2015,Michigan,87.296,Michigan
+2016,Michigan,88.136,Michigan
+2017,Michigan,88.311,Michigan
+2018,Michigan,88.94,Michigan
+2019,Michigan,90.031,Michigan
+2020,Michigan,94.634,Michigan
+2021,Michigan,91.157,Michigan
+2022,Michigan,93.973,Michigan
+2023,Michigan,92.014,Michigan
+2024,Michigan,93.968,Michigan
+2025,Michigan,94.308,Michigan
+2000,Minnesota,29.482,Minnesota
+2001,Minnesota,39.074,Minnesota
+2002,Minnesota,46.87,Minnesota
+2003,Minnesota,54.533,Minnesota
+2004,Minnesota,64.066,Minnesota
+2005,Minnesota,67.201,Minnesota
+2006,Minnesota,67.323,Minnesota
+2007,Minnesota,68.495,Minnesota
+2008,Minnesota,69.611,Minnesota
+2009,Minnesota,76.263,Minnesota
+2010,Minnesota,78.05,Minnesota
+2011,Minnesota,82.13,Minnesota
+2012,Minnesota,84.506,Minnesota
+2013,Minnesota,85.798,Minnesota
+2014,Minnesota,87.214,Minnesota
+2015,Minnesota,88.182,Minnesota
+2016,Minnesota,89.254,Minnesota
+2017,Minnesota,89.624,Minnesota
+2018,Minnesota,90.2,Minnesota
+2019,Minnesota,91.287,Minnesota
+2020,Minnesota,95.427,Minnesota
+2021,Minnesota,92.41,Minnesota
+2022,Minnesota,95.593,Minnesota
+2023,Minnesota,92.231,Minnesota
+2024,Minnesota,94.683,Minnesota
+2025,Minnesota,95.05,Minnesota
+2000,Mississippi,38.635,Mississippi
+2001,Mississippi,42.165,Mississippi
+2002,Mississippi,46.865,Mississippi
+2003,Mississippi,51.989,Mississippi
+2004,Mississippi,55.892,Mississippi
+2005,Mississippi,60.013,Mississippi
+2006,Mississippi,64.153,Mississippi
+2007,Mississippi,64.301,Mississippi
+2008,Mississippi,60.747,Mississippi
+2009,Mississippi,71.297,Mississippi
+2010,Mississippi,73.934,Mississippi
+2011,Mississippi,80.898,Mississippi
+2012,Mississippi,84.105,Mississippi
+2013,Mississippi,86.231,Mississippi
+2014,Mississippi,87.556,Mississippi
+2015,Mississippi,88.672,Mississippi
+2016,Mississippi,89.539,Mississippi
+2017,Mississippi,89.702,Mississippi
+2018,Mississippi,89.976,Mississippi
+2019,Mississippi,90.858,Mississippi
+2020,Mississippi,94.265,Mississippi
+2021,Mississippi,90.9,Mississippi
+2022,Mississippi,95.951,Mississippi
+2023,Mississippi,92.054,Mississippi
+2024,Mississippi,94.379,Mississippi
+2025,Mississippi,94.188,Mississippi
+2000,Missouri,32.174,Missouri
+2001,Missouri,36.301,Missouri
+2002,Missouri,41.426,Missouri
+2003,Missouri,47.066,Missouri
+2004,Missouri,51.525,Missouri
+2005,Missouri,55.53,Missouri
+2006,Missouri,56.848,Missouri
+2007,Missouri,58.324,Missouri
+2008,Missouri,59.008,Missouri
+2009,Missouri,68.268,Missouri
+2010,Missouri,71.954,Missouri
+2011,Missouri,80.427,Missouri
+2012,Missouri,83.378,Missouri
+2013,Missouri,85.19,Missouri
+2014,Missouri,86.446,Missouri
+2015,Missouri,87.085,Missouri
+2016,Missouri,88.32,Missouri
+2017,Missouri,88.55,Missouri
+2018,Missouri,89.305,Missouri
+2019,Missouri,90.76,Missouri
+2020,Missouri,95.765,Missouri
+2021,Missouri,91.222,Missouri
+2022,Missouri,94.996,Missouri
+2023,Missouri,91.78,Missouri
+2024,Missouri,94.375,Missouri
+2025,Missouri,94.652,Missouri
+2000,Montana,27.586,Montana
+2001,Montana,32.234,Montana
+2002,Montana,39.581,Montana
+2003,Montana,45.209,Montana
+2004,Montana,51.049,Montana
+2005,Montana,55.37,Montana
+2006,Montana,57.135,Montana
+2007,Montana,58.942,Montana
+2008,Montana,62.701,Montana
+2009,Montana,70.469,Montana
+2010,Montana,73.872,Montana
+2011,Montana,81.498,Montana
+2012,Montana,84.478,Montana
+2013,Montana,86.219,Montana
+2014,Montana,87.629,Montana
+2015,Montana,88.701,Montana
+2016,Montana,89.566,Montana
+2017,Montana,89.68,Montana
+2018,Montana,90.345,Montana
+2019,Montana,91.402,Montana
+2020,Montana,95.699,Montana
+2021,Montana,92.245,Montana
+2022,Montana,94.743,Montana
+2023,Montana,92.827,Montana
+2024,Montana,94.646,Montana
+2025,Montana,94.876,Montana
+2000,Nebraska,28.654,Nebraska
+2001,Nebraska,32.441,Nebraska
+2002,Nebraska,40.285,Nebraska
+2003,Nebraska,46.879,Nebraska
+2004,Nebraska,52.234,Nebraska
+2005,Nebraska,57.043,Nebraska
+2006,Nebraska,59.278,Nebraska
+2007,Nebraska,61.629,Nebraska
+2008,Nebraska,63.351,Nebraska
+2009,Nebraska,71.863,Nebraska
+2010,Nebraska,78.115,Nebraska
+2011,Nebraska,85.233,Nebraska
+2012,Nebraska,88.067,Nebraska
+2013,Nebraska,89.488,Nebraska
+2014,Nebraska,90.576,Nebraska
+2015,Nebraska,91.316,Nebraska
+2016,Nebraska,91.961,Nebraska
+2017,Nebraska,91.996,Nebraska
+2018,Nebraska,92.337,Nebraska
+2019,Nebraska,93.164,Nebraska
+2020,Nebraska,96.471,Nebraska
+2021,Nebraska,93.43,Nebraska
+2022,Nebraska,96.015,Nebraska
+2023,Nebraska,94.158,Nebraska
+2024,Nebraska,95.655,Nebraska
+2025,Nebraska,96.072,Nebraska
+2000,Nevada,30.064,Nevada
+2001,Nevada,33.239,Nevada
+2002,Nevada,37.948,Nevada
+2003,Nevada,42.387,Nevada
+2004,Nevada,47.223,Nevada
+2005,Nevada,51.626,Nevada
+2006,Nevada,54.124,Nevada
+2007,Nevada,56.278,Nevada
+2008,Nevada,58.344,Nevada
+2009,Nevada,64.967,Nevada
+2010,Nevada,67.856,Nevada
+2011,Nevada,76.161,Nevada
+2012,Nevada,80.477,Nevada
+2013,Nevada,82.384,Nevada
+2014,Nevada,83.99,Nevada
+2015,Nevada,85.389,Nevada
+2016,Nevada,86.463,Nevada
+2017,Nevada,86.684,Nevada
+2018,Nevada,87.653,Nevada
+2019,Nevada,88.943,Nevada
+2020,Nevada,94.735,Nevada
+2021,Nevada,90.588,Nevada
+2022,Nevada,93.592,Nevada
+2023,Nevada,91.918,Nevada
+2024,Nevada,93.783,Nevada
+2025,Nevada,94.075,Nevada
+2000,New Hampshire,28.91,New Hampshire
+2001,New Hampshire,31.055,New Hampshire
+2002,New Hampshire,35.639,New Hampshire
+2003,New Hampshire,39.78,New Hampshire
+2004,New Hampshire,44.053,New Hampshire
+2005,New Hampshire,48.468,New Hampshire
+2006,New Hampshire,49.928,New Hampshire
+2007,New Hampshire,52.38,New Hampshire
+2008,New Hampshire,54.123,New Hampshire
+2009,New Hampshire,62.683,New Hampshire
+2010,New Hampshire,66.783,New Hampshire
+2011,New Hampshire,76.942,New Hampshire
+2012,New Hampshire,81.128,New Hampshire
+2013,New Hampshire,83.035,New Hampshire
+2014,New Hampshire,84.64,New Hampshire
+2015,New Hampshire,85.757,New Hampshire
+2016,New Hampshire,86.752,New Hampshire
+2017,New Hampshire,86.688,New Hampshire
+2018,New Hampshire,87.461,New Hampshire
+2019,New Hampshire,88.822,New Hampshire
+2020,New Hampshire,94.731,New Hampshire
+2021,New Hampshire,90.442,New Hampshire
+2022,New Hampshire,93.932,New Hampshire
+2023,New Hampshire,90.333,New Hampshire
+2024,New Hampshire,93.542,New Hampshire
+2025,New Hampshire,93.861,New Hampshire
+2000,New Jersey,20.812,New Jersey
+2001,New Jersey,22.74,New Jersey
+2002,New Jersey,26.073,New Jersey
+2003,New Jersey,29.471,New Jersey
+2004,New Jersey,33.156,New Jersey
+2005,New Jersey,44.531,New Jersey
+2006,New Jersey,49.575,New Jersey
+2007,New Jersey,54.065,New Jersey
+2008,New Jersey,56.382,New Jersey
+2009,New Jersey,64.174,New Jersey
+2010,New Jersey,67.725,New Jersey
+2011,New Jersey,75.382,New Jersey
+2012,New Jersey,79.85,New Jersey
+2013,New Jersey,82.099,New Jersey
+2014,New Jersey,84.082,New Jersey
+2015,New Jersey,85.788,New Jersey
+2016,New Jersey,87.144,New Jersey
+2017,New Jersey,87.71,New Jersey
+2018,New Jersey,88.667,New Jersey
+2019,New Jersey,89.605,New Jersey
+2020,New Jersey,95.258,New Jersey
+2021,New Jersey,91.048,New Jersey
+2022,New Jersey,93.851,New Jersey
+2023,New Jersey,90.67,New Jersey
+2024,New Jersey,93.447,New Jersey
+2025,New Jersey,94.09,New Jersey
+2000,New Mexico,30.381,New Mexico
+2001,New Mexico,36.116,New Mexico
+2002,New Mexico,37.031,New Mexico
+2003,New Mexico,44.771,New Mexico
+2004,New Mexico,49.056,New Mexico
+2005,New Mexico,53.565,New Mexico
+2006,New Mexico,55.51,New Mexico
+2007,New Mexico,57.806,New Mexico
+2008,New Mexico,59.876,New Mexico
+2009,New Mexico,67.262,New Mexico
+2010,New Mexico,69.815,New Mexico
+2011,New Mexico,76.836,New Mexico
+2012,New Mexico,80.785,New Mexico
+2013,New Mexico,82.662,New Mexico
+2014,New Mexico,84.367,New Mexico
+2015,New Mexico,85.732,New Mexico
+2016,New Mexico,86.762,New Mexico
+2017,New Mexico,87.055,New Mexico
+2018,New Mexico,87.775,New Mexico
+2019,New Mexico,88.86,New Mexico
+2020,New Mexico,94.482,New Mexico
+2021,New Mexico,89.734,New Mexico
+2022,New Mexico,93.302,New Mexico
+2023,New Mexico,89.919,New Mexico
+2024,New Mexico,93.121,New Mexico
+2025,New Mexico,93.624,New Mexico
+2000,New York,20.08,New York
+2001,New York,22.648,New York
+2002,New York,26.309,New York
+2003,New York,29.474,New York
+2004,New York,33.421,New York
+2005,New York,37.943,New York
+2006,New York,48.971,New York
+2007,New York,54.924,New York
+2008,New York,56.881,New York
+2009,New York,64.832,New York
+2010,New York,68.729,New York
+2011,New York,78.033,New York
+2012,New York,84.153,New York
+2013,New York,85.865,New York
+2014,New York,87.724,New York
+2015,New York,89.532,New York
+2016,New York,90.761,New York
+2017,New York,91.32,New York
+2018,New York,92.122,New York
+2019,New York,93.097,New York
+2020,New York,96.706,New York
+2021,New York,93.724,New York
+2022,New York,95.993,New York
+2023,New York,93.397,New York
+2024,New York,95.183,New York
+2025,New York,95.887,New York
+2000,North Carolina,32.472,North Carolina
+2001,North Carolina,36.59,North Carolina
+2002,North Carolina,41.125,North Carolina
+2003,North Carolina,45.128,North Carolina
+2004,North Carolina,48.806,North Carolina
+2005,North Carolina,53.471,North Carolina
+2006,North Carolina,55.856,North Carolina
+2007,North Carolina,57.904,North Carolina
+2008,North Carolina,58.467,North Carolina
+2009,North Carolina,67.122,North Carolina
+2010,North Carolina,70.638,North Carolina
+2011,North Carolina,79.058,North Carolina
+2012,North Carolina,82.29,North Carolina
+2013,North Carolina,84.606,North Carolina
+2014,North Carolina,86.351,North Carolina
+2015,North Carolina,87.45,North Carolina
+2016,North Carolina,88.514,North Carolina
+2017,North Carolina,88.645,North Carolina
+2018,North Carolina,89.043,North Carolina
+2019,North Carolina,90.077,North Carolina
+2020,North Carolina,95.4,North Carolina
+2021,North Carolina,91.188,North Carolina
+2022,North Carolina,94.235,North Carolina
+2023,North Carolina,91.131,North Carolina
+2024,North Carolina,93.766,North Carolina
+2025,North Carolina,94.079,North Carolina
+2000,North Dakota,26.185,North Dakota
+2001,North Dakota,31.73,North Dakota
+2002,North Dakota,39.12,North Dakota
+2003,North Dakota,46.436,North Dakota
+2004,North Dakota,53.207,North Dakota
+2005,North Dakota,57.463,North Dakota
+2006,North Dakota,59.381,North Dakota
+2007,North Dakota,61.895,North Dakota
+2008,North Dakota,63.236,North Dakota
+2009,North Dakota,71.517,North Dakota
+2010,North Dakota,74.522,North Dakota
+2011,North Dakota,83.243,North Dakota
+2012,North Dakota,86.283,North Dakota
+2013,North Dakota,87.308,North Dakota
+2014,North Dakota,88.354,North Dakota
+2015,North Dakota,89.396,North Dakota
+2016,North Dakota,90.312,North Dakota
+2017,North Dakota,90.697,North Dakota
+2018,North Dakota,91.005,North Dakota
+2019,North Dakota,92.145,North Dakota
+2020,North Dakota,95.97,North Dakota
+2021,North Dakota,92.956,North Dakota
+2022,North Dakota,95.896,North Dakota
+2023,North Dakota,93.904,North Dakota
+2024,North Dakota,95.458,North Dakota
+2025,North Dakota,95.647,North Dakota
+2000,Ohio,28.392,Ohio
+2001,Ohio,31.477,Ohio
+2002,Ohio,36.018,Ohio
+2003,Ohio,40.832,Ohio
+2004,Ohio,45.535,Ohio
+2005,Ohio,49.925,Ohio
+2006,Ohio,51.36,Ohio
+2007,Ohio,54.864,Ohio
+2008,Ohio,56,Ohio
+2009,Ohio,65.568,Ohio
+2010,Ohio,72.032,Ohio
+2011,Ohio,79.432,Ohio
+2012,Ohio,82.887,Ohio
+2013,Ohio,84.575,Ohio
+2014,Ohio,86,Ohio
+2015,Ohio,87.317,Ohio
+2016,Ohio,88.483,Ohio
+2017,Ohio,88.714,Ohio
+2018,Ohio,89.347,Ohio
+2019,Ohio,90.563,Ohio
+2020,Ohio,95.162,Ohio
+2021,Ohio,91.575,Ohio
+2022,Ohio,95.087,Ohio
+2023,Ohio,92.752,Ohio
+2024,Ohio,94.703,Ohio
+2025,Ohio,95.026,Ohio
+2000,Oklahoma,29.834,Oklahoma
+2001,Oklahoma,34.272,Oklahoma
+2002,Oklahoma,41.085,Oklahoma
+2003,Oklahoma,44.846,Oklahoma
+2004,Oklahoma,50.729,Oklahoma
+2005,Oklahoma,56.067,Oklahoma
+2006,Oklahoma,58.86,Oklahoma
+2007,Oklahoma,60.967,Oklahoma
+2008,Oklahoma,61.351,Oklahoma
+2009,Oklahoma,69.942,Oklahoma
+2010,Oklahoma,72.909,Oklahoma
+2011,Oklahoma,80.65,Oklahoma
+2012,Oklahoma,84.302,Oklahoma
+2013,Oklahoma,86.121,Oklahoma
+2014,Oklahoma,87.346,Oklahoma
+2015,Oklahoma,88.499,Oklahoma
+2016,Oklahoma,89.495,Oklahoma
+2017,Oklahoma,89.652,Oklahoma
+2018,Oklahoma,90.096,Oklahoma
+2019,Oklahoma,91.099,Oklahoma
+2020,Oklahoma,95.967,Oklahoma
+2021,Oklahoma,91.745,Oklahoma
+2022,Oklahoma,94.844,Oklahoma
+2023,Oklahoma,92.056,Oklahoma
+2024,Oklahoma,94.548,Oklahoma
+2025,Oklahoma,94.483,Oklahoma
+2000,Oregon,24.463,Oregon
+2001,Oregon,28.411,Oregon
+2002,Oregon,34.245,Oregon
+2003,Oregon,39.473,Oregon
+2004,Oregon,45.373,Oregon
+2005,Oregon,50.365,Oregon
+2006,Oregon,53.16,Oregon
+2007,Oregon,55.817,Oregon
+2008,Oregon,57.683,Oregon
+2009,Oregon,66.323,Oregon
+2010,Oregon,69.635,Oregon
+2011,Oregon,77.109,Oregon
+2012,Oregon,80.544,Oregon
+2013,Oregon,82.196,Oregon
+2014,Oregon,83.819,Oregon
+2015,Oregon,85.33,Oregon
+2016,Oregon,87.312,Oregon
+2017,Oregon,87.532,Oregon
+2018,Oregon,88.343,Oregon
+2019,Oregon,89.395,Oregon
+2020,Oregon,94.94,Oregon
+2021,Oregon,90.327,Oregon
+2022,Oregon,93.234,Oregon
+2023,Oregon,91.42,Oregon
+2024,Oregon,93.544,Oregon
+2025,Oregon,94.059,Oregon
+2000,Pennsylvania,24.835,Pennsylvania
+2001,Pennsylvania,27.42,Pennsylvania
+2002,Pennsylvania,32.076,Pennsylvania
+2003,Pennsylvania,36.491,Pennsylvania
+2004,Pennsylvania,40.917,Pennsylvania
+2005,Pennsylvania,45.371,Pennsylvania
+2006,Pennsylvania,46.931,Pennsylvania
+2007,Pennsylvania,49.782,Pennsylvania
+2008,Pennsylvania,51.084,Pennsylvania
+2009,Pennsylvania,60.234,Pennsylvania
+2010,Pennsylvania,64.359,Pennsylvania
+2011,Pennsylvania,76.14,Pennsylvania
+2012,Pennsylvania,80.203,Pennsylvania
+2013,Pennsylvania,82.254,Pennsylvania
+2014,Pennsylvania,83.973,Pennsylvania
+2015,Pennsylvania,85.362,Pennsylvania
+2016,Pennsylvania,86.546,Pennsylvania
+2017,Pennsylvania,86.793,Pennsylvania
+2018,Pennsylvania,87.581,Pennsylvania
+2019,Pennsylvania,88.776,Pennsylvania
+2020,Pennsylvania,94.323,Pennsylvania
+2021,Pennsylvania,90.296,Pennsylvania
+2022,Pennsylvania,93.778,Pennsylvania
+2023,Pennsylvania,90.6,Pennsylvania
+2024,Pennsylvania,93.418,Pennsylvania
+2025,Pennsylvania,93.968,Pennsylvania
+2000,Rhode Island,22.569,Rhode Island
+2001,Rhode Island,24.153,Rhode Island
+2002,Rhode Island,28.28,Rhode Island
+2003,Rhode Island,32.706,Rhode Island
+2004,Rhode Island,38.628,Rhode Island
+2005,Rhode Island,45.195,Rhode Island
+2006,Rhode Island,48.361,Rhode Island
+2007,Rhode Island,51.913,Rhode Island
+2008,Rhode Island,54.832,Rhode Island
+2009,Rhode Island,67.908,Rhode Island
+2010,Rhode Island,72.5,Rhode Island
+2011,Rhode Island,79.625,Rhode Island
+2012,Rhode Island,83.033,Rhode Island
+2013,Rhode Island,84.823,Rhode Island
+2014,Rhode Island,86.364,Rhode Island
+2015,Rhode Island,87.603,Rhode Island
+2016,Rhode Island,88.418,Rhode Island
+2017,Rhode Island,88.92,Rhode Island
+2018,Rhode Island,89.84,Rhode Island
+2019,Rhode Island,90.985,Rhode Island
+2020,Rhode Island,95.38,Rhode Island
+2021,Rhode Island,92.174,Rhode Island
+2022,Rhode Island,95.489,Rhode Island
+2023,Rhode Island,91.753,Rhode Island
+2024,Rhode Island,94.092,Rhode Island
+2025,Rhode Island,94.91,Rhode Island
+2000,South Carolina,41.916,South Carolina
+2001,South Carolina,45.671,South Carolina
+2002,South Carolina,50.263,South Carolina
+2003,South Carolina,54.999,South Carolina
+2004,South Carolina,58.562,South Carolina
+2005,South Carolina,61.689,South Carolina
+2006,South Carolina,63.65,South Carolina
+2007,South Carolina,64.947,South Carolina
+2008,South Carolina,65.117,South Carolina
+2009,South Carolina,73.823,South Carolina
+2010,South Carolina,76.712,South Carolina
+2011,South Carolina,81.848,South Carolina
+2012,South Carolina,84.339,South Carolina
+2013,South Carolina,85.671,South Carolina
+2014,South Carolina,87.14,South Carolina
+2015,South Carolina,88.062,South Carolina
+2016,South Carolina,89.121,South Carolina
+2017,South Carolina,89.295,South Carolina
+2018,South Carolina,89.761,South Carolina
+2019,South Carolina,90.693,South Carolina
+2020,South Carolina,95.625,South Carolina
+2021,South Carolina,91.618,South Carolina
+2022,South Carolina,94.603,South Carolina
+2023,South Carolina,91.702,South Carolina
+2024,South Carolina,94.253,South Carolina
+2025,South Carolina,94.379,South Carolina
+2000,South Dakota,26.606,South Dakota
+2001,South Dakota,31.223,South Dakota
+2002,South Dakota,37.687,South Dakota
+2003,South Dakota,44.389,South Dakota
+2004,South Dakota,50.478,South Dakota
+2005,South Dakota,55.292,South Dakota
+2006,South Dakota,56.839,South Dakota
+2007,South Dakota,59.913,South Dakota
+2008,South Dakota,61.696,South Dakota
+2009,South Dakota,69.636,South Dakota
+2010,South Dakota,73.346,South Dakota
+2011,South Dakota,83.489,South Dakota
+2012,South Dakota,87.232,South Dakota
+2013,South Dakota,88.494,South Dakota
+2014,South Dakota,89.342,South Dakota
+2015,South Dakota,90.196,South Dakota
+2016,South Dakota,90.957,South Dakota
+2017,South Dakota,90.787,South Dakota
+2018,South Dakota,91.3,South Dakota
+2019,South Dakota,92.403,South Dakota
+2020,South Dakota,96.126,South Dakota
+2021,South Dakota,93.326,South Dakota
+2022,South Dakota,95.838,South Dakota
+2023,South Dakota,93.792,South Dakota
+2024,South Dakota,95.32,South Dakota
+2025,South Dakota,95.614,South Dakota
+2000,Tennessee,38.864,Tennessee
+2001,Tennessee,42.146,Tennessee
+2002,Tennessee,46.639,Tennessee
+2003,Tennessee,50.786,Tennessee
+2004,Tennessee,54.887,Tennessee
+2005,Tennessee,58.333,Tennessee
+2006,Tennessee,59.252,Tennessee
+2007,Tennessee,60.853,Tennessee
+2008,Tennessee,59.814,Tennessee
+2009,Tennessee,68.466,Tennessee
+2010,Tennessee,71.428,Tennessee
+2011,Tennessee,80.007,Tennessee
+2012,Tennessee,83.5,Tennessee
+2013,Tennessee,85.52,Tennessee
+2014,Tennessee,87.05,Tennessee
+2015,Tennessee,88.409,Tennessee
+2016,Tennessee,89.323,Tennessee
+2017,Tennessee,89.135,Tennessee
+2018,Tennessee,89.629,Tennessee
+2019,Tennessee,90.766,Tennessee
+2020,Tennessee,95.908,Tennessee
+2021,Tennessee,92.005,Tennessee
+2022,Tennessee,95.036,Tennessee
+2023,Tennessee,92.079,Tennessee
+2024,Tennessee,94.525,Tennessee
+2025,Tennessee,94.667,Tennessee
+2000,Texas,31.342,Texas
+2001,Texas,34.976,Texas
+2002,Texas,39.55,Texas
+2003,Texas,43.315,Texas
+2004,Texas,46.898,Texas
+2005,Texas,50.783,Texas
+2006,Texas,52.92,Texas
+2007,Texas,54.724,Texas
+2008,Texas,55.682,Texas
+2009,Texas,62.81,Texas
+2010,Texas,66.022,Texas
+2011,Texas,75.33,Texas
+2012,Texas,79.934,Texas
+2013,Texas,82.211,Texas
+2014,Texas,83.829,Texas
+2015,Texas,85.244,Texas
+2016,Texas,86.285,Texas
+2017,Texas,86.442,Texas
+2018,Texas,86.78,Texas
+2019,Texas,88.251,Texas
+2020,Texas,92.642,Texas
+2021,Texas,89.105,Texas
+2022,Texas,94.517,Texas
+2023,Texas,90.253,Texas
+2024,Texas,93.079,Texas
+2025,Texas,93.224,Texas
+2000,Utah,26.936,Utah
+2001,Utah,30.862,Utah
+2002,Utah,38.17,Utah
+2003,Utah,43.176,Utah
+2004,Utah,48.566,Utah
+2005,Utah,52.683,Utah
+2006,Utah,56.109,Utah
+2007,Utah,58.802,Utah
+2008,Utah,61.875,Utah
+2009,Utah,69.935,Utah
+2010,Utah,73.744,Utah
+2011,Utah,80.509,Utah
+2012,Utah,84.195,Utah
+2013,Utah,85.738,Utah
+2014,Utah,87.216,Utah
+2015,Utah,88.304,Utah
+2016,Utah,89.293,Utah
+2017,Utah,89.201,Utah
+2018,Utah,89.685,Utah
+2019,Utah,90.794,Utah
+2020,Utah,95.558,Utah
+2021,Utah,92.173,Utah
+2022,Utah,94.698,Utah
+2023,Utah,92.213,Utah
+2024,Utah,93.984,Utah
+2025,Utah,94.82,Utah
+2000,Vermont,21.214,Vermont
+2001,Vermont,22.967,Vermont
+2002,Vermont,27.335,Vermont
+2003,Vermont,32.034,Vermont
+2004,Vermont,38.32,Vermont
+2005,Vermont,43.673,Vermont
+2006,Vermont,46.917,Vermont
+2007,Vermont,49.725,Vermont
+2008,Vermont,52.61,Vermont
+2009,Vermont,61.725,Vermont
+2010,Vermont,66.482,Vermont
+2011,Vermont,76.466,Vermont
+2012,Vermont,80.615,Vermont
+2013,Vermont,83.117,Vermont
+2014,Vermont,85.163,Vermont
+2015,Vermont,86.596,Vermont
+2016,Vermont,87.631,Vermont
+2017,Vermont,87.773,Vermont
+2018,Vermont,88.38,Vermont
+2019,Vermont,89.897,Vermont
+2020,Vermont,95.335,Vermont
+2021,Vermont,91.149,Vermont
+2022,Vermont,94.38,Vermont
+2023,Vermont,91.378,Vermont
+2024,Vermont,94.085,Vermont
+2025,Vermont,94.565,Vermont
+2000,Virginia,28.234,Virginia
+2001,Virginia,31.053,Virginia
+2002,Virginia,36.41,Virginia
+2003,Virginia,40.997,Virginia
+2004,Virginia,45.486,Virginia
+2005,Virginia,49.78,Virginia
+2006,Virginia,51.528,Virginia
+2007,Virginia,53.958,Virginia
+2008,Virginia,55.333,Virginia
+2009,Virginia,66.505,Virginia
+2010,Virginia,70.408,Virginia
+2011,Virginia,77.021,Virginia
+2012,Virginia,80.515,Virginia
+2013,Virginia,82.736,Virginia
+2014,Virginia,84.571,Virginia
+2015,Virginia,85.765,Virginia
+2016,Virginia,87.02,Virginia
+2017,Virginia,87.294,Virginia
+2018,Virginia,88,Virginia
+2019,Virginia,89.164,Virginia
+2020,Virginia,94.929,Virginia
+2021,Virginia,90.481,Virginia
+2022,Virginia,93.416,Virginia
+2023,Virginia,90.297,Virginia
+2024,Virginia,93.074,Virginia
+2025,Virginia,93.245,Virginia
+2000,Washington,27.147,Washington
+2001,Washington,29.688,Washington
+2002,Washington,35.539,Washington
+2003,Washington,40.447,Washington
+2004,Washington,45.583,Washington
+2005,Washington,50.19,Washington
+2006,Washington,51.86,Washington
+2007,Washington,53.825,Washington
+2008,Washington,56.249,Washington
+2009,Washington,64.476,Washington
+2010,Washington,67.996,Washington
+2011,Washington,76.818,Washington
+2012,Washington,81.039,Washington
+2013,Washington,82.865,Washington
+2014,Washington,84.358,Washington
+2015,Washington,85.754,Washington
+2016,Washington,87.092,Washington
+2017,Washington,87.225,Washington
+2018,Washington,87.801,Washington
+2019,Washington,89.15,Washington
+2020,Washington,94.407,Washington
+2021,Washington,90.412,Washington
+2022,Washington,93.915,Washington
+2023,Washington,91.403,Washington
+2024,Washington,93.679,Washington
+2025,Washington,93.981,Washington
+2000,West Virginia,29.939,West Virginia
+2001,West Virginia,32.254,West Virginia
+2002,West Virginia,37.501,West Virginia
+2003,West Virginia,41.934,West Virginia
+2004,West Virginia,46.34,West Virginia
+2005,West Virginia,49.948,West Virginia
+2006,West Virginia,50.685,West Virginia
+2007,West Virginia,56.176,West Virginia
+2008,West Virginia,55.067,West Virginia
+2009,West Virginia,66.425,West Virginia
+2010,West Virginia,70.791,West Virginia
+2011,West Virginia,78.657,West Virginia
+2012,West Virginia,82.43,West Virginia
+2013,West Virginia,84.073,West Virginia
+2014,West Virginia,85.477,West Virginia
+2015,West Virginia,86.997,West Virginia
+2016,West Virginia,87.854,West Virginia
+2017,West Virginia,87.821,West Virginia
+2018,West Virginia,88.434,West Virginia
+2019,West Virginia,89.649,West Virginia
+2020,West Virginia,94.959,West Virginia
+2021,West Virginia,90.378,West Virginia
+2022,West Virginia,94.39,West Virginia
+2023,West Virginia,91.263,West Virginia
+2024,West Virginia,93.863,West Virginia
+2025,West Virginia,94.269,West Virginia
+2000,Wisconsin,28.655,Wisconsin
+2001,Wisconsin,33.298,Wisconsin
+2002,Wisconsin,41.126,Wisconsin
+2003,Wisconsin,53.451,Wisconsin
+2004,Wisconsin,59.431,Wisconsin
+2005,Wisconsin,63.301,Wisconsin
+2006,Wisconsin,63.768,Wisconsin
+2007,Wisconsin,65.358,Wisconsin
+2008,Wisconsin,67.134,Wisconsin
+2009,Wisconsin,75.717,Wisconsin
+2010,Wisconsin,77.92,Wisconsin
+2011,Wisconsin,81.684,Wisconsin
+2012,Wisconsin,84.526,Wisconsin
+2013,Wisconsin,86.078,Wisconsin
+2014,Wisconsin,87.185,Wisconsin
+2015,Wisconsin,88.269,Wisconsin
+2016,Wisconsin,89.221,Wisconsin
+2017,Wisconsin,89.462,Wisconsin
+2018,Wisconsin,90.114,Wisconsin
+2019,Wisconsin,91.249,Wisconsin
+2020,Wisconsin,95.072,Wisconsin
+2021,Wisconsin,92.37,Wisconsin
+2022,Wisconsin,95.675,Wisconsin
+2023,Wisconsin,92.66,Wisconsin
+2024,Wisconsin,94.89,Wisconsin
+2025,Wisconsin,95.213,Wisconsin
+2000,Wyoming,31.475,Wyoming
+2001,Wyoming,34.334,Wyoming
+2002,Wyoming,39.813,Wyoming
+2003,Wyoming,44.845,Wyoming
+2004,Wyoming,50.189,Wyoming
+2005,Wyoming,54.781,Wyoming
+2006,Wyoming,55.802,Wyoming
+2007,Wyoming,57.936,Wyoming
+2008,Wyoming,60.509,Wyoming
+2009,Wyoming,67.926,Wyoming
+2010,Wyoming,71.391,Wyoming
+2011,Wyoming,80.48,Wyoming
+2012,Wyoming,84.856,Wyoming
+2013,Wyoming,87.062,Wyoming
+2014,Wyoming,87.703,Wyoming
+2015,Wyoming,88.325,Wyoming
+2016,Wyoming,89.243,Wyoming
+2017,Wyoming,89.322,Wyoming
+2018,Wyoming,89.785,Wyoming
+2019,Wyoming,90.933,Wyoming
+2020,Wyoming,95.626,Wyoming
+2021,Wyoming,91.965,Wyoming
+2022,Wyoming,94.805,Wyoming
+2023,Wyoming,92.765,Wyoming
+2024,Wyoming,94.524,Wyoming
+2025,Wyoming,94.821,Wyoming
+2000,United States,27.764,United States
+2001,United States,31.01,United States
+2002,United States,35.821,United States
+2003,United States,40.5,United States
+2004,United States,46.844,United States
+2005,United States,51.546,United States
+2006,United States,54.339,United States
+2007,United States,56.683,United States
+2008,United States,58.005,United States
+2009,United States,66.016,United States
+2010,United States,69.57,United States
+2011,United States,77.297,United States
+2012,United States,80.961,United States
+2013,United States,82.868,United States
+2014,United States,84.496,United States
+2015,United States,85.849,United States
+2016,United States,86.95,United States
+2017,United States,87.359,United States
+2018,United States,87.812,United States
+2019,United States,89.064,United States
+2020,United States,94.25,United States
+2021,United States,90.007,United States
+2022,United States,93.793,United States
+2023,United States,90.688,United States
+2024,United States,93.303,United States
+2025,United States,93.679,United States
+2000,United States,27.764,Alabama
+2000,United States,27.764,Alaska
+2000,United States,27.764,Arizona
+2000,United States,27.764,Arkansas
+2000,United States,27.764,California
+2000,United States,27.764,Colorado
+2000,United States,27.764,Connecticut
+2000,United States,27.764,Delaware
+2000,United States,27.764,District of Columbia
+2000,United States,27.764,Florida
+2000,United States,27.764,Georgia
+2000,United States,27.764,Hawaii
+2000,United States,27.764,Idaho
+2000,United States,27.764,Illinois
+2000,United States,27.764,Indiana
+2000,United States,27.764,Iowa
+2000,United States,27.764,Kansas
+2000,United States,27.764,Kentucky
+2000,United States,27.764,Louisiana
+2000,United States,27.764,Maine
+2000,United States,27.764,Maryland
+2000,United States,27.764,Massachusetts
+2000,United States,27.764,Michigan
+2000,United States,27.764,Minnesota
+2000,United States,27.764,Mississippi
+2000,United States,27.764,Missouri
+2000,United States,27.764,Montana
+2000,United States,27.764,Nebraska
+2000,United States,27.764,Nevada
+2000,United States,27.764,New Hampshire
+2000,United States,27.764,New Jersey
+2000,United States,27.764,New Mexico
+2000,United States,27.764,New York
+2000,United States,27.764,North Carolina
+2000,United States,27.764,North Dakota
+2000,United States,27.764,Ohio
+2000,United States,27.764,Oklahoma
+2000,United States,27.764,Oregon
+2000,United States,27.764,Pennsylvania
+2000,United States,27.764,Rhode Island
+2000,United States,27.764,South Carolina
+2000,United States,27.764,South Dakota
+2000,United States,27.764,Tennessee
+2000,United States,27.764,Texas
+2000,United States,27.764,Utah
+2000,United States,27.764,Vermont
+2000,United States,27.764,Virginia
+2000,United States,27.764,Washington
+2000,United States,27.764,West Virginia
+2000,United States,27.764,Wisconsin
+2000,United States,27.764,Wyoming
+2001,United States,31.01,Alabama
+2001,United States,31.01,Alaska
+2001,United States,31.01,Arizona
+2001,United States,31.01,Arkansas
+2001,United States,31.01,California
+2001,United States,31.01,Colorado
+2001,United States,31.01,Connecticut
+2001,United States,31.01,Delaware
+2001,United States,31.01,District of Columbia
+2001,United States,31.01,Florida
+2001,United States,31.01,Georgia
+2001,United States,31.01,Hawaii
+2001,United States,31.01,Idaho
+2001,United States,31.01,Illinois
+2001,United States,31.01,Indiana
+2001,United States,31.01,Iowa
+2001,United States,31.01,Kansas
+2001,United States,31.01,Kentucky
+2001,United States,31.01,Louisiana
+2001,United States,31.01,Maine
+2001,United States,31.01,Maryland
+2001,United States,31.01,Massachusetts
+2001,United States,31.01,Michigan
+2001,United States,31.01,Minnesota
+2001,United States,31.01,Mississippi
+2001,United States,31.01,Missouri
+2001,United States,31.01,Montana
+2001,United States,31.01,Nebraska
+2001,United States,31.01,Nevada
+2001,United States,31.01,New Hampshire
+2001,United States,31.01,New Jersey
+2001,United States,31.01,New Mexico
+2001,United States,31.01,New York
+2001,United States,31.01,North Carolina
+2001,United States,31.01,North Dakota
+2001,United States,31.01,Ohio
+2001,United States,31.01,Oklahoma
+2001,United States,31.01,Oregon
+2001,United States,31.01,Pennsylvania
+2001,United States,31.01,Rhode Island
+2001,United States,31.01,South Carolina
+2001,United States,31.01,South Dakota
+2001,United States,31.01,Tennessee
+2001,United States,31.01,Texas
+2001,United States,31.01,Utah
+2001,United States,31.01,Vermont
+2001,United States,31.01,Virginia
+2001,United States,31.01,Washington
+2001,United States,31.01,West Virginia
+2001,United States,31.01,Wisconsin
+2001,United States,31.01,Wyoming
+2002,United States,35.821,Alabama
+2002,United States,35.821,Alaska
+2002,United States,35.821,Arizona
+2002,United States,35.821,Arkansas
+2002,United States,35.821,California
+2002,United States,35.821,Colorado
+2002,United States,35.821,Connecticut
+2002,United States,35.821,Delaware
+2002,United States,35.821,District of Columbia
+2002,United States,35.821,Florida
+2002,United States,35.821,Georgia
+2002,United States,35.821,Hawaii
+2002,United States,35.821,Idaho
+2002,United States,35.821,Illinois
+2002,United States,35.821,Indiana
+2002,United States,35.821,Iowa
+2002,United States,35.821,Kansas
+2002,United States,35.821,Kentucky
+2002,United States,35.821,Louisiana
+2002,United States,35.821,Maine
+2002,United States,35.821,Maryland
+2002,United States,35.821,Massachusetts
+2002,United States,35.821,Michigan
+2002,United States,35.821,Minnesota
+2002,United States,35.821,Mississippi
+2002,United States,35.821,Missouri
+2002,United States,35.821,Montana
+2002,United States,35.821,Nebraska
+2002,United States,35.821,Nevada
+2002,United States,35.821,New Hampshire
+2002,United States,35.821,New Jersey
+2002,United States,35.821,New Mexico
+2002,United States,35.821,New York
+2002,United States,35.821,North Carolina
+2002,United States,35.821,North Dakota
+2002,United States,35.821,Ohio
+2002,United States,35.821,Oklahoma
+2002,United States,35.821,Oregon
+2002,United States,35.821,Pennsylvania
+2002,United States,35.821,Rhode Island
+2002,United States,35.821,South Carolina
+2002,United States,35.821,South Dakota
+2002,United States,35.821,Tennessee
+2002,United States,35.821,Texas
+2002,United States,35.821,Utah
+2002,United States,35.821,Vermont
+2002,United States,35.821,Virginia
+2002,United States,35.821,Washington
+2002,United States,35.821,West Virginia
+2002,United States,35.821,Wisconsin
+2002,United States,35.821,Wyoming
+2003,United States,40.5,Alabama
+2003,United States,40.5,Alaska
+2003,United States,40.5,Arizona
+2003,United States,40.5,Arkansas
+2003,United States,40.5,California
+2003,United States,40.5,Colorado
+2003,United States,40.5,Connecticut
+2003,United States,40.5,Delaware
+2003,United States,40.5,District of Columbia
+2003,United States,40.5,Florida
+2003,United States,40.5,Georgia
+2003,United States,40.5,Hawaii
+2003,United States,40.5,Idaho
+2003,United States,40.5,Illinois
+2003,United States,40.5,Indiana
+2003,United States,40.5,Iowa
+2003,United States,40.5,Kansas
+2003,United States,40.5,Kentucky
+2003,United States,40.5,Louisiana
+2003,United States,40.5,Maine
+2003,United States,40.5,Maryland
+2003,United States,40.5,Massachusetts
+2003,United States,40.5,Michigan
+2003,United States,40.5,Minnesota
+2003,United States,40.5,Mississippi
+2003,United States,40.5,Missouri
+2003,United States,40.5,Montana
+2003,United States,40.5,Nebraska
+2003,United States,40.5,Nevada
+2003,United States,40.5,New Hampshire
+2003,United States,40.5,New Jersey
+2003,United States,40.5,New Mexico
+2003,United States,40.5,New York
+2003,United States,40.5,North Carolina
+2003,United States,40.5,North Dakota
+2003,United States,40.5,Ohio
+2003,United States,40.5,Oklahoma
+2003,United States,40.5,Oregon
+2003,United States,40.5,Pennsylvania
+2003,United States,40.5,Rhode Island
+2003,United States,40.5,South Carolina
+2003,United States,40.5,South Dakota
+2003,United States,40.5,Tennessee
+2003,United States,40.5,Texas
+2003,United States,40.5,Utah
+2003,United States,40.5,Vermont
+2003,United States,40.5,Virginia
+2003,United States,40.5,Washington
+2003,United States,40.5,West Virginia
+2003,United States,40.5,Wisconsin
+2003,United States,40.5,Wyoming
+2004,United States,46.844,Alabama
+2004,United States,46.844,Alaska
+2004,United States,46.844,Arizona
+2004,United States,46.844,Arkansas
+2004,United States,46.844,California
+2004,United States,46.844,Colorado
+2004,United States,46.844,Connecticut
+2004,United States,46.844,Delaware
+2004,United States,46.844,District of Columbia
+2004,United States,46.844,Florida
+2004,United States,46.844,Georgia
+2004,United States,46.844,Hawaii
+2004,United States,46.844,Idaho
+2004,United States,46.844,Illinois
+2004,United States,46.844,Indiana
+2004,United States,46.844,Iowa
+2004,United States,46.844,Kansas
+2004,United States,46.844,Kentucky
+2004,United States,46.844,Louisiana
+2004,United States,46.844,Maine
+2004,United States,46.844,Maryland
+2004,United States,46.844,Massachusetts
+2004,United States,46.844,Michigan
+2004,United States,46.844,Minnesota
+2004,United States,46.844,Mississippi
+2004,United States,46.844,Missouri
+2004,United States,46.844,Montana
+2004,United States,46.844,Nebraska
+2004,United States,46.844,Nevada
+2004,United States,46.844,New Hampshire
+2004,United States,46.844,New Jersey
+2004,United States,46.844,New Mexico
+2004,United States,46.844,New York
+2004,United States,46.844,North Carolina
+2004,United States,46.844,North Dakota
+2004,United States,46.844,Ohio
+2004,United States,46.844,Oklahoma
+2004,United States,46.844,Oregon
+2004,United States,46.844,Pennsylvania
+2004,United States,46.844,Rhode Island
+2004,United States,46.844,South Carolina
+2004,United States,46.844,South Dakota
+2004,United States,46.844,Tennessee
+2004,United States,46.844,Texas
+2004,United States,46.844,Utah
+2004,United States,46.844,Vermont
+2004,United States,46.844,Virginia
+2004,United States,46.844,Washington
+2004,United States,46.844,West Virginia
+2004,United States,46.844,Wisconsin
+2004,United States,46.844,Wyoming
+2005,United States,51.546,Alabama
+2005,United States,51.546,Alaska
+2005,United States,51.546,Arizona
+2005,United States,51.546,Arkansas
+2005,United States,51.546,California
+2005,United States,51.546,Colorado
+2005,United States,51.546,Connecticut
+2005,United States,51.546,Delaware
+2005,United States,51.546,District of Columbia
+2005,United States,51.546,Florida
+2005,United States,51.546,Georgia
+2005,United States,51.546,Hawaii
+2005,United States,51.546,Idaho
+2005,United States,51.546,Illinois
+2005,United States,51.546,Indiana
+2005,United States,51.546,Iowa
+2005,United States,51.546,Kansas
+2005,United States,51.546,Kentucky
+2005,United States,51.546,Louisiana
+2005,United States,51.546,Maine
+2005,United States,51.546,Maryland
+2005,United States,51.546,Massachusetts
+2005,United States,51.546,Michigan
+2005,United States,51.546,Minnesota
+2005,United States,51.546,Mississippi
+2005,United States,51.546,Missouri
+2005,United States,51.546,Montana
+2005,United States,51.546,Nebraska
+2005,United States,51.546,Nevada
+2005,United States,51.546,New Hampshire
+2005,United States,51.546,New Jersey
+2005,United States,51.546,New Mexico
+2005,United States,51.546,New York
+2005,United States,51.546,North Carolina
+2005,United States,51.546,North Dakota
+2005,United States,51.546,Ohio
+2005,United States,51.546,Oklahoma
+2005,United States,51.546,Oregon
+2005,United States,51.546,Pennsylvania
+2005,United States,51.546,Rhode Island
+2005,United States,51.546,South Carolina
+2005,United States,51.546,South Dakota
+2005,United States,51.546,Tennessee
+2005,United States,51.546,Texas
+2005,United States,51.546,Utah
+2005,United States,51.546,Vermont
+2005,United States,51.546,Virginia
+2005,United States,51.546,Washington
+2005,United States,51.546,West Virginia
+2005,United States,51.546,Wisconsin
+2005,United States,51.546,Wyoming
+2006,United States,54.339,Alabama
+2006,United States,54.339,Alaska
+2006,United States,54.339,Arizona
+2006,United States,54.339,Arkansas
+2006,United States,54.339,California
+2006,United States,54.339,Colorado
+2006,United States,54.339,Connecticut
+2006,United States,54.339,Delaware
+2006,United States,54.339,District of Columbia
+2006,United States,54.339,Florida
+2006,United States,54.339,Georgia
+2006,United States,54.339,Hawaii
+2006,United States,54.339,Idaho
+2006,United States,54.339,Illinois
+2006,United States,54.339,Indiana
+2006,United States,54.339,Iowa
+2006,United States,54.339,Kansas
+2006,United States,54.339,Kentucky
+2006,United States,54.339,Louisiana
+2006,United States,54.339,Maine
+2006,United States,54.339,Maryland
+2006,United States,54.339,Massachusetts
+2006,United States,54.339,Michigan
+2006,United States,54.339,Minnesota
+2006,United States,54.339,Mississippi
+2006,United States,54.339,Missouri
+2006,United States,54.339,Montana
+2006,United States,54.339,Nebraska
+2006,United States,54.339,Nevada
+2006,United States,54.339,New Hampshire
+2006,United States,54.339,New Jersey
+2006,United States,54.339,New Mexico
+2006,United States,54.339,New York
+2006,United States,54.339,North Carolina
+2006,United States,54.339,North Dakota
+2006,United States,54.339,Ohio
+2006,United States,54.339,Oklahoma
+2006,United States,54.339,Oregon
+2006,United States,54.339,Pennsylvania
+2006,United States,54.339,Rhode Island
+2006,United States,54.339,South Carolina
+2006,United States,54.339,South Dakota
+2006,United States,54.339,Tennessee
+2006,United States,54.339,Texas
+2006,United States,54.339,Utah
+2006,United States,54.339,Vermont
+2006,United States,54.339,Virginia
+2006,United States,54.339,Washington
+2006,United States,54.339,West Virginia
+2006,United States,54.339,Wisconsin
+2006,United States,54.339,Wyoming
+2007,United States,56.683,Alabama
+2007,United States,56.683,Alaska
+2007,United States,56.683,Arizona
+2007,United States,56.683,Arkansas
+2007,United States,56.683,California
+2007,United States,56.683,Colorado
+2007,United States,56.683,Connecticut
+2007,United States,56.683,Delaware
+2007,United States,56.683,District of Columbia
+2007,United States,56.683,Florida
+2007,United States,56.683,Georgia
+2007,United States,56.683,Hawaii
+2007,United States,56.683,Idaho
+2007,United States,56.683,Illinois
+2007,United States,56.683,Indiana
+2007,United States,56.683,Iowa
+2007,United States,56.683,Kansas
+2007,United States,56.683,Kentucky
+2007,United States,56.683,Louisiana
+2007,United States,56.683,Maine
+2007,United States,56.683,Maryland
+2007,United States,56.683,Massachusetts
+2007,United States,56.683,Michigan
+2007,United States,56.683,Minnesota
+2007,United States,56.683,Mississippi
+2007,United States,56.683,Missouri
+2007,United States,56.683,Montana
+2007,United States,56.683,Nebraska
+2007,United States,56.683,Nevada
+2007,United States,56.683,New Hampshire
+2007,United States,56.683,New Jersey
+2007,United States,56.683,New Mexico
+2007,United States,56.683,New York
+2007,United States,56.683,North Carolina
+2007,United States,56.683,North Dakota
+2007,United States,56.683,Ohio
+2007,United States,56.683,Oklahoma
+2007,United States,56.683,Oregon
+2007,United States,56.683,Pennsylvania
+2007,United States,56.683,Rhode Island
+2007,United States,56.683,South Carolina
+2007,United States,56.683,South Dakota
+2007,United States,56.683,Tennessee
+2007,United States,56.683,Texas
+2007,United States,56.683,Utah
+2007,United States,56.683,Vermont
+2007,United States,56.683,Virginia
+2007,United States,56.683,Washington
+2007,United States,56.683,West Virginia
+2007,United States,56.683,Wisconsin
+2007,United States,56.683,Wyoming
+2008,United States,58.005,Alabama
+2008,United States,58.005,Alaska
+2008,United States,58.005,Arizona
+2008,United States,58.005,Arkansas
+2008,United States,58.005,California
+2008,United States,58.005,Colorado
+2008,United States,58.005,Connecticut
+2008,United States,58.005,Delaware
+2008,United States,58.005,District of Columbia
+2008,United States,58.005,Florida
+2008,United States,58.005,Georgia
+2008,United States,58.005,Hawaii
+2008,United States,58.005,Idaho
+2008,United States,58.005,Illinois
+2008,United States,58.005,Indiana
+2008,United States,58.005,Iowa
+2008,United States,58.005,Kansas
+2008,United States,58.005,Kentucky
+2008,United States,58.005,Louisiana
+2008,United States,58.005,Maine
+2008,United States,58.005,Maryland
+2008,United States,58.005,Massachusetts
+2008,United States,58.005,Michigan
+2008,United States,58.005,Minnesota
+2008,United States,58.005,Mississippi
+2008,United States,58.005,Missouri
+2008,United States,58.005,Montana
+2008,United States,58.005,Nebraska
+2008,United States,58.005,Nevada
+2008,United States,58.005,New Hampshire
+2008,United States,58.005,New Jersey
+2008,United States,58.005,New Mexico
+2008,United States,58.005,New York
+2008,United States,58.005,North Carolina
+2008,United States,58.005,North Dakota
+2008,United States,58.005,Ohio
+2008,United States,58.005,Oklahoma
+2008,United States,58.005,Oregon
+2008,United States,58.005,Pennsylvania
+2008,United States,58.005,Rhode Island
+2008,United States,58.005,South Carolina
+2008,United States,58.005,South Dakota
+2008,United States,58.005,Tennessee
+2008,United States,58.005,Texas
+2008,United States,58.005,Utah
+2008,United States,58.005,Vermont
+2008,United States,58.005,Virginia
+2008,United States,58.005,Washington
+2008,United States,58.005,West Virginia
+2008,United States,58.005,Wisconsin
+2008,United States,58.005,Wyoming
+2009,United States,66.016,Alabama
+2009,United States,66.016,Alaska
+2009,United States,66.016,Arizona
+2009,United States,66.016,Arkansas
+2009,United States,66.016,California
+2009,United States,66.016,Colorado
+2009,United States,66.016,Connecticut
+2009,United States,66.016,Delaware
+2009,United States,66.016,District of Columbia
+2009,United States,66.016,Florida
+2009,United States,66.016,Georgia
+2009,United States,66.016,Hawaii
+2009,United States,66.016,Idaho
+2009,United States,66.016,Illinois
+2009,United States,66.016,Indiana
+2009,United States,66.016,Iowa
+2009,United States,66.016,Kansas
+2009,United States,66.016,Kentucky
+2009,United States,66.016,Louisiana
+2009,United States,66.016,Maine
+2009,United States,66.016,Maryland
+2009,United States,66.016,Massachusetts
+2009,United States,66.016,Michigan
+2009,United States,66.016,Minnesota
+2009,United States,66.016,Mississippi
+2009,United States,66.016,Missouri
+2009,United States,66.016,Montana
+2009,United States,66.016,Nebraska
+2009,United States,66.016,Nevada
+2009,United States,66.016,New Hampshire
+2009,United States,66.016,New Jersey
+2009,United States,66.016,New Mexico
+2009,United States,66.016,New York
+2009,United States,66.016,North Carolina
+2009,United States,66.016,North Dakota
+2009,United States,66.016,Ohio
+2009,United States,66.016,Oklahoma
+2009,United States,66.016,Oregon
+2009,United States,66.016,Pennsylvania
+2009,United States,66.016,Rhode Island
+2009,United States,66.016,South Carolina
+2009,United States,66.016,South Dakota
+2009,United States,66.016,Tennessee
+2009,United States,66.016,Texas
+2009,United States,66.016,Utah
+2009,United States,66.016,Vermont
+2009,United States,66.016,Virginia
+2009,United States,66.016,Washington
+2009,United States,66.016,West Virginia
+2009,United States,66.016,Wisconsin
+2009,United States,66.016,Wyoming
+2010,United States,69.57,Alabama
+2010,United States,69.57,Alaska
+2010,United States,69.57,Arizona
+2010,United States,69.57,Arkansas
+2010,United States,69.57,California
+2010,United States,69.57,Colorado
+2010,United States,69.57,Connecticut
+2010,United States,69.57,Delaware
+2010,United States,69.57,District of Columbia
+2010,United States,69.57,Florida
+2010,United States,69.57,Georgia
+2010,United States,69.57,Hawaii
+2010,United States,69.57,Idaho
+2010,United States,69.57,Illinois
+2010,United States,69.57,Indiana
+2010,United States,69.57,Iowa
+2010,United States,69.57,Kansas
+2010,United States,69.57,Kentucky
+2010,United States,69.57,Louisiana
+2010,United States,69.57,Maine
+2010,United States,69.57,Maryland
+2010,United States,69.57,Massachusetts
+2010,United States,69.57,Michigan
+2010,United States,69.57,Minnesota
+2010,United States,69.57,Mississippi
+2010,United States,69.57,Missouri
+2010,United States,69.57,Montana
+2010,United States,69.57,Nebraska
+2010,United States,69.57,Nevada
+2010,United States,69.57,New Hampshire
+2010,United States,69.57,New Jersey
+2010,United States,69.57,New Mexico
+2010,United States,69.57,New York
+2010,United States,69.57,North Carolina
+2010,United States,69.57,North Dakota
+2010,United States,69.57,Ohio
+2010,United States,69.57,Oklahoma
+2010,United States,69.57,Oregon
+2010,United States,69.57,Pennsylvania
+2010,United States,69.57,Rhode Island
+2010,United States,69.57,South Carolina
+2010,United States,69.57,South Dakota
+2010,United States,69.57,Tennessee
+2010,United States,69.57,Texas
+2010,United States,69.57,Utah
+2010,United States,69.57,Vermont
+2010,United States,69.57,Virginia
+2010,United States,69.57,Washington
+2010,United States,69.57,West Virginia
+2010,United States,69.57,Wisconsin
+2010,United States,69.57,Wyoming
+2011,United States,77.297,Alabama
+2011,United States,77.297,Alaska
+2011,United States,77.297,Arizona
+2011,United States,77.297,Arkansas
+2011,United States,77.297,California
+2011,United States,77.297,Colorado
+2011,United States,77.297,Connecticut
+2011,United States,77.297,Delaware
+2011,United States,77.297,District of Columbia
+2011,United States,77.297,Florida
+2011,United States,77.297,Georgia
+2011,United States,77.297,Hawaii
+2011,United States,77.297,Idaho
+2011,United States,77.297,Illinois
+2011,United States,77.297,Indiana
+2011,United States,77.297,Iowa
+2011,United States,77.297,Kansas
+2011,United States,77.297,Kentucky
+2011,United States,77.297,Louisiana
+2011,United States,77.297,Maine
+2011,United States,77.297,Maryland
+2011,United States,77.297,Massachusetts
+2011,United States,77.297,Michigan
+2011,United States,77.297,Minnesota
+2011,United States,77.297,Mississippi
+2011,United States,77.297,Missouri
+2011,United States,77.297,Montana
+2011,United States,77.297,Nebraska
+2011,United States,77.297,Nevada
+2011,United States,77.297,New Hampshire
+2011,United States,77.297,New Jersey
+2011,United States,77.297,New Mexico
+2011,United States,77.297,New York
+2011,United States,77.297,North Carolina
+2011,United States,77.297,North Dakota
+2011,United States,77.297,Ohio
+2011,United States,77.297,Oklahoma
+2011,United States,77.297,Oregon
+2011,United States,77.297,Pennsylvania
+2011,United States,77.297,Rhode Island
+2011,United States,77.297,South Carolina
+2011,United States,77.297,South Dakota
+2011,United States,77.297,Tennessee
+2011,United States,77.297,Texas
+2011,United States,77.297,Utah
+2011,United States,77.297,Vermont
+2011,United States,77.297,Virginia
+2011,United States,77.297,Washington
+2011,United States,77.297,West Virginia
+2011,United States,77.297,Wisconsin
+2011,United States,77.297,Wyoming
+2012,United States,80.961,Alabama
+2012,United States,80.961,Alaska
+2012,United States,80.961,Arizona
+2012,United States,80.961,Arkansas
+2012,United States,80.961,California
+2012,United States,80.961,Colorado
+2012,United States,80.961,Connecticut
+2012,United States,80.961,Delaware
+2012,United States,80.961,District of Columbia
+2012,United States,80.961,Florida
+2012,United States,80.961,Georgia
+2012,United States,80.961,Hawaii
+2012,United States,80.961,Idaho
+2012,United States,80.961,Illinois
+2012,United States,80.961,Indiana
+2012,United States,80.961,Iowa
+2012,United States,80.961,Kansas
+2012,United States,80.961,Kentucky
+2012,United States,80.961,Louisiana
+2012,United States,80.961,Maine
+2012,United States,80.961,Maryland
+2012,United States,80.961,Massachusetts
+2012,United States,80.961,Michigan
+2012,United States,80.961,Minnesota
+2012,United States,80.961,Mississippi
+2012,United States,80.961,Missouri
+2012,United States,80.961,Montana
+2012,United States,80.961,Nebraska
+2012,United States,80.961,Nevada
+2012,United States,80.961,New Hampshire
+2012,United States,80.961,New Jersey
+2012,United States,80.961,New Mexico
+2012,United States,80.961,New York
+2012,United States,80.961,North Carolina
+2012,United States,80.961,North Dakota
+2012,United States,80.961,Ohio
+2012,United States,80.961,Oklahoma
+2012,United States,80.961,Oregon
+2012,United States,80.961,Pennsylvania
+2012,United States,80.961,Rhode Island
+2012,United States,80.961,South Carolina
+2012,United States,80.961,South Dakota
+2012,United States,80.961,Tennessee
+2012,United States,80.961,Texas
+2012,United States,80.961,Utah
+2012,United States,80.961,Vermont
+2012,United States,80.961,Virginia
+2012,United States,80.961,Washington
+2012,United States,80.961,West Virginia
+2012,United States,80.961,Wisconsin
+2012,United States,80.961,Wyoming
+2013,United States,82.868,Alabama
+2013,United States,82.868,Alaska
+2013,United States,82.868,Arizona
+2013,United States,82.868,Arkansas
+2013,United States,82.868,California
+2013,United States,82.868,Colorado
+2013,United States,82.868,Connecticut
+2013,United States,82.868,Delaware
+2013,United States,82.868,District of Columbia
+2013,United States,82.868,Florida
+2013,United States,82.868,Georgia
+2013,United States,82.868,Hawaii
+2013,United States,82.868,Idaho
+2013,United States,82.868,Illinois
+2013,United States,82.868,Indiana
+2013,United States,82.868,Iowa
+2013,United States,82.868,Kansas
+2013,United States,82.868,Kentucky
+2013,United States,82.868,Louisiana
+2013,United States,82.868,Maine
+2013,United States,82.868,Maryland
+2013,United States,82.868,Massachusetts
+2013,United States,82.868,Michigan
+2013,United States,82.868,Minnesota
+2013,United States,82.868,Mississippi
+2013,United States,82.868,Missouri
+2013,United States,82.868,Montana
+2013,United States,82.868,Nebraska
+2013,United States,82.868,Nevada
+2013,United States,82.868,New Hampshire
+2013,United States,82.868,New Jersey
+2013,United States,82.868,New Mexico
+2013,United States,82.868,New York
+2013,United States,82.868,North Carolina
+2013,United States,82.868,North Dakota
+2013,United States,82.868,Ohio
+2013,United States,82.868,Oklahoma
+2013,United States,82.868,Oregon
+2013,United States,82.868,Pennsylvania
+2013,United States,82.868,Rhode Island
+2013,United States,82.868,South Carolina
+2013,United States,82.868,South Dakota
+2013,United States,82.868,Tennessee
+2013,United States,82.868,Texas
+2013,United States,82.868,Utah
+2013,United States,82.868,Vermont
+2013,United States,82.868,Virginia
+2013,United States,82.868,Washington
+2013,United States,82.868,West Virginia
+2013,United States,82.868,Wisconsin
+2013,United States,82.868,Wyoming
+2014,United States,84.496,Alabama
+2014,United States,84.496,Alaska
+2014,United States,84.496,Arizona
+2014,United States,84.496,Arkansas
+2014,United States,84.496,California
+2014,United States,84.496,Colorado
+2014,United States,84.496,Connecticut
+2014,United States,84.496,Delaware
+2014,United States,84.496,District of Columbia
+2014,United States,84.496,Florida
+2014,United States,84.496,Georgia
+2014,United States,84.496,Hawaii
+2014,United States,84.496,Idaho
+2014,United States,84.496,Illinois
+2014,United States,84.496,Indiana
+2014,United States,84.496,Iowa
+2014,United States,84.496,Kansas
+2014,United States,84.496,Kentucky
+2014,United States,84.496,Louisiana
+2014,United States,84.496,Maine
+2014,United States,84.496,Maryland
+2014,United States,84.496,Massachusetts
+2014,United States,84.496,Michigan
+2014,United States,84.496,Minnesota
+2014,United States,84.496,Mississippi
+2014,United States,84.496,Missouri
+2014,United States,84.496,Montana
+2014,United States,84.496,Nebraska
+2014,United States,84.496,Nevada
+2014,United States,84.496,New Hampshire
+2014,United States,84.496,New Jersey
+2014,United States,84.496,New Mexico
+2014,United States,84.496,New York
+2014,United States,84.496,North Carolina
+2014,United States,84.496,North Dakota
+2014,United States,84.496,Ohio
+2014,United States,84.496,Oklahoma
+2014,United States,84.496,Oregon
+2014,United States,84.496,Pennsylvania
+2014,United States,84.496,Rhode Island
+2014,United States,84.496,South Carolina
+2014,United States,84.496,South Dakota
+2014,United States,84.496,Tennessee
+2014,United States,84.496,Texas
+2014,United States,84.496,Utah
+2014,United States,84.496,Vermont
+2014,United States,84.496,Virginia
+2014,United States,84.496,Washington
+2014,United States,84.496,West Virginia
+2014,United States,84.496,Wisconsin
+2014,United States,84.496,Wyoming
+2015,United States,85.849,Alabama
+2015,United States,85.849,Alaska
+2015,United States,85.849,Arizona
+2015,United States,85.849,Arkansas
+2015,United States,85.849,California
+2015,United States,85.849,Colorado
+2015,United States,85.849,Connecticut
+2015,United States,85.849,Delaware
+2015,United States,85.849,District of Columbia
+2015,United States,85.849,Florida
+2015,United States,85.849,Georgia
+2015,United States,85.849,Hawaii
+2015,United States,85.849,Idaho
+2015,United States,85.849,Illinois
+2015,United States,85.849,Indiana
+2015,United States,85.849,Iowa
+2015,United States,85.849,Kansas
+2015,United States,85.849,Kentucky
+2015,United States,85.849,Louisiana
+2015,United States,85.849,Maine
+2015,United States,85.849,Maryland
+2015,United States,85.849,Massachusetts
+2015,United States,85.849,Michigan
+2015,United States,85.849,Minnesota
+2015,United States,85.849,Mississippi
+2015,United States,85.849,Missouri
+2015,United States,85.849,Montana
+2015,United States,85.849,Nebraska
+2015,United States,85.849,Nevada
+2015,United States,85.849,New Hampshire
+2015,United States,85.849,New Jersey
+2015,United States,85.849,New Mexico
+2015,United States,85.849,New York
+2015,United States,85.849,North Carolina
+2015,United States,85.849,North Dakota
+2015,United States,85.849,Ohio
+2015,United States,85.849,Oklahoma
+2015,United States,85.849,Oregon
+2015,United States,85.849,Pennsylvania
+2015,United States,85.849,Rhode Island
+2015,United States,85.849,South Carolina
+2015,United States,85.849,South Dakota
+2015,United States,85.849,Tennessee
+2015,United States,85.849,Texas
+2015,United States,85.849,Utah
+2015,United States,85.849,Vermont
+2015,United States,85.849,Virginia
+2015,United States,85.849,Washington
+2015,United States,85.849,West Virginia
+2015,United States,85.849,Wisconsin
+2015,United States,85.849,Wyoming
+2016,United States,86.95,Alabama
+2016,United States,86.95,Alaska
+2016,United States,86.95,Arizona
+2016,United States,86.95,Arkansas
+2016,United States,86.95,California
+2016,United States,86.95,Colorado
+2016,United States,86.95,Connecticut
+2016,United States,86.95,Delaware
+2016,United States,86.95,District of Columbia
+2016,United States,86.95,Florida
+2016,United States,86.95,Georgia
+2016,United States,86.95,Hawaii
+2016,United States,86.95,Idaho
+2016,United States,86.95,Illinois
+2016,United States,86.95,Indiana
+2016,United States,86.95,Iowa
+2016,United States,86.95,Kansas
+2016,United States,86.95,Kentucky
+2016,United States,86.95,Louisiana
+2016,United States,86.95,Maine
+2016,United States,86.95,Maryland
+2016,United States,86.95,Massachusetts
+2016,United States,86.95,Michigan
+2016,United States,86.95,Minnesota
+2016,United States,86.95,Mississippi
+2016,United States,86.95,Missouri
+2016,United States,86.95,Montana
+2016,United States,86.95,Nebraska
+2016,United States,86.95,Nevada
+2016,United States,86.95,New Hampshire
+2016,United States,86.95,New Jersey
+2016,United States,86.95,New Mexico
+2016,United States,86.95,New York
+2016,United States,86.95,North Carolina
+2016,United States,86.95,North Dakota
+2016,United States,86.95,Ohio
+2016,United States,86.95,Oklahoma
+2016,United States,86.95,Oregon
+2016,United States,86.95,Pennsylvania
+2016,United States,86.95,Rhode Island
+2016,United States,86.95,South Carolina
+2016,United States,86.95,South Dakota
+2016,United States,86.95,Tennessee
+2016,United States,86.95,Texas
+2016,United States,86.95,Utah
+2016,United States,86.95,Vermont
+2016,United States,86.95,Virginia
+2016,United States,86.95,Washington
+2016,United States,86.95,West Virginia
+2016,United States,86.95,Wisconsin
+2016,United States,86.95,Wyoming
+2017,United States,87.359,Alabama
+2017,United States,87.359,Alaska
+2017,United States,87.359,Arizona
+2017,United States,87.359,Arkansas
+2017,United States,87.359,California
+2017,United States,87.359,Colorado
+2017,United States,87.359,Connecticut
+2017,United States,87.359,Delaware
+2017,United States,87.359,District of Columbia
+2017,United States,87.359,Florida
+2017,United States,87.359,Georgia
+2017,United States,87.359,Hawaii
+2017,United States,87.359,Idaho
+2017,United States,87.359,Illinois
+2017,United States,87.359,Indiana
+2017,United States,87.359,Iowa
+2017,United States,87.359,Kansas
+2017,United States,87.359,Kentucky
+2017,United States,87.359,Louisiana
+2017,United States,87.359,Maine
+2017,United States,87.359,Maryland
+2017,United States,87.359,Massachusetts
+2017,United States,87.359,Michigan
+2017,United States,87.359,Minnesota
+2017,United States,87.359,Mississippi
+2017,United States,87.359,Missouri
+2017,United States,87.359,Montana
+2017,United States,87.359,Nebraska
+2017,United States,87.359,Nevada
+2017,United States,87.359,New Hampshire
+2017,United States,87.359,New Jersey
+2017,United States,87.359,New Mexico
+2017,United States,87.359,New York
+2017,United States,87.359,North Carolina
+2017,United States,87.359,North Dakota
+2017,United States,87.359,Ohio
+2017,United States,87.359,Oklahoma
+2017,United States,87.359,Oregon
+2017,United States,87.359,Pennsylvania
+2017,United States,87.359,Rhode Island
+2017,United States,87.359,South Carolina
+2017,United States,87.359,South Dakota
+2017,United States,87.359,Tennessee
+2017,United States,87.359,Texas
+2017,United States,87.359,Utah
+2017,United States,87.359,Vermont
+2017,United States,87.359,Virginia
+2017,United States,87.359,Washington
+2017,United States,87.359,West Virginia
+2017,United States,87.359,Wisconsin
+2017,United States,87.359,Wyoming
+2018,United States,87.812,Alabama
+2018,United States,87.812,Alaska
+2018,United States,87.812,Arizona
+2018,United States,87.812,Arkansas
+2018,United States,87.812,California
+2018,United States,87.812,Colorado
+2018,United States,87.812,Connecticut
+2018,United States,87.812,Delaware
+2018,United States,87.812,District of Columbia
+2018,United States,87.812,Florida
+2018,United States,87.812,Georgia
+2018,United States,87.812,Hawaii
+2018,United States,87.812,Idaho
+2018,United States,87.812,Illinois
+2018,United States,87.812,Indiana
+2018,United States,87.812,Iowa
+2018,United States,87.812,Kansas
+2018,United States,87.812,Kentucky
+2018,United States,87.812,Louisiana
+2018,United States,87.812,Maine
+2018,United States,87.812,Maryland
+2018,United States,87.812,Massachusetts
+2018,United States,87.812,Michigan
+2018,United States,87.812,Minnesota
+2018,United States,87.812,Mississippi
+2018,United States,87.812,Missouri
+2018,United States,87.812,Montana
+2018,United States,87.812,Nebraska
+2018,United States,87.812,Nevada
+2018,United States,87.812,New Hampshire
+2018,United States,87.812,New Jersey
+2018,United States,87.812,New Mexico
+2018,United States,87.812,New York
+2018,United States,87.812,North Carolina
+2018,United States,87.812,North Dakota
+2018,United States,87.812,Ohio
+2018,United States,87.812,Oklahoma
+2018,United States,87.812,Oregon
+2018,United States,87.812,Pennsylvania
+2018,United States,87.812,Rhode Island
+2018,United States,87.812,South Carolina
+2018,United States,87.812,South Dakota
+2018,United States,87.812,Tennessee
+2018,United States,87.812,Texas
+2018,United States,87.812,Utah
+2018,United States,87.812,Vermont
+2018,United States,87.812,Virginia
+2018,United States,87.812,Washington
+2018,United States,87.812,West Virginia
+2018,United States,87.812,Wisconsin
+2018,United States,87.812,Wyoming
+2019,United States,89.064,Alabama
+2019,United States,89.064,Alaska
+2019,United States,89.064,Arizona
+2019,United States,89.064,Arkansas
+2019,United States,89.064,California
+2019,United States,89.064,Colorado
+2019,United States,89.064,Connecticut
+2019,United States,89.064,Delaware
+2019,United States,89.064,District of Columbia
+2019,United States,89.064,Florida
+2019,United States,89.064,Georgia
+2019,United States,89.064,Hawaii
+2019,United States,89.064,Idaho
+2019,United States,89.064,Illinois
+2019,United States,89.064,Indiana
+2019,United States,89.064,Iowa
+2019,United States,89.064,Kansas
+2019,United States,89.064,Kentucky
+2019,United States,89.064,Louisiana
+2019,United States,89.064,Maine
+2019,United States,89.064,Maryland
+2019,United States,89.064,Massachusetts
+2019,United States,89.064,Michigan
+2019,United States,89.064,Minnesota
+2019,United States,89.064,Mississippi
+2019,United States,89.064,Missouri
+2019,United States,89.064,Montana
+2019,United States,89.064,Nebraska
+2019,United States,89.064,Nevada
+2019,United States,89.064,New Hampshire
+2019,United States,89.064,New Jersey
+2019,United States,89.064,New Mexico
+2019,United States,89.064,New York
+2019,United States,89.064,North Carolina
+2019,United States,89.064,North Dakota
+2019,United States,89.064,Ohio
+2019,United States,89.064,Oklahoma
+2019,United States,89.064,Oregon
+2019,United States,89.064,Pennsylvania
+2019,United States,89.064,Rhode Island
+2019,United States,89.064,South Carolina
+2019,United States,89.064,South Dakota
+2019,United States,89.064,Tennessee
+2019,United States,89.064,Texas
+2019,United States,89.064,Utah
+2019,United States,89.064,Vermont
+2019,United States,89.064,Virginia
+2019,United States,89.064,Washington
+2019,United States,89.064,West Virginia
+2019,United States,89.064,Wisconsin
+2019,United States,89.064,Wyoming
+2020,United States,94.25,Alabama
+2020,United States,94.25,Alaska
+2020,United States,94.25,Arizona
+2020,United States,94.25,Arkansas
+2020,United States,94.25,California
+2020,United States,94.25,Colorado
+2020,United States,94.25,Connecticut
+2020,United States,94.25,Delaware
+2020,United States,94.25,District of Columbia
+2020,United States,94.25,Florida
+2020,United States,94.25,Georgia
+2020,United States,94.25,Hawaii
+2020,United States,94.25,Idaho
+2020,United States,94.25,Illinois
+2020,United States,94.25,Indiana
+2020,United States,94.25,Iowa
+2020,United States,94.25,Kansas
+2020,United States,94.25,Kentucky
+2020,United States,94.25,Louisiana
+2020,United States,94.25,Maine
+2020,United States,94.25,Maryland
+2020,United States,94.25,Massachusetts
+2020,United States,94.25,Michigan
+2020,United States,94.25,Minnesota
+2020,United States,94.25,Mississippi
+2020,United States,94.25,Missouri
+2020,United States,94.25,Montana
+2020,United States,94.25,Nebraska
+2020,United States,94.25,Nevada
+2020,United States,94.25,New Hampshire
+2020,United States,94.25,New Jersey
+2020,United States,94.25,New Mexico
+2020,United States,94.25,New York
+2020,United States,94.25,North Carolina
+2020,United States,94.25,North Dakota
+2020,United States,94.25,Ohio
+2020,United States,94.25,Oklahoma
+2020,United States,94.25,Oregon
+2020,United States,94.25,Pennsylvania
+2020,United States,94.25,Rhode Island
+2020,United States,94.25,South Carolina
+2020,United States,94.25,South Dakota
+2020,United States,94.25,Tennessee
+2020,United States,94.25,Texas
+2020,United States,94.25,Utah
+2020,United States,94.25,Vermont
+2020,United States,94.25,Virginia
+2020,United States,94.25,Washington
+2020,United States,94.25,West Virginia
+2020,United States,94.25,Wisconsin
+2020,United States,94.25,Wyoming
+2021,United States,90.007,Alabama
+2021,United States,90.007,Alaska
+2021,United States,90.007,Arizona
+2021,United States,90.007,Arkansas
+2021,United States,90.007,California
+2021,United States,90.007,Colorado
+2021,United States,90.007,Connecticut
+2021,United States,90.007,Delaware
+2021,United States,90.007,District of Columbia
+2021,United States,90.007,Florida
+2021,United States,90.007,Georgia
+2021,United States,90.007,Hawaii
+2021,United States,90.007,Idaho
+2021,United States,90.007,Illinois
+2021,United States,90.007,Indiana
+2021,United States,90.007,Iowa
+2021,United States,90.007,Kansas
+2021,United States,90.007,Kentucky
+2021,United States,90.007,Louisiana
+2021,United States,90.007,Maine
+2021,United States,90.007,Maryland
+2021,United States,90.007,Massachusetts
+2021,United States,90.007,Michigan
+2021,United States,90.007,Minnesota
+2021,United States,90.007,Mississippi
+2021,United States,90.007,Missouri
+2021,United States,90.007,Montana
+2021,United States,90.007,Nebraska
+2021,United States,90.007,Nevada
+2021,United States,90.007,New Hampshire
+2021,United States,90.007,New Jersey
+2021,United States,90.007,New Mexico
+2021,United States,90.007,New York
+2021,United States,90.007,North Carolina
+2021,United States,90.007,North Dakota
+2021,United States,90.007,Ohio
+2021,United States,90.007,Oklahoma
+2021,United States,90.007,Oregon
+2021,United States,90.007,Pennsylvania
+2021,United States,90.007,Rhode Island
+2021,United States,90.007,South Carolina
+2021,United States,90.007,South Dakota
+2021,United States,90.007,Tennessee
+2021,United States,90.007,Texas
+2021,United States,90.007,Utah
+2021,United States,90.007,Vermont
+2021,United States,90.007,Virginia
+2021,United States,90.007,Washington
+2021,United States,90.007,West Virginia
+2021,United States,90.007,Wisconsin
+2021,United States,90.007,Wyoming
+2022,United States,93.793,Alabama
+2022,United States,93.793,Alaska
+2022,United States,93.793,Arizona
+2022,United States,93.793,Arkansas
+2022,United States,93.793,California
+2022,United States,93.793,Colorado
+2022,United States,93.793,Connecticut
+2022,United States,93.793,Delaware
+2022,United States,93.793,District of Columbia
+2022,United States,93.793,Florida
+2022,United States,93.793,Georgia
+2022,United States,93.793,Hawaii
+2022,United States,93.793,Idaho
+2022,United States,93.793,Illinois
+2022,United States,93.793,Indiana
+2022,United States,93.793,Iowa
+2022,United States,93.793,Kansas
+2022,United States,93.793,Kentucky
+2022,United States,93.793,Louisiana
+2022,United States,93.793,Maine
+2022,United States,93.793,Maryland
+2022,United States,93.793,Massachusetts
+2022,United States,93.793,Michigan
+2022,United States,93.793,Minnesota
+2022,United States,93.793,Mississippi
+2022,United States,93.793,Missouri
+2022,United States,93.793,Montana
+2022,United States,93.793,Nebraska
+2022,United States,93.793,Nevada
+2022,United States,93.793,New Hampshire
+2022,United States,93.793,New Jersey
+2022,United States,93.793,New Mexico
+2022,United States,93.793,New York
+2022,United States,93.793,North Carolina
+2022,United States,93.793,North Dakota
+2022,United States,93.793,Ohio
+2022,United States,93.793,Oklahoma
+2022,United States,93.793,Oregon
+2022,United States,93.793,Pennsylvania
+2022,United States,93.793,Rhode Island
+2022,United States,93.793,South Carolina
+2022,United States,93.793,South Dakota
+2022,United States,93.793,Tennessee
+2022,United States,93.793,Texas
+2022,United States,93.793,Utah
+2022,United States,93.793,Vermont
+2022,United States,93.793,Virginia
+2022,United States,93.793,Washington
+2022,United States,93.793,West Virginia
+2022,United States,93.793,Wisconsin
+2022,United States,93.793,Wyoming
+2023,United States,90.688,Alabama
+2023,United States,90.688,Alaska
+2023,United States,90.688,Arizona
+2023,United States,90.688,Arkansas
+2023,United States,90.688,California
+2023,United States,90.688,Colorado
+2023,United States,90.688,Connecticut
+2023,United States,90.688,Delaware
+2023,United States,90.688,District of Columbia
+2023,United States,90.688,Florida
+2023,United States,90.688,Georgia
+2023,United States,90.688,Hawaii
+2023,United States,90.688,Idaho
+2023,United States,90.688,Illinois
+2023,United States,90.688,Indiana
+2023,United States,90.688,Iowa
+2023,United States,90.688,Kansas
+2023,United States,90.688,Kentucky
+2023,United States,90.688,Louisiana
+2023,United States,90.688,Maine
+2023,United States,90.688,Maryland
+2023,United States,90.688,Massachusetts
+2023,United States,90.688,Michigan
+2023,United States,90.688,Minnesota
+2023,United States,90.688,Mississippi
+2023,United States,90.688,Missouri
+2023,United States,90.688,Montana
+2023,United States,90.688,Nebraska
+2023,United States,90.688,Nevada
+2023,United States,90.688,New Hampshire
+2023,United States,90.688,New Jersey
+2023,United States,90.688,New Mexico
+2023,United States,90.688,New York
+2023,United States,90.688,North Carolina
+2023,United States,90.688,North Dakota
+2023,United States,90.688,Ohio
+2023,United States,90.688,Oklahoma
+2023,United States,90.688,Oregon
+2023,United States,90.688,Pennsylvania
+2023,United States,90.688,Rhode Island
+2023,United States,90.688,South Carolina
+2023,United States,90.688,South Dakota
+2023,United States,90.688,Tennessee
+2023,United States,90.688,Texas
+2023,United States,90.688,Utah
+2023,United States,90.688,Vermont
+2023,United States,90.688,Virginia
+2023,United States,90.688,Washington
+2023,United States,90.688,West Virginia
+2023,United States,90.688,Wisconsin
+2023,United States,90.688,Wyoming
+2024,United States,93.303,Alabama
+2024,United States,93.303,Alaska
+2024,United States,93.303,Arizona
+2024,United States,93.303,Arkansas
+2024,United States,93.303,California
+2024,United States,93.303,Colorado
+2024,United States,93.303,Connecticut
+2024,United States,93.303,Delaware
+2024,United States,93.303,District of Columbia
+2024,United States,93.303,Florida
+2024,United States,93.303,Georgia
+2024,United States,93.303,Hawaii
+2024,United States,93.303,Idaho
+2024,United States,93.303,Illinois
+2024,United States,93.303,Indiana
+2024,United States,93.303,Iowa
+2024,United States,93.303,Kansas
+2024,United States,93.303,Kentucky
+2024,United States,93.303,Louisiana
+2024,United States,93.303,Maine
+2024,United States,93.303,Maryland
+2024,United States,93.303,Massachusetts
+2024,United States,93.303,Michigan
+2024,United States,93.303,Minnesota
+2024,United States,93.303,Mississippi
+2024,United States,93.303,Missouri
+2024,United States,93.303,Montana
+2024,United States,93.303,Nebraska
+2024,United States,93.303,Nevada
+2024,United States,93.303,New Hampshire
+2024,United States,93.303,New Jersey
+2024,United States,93.303,New Mexico
+2024,United States,93.303,New York
+2024,United States,93.303,North Carolina
+2024,United States,93.303,North Dakota
+2024,United States,93.303,Ohio
+2024,United States,93.303,Oklahoma
+2024,United States,93.303,Oregon
+2024,United States,93.303,Pennsylvania
+2024,United States,93.303,Rhode Island
+2024,United States,93.303,South Carolina
+2024,United States,93.303,South Dakota
+2024,United States,93.303,Tennessee
+2024,United States,93.303,Texas
+2024,United States,93.303,Utah
+2024,United States,93.303,Vermont
+2024,United States,93.303,Virginia
+2024,United States,93.303,Washington
+2024,United States,93.303,West Virginia
+2024,United States,93.303,Wisconsin
+2024,United States,93.303,Wyoming
+2025,United States,93.679,Alabama
+2025,United States,93.679,Alaska
+2025,United States,93.679,Arizona
+2025,United States,93.679,Arkansas
+2025,United States,93.679,California
+2025,United States,93.679,Colorado
+2025,United States,93.679,Connecticut
+2025,United States,93.679,Delaware
+2025,United States,93.679,District of Columbia
+2025,United States,93.679,Florida
+2025,United States,93.679,Georgia
+2025,United States,93.679,Hawaii
+2025,United States,93.679,Idaho
+2025,United States,93.679,Illinois
+2025,United States,93.679,Indiana
+2025,United States,93.679,Iowa
+2025,United States,93.679,Kansas
+2025,United States,93.679,Kentucky
+2025,United States,93.679,Louisiana
+2025,United States,93.679,Maine
+2025,United States,93.679,Maryland
+2025,United States,93.679,Massachusetts
+2025,United States,93.679,Michigan
+2025,United States,93.679,Minnesota
+2025,United States,93.679,Mississippi
+2025,United States,93.679,Missouri
+2025,United States,93.679,Montana
+2025,United States,93.679,Nebraska
+2025,United States,93.679,Nevada
+2025,United States,93.679,New Hampshire
+2025,United States,93.679,New Jersey
+2025,United States,93.679,New Mexico
+2025,United States,93.679,New York
+2025,United States,93.679,North Carolina
+2025,United States,93.679,North Dakota
+2025,United States,93.679,Ohio
+2025,United States,93.679,Oklahoma
+2025,United States,93.679,Oregon
+2025,United States,93.679,Pennsylvania
+2025,United States,93.679,Rhode Island
+2025,United States,93.679,South Carolina
+2025,United States,93.679,South Dakota
+2025,United States,93.679,Tennessee
+2025,United States,93.679,Texas
+2025,United States,93.679,Utah
+2025,United States,93.679,Vermont
+2025,United States,93.679,Virginia
+2025,United States,93.679,Washington
+2025,United States,93.679,West Virginia
+2025,United States,93.679,Wisconsin
+2025,United States,93.679,Wyoming

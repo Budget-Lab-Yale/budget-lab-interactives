@@ -16,6 +16,11 @@
 // rendering the next one so the engine's ResizeObservers / listeners don't leak.
 let teardowns = [];
 
+// The tile map is this tool's own renderer (the engine has no map type); loaded on
+// first use with the same ?v= cache-bust as this module.
+const ASSET_V = new URL(import.meta.url).searchParams.get("v") || "";
+const loadTileMap = () => import(ASSET_V ? `./tilemap.js?v=${ASSET_V}` : "./tilemap.js");
+
 function engine() {
   const e = window.BudgetLabChart;
   if (!e) throw new Error("Chart engine bundle not loaded (window.BudgetLabChart missing).");
@@ -336,9 +341,18 @@ export async function renderFigure(mount, ctx) {
         opts.selections = tss.selections;
         if (ctx.onSelect) opts.onSelect = ctx.onSelect;
       }
+      // `highlight_from` (this tool's key, not the engine's): outline the state a sticky
+      // selector names. Bars take it as a category colour; the tile map reads it itself.
+      if (spec.highlight_from && spec.chartType !== "tilemap") {
+        const pick = toggles[spec.highlight_from];
+        if (pick) spec.category_colors = { ...(spec.category_colors || {}), [pick]: "#101F5B" };
+        delete spec.highlight_from;
+      }
       const teardown = pf.figureType === "table"
         ? engine().mountTable(card, opts)
-        : engine().mountChart(card, opts);
+        : spec.chartType === "tilemap"
+          ? (await loadTileMap()).mountTileMap(card, { ...opts, toggles })
+          : engine().mountChart(card, opts);
       if (typeof teardown === "function") teardowns.push(teardown);
     } catch (e) {
       console.error(e);

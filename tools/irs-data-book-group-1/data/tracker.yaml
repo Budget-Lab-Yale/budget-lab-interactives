@@ -1,6 +1,6 @@
 release:
   updated: September 29, 2026
-  version: 0.1-prototype
+  version: 0.2-prototype
 tabs:
 - id: collections-refunds
   label: |-
@@ -74,6 +74,286 @@ tabs:
     label: Components
     figures:
     - components
+  - id: table
+    label: Table
+    figures:
+    - full-table
+    - definitions
+- id: returns-filed
+  label: |-
+    1-2 Returns
+    Filed
+  description: Returns filed with the IRS each fiscal year since FY1994, by type of
+    return. From Table 1-2 of the IRS Data Book.
+  toggles:
+  - id: view
+    label: View
+    default: levels
+    applies_to_figures:
+    - returns-by-type
+    - individual-returns
+    options:
+    - id: levels
+      label: Returns filed
+    - id: pct
+      label: Change from prior year
+  sections:
+  - id: overview
+    label: ''
+    figures:
+    - summary
+  - id: trends
+    label: Trends
+    figures:
+    - returns-by-type
+  - id: components
+    label: Components
+    figures:
+    - business-returns
+    - individual-returns
+  - id: table
+    label: Table
+    figures:
+    - full-table
+    - definitions
+- id: returns-by-state
+  label: |-
+    1-3 Returns
+    by State
+  description: Returns filed each fiscal year since FY1998, by type of return and
+    state. From Table 1-3 of the IRS Data Book.
+  toggles:
+  - id: metric
+    label: Measure as
+    default: count
+    applies_to_figures:
+    - states-ranked
+    - states-map
+    options:
+    - id: count
+      label: Returns
+    - id: per_1000
+      label: Per 1,000 residents
+  sections:
+  - id: by-state
+    label: By state
+    figures:
+    - state-summary
+    - state-returns-by-type
+  - id: by-year
+    label: By year
+    figures:
+    - states-ranked
+    - states-map
+  - id: table
+    label: Table
+    figures:
+    - full-table
+    - definitions
+- id: electronic-filing
+  label: |-
+    1-4 E-filing
+    by State
+  description: Returns filed electronically each fiscal year since FY2000, by type
+    and state. From Table 1-4 of the IRS Data Book.
+  toggles:
+  - id: metric
+    label: Measure as
+    default: share
+    applies_to_figures:
+    - states-ranked
+    - states-map
+    options:
+    - id: share
+      label: E-file share
+      spec:
+        yAxisPolicy:
+          min: 0.0
+          max: 100.0
+    - id: count
+      label: E-filed returns
+    - id: per_1000
+      label: Per 1,000 residents
+  sections:
+  - id: by-state
+    label: By state
+    figures:
+    - state-summary
+    - state-channels
+    - state-efile-share
+  - id: by-year
+    label: By year
+    figures:
+    - states-ranked
+    - states-map
+  - id: table
+    label: Table
+    figures:
+    - full-table
+    - definitions
+- id: gross-collections-state
+  label: |-
+    1-5 Collections
+    by State
+  description: Gross collections each fiscal year since FY1998, by type of tax and
+    state. From Table 1-5 of the IRS Data Book.
+  toggles:
+  - id: metric
+    label: Measure as
+    default: nominal
+    applies_to_figures:
+    - states-ranked
+    - states-map
+    options:
+    - id: nominal
+      label: Nominal
+    - id: real
+      label: Real
+    - id: per_resident
+      label: Per resident
+    - id: share
+      label: Share
+  - id: dollars
+    label: Units
+    default: nominal
+    applies_to_figures:
+    - state-collections-by-type
+    options:
+    - id: nominal
+      label: Nominal dollars
+    - id: real
+      label: FY2025 dollars
+  sections:
+  - id: by-state
+    label: By state
+    figures:
+    - state-summary
+    - state-collections-by-type
+  - id: by-year
+    label: By year
+    figures:
+    - states-ranked
+    - states-map
+  - id: table
+    label: Table
+    figures:
+    - full-table
+    - definitions
+- id: gross-collections
+  label: |-
+    1-6 Collections
+    since 1960
+  description: Gross collections by type of tax each fiscal year since FY1960. From
+    Table 1-6 of the IRS Data Book.
+  toggles:
+  - id: dollars
+    label: Units
+    default: nominal
+    applies_to_figures:
+    - collections-by-type
+    - excise
+    - estate-and-gift
+    options:
+    - id: nominal
+      label: Nominal dollars
+    - id: real
+      label: FY2025 dollars
+  sections:
+  - id: overview
+    label: ''
+    figures:
+    - composition
+  - id: trends
+    label: Trends
+    figures:
+    - collections-by-type
+  - id: components
+    label: Components
+    figures:
+    - excise
+    - estate-and-gift
+  - id: table
+    label: Table
+    figures:
+    - full-table
+    - definitions
+- id: refunds-by-state
+  label: |-
+    1-7 Refunds
+    by State
+  description: The number of refunds issued each fiscal year since FY1995, by type
+    of tax and state. From Table 1-7 of the IRS Data Book.
+  toggles:
+  - id: metric
+    label: Measure as
+    default: count
+    applies_to_figures:
+    - states-ranked
+    - states-map
+    options:
+    - id: count
+      label: Refunds
+    - id: per_1000
+      label: Per 1,000 residents
+  sections:
+  - id: by-state
+    label: By state
+    figures:
+    - state-summary
+    - state-refunds-by-type
+  - id: by-year
+    label: By year
+    figures:
+    - states-ranked
+    - states-map
+  - id: table
+    label: Table
+    figures:
+    - full-table
+    - definitions
+- id: refund-amounts-state
+  label: |-
+    1-8 Refund
+    Amounts by State
+  description: The amount of refunds issued each fiscal year since FY1995, by type
+    of tax and state. From Table 1-8 of the IRS Data Book.
+  toggles:
+  - id: metric
+    label: Measure as
+    default: average
+    applies_to_figures:
+    - states-ranked
+    - states-map
+    options:
+    - id: average
+      label: Average
+    - id: nominal
+      label: Nominal
+    - id: real
+      label: Real
+    - id: per_resident
+      label: Per resident
+  - id: dollars
+    label: Units
+    default: nominal
+    applies_to_figures:
+    - state-refunds-by-type
+    options:
+    - id: nominal
+      label: Nominal dollars
+    - id: real
+      label: FY2025 dollars
+  sections:
+  - id: by-state
+    label: By state
+    figures:
+    - state-summary
+    - state-refunds-by-type
+  - id: by-year
+    label: By year
+    figures:
+    - states-ranked
+    - states-map
   - id: table
     label: Table
     figures:

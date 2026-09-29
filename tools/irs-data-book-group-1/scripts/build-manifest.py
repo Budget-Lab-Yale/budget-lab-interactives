@@ -701,7 +701,7 @@ def format_published(published_at: str) -> str:
 # Tool runtime assets that must cache-bust together. app.js reads the stamped ?v from its own URL
 # and propagates it to render.js + download-all.js (→ zip-store.js); styles.css is stamped directly
 # in index.html. The vendored engine keeps its own ?v=<engine version>.
-ASSET_FILES = ("app.js", "render.js", "download-all.js", "zip-store.js", "styles.css")
+ASSET_FILES = ("app.js", "render.js", "download-all.js", "zip-store.js", "tilemap.js", "styles.css")
 
 
 def stamp_assets() -> None:
