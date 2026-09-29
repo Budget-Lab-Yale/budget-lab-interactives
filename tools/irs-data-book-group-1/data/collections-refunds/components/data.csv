@@ -1,0 +1,971 @@
+time,series,value,tax_type,dollars,source_book
+1994,Corporation income tax,153.633187,business,nominal,1995
+1994,Tax-exempt organizations' unrelated business income tax,0.5714969999999999,business,nominal,1995
+1995,Corporation income tax,173.937274,business,nominal,1995
+1995,Tax-exempt organizations' unrelated business income tax,0.48489899999999997,business,nominal,1995
+1996,Corporation income tax,188.35491399999998,business,nominal,1996
+1996,Tax-exempt organizations' unrelated business income tax,0.699878,business,nominal,1996
+1997,Corporation income tax,203.825575,business,nominal,1997
+1997,Tax-exempt organizations' unrelated business income tax,0.6667609999999999,business,nominal,1997
+1998,Corporation income tax,212.58022499999998,business,nominal,1998
+1998,Tax-exempt organizations' unrelated business income tax,0.6897869999999999,business,nominal,1998
+1999,Corporation income tax,215.514099,business,nominal,1999
+1999,Tax-exempt organizations' unrelated business income tax,0.8107909999999999,business,nominal,1999
+2000,Corporation income tax,234.980057,business,nominal,2000
+2000,Tax-exempt organizations' unrelated business income tax,0.674837,business,nominal,2000
+2001,Corporation income tax,186.079534,business,nominal,2001
+2001,Tax-exempt organizations' unrelated business income tax,0.6521089999999999,business,nominal,2001
+2002,Corporation income tax,210.943308,business,nominal,2002
+2002,Tax-exempt organizations' unrelated business income tax,0.494465,business,nominal,2002
+2003,Corporation income tax,193.760277,business,nominal,2003
+2003,Tax-exempt organizations' unrelated business income tax,0.386021,business,nominal,2003
+2004,Corporation income tax,230.10862699999998,business,nominal,2004
+2004,Tax-exempt organizations' unrelated business income tax,0.510732,business,nominal,2004
+2005,Corporation income tax,306.470933,business,nominal,2005
+2005,Tax-exempt organizations' unrelated business income tax,0.623904,business,nominal,2005
+2006,Corporation income tax,380.039893,business,nominal,2006
+2006,Tax-exempt organizations' unrelated business income tax,0.8846809999999999,business,nominal,2006
+2007,Corporation income tax,394.666355,business,nominal,2007
+2007,Tax-exempt organizations' unrelated business income tax,0.869471,business,nominal,2007
+2008,Corporation income tax,353.548654,business,nominal,2008
+2008,Tax-exempt organizations' unrelated business income tax,0.7671709999999999,business,nominal,2008
+2009,Corporation income tax,224.92925101548,business,nominal,2009
+2009,Tax-exempt organizations' unrelated business income tax,0.5523373142,business,nominal,2009
+2010,Corporation income tax,277.4739179999999,business,nominal,2010
+2010,Tax-exempt organizations' unrelated business income tax,0.463302,business,nominal,2010
+2011,Corporation income tax,242.435939,business,nominal,2011
+2011,Tax-exempt organizations' unrelated business income tax,0.41218299999999997,business,nominal,2011
+2012,Corporation income tax,280.965136,business,nominal,2012
+2012,Tax-exempt organizations' unrelated business income tax,0.49644499999999997,business,nominal,2012
+2013,Corporation income tax,311.43273602501995,business,nominal,2013
+2013,Tax-exempt organizations' unrelated business income tax,0.561218,business,nominal,2013
+2014,Corporation income tax,352.402741,business,nominal,2014
+2014,Tax-exempt organizations' unrelated business income tax,0.738371,business,nominal,2014
+2015,Corporation income tax,389.083708,business,nominal,2015
+2015,Tax-exempt organizations' unrelated business income tax,0.805014,business,nominal,2015
+2016,Corporation income tax,344.670501,business,nominal,2016
+2016,Tax-exempt organizations' unrelated business income tax,0.881926,business,nominal,2016
+2017,Corporation income tax,337.562706,business,nominal,2017
+2017,Tax-exempt organizations' unrelated business income tax,0.966448,business,nominal,2017
+2018,Corporation income tax,261.741994,business,nominal,2018
+2018,Tax-exempt organizations' unrelated business income tax,1.00003,business,nominal,2018
+2019,Corporation income tax,275.86312499999997,business,nominal,2019
+2019,Tax-exempt organizations' unrelated business income tax,1.19461,business,nominal,2019
+2020,Corporation income tax,262.619583,business,nominal,2020
+2020,Tax-exempt organizations' unrelated business income tax,0.9435239999999999,business,nominal,2020
+2021,Corporation income tax,417.82413599999995,business,nominal,2021
+2021,Tax-exempt organizations' unrelated business income tax,1.184705,business,nominal,2021
+2022,Corporation income tax,474.468574,business,nominal,2022
+2022,Tax-exempt organizations' unrelated business income tax,1.402525,business,nominal,2022
+2023,Corporation income tax,454.962812,business,nominal,2023
+2023,Tax-exempt organizations' unrelated business income tax,1.977968,business,nominal,2023
+2024,Corporation income tax,563.140434,business,nominal,2024
+2024,Tax-exempt organizations' unrelated business income tax,1.945085,business,nominal,2024
+2025,Corporation income tax,484.214157,business,nominal,2025
+2025,Tax-exempt organizations' unrelated business income tax,2.169831,business,nominal,2025
+1994,Corporation income tax,301.3391722553424,business,real,1995
+1994,Tax-exempt organizations' unrelated business income tax,1.120945521532476,business,real,1995
+1995,Corporation income tax,334.08118428386433,business,real,1995
+1995,Tax-exempt organizations' unrelated business income tax,0.9313451248986546,business,real,1995
+1996,Corporation income tax,355.0654129076548,business,real,1996
+1996,Tax-exempt organizations' unrelated business income tax,1.3193309682113399,business,real,1996
+1997,Corporation income tax,377.5295036500148,business,real,1997
+1997,Tax-exempt organizations' unrelated business income tax,1.2349870686403681,business,real,1997
+1998,Corporation income tax,388.9066761301273,business,real,1998
+1998,Tax-exempt organizations' unrelated business income tax,1.2619366143194746,business,real,1998
+1999,Corporation income tax,389.2900482512073,business,real,1999
+1999,Tax-exempt organizations' unrelated business income tax,1.4645578594449387,business,real,1999
+2000,Corporation income tax,415.8699203375125,business,real,2000
+2000,Tax-exempt organizations' unrelated business income tax,1.1943328851554664,business,real,2000
+2001,Corporation income tax,321.70032719943373,business,real,2001
+2001,Tax-exempt organizations' unrelated business income tax,1.127387166982563,business,real,2001
+2002,Corporation income tax,358.8956749949793,business,real,2002
+2002,Tax-exempt organizations' unrelated business income tax,0.8412750876950902,business,real,2002
+2003,Corporation income tax,323.5386721519241,business,real,2003
+2003,Tax-exempt organizations' unrelated business income tax,0.644573406357991,business,real,2003
+2004,Corporation income tax,375.0166729697273,business,real,2004
+2004,Tax-exempt organizations' unrelated business income tax,0.832359124976113,business,real,2004
+2005,Corporation income tax,484.6594393560804,business,real,2005
+2005,Tax-exempt organizations' unrelated business income tax,0.986654622975341,business,real,2005
+2006,Corporation income tax,582.1062612737932,business,real,2006
+2006,Tax-exempt organizations' unrelated business income tax,1.3550639256967703,business,real,2006
+2007,Corporation income tax,588.5107113182956,business,real,2007
+2007,Tax-exempt organizations' unrelated business income tax,1.2965204411220455,business,real,2007
+2008,Corporation income tax,516.236824594644,business,real,2008
+2008,Tax-exempt organizations' unrelated business income tax,1.1201907191000013,business,real,2008
+2009,Corporation income tax,325.08529059456123,business,real,2009
+2009,Tax-exempt organizations' unrelated business income tax,0.7982809504868226,business,real,2009
+2010,Corporation income tax,397.68196938134207,business,real,2010
+2010,Tax-exempt organizations' unrelated business income tax,0.6640150292551626,business,real,2010
+2011,Corporation income tax,340.63263928366075,business,real,2011
+2011,Tax-exempt organizations' unrelated business income tax,0.579134363234228,business,real,2011
+2012,Corporation income tax,387.6970960507396,business,real,2012
+2012,Tax-exempt organizations' unrelated business income tax,0.6850326257166278,business,real,2012
+2013,Corporation income tax,422.1188579063879,business,real,2013
+2013,Tax-exempt organizations' unrelated business income tax,0.7606801527039053,business,real,2013
+2014,Corporation income tax,469.2696400536212,business,real,2014
+2014,Tax-exempt organizations' unrelated business income tax,0.9832360906524059,business,real,2014
+2015,Corporation income tax,512.475138422853,business,real,2015
+2015,Tax-exempt organizations' unrelated business income tax,1.0603108087022102,business,real,2015
+2016,Corporation income tax,450.3291715329787,business,real,2016
+2016,Tax-exempt organizations' unrelated business income tax,1.1522802322250194,business,real,2016
+2017,Corporation income tax,433.90537889544515,business,real,2017
+2017,Tax-exempt organizations' unrelated business income tax,1.2422787771547996,business,real,2017
+2018,Corporation income tax,329.15064028844216,business,real,2018
+2018,Tax-exempt organizations' unrelated business income tax,1.25757624818756,business,real,2018
+2019,Corporation income tax,340.6375476365283,business,real,2019
+2019,Tax-exempt organizations' unrelated business income tax,1.4751120534216857,business,real,2019
+2020,Corporation income tax,320.164088968287,business,real,2020
+2020,Tax-exempt organizations' unrelated business income tax,1.1502664745291065,business,real,2020
+2021,Corporation income tax,492.6227325052705,business,real,2021
+2021,Tax-exempt organizations' unrelated business income tax,1.3967900942722382,business,real,2021
+2022,Corporation income tax,522.4257026816961,business,real,2022
+2022,Tax-exempt organizations' unrelated business income tax,1.5442858574942118,business,real,2022
+2023,Corporation income tax,478.74449545012607,business,real,2023
+2023,Tax-exempt organizations' unrelated business income tax,2.081359766557129,business,real,2023
+2024,Corporation income tax,577.8931092446485,business,real,2024
+2024,Tax-exempt organizations' unrelated business income tax,1.9960406863541378,business,real,2024
+2025,Corporation income tax,484.214157,business,real,2025
+2025,Tax-exempt organizations' unrelated business income tax,2.169831,business,real,2025
+1995,Corporation income tax,12.6,business,share,1995
+1996,Corporation income tax,12.7,business,share,1996
+1997,Corporation income tax,12.6,business,share,1997
+1998,Corporation income tax,12,business,share,1998
+1999,Corporation income tax,11.3,business,share,1999
+2000,Corporation income tax,11.2,business,share,2000
+2001,Corporation income tax,8.7,business,share,2001
+2002,Corporation income tax,10.5,business,share,2002
+2003,Corporation income tax,9.9,business,share,2003
+2004,Corporation income tax,11.4,business,share,2004
+2005,Corporation income tax,13.51,business,share,2005
+2006,Corporation income tax,15.1,business,share,2006
+2007,Corporation income tax,14.7,business,share,2007
+2008,Corporation income tax,12.9,business,share,2008
+2009,Corporation income tax,9.59048674062224,business,share,2009
+2010,Corporation income tax,11.8,business,share,2010
+2011,Corporation income tax,10,business,share,2011
+2012,Corporation income tax,11.1,business,share,2012
+2013,Corporation income tax,10.9,business,share,2013
+2014,Corporation income tax,11.5,business,share,2014
+2015,Corporation income tax,11.8,business,share,2015
+2016,Corporation income tax,10.3,business,share,2016
+2017,Corporation income tax,9.87,business,share,2017
+2018,Corporation income tax,7.6,business,share,2018
+2019,Corporation income tax,7.7,business,share,2019
+2020,Corporation income tax,7.5,business,share,2020
+2021,Corporation income tax,10.2,business,share,2021
+2022,Corporation income tax,9.7,business,share,2022
+2023,Corporation income tax,9.7,business,share,2023
+2024,Corporation income tax,11,business,share,2024
+2025,Corporation income tax,9.1,business,share,2025
+1994,FICA,409.633986,employment,nominal,1995
+1994,Railroad retirement,4.193751,employment,nominal,1995
+1994,SECA,24.433258,employment,nominal,1995
+1994,Unemployment insurance,5.570355999999999,employment,nominal,1995
+1995,FICA,394.391364,employment,nominal,1995
+1995,Railroad retirement,4.330098,employment,nominal,1995
+1995,SECA,60.880095,employment,nominal,1995
+1995,Unemployment insurance,5.803748,employment,nominal,1995
+1996,FICA,455.19998899999996,employment,nominal,1996
+1996,Railroad retirement,4.327382,employment,nominal,1996
+1996,SECA,26.880782999999997,employment,nominal,1996
+1996,Unemployment insurance,5.957025,employment,nominal,1996
+1997,FICA,483.981661,employment,nominal,1997
+1997,Railroad retirement,4.442748,employment,nominal,1997
+1997,SECA,33.964158999999995,employment,nominal,1997
+1997,Unemployment insurance,6.208265,employment,nominal,1997
+1998,FICA,513.917734,employment,nominal,1998
+1998,Railroad retirement,4.7610399999999995,employment,nominal,1998
+1998,SECA,32.641042999999996,employment,nominal,1998
+1998,Unemployment insurance,6.479375999999999,employment,nominal,1998
+1999,FICA,555.2998279999999,employment,nominal,1999
+1999,Railroad retirement,4.538637,employment,nominal,1999
+1999,SECA,32.181036,employment,nominal,1999
+1999,Unemployment insurance,6.650364,employment,nominal,1999
+2000,FICA,593.297234,employment,nominal,2000
+2000,Railroad retirement,4.762299,employment,nominal,2000
+2000,SECA,34.606141,employment,nominal,2000
+2000,Unemployment insurance,6.98614,employment,nominal,2000
+2001,FICA,634.19386,employment,nominal,2001
+2001,Railroad retirement,4.7026449999999995,employment,nominal,2001
+2001,SECA,36.262297,employment,nominal,2001
+2001,Unemployment insurance,7.064093,employment,nominal,2001
+2002,FICA,639.6554689999999,employment,nominal,2002
+2002,Railroad retirement,4.5732159999999995,employment,nominal,2002
+2002,SECA,37.10874,employment,nominal,2002
+2002,Unemployment insurance,6.739813,employment,nominal,2002
+2003,FICA,647.858224,employment,nominal,2003
+2003,Railroad retirement,4.358582999999999,employment,nominal,2003
+2003,SECA,37.123853,employment,nominal,2003
+2003,Unemployment insurance,6.635141,employment,nominal,2003
+2004,FICA,664.928086,employment,nominal,2004
+2004,Railroad retirement,4.421359,employment,nominal,2004
+2004,SECA,41.179823,employment,nominal,2004
+2004,Unemployment insurance,6.7180279999999994,employment,nominal,2004
+2005,FICA,716.9053379999999,employment,nominal,2005
+2005,Railroad retirement,4.5385349999999995,employment,nominal,2005
+2005,SECA,43.050278999999996,employment,nominal,2005
+2005,Unemployment insurance,6.947509999999999,employment,nominal,2005
+2006,FICA,757.54741,employment,nominal,2006
+2006,Railroad retirement,4.673471,employment,nominal,2006
+2006,SECA,45.065219,employment,nominal,2006
+2006,Unemployment insurance,7.533118999999999,employment,nominal,2006
+2007,FICA,787.7597559999999,employment,nominal,2007
+2007,Railroad retirement,4.717897,employment,nominal,2007
+2007,SECA,49.838338,employment,nominal,2007
+2007,Unemployment insurance,7.416738,employment,nominal,2007
+2008,FICA,817.6772209999999,employment,nominal,2008
+2008,Railroad retirement,4.93889,employment,nominal,2008
+2008,SECA,53.250479,employment,nominal,2008
+2008,Unemployment insurance,7.331036,employment,nominal,2008
+2009,FICA,792.767896,employment,nominal,2009
+2009,Railroad retirement,4.71045317842,employment,nominal,2009
+2009,SECA,53.920503,employment,nominal,2009
+2009,Unemployment insurance,6.76501208892,employment,nominal,2009
+2010,FICA,761.7348083754199,employment,nominal,2010
+2010,Railroad retirement,4.648105,employment,nominal,2010
+2010,SECA,51.26256288519,employment,nominal,2010
+2010,Unemployment insurance,6.542860999999998,employment,nominal,2010
+2011,FICA,712.152243,employment,nominal,2011
+2011,Railroad retirement,4.692329,employment,nominal,2011
+2011,SECA,43.767024,employment,nominal,2011
+2011,Unemployment insurance,6.893224999999999,employment,nominal,2011
+2012,FICA,728.688235,employment,nominal,2012
+2012,Railroad retirement,4.773045,employment,nominal,2012
+2012,SECA,43.776589,employment,nominal,2012
+2012,Unemployment insurance,7.158983999999999,employment,nominal,2012
+2013,FICA,830.2918417216899,employment,nominal,2013
+2013,Railroad retirement,5.510733468599997,employment,nominal,2013
+2013,SECA,54.14858332305,employment,nominal,2013
+2013,Unemployment insurance,7.895992144389996,employment,nominal,2013
+2014,FICA,897.9785509999999,employment,nominal,2014
+2014,Railroad retirement,5.953524,employment,nominal,2014
+2014,SECA,63.679294999999996,employment,nominal,2014
+2014,Unemployment insurance,8.611877,employment,nominal,2014
+2015,FICA,942.44819,employment,nominal,2015
+2015,Railroad retirement,6.432497,employment,nominal,2015
+2015,SECA,64.370345,employment,nominal,2015
+2015,Unemployment insurance,9.107884,employment,nominal,2015
+2016,FICA,1000.491731,employment,nominal,2016
+2016,Railroad retirement,5.941447999999999,employment,nominal,2016
+2016,SECA,59.034307,employment,nominal,2016
+2016,Unemployment insurance,8.440229,employment,nominal,2016
+2017,FICA,1047.3711429999998,employment,nominal,2017
+2017,Railroad retirement,5.957171,employment,nominal,2017
+2017,SECA,61.860552999999996,employment,nominal,2017
+2017,Unemployment insurance,8.28427,employment,nominal,2017
+2018,FICA,1054.351811,employment,nominal,2018
+2018,Railroad retirement,6.3240609999999995,employment,nominal,2018
+2018,SECA,63.717102,employment,nominal,2018
+2018,Unemployment insurance,8.806553,employment,nominal,2018
+2019,FICA,1129.0536439999998,employment,nominal,2019
+2019,Railroad retirement,6.219354999999999,employment,nominal,2019
+2019,SECA,65.843139,employment,nominal,2019
+2019,Unemployment insurance,6.437704,employment,nominal,2019
+2020,FICA,1186.906549,employment,nominal,2020
+2020,Railroad retirement,5.172929,employment,nominal,2020
+2020,SECA,69.715541,employment,nominal,2020
+2020,Unemployment insurance,6.281575,employment,nominal,2020
+2021,FICA,1174.597439,employment,nominal,2021
+2021,Railroad retirement,5.306607,employment,nominal,2021
+2021,SECA,71.991293,employment,nominal,2021
+2021,Unemployment insurance,6.2755469999999995,employment,nominal,2021
+2022,FICA,1326.252997,employment,nominal,2022
+2022,Railroad retirement,6.148312,employment,nominal,2022
+2022,SECA,78.36202899999999,employment,nominal,2022
+2022,Unemployment insurance,7.0464649999999995,employment,nominal,2022
+2023,FICA,1473.8335,employment,nominal,2023
+2023,Railroad retirement,7.218291,employment,nominal,2023
+2023,SECA,77.11125,employment,nominal,2023
+2023,Unemployment insurance,7.946725,employment,nominal,2023
+2024,FICA,1549.768806,employment,nominal,2024
+2024,Railroad retirement,6.929086,employment,nominal,2024
+2024,SECA,96.32637199999999,employment,nominal,2024
+2024,Unemployment insurance,8.130484,employment,nominal,2024
+2025,FICA,1583.974146,employment,nominal,2025
+2025,Railroad retirement,7.257826,employment,nominal,2025
+2025,SECA,94.425648,employment,nominal,2025
+2025,Unemployment insurance,8.776869,employment,nominal,2025
+1994,FICA,803.4642037914407,employment,real,1995
+1994,Railroad retirement,8.225706174962149,employment,real,1995
+1994,SECA,47.92387559610556,employment,real,1995
+1994,Unemployment insurance,10.925806454874753,employment,real,1995
+1995,FICA,757.507180182947,employment,real,1995
+1995,Railroad retirement,8.316815795935678,employment,real,1995
+1995,SECA,116.9323502040981,employment,real,1995
+1995,Unemployment insurance,11.147254182706744,employment,real,1995
+1996,FICA,858.0916134199978,employment,real,1996
+1996,Railroad retirement,8.15749185412361,employment,real,1996
+1996,SECA,50.67261645839549,employment,real,1996
+1996,Unemployment insurance,11.229510801752815,employment,real,1996
+1997,FICA,896.4397929604257,employment,real,1997
+1997,Railroad retirement,8.228940098817805,employment,real,1997
+1997,SECA,62.90904411362599,employment,real,1997
+1997,Unemployment insurance,11.499063373071603,employment,real,1997
+1998,FICA,940.1911101292086,employment,real,1998
+1998,Railroad retirement,8.710124572135443,employment,real,1998
+1998,SECA,59.71542996791239,employment,real,1998
+1998,Unemployment insurance,11.853748783817121,employment,real,1998
+1999,FICA,1003.0559385166123,employment,real,1999
+1999,Railroad retirement,8.198285981859193,employment,real,1999
+1999,SECA,58.129640312830944,employment,real,1999
+1999,Unemployment insurance,12.012766377981107,employment,real,1999
+2000,FICA,1050.0230385085256,employment,real,2000
+2000,Railroad retirement,8.428361670511533,employment,real,2000
+2000,SECA,61.24627461835506,employment,real,2000
+2000,Unemployment insurance,12.364136439317953,employment,real,2000
+2001,FICA,1096.4148925151105,employment,real,2001
+2001,Railroad retirement,8.130085037738652,employment,real,2001
+2001,SECA,62.691433921492106,employment,real,2001
+2001,Unemployment insurance,12.212632849065654,employment,real,2001
+2002,FICA,1088.2999014644495,employment,real,2002
+2002,Railroad retirement,7.780798825899891,employment,real,2002
+2002,SECA,63.13623511826783,employment,real,2002
+2002,Unemployment insurance,11.46701338340127,employment,real,2002
+2003,FICA,1081.7861781631525,employment,real,2003
+2003,Railroad retirement,7.277911541610511,employment,real,2003
+2003,SECA,61.988980872396375,employment,real,2003
+2003,Unemployment insurance,11.079281790461055,employment,real,2003
+2004,FICA,1083.658278382795,employment,real,2004
+2004,Railroad retirement,7.205654841375246,employment,real,2004
+2004,SECA,67.11230437675967,employment,real,2004
+2004,Unemployment insurance,10.948622580228038,employment,real,2004
+2005,FICA,1133.7288524731357,employment,real,2005
+2005,Railroad retirement,7.177332633362486,employment,real,2005
+2005,SECA,68.08059700807854,employment,real,2005
+2005,Unemployment insurance,10.986935265148821,employment,real,2005
+2006,FICA,1160.3336878445687,employment,real,2006
+2006,Railroad retirement,7.158345166099432,employment,real,2006
+2006,SECA,69.02629599881165,employment,real,2006
+2006,Unemployment insurance,11.538461665708802,employment,real,2006
+2007,FICA,1174.6758964327905,employment,real,2007
+2007,Railroad retirement,7.035139641929834,employment,real,2007
+2007,SECA,74.31693980425983,employment,real,2007
+2007,Unemployment insurance,11.059543588511447,employment,real,2007
+2008,FICA,1193.9377716098245,employment,real,2008
+2008,Railroad retirement,7.211558753727403,employment,real,2008
+2008,SECA,77.75410223200502,employment,real,2008
+2008,Unemployment insurance,10.704469392857654,employment,real,2008
+2009,FICA,1145.7699729212293,employment,real,2009
+2009,Railroad retirement,6.8079141926869875,employment,real,2009
+2009,SECA,77.93011494780443,employment,real,2009
+2009,Unemployment insurance,9.777322917644558,employment,real,2009
+2010,FICA,1091.7357599753082,employment,real,2010
+2010,Railroad retirement,6.661770459778002,employment,real,2010
+2010,SECA,73.47067829170618,employment,real,2010
+2010,Unemployment insurance,9.377378121241568,employment,real,2010
+2011,FICA,1000.6037021799352,employment,real,2011
+2011,Railroad retirement,6.59291860047722,employment,real,2011
+2011,SECA,61.494500197478246,employment,real,2011
+2011,Unemployment insurance,9.685269579301576,employment,real,2011
+2012,FICA,1005.4995315712016,employment,real,2012
+2012,Railroad retirement,6.586211058654276,employment,real,2012
+2012,SECA,60.40627200916043,employment,real,2012
+2012,Unemployment insurance,9.87851143023563,employment,real,2012
+2013,FICA,1125.3853670938242,employment,real,2013
+2013,Railroad retirement,7.469299944772206,employment,real,2013
+2013,SECA,73.3934988380234,employment,real,2013
+2013,Unemployment insurance,10.702301975602028,employment,real,2013
+2014,FICA,1195.7741026867957,employment,real,2014
+2014,Railroad retirement,7.92788403575611,employment,real,2014
+2014,SECA,84.79718335538814,employment,real,2014
+2014,Unemployment insurance,11.467823458206471,employment,real,2014
+2015,FICA,1241.329967551911,employment,real,2015
+2015,Railroad retirement,8.472456498948516,employment,real,2015
+2015,SECA,84.78432991648626,employment,real,2015
+2015,Unemployment insurance,11.996298014203381,employment,real,2015
+2016,FICA,1307.1922634505522,employment,real,2016
+2016,Railroad retirement,7.762797651042011,employment,real,2016
+2016,SECA,77.13126155618849,employment,real,2016
+2016,Unemployment insurance,11.027579447881505,employment,real,2016
+2017,FICA,1346.2979309318914,employment,real,2017
+2017,Railroad retirement,7.657387779975783,employment,real,2017
+2017,SECA,79.51597202845852,employment,real,2017
+2017,Unemployment insurance,10.648656529084018,employment,real,2017
+2018,FICA,1325.8880181065963,employment,real,2018
+2018,Railroad retirement,7.952750323179573,employment,real,2018
+2018,SECA,80.12671027723576,employment,real,2018
+2018,Unemployment insurance,11.074579643815586,employment,real,2018
+2019,FICA,1394.16264657426,employment,real,2019
+2019,Railroad retirement,7.679699253319851,employment,real,2019
+2019,SECA,81.30352832641572,employment,real,2019
+2019,Unemployment insurance,7.949317992282837,employment,real,2019
+2020,FICA,1446.9783616672582,employment,real,2020
+2020,Railroad retirement,6.306407472220501,employment,real,2020
+2020,SECA,84.99142530127413,employment,real,2020
+2020,Unemployment insurance,7.657977041114134,employment,real,2020
+2021,FICA,1384.8730844832594,employment,real,2021
+2021,Railroad retirement,6.256592224896257,employment,real,2021
+2021,SECA,84.87912597334386,employment,real,2021
+2021,Unemployment insurance,7.398991213626905,employment,real,2021
+2022,FICA,1460.304626816929,employment,real,2022
+2022,Railroad retirement,6.769755454670649,employment,real,2022
+2022,SECA,86.28250701360137,employment,real,2022
+2022,Unemployment insurance,7.758689680988182,employment,real,2022
+2023,FICA,1550.8732949694213,employment,real,2023
+2023,Railroad retirement,7.595603402431902,employment,real,2023
+2023,SECA,81.14198677578626,employment,real,2023
+2023,Unemployment insurance,8.362113892082025,employment,real,2023
+2024,FICA,1590.368334143995,employment,real,2024
+2024,Railroad retirement,7.110608315444748,employment,real,2024
+2024,SECA,98.849848557201355,employment,real,2024
+2024,Unemployment insurance,8.343479520818542,employment,real,2024
+2025,FICA,1583.974146,employment,real,2025
+2025,Railroad retirement,7.257826,employment,real,2025
+2025,SECA,94.425648,employment,real,2025
+2025,Unemployment insurance,8.776869,employment,real,2025
+1995,FICA,28.7,employment,share,1995
+1995,Railroad retirement,0.3,employment,share,1995
+1995,SECA,4.4,employment,share,1995
+1995,Unemployment insurance,0.4,employment,share,1995
+1996,FICA,30.6,employment,share,1996
+1996,Railroad retirement,0.3,employment,share,1996
+1996,SECA,1.8,employment,share,1996
+1996,Unemployment insurance,0.4,employment,share,1996
+1997,FICA,29.8,employment,share,1997
+1997,Railroad retirement,0.3,employment,share,1997
+1997,SECA,2.1,employment,share,1997
+1997,Unemployment insurance,0.4,employment,share,1997
+1998,FICA,29,employment,share,1998
+1998,Railroad retirement,0.3,employment,share,1998
+1998,SECA,1.8,employment,share,1998
+1998,Unemployment insurance,0.4,employment,share,1998
+1999,FICA,29.2,employment,share,1999
+1999,Railroad retirement,0.2,employment,share,1999
+1999,SECA,1.7,employment,share,1999
+1999,Unemployment insurance,0.4,employment,share,1999
+2000,FICA,28.3,employment,share,2000
+2000,Railroad retirement,0.2,employment,share,2000
+2000,SECA,1.7,employment,share,2000
+2000,Unemployment insurance,0.3,employment,share,2000
+2001,FICA,29.8,employment,share,2001
+2001,Railroad retirement,0.2,employment,share,2001
+2001,SECA,1.7,employment,share,2001
+2001,Unemployment insurance,0.3,employment,share,2001
+2002,FICA,31.7,employment,share,2002
+2002,Railroad retirement,0.2,employment,share,2002
+2002,SECA,1.8,employment,share,2002
+2002,Unemployment insurance,0.3,employment,share,2002
+2003,FICA,33.2,employment,share,2003
+2003,Railroad retirement,0.2,employment,share,2003
+2003,SECA,1.9,employment,share,2003
+2003,Unemployment insurance,0.3,employment,share,2003
+2004,FICA,33,employment,share,2004
+2004,Railroad retirement,0.2,employment,share,2004
+2004,SECA,2,employment,share,2004
+2004,Unemployment insurance,0.3,employment,share,2004
+2005,FICA,31.6,employment,share,2005
+2005,Railroad retirement,0.2,employment,share,2005
+2005,SECA,1.9,employment,share,2005
+2005,Unemployment insurance,0.31,employment,share,2005
+2006,FICA,30.1,employment,share,2006
+2006,Railroad retirement,0.2,employment,share,2006
+2006,SECA,1.8,employment,share,2006
+2006,Unemployment insurance,0.3,employment,share,2006
+2007,FICA,29.3,employment,share,2007
+2007,Railroad retirement,0.2,employment,share,2007
+2007,SECA,1.9,employment,share,2007
+2007,Unemployment insurance,0.3,employment,share,2007
+2008,FICA,29.8,employment,share,2008
+2008,Railroad retirement,0.2,employment,share,2008
+2008,SECA,1.9,employment,share,2008
+2008,Unemployment insurance,0.3,employment,share,2008
+2009,FICA,33.8018730807748,employment,share,2009
+2009,Railroad retirement,0.200843325383455,employment,share,2009
+2009,SECA,2.29905122048173,employment,share,2009
+2009,Unemployment insurance,0.288445181967335,employment,share,2009
+2010,FICA,32.5,employment,share,2010
+2010,Railroad retirement,0.2,employment,share,2010
+2010,SECA,2.2,employment,share,2010
+2010,Unemployment insurance,0.3,employment,share,2010
+2011,FICA,29.5,employment,share,2011
+2011,Railroad retirement,0.2,employment,share,2011
+2011,SECA,1.8,employment,share,2011
+2011,Unemployment insurance,0.3,employment,share,2011
+2012,FICA,28.9,employment,share,2012
+2012,Railroad retirement,0.2,employment,share,2012
+2012,SECA,1.7,employment,share,2012
+2012,Unemployment insurance,0.3,employment,share,2012
+2013,FICA,29.1,employment,share,2013
+2013,Railroad retirement,0.2,employment,share,2013
+2013,SECA,1.9,employment,share,2013
+2013,Unemployment insurance,0.3,employment,share,2013
+2014,FICA,29.3,employment,share,2014
+2014,Railroad retirement,0.2,employment,share,2014
+2014,SECA,2.1,employment,share,2014
+2014,Unemployment insurance,0.3,employment,share,2014
+2015,FICA,28.5,employment,share,2015
+2015,Railroad retirement,0.2,employment,share,2015
+2015,SECA,1.9,employment,share,2015
+2015,Unemployment insurance,0.3,employment,share,2015
+2016,FICA,30,employment,share,2016
+2016,Railroad retirement,0.2,employment,share,2016
+2016,SECA,1.8,employment,share,2016
+2016,Unemployment insurance,0.3,employment,share,2016
+2017,FICA,30.7,employment,share,2017
+2017,Railroad retirement,0.2,employment,share,2017
+2017,SECA,1.8,employment,share,2017
+2017,Unemployment insurance,0.2,employment,share,2017
+2018,FICA,30.4,employment,share,2018
+2018,Railroad retirement,0.2,employment,share,2018
+2018,SECA,1.8,employment,share,2018
+2018,Unemployment insurance,0.3,employment,share,2018
+2019,FICA,31.7,employment,share,2019
+2019,Railroad retirement,0.2,employment,share,2019
+2019,SECA,1.8,employment,share,2019
+2019,Unemployment insurance,0.2,employment,share,2019
+2020,FICA,34,employment,share,2020
+2020,Railroad retirement,0.1,employment,share,2020
+2020,SECA,2,employment,share,2020
+2020,Unemployment insurance,0.2,employment,share,2020
+2021,FICA,28.6,employment,share,2021
+2021,Railroad retirement,0.1,employment,share,2021
+2021,SECA,1.8,employment,share,2021
+2021,Unemployment insurance,0.2,employment,share,2021
+2022,FICA,27.1,employment,share,2022
+2022,Railroad retirement,0.1,employment,share,2022
+2022,SECA,1.6,employment,share,2022
+2022,Unemployment insurance,0.1,employment,share,2022
+2023,FICA,31.4,employment,share,2023
+2023,Railroad retirement,0.2,employment,share,2023
+2023,SECA,1.6,employment,share,2023
+2023,Unemployment insurance,0.2,employment,share,2023
+2024,FICA,30.4,employment,share,2024
+2024,Railroad retirement,0.1,employment,share,2024
+2024,SECA,1.9,employment,share,2024
+2024,Unemployment insurance,0.2,employment,share,2024
+2025,FICA,29.8,employment,share,2025
+2025,Railroad retirement,0.1,employment,share,2025
+2025,SECA,1.8,employment,share,2025
+2025,Unemployment insurance,0.2,employment,share,2025
+1994,Estate tax,13.500126,estate_gift,nominal,1995
+1994,Gift tax,2.106667,estate_gift,nominal,1995
+1995,Estate tax,13.326051,estate_gift,nominal,1995
+1995,Gift tax,1.8183429999999998,estate_gift,nominal,1995
+1996,Estate tax,15.350591,estate_gift,nominal,1996
+1996,Gift tax,2.2412259999999997,estate_gift,nominal,1996
+1997,Estate tax,17.595484,estate_gift,nominal,1997
+1997,Gift tax,2.760917,estate_gift,nominal,1997
+1998,Estate tax,21.314933,estate_gift,nominal,1998
+1998,Gift tax,3.31602945881,estate_gift,nominal,1998
+1999,Estate tax,23.627319999999997,estate_gift,nominal,1999
+1999,Gift tax,4.758287,estate_gift,nominal,1999
+2000,Estate tax,25.618377,estate_gift,nominal,2000
+2000,Gift tax,4.103243,estate_gift,nominal,2000
+2001,Estate tax,25.289662999999997,estate_gift,nominal,2001
+2001,Gift tax,3.958253,estate_gift,nominal,2001
+2002,Estate tax,25.532186,estate_gift,nominal,2002
+2002,Gift tax,1.7093289999999999,estate_gift,nominal,2002
+2003,Estate tax,20.887883,estate_gift,nominal,2003
+2003,Gift tax,1.939025,estate_gift,nominal,2003
+2004,Estate tax,24.130143,estate_gift,nominal,2004
+2004,Gift tax,1.449319,estate_gift,nominal,2004
+2005,Estate tax,23.565164,estate_gift,nominal,2005
+2005,Gift tax,2.040367,estate_gift,nominal,2005
+2006,Estate tax,26.717492999999997,estate_gift,nominal,2006
+2006,Gift tax,1.970032,estate_gift,nominal,2006
+2007,Estate tax,24.557814999999998,estate_gift,nominal,2007
+2007,Gift tax,2.4201379999999997,estate_gift,nominal,2007
+2008,Estate tax,26.543433,estate_gift,nominal,2008
+2008,Gift tax,3.280502,estate_gift,nominal,2008
+2009,Estate tax,21.583130999999998,estate_gift,nominal,2009
+2009,Gift tax,3.094191,estate_gift,nominal,2009
+2010,Estate tax,16.930740783600537,estate_gift,nominal,2010
+2010,Gift tax,2.820095216399461,estate_gift,nominal,2010
+2011,Estate tax,2.5069909999999997,estate_gift,nominal,2011
+2011,Gift tax,6.572384,estate_gift,nominal,2011
+2012,Estate tax,12.340655,estate_gift,nominal,2012
+2012,Gift tax,2.109594,estate_gift,nominal,2012
+2013,Estate tax,14.051770922288478,estate_gift,nominal,2013
+2013,Gift tax,5.778376772241511,estate_gift,nominal,2013
+2014,Estate tax,17.572338,estate_gift,nominal,2014
+2014,Gift tax,2.582617,estate_gift,nominal,2014
+2015,Estate tax,17.952938,estate_gift,nominal,2015
+2015,Gift tax,2.089101,estate_gift,nominal,2015
+2016,Estate tax,19.879671,estate_gift,nominal,2016
+2016,Gift tax,2.4574659999999997,estate_gift,nominal,2016
+2017,Estate tax,21.83166,estate_gift,nominal,2017
+2017,Gift tax,1.948783,estate_gift,nominal,2017
+2018,Estate tax,22.664503,estate_gift,nominal,2018
+2018,Gift tax,1.201166,estate_gift,nominal,2018
+2019,Estate tax,16.001974,estate_gift,nominal,2019
+2019,Gift tax,1.56307,estate_gift,nominal,2019
+2020,Estate tax,17.115475999999997,estate_gift,nominal,2020
+2020,Gift tax,1.082111,estate_gift,nominal,2020
+2021,Estate tax,23.425026,estate_gift,nominal,2021
+2021,Gift tax,4.620712999999999,estate_gift,nominal,2021
+2022,Estate tax,28.909392999999998,estate_gift,nominal,2022
+2022,Gift tax,4.445882999999999,estate_gift,nominal,2022
+2023,Estate tax,33.780186,estate_gift,nominal,2023
+2023,Gift tax,1.654075,estate_gift,nominal,2023
+2024,Estate tax,29.416539999999998,estate_gift,nominal,2024
+2024,Gift tax,3.451349,estate_gift,nominal,2024
+2025,Estate tax,28.137048999999998,estate_gift,nominal,2025
+2025,Gift tax,2.974087,estate_gift,nominal,2025
+1994,Estate tax,26.479414204841216,estate_gift,real,1995
+1994,Gift tax,4.1320583292830175,estate_gift,real,1995
+1995,Estate tax,25.595335591537292,estate_gift,real,1995
+1995,Gift tax,3.49248995861735,estate_gift,real,1995
+1996,Estate tax,28.937200607314814,estate_gift,real,1996
+1996,Gift tax,4.224906153015851,estate_gift,real,1996
+1997,Estate tax,32.590681228308945,estate_gift,real,1997
+1997,Gift tax,5.113821583130027,estate_gift,real,1997
+1998,Estate tax,38.99478300470499,estate_gift,real,1998
+1998,Gift tax,6.066537914217478,estate_gift,real,1998
+1999,Estate tax,42.67878800285226,estate_gift,real,1999
+1999,Gift tax,8.595046841102922,estate_gift,real,1999
+2000,Estate tax,45.339645151955864,estate_gift,real,2000
+2000,Gift tax,7.261958147943831,estate_gift,real,2000
+2001,Estate tax,43.72158875818881,estate_gift,real,2001
+2001,Gift tax,6.843156030464587,estate_gift,real,2001
+2002,Estate tax,43.44006555812313,estate_gift,real,2002
+2002,Gift tax,2.9082258691206877,estate_gift,real,2002
+2003,Estate tax,34.87834572968095,estate_gift,real,2003
+2003,Gift tax,3.2377615447431705,estate_gift,real,2003
+2004,Estate tax,39.32580044529906,estate_gift,real,2004
+2004,Gift tax,2.362009614927702,estate_gift,real,2004
+2005,Estate tax,37.266435223643505,estate_gift,real,2005
+2005,Gift tax,3.2266783561514707,estate_gift,real,2005
+2006,Estate tax,40.923124775321256,estate_gift,real,2006
+2006,Gift tax,3.017493645357208,estate_gift,real,2006
+2007,Estate tax,36.61963324457467,estate_gift,real,2007
+2007,Gift tax,3.608813160342581,estate_gift,real,2007
+2008,Estate tax,38.7576007169884,estate_gift,real,2008
+2008,Gift tax,4.7900505811468275,estate_gift,real,2008
+2009,Estate tax,31.193623690111366,estate_gift,real,2009
+2009,Gift tax,4.471966077550536,estate_gift,real,2009
+2010,Estate tax,24.26552515796195,estate_gift,real,2010
+2010,Gift tax,4.041825003172514,estate_gift,real,2010
+2011,Estate tax,3.522427262693853,estate_gift,real,2011
+2011,Gift tax,9.23447454837009,estate_gift,real,2011
+2012,Estate tax,17.028575769144684,estate_gift,real,2012
+2012,Gift tax,2.910978491103836,estate_gift,real,2012
+2013,Estate tax,19.045902396086184,estate_gift,real,2013
+2013,Gift tax,7.832066194401057,estate_gift,real,2013
+2014,Estate tax,23.399831410961042,estate_gift,real,2014
+2014,Gift tax,3.43908718345174,estate_gift,real,2014
+2015,Estate tax,23.6464138628156,estate_gift,real,2015
+2015,Gift tax,2.7516246559321895,estate_gift,real,2015
+2016,Estate tax,25.97378001832011,estate_gift,real,2016
+2016,Gift tax,3.2108016921658837,estate_gift,real,2016
+2017,Estate tax,28.062563001899072,estate_gift,real,2017
+2017,Gift tax,2.5049788112552998,estate_gift,real,2017
+2018,Estate tax,28.50148560520754,estate_gift,real,2018
+2018,Gift tax,1.510512516354968,estate_gift,real,2018
+2019,Estate tax,19.75933963882809,estate_gift,real,2019
+2019,Gift tax,1.9300888133715892,estate_gift,real,2019
+2020,Estate tax,20.8657736723258,estate_gift,real,2020
+2020,Gift tax,1.3192202901242216,estate_gift,real,2020
+2021,Estate tax,27.6185584384886,estate_gift,real,2021
+2021,Gift tax,5.447909941187854,estate_gift,real,2021
+2022,Estate tax,31.831423153699333,estate_gift,real,2022
+2022,Gift tax,4.895252662857302,estate_gift,real,2022
+2023,Estate tax,35.545934032914786,estate_gift,real,2023
+2023,Gift tax,1.7405363261023348,estate_gift,real,2023
+2024,Estate tax,30.18716955390841,estate_gift,real,2024
+2024,Gift tax,3.5417645125059662,estate_gift,real,2024
+2025,Estate tax,28.137048999999998,estate_gift,real,2025
+2025,Gift tax,2.974087,estate_gift,real,2025
+1995,Estate tax,1,estate_gift,share,1995
+1995,Gift tax,0.1,estate_gift,share,1995
+1996,Estate tax,1,estate_gift,share,1996
+1996,Gift tax,0.2,estate_gift,share,1996
+1997,Estate tax,1.1,estate_gift,share,1997
+1997,Gift tax,0.2,estate_gift,share,1997
+1998,Estate tax,1.2,estate_gift,share,1998
+1998,Gift tax,0.17,estate_gift,share,1998
+1999,Estate tax,1.2,estate_gift,share,1999
+1999,Gift tax,0.3,estate_gift,share,1999
+2000,Estate tax,1.2,estate_gift,share,2000
+2000,Gift tax,0.2,estate_gift,share,2000
+2001,Estate tax,1.2,estate_gift,share,2001
+2001,Gift tax,0.2,estate_gift,share,2001
+2002,Estate tax,1.3,estate_gift,share,2002
+2002,Gift tax,0.1,estate_gift,share,2002
+2003,Estate tax,1.1,estate_gift,share,2003
+2003,Gift tax,0.1,estate_gift,share,2003
+2004,Estate tax,1.2,estate_gift,share,2004
+2004,Gift tax,0.1,estate_gift,share,2004
+2005,Estate tax,1.04,estate_gift,share,2005
+2005,Gift tax,0.09,estate_gift,share,2005
+2006,Estate tax,1.1,estate_gift,share,2006
+2006,Gift tax,0.1,estate_gift,share,2006
+2007,Estate tax,0.9,estate_gift,share,2007
+2007,Gift tax,0.1,estate_gift,share,2007
+2008,Estate tax,0.97,estate_gift,share,2008
+2008,Gift tax,0.12,estate_gift,share,2008
+2009,Estate tax,0.920257061907734,estate_gift,share,2009
+2009,Gift tax,0.131929473932274,estate_gift,share,2009
+2010,Estate tax,0.7,estate_gift,share,2010
+2010,Gift tax,0.1,estate_gift,share,2010
+2011,Estate tax,0.1,estate_gift,share,2011
+2011,Gift tax,0.3,estate_gift,share,2011
+2012,Estate tax,0.5,estate_gift,share,2012
+2012,Gift tax,0.1,estate_gift,share,2012
+2013,Estate tax,0.5,estate_gift,share,2013
+2013,Gift tax,0.2,estate_gift,share,2013
+2014,Estate tax,0.6,estate_gift,share,2014
+2014,Gift tax,0.1,estate_gift,share,2014
+2015,Estate tax,0.5,estate_gift,share,2015
+2015,Gift tax,0.1,estate_gift,share,2015
+2016,Estate tax,0.6,estate_gift,share,2016
+2016,Gift tax,0.1,estate_gift,share,2016
+2017,Estate tax,0.6,estate_gift,share,2017
+2017,Gift tax,0.1,estate_gift,share,2017
+2018,Estate tax,0.7,estate_gift,share,2018
+2019,Estate tax,0.4,estate_gift,share,2019
+2020,Estate tax,0.5,estate_gift,share,2020
+2021,Estate tax,0.6,estate_gift,share,2021
+2021,Gift tax,0.1,estate_gift,share,2021
+2022,Estate tax,0.6,estate_gift,share,2022
+2022,Gift tax,0.1,estate_gift,share,2022
+2023,Estate tax,0.7,estate_gift,share,2023
+2024,Estate tax,0.6,estate_gift,share,2024
+2024,Gift tax,0.1,estate_gift,share,2024
+2025,Estate tax,0.5,estate_gift,share,2025
+2025,Gift tax,0.1,estate_gift,share,2025
+1994,Withheld,459.77214299999997,individual,nominal,1995
+1994,Other: payments plus estate and trust (to FY2008),160.04701,individual,nominal,1995
+1995,Withheld,533.717458,individual,nominal,1995
+1995,Other: payments plus estate and trust (to FY2008),142.061879,individual,nominal,1995
+1996,Withheld,533.1456549999999,individual,nominal,1996
+1996,Other: payments plus estate and trust (to FY2008),212.167622,individual,nominal,1996
+1997,Withheld,580.274585,individual,nominal,1997
+1997,Other: payments plus estate and trust (to FY2008),244.74629499999998,individual,nominal,1997
+1998,Withheld,646.538786,individual,nominal,1998
+1998,Other: payments plus estate and trust (to FY2008),281.527071,individual,nominal,1998
+1999,Withheld,694.000995,individual,nominal,1999
+1999,Other: payments plus estate and trust (to FY2008),308.18476899999996,individual,nominal,1999
+2000,Withheld,780.529446,individual,nominal,2000
+2000,Other: payments plus estate and trust (to FY2008),356.548256,individual,nominal,2000
+2001,Withheld,795.063869,individual,nominal,2001
+2001,Other: payments plus estate and trust (to FY2008),383.146011,individual,nominal,2001
+2002,Withheld,750.823219,individual,nominal,2002
+2002,Other: payments plus estate and trust (to FY2008),286.910689,individual,nominal,2002
+2003,Withheld,734.763596,individual,nominal,2003
+2003,Other: payments plus estate and trust (to FY2008),252.445282,individual,nominal,2003
+2004,Withheld,746.981035,individual,nominal,2004
+2004,Other: payments plus estate and trust (to FY2008),243.26772499999998,individual,nominal,2004
+2005,Withheld,786.6124619999999,individual,nominal,2005
+2005,Other: payments plus estate and trust (to FY2008),320.888532,individual,nominal,2005
+2006,Withheld,849.004371,individual,nominal,2006
+2006,Other: payments plus estate and trust (to FY2008),387.255,individual,nominal,2006
+2007,Withheld,928.6323269999999,individual,nominal,2007
+2007,Other: payments plus estate and trust (to FY2008),437.60911,individual,nominal,2007
+2008,Estate and trust income tax (from FY2008),25.585005,individual,nominal,2009
+2008,Payments (from FY2008),429.75098399999996,individual,nominal,2009
+2008,Withheld,970.654194,individual,nominal,2008
+2008,Other: payments plus estate and trust (to FY2008),455.335989,individual,nominal,2008
+2009,Estate and trust income tax (from FY2008),14.960968999999999,individual,nominal,2009
+2009,Payments (from FY2008),294.662618,individual,nominal,2009
+2009,Withheld,880.7591699999999,individual,nominal,2009
+2010,Estate and trust income tax (from FY2008),12.301939110489998,individual,nominal,2010
+2010,Payments (from FY2008),264.09892732101997,individual,nominal,2010
+2010,Withheld,899.5886613827801,individual,nominal,2010
+2011,Estate and trust income tax (from FY2008),15.021758,individual,nominal,2011
+2011,Payments (from FY2008),321.05173099999996,individual,nominal,2011
+2011,Withheld,1010.1087379999999,individual,nominal,2011
+2012,Estate and trust income tax (from FY2008),16.434224999999998,individual,nominal,2012
+2012,Payments (from FY2008),333.383066,individual,nominal,2012
+2012,Withheld,1038.019224,individual,nominal,2012
+2013,Estate and trust income tax (from FY2008),24.696073305390012,individual,nominal,2013
+2013,Payments (from FY2008),416.20453989522997,individual,nominal,2013
+2013,Withheld,1123.4538812447497,individual,nominal,2013
+2014,Estate and trust income tax (from FY2008),29.410795999999998,individual,nominal,2014
+2014,Payments (from FY2008),444.444277,individual,nominal,2014
+2014,Withheld,1169.768895,individual,nominal,2014
+2015,Estate and trust income tax (from FY2008),33.445381999999995,individual,nominal,2015
+2015,Payments (from FY2008),518.579529,individual,nominal,2015
+2015,Withheld,1241.160788,individual,nominal,2015
+2016,Estate and trust income tax (from FY2008),29.695397,individual,nominal,2016
+2016,Payments (from FY2008),518.693865,individual,nominal,2016
+2016,Withheld,1267.429873,individual,nominal,2016
+2017,Estate and trust income tax (from FY2008),29.024307999999998,individual,nominal,2017
+2017,Payments (from FY2008),506.99081099999995,individual,nominal,2017
+2017,Withheld,1331.412678,individual,nominal,2017
+2018,Estate and trust income tax (from FY2008),38.455954999999996,individual,nominal,2018
+2018,Payments (from FY2008),584.939859,individual,nominal,2018
+2018,Withheld,1348.545387,individual,nominal,2018
+2019,Estate and trust income tax (from FY2008),39.468515,individual,nominal,2019
+2019,Payments (from FY2008),591.146138,individual,nominal,2019
+2019,Withheld,1351.036063,individual,nominal,2019
+2020,Estate and trust income tax (from FY2008),33.727249,individual,nominal,2020
+2020,Payments (from FY2008),567.944758,individual,nominal,2020
+2020,Withheld,1269.49882,individual,nominal,2020
+2021,Estate and trust income tax (from FY2008),54.00365,individual,nominal,2021
+2021,Payments (from FY2008),762.349659,individual,nominal,2021
+2021,Withheld,1531.700915,individual,nominal,2021
+2022,Estate and trust income tax (from FY2008),85.16009299999999,individual,nominal,2022
+2022,Payments (from FY2008),1055.634292,individual,nominal,2022
+2022,Withheld,1763.004514,individual,nominal,2022
+2023,Estate and trust income tax (from FY2008),52.250446999999994,individual,nominal,2023
+2023,Payments (from FY2008),783.602938,individual,nominal,2023
+2023,Withheld,1725.7482109999999,individual,nominal,2023
+2024,Estate and trust income tax (from FY2008),58.819824,individual,nominal,2024
+2024,Payments (from FY2008),903.4549949999999,individual,nominal,2024
+2024,Withheld,1801.1587789999999,individual,nominal,2024
+2025,Estate and trust income tax (from FY2008),74.57885399999999,individual,nominal,2025
+2025,Payments (from FY2008),983.7283359999999,individual,nominal,2025
+2025,Withheld,1952.91357,individual,nominal,2025
+1994,Withheld,901.806176797497,individual,real,1995
+1994,Other: payments plus estate and trust (to FY2008),313.9193715700405,individual,real,1995
+1995,Withheld,1025.1106984786572,individual,real,1995
+1995,Other: payments plus estate and trust (to FY2008),272.8581383764301,individual,real,1995
+1996,Withheld,1005.0259805406354,individual,real,1996
+1996,Other: payments plus estate and trust (to FY2008),399.95444085448827,individual,real,1996
+1997,Withheld,1074.795329564351,individual,real,1997
+1997,Other: payments plus estate and trust (to FY2008),453.32361884189504,individual,real,1997
+1998,Withheld,1182.8158063736535,individual,real,1998
+1998,Other: payments plus estate and trust (to FY2008),515.0420619945263,individual,real,1998
+1999,Withheld,1253.5963172875101,individual,real,1999
+1999,Other: payments plus estate and trust (to FY2008),556.6840598874097,individual,real,1999
+2000,Withheld,1381.3883725847543,individual,real,2000
+2000,Other: payments plus estate and trust (to FY2008),631.0224651073219,individual,real,2000
+2001,Withheld,1374.5321761271591,individual,real,2001
+2001,Other: payments plus estate and trust (to FY2008),662.3952374249703,individual,real,2001
+2002,Withheld,1277.4389884172488,individual,real,2002
+2002,Other: payments plus estate and trust (to FY2008),488.14539967264363,individual,real,2002
+2003,Withheld,1226.8997643692098,individual,real,2003
+2003,Other: payments plus estate and trust (to FY2008),421.5302155523757,individual,real,2003
+2004,Withheld,1217.383051514985,individual,real,2004
+2004,Other: payments plus estate and trust (to FY2008),396.4625492742372,individual,real,2004
+2005,Withheld,1243.9651326523226,individual,real,2005
+2005,Other: payments plus estate and trust (to FY2008),507.4597270695021,individual,real,2005
+2006,Withheld,1300.4181121793927,individual,real,2006
+2006,Other: payments plus estate and trust (to FY2008),593.1576246643738,individual,real,2006
+2007,Withheld,1384.7394498979627,individual,real,2007
+2007,Other: payments plus estate and trust (to FY2008),652.5452330626619,individual,real,2007
+2008,Estate and trust income tax (from FY2008),37.35814459765441,individual,real,2009
+2008,Payments (from FY2008),627.5042510742627,individual,real,2009
+2008,Withheld,1417.3082918596926,individual,real,2008
+2008,Other: payments plus estate and trust (to FY2008),664.8623956719172,individual,real,2008
+2009,Estate and trust income tax (from FY2008),21.6227588585466,individual,real,2009
+2009,Payments (from FY2008),425.86938945211597,individual,real,2009
+2009,Withheld,1272.9418225092006,individual,real,2009
+2010,Estate and trust income tax (from FY2008),17.631420668046427,individual,real,2010
+2010,Payments (from FY2008),378.5126266481132,individual,real,2010
+2010,Withheld,1289.311056947087,individual,real,2010
+2011,Estate and trust income tax (from FY2008),21.106198591374877,individual,real,2011
+2011,Payments (from FY2008),451.0911168047485,individual,real,2011
+2011,Withheld,1419.2450459600702,individual,real,2011
+2012,Estate and trust income tax (from FY2008),22.67719546650253,individual,real,2012
+2012,Payments (from FY2008),460.0273485913643,individual,real,2012
+2012,Withheld,1432.337992246989,individual,real,2012
+2013,Estate and trust income tax (from FY2008),33.47328990362197,individual,real,2013
+2013,Payments (from FY2008),564.1275457372398,individual,real,2013
+2013,Withheld,1522.7399512151273,individual,real,2013
+2014,Estate and trust income tax (from FY2008),39.164263062898485,individual,real,2014
+2014,Payments (from FY2008),591.8348004327296,individual,real,2014
+2014,Withheld,1557.697953043368,individual,real,2014
+2015,Estate and trust income tax (from FY2008),44.052028953253405,individual,real,2015
+2015,Payments (from FY2008),683.0384065002611,individual,real,2015
+2015,Withheld,1634.7743006379421,individual,real,2015
+2016,Estate and trust income tax (from FY2008),38.798514786018494,individual,real,2016
+2016,Payments (from FY2008),677.6993616424653,individual,real,2016
+2016,Withheld,1655.9602374681854,individual,real,2016
+2017,Estate and trust income tax (from FY2008),37.30804125002511,individual,real,2017
+2017,Payments (from FY2008),651.68940772581675,individual,real,2017
+2017,Withheld,1711.4068356644507,individual,real,2017
+2018,Estate and trust income tax (from FY2008),48.359844814025216,individual,real,2018
+2018,Payments (from FY2008),735.5844057644074,individual,real,2018
+2018,Withheld,1695.8477728609153,individual,real,2018
+2019,Estate and trust income tax (from FY2008),48.73597425699986,individual,real,2019
+2019,Payments (from FY2008),729.9510246000613,individual,real,2019
+2019,Withheld,1668.2679545112464,individual,real,2019
+2020,Estate and trust income tax (from FY2008),41.11747428024653,individual,real,2020
+2020,Payments (from FY2008),692.3913059041917,individual,real,2020
+2020,Withheld,1547.66803186804,individual,real,2020
+2021,Estate and trust income tax (from FY2008),63.67134719153289,individual,real,2021
+2021,Payments (from FY2008),898.8249834878884,individual,real,2021
+2021,Withheld,1805.904985173291,individual,real,2021
+2022,Estate and trust income tax (from FY2008),93.76768844961181,individual,real,2022
+2022,Payments (from FY2008),1162.3330121185113,individual,real,2022
+2022,Withheld,1941.2010036674255,individual,real,2022
+2023,Estate and trust income tax (from FY2008),54.981667130320425,individual,real,2023
+2023,Payments (from FY2008),824.563202291018,individual,real,2023
+2023,Withheld,1815.9560182891446,individual,real,2023
+2024,Estate and trust income tax (from FY2008),60.36073583837703,individual,real,2024
+2024,Payments (from FY2008),927.1229423443572,individual,real,2024
+2024,Withheld,1848.3440083430496,individual,real,2024
+2025,Estate and trust income tax (from FY2008),74.57885399999999,individual,real,2025
+2025,Payments (from FY2008),983.7283359999999,individual,real,2025
+2025,Withheld,1952.91357,individual,real,2025
+1995,Withheld,38.8,individual,share,1995
+1995,Other: payments plus estate and trust (to FY2008),10.3,individual,share,1995
+1996,Withheld,35.9,individual,share,1996
+1996,Other: payments plus estate and trust (to FY2008),14.3,individual,share,1996
+1997,Withheld,35.7,individual,share,1997
+1997,Other: payments plus estate and trust (to FY2008),15,individual,share,1997
+1998,Withheld,36.5,individual,share,1998
+1998,Other: payments plus estate and trust (to FY2008),15.9,individual,share,1998
+1999,Withheld,36.4,individual,share,1999
+1999,Other: payments plus estate and trust (to FY2008),16.2,individual,share,1999
+2000,Withheld,37.2,individual,share,2000
+2000,Other: payments plus estate and trust (to FY2008),17,individual,share,2000
+2001,Withheld,37.3,individual,share,2001
+2001,Other: payments plus estate and trust (to FY2008),18,individual,share,2001
+2002,Withheld,37.2,individual,share,2002
+2002,Other: payments plus estate and trust (to FY2008),14.2,individual,share,2002
+2003,Withheld,37.6,individual,share,2003
+2003,Other: payments plus estate and trust (to FY2008),12.9,individual,share,2003
+2004,Withheld,37,individual,share,2004
+2004,Other: payments plus estate and trust (to FY2008),12.1,individual,share,2004
+2005,Withheld,34.67,individual,share,2005
+2005,Other: payments plus estate and trust (to FY2008),14.14,individual,share,2005
+2006,Withheld,33.7,individual,share,2006
+2006,Other: payments plus estate and trust (to FY2008),15.4,individual,share,2006
+2007,Withheld,34.5,individual,share,2007
+2007,Other: payments plus estate and trust (to FY2008),16.3,individual,share,2007
+2008,Withheld,35.4,individual,share,2008
+2008,Other: payments plus estate and trust (to FY2008),16.6,individual,share,2008
+2009,Estate and trust income tax (from FY2008),0.6,individual,share,2009
+2009,Payments (from FY2008),12.6,individual,share,2009
+2009,Withheld,37.5536267667788,individual,share,2009
+2010,Estate and trust income tax (from FY2008),0.5,individual,share,2010
+2010,Payments (from FY2008),11.3,individual,share,2010
+2010,Withheld,38.4,individual,share,2010
+2011,Estate and trust income tax (from FY2008),0.6,individual,share,2011
+2011,Payments (from FY2008),13.3,individual,share,2011
+2011,Withheld,41.8,individual,share,2011
+2012,Estate and trust income tax (from FY2008),0.7,individual,share,2012
+2012,Payments (from FY2008),13.2,individual,share,2012
+2012,Withheld,41.1,individual,share,2012
+2013,Estate and trust income tax (from FY2008),0.9,individual,share,2013
+2013,Payments (from FY2008),14.6,individual,share,2013
+2013,Withheld,39.3,individual,share,2013
+2014,Estate and trust income tax (from FY2008),1,individual,share,2014
+2014,Payments (from FY2008),14.5,individual,share,2014
+2014,Withheld,38.2,individual,share,2014
+2015,Estate and trust income tax (from FY2008),1,individual,share,2015
+2015,Payments (from FY2008),15.7,individual,share,2015
+2015,Withheld,37.6,individual,share,2015
+2016,Estate and trust income tax (from FY2008),0.9,individual,share,2016
+2016,Payments (from FY2008),15.6,individual,share,2016
+2016,Withheld,38,individual,share,2016
+2017,Estate and trust income tax (from FY2008),0.8,individual,share,2017
+2017,Payments (from FY2008),14.8,individual,share,2017
+2017,Withheld,39,individual,share,2017
+2018,Estate and trust income tax (from FY2008),1.1,individual,share,2018
+2018,Payments (from FY2008),16.9,individual,share,2018
+2018,Withheld,38.9,individual,share,2018
+2019,Estate and trust income tax (from FY2008),1.1,individual,share,2019
+2019,Payments (from FY2008),16.6,individual,share,2019
+2019,Withheld,37.9,individual,share,2019
+2020,Estate and trust income tax (from FY2008),1,individual,share,2020
+2020,Payments (from FY2008),16.3,individual,share,2020
+2020,Withheld,36.3,individual,share,2020
+2021,Estate and trust income tax (from FY2008),1.3,individual,share,2021
+2021,Payments (from FY2008),18.5,individual,share,2021
+2021,Withheld,37.3,individual,share,2021
+2022,Estate and trust income tax (from FY2008),1.7,individual,share,2022
+2022,Payments (from FY2008),21.5,individual,share,2022
+2022,Withheld,36,individual,share,2022
+2023,Estate and trust income tax (from FY2008),1.1,individual,share,2023
+2023,Payments (from FY2008),16.7,individual,share,2023
+2023,Withheld,36.8,individual,share,2023
+2024,Estate and trust income tax (from FY2008),1.2,individual,share,2024
+2024,Payments (from FY2008),17.7,individual,share,2024
+2024,Withheld,35.3,individual,share,2024
+2025,Estate and trust income tax (from FY2008),1.4,individual,share,2025
+2025,Payments (from FY2008),18.5,individual,share,2025
+2025,Withheld,36.8,individual,share,2025

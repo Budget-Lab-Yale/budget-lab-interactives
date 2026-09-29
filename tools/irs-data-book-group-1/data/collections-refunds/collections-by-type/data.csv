@@ -1,0 +1,941 @@
+time,series,value,measure,dollars,source_book
+1994,Business income taxes,0.154204684,gross,nominal,1995
+1994,Employment taxes,0.443831352,gross,nominal,1995
+1994,Estate and gift taxes,0.015606793,gross,nominal,1995
+1994,Excise taxes,0.043004794000000006,gross,nominal,1995
+1994,Individual income taxes,0.619819153,gross,nominal,1995
+1995,Business income taxes,0.174422173,gross,nominal,1995
+1995,Employment taxes,0.46540530500000005,gross,nominal,1995
+1995,Estate and gift taxes,0.015144394,gross,nominal,1995
+1995,Excise taxes,0.044980627,gross,nominal,1995
+1995,Individual income taxes,0.675779337,gross,nominal,1995
+1996,Business income taxes,0.189054791,gross,nominal,1996
+1996,Employment taxes,0.492365178,gross,nominal,1996
+1996,Estate and gift taxes,0.017591817000000003,gross,nominal,1996
+1996,Excise taxes,0.042221611,gross,nominal,1996
+1996,Individual income taxes,0.7453132760000001,gross,nominal,1996
+1997,Business income taxes,0.20449233600000002,gross,nominal,1997
+1997,Employment taxes,0.528596833,gross,nominal,1997
+1997,Estate and gift taxes,0.020356401,gross,nominal,1997
+1997,Excise taxes,0.044805621000000004,gross,nominal,1997
+1997,Individual income taxes,0.8250208800000001,gross,nominal,1997
+1998,Business income taxes,0.213270011,gross,nominal,1998
+1998,Employment taxes,0.557799193,gross,nominal,1998
+1998,Estate and gift taxes,0.024630962000000003,gross,nominal,1998
+1998,Excise taxes,0.045642716,gross,nominal,1998
+1998,Individual income taxes,0.928065856,gross,nominal,1998
+1999,Business income taxes,0.21632488900000002,gross,nominal,1999
+1999,Employment taxes,0.5986698650000001,gross,nominal,1999
+1999,Estate and gift taxes,0.028385607,gross,nominal,1999
+1999,Excise taxes,0.058585763000000006,gross,nominal,1999
+1999,Individual income taxes,1.0021857650000001,gross,nominal,1999
+2000,Business income taxes,0.235654894,gross,nominal,2000
+2000,Employment taxes,0.639651814,gross,nominal,2000
+2000,Estate and gift taxes,0.02972162,gross,nominal,2000
+2000,Excise taxes,0.054810895000000005,gross,nominal,2000
+2000,Individual income taxes,1.137077702,gross,nominal,2000
+2001,Business income taxes,0.186731643,gross,nominal,2001
+2001,Employment taxes,0.682222895,gross,nominal,2001
+2001,Estate and gift taxes,0.029247916000000002,gross,nominal,2001
+2001,Excise taxes,0.052418848000000004,gross,nominal,2001
+2001,Individual income taxes,1.17820988,gross,nominal,2001
+2002,Business income taxes,0.21143777300000002,gross,nominal,2002
+2002,Employment taxes,0.6880772380000001,gross,nominal,2002
+2002,Estate and gift taxes,0.027241515,gross,nominal,2002
+2002,Excise taxes,0.052136835000000006,gross,nominal,2002
+2002,Individual income taxes,1.037733908,gross,nominal,2002
+2003,Business income taxes,0.19414629800000002,gross,nominal,2003
+2003,Employment taxes,0.695975801,gross,nominal,2003
+2003,Estate and gift taxes,0.022826908,gross,nominal,2003
+2003,Excise taxes,0.052771160000000004,gross,nominal,2003
+2003,Individual income taxes,0.987208878,gross,nominal,2003
+2004,Business income taxes,0.23061935900000002,gross,nominal,2004
+2004,Employment taxes,0.717247296,gross,nominal,2004
+2004,Estate and gift taxes,0.025579462,gross,nominal,2004
+2004,Excise taxes,0.054807225,gross,nominal,2004
+2004,Individual income taxes,0.9902487600000001,gross,nominal,2004
+2005,Business income taxes,0.307094837,gross,nominal,2005
+2005,Employment taxes,0.7714416620000001,gross,nominal,2005
+2005,Estate and gift taxes,0.025605531,gross,nominal,2005
+2005,Excise taxes,0.057252098,gross,nominal,2005
+2005,Individual income taxes,1.107500994,gross,nominal,2005
+2006,Business income taxes,0.38092457300000004,gross,nominal,2006
+2006,Employment taxes,0.814819218,gross,nominal,2006
+2006,Estate and gift taxes,0.028687525000000002,gross,nominal,2006
+2006,Excise taxes,0.057989543000000005,gross,nominal,2006
+2006,Individual income taxes,1.236259371,gross,nominal,2006
+2007,Business income taxes,0.395535825,gross,nominal,2007
+2007,Employment taxes,0.8497327290000001,gross,nominal,2007
+2007,Estate and gift taxes,0.026977953000000002,gross,nominal,2007
+2007,Excise taxes,0.053049612,gross,nominal,2007
+2007,Individual income taxes,1.366241437,gross,nominal,2007
+2008,Business income taxes,0.35431582500000003,gross,nominal,2008
+2008,Employment taxes,0.8831976260000001,gross,nominal,2008
+2008,Estate and gift taxes,0.029823935000000003,gross,nominal,2008
+2008,Excise taxes,0.051707840000000005,gross,nominal,2008
+2008,Individual income taxes,1.4259901830000001,gross,nominal,2008
+2009,Business income taxes,0.22548158832968002,gross,nominal,2009
+2009,Employment taxes,0.85816386426734,gross,nominal,2009
+2009,Estate and gift taxes,0.024677322,gross,nominal,2009
+2009,Excise taxes,0.046631645740930004,gross,nominal,2009
+2009,Individual income taxes,1.190382757,gross,nominal,2009
+2010,Business income taxes,0.27793722,gross,nominal,2010
+2010,Employment taxes,0.82418833726061,gross,nominal,2010
+2010,Estate and gift taxes,0.019750836,gross,nominal,2010
+2010,Excise taxes,0.04719005699999999,gross,nominal,2010
+2010,Individual income taxes,1.1759895278142904,gross,nominal,2010
+2011,Business income taxes,0.24284812200000003,gross,nominal,2011
+2011,Employment taxes,0.767504822,gross,nominal,2011
+2011,Estate and gift taxes,0.009079375,gross,nominal,2011
+2011,Excise taxes,0.049337563,gross,nominal,2011
+2011,Individual income taxes,1.3461822270000001,gross,nominal,2011
+2012,Business income taxes,0.28146158000000004,gross,nominal,2012
+2012,Employment taxes,0.7843968530000001,gross,nominal,2012
+2012,Estate and gift taxes,0.014450249,gross,nominal,2012
+2012,Excise taxes,0.056174937,gross,nominal,2012
+2012,Individual income taxes,1.387836515,gross,nominal,2012
+2013,Business income taxes,0.31199395402501995,gross,nominal,2013
+2013,Employment taxes,0.89784715065773,gross,nominal,2013
+2013,Estate and gift taxes,0.019830147694529992,gross,nominal,2013
+2013,Excise taxes,0.06103367359521002,gross,nominal,2013
+2013,Individual income taxes,1.56435449444537,gross,nominal,2013
+2014,Business income taxes,0.35314111200000003,gross,nominal,2014
+2014,Employment taxes,0.9762232470000001,gross,nominal,2014
+2014,Estate and gift taxes,0.020154955000000002,gross,nominal,2014
+2014,Excise taxes,0.071158076,gross,nominal,2014
+2014,Individual income taxes,1.6436239680000002,gross,nominal,2014
+2015,Business income taxes,0.389888722,gross,nominal,2015
+2015,Employment taxes,1.0223589160000002,gross,nominal,2015
+2015,Estate and gift taxes,0.020042039,gross,nominal,2015
+2015,Excise taxes,0.077201882,gross,nominal,2015
+2015,Individual income taxes,1.7931856990000001,gross,nominal,2015
+2016,Business income taxes,0.345552427,gross,nominal,2016
+2016,Employment taxes,1.073907715,gross,nominal,2016
+2016,Estate and gift taxes,0.022337137,gross,nominal,2016
+2016,Excise taxes,0.075832669,gross,nominal,2016
+2016,Individual income taxes,1.8158191350000001,gross,nominal,2016
+2017,Business income taxes,0.338529154,gross,nominal,2017
+2017,Employment taxes,1.1234731370000002,gross,nominal,2017
+2017,Estate and gift taxes,0.023780443000000002,gross,nominal,2017
+2017,Excise taxes,0.063503608,gross,nominal,2017
+2017,Individual income taxes,1.8674277970000002,gross,nominal,2017
+2018,Business income taxes,0.262742024,gross,nominal,2018
+2018,Employment taxes,1.1331995270000002,gross,nominal,2018
+2018,Estate and gift taxes,0.023865669000000003,gross,nominal,2018
+2018,Excise taxes,0.07371820600000001,gross,nominal,2018
+2018,Individual income taxes,1.9719412010000001,gross,nominal,2018
+2019,Business income taxes,0.277057735,gross,nominal,2019
+2019,Employment taxes,1.207553842,gross,nominal,2019
+2019,Estate and gift taxes,0.017565044000000002,gross,nominal,2019
+2019,Excise taxes,0.080756624,gross,nominal,2019
+2019,Individual income taxes,1.981650716,gross,nominal,2019
+2020,Business income taxes,0.263563107,gross,nominal,2020
+2020,Employment taxes,1.268076594,gross,nominal,2020
+2020,Estate and gift taxes,0.018197587,gross,nominal,2020
+2020,Excise taxes,0.072059841,gross,nominal,2020
+2020,Individual income taxes,1.871170827,gross,nominal,2020
+2021,Business income taxes,0.419008841,gross,nominal,2021
+2021,Employment taxes,1.258170886,gross,nominal,2021
+2021,Estate and gift taxes,0.028045739,gross,nominal,2021
+2021,Excise taxes,0.058289822000000005,gross,nominal,2021
+2021,Individual income taxes,2.348054224,gross,nominal,2021
+2022,Business income taxes,0.475871099,gross,nominal,2022
+2022,Employment taxes,1.4178098030000001,gross,nominal,2022
+2022,Estate and gift taxes,0.033355276,gross,nominal,2022
+2022,Excise taxes,0.070679117,gross,nominal,2022
+2022,Individual income taxes,2.9037988990000003,gross,nominal,2022
+2023,Business income taxes,0.45694078000000005,gross,nominal,2023
+2023,Employment taxes,1.566109766,gross,nominal,2023
+2023,Estate and gift taxes,0.035434261,gross,nominal,2023
+2023,Excise taxes,0.07424876500000001,gross,nominal,2023
+2023,Individual income taxes,2.561601596,gross,nominal,2023
+2024,Business income taxes,0.565085519,gross,nominal,2024
+2024,Employment taxes,1.6611547480000002,gross,nominal,2024
+2024,Estate and gift taxes,0.032867889000000004,gross,nominal,2024
+2024,Excise taxes,0.07794772400000001,gross,nominal,2024
+2024,Individual income taxes,2.763433598,gross,nominal,2024
+2025,Business income taxes,0.48638398800000004,gross,nominal,2025
+2025,Employment taxes,1.694434489,gross,nominal,2025
+2025,Estate and gift taxes,0.031111136,gross,nominal,2025
+2025,Excise taxes,0.090611934,gross,nominal,2025
+2025,Individual income taxes,3.01122076,gross,nominal,2025
+1995,Business income taxes,0.156752634,net,nominal,1995
+1995,Employment taxes,0.464526498,net,nominal,1995
+1995,Estate and gift taxes,0.014757178000000001,net,nominal,1995
+1995,Excise taxes,0.043149961,net,nominal,1995
+1995,Individual income taxes,0.590454263,net,nominal,1995
+1996,Business income taxes,0.171405693,net,nominal,1996
+1996,Employment taxes,0.49131640800000004,net,nominal,1996
+1996,Estate and gift taxes,0.017165526,net,nominal,1996
+1996,Excise taxes,0.040222924,net,nominal,1996
+1996,Individual income taxes,0.655990077,net,nominal,1996
+1997,Business income taxes,0.182293438,net,nominal,1997
+1997,Employment taxes,0.5255671160000001,net,nominal,1997
+1997,Estate and gift taxes,0.019844679,net,nominal,1997
+1997,Excise taxes,0.043045322000000004,net,nominal,1997
+1997,Individual income taxes,0.711412616,net,nominal,1997
+1998,Business income taxes,0.187845917,net,nominal,1998
+1998,Employment taxes,0.553313373,net,nominal,1998
+1998,Estate and gift taxes,0.024070280000000003,net,nominal,1998
+1998,Excise taxes,0.044074395,net,nominal,1998
+1998,Individual income taxes,0.807710946,net,nominal,1998
+1999,Business income taxes,0.182263045,net,nominal,1999
+1999,Employment taxes,0.594670561,net,nominal,1999
+1999,Estate and gift taxes,0.02773134,net,nominal,1999
+1999,Excise taxes,0.056919018,net,nominal,1999
+1999,Individual income taxes,0.8552337980000001,net,nominal,1999
+2000,Business income taxes,0.205272105,net,nominal,2000
+2000,Employment taxes,0.634747508,net,nominal,2000
+2000,Estate and gift taxes,0.028949279,net,nominal,2000
+2000,Excise taxes,0.053009304,net,nominal,2000
+2000,Individual income taxes,0.978351206,net,nominal,2000
+2001,Business income taxes,0.14879168,net,nominal,2001
+2001,Employment taxes,0.675938661,net,nominal,2001
+2001,Estate and gift taxes,0.028324005000000003,net,nominal,2001
+2001,Excise taxes,0.05047091,net,nominal,2001
+2001,Individual income taxes,0.97147344,net,nominal,2001
+2002,Business income taxes,0.144679991,net,nominal,2002
+2002,Employment taxes,0.684133567,net,nominal,2002
+2002,Estate and gift taxes,0.026438109,net,nominal,2002
+2002,Excise taxes,0.049888606,net,nominal,2002
+2002,Individual income taxes,0.827574883,net,nominal,2002
+2003,Business income taxes,0.12881388300000002,net,nominal,2003
+2003,Employment taxes,0.6915308870000001,net,nominal,2003
+2003,Estate and gift taxes,0.021882804000000002,net,nominal,2003
+2003,Excise taxes,0.050745039000000006,net,nominal,2003
+2003,Individual income taxes,0.7573996350000001,net,nominal,2003
+2004,Business income taxes,0.18476947500000002,net,nominal,2004
+2004,Employment taxes,0.713609695,net,nominal,2004
+2004,Estate and gift taxes,0.024796326,net,nominal,2004
+2004,Excise taxes,0.052851747000000004,net,nominal,2004
+2004,Individual income taxes,0.762674925,net,nominal,2004
+2005,Business income taxes,0.27276278800000003,net,nominal,2005
+2005,Employment taxes,0.766315297,net,nominal,2005
+2005,Estate and gift taxes,0.024722725,net,nominal,2005
+2005,Excise taxes,0.055120559000000006,net,nominal,2005
+2005,Individual income taxes,0.879929524,net,nominal,2005
+2006,Business income taxes,0.351093182,net,nominal,2006
+2006,Employment taxes,0.809901619,net,nominal,2006
+2006,Estate and gift taxes,0.027836918000000002,net,nominal,2006
+2006,Excise taxes,0.055826522,net,nominal,2006
+2006,Individual income taxes,0.9936289030000001,net,nominal,2006
+2007,Business income taxes,0.36848147800000003,net,nominal,2007
+2007,Employment taxes,0.838042065,net,nominal,2007
+2007,Estate and gift taxes,0.026008622000000002,net,nominal,2007
+2007,Excise taxes,0.046158848,net,nominal,2007
+2007,Individual income taxes,1.117599983,net,nominal,2007
+2008,Business income taxes,0.30074643300000004,net,nominal,2008
+2008,Employment taxes,0.877484111,net,nominal,2008
+2008,Estate and gift taxes,0.028802193,net,nominal,2008
+2008,Excise taxes,0.049306378000000005,net,nominal,2008
+2008,Individual income taxes,1.0598580910000002,net,nominal,2008
+2009,Business income taxes,0.13028129089711002,net,nominal,2009
+2009,Employment taxes,0.85476808940138,net,nominal,2009
+2009,Estate and gift taxes,0.023428772,net,nominal,2009
+2009,Excise taxes,0.04513478157582,net,nominal,2009
+2009,Individual income taxes,0.8540386090000001,net,nominal,2009
+2010,Business income taxes,0.17959861099999996,net,nominal,2010
+2010,Employment taxes,0.81997228926061,net,nominal,2010
+2010,Estate and gift taxes,0.018842767,net,nominal,2010
+2010,Excise taxes,0.04532401099999999,net,nominal,2010
+2010,Individual income taxes,0.8140153258142904,net,nominal,2010
+2011,Business income taxes,0.175071118,net,nominal,2011
+2011,Employment taxes,0.76272468,net,nominal,2011
+2011,Estate and gift taxes,0.007301297000000001,net,nominal,2011
+2011,Excise taxes,0.04748894,net,nominal,2011
+2011,Individual income taxes,1.0064857310000002,net,nominal,2011
+2012,Business income taxes,0.23749118700000002,net,nominal,2012
+2012,Employment taxes,0.780667222,net,nominal,2012
+2012,Estate and gift taxes,0.013945618000000002,net,nominal,2012
+2012,Excise taxes,0.055011283,net,nominal,2012
+2012,Individual income taxes,1.063776069,net,nominal,2012
+2013,Business income taxes,0.27042473057599,net,nominal,2013
+2013,Employment taxes,0.89147142596505,net,nominal,2013
+2013,Estate and gift taxes,0.018782818888869995,net,nominal,2013
+2013,Excise taxes,0.059895910076970024,net,nominal,2013
+2013,Individual income taxes,1.2501308121255401,net,nominal,2013
+2014,Business income taxes,0.317827591,net,nominal,2014
+2014,Employment taxes,0.9723986910000001,net,nominal,2014
+2014,Estate and gift taxes,0.019275209,net,nominal,2014
+2014,Excise taxes,0.069771681,net,nominal,2014
+2014,Individual income taxes,1.31148226,net,nominal,2014
+2015,Business income taxes,0.339835905,net,nominal,2015
+2015,Employment taxes,1.019263017,net,nominal,2015
+2015,Estate and gift taxes,0.019119016000000003,net,nominal,2015
+2015,Excise taxes,0.076457302,net,nominal,2015
+2015,Individual income taxes,1.4447293270000001,net,nominal,2015
+2016,Business income taxes,0.29427100100000003,net,nominal,2016
+2016,Employment taxes,1.070578088,net,nominal,2016
+2016,Estate and gift taxes,0.02133715666983,net,nominal,2016
+2016,Excise taxes,0.074532106,net,nominal,2016
+2016,Individual income taxes,1.446584665,net,nominal,2016
+2017,Business income taxes,0.29363431500000003,net,nominal,2017
+2017,Employment taxes,1.1200495780000002,net,nominal,2017
+2017,Estate and gift taxes,0.022732988000000003,net,nominal,2017
+2017,Excise taxes,0.061856711,net,nominal,2017
+2017,Individual income taxes,1.481468674,net,nominal,2017
+2018,Business income taxes,0.20265295800000002,net,nominal,2018
+2018,Employment taxes,1.129344468,net,nominal,2018
+2018,Estate and gift taxes,0.022943348000000002,net,nominal,2018
+2018,Excise taxes,0.072402321,net,nominal,2018
+2018,Individual income taxes,1.574238805,net,nominal,2018
+2019,Business income taxes,0.225765409,net,nominal,2019
+2019,Employment taxes,1.203833015,net,nominal,2019
+2019,Estate and gift taxes,0.016636554,net,nominal,2019
+2019,Excise taxes,0.07918581200000001,net,nominal,2019
+2019,Individual income taxes,1.587059261,net,nominal,2019
+2020,Business income taxes,0.204138002,net,nominal,2020
+2020,Employment taxes,1.261904911,net,nominal,2020
+2020,Estate and gift taxes,0.017587901,net,nominal,2020
+2020,Excise taxes,0.069602624,net,nominal,2020
+2020,Individual income taxes,1.203679725,net,nominal,2020
+2021,Business income taxes,0.36592217600000004,net,nominal,2021
+2021,Employment taxes,1.2307610960000002,net,nominal,2021
+2021,Estate and gift taxes,0.027096561,net,nominal,2021
+2021,Excise taxes,0.055877321,net,nominal,2021
+2021,Individual income taxes,1.294091074,net,nominal,2021
+2022,Business income taxes,0.420259832,net,nominal,2022
+2022,Employment taxes,1.349938254,net,nominal,2022
+2022,Estate and gift taxes,0.032507126000000004,net,nominal,2022
+2022,Excise taxes,0.068900846,net,nominal,2022
+2022,Individual income taxes,2.3881764420000002,net,nominal,2022
+2023,Business income taxes,0.413086135,net,nominal,2023
+2023,Employment taxes,1.421385812,net,nominal,2023
+2023,Estate and gift taxes,0.033583512,net,nominal,2023
+2023,Excise taxes,0.072074041,net,nominal,2023
+2023,Individual income taxes,2.0951539830000003,net,nominal,2023
+2024,Business income taxes,0.52836766,net,nominal,2024
+2024,Employment taxes,1.6490202710000001,net,nominal,2024
+2024,Estate and gift taxes,0.031568364,net,nominal,2024
+2024,Excise taxes,0.072108268,net,nominal,2024
+2024,Individual income taxes,2.266763857,net,nominal,2024
+2025,Business income taxes,0.449853547,net,nominal,2025
+2025,Employment taxes,1.6208308310000001,net,nominal,2025
+2025,Estate and gift taxes,0.029310268,net,nominal,2025
+2025,Excise taxes,0.08562415000000001,net,nominal,2025
+2025,Individual income taxes,2.48935815,net,nominal,2025
+1994,Business income taxes,0.3024601177768749,gross,real,1995
+1994,Employment taxes,0.870539593978803,gross,real,1995
+1994,Estate and gift taxes,0.030611472534124235,gross,real,1995
+1994,Excise taxes,0.08435045370094105,gross,real,1995
+1994,Individual income taxes,1.2157255483675375,gross,real,1995
+1995,Business income taxes,0.335012529408763,gross,real,1995
+1995,Employment taxes,0.8939036003656875,gross,real,1995
+1995,Estate and gift taxes,0.029087825550154645,gross,real,1995
+1995,Excise taxes,0.08639425462072474,gross,real,1995
+1995,Individual income taxes,1.2979688368550875,gross,real,1995
+1996,Business income taxes,0.3563847419907791,gross,real,1996
+1996,Employment taxes,0.9281512306491827,gross,real,1996
+1996,Estate and gift taxes,0.03316210676033067,gross,real,1996
+1996,Excise taxes,0.07959141296064821,gross,real,1996
+1996,Individual income taxes,1.404980419510037,gross,real,1996
+1997,Business income taxes,0.37876449071865526,gross,real,1997
+1997,Employment taxes,0.9790768405459412,gross,real,1997
+1997,Estate and gift taxes,0.03770450281143897,gross,real,1997
+1997,Excise taxes,0.08298980074929597,gross,real,1997
+1997,Individual income taxes,1.528118948406246,gross,real,1997
+1998,Business income taxes,0.39016861091498845,gross,real,1998
+1998,Employment taxes,1.0204704134530735,gross,real,1998
+1998,Estate and gift taxes,0.045061320079548675,gross,real,1998
+1998,Excise taxes,0.0835014497190949,gross,real,1998
+1998,Individual income taxes,1.6978578665387216,gross,real,1998
+1999,Business income taxes,0.3907546043043201,gross,real,1999
+1999,Employment taxes,1.0813966311892838,gross,real,1999
+1999,Estate and gift taxes,0.05127383484395519,gross,real,1999
+1999,Excise taxes,0.1058253479049823,gross,real,1999
+1999,Individual income taxes,1.8102803789812523,gross,real,1999
+2000,Business income taxes,0.417064253222668,gross,real,2000
+2000,Employment taxes,1.13206181123671,gross,real,2000
+2000,Estate and gift taxes,0.0526016032998997,gross,real,2000
+2000,Excise taxes,0.0970048387437312,gross,real,2000
+2000,Individual income taxes,2.012410837692076,gross,real,2000
+2001,Business income taxes,0.3228277143664163,gross,real,2001
+2001,Employment taxes,1.179449044323407,gross,real,2001
+2001,Estate and gift taxes,0.0505647447886534,gross,real,2001
+2001,Excise taxes,0.09062340274894166,gross,real,2001
+2001,Individual income taxes,2.03692741355213,gross,real,2001
+2002,Business income taxes,0.3597369500826744,gross,real,2002
+2002,Employment taxes,1.1706839487920186,gross,real,2002
+2002,Estate and gift taxes,0.04634829142724382,gross,real,2002
+2002,Excise taxes,0.08870480304322743,gross,real,2002
+2002,Individual income taxes,1.7655843880898927,gross,real,2002
+2003,Business income taxes,0.32418324555828215,gross,real,2003
+2003,Employment taxes,1.1621323523676206,gross,real,2003
+2003,Estate and gift taxes,0.038116107274424126,gross,real,2003
+2003,Excise taxes,0.08811667333814109,gross,real,2003
+2003,Individual income taxes,1.6484299799215856,gross,real,2003
+2004,Business income taxes,0.3758490320947035,gross,real,2004
+2004,Employment taxes,1.168924860181158,gross,real,2004
+2004,Estate and gift taxes,0.04168781006022677,gross,real,2004
+2004,Excise taxes,0.08932139330092681,gross,real,2004
+2004,Individual income taxes,1.6138456007892223,gross,real,2004
+2005,Business income taxes,0.4856460939790557,gross,real,2005
+2005,Employment taxes,1.2199737173797258,gross,real,2005
+2005,Estate and gift taxes,0.04049311357979498,gross,real,2005
+2005,Excise taxes,0.09053964578963634,gross,real,2005
+2005,Individual income taxes,1.7514248597218247,gross,real,2005
+2006,Business income taxes,0.5834613236677922,gross,real,2006
+2006,Employment taxes,1.2480567891434908,gross,real,2006
+2006,Estate and gift taxes,0.043940618420678465,gross,real,2006
+2006,Excise taxes,0.08882245440666374,gross,real,2006
+2006,Individual income taxes,1.8935757368437665,gross,real,2006
+2007,Business income taxes,0.5898072302682575,gross,real,2007
+2007,Employment taxes,1.2670875194674918,gross,real,2007
+2007,Estate and gift taxes,0.04022844640491726,gross,real,2007
+2007,Excise taxes,0.07910546338128972,gross,real,2007
+2007,Individual income taxes,2.0372846829606246,gross,real,2007
+2008,Business income taxes,0.517357015313744,gross,real,2008
+2008,Employment taxes,1.2896079019884148,gross,real,2008
+2008,Estate and gift taxes,0.04354765129813523,gross,real,2008
+2008,Excise taxes,0.07550160586454366,gross,real,2008
+2008,Individual income taxes,2.08217068753161,gross,real,2008
+2009,Business income taxes,0.3258835715450481,gross,real,2009
+2009,Employment taxes,1.2402853249793653,gross,real,2009
+2009,Estate and gift taxes,0.035665589767661904,gross,real,2009
+2009,Excise taxes,0.06739569014769706,gross,real,2009
+2009,Individual income taxes,1.7204339708198633,gross,real,2009
+2010,Business income taxes,0.3983459844105974,gross,real,2010
+2010,Employment taxes,1.181245586848034,gross,real,2010
+2010,Estate and gift taxes,0.028307350161134465,gross,real,2010
+2010,Excise taxes,0.06763386965609426,gross,real,2010
+2010,Individual income taxes,1.6854551042632473,gross,real,2010
+2011,Business income taxes,0.34121177364689503,gross,real,2011
+2011,Employment taxes,1.078376391962234,gross,real,2011
+2011,Estate and gift taxes,0.012756901811063943,gross,real,2011
+2011,Excise taxes,0.06932134059758313,gross,real,2011
+2011,Individual income taxes,1.891442361356194,gross,real,2011
+2012,Business income taxes,0.38838212729658017,gross,real,2012
+2012,Employment taxes,1.082370526069252,gross,real,2012
+2012,Estate and gift taxes,0.01993955426024852,gross,real,2012
+2012,Excise taxes,0.07751445697423914,gross,real,2012
+2012,Individual income taxes,1.915042536304856,gross,real,2012
+2013,Business income taxes,0.42287953805909184,gross,real,2013
+2013,Employment taxes,1.216950467852222,gross,real,2013
+2013,Estate and gift taxes,0.026877968590487245,gross,real,2013
+2013,Excise taxes,0.08272561491342878,gross,real,2013
+2013,Individual income taxes,2.1203407868559894,gross,real,2013
+2014,Business income taxes,0.47025287614427363,gross,real,2014
+2014,Employment taxes,1.2999669935361466,gross,real,2014
+2014,Estate and gift taxes,0.02683891859441279,gross,real,2014
+2014,Excise taxes,0.09475614354381034,gross,real,2014
+2014,Individual income taxes,2.1886970165389963,gross,real,2014
+2015,Business income taxes,0.5135354492315553,gross,real,2015
+2015,Employment taxes,1.3465830519815496,gross,real,2015
+2015,Estate and gift taxes,0.026398038518747793,gross,real,2015
+2015,Excise taxes,0.10168517558297445,gross,real,2015
+2015,Individual income taxes,2.361864736091457,gross,real,2015
+2016,Business income taxes,0.4514814517652037,gross,real,2016
+2016,Employment taxes,1.4031139021056642,gross,real,2016
+2016,Estate and gift taxes,0.029184581710485998,gross,real,2016
+2016,Excise taxes,0.09907915794019344,gross,real,2016
+2016,Individual income taxes,2.3724581138966694,gross,real,2016
+2017,Business income taxes,0.43514765767259994,gross,real,2017
+2017,Employment taxes,1.4441199472694102,gross,real,2017
+2017,Estate and gift taxes,0.030567541813154374,gross,real,2017
+2017,Excise taxes,0.0816279660066116,gross,real,2017
+2017,Individual income taxes,2.400404284640293,gross,real,2017
+2018,Business income taxes,0.3304082165366298,gross,real,2018
+2018,Employment taxes,1.4250420583508274,gross,real,2018
+2018,Estate and gift taxes,0.030011998121562515,gross,real,2018
+2018,Excise taxes,0.09270348382008309,gross,real,2018
+2018,Individual income taxes,2.479792023439348,gross,real,2018
+2019,Business income taxes,0.3421126596899501,gross,real,2019
+2019,Employment taxes,1.4910951921462787,gross,real,2019
+2019,Estate and gift taxes,0.021689428452199684,gross,real,2019
+2019,Excise taxes,0.09971879480001254,gross,real,2019
+2019,Individual income taxes,2.4469549533683077,gross,real,2019
+2020,Business income taxes,0.32131435544281617,gross,real,2020
+2020,Employment taxes,1.545934171481867,gross,real,2020
+2020,Estate and gift taxes,0.02218499396245003,gross,real,2020
+2020,Excise taxes,0.0878494020949101,gross,real,2020
+2020,Individual income taxes,2.2811768120524785,gross,real,2020
+2021,Business income taxes,0.49401952259954285,gross,real,2021
+2021,Employment taxes,1.4834077938951264,gross,real,2021
+2021,Estate and gift taxes,0.03306646837967645,gross,real,2021
+2021,Excise taxes,0.0687248268273469,gross,real,2021
+2021,Individual income taxes,2.7684013158527128,gross,real,2021
+2022,Business income taxes,0.5239699885391903,gross,real,2022
+2022,Employment taxes,1.5611155789661892,gross,real,2022
+2022,Estate and gift taxes,0.03672667581655664,gross,real,2022
+2022,Excise taxes,0.07782304116024935,gross,real,2022
+2022,Individual income taxes,3.197301704235549,gross,real,2022
+2023,Business income taxes,0.48082585521668325,gross,real,2023
+2023,Employment taxes,1.6479729990397216,gross,real,2023
+2023,Estate and gift taxes,0.037286470359017124,gross,real,2023
+2023,Excise taxes,0.07812987479451394,gross,real,2023
+2023,Individual income taxes,2.6955008877104834,gross,real,2023
+2024,Business income taxes,0.5798891499310026,gross,real,2024
+2024,Employment taxes,1.70467227053746,gross,real,2024
+2024,Estate and gift taxes,0.03372893406641438,gross,real,2024
+2024,Excise taxes,0.07998973233185333,gross,real,2024
+2024,Individual income taxes,2.8358276865257843,gross,real,2024
+2025,Business income taxes,0.48638398800000004,gross,real,2025
+2025,Employment taxes,1.694434489,gross,real,2025
+2025,Estate and gift taxes,0.031111136,gross,real,2025
+2025,Excise taxes,0.090611934,gross,real,2025
+2025,Individual income taxes,3.01122076,gross,real,2025
+1995,Business income taxes,0.30107465985890486,net,real,1995
+1995,Employment taxes,0.8922156764574575,net,real,1995
+1995,Estate and gift taxes,0.028344100085918263,net,real,1995
+1995,Excise taxes,0.08287809588577638,net,real,1995
+1995,Individual income taxes,1.1340850348643288,net,real,1995
+1996,Business income taxes,0.32311465555800534,net,real,1996
+1996,Employment taxes,0.9261742078830277,net,real,1996
+1996,Estate and gift taxes,0.03235851110827448,net,real,1996
+1996,Excise taxes,0.07582371394044553,net,real,1996
+1996,Individual income taxes,1.2365984120453013,net,real,1996
+1997,Business income taxes,0.33764728085175155,net,real,1997
+1997,Employment taxes,0.9734651426262371,net,real,1997
+1997,Estate and gift taxes,0.036756681848996976,net,real,1997
+1997,Excise taxes,0.07972934235124844,net,real,1997
+1997,Individual income taxes,1.3176916184774095,net,real,1997
+1998,Business income taxes,0.34365628884382726,net,real,1998
+1998,Employment taxes,1.0122637924189768,net,real,1998
+1998,Estate and gift taxes,0.0440355756906433,net,real,1998
+1998,Excise taxes,0.08063227170775789,net,real,1998
+1998,Individual income taxes,1.477673566686557,net,real,1998
+1999,Business income taxes,0.3292276000117374,net,real,1999
+1999,Employment taxes,1.0741725597510097,net,real,1999
+1999,Estate and gift taxes,0.050092011319735674,net,real,1999
+1999,Excise taxes,0.10281465280668871,net,real,1999
+1999,Individual income taxes,1.5448363148133677,net,real,1999
+2000,Business income taxes,0.3632925067928786,net,real,2000
+2000,Employment taxes,1.123382124238716,net,real,2000
+2000,Estate and gift taxes,0.05123470691624875,net,real,2000
+2000,Excise taxes,0.09381636600601805,net,real,2000
+2000,Individual income taxes,1.731495188552658,net,real,2000
+2001,Business income taxes,0.2572358771091583,net,real,2001
+2001,Employment taxes,1.1685846569803164,net,real,2001
+2001,Estate and gift taxes,0.048967457517914884,net,real,2001
+2001,Excise taxes,0.0872557444229905,net,real,2001
+2001,Individual income taxes,1.6795147579935334,net,real,2001
+2002,Business income taxes,0.24615629441163656,net,real,2002
+2002,Employment taxes,1.1639742480723205,net,real,2002
+2002,Estate and gift taxes,0.0449813889101703,net,real,2002
+2002,Excise taxes,0.08487970106607304,net,real,2002
+2002,Individual income taxes,1.4080230800361584,net,real,2002
+2003,Business income taxes,0.215091933732905,net,real,2003
+2003,Employment taxes,1.1547102863195344,net,real,2003
+2003,Estate and gift taxes,0.03653965332182516,net,real,2003
+2003,Excise taxes,0.08473347989875966,net,real,2003
+2003,Individual income taxes,1.2646971607924158,net,real,2003
+2004,Business income taxes,0.3011257538851997,net,real,2004
+2004,Employment taxes,1.1629965251926078,net,real,2004
+2004,Estate and gift taxes,0.04041150390416587,net,real,2004
+2004,Excise taxes,0.08613447735089814,net,real,2004
+2004,Individual income taxes,1.2429599735560386,net,real,2004
+2005,Business income taxes,0.43135268527825255,net,real,2005
+2005,Employment taxes,1.2118667782892423,net,real,2005
+2005,Estate and gift taxes,0.03909702600688253,net,real,2005
+2005,Excise taxes,0.08716878615674054,net,real,2005
+2005,Individual income taxes,1.3915386545800175,net,real,2005
+2006,Business income taxes,0.537768648231725,net,real,2006
+2006,Employment taxes,1.2405245136612069,net,real,2006
+2006,Estate and gift taxes,0.042637745565214005,net,real,2006
+2006,Excise taxes,0.0855093599380083,net,real,2006
+2006,Individual income taxes,1.5219391871024195,net,real,2006
+2007,Business income taxes,0.5494648681806102,net,real,2007
+2007,Employment taxes,1.2496548680664794,net,real,2007
+2007,Estate and gift taxes,0.038783018718757195,net,real,2007
+2007,Excise taxes,0.06883023122179514,net,real,2007
+2007,Individual income taxes,1.6665204738940695,net,real,2007
+2008,Business income taxes,0.4391372497774687,net,real,2008
+2008,Employment taxes,1.2812652684993509,net,real,2008
+2008,Estate and gift taxes,0.04205574674789197,net,real,2008
+2008,Excise taxes,0.07199509239535448,net,real,2008
+2008,Individual income taxes,1.5475600577983852,net,real,2008
+2009,Business income taxes,0.18829267922741985,net,real,2009
+2009,Employment taxes,1.235377486385183,net,real,2009
+2009,Estate and gift taxes,0.03386108796214126,net,real,2009
+2009,Excise taxes,0.06523230535048417,net,real,2009
+2009,Individual income taxes,1.2343231844338136,net,real,2009
+2010,Business income taxes,0.25740483947263676,net,real,2010
+2010,Employment taxes,1.1752030503684565,net,real,2010
+2010,Estate and gift taxes,0.027005884888805173,net,real,2010
+2010,Excise taxes,0.06495940982367075,net,real,2010
+2010,Individual income taxes,1.166665394029654,net,real,2010
+2011,Business income taxes,0.24598224682637176,net,real,2011
+2011,Employment taxes,1.071660092422129,net,real,2011
+2011,Estate and gift taxes,0.010258627815506656,net,real,2011
+2011,Excise taxes,0.0667239479249956,net,real,2011
+2011,Individual income taxes,1.414154569516505,net,real,2011
+2012,Business income taxes,0.3277084297659735,net,real,2012
+2012,Employment taxes,1.077224097125695,net,real,2012
+2012,Estate and gift taxes,0.019243225968196016,net,real,2012
+2012,Excise taxes,0.07590875854833969,net,real,2012
+2012,Individual income taxes,1.467879248902865,net,real,2012
+2013,Business income taxes,0.3665362218415242,net,real,2013
+2013,Employment taxes,1.2083087506713301,net,real,2013
+2013,Estate and gift taxes,0.02545840928230282,net,real,2013
+2013,Excise taxes,0.08118347954571832,net,real,2013
+2013,Individual income taxes,1.694439054106449,net,real,2013
+2014,Business income taxes,0.4232283744571656,net,real,2014
+2014,Employment taxes,1.2948741046091423,net,real,2014
+2014,Estate and gift taxes,0.025667423481783646,net,real,2014
+2014,Excise taxes,0.0929099800299399,net,real,2014
+2014,Individual income taxes,1.746407551599917,net,real,2014
+2015,Business income taxes,0.44760921332622466,net,real,2015
+2015,Employment taxes,1.3425053400754827,net,real,2015
+2015,Estate and gift taxes,0.025182294117307893,net,real,2015
+2015,Excise taxes,0.10070446441280415,net,real,2015
+2015,Individual income taxes,1.9029012179504579,net,real,2015
+2016,Business income taxes,0.3844797152701802,net,real,2016
+2016,Employment taxes,1.3987635786399961,net,real,2016
+2016,Estate and gift taxes,0.02787805761768372,net,real,2016
+2016,Excise taxes,0.09737990762252136,net,real,2016
+2016,Individual income taxes,1.8900348937658624,net,real,2016
+2017,Business income taxes,0.37743952884054527,net,real,2017
+2017,Employment taxes,1.4397192814415154,net,real,2017
+2017,Estate and gift taxes,0.029221136091869132,net,real,2017
+2017,Excise taxes,0.07951103349574716,net,real,2017
+2017,Individual income taxes,1.9042898249361193,net,real,2017
+2018,Business income taxes,0.25484390128871254,net,real,2018
+2018,Employment taxes,1.4201941731536214,net,real,2018
+2018,Estate and gift taxes,0.02885214393438353,net,real,2018
+2018,Excise taxes,0.09104870774201913,net,real,2018
+2018,Individual income taxes,1.979665940164963,net,real,2018
+2019,Business income taxes,0.2787765681365272,net,real,2019
+2019,Employment taxes,1.4865006912159358,net,real,2019
+2019,Estate and gift taxes,0.020542923073472316,net,real,2019
+2019,Excise taxes,0.09777914611562231,net,real,2019
+2019,Individual income taxes,1.9597109059823818,net,real,2019
+2020,Business income taxes,0.248868179164447,net,real,2020
+2020,Employment taxes,1.5384101656841118,net,real,2020
+2020,Estate and gift taxes,0.02144171518439059,net,real,2020
+2020,Excise taxes,0.08485376622794437,net,real,2020
+2020,Individual income taxes,1.4674268314721346,net,real,2020
+2021,Business income taxes,0.43142931844749766,net,real,2021
+2021,Employment taxes,1.451091121678767,net,real,2021
+2021,Estate and gift taxes,0.03194736917092733,net,real,2021
+2021,Excise taxes,0.0658804415168925,net,real,2021
+2021,Individual income taxes,1.5257583898517542,net,real,2021
+2022,Business income taxes,0.4627377872269609,net,real,2022
+2022,Employment taxes,1.4863838820289328,net,real,2022
+2022,Estate and gift taxes,0.03579279866639268,net,real,2022
+2022,Excise taxes,0.07586503060350912,net,real,2022
+2022,Individual income taxes,2.629562470958768,net,real,2022
+2023,Business income taxes,0.4346788530004463,net,real,2023
+2023,Employment taxes,1.4956840767150608,net,real,2023
+2023,Estate and gift taxes,0.03533897954693329,net,real,2023
+2023,Excise taxes,0.07584147425569522,net,real,2023
+2023,Individual income taxes,2.204671261091241,net,real,2023
+2024,Business income taxes,0.5422093876173688,net,real,2024
+2024,Employment taxes,1.6922199048055622,net,real,2024
+2024,Estate and gift taxes,0.032395365213158944,net,real,2024
+2024,Excise taxes,0.0739972992185576,net,real,2024
+2024,Individual income taxes,2.326146613093532,net,real,2024
+2025,Business income taxes,0.449853547,net,real,2025
+2025,Employment taxes,1.6208308310000001,net,real,2025
+2025,Estate and gift taxes,0.029310268,net,real,2025
+2025,Excise taxes,0.08562415000000001,net,real,2025
+2025,Individual income taxes,2.48935815,net,real,2025
+1995,Business income taxes,12.7,gross,share,1995
+1995,Employment taxes,33.8,gross,share,1995
+1995,Estate and gift taxes,1.1,gross,share,1995
+1995,Excise taxes,3.3,gross,share,1995
+1995,Individual income taxes,49.1,gross,share,1995
+1996,Business income taxes,12.7,gross,share,1996
+1996,Employment taxes,33.1,gross,share,1996
+1996,Estate and gift taxes,1.2,gross,share,1996
+1996,Excise taxes,2.8,gross,share,1996
+1996,Individual income taxes,50.1,gross,share,1996
+1997,Business income taxes,12.6,gross,share,1997
+1997,Employment taxes,32.6,gross,share,1997
+1997,Estate and gift taxes,1.3,gross,share,1997
+1997,Excise taxes,2.8,gross,share,1997
+1997,Individual income taxes,50.7,gross,share,1997
+1998,Business income taxes,12.1,gross,share,1998
+1998,Employment taxes,31.5,gross,share,1998
+1998,Estate and gift taxes,1.4,gross,share,1998
+1998,Excise taxes,2.6,gross,share,1998
+1998,Individual income taxes,52.5,gross,share,1998
+1999,Business income taxes,11.4,gross,share,1999
+1999,Employment taxes,31.4,gross,share,1999
+1999,Estate and gift taxes,1.5,gross,share,1999
+1999,Excise taxes,3.1,gross,share,1999
+1999,Individual income taxes,52.6,gross,share,1999
+2000,Business income taxes,11.2,gross,share,2000
+2000,Employment taxes,30.5,gross,share,2000
+2000,Estate and gift taxes,1.4,gross,share,2000
+2000,Excise taxes,2.6,gross,share,2000
+2000,Individual income taxes,54.2,gross,share,2000
+2001,Business income taxes,8.8,gross,share,2001
+2001,Employment taxes,32,gross,share,2001
+2001,Estate and gift taxes,1.4,gross,share,2001
+2001,Excise taxes,2.5,gross,share,2001
+2001,Individual income taxes,55.3,gross,share,2001
+2002,Business income taxes,10.5,gross,share,2002
+2002,Employment taxes,34.1,gross,share,2002
+2002,Estate and gift taxes,1.4,gross,share,2002
+2002,Excise taxes,2.6,gross,share,2002
+2002,Individual income taxes,51.5,gross,share,2002
+2003,Business income taxes,9.9,gross,share,2003
+2003,Employment taxes,35.6,gross,share,2003
+2003,Estate and gift taxes,1.2,gross,share,2003
+2003,Excise taxes,2.7,gross,share,2003
+2003,Individual income taxes,50.5,gross,share,2003
+2004,Business income taxes,11.4,gross,share,2004
+2004,Employment taxes,35.5,gross,share,2004
+2004,Estate and gift taxes,1.3,gross,share,2004
+2004,Excise taxes,2.7,gross,share,2004
+2004,Individual income taxes,49.1,gross,share,2004
+2005,Business income taxes,13.53,gross,share,2005
+2005,Employment taxes,34,gross,share,2005
+2005,Estate and gift taxes,1.13,gross,share,2005
+2005,Excise taxes,2.52,gross,share,2005
+2005,Individual income taxes,48.81,gross,share,2005
+2006,Business income taxes,15.1,gross,share,2006
+2006,Employment taxes,32.4,gross,share,2006
+2006,Estate and gift taxes,1.1,gross,share,2006
+2006,Excise taxes,2.3,gross,share,2006
+2006,Individual income taxes,49.1,gross,share,2006
+2007,Business income taxes,14.7,gross,share,2007
+2007,Employment taxes,31.6,gross,share,2007
+2007,Estate and gift taxes,1,gross,share,2007
+2007,Excise taxes,2,gross,share,2007
+2007,Individual income taxes,50.8,gross,share,2007
+2008,Business income taxes,12.9,gross,share,2008
+2008,Employment taxes,32.2,gross,share,2008
+2008,Estate and gift taxes,1.1,gross,share,2008
+2008,Excise taxes,1.9,gross,share,2008
+2008,Individual income taxes,52,gross,share,2008
+2009,Business income taxes,9.61403718443633,gross,share,2009
+2009,Employment taxes,36.5902128086073,gross,share,2009
+2009,Estate and gift taxes,1.05218653584001,gross,share,2009
+2009,Excise taxes,1.98827043682729,gross,share,2009
+2009,Individual income taxes,50.8,gross,share,2009
+2010,Business income taxes,11.9,gross,share,2010
+2010,Employment taxes,35.1,gross,share,2010
+2010,Estate and gift taxes,0.8,gross,share,2010
+2010,Excise taxes,2,gross,share,2010
+2010,Individual income taxes,50.1,gross,share,2010
+2011,Business income taxes,10.1,gross,share,2011
+2011,Employment taxes,31.8,gross,share,2011
+2011,Estate and gift taxes,0.4,gross,share,2011
+2011,Excise taxes,2,gross,share,2011
+2011,Individual income taxes,55.7,gross,share,2011
+2012,Business income taxes,11.1,gross,share,2012
+2012,Employment taxes,31.1,gross,share,2012
+2012,Estate and gift taxes,0.6,gross,share,2012
+2012,Excise taxes,2.2,gross,share,2012
+2012,Individual income taxes,55,gross,share,2012
+2013,Business income taxes,10.9,gross,share,2013
+2013,Employment taxes,31.4,gross,share,2013
+2013,Estate and gift taxes,0.7,gross,share,2013
+2013,Excise taxes,2.1,gross,share,2013
+2013,Individual income taxes,54.8,gross,share,2013
+2014,Business income taxes,11.5,gross,share,2014
+2014,Employment taxes,31.9,gross,share,2014
+2014,Estate and gift taxes,0.7,gross,share,2014
+2014,Excise taxes,2.3,gross,share,2014
+2014,Individual income taxes,53.6,gross,share,2014
+2015,Business income taxes,11.8,gross,share,2015
+2015,Employment taxes,31,gross,share,2015
+2015,Estate and gift taxes,0.6,gross,share,2015
+2015,Excise taxes,2.3,gross,share,2015
+2015,Individual income taxes,54.3,gross,share,2015
+2016,Business income taxes,10.4,gross,share,2016
+2016,Employment taxes,32.2,gross,share,2016
+2016,Estate and gift taxes,0.7,gross,share,2016
+2016,Excise taxes,2.3,gross,share,2016
+2016,Individual income taxes,54.5,gross,share,2016
+2017,Business income taxes,9.9,gross,share,2017
+2017,Employment taxes,32.9,gross,share,2017
+2017,Estate and gift taxes,0.7,gross,share,2017
+2017,Excise taxes,1.9,gross,share,2017
+2017,Individual income taxes,54.7,gross,share,2017
+2018,Business income taxes,7.6,gross,share,2018
+2018,Employment taxes,32.7,gross,share,2018
+2018,Estate and gift taxes,0.7,gross,share,2018
+2018,Excise taxes,2.1,gross,share,2018
+2018,Individual income taxes,56.9,gross,share,2018
+2019,Business income taxes,7.8,gross,share,2019
+2019,Employment taxes,33.9,gross,share,2019
+2019,Estate and gift taxes,0.5,gross,share,2019
+2019,Excise taxes,2.3,gross,share,2019
+2019,Individual income taxes,55.6,gross,share,2019
+2020,Business income taxes,7.5,gross,share,2020
+2020,Employment taxes,36.3,gross,share,2020
+2020,Estate and gift taxes,0.5,gross,share,2020
+2020,Excise taxes,2.1,gross,share,2020
+2020,Individual income taxes,53.6,gross,share,2020
+2021,Business income taxes,10.2,gross,share,2021
+2021,Employment taxes,30.6,gross,share,2021
+2021,Estate and gift taxes,0.7,gross,share,2021
+2021,Excise taxes,1.4,gross,share,2021
+2021,Individual income taxes,57.1,gross,share,2021
+2022,Business income taxes,9.7,gross,share,2022
+2022,Employment taxes,28.9,gross,share,2022
+2022,Estate and gift taxes,0.7,gross,share,2022
+2022,Excise taxes,1.4,gross,share,2022
+2022,Individual income taxes,59.2,gross,share,2022
+2023,Business income taxes,9.7,gross,share,2023
+2023,Employment taxes,33.4,gross,share,2023
+2023,Estate and gift taxes,0.8,gross,share,2023
+2023,Excise taxes,1.6,gross,share,2023
+2023,Individual income taxes,54.6,gross,share,2023
+2024,Business income taxes,11.1,gross,share,2024
+2024,Employment taxes,32.6,gross,share,2024
+2024,Estate and gift taxes,0.6,gross,share,2024
+2024,Excise taxes,1.5,gross,share,2024
+2024,Individual income taxes,54.2,gross,share,2024
+2025,Business income taxes,9.2,gross,share,2025
+2025,Employment taxes,31.9,gross,share,2025
+2025,Estate and gift taxes,0.6,gross,share,2025
+2025,Excise taxes,1.7,gross,share,2025
+2025,Individual income taxes,56.7,gross,share,2025
+1995,Business income taxes,12.3,net,share,1995
+1995,Employment taxes,36.6,net,share,1995
+1995,Estate and gift taxes,1.2,net,share,1995
+1995,Excise taxes,3.4,net,share,1995
+1995,Individual income taxes,46.5,net,share,1995
+1996,Business income taxes,12.5,net,share,1996
+1996,Employment taxes,35.7,net,share,1996
+1996,Estate and gift taxes,1.2,net,share,1996
+1996,Excise taxes,2.9,net,share,1996
+1996,Individual income taxes,47.7,net,share,1996
+1997,Business income taxes,12.3,net,share,1997
+1997,Employment taxes,35.4,net,share,1997
+1997,Estate and gift taxes,1.4,net,share,1997
+1997,Excise taxes,2.9,net,share,1997
+1997,Individual income taxes,48,net,share,1997
+1998,Business income taxes,11.6,net,share,1998
+1998,Employment taxes,34.2,net,share,1998
+1998,Estate and gift taxes,1.5,net,share,1998
+1998,Excise taxes,2.7,net,share,1998
+1998,Individual income taxes,50,net,share,1998
+1999,Business income taxes,10.6,net,share,1999
+1999,Employment taxes,34.6,net,share,1999
+1999,Estate and gift taxes,1.6,net,share,1999
+1999,Excise taxes,3.3,net,share,1999
+1999,Individual income taxes,49.8,net,share,1999
+2000,Business income taxes,10.8,net,share,2000
+2000,Employment taxes,33.3,net,share,2000
+2000,Estate and gift taxes,1.5,net,share,2000
+2000,Excise taxes,2.8,net,share,2000
+2000,Individual income taxes,51.5,net,share,2000
+2001,Business income taxes,7.8,net,share,2001
+2001,Employment taxes,35.5,net,share,2001
+2001,Estate and gift taxes,1.5,net,share,2001
+2001,Excise taxes,2.7,net,share,2001
+2001,Individual income taxes,52,net,share,2001
+2002,Business income taxes,8.3,net,share,2002
+2002,Employment taxes,39.5,net,share,2002
+2002,Estate and gift taxes,1.5,net,share,2002
+2002,Excise taxes,2.9,net,share,2002
+2002,Individual income taxes,47.8,net,share,2002
+2003,Business income taxes,7.8,net,share,2003
+2003,Employment taxes,41.9,net,share,2003
+2003,Estate and gift taxes,1.3,net,share,2003
+2003,Excise taxes,3.1,net,share,2003
+2003,Individual income taxes,45.9,net,share,2003
+2004,Business income taxes,10.6,net,share,2004
+2004,Employment taxes,41,net,share,2004
+2004,Estate and gift taxes,1.4,net,share,2004
+2004,Excise taxes,3,net,share,2004
+2004,Individual income taxes,43.9,net,share,2004
+2005,Business income taxes,13.65,net,share,2005
+2005,Employment taxes,38.34,net,share,2005
+2005,Estate and gift taxes,1.24,net,share,2005
+2005,Excise taxes,2.76,net,share,2005
+2005,Individual income taxes,44.02,net,share,2005
+2006,Business income taxes,15.7,net,share,2006
+2006,Employment taxes,36.2,net,share,2006
+2006,Estate and gift taxes,1.2,net,share,2006
+2006,Excise taxes,2.5,net,share,2006
+2006,Individual income taxes,44.4,net,share,2006
+2007,Business income taxes,15.4,net,share,2007
+2007,Employment taxes,35,net,share,2007
+2007,Estate and gift taxes,1.1,net,share,2007
+2007,Excise taxes,2,net,share,2007
+2007,Individual income taxes,46.6,net,share,2007
+2008,Business income taxes,13,net,share,2008
+2008,Employment taxes,37.9,net,share,2008
+2008,Estate and gift taxes,1.2,net,share,2008
+2008,Excise taxes,2.1,net,share,2008
+2008,Individual income taxes,45.8,net,share,2008
+2009,Business income taxes,6.82940715162328,net,share,2009
+2009,Employment taxes,44.8073492559064,net,share,2009
+2009,Estate and gift taxes,1.22814735675988,net,share,2009
+2009,Excise taxes,2.3659866889429,net,share,2009
+2009,Individual income taxes,44.8,net,share,2009
+2010,Business income taxes,9.6,net,share,2010
+2010,Employment taxes,43.7,net,share,2010
+2010,Estate and gift taxes,1,net,share,2010
+2010,Excise taxes,2.4,net,share,2010
+2010,Individual income taxes,43.4,net,share,2010
+2011,Business income taxes,8.8,net,share,2011
+2011,Employment taxes,38.2,net,share,2011
+2011,Estate and gift taxes,0.4,net,share,2011
+2011,Excise taxes,2.4,net,share,2011
+2011,Individual income taxes,50.3,net,share,2011
+2012,Business income taxes,11,net,share,2012
+2012,Employment taxes,36.3,net,share,2012
+2012,Estate and gift taxes,0.6,net,share,2012
+2012,Excise taxes,2.6,net,share,2012
+2012,Individual income taxes,49.5,net,share,2012
+2013,Business income taxes,10.9,net,share,2013
+2013,Employment taxes,35.8,net,share,2013
+2013,Estate and gift taxes,0.8,net,share,2013
+2013,Excise taxes,2.4,net,share,2013
+2013,Individual income taxes,50.2,net,share,2013
+2014,Business income taxes,11.8,net,share,2014
+2014,Employment taxes,36.1,net,share,2014
+2014,Estate and gift taxes,0.7,net,share,2014
+2014,Excise taxes,2.6,net,share,2014
+2014,Individual income taxes,48.7,net,share,2014
+2015,Business income taxes,11.7,net,share,2015
+2015,Employment taxes,35.2,net,share,2015
+2015,Estate and gift taxes,0.7,net,share,2015
+2015,Excise taxes,2.6,net,share,2015
+2015,Individual income taxes,49.8,net,share,2015
+2016,Business income taxes,10.1,net,share,2016
+2016,Employment taxes,36.82375320838461,net,share,2016
+2016,Estate and gift taxes,0.7339158163103162,net,share,2016
+2016,Excise taxes,2.5636167115771955,net,share,2016
+2016,Individual income taxes,49.75692786549328,net,share,2016
+2017,Business income taxes,9.9,net,share,2017
+2017,Employment taxes,37.6,net,share,2017
+2017,Estate and gift taxes,0.8,net,share,2017
+2017,Excise taxes,2.1,net,share,2017
+2017,Individual income taxes,49.7,net,share,2017
+2018,Business income taxes,6.8,net,share,2018
+2018,Employment taxes,37.6,net,share,2018
+2018,Estate and gift taxes,0.8,net,share,2018
+2018,Excise taxes,2.4,net,share,2018
+2018,Individual income taxes,52.4,net,share,2018
+2019,Business income taxes,7.3,net,share,2019
+2019,Employment taxes,38.7,net,share,2019
+2019,Estate and gift taxes,0.5,net,share,2019
+2019,Excise taxes,2.5,net,share,2019
+2019,Individual income taxes,51,net,share,2019
+2020,Business income taxes,7.4,net,share,2020
+2020,Employment taxes,45.8,net,share,2020
+2020,Estate and gift taxes,0.6,net,share,2020
+2020,Excise taxes,2.5,net,share,2020
+2020,Individual income taxes,43.7,net,share,2020
+2021,Business income taxes,12.3,net,share,2021
+2021,Employment taxes,41.4,net,share,2021
+2021,Estate and gift taxes,0.9,net,share,2021
+2021,Excise taxes,1.9,net,share,2021
+2021,Individual income taxes,43.5,net,share,2021
+2022,Business income taxes,9.9,net,share,2022
+2022,Employment taxes,31.7,net,share,2022
+2022,Estate and gift taxes,0.8,net,share,2022
+2022,Excise taxes,1.6,net,share,2022
+2022,Individual income taxes,56.1,net,share,2022
+2023,Business income taxes,10.2,net,share,2023
+2023,Employment taxes,35.2,net,share,2023
+2023,Estate and gift taxes,0.8,net,share,2023
+2023,Excise taxes,1.8,net,share,2023
+2023,Individual income taxes,51.9,net,share,2023
+2024,Business income taxes,11.6,net,share,2024
+2024,Employment taxes,36.3,net,share,2024
+2024,Estate and gift taxes,0.7,net,share,2024
+2024,Excise taxes,1.6,net,share,2024
+2024,Individual income taxes,49.8,net,share,2024
+2025,Business income taxes,9.6,net,share,2025
+2025,Employment taxes,34.7,net,share,2025
+2025,Estate and gift taxes,0.6,net,share,2025
+2025,Excise taxes,1.8,net,share,2025
+2025,Individual income taxes,53.2,net,share,2025

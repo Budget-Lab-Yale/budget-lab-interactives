@@ -1,0 +1,82 @@
+release:
+  updated: September 29, 2026
+  version: 0.1-prototype
+tabs:
+- id: collections-refunds
+  label: |-
+    1-1 Collections
+    and Refunds
+  description: Taxes the IRS collected and refunded each fiscal year since FY1994,
+    by type of tax. From Table 1-1 of the IRS Data Book.
+  toggles:
+  - id: dollars
+    label: Units
+    default: nominal
+    applies_to_figures:
+    - collections-by-type
+    - refunds
+    - components
+    options:
+    - id: nominal
+      label: Nominal dollars
+    - id: real
+      label: FY2025 dollars
+    - id: share
+      label: Share of total
+      spec:
+        value_prefix: ''
+        value_suffix: '%'
+        yAxisPolicy:
+          min: 0.0
+          max: 100.0
+          autoWiden:
+            step: 5.0
+  - id: layout
+    label: Layout
+    default: combined
+    applies_to_figures:
+    - components
+    options:
+    - id: combined
+      label: One chart
+    - id: panels
+      label: One panel per part
+      spec:
+        columns:
+          facet: series
+        small_multiples:
+          mode: per-pane
+          columns: 2.0
+          pane_order:
+          - Withheld
+          - Payments (from FY2008)
+          - Estate and trust income tax (from FY2008)
+          - 'Other: payments plus estate and trust (to FY2008)'
+          - FICA
+          - SECA
+          - Unemployment insurance
+          - Railroad retirement
+          - Corporation income tax
+          - Tax-exempt organizations' unrelated business income tax
+          - Estate tax
+          - Gift tax
+  sections:
+  - id: overview
+    label: ''
+    figures:
+    - summary
+  - id: trends
+    label: Trends
+    figures:
+    - collections-by-type
+    - refunds
+  - id: components
+    label: Components
+    figures:
+    - components
+  - id: table
+    label: Table
+    figures:
+    - full-table
+    - definitions
+

@@ -1,0 +1,751 @@
+tax_type,measure,value,year
+Business income taxes,Gross collections,154.204684,1994
+Business income taxes,Gross collections,174.422173,1995
+Business income taxes,Gross collections,189.054791,1996
+Business income taxes,Gross collections,204.492336,1997
+Business income taxes,Gross collections,213.27001099999998,1998
+Business income taxes,Gross collections,216.32488899999998,1999
+Business income taxes,Gross collections,235.65489399999998,2000
+Business income taxes,Gross collections,186.731643,2001
+Business income taxes,Gross collections,211.437773,2002
+Business income taxes,Gross collections,194.146298,2003
+Business income taxes,Gross collections,230.619359,2004
+Business income taxes,Gross collections,307.094837,2005
+Business income taxes,Gross collections,380.924573,2006
+Business income taxes,Gross collections,395.535825,2007
+Business income taxes,Gross collections,354.31582499999996,2008
+Business income taxes,Gross collections,225.48158832968,2009
+Business income taxes,Gross collections,277.9372199999999,2010
+Business income taxes,Gross collections,242.848122,2011
+Business income taxes,Gross collections,281.46157999999997,2012
+Business income taxes,Gross collections,311.99395402501995,2013
+Business income taxes,Gross collections,353.14111199999996,2014
+Business income taxes,Gross collections,389.888722,2015
+Business income taxes,Gross collections,345.55242699999997,2016
+Business income taxes,Gross collections,338.529154,2017
+Business income taxes,Gross collections,262.742024,2018
+Business income taxes,Gross collections,277.057735,2019
+Business income taxes,Gross collections,263.563107,2020
+Business income taxes,Gross collections,419.00884099999996,2021
+Business income taxes,Gross collections,475.87109899999996,2022
+Business income taxes,Gross collections,456.94077999999996,2023
+Business income taxes,Gross collections,565.085519,2024
+Business income taxes,Gross collections,486.383988,2025
+Employment taxes,Gross collections,443.831352,1994
+Employment taxes,Gross collections,465.405305,1995
+Employment taxes,Gross collections,492.36517799999996,1996
+Employment taxes,Gross collections,528.596833,1997
+Employment taxes,Gross collections,557.799193,1998
+Employment taxes,Gross collections,598.669865,1999
+Employment taxes,Gross collections,639.651814,2000
+Employment taxes,Gross collections,682.222895,2001
+Employment taxes,Gross collections,688.077238,2002
+Employment taxes,Gross collections,695.9758009999999,2003
+Employment taxes,Gross collections,717.247296,2004
+Employment taxes,Gross collections,771.441662,2005
+Employment taxes,Gross collections,814.819218,2006
+Employment taxes,Gross collections,849.732729,2007
+Employment taxes,Gross collections,883.197626,2008
+Employment taxes,Gross collections,858.1638642673399,2009
+Employment taxes,Gross collections,824.18833726061,2010
+Employment taxes,Gross collections,767.504822,2011
+Employment taxes,Gross collections,784.396853,2012
+Employment taxes,Gross collections,897.8471506577299,2013
+Employment taxes,Gross collections,976.2232469999999,2014
+Employment taxes,Gross collections,1022.3589159999999,2015
+Employment taxes,Gross collections,1073.907715,2016
+Employment taxes,Gross collections,1123.473137,2017
+Employment taxes,Gross collections,1133.199527,2018
+Employment taxes,Gross collections,1207.553842,2019
+Employment taxes,Gross collections,1268.0765939999999,2020
+Employment taxes,Gross collections,1258.1708859999999,2021
+Employment taxes,Gross collections,1417.8098029999999,2022
+Employment taxes,Gross collections,1566.109766,2023
+Employment taxes,Gross collections,1661.154748,2024
+Employment taxes,Gross collections,1694.434489,2025
+Estate and gift taxes,Gross collections,15.606793,1994
+Estate and gift taxes,Gross collections,15.144394,1995
+Estate and gift taxes,Gross collections,17.591817,1996
+Estate and gift taxes,Gross collections,20.356400999999998,1997
+Estate and gift taxes,Gross collections,24.630962,1998
+Estate and gift taxes,Gross collections,28.385607,1999
+Estate and gift taxes,Gross collections,29.721619999999998,2000
+Estate and gift taxes,Gross collections,29.247916,2001
+Estate and gift taxes,Gross collections,27.241515,2002
+Estate and gift taxes,Gross collections,22.826908,2003
+Estate and gift taxes,Gross collections,25.579462,2004
+Estate and gift taxes,Gross collections,25.605531,2005
+Estate and gift taxes,Gross collections,28.687524999999997,2006
+Estate and gift taxes,Gross collections,26.977953,2007
+Estate and gift taxes,Gross collections,29.823935,2008
+Estate and gift taxes,Gross collections,24.677322,2009
+Estate and gift taxes,Gross collections,19.750836,2010
+Estate and gift taxes,Gross collections,9.079374999999999,2011
+Estate and gift taxes,Gross collections,14.450249,2012
+Estate and gift taxes,Gross collections,19.83014769452999,2013
+Estate and gift taxes,Gross collections,20.154954999999998,2014
+Estate and gift taxes,Gross collections,20.042039,2015
+Estate and gift taxes,Gross collections,22.337137,2016
+Estate and gift taxes,Gross collections,23.780442999999998,2017
+Estate and gift taxes,Gross collections,23.865669,2018
+Estate and gift taxes,Gross collections,17.565044,2019
+Estate and gift taxes,Gross collections,18.197587,2020
+Estate and gift taxes,Gross collections,28.045738999999998,2021
+Estate and gift taxes,Gross collections,33.355275999999996,2022
+Estate and gift taxes,Gross collections,35.434261,2023
+Estate and gift taxes,Gross collections,32.867889,2024
+Estate and gift taxes,Gross collections,31.111136,2025
+Excise taxes,Gross collections,43.004794,1994
+Excise taxes,Gross collections,44.980627,1995
+Excise taxes,Gross collections,42.221610999999996,1996
+Excise taxes,Gross collections,44.805620999999995,1997
+Excise taxes,Gross collections,45.642716,1998
+Excise taxes,Gross collections,58.585763,1999
+Excise taxes,Gross collections,54.810894999999995,2000
+Excise taxes,Gross collections,52.418848,2001
+Excise taxes,Gross collections,52.136835,2002
+Excise taxes,Gross collections,52.771159999999995,2003
+Excise taxes,Gross collections,54.807224999999995,2004
+Excise taxes,Gross collections,57.252098,2005
+Excise taxes,Gross collections,57.989543,2006
+Excise taxes,Gross collections,53.049611999999996,2007
+Excise taxes,Gross collections,51.70784,2008
+Excise taxes,Gross collections,46.63164574093,2009
+Excise taxes,Gross collections,47.19005699999998,2010
+Excise taxes,Gross collections,49.337562999999996,2011
+Excise taxes,Gross collections,56.174937,2012
+Excise taxes,Gross collections,61.03367359521001,2013
+Excise taxes,Gross collections,71.158076,2014
+Excise taxes,Gross collections,77.201882,2015
+Excise taxes,Gross collections,75.832669,2016
+Excise taxes,Gross collections,63.503608,2017
+Excise taxes,Gross collections,73.718206,2018
+Excise taxes,Gross collections,80.756624,2019
+Excise taxes,Gross collections,72.05984099999999,2020
+Excise taxes,Gross collections,58.289822,2021
+Excise taxes,Gross collections,70.67911699999999,2022
+Excise taxes,Gross collections,74.24876499999999,2023
+Excise taxes,Gross collections,77.947724,2024
+Excise taxes,Gross collections,90.61193399999999,2025
+Individual income taxes,Gross collections,619.819153,1994
+Individual income taxes,Gross collections,675.7793369999999,1995
+Individual income taxes,Gross collections,745.313276,1996
+Individual income taxes,Gross collections,825.0208799999999,1997
+Individual income taxes,Gross collections,928.0658559999999,1998
+Individual income taxes,Gross collections,1002.185765,1999
+Individual income taxes,Gross collections,1137.077702,2000
+Individual income taxes,Gross collections,1178.2098799999999,2001
+Individual income taxes,Gross collections,1037.733908,2002
+Individual income taxes,Gross collections,987.2088779999999,2003
+Individual income taxes,Gross collections,990.24876,2004
+Individual income taxes,Gross collections,1107.500994,2005
+Individual income taxes,Gross collections,1236.2593709999999,2006
+Individual income taxes,Gross collections,1366.241437,2007
+Individual income taxes,Gross collections,1425.990183,2008
+Individual income taxes,Gross collections,1190.3827569999999,2009
+Individual income taxes,Gross collections,1175.9895278142903,2010
+Individual income taxes,Gross collections,1346.182227,2011
+Individual income taxes,Gross collections,1387.836515,2012
+Individual income taxes,Gross collections,1564.35449444537,2013
+Individual income taxes,Gross collections,1643.6239679999999,2014
+Individual income taxes,Gross collections,1793.1856989999999,2015
+Individual income taxes,Gross collections,1815.819135,2016
+Individual income taxes,Gross collections,1867.4277969999998,2017
+Individual income taxes,Gross collections,1971.9412009999999,2018
+Individual income taxes,Gross collections,1981.6507159999999,2019
+Individual income taxes,Gross collections,1871.170827,2020
+Individual income taxes,Gross collections,2348.054224,2021
+Individual income taxes,Gross collections,2903.798899,2022
+Individual income taxes,Gross collections,2561.601596,2023
+Individual income taxes,Gross collections,2763.433598,2024
+Individual income taxes,Gross collections,3011.2207599999997,2025
+"United States, total",Gross collections,1276.466776,1994
+"United States, total",Gross collections,1375.731835,1995
+"United States, total",Gross collections,1486.5466735507098,1996
+"United States, total",Gross collections,1623.2720709999999,1997
+"United States, total",Gross collections,1769.408739,1998
+"United States, total",Gross collections,1904.1518879999999,1999
+"United States, total",Gross collections,2096.916925,2000
+"United States, total",Gross collections,2128.831182,2001
+"United States, total",Gross collections,2016.6272689999998,2002
+"United States, total",Gross collections,1952.9290449999999,2003
+"United States, total",Gross collections,2018.5021029999998,2004
+"United States, total",Gross collections,2268.895122,2005
+"United States, total",Gross collections,2518.68023,2006
+"United States, total",Gross collections,2691.5375569999997,2007
+"United States, total",Gross collections,2745.03541,2008
+"United States, total",Gross collections,2345.33717733795,2009
+"United States, total",Gross collections,2345.0559780749,2010
+"United States, total",Gross collections,2414.952112,2011
+"United States, total",Gross collections,2524.320134,2012
+"United States, total",Gross collections,2855.05942041786,2013
+"United States, total",Gross collections,3064.3013579999997,2014
+"United States, total",Gross collections,3302.6772579999997,2015
+"United States, total",Gross collections,3333.449083,2016
+"United States, total",Gross collections,3416.7141389999997,2017
+"United States, total",Gross collections,3465.466627,2018
+"United States, total",Gross collections,3564.583961,2019
+"United States, total",Gross collections,3493.067956,2020
+"United States, total",Gross collections,4111.569512,2021
+"United States, total",Gross collections,4901.514193999999,2022
+"United States, total",Gross collections,4694.335168,2023
+"United States, total",Gross collections,5100.4894779999995,2024
+"United States, total",Gross collections,5313.762307,2025
+Business income taxes,Refunds,17.669539,1995
+Business income taxes,Refunds,17.649098,1996
+Business income taxes,Refunds,22.198898,1997
+Business income taxes,Refunds,25.424094,1998
+Business income taxes,Refunds,34.061844,1999
+Business income taxes,Refunds,30.382789,2000
+Business income taxes,Refunds,37.939963,2001
+Business income taxes,Refunds,66.757609,2002
+Business income taxes,Refunds,65.332415,2003
+Business income taxes,Refunds,45.849883999999996,2004
+Business income taxes,Refunds,34.332049,2005
+Business income taxes,Refunds,29.831391,2006
+Business income taxes,Refunds,27.054347,2007
+Business income taxes,Refunds,53.569392,2008
+Business income taxes,Refunds,95.20029743257,2009
+Business income taxes,Refunds,98.33860899999999,2010
+Business income taxes,Refunds,67.77700399999999,2011
+Business income taxes,Refunds,43.970393,2012
+Business income taxes,Refunds,41.56922344903,2013
+Business income taxes,Refunds,35.313521,2014
+Business income taxes,Refunds,50.052817,2015
+Business income taxes,Refunds,51.281425999999996,2016
+Business income taxes,Refunds,44.894839,2017
+Business income taxes,Refunds,60.089065999999995,2018
+Business income taxes,Refunds,51.292325999999996,2019
+Business income taxes,Refunds,59.425104999999995,2020
+Business income taxes,Refunds,53.086664999999996,2021
+Business income taxes,Refunds,55.611267,2022
+Business income taxes,Refunds,43.854645,2023
+Business income taxes,Refunds,36.717859,2024
+Business income taxes,Refunds,36.530440999999996,2025
+Employment taxes,Refunds,0.878806,1995
+Employment taxes,Refunds,1.04877,1996
+Employment taxes,Refunds,3.0297169999999998,1997
+Employment taxes,Refunds,4.4858199999999995,1998
+Employment taxes,Refunds,3.999304,1999
+Employment taxes,Refunds,4.904306,2000
+Employment taxes,Refunds,6.284234,2001
+Employment taxes,Refunds,3.9436709999999997,2002
+Employment taxes,Refunds,4.444914,2003
+Employment taxes,Refunds,3.6376009999999996,2004
+Employment taxes,Refunds,5.126365,2005
+Employment taxes,Refunds,4.917599,2006
+Employment taxes,Refunds,11.690664,2007
+Employment taxes,Refunds,5.713515,2008
+Employment taxes,Refunds,3.39577486596,2009
+Employment taxes,Refunds,4.216048,2010
+Employment taxes,Refunds,4.780142,2011
+Employment taxes,Refunds,3.729631,2012
+Employment taxes,Refunds,6.3757246926799995,2013
+Employment taxes,Refunds,3.824556,2014
+Employment taxes,Refunds,3.0958989999999997,2015
+Employment taxes,Refunds,3.329627,2016
+Employment taxes,Refunds,3.423559,2017
+Employment taxes,Refunds,3.855059,2018
+Employment taxes,Refunds,3.720827,2019
+Employment taxes,Refunds,6.171683,2020
+Employment taxes,Refunds,27.409789999999997,2021
+Employment taxes,Refunds,67.871549,2022
+Employment taxes,Refunds,144.723954,2023
+Employment taxes,Refunds,12.134476999999999,2024
+Employment taxes,Refunds,73.603658,2025
+Estate and gift taxes,Refunds,0.387215,1995
+Estate and gift taxes,Refunds,0.426291,1996
+Estate and gift taxes,Refunds,0.511721,1997
+Estate and gift taxes,Refunds,0.560682,1998
+Estate and gift taxes,Refunds,0.6542669999999999,1999
+Estate and gift taxes,Refunds,0.7723409999999999,2000
+Estate and gift taxes,Refunds,0.923912,2001
+Estate and gift taxes,Refunds,0.803406,2002
+Estate and gift taxes,Refunds,0.9441039999999999,2003
+Estate and gift taxes,Refunds,0.7831359999999999,2004
+Estate and gift taxes,Refunds,0.882806,2005
+Estate and gift taxes,Refunds,0.850607,2006
+Estate and gift taxes,Refunds,0.9693309999999999,2007
+Estate and gift taxes,Refunds,1.021742,2008
+Estate and gift taxes,Refunds,1.24855,2009
+Estate and gift taxes,Refunds,0.9080689999999999,2010
+Estate and gift taxes,Refunds,1.7780779999999998,2011
+Estate and gift taxes,Refunds,0.5046309999999999,2012
+Estate and gift taxes,Refunds,1.0473288056599999,2013
+Estate and gift taxes,Refunds,0.8797459999999999,2014
+Estate and gift taxes,Refunds,0.9230229999999999,2015
+Estate and gift taxes,Refunds,0.9999803301699999,2016
+Estate and gift taxes,Refunds,1.047455,2017
+Estate and gift taxes,Refunds,0.922321,2018
+Estate and gift taxes,Refunds,0.9284899999999999,2019
+Estate and gift taxes,Refunds,0.609686,2020
+Estate and gift taxes,Refunds,0.949178,2021
+Estate and gift taxes,Refunds,0.84815,2022
+Estate and gift taxes,Refunds,1.850749,2023
+Estate and gift taxes,Refunds,1.299525,2024
+Estate and gift taxes,Refunds,1.800868,2025
+Excise taxes,Refunds,1.830666,1995
+Excise taxes,Refunds,1.9986869999999999,1996
+Excise taxes,Refunds,1.7603,1997
+Excise taxes,Refunds,1.5683209999999999,1998
+Excise taxes,Refunds,1.666745,1999
+Excise taxes,Refunds,1.801591,2000
+Excise taxes,Refunds,1.947938,2001
+Excise taxes,Refunds,2.248229,2002
+Excise taxes,Refunds,2.026121,2003
+Excise taxes,Refunds,1.9554779999999998,2004
+Excise taxes,Refunds,2.131539,2005
+Excise taxes,Refunds,2.163021,2006
+Excise taxes,Refunds,6.890764,2007
+Excise taxes,Refunds,2.401462,2008
+Excise taxes,Refunds,1.4968641651099999,2009
+Excise taxes,Refunds,1.8660459999999999,2010
+Excise taxes,Refunds,1.848623,2011
+Excise taxes,Refunds,1.163654,2012
+Excise taxes,Refunds,1.1377635182399997,2013
+Excise taxes,Refunds,1.386395,2014
+Excise taxes,Refunds,7.44578,2015
+Excise taxes,Refunds,1.300563,2016
+Excise taxes,Refunds,1.6468969999999998,2017
+Excise taxes,Refunds,1.315885,2018
+Excise taxes,Refunds,1.5708119999999999,2019
+Excise taxes,Refunds,2.457217,2020
+Excise taxes,Refunds,2.412501,2021
+Excise taxes,Refunds,1.778271,2022
+Excise taxes,Refunds,2.174724,2023
+Excise taxes,Refunds,5.839455999999999,2024
+Excise taxes,Refunds,4.9877839999999996,2025
+Individual income taxes,Refunds,85.325074,1995
+Individual income taxes,Refunds,89.323199,1996
+Individual income taxes,Refunds,113.60826399999999,1997
+Individual income taxes,Refunds,120.35490999999999,1998
+Individual income taxes,Refunds,146.951967,1999
+Individual income taxes,Refunds,158.726496,2000
+Individual income taxes,Refunds,206.73644,2001
+Individual income taxes,Refunds,210.15902499999999,2002
+Individual income taxes,Refunds,229.80924299999998,2003
+Individual income taxes,Refunds,227.573835,2004
+Individual income taxes,Refunds,227.57146999999998,2005
+Individual income taxes,Refunds,242.63046799999998,2006
+Individual income taxes,Refunds,248.64145399999998,2007
+Individual income taxes,Refunds,366.132092,2008
+Individual income taxes,Refunds,336.34414799999996,2009
+Individual income taxes,Refunds,361.974202,2010
+Individual income taxes,Refunds,339.69649599999997,2011
+Individual income taxes,Refunds,324.060446,2012
+Individual income taxes,Refunds,314.22368231983,2013
+Individual income taxes,Refunds,332.141708,2014
+Individual income taxes,Refunds,348.456372,2015
+Individual income taxes,Refunds,369.23447,2016
+Individual income taxes,Refunds,385.959123,2017
+Individual income taxes,Refunds,397.70239599999996,2018
+Individual income taxes,Refunds,394.591455,2019
+Individual income taxes,Refunds,667.491102,2020
+Individual income taxes,Refunds,1053.96315,2021
+Individual income taxes,Refunds,515.6224569999999,2022
+Individual income taxes,Refunds,466.447613,2023
+Individual income taxes,Refunds,496.669741,2024
+Individual income taxes,Refunds,521.86261,2025
+"United States, total",Refunds,106.091301,1995
+"United States, total",Refunds,110.446045,1996
+"United States, total",Refunds,141.10889899999998,1997
+"United States, total",Refunds,152.393827,1998
+"United States, total",Refunds,187.334127,1999
+"United States, total",Refunds,196.587519,2000
+"United States, total",Refunds,253.832487,2001
+"United States, total",Refunds,283.91194,2002
+"United States, total",Refunds,302.55679699999996,2003
+"United States, total",Refunds,279.799934,2004
+"United States, total",Refunds,270.044229,2005
+"United States, total",Refunds,280.393087,2006
+"United States, total",Refunds,295.24656,2007
+"United States, total",Refunds,428.83820199999997,2008
+"United States, total",Refunds,437.68563446363993,2009
+"United States, total",Refunds,467.30297299999995,2010
+"United States, total",Refunds,415.880344,2011
+"United States, total",Refunds,373.42875399999997,2012
+"United States, total",Refunds,364.35372278544,2013
+"United States, total",Refunds,373.545926,2014
+"United States, total",Refunds,403.272691,2015
+"United States, total",Refunds,426.14606599999996,2016
+"United States, total",Refunds,436.97187299999996,2017
+"United States, total",Refunds,463.884727,2018
+"United States, total",Refunds,452.103909,2019
+"United States, total",Refunds,736.1547929999999,2020
+"United States, total",Refunds,1137.821285,2021
+"United States, total",Refunds,641.731694,2022
+"United States, total",Refunds,659.051685,2023
+"United States, total",Refunds,552.661058,2024
+"United States, total",Refunds,638.785361,2025
+Business income taxes,Net collections,156.752634,1995
+Business income taxes,Net collections,171.40569299999999,1996
+Business income taxes,Net collections,182.29343799999998,1997
+Business income taxes,Net collections,187.845917,1998
+Business income taxes,Net collections,182.263045,1999
+Business income taxes,Net collections,205.27210499999998,2000
+Business income taxes,Net collections,148.79167999999999,2001
+Business income taxes,Net collections,144.679991,2002
+Business income taxes,Net collections,128.813883,2003
+Business income taxes,Net collections,184.769475,2004
+Business income taxes,Net collections,272.762788,2005
+Business income taxes,Net collections,351.09318199999996,2006
+Business income taxes,Net collections,368.481478,2007
+Business income taxes,Net collections,300.74643299999997,2008
+Business income taxes,Net collections,130.28129089710998,2009
+Business income taxes,Net collections,179.59861099999992,2010
+Business income taxes,Net collections,175.07111799999998,2011
+Business income taxes,Net collections,237.491187,2012
+Business income taxes,Net collections,270.42473057598994,2013
+Business income taxes,Net collections,317.827591,2014
+Business income taxes,Net collections,339.83590499999997,2015
+Business income taxes,Net collections,294.271001,2016
+Business income taxes,Net collections,293.634315,2017
+Business income taxes,Net collections,202.65295799999998,2018
+Business income taxes,Net collections,225.76540899999998,2019
+Business income taxes,Net collections,204.138002,2020
+Business income taxes,Net collections,365.922176,2021
+Business income taxes,Net collections,420.25983199999996,2022
+Business income taxes,Net collections,413.08613499999996,2023
+Business income taxes,Net collections,528.36766,2024
+Business income taxes,Net collections,449.853547,2025
+Employment taxes,Net collections,464.526498,1995
+Employment taxes,Net collections,491.31640799999997,1996
+Employment taxes,Net collections,525.5671159999999,1997
+Employment taxes,Net collections,553.313373,1998
+Employment taxes,Net collections,594.670561,1999
+Employment taxes,Net collections,634.7475079999999,2000
+Employment taxes,Net collections,675.938661,2001
+Employment taxes,Net collections,684.133567,2002
+Employment taxes,Net collections,691.530887,2003
+Employment taxes,Net collections,713.609695,2004
+Employment taxes,Net collections,766.315297,2005
+Employment taxes,Net collections,809.901619,2006
+Employment taxes,Net collections,838.042065,2007
+Employment taxes,Net collections,877.484111,2008
+Employment taxes,Net collections,854.7680894013799,2009
+Employment taxes,Net collections,819.97228926061,2010
+Employment taxes,Net collections,762.7246799999999,2011
+Employment taxes,Net collections,780.6672219999999,2012
+Employment taxes,Net collections,891.4714259650499,2013
+Employment taxes,Net collections,972.398691,2014
+Employment taxes,Net collections,1019.263017,2015
+Employment taxes,Net collections,1070.578088,2016
+Employment taxes,Net collections,1120.0495779999999,2017
+Employment taxes,Net collections,1129.344468,2018
+Employment taxes,Net collections,1203.833015,2019
+Employment taxes,Net collections,1261.9049109999999,2020
+Employment taxes,Net collections,1230.761096,2021
+Employment taxes,Net collections,1349.938254,2022
+Employment taxes,Net collections,1421.385812,2023
+Employment taxes,Net collections,1649.0202709999999,2024
+Employment taxes,Net collections,1620.830831,2025
+Estate and gift taxes,Net collections,14.757178,1995
+Estate and gift taxes,Net collections,17.165526,1996
+Estate and gift taxes,Net collections,19.844679,1997
+Estate and gift taxes,Net collections,24.07028,1998
+Estate and gift taxes,Net collections,27.73134,1999
+Estate and gift taxes,Net collections,28.949278999999997,2000
+Estate and gift taxes,Net collections,28.324005,2001
+Estate and gift taxes,Net collections,26.438108999999997,2002
+Estate and gift taxes,Net collections,21.882804,2003
+Estate and gift taxes,Net collections,24.796326,2004
+Estate and gift taxes,Net collections,24.722725,2005
+Estate and gift taxes,Net collections,27.836917999999997,2006
+Estate and gift taxes,Net collections,26.008622,2007
+Estate and gift taxes,Net collections,28.802193,2008
+Estate and gift taxes,Net collections,23.428772,2009
+Estate and gift taxes,Net collections,18.842767,2010
+Estate and gift taxes,Net collections,7.301297,2011
+Estate and gift taxes,Net collections,13.945618,2012
+Estate and gift taxes,Net collections,18.782818888869993,2013
+Estate and gift taxes,Net collections,19.275209,2014
+Estate and gift taxes,Net collections,19.119016,2015
+Estate and gift taxes,Net collections,21.337156669829998,2016
+Estate and gift taxes,Net collections,22.732988,2017
+Estate and gift taxes,Net collections,22.943348,2018
+Estate and gift taxes,Net collections,16.636554,2019
+Estate and gift taxes,Net collections,17.587901,2020
+Estate and gift taxes,Net collections,27.096560999999998,2021
+Estate and gift taxes,Net collections,32.507126,2022
+Estate and gift taxes,Net collections,33.583512,2023
+Estate and gift taxes,Net collections,31.568364,2024
+Estate and gift taxes,Net collections,29.310267999999997,2025
+Excise taxes,Net collections,43.149961,1995
+Excise taxes,Net collections,40.222924,1996
+Excise taxes,Net collections,43.045322,1997
+Excise taxes,Net collections,44.074394999999996,1998
+Excise taxes,Net collections,56.919017999999994,1999
+Excise taxes,Net collections,53.009304,2000
+Excise taxes,Net collections,50.470909999999996,2001
+Excise taxes,Net collections,49.888605999999996,2002
+Excise taxes,Net collections,50.745039,2003
+Excise taxes,Net collections,52.851746999999996,2004
+Excise taxes,Net collections,55.120559,2005
+Excise taxes,Net collections,55.826522,2006
+Excise taxes,Net collections,46.158848,2007
+Excise taxes,Net collections,49.306377999999995,2008
+Excise taxes,Net collections,45.13478157582,2009
+Excise taxes,Net collections,45.324010999999985,2010
+Excise taxes,Net collections,47.48894,2011
+Excise taxes,Net collections,55.011283,2012
+Excise taxes,Net collections,59.89591007697002,2013
+Excise taxes,Net collections,69.771681,2014
+Excise taxes,Net collections,76.457302,2015
+Excise taxes,Net collections,74.532106,2016
+Excise taxes,Net collections,61.856711,2017
+Excise taxes,Net collections,72.402321,2018
+Excise taxes,Net collections,79.185812,2019
+Excise taxes,Net collections,69.60262399999999,2020
+Excise taxes,Net collections,55.877320999999995,2021
+Excise taxes,Net collections,68.900846,2022
+Excise taxes,Net collections,72.074041,2023
+Excise taxes,Net collections,72.108268,2024
+Excise taxes,Net collections,85.62415,2025
+Individual income taxes,Net collections,590.454263,1995
+Individual income taxes,Net collections,655.9900769999999,1996
+Individual income taxes,Net collections,711.412616,1997
+Individual income taxes,Net collections,807.7109459999999,1998
+Individual income taxes,Net collections,855.233798,1999
+Individual income taxes,Net collections,978.3512059999999,2000
+Individual income taxes,Net collections,971.47344,2001
+Individual income taxes,Net collections,827.574883,2002
+Individual income taxes,Net collections,757.399635,2003
+Individual income taxes,Net collections,762.6749249999999,2004
+Individual income taxes,Net collections,879.929524,2005
+Individual income taxes,Net collections,993.6289029999999,2006
+Individual income taxes,Net collections,1117.5999829999998,2007
+Individual income taxes,Net collections,1059.858091,2008
+Individual income taxes,Net collections,854.038609,2009
+Individual income taxes,Net collections,814.0153258142902,2010
+Individual income taxes,Net collections,1006.485731,2011
+Individual income taxes,Net collections,1063.776069,2012
+Individual income taxes,Net collections,1250.13081212554,2013
+Individual income taxes,Net collections,1311.48226,2014
+Individual income taxes,Net collections,1444.729327,2015
+Individual income taxes,Net collections,1446.5846649999999,2016
+Individual income taxes,Net collections,1481.468674,2017
+Individual income taxes,Net collections,1574.238805,2018
+Individual income taxes,Net collections,1587.0592609999999,2019
+Individual income taxes,Net collections,1203.679725,2020
+Individual income taxes,Net collections,1294.091074,2021
+Individual income taxes,Net collections,2388.176442,2022
+Individual income taxes,Net collections,2095.1539829999997,2023
+Individual income taxes,Net collections,2266.763857,2024
+Individual income taxes,Net collections,2489.35815,2025
+"United States, total",Net collections,1269.640535,1995
+"United States, total",Net collections,1376.1006285507099,1996
+"United States, total",Net collections,1482.163171,1997
+"United States, total",Net collections,1617.0149119999999,1998
+"United States, total",Net collections,1716.817761,1999
+"United States, total",Net collections,1900.3294059999998,2000
+"United States, total",Net collections,1874.9986959999999,2001
+"United States, total",Net collections,1732.715156,2002
+"United States, total",Net collections,1650.372248,2003
+"United States, total",Net collections,1738.702169,2004
+"United States, total",Net collections,1998.8508929999998,2005
+"United States, total",Net collections,2238.287143,2006
+"United States, total",Net collections,2396.290997,2007
+"United States, total",Net collections,2316.197206,2008
+"United States, total",Net collections,1907.6515428743105,2009
+"United States, total",Net collections,1877.7530049999998,2010
+"United States, total",Net collections,1999.071767,2011
+"United States, total",Net collections,2150.89138,2012
+"United States, total",Net collections,2490.7056976324197,2013
+"United States, total",Net collections,2690.755432,2014
+"United States, total",Net collections,2899.404567,2015
+"United States, total",Net collections,2907.3030169999997,2016
+"United States, total",Net collections,2979.7422659999997,2017
+"United States, total",Net collections,3001.5818999999997,2018
+"United States, total",Net collections,3112.480052,2019
+"United States, total",Net collections,2756.9131629999997,2020
+"United States, total",Net collections,2973.748227,2021
+"United States, total",Net collections,4259.7825,2022
+"United States, total",Net collections,4035.2834829999997,2023
+"United States, total",Net collections,4547.82842,2024
+"United States, total",Net collections,4674.976946,2025
+Business income taxes,Share of gross collections,12.7,1995
+Business income taxes,Share of gross collections,12.7,1996
+Business income taxes,Share of gross collections,12.6,1997
+Business income taxes,Share of gross collections,12.1,1998
+Business income taxes,Share of gross collections,11.4,1999
+Business income taxes,Share of gross collections,11.2,2000
+Business income taxes,Share of gross collections,8.8,2001
+Business income taxes,Share of gross collections,10.5,2002
+Business income taxes,Share of gross collections,9.9,2003
+Business income taxes,Share of gross collections,11.4,2004
+Business income taxes,Share of gross collections,13.53,2005
+Business income taxes,Share of gross collections,15.1,2006
+Business income taxes,Share of gross collections,14.7,2007
+Business income taxes,Share of gross collections,12.9,2008
+Business income taxes,Share of gross collections,9.61403718443633,2009
+Business income taxes,Share of gross collections,11.9,2010
+Business income taxes,Share of gross collections,10.1,2011
+Business income taxes,Share of gross collections,11.1,2012
+Business income taxes,Share of gross collections,10.9,2013
+Business income taxes,Share of gross collections,11.5,2014
+Business income taxes,Share of gross collections,11.8,2015
+Business income taxes,Share of gross collections,10.4,2016
+Business income taxes,Share of gross collections,9.9,2017
+Business income taxes,Share of gross collections,7.6,2018
+Business income taxes,Share of gross collections,7.8,2019
+Business income taxes,Share of gross collections,7.5,2020
+Business income taxes,Share of gross collections,10.2,2021
+Business income taxes,Share of gross collections,9.7,2022
+Business income taxes,Share of gross collections,9.7,2023
+Business income taxes,Share of gross collections,11.1,2024
+Business income taxes,Share of gross collections,9.2,2025
+Employment taxes,Share of gross collections,33.8,1995
+Employment taxes,Share of gross collections,33.1,1996
+Employment taxes,Share of gross collections,32.6,1997
+Employment taxes,Share of gross collections,31.5,1998
+Employment taxes,Share of gross collections,31.4,1999
+Employment taxes,Share of gross collections,30.5,2000
+Employment taxes,Share of gross collections,32,2001
+Employment taxes,Share of gross collections,34.1,2002
+Employment taxes,Share of gross collections,35.6,2003
+Employment taxes,Share of gross collections,35.5,2004
+Employment taxes,Share of gross collections,34,2005
+Employment taxes,Share of gross collections,32.4,2006
+Employment taxes,Share of gross collections,31.6,2007
+Employment taxes,Share of gross collections,32.2,2008
+Employment taxes,Share of gross collections,36.5902128086073,2009
+Employment taxes,Share of gross collections,35.1,2010
+Employment taxes,Share of gross collections,31.8,2011
+Employment taxes,Share of gross collections,31.1,2012
+Employment taxes,Share of gross collections,31.4,2013
+Employment taxes,Share of gross collections,31.9,2014
+Employment taxes,Share of gross collections,31,2015
+Employment taxes,Share of gross collections,32.2,2016
+Employment taxes,Share of gross collections,32.9,2017
+Employment taxes,Share of gross collections,32.7,2018
+Employment taxes,Share of gross collections,33.9,2019
+Employment taxes,Share of gross collections,36.3,2020
+Employment taxes,Share of gross collections,30.6,2021
+Employment taxes,Share of gross collections,28.9,2022
+Employment taxes,Share of gross collections,33.4,2023
+Employment taxes,Share of gross collections,32.6,2024
+Employment taxes,Share of gross collections,31.9,2025
+Estate and gift taxes,Share of gross collections,1.1,1995
+Estate and gift taxes,Share of gross collections,1.2,1996
+Estate and gift taxes,Share of gross collections,1.3,1997
+Estate and gift taxes,Share of gross collections,1.4,1998
+Estate and gift taxes,Share of gross collections,1.5,1999
+Estate and gift taxes,Share of gross collections,1.4,2000
+Estate and gift taxes,Share of gross collections,1.4,2001
+Estate and gift taxes,Share of gross collections,1.4,2002
+Estate and gift taxes,Share of gross collections,1.2,2003
+Estate and gift taxes,Share of gross collections,1.3,2004
+Estate and gift taxes,Share of gross collections,1.13,2005
+Estate and gift taxes,Share of gross collections,1.1,2006
+Estate and gift taxes,Share of gross collections,1,2007
+Estate and gift taxes,Share of gross collections,1.1,2008
+Estate and gift taxes,Share of gross collections,1.05218653584001,2009
+Estate and gift taxes,Share of gross collections,0.8,2010
+Estate and gift taxes,Share of gross collections,0.4,2011
+Estate and gift taxes,Share of gross collections,0.6,2012
+Estate and gift taxes,Share of gross collections,0.7,2013
+Estate and gift taxes,Share of gross collections,0.7,2014
+Estate and gift taxes,Share of gross collections,0.6,2015
+Estate and gift taxes,Share of gross collections,0.7,2016
+Estate and gift taxes,Share of gross collections,0.7,2017
+Estate and gift taxes,Share of gross collections,0.7,2018
+Estate and gift taxes,Share of gross collections,0.5,2019
+Estate and gift taxes,Share of gross collections,0.5,2020
+Estate and gift taxes,Share of gross collections,0.7,2021
+Estate and gift taxes,Share of gross collections,0.7,2022
+Estate and gift taxes,Share of gross collections,0.8,2023
+Estate and gift taxes,Share of gross collections,0.6,2024
+Estate and gift taxes,Share of gross collections,0.6,2025
+Excise taxes,Share of gross collections,3.3,1995
+Excise taxes,Share of gross collections,2.8,1996
+Excise taxes,Share of gross collections,2.8,1997
+Excise taxes,Share of gross collections,2.6,1998
+Excise taxes,Share of gross collections,3.1,1999
+Excise taxes,Share of gross collections,2.6,2000
+Excise taxes,Share of gross collections,2.5,2001
+Excise taxes,Share of gross collections,2.6,2002
+Excise taxes,Share of gross collections,2.7,2003
+Excise taxes,Share of gross collections,2.7,2004
+Excise taxes,Share of gross collections,2.52,2005
+Excise taxes,Share of gross collections,2.3,2006
+Excise taxes,Share of gross collections,2,2007
+Excise taxes,Share of gross collections,1.9,2008
+Excise taxes,Share of gross collections,1.98827043682729,2009
+Excise taxes,Share of gross collections,2,2010
+Excise taxes,Share of gross collections,2,2011
+Excise taxes,Share of gross collections,2.2,2012
+Excise taxes,Share of gross collections,2.1,2013
+Excise taxes,Share of gross collections,2.3,2014
+Excise taxes,Share of gross collections,2.3,2015
+Excise taxes,Share of gross collections,2.3,2016
+Excise taxes,Share of gross collections,1.9,2017
+Excise taxes,Share of gross collections,2.1,2018
+Excise taxes,Share of gross collections,2.3,2019
+Excise taxes,Share of gross collections,2.1,2020
+Excise taxes,Share of gross collections,1.4,2021
+Excise taxes,Share of gross collections,1.4,2022
+Excise taxes,Share of gross collections,1.6,2023
+Excise taxes,Share of gross collections,1.5,2024
+Excise taxes,Share of gross collections,1.7,2025
+Individual income taxes,Share of gross collections,49.1,1995
+Individual income taxes,Share of gross collections,50.1,1996
+Individual income taxes,Share of gross collections,50.7,1997
+Individual income taxes,Share of gross collections,52.5,1998
+Individual income taxes,Share of gross collections,52.6,1999
+Individual income taxes,Share of gross collections,54.2,2000
+Individual income taxes,Share of gross collections,55.3,2001
+Individual income taxes,Share of gross collections,51.5,2002
+Individual income taxes,Share of gross collections,50.5,2003
+Individual income taxes,Share of gross collections,49.1,2004
+Individual income taxes,Share of gross collections,48.81,2005
+Individual income taxes,Share of gross collections,49.1,2006
+Individual income taxes,Share of gross collections,50.8,2007
+Individual income taxes,Share of gross collections,52,2008
+Individual income taxes,Share of gross collections,50.8,2009
+Individual income taxes,Share of gross collections,50.1,2010
+Individual income taxes,Share of gross collections,55.7,2011
+Individual income taxes,Share of gross collections,55,2012
+Individual income taxes,Share of gross collections,54.8,2013
+Individual income taxes,Share of gross collections,53.6,2014
+Individual income taxes,Share of gross collections,54.3,2015
+Individual income taxes,Share of gross collections,54.5,2016
+Individual income taxes,Share of gross collections,54.7,2017
+Individual income taxes,Share of gross collections,56.9,2018
+Individual income taxes,Share of gross collections,55.6,2019
+Individual income taxes,Share of gross collections,53.6,2020
+Individual income taxes,Share of gross collections,57.1,2021
+Individual income taxes,Share of gross collections,59.2,2022
+Individual income taxes,Share of gross collections,54.6,2023
+Individual income taxes,Share of gross collections,54.2,2024
+Individual income taxes,Share of gross collections,56.7,2025
+"United States, total",Share of gross collections,100,1995
+"United States, total",Share of gross collections,100,1996
+"United States, total",Share of gross collections,100,1997
+"United States, total",Share of gross collections,100,1998
+"United States, total",Share of gross collections,100,1999
+"United States, total",Share of gross collections,100,2000
+"United States, total",Share of gross collections,100,2001
+"United States, total",Share of gross collections,100,2002
+"United States, total",Share of gross collections,100,2003
+"United States, total",Share of gross collections,100,2004
+"United States, total",Share of gross collections,100,2005
+"United States, total",Share of gross collections,100,2006
+"United States, total",Share of gross collections,100,2007
+"United States, total",Share of gross collections,100,2008
+"United States, total",Share of gross collections,100,2009
+"United States, total",Share of gross collections,100,2010
+"United States, total",Share of gross collections,100,2011
+"United States, total",Share of gross collections,100,2012
+"United States, total",Share of gross collections,100,2013
+"United States, total",Share of gross collections,100,2014
+"United States, total",Share of gross collections,100,2015
+"United States, total",Share of gross collections,100,2016
+"United States, total",Share of gross collections,100,2017
+"United States, total",Share of gross collections,100,2018
+"United States, total",Share of gross collections,100,2019
+"United States, total",Share of gross collections,100,2020
+"United States, total",Share of gross collections,100,2021
+"United States, total",Share of gross collections,100,2022
+"United States, total",Share of gross collections,100,2023
+"United States, total",Share of gross collections,100,2024
+"United States, total",Share of gross collections,100,2025

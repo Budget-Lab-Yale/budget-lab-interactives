@@ -1,0 +1,701 @@
+{
+  "release": {
+    "updated": "September 29, 2026",
+    "version": "0.1-prototype"
+  },
+  "data_base_url": "./data/",
+  "tabs": [
+    {
+      "id": "collections-refunds",
+      "label": "1-1 Collections\nand Refunds",
+      "description": "Taxes the IRS collected and refunded each fiscal year since FY1994, by type of tax. From Table 1-1 of the IRS Data Book.",
+      "sections": [
+        {
+          "id": "overview",
+          "label": ""
+        },
+        {
+          "id": "trends",
+          "label": "Trends"
+        },
+        {
+          "id": "components",
+          "label": "Components"
+        },
+        {
+          "id": "table",
+          "label": "Table"
+        }
+      ],
+      "toggles": [
+        {
+          "id": "dollars",
+          "label": "Units",
+          "default": "nominal",
+          "applies_to_figures": [
+            "collections-by-type",
+            "refunds",
+            "components"
+          ],
+          "options": [
+            {
+              "id": "nominal",
+              "label": "Nominal dollars"
+            },
+            {
+              "id": "real",
+              "label": "FY2025 dollars"
+            },
+            {
+              "id": "share",
+              "label": "Share of total",
+              "spec": {
+                "value_prefix": "",
+                "value_suffix": "%",
+                "yAxisPolicy": {
+                  "min": 0.0,
+                  "max": 100.0,
+                  "autoWiden": {
+                    "step": 5.0
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "layout",
+          "label": "Layout",
+          "default": "combined",
+          "applies_to_figures": [
+            "components"
+          ],
+          "options": [
+            {
+              "id": "combined",
+              "label": "One chart"
+            },
+            {
+              "id": "panels",
+              "label": "One panel per part",
+              "spec": {
+                "columns": {
+                  "facet": "series"
+                },
+                "small_multiples": {
+                  "mode": "per-pane",
+                  "columns": 2.0,
+                  "pane_order": [
+                    "Withheld",
+                    "Payments (from FY2008)",
+                    "Estate and trust income tax (from FY2008)",
+                    "Other: payments plus estate and trust (to FY2008)",
+                    "FICA",
+                    "SECA",
+                    "Unemployment insurance",
+                    "Railroad retirement",
+                    "Corporation income tax",
+                    "Tax-exempt organizations' unrelated business income tax",
+                    "Estate tax",
+                    "Gift tax"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "id": "summary",
+          "short_label": "Summary by Year",
+          "figureType": "table",
+          "data": "collections-refunds/summary/data.csv",
+          "spec": {
+            "title": "Collections and Refunds by Type of Tax, {year}",
+            "subtitle": "Billions of nominal dollars; share of the U.S. total in percent.",
+            "data": "data.csv",
+            "stub": [
+              "tax_type"
+            ],
+            "header": [
+              "measure"
+            ],
+            "value": "value",
+            "source": "IRS Data Book, Table 1-1; The Budget Lab analysis.",
+            "row_order": [
+              "United States, total",
+              "Individual income taxes",
+              "Employment taxes",
+              "Business income taxes",
+              "Excise taxes",
+              "Estate and gift taxes"
+            ],
+            "column_order": [
+              "Gross collections",
+              "Refunds",
+              "Net collections",
+              "Share of gross collections"
+            ],
+            "emphasis_rows": [
+              "United States, total"
+            ],
+            "format": {
+              "default": {
+                "type": "number",
+                "decimals": 1.0,
+                "prefix": "$",
+                "thousands": true
+              },
+              "columns": {
+                "Share of gross collections": {
+                  "type": "number",
+                  "decimals": 1.0,
+                  "prefix": "",
+                  "suffix": "%"
+                }
+              }
+            }
+          },
+          "body_html": "<p>What the IRS collected and refunded in the fiscal year you pick, by type of tax. The share column is the IRS's own printed percentage of U.S. gross collections. Refunds and net collections begin in FY1995.</p>",
+          "section": "overview",
+          "selectors": [
+            {
+              "id": "year",
+              "label": "Fiscal year",
+              "kind": "single",
+              "default": "2025",
+              "options": [
+                {
+                  "id": "2025",
+                  "label": "FY2025"
+                },
+                {
+                  "id": "2024",
+                  "label": "FY2024"
+                },
+                {
+                  "id": "2023",
+                  "label": "FY2023"
+                },
+                {
+                  "id": "2022",
+                  "label": "FY2022"
+                },
+                {
+                  "id": "2021",
+                  "label": "FY2021"
+                },
+                {
+                  "id": "2020",
+                  "label": "FY2020"
+                },
+                {
+                  "id": "2019",
+                  "label": "FY2019"
+                },
+                {
+                  "id": "2018",
+                  "label": "FY2018"
+                },
+                {
+                  "id": "2017",
+                  "label": "FY2017"
+                },
+                {
+                  "id": "2016",
+                  "label": "FY2016"
+                },
+                {
+                  "id": "2015",
+                  "label": "FY2015"
+                },
+                {
+                  "id": "2014",
+                  "label": "FY2014"
+                },
+                {
+                  "id": "2013",
+                  "label": "FY2013"
+                },
+                {
+                  "id": "2012",
+                  "label": "FY2012"
+                },
+                {
+                  "id": "2011",
+                  "label": "FY2011"
+                },
+                {
+                  "id": "2010",
+                  "label": "FY2010"
+                },
+                {
+                  "id": "2009",
+                  "label": "FY2009"
+                },
+                {
+                  "id": "2008",
+                  "label": "FY2008"
+                },
+                {
+                  "id": "2007",
+                  "label": "FY2007"
+                },
+                {
+                  "id": "2006",
+                  "label": "FY2006"
+                },
+                {
+                  "id": "2005",
+                  "label": "FY2005"
+                },
+                {
+                  "id": "2004",
+                  "label": "FY2004"
+                },
+                {
+                  "id": "2003",
+                  "label": "FY2003"
+                },
+                {
+                  "id": "2002",
+                  "label": "FY2002"
+                },
+                {
+                  "id": "2001",
+                  "label": "FY2001"
+                },
+                {
+                  "id": "2000",
+                  "label": "FY2000"
+                },
+                {
+                  "id": "1999",
+                  "label": "FY1999"
+                },
+                {
+                  "id": "1998",
+                  "label": "FY1998"
+                },
+                {
+                  "id": "1997",
+                  "label": "FY1997"
+                },
+                {
+                  "id": "1996",
+                  "label": "FY1996"
+                },
+                {
+                  "id": "1995",
+                  "label": "FY1995"
+                },
+                {
+                  "id": "1994",
+                  "label": "FY1994"
+                }
+              ]
+            }
+          ],
+          "lead": true,
+          "figureNum": 1
+        },
+        {
+          "id": "collections-by-type",
+          "short_label": "Collections by Type of Tax",
+          "figureType": "chart",
+          "data": "collections-refunds/collections-by-type/data.csv",
+          "spec": {
+            "chartType": "area",
+            "data": "data.csv",
+            "title": "Federal Tax Collections by Type of Tax, FY1994-2025",
+            "subtitle": "{measure}. {dollars}.",
+            "source": "IRS Data Book, Table 1-1; The Budget Lab analysis.",
+            "note": "Real dollars: GDP price index (FRED GDPDEF, retrieved September 29, 2026), fiscal-year average, FY2025 dollars.",
+            "xAxisType": "numeric",
+            "series_order": [
+              "Individual income taxes",
+              "Employment taxes",
+              "Business income taxes",
+              "Excise taxes",
+              "Estate and gift taxes"
+            ],
+            "series_colors": {
+              "Individual income taxes": "#0072B2",
+              "Employment taxes": "#E69F00",
+              "Business income taxes": "#B8302C",
+              "Excise taxes": "#8856BF",
+              "Estate and gift taxes": "#2A8B3A"
+            },
+            "value_prefix": "$",
+            "value_suffix": "T"
+          },
+          "body_html": "<p>The five types of tax the IRS collects. They add up to the printed U.S. total in every year and measure, so the top of the stack is the total. Net collections begin in FY1995. The share view uses the IRS's own printed percentages.</p>",
+          "section": "trends",
+          "selectors": [
+            {
+              "id": "measure",
+              "label": "Measure",
+              "kind": "single",
+              "default": "gross",
+              "options": [
+                {
+                  "id": "gross",
+                  "label": "Gross collections"
+                },
+                {
+                  "id": "net",
+                  "label": "Net collections"
+                }
+              ]
+            }
+          ],
+          "figureNum": 2
+        },
+        {
+          "id": "refunds",
+          "short_label": "Refunds by Type of Tax",
+          "figureType": "chart",
+          "data": "collections-refunds/refunds/data.csv",
+          "spec": {
+            "chartType": "stacked",
+            "data": "data.csv",
+            "title": "Refunds by Type of Tax, FY1995-2025",
+            "subtitle": "{dollars}. Hatched: stimulus and advance payments, part of individual refunds.",
+            "source": "IRS Data Book, Table 1-1; The Budget Lab analysis.",
+            "xAxisType": "categorical",
+            "orientation": "vertical",
+            "barStack": {
+              "netDisplay": "none"
+            },
+            "series_order": [
+              "Individual income taxes",
+              "Employment taxes",
+              "Business income taxes",
+              "Excise taxes",
+              "Estate and gift taxes",
+              "Stimulus and advance payments"
+            ],
+            "series_colors": {
+              "Individual income taxes": "#0072B2",
+              "Employment taxes": "#E69F00",
+              "Business income taxes": "#B8302C",
+              "Excise taxes": "#8856BF",
+              "Estate and gift taxes": "#2A8B3A",
+              "Stimulus and advance payments": "#0072B2"
+            },
+            "series_patterns": {
+              "Stimulus and advance payments": "/"
+            },
+            "value_prefix": "$",
+            "value_suffix": "B"
+          },
+          "body_html": "<p>Refunds issued each fiscal year. The hatched segment on top of each bar is the part of\nindividual refunds that this table's notes name as stimulus or advance payments. The IRS\nstates them in nominal dollars:</p>\n<ul>\n<li>FY2001: $35.51 billion (FY2001 Data Book, note 1).</li>\n<li>FY2008: $95.7 billion (FY2008 Data Book, note 4).</li>\n<li>FY2009: $11.5 billion (FY2009 Data Book, note 6).</li>\n<li>FY2020: $273 billion (FY2020 Data Book, note 5).</li>\n<li>FY2021: $585.7 billion (FY2021 Data Book, note 5).</li>\n<li>FY2022: $50.9 billion (FY2022 Data Book, note 5).</li>\n</ul>",
+          "section": "trends",
+          "variants": [
+            {
+              "id": "nominal",
+              "spec": {
+                "annotations": {
+                  "points": [
+                    {
+                      "x": "2001",
+                      "y": 482.2817253,
+                      "label": "↙ FY2001: advance refunds, $35.5B",
+                      "dx": 10.0,
+                      "dy": 0.0
+                    },
+                    {
+                      "x": "2008",
+                      "y": 352.278202,
+                      "label": "FY2008-09: stimulus, $95.7B and $11.5B →",
+                      "dx": -12.0,
+                      "dy": 0.0
+                    },
+                    {
+                      "x": "2020",
+                      "y": 599.654793,
+                      "label": "FY2020: economic impact payments, $273.0B →",
+                      "dx": -12.0,
+                      "dy": 0.0
+                    },
+                    {
+                      "x": "2021",
+                      "y": 844.971285,
+                      "label": "FY2021-22: EIPs and advance CTC, $585.7B and $50.9B →",
+                      "dx": -12.0,
+                      "dy": 0.0
+                    }
+                  ]
+                },
+                "note": "Hatched segments, stimulus and advance payments: FY2001 $35.5B, FY2008 $95.7B, FY2009 $11.5B, FY2020 $273.0B, FY2021 $585.7B, FY2022 $50.9B. FY2015 excise refunds are printed as $7.4 billion; the book's own net collections imply $0.7 billion, an IRS misprint drawn as printed. "
+              }
+            },
+            {
+              "id": "real",
+              "spec": {
+                "annotations": {
+                  "points": [
+                    {
+                      "x": "2001",
+                      "y": 833.7842722,
+                      "label": "↙ FY2001: advance refunds, $61.4B",
+                      "dx": 10.0,
+                      "dy": 0.0
+                    },
+                    {
+                      "x": "2008",
+                      "y": 514.3817642,
+                      "label": "FY2008-09: stimulus, $139.7B and $16.6B →",
+                      "dx": -12.0,
+                      "dy": 0.0
+                    },
+                    {
+                      "x": "2020",
+                      "y": 731.0495596,
+                      "label": "FY2020: economic impact payments, $332.8B →",
+                      "dx": -12.0,
+                      "dy": 0.0
+                    },
+                    {
+                      "x": "2021",
+                      "y": 996.2374775,
+                      "label": "FY2021-22: EIPs and advance CTC, $690.6B and $56.0B →",
+                      "dx": -12.0,
+                      "dy": 0.0
+                    }
+                  ]
+                },
+                "note": "Hatched segments, stimulus and advance payments: FY2001 $61.4B, FY2008 $139.7B, FY2009 $16.6B, FY2020 $332.8B, FY2021 $690.6B, FY2022 $56.0B (FY2025 dollars). FY2015 excise refunds are printed as $7.4 billion; the book's own net collections imply $0.7 billion, an IRS misprint drawn as printed. Real dollars: GDP price index (FRED GDPDEF, retrieved September 29, 2026), fiscal-year average, FY2025 dollars."
+              }
+            },
+            {
+              "id": "share",
+              "spec": {
+                "annotations": {
+                  "points": []
+                },
+                "note": "Hatched segments, stimulus and advance payments: FY2001 14.0%, FY2008 22.3%, FY2009 2.6%, FY2020 37.1%, FY2021 51.5%, FY2022 7.9% of that year's refunds. FY2015 excise refunds are printed as $7.4 billion; the book's own net collections imply $0.7 billion, an IRS misprint drawn as printed. "
+              }
+            }
+          ],
+          "figureNum": 3
+        },
+        {
+          "id": "components",
+          "short_label": "Parts of Each Tax",
+          "figureType": "chart",
+          "data": "collections-refunds/components/data.csv",
+          "spec": {
+            "chartType": "line",
+            "data": "data.csv",
+            "title": "Gross Collections by Part, FY1994-2025",
+            "subtitle": "{tax_type}. {dollars}.",
+            "source": "IRS Data Book, Table 1-1; The Budget Lab analysis.",
+            "note": "Real dollars: GDP price index (FRED GDPDEF, retrieved September 29, 2026), fiscal-year average, FY2025 dollars.",
+            "xAxisType": "numeric",
+            "series_order": [
+              "Withheld",
+              "Payments (from FY2008)",
+              "Estate and trust income tax (from FY2008)",
+              "Other: payments plus estate and trust (to FY2008)",
+              "FICA",
+              "SECA",
+              "Unemployment insurance",
+              "Railroad retirement",
+              "Corporation income tax",
+              "Tax-exempt organizations' unrelated business income tax",
+              "Estate tax",
+              "Gift tax"
+            ],
+            "series_colors": {
+              "Withheld": "#0072B2",
+              "Payments (from FY2008)": "#E69F00",
+              "Estate and trust income tax (from FY2008)": "#B8302C",
+              "Other: payments plus estate and trust (to FY2008)": "#8856BF",
+              "FICA": "#0072B2",
+              "SECA": "#E69F00",
+              "Unemployment insurance": "#B8302C",
+              "Railroad retirement": "#8856BF",
+              "Corporation income tax": "#0072B2",
+              "Tax-exempt organizations' unrelated business income tax": "#E69F00",
+              "Estate tax": "#0072B2",
+              "Gift tax": "#E69F00"
+            },
+            "value_prefix": "$",
+            "value_suffix": "B"
+          },
+          "body_html": "<p>The parts of each type of tax, as the Data Book prints them. Individual income tax payments and estate and trust income tax are printed separately from the FY2008 book on; before that they are one line, <code>Other</code>, and FY2008 is the one year all three appear. Excise taxes have no parts in this table.</p>",
+          "section": "components",
+          "selectors": [
+            {
+              "id": "tax_type",
+              "label": "Type of tax",
+              "kind": "single",
+              "default": "individual",
+              "options": [
+                {
+                  "id": "individual",
+                  "label": "Individual income taxes"
+                },
+                {
+                  "id": "employment",
+                  "label": "Employment taxes"
+                },
+                {
+                  "id": "business",
+                  "label": "Business income taxes"
+                },
+                {
+                  "id": "estate_gift",
+                  "label": "Estate and gift taxes"
+                }
+              ]
+            }
+          ],
+          "figureNum": 4
+        },
+        {
+          "id": "full-table",
+          "short_label": "The Full Table",
+          "figureType": "table",
+          "data": "collections-refunds/full-table/data.csv",
+          "spec": {
+            "title": "Collections and Refunds by Type of Tax, FY1994-2025",
+            "subtitle": "{measure}. Thousands of dollars, as printed.",
+            "data": "data.csv",
+            "stub": [
+              "group",
+              "row"
+            ],
+            "header": [
+              "year"
+            ],
+            "value": "value",
+            "source": "IRS Data Book, Table 1-1.",
+            "column_order": [
+              "FY1994",
+              "FY1995",
+              "FY1996",
+              "FY1997",
+              "FY1998",
+              "FY1999",
+              "FY2000",
+              "FY2001",
+              "FY2002",
+              "FY2003",
+              "FY2004",
+              "FY2005",
+              "FY2006",
+              "FY2007",
+              "FY2008",
+              "FY2009",
+              "FY2010",
+              "FY2011",
+              "FY2012",
+              "FY2013",
+              "FY2014",
+              "FY2015",
+              "FY2016",
+              "FY2017",
+              "FY2018",
+              "FY2019",
+              "FY2020",
+              "FY2021",
+              "FY2022",
+              "FY2023",
+              "FY2024",
+              "FY2025"
+            ],
+            "group_order": [
+              "United States",
+              "Individual income taxes",
+              "Employment taxes",
+              "Business income taxes",
+              "Excise taxes",
+              "Estate and gift taxes"
+            ],
+            "row_order": [
+              "Total",
+              "Income taxes, total (FY1994-1995 books)",
+              "Withheld",
+              "Payments (from FY2008)",
+              "Estate and trust income tax (from FY2008)",
+              "Other: payments plus estate and trust (to FY2008)",
+              "Old-age, survivors, disability and hospital insurance, total",
+              "FICA",
+              "SECA",
+              "Unemployment insurance",
+              "Railroad retirement",
+              "Corporation income tax",
+              "Tax-exempt organizations' unrelated business income tax",
+              "Estate tax",
+              "Gift tax"
+            ],
+            "sticky": {
+              "firstColumn": true
+            },
+            "column_width": 118.0,
+            "format": {
+              "default": {
+                "type": "number",
+                "decimals": 0.0,
+                "thousands": true
+              }
+            }
+          },
+          "body_html": "<p>Every figure in Table 1-1 as the IRS printed it, in thousands of dollars. The Data Book page of this repository carries the notes, markers and hierarchy in full.</p>",
+          "section": "table",
+          "selectors": [
+            {
+              "id": "measure",
+              "label": "Measure",
+              "kind": "single",
+              "default": "gross_collections",
+              "options": [
+                {
+                  "id": "gross_collections",
+                  "label": "Gross collections"
+                },
+                {
+                  "id": "refunds",
+                  "label": "Refunds"
+                },
+                {
+                  "id": "net_collections",
+                  "label": "Net collections"
+                }
+              ]
+            }
+          ],
+          "figureNum": 5
+        },
+        {
+          "id": "definitions",
+          "short_label": "Definitions and Notes",
+          "figureType": "prose",
+          "blocks": [
+            {
+              "type": "text",
+              "html": "<h2>Measures</h2>\n<ul>\n<li><strong>Gross collections</strong>: taxes collected. “Gross collections include penalties and interest in addition to taxes.” (FY2024 book, note 1)</li>\n<li><strong>Refunds</strong>: “Includes overpayment refunds, refunds resulting from examination activity, refundable tax credits, and other outlays required by law.” They include interest paid on refunds, and exclude “refunds credited to taxpayer accounts for tax liability in a subsequent year” (FY2025 book, note 2). Stimulus and pandemic payments count as refunds (FY2008 book, note 4; FY2020-2022 books, note 5).</li>\n<li><strong>Net collections</strong>: gross collections less refunds. The IRS makes no refund estimate for the parts of income and OASDHI taxes, so net collections exist only for the five types of tax and the total (FY2024 book, note 4).</li>\n<li><strong>Share of total</strong>: the IRS's own printed percentage of U.S. gross or net collections. For refunds, which the IRS prints no share of, it is our figure: each type's refunds over total refunds.</li>\n</ul>"
+            },
+            {
+              "type": "text",
+              "html": "<h2>Types of tax</h2>\n<ul>\n<li><strong>Individual income taxes</strong>: income tax withheld, and payments, which “Includes collections of estimated income tax and payments made in conjunction with individual income tax return filings.” (FY2024 book, note 5). Also estate and trust income tax. The FY2008 book on prints payments and estate and trust income tax separately; earlier books print them as one line, <code>Other</code>.</li>\n<li><strong>Employment taxes</strong>: “Includes taxes for Old-Age, Survivors, Disability, and Hospital Insurance (OASDHI); unemployment insurance under the Federal Unemployment Tax Act (FUTA); and railroad retirement under the Railroad Retirement Tax Act (RRTA).” (Table 1-6, FY2025 book, note 4). OASDHI is FICA, on wages, and SECA, on self-employment income. “The OASDHI tax collections and refunds shown in this table are based on estimates made by the Secretary of the Treasury” (FY2024 book, note 4).</li>\n<li><strong>Business income taxes</strong>: “Includes taxes on corporation income (Form 1120 series) and on unrelated business income from tax-exempt organizations (Form 990-T).” (Table 1-6, FY2025 book, note 2). Partnerships, S corporations, regulated investment companies, and real estate investment trusts are not shown: “these entities generally do not have a tax liability” (FY2024 book).</li>\n<li><strong>Excise taxes</strong>: “Excludes excise taxes collected by U.S. Customs and Border Protection and the Alcohol and Tobacco Tax and Trade Bureau.” (FY2024 book, note 7)</li>\n<li><strong>Estate and gift taxes</strong>: the federal estate tax and gift tax.</li>\n</ul>"
+            },
+            {
+              "type": "text",
+              "html": "<h2>Years and dollars</h2>\n<ul>\n<li><strong>Fiscal year</strong>: October through September. “FY 1977 covered October 1976 through September 1977” (Table 1-6, FY2025 book, note 6).</li>\n<li><strong>Nominal dollars</strong>: as printed. “All money amounts are in current dollars.” (FY2024 book)</li>\n<li><strong>FY2025 dollars</strong>: our conversion with the GDP price index (FRED GDPDEF, retrieved September 29, 2026), averaged over each fiscal year.</li>\n<li>“Collection and refund data may not be comparable for a given fiscal year because payments made in prior years may be refunded in the current fiscal year.” (FY2024 book)</li>\n</ul>"
+            },
+            {
+              "type": "text",
+              "html": "<h2>Known problems in the source</h2>\n<ul>\n<li><strong>FY2015 excise refunds</strong> are printed as $7,445,780 thousand. The same row's net collections, $76,457,302 thousand, is gross collections of $77,201,882 thousand less $744,580 thousand: the printed figure has an extra digit. The charts draw it as printed.</li>\n<li><strong>FY1999 OASDHI net collections</strong>, $585,974,264 thousand, are not gross less refunds ($583,607,786 thousand).</li>\n</ul>"
+            }
+          ],
+          "tables": {},
+          "section": "table"
+        }
+      ]
+    }
+  ]
+}
