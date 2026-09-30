@@ -2129,10 +2129,10 @@
           "id": "states-ranked",
           "short_label": "All States, One Year",
           "figureType": "chart",
-          "data": "returns-by-state/states-ranked/data.csv",
+          "data": "returns-by-state/states-map/data.csv",
           "spec": {
             "chartType": "bar",
-            "data": "data.csv",
+            "data": "../states-map/data.csv",
             "orientation": "horizontal",
             "xAxisType": "categorical",
             "title": "Returns Filed by State, {year}",
@@ -2140,6 +2140,7 @@
             "source": "IRS Data Book, Table 1-3; Census Bureau population estimates (FRED); The Budget Lab analysis.",
             "note": "States with no figure that year are left out; the map shows them in grey.",
             "highlight_from": "state",
+            "skip_missing": true,
             "columns": {
               "x": "state",
               "value": "value"
@@ -3858,10 +3859,10 @@
           "id": "states-ranked",
           "short_label": "All States, One Year",
           "figureType": "chart",
-          "data": "electronic-filing/states-ranked/data.csv",
+          "data": "electronic-filing/states-map/data.csv",
           "spec": {
             "chartType": "bar",
-            "data": "data.csv",
+            "data": "../states-map/data.csv",
             "orientation": "horizontal",
             "xAxisType": "categorical",
             "title": "E-filing by State, {year}",
@@ -3869,6 +3870,7 @@
             "source": "IRS Data Book, Tables 1-3 and 1-4; Census Bureau population estimates (FRED); The Budget Lab analysis.",
             "note": "States with no figure that year are left out; the map shows them in grey.",
             "highlight_from": "state",
+            "skip_missing": true,
             "columns": {
               "x": "state",
               "value": "value"
@@ -5258,10 +5260,10 @@
           "id": "states-ranked",
           "short_label": "All States, One Year",
           "figureType": "chart",
-          "data": "gross-collections-state/states-ranked/data.csv",
+          "data": "gross-collections-state/states-map/data.csv",
           "spec": {
             "chartType": "bar",
-            "data": "data.csv",
+            "data": "../states-map/data.csv",
             "orientation": "horizontal",
             "xAxisType": "categorical",
             "title": "Gross Collections by State, {year}",
@@ -5269,6 +5271,7 @@
             "source": "IRS Data Book, Table 1-5; Census Bureau population estimates (FRED); The Budget Lab analysis.",
             "note": "“Receipts shown for the various States do not indicate the Federal tax burden of each, since, in many instances, taxes are collected in one State from residents of, or operations in, another.” (FY1999 book, note 1.)",
             "highlight_from": "state",
+            "skip_missing": true,
             "columns": {
               "x": "state",
               "value": "value"
@@ -7013,10 +7016,10 @@
           "id": "states-ranked",
           "short_label": "All States, One Year",
           "figureType": "chart",
-          "data": "refunds-by-state/states-ranked/data.csv",
+          "data": "refunds-by-state/states-map/data.csv",
           "spec": {
             "chartType": "bar",
-            "data": "data.csv",
+            "data": "../states-map/data.csv",
             "orientation": "horizontal",
             "xAxisType": "categorical",
             "title": "Refunds Issued by State, {year}",
@@ -7024,6 +7027,7 @@
             "source": "IRS Data Book, Table 1-7; Census Bureau population estimates (FRED); The Budget Lab analysis.",
             "note": "States with no figure that year are left out; the map shows them in grey.",
             "highlight_from": "state",
+            "skip_missing": true,
             "columns": {
               "x": "state",
               "value": "value"
@@ -8545,10 +8549,10 @@
           "id": "states-ranked",
           "short_label": "All States, One Year",
           "figureType": "chart",
-          "data": "refund-amounts-state/states-ranked/data.csv",
+          "data": "refund-amounts-state/states-map/data.csv",
           "spec": {
             "chartType": "bar",
-            "data": "data.csv",
+            "data": "../states-map/data.csv",
             "orientation": "horizontal",
             "xAxisType": "categorical",
             "title": "Refund Amounts by State, {year}",
@@ -8556,6 +8560,7 @@
             "source": "IRS Data Book, Table 1-8; Census Bureau population estimates (FRED); The Budget Lab analysis.",
             "note": "States with no figure that year are left out; the map shows them in grey.",
             "highlight_from": "state",
+            "skip_missing": true,
             "columns": {
               "x": "state",
               "value": "value"

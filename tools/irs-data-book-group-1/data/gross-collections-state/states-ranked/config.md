@@ -112,7 +112,7 @@ variants:
       value_suffix: '%'
 spec:
   chartType: bar
-  data: data.csv
+  data: ../states-map/data.csv
   orientation: horizontal
   xAxisType: categorical
   title: Gross Collections by State, {year}
@@ -123,6 +123,7 @@ spec:
     of each, since, in many instances, taxes are collected in one State from residents
     of, or operations in, another.” (FY1999 book, note 1.)
   highlight_from: state
+  skip_missing: yes
   columns:
     x: state
     value: value

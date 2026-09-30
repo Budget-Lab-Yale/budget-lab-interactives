@@ -52,6 +52,7 @@ import hashlib
 import html
 import json
 import os
+import posixpath
 import re
 import sys
 from pathlib import Path
@@ -570,7 +571,9 @@ def build_figure(tab_id: str, fig_id: str, section_id: "str | None") -> dict:
             "figureType": figure_type,
             # data is resolved by app.js against data_base_url (./data/): store the path relative
             # to the data dir.
-            "data": f"{tab_id}/{fig_id}/{data_name}",
+            # normpath: a figure may read a sibling figure's CSV ("../states-map/data.csv"), and
+            # both then fetch one URL, which the app caches once.
+            "data": posixpath.normpath(f"{tab_id}/{fig_id}/{data_name}"),
             "spec": spec,
             "body_html": render_markdown(body),
         }

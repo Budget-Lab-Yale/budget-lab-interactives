@@ -343,6 +343,13 @@ export async function renderFigure(mount, ctx) {
       }
       // `highlight_from` (this tool's key, not the engine's): outline the state a sticky
       // selector names. Bars take it as a category colour; the tile map reads it itself.
+      // `skip_missing` (this tool's key): a figure sharing the tile map's CSV drops the rows
+      // the map keeps grey, which a bar chart cannot draw.
+      if (spec.skip_missing) {
+        const vc = spec.columns?.value || "value";
+        opts.rows = rows.filter((r) => r[vc] !== "" && r[vc] != null);
+        delete spec.skip_missing;
+      }
       if (spec.highlight_from && spec.chartType !== "tilemap") {
         const pick = toggles[spec.highlight_from];
         if (pick) spec.category_colors = { ...(spec.category_colors || {}), [pick]: "#101F5B" };

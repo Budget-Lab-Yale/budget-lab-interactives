@@ -108,7 +108,7 @@ variants:
       value_suffix: ''
 spec:
   chartType: bar
-  data: data.csv
+  data: ../states-map/data.csv
   orientation: horizontal
   xAxisType: categorical
   title: E-filing by State, {year}
@@ -117,6 +117,7 @@ spec:
     The Budget Lab analysis.
   note: States with no figure that year are left out; the map shows them in grey.
   highlight_from: state
+  skip_missing: yes
   columns:
     x: state
     value: value
