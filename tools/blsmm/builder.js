@@ -9,8 +9,8 @@
  * sync() redraws from the app's state after every recompute.
  * =========================================================================== */
 
-import { INPUTS, SECTIONS, SHAPES, YEARS, N_YEARS, baselinePath } from './inputs.js?v=d2006366bb';
-import { fixed, signedDelta, parseDelta } from './format.js?v=d2006366bb';
+import { INPUTS, SECTIONS, SHAPES, YEARS, N_YEARS, baselinePath } from './inputs.js?v=782a1bb3ec';
+import { fixed, signedDelta, parseDelta } from './format.js?v=782a1bb3ec';
 
 function el(tag, attrs = {}, ...children) {
   const node = document.createElement(tag);
@@ -23,6 +23,12 @@ function el(tag, attrs = {}, ...children) {
   }
   for (const c of children) if (c) node.append(c);
   return node;
+}
+
+// Full-precision text for an input being edited: "+0.581", "-1", "0.00".
+function editableDelta(v) {
+  if (!v) return '0.00';
+  return v > 0 ? `+${v}` : String(v);
 }
 
 function infoButton(label, text) {
@@ -77,9 +83,12 @@ function inputCard(input, modelData, cb) {
   refs.shape.addEventListener('change', emitShape);
   refs.magnitude.addEventListener('input', emitShape);
   refs.inputs.forEach((box, i) => {
+    // While editing, the field holds the full-precision value (a preset's 0.581,
+    // not its 0.58 display), so an edit never silently rounds the input.
+    box.addEventListener('focus', () => { box.value = editableDelta(refs.path[i]); });
     box.addEventListener('input', () => cb.onYear(input.key, i, parseDelta(box.value)));
     // Show the sign on blur so the field reads as a change from baseline.
-    box.addEventListener('blur', () => { box.value = signedDelta(parseDelta(box.value)); });
+    box.addEventListener('blur', () => { box.value = signedDelta(refs.path[i]); });
   });
   return { card, refs };
 }
@@ -157,6 +166,7 @@ export function createBuilder(dialog, body, modelData, cb) {
       for (const input of INPUTS) {
         const refs = cards[input.key];
         const path = state.deltas[input.key];
+        refs.path = path;
         for (let i = 0; i < N_YEARS; i++) {
           if (refs.inputs[i] !== active) refs.inputs[i].value = signedDelta(path[i]);
           refs.levels[i].textContent = fixed(refs.baseline[i] + path[i], 2);

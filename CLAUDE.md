@@ -27,7 +27,6 @@ CONTRIBUTING.md (snapshots, testing).
   runtime JS/CSS or vendored model needs a re-stamp (gated by `validate.sh`).
 - **`tools/blsmm` ports the Shiny app's display logic faithfully**, quirks included: the FY2025
   chart point copies FY2026 baseline values for RG, r* and other columns the Shiny app never
-  overwrote (see the note in `tools/blsmm/results.js`), and every delta is rounded to 0.01 before
-  the model runs (`roundDelta` in `format.js`), as the Shiny app's input echo did, so presets
-  reproduce the published app (AI Adoption -4.89 pp) rather than the full-precision scenario files
-  (-4.92 pp). Changing either is a model-owner decision.
+  overwrote (see the note in `tools/blsmm/results.js`). Changing that is a model-owner decision.
+  One deliberate departure: inputs run at full precision (the Shiny app rounded every delta to
+  0.01), so presets match the R scenario files and the article figures.

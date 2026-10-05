@@ -6,19 +6,18 @@
  * commit of Budget-Lab-Small-Macro-Model, where CI holds it to the R model).
  * =========================================================================== */
 
-import { simulate, OUTPUT_COLUMNS } from './vendor/blsmm-model/blsmm-model.js?v=d2006366bb';
+import { simulate, OUTPUT_COLUMNS } from './vendor/blsmm-model/blsmm-model.js?v=782a1bb3ec';
 import {
   INPUTS, PRESETS, SHAPES, buildShapeDelta, zeroInputDeltas, toModelDeltas, presetDeltas, hasNonZero,
-} from './inputs.js?v=d2006366bb';
+} from './inputs.js?v=782a1bb3ec';
 import {
   deriveResults, kpis, multiplierText, deviationSummaryText, deviationTable, summaryTable,
   outlaysIndirectText, primaryBalanceDerivedText, rfstarIndirectText,
-} from './results.js?v=d2006366bb';
-import { LEVEL_CHARTS, DEV_CHARTS, createChartGrid } from './charts.js?v=d2006366bb';
-import { createBuilder } from './builder.js?v=d2006366bb';
-import { downloadZip } from './export.js?v=d2006366bb';
-import { roundDelta } from './format.js?v=d2006366bb';
-import { encodeState, decodeState } from './share.js?v=d2006366bb';
+} from './results.js?v=782a1bb3ec';
+import { LEVEL_CHARTS, DEV_CHARTS, createChartGrid } from './charts.js?v=782a1bb3ec';
+import { createBuilder } from './builder.js?v=782a1bb3ec';
+import { downloadZip } from './export.js?v=782a1bb3ec';
+import { encodeState, decodeState } from './share.js?v=782a1bb3ec';
 
 const ASSET_V = new URL(import.meta.url).searchParams.get('v') || '';
 const $ = (id) => document.getElementById(id);
@@ -180,14 +179,13 @@ function reset() {
 const builderCallbacks = {
   onShape(key, shape, magnitude) {
     state.shapes[key] = { shape, magnitude };
-    state.deltas[key] = buildShapeDelta(shape, magnitude).map(roundDelta);
+    state.deltas[key] = buildShapeDelta(shape, magnitude);
     state.activePreset = null;
     recompute();
   },
   onYear(key, i, value) {
-    const v = roundDelta(value);
-    if (state.deltas[key][i] === v) return;
-    state.deltas[key][i] = v;
+    if (state.deltas[key][i] === value) return;
+    state.deltas[key][i] = value;
     state.activePreset = null;
     recompute();
   },

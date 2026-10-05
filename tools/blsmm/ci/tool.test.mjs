@@ -11,7 +11,7 @@ import {
 } from '../results.js';
 import { LEVEL_CHARTS, DEV_CHARTS, levelChartData, devChartData } from '../charts.js';
 import { encodeState, decodeState } from '../share.js';
-import { signed, fixed, signedDelta, parseDelta, roundDelta } from '../format.js';
+import { signed, fixed, signedDelta, parseDelta } from '../format.js';
 
 const data = JSON.parse(readFileSync(new URL('../vendor/blsmm-model/model-data.json', import.meta.url), 'utf8'));
 const base = simulate(data).columns;
@@ -33,8 +33,6 @@ test('number formats match R sprintf', () => {
   assert.equal(signedDelta(0.5), '+0.50');
   assert.equal(parseDelta('abc'), 0);
   assert.equal(parseDelta(' -1.5 '), -1.5);
-  assert.equal(roundDelta(0.581), 0.58);
-  assert.equal(roundDelta(-0.004), 0);
 });
 
 test('shape paths match build_shape_delta()', () => {
@@ -48,12 +46,12 @@ test('shape paths match build_shape_delta()', () => {
   assert.deepEqual(buildShapeDelta('permanent', ''), new Array(10).fill(0));
 });
 
-test('presets load from the model data at the Shiny app 0.01 precision, unlisted inputs zero', () => {
+test('presets load from the model data at full precision, unlisted inputs zero', () => {
   const ai = preset('rapid_ai');
-  assert.equal(ai.productivity[0], 0.58);
-  assert.equal(ai.lf_growth[0], -0.52);
+  assert.equal(ai.productivity[0], 0.581);
+  assert.equal(ai.lf_growth[0], -0.519291223);
   assert.ok(ai.receipts.every((v) => v === 0));
-  assert.equal(preset('military_conflict').outlays[1], 1.46);
+  assert.equal(preset('military_conflict').outlays[1], 1.4648663376827828);
   assert.equal(preset('persistent_infl').inflation_shock[2], 0.3);
 });
 
@@ -69,12 +67,12 @@ test('baseline: zero deviations, baseline-only charts, baseline texts', () => {
   assert.equal(rows.length, 11);
 });
 
-// The live Shiny app showed -4.89 / +8.04 for these presets (checked 2026-10-05);
-// at full precision the R scenario files give -4.92 / +8.06.
-test('presets reproduce the live Shiny app KPIs', () => {
+// Full precision, matching the R scenario files and the article figures. (The
+// Shiny app rounded inputs to 0.01 and showed -4.89 / +8.04.)
+test('presets match the R scenario runs', () => {
   const r = run(preset('rapid_ai'));
-  assert.deepEqual(kpis(r), { finalDebt: '-4.89 pp', maxUnemployment: '+0.03 pp' });
-  assert.deepEqual(kpis(run(preset('military_conflict'))), { finalDebt: '+8.04 pp', maxUnemployment: '-0.36 pp' });
+  assert.deepEqual(kpis(r), { finalDebt: '-4.92 pp', maxUnemployment: '+0.03 pp' });
+  assert.deepEqual(kpis(run(preset('military_conflict'))), { finalDebt: '+8.06 pp', maxUnemployment: '-0.36 pp' });
   assert.equal(r.baselineOnly, false);
   assert.match(multiplierText(r), /^Growth Shock {2}LF Growth \+ Productivity/);
 });
@@ -154,12 +152,11 @@ test('export files', () => {
 test('share links round-trip', () => {
   const d = zeroInputDeltas();
   d.receipts = buildShapeDelta('temporary3', -1);
-  d.lf_growth[9] = 0.12;
+  d.lf_growth[9] = 0.123456789;
   const state = { deltas: d, fast: true, activePreset: null };
   const h = encodeState(state);
-  assert.equal(h, 'lf_growth=0,0,0,0,0,0,0,0,0,0.12&receipts=-1,-1,-1&fast=1');
+  assert.equal(h, 'lf_growth=0,0,0,0,0,0,0,0,0,0.123456789&receipts=-1,-1,-1&fast=1');
   assert.deepEqual(decodeState(`#${h}`, data), state);
-  assert.equal(decodeState('#receipts=0.123456', data).deltas.receipts[0], 0.12, 'links round to 0.01 like every other input');
 
   const p = { deltas: preset('rapid_ai'), fast: false, activePreset: 'rapid_ai' };
   assert.equal(encodeState(p), 'preset=rapid_ai');

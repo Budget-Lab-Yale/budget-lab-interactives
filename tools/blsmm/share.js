@@ -6,8 +6,7 @@
  * An empty hash is the baseline. Pure, so ci/ tests can exercise it.
  * =========================================================================== */
 
-import { roundDelta } from './format.js?v=d2006366bb';
-import { INPUTS, INPUT_BY_KEY, PRESETS, N_YEARS, zeroInputDeltas, presetDeltas } from './inputs.js?v=d2006366bb';
+import { INPUTS, INPUT_BY_KEY, PRESETS, N_YEARS, zeroInputDeltas, presetDeltas } from './inputs.js?v=782a1bb3ec';
 
 export function encodeState(state) {
   const p = new URLSearchParams();
@@ -40,7 +39,7 @@ export function decodeState(hash, modelData) {
     if (!Object.hasOwn(INPUT_BY_KEY, key)) continue;
     const vals = raw.split(',').slice(0, N_YEARS).map((s) => (s.trim() === '' ? 0 : Number(s)));
     if (!vals.every(Number.isFinite)) continue;
-    deltas[key] = Array.from({ length: N_YEARS }, (_, i) => roundDelta(vals[i] ?? 0));
+    deltas[key] = Array.from({ length: N_YEARS }, (_, i) => vals[i] ?? 0);
     any = true;
   }
   return any ? { deltas, fast, activePreset: null } : null;

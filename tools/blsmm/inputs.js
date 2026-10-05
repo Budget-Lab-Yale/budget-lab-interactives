@@ -5,8 +5,6 @@
  * baseline, FY2026-FY2035.
  * =========================================================================== */
 
-import { roundDelta } from './format.js?v=d2006366bb';
-
 export const N_YEARS = 10;
 export const FIRST_YEAR = 2026;
 export const YEARS = Array.from({ length: N_YEARS }, (_, i) => FIRST_YEAR + i);
@@ -170,7 +168,7 @@ export function presetDeltas(modelData, preset) {
     const path = src[input.delta];
     if (!path) continue;
     // update_table_with_shocks(): pad short paths with zeros, drop the excess.
-    out[input.key] = Array.from({ length: N_YEARS }, (_, i) => roundDelta(Number(path[i] ?? 0)));
+    out[input.key] = Array.from({ length: N_YEARS }, (_, i) => Number(path[i] ?? 0));
   }
   return out;
 }
