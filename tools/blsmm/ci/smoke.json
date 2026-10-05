@@ -1,0 +1,5 @@
+{
+  "marker": "data-blsmm-ready=\"true\"",
+  "budgetMs": 9000,
+  "note": "app.js sets this on <html> only after the vendored model has loaded, solved the baseline and rendered the results. Model, data and chart engine are all vendored locally, so there is no CDN dependency."
+}

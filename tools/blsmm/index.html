@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Budget Lab Small Macro Model &mdash; The Budget Lab at Yale</title>
+  <meta name="description" content="Explore how fiscal and monetary policy affect the U.S. economy over FY2026&ndash;FY2035 with The Budget Lab Small Macro Model (BLSMM). An interactive tool from The Budget Lab at Yale." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../assets/style-guide/fonts.css">
+  <link rel="stylesheet" href="../../assets/style-guide/colors.css">
+  <!-- Vendored chart engine 1.15.0 (see vendor/chart-engine/). Bump ?v= with VERSION. -->
+  <link rel="stylesheet" href="vendor/chart-engine/chart-engine.css?v=1.15.0">
+  <!-- ?v= on styles.css and app.js is a content hash written by scripts/stamp-assets.mjs. -->
+  <link rel="stylesheet" href="styles.css?v=d2006366bb">
+
+  <script>
+    if (window.self !== window.top) document.documentElement.classList.add('iframed');
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="tracker-shell">
+    <header class="tracker-header">
+      <h1 class="tracker-title">The Budget Lab Small Macro Model</h1>
+      <a class="tracker-logo-link" href="https://budgetlab.yale.edu/" target="_blank" rel="noopener" aria-label="The Budget Lab at Yale">
+        <img class="tracker-logo" src="../../assets/logo.svg" alt="The Budget Lab at Yale" />
+      </a>
+    </header>
+
+    <nav class="tracker-tabs" role="tablist" aria-label="Tool sections">
+      <button type="button" class="tracker-tab" role="tab" id="tab-results" aria-controls="panel-results" aria-selected="true">Results</button>
+      <button type="button" class="tracker-tab" role="tab" id="tab-summary" aria-controls="panel-summary" aria-selected="false" tabindex="-1">Scenario Summary</button>
+      <button type="button" class="tracker-tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="false" tabindex="-1">About</button>
+    </nav>
+
+    <div class="tracker-body">
+      <aside class="tracker-sidebar" aria-labelledby="controls-heading">
+        <h2 id="controls-heading" class="sr-only">Controls</h2>
+
+        <section class="sidebar-section" aria-labelledby="scenario-heading">
+          <h2 id="scenario-heading">Scenario</h2>
+          <button type="button" id="open-builder" class="btn btn-primary-outline btn-block scenario-custom" aria-haspopup="dialog" aria-controls="builder">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path fill="currentColor" d="M2 3h7v2H2zm9 0h3v2h-3zM9 1h2v6H9zM2 11h3v2H2zm5 0h7v2H7zM5 9h2v6H5z"/></svg>
+            <span>Custom Scenario</span>
+          </button>
+          <p class="sidebar-hint">Or start from a preset:</p>
+          <div id="preset-list" class="preset-list"></div>
+          <button type="button" id="reset" class="btn btn-quiet btn-block">Reset to Defaults</button>
+        </section>
+
+        <div id="solver-warning" class="solver-warning" role="alert" hidden></div>
+
+        <section class="sidebar-section" aria-labelledby="export-heading">
+          <h2 id="export-heading">Export Results</h2>
+          <button type="button" id="download-zip" class="sidebar-download-btn" aria-describedby="export-note">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path fill="currentColor" d="M7 1h2v7.6l2.3-2.3 1.4 1.4L8 12.4 3.3 7.7l1.4-1.4L7 8.6zM2 13h12v2H2z"/></svg>
+            <span>Download data (.zip)</span>
+          </button>
+          <p id="export-note" class="sidebar-note">CSV files with every model variable for the baseline, the scenario and the deviations, plus the parameters and your inputs.</p>
+        </section>
+
+        <section class="sidebar-section" aria-labelledby="share-heading">
+          <h2 id="share-heading">Share</h2>
+          <button type="button" id="copy-link" class="sidebar-download-btn">
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path fill="currentColor" d="M6.5 9.5 5.1 8.1l4.2-4.2a2.5 2.5 0 1 1 3.5 3.5L11 9.2 9.6 7.8l1.8-1.8a.5.5 0 0 0-.7-.7zM9.5 6.5l1.4 1.4-4.2 4.2a2.5 2.5 0 1 1-3.5-3.5L5 6.8l1.4 1.4-1.8 1.8a.5.5 0 0 0 .7.7z"/></svg>
+            <span>Copy link to this scenario</span>
+          </button>
+          <p id="copy-status" class="sidebar-note" role="status"></p>
+          <input id="share-url" class="share-url" type="text" readonly aria-label="Link to this scenario" hidden>
+        </section>
+
+        <p class="sidebar-version">Version 1.0</p>
+        <p id="results-status" class="sr-only" role="status" aria-live="polite"></p>
+      </aside>
+
+      <main id="main-content" class="tracker-main" tabindex="-1">
+        <section id="panel-results" role="tabpanel" aria-labelledby="tab-results">
+          <div class="kpi-row">
+            <div class="kpi-card">
+              <p class="kpi-title">Final Debt Impact</p>
+              <p class="kpi-value" id="kpi-final-debt"></p>
+              <p class="kpi-caption">Change in debt/GDP ratio</p>
+            </div>
+            <div class="kpi-card">
+              <p class="kpi-title">Max Unemployment Effect</p>
+              <p class="kpi-value" id="kpi-max-unemployment"></p>
+              <p class="kpi-caption">Peak change in unemployment</p>
+            </div>
+          </div>
+
+          <div class="view-toggle toggle-group" role="radiogroup" aria-label="Results view">
+            <label class="is-active"><input type="radio" name="view" value="levels" checked> Levels</label>
+            <label><input type="radio" name="view" value="deviations"> Deviations from baseline</label>
+          </div>
+
+          <div id="view-levels" class="results-view">
+            <div id="grid-levels" class="chart-grid"></div>
+          </div>
+
+          <div id="view-deviations" class="results-view" hidden>
+            <div class="section-heading-row">
+              <h2 class="section-heading">Key Variable Deviations</h2>
+              <span class="info-wrap">
+                <button type="button" class="info-trigger" aria-label="How to read deviations" aria-expanded="false" data-info="Deviations = Scenario - Baseline. Positive means the scenario is higher than baseline; negative means lower.">?</button>
+              </span>
+            </div>
+            <div class="table-scroll"><table id="deviation-table" class="data-table deviation-table"></table></div>
+
+            <h2 class="section-heading section-heading-spaced">Impact Analysis</h2>
+            <div id="grid-deviations" class="chart-grid"></div>
+
+            <div class="text-panels">
+              <div>
+                <h2 class="section-heading">Fiscal Multiplier</h2>
+                <pre id="multiplier-text" class="text-panel"></pre>
+              </div>
+              <div>
+                <h2 class="section-heading">Deviation Summary Statistics</h2>
+                <pre id="deviation-summary-text" class="text-panel"></pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="panel-summary" role="tabpanel" aria-labelledby="tab-summary" hidden>
+          <p class="panel-help">All deltas in current scenario</p>
+          <div class="table-scroll"><table id="summary-table-tab" class="data-table summary-table"></table></div>
+        </section>
+
+        <section id="panel-about" role="tabpanel" aria-labelledby="tab-about" class="about" hidden>
+          <div class="about-card">
+            <p><strong>The Budget Lab Small Macro Model (BLSMM)</strong> is an interactive tool for exploring how fiscal and monetary policies affect the U.S. economy over a 10-year horizon (FY2026&ndash;FY2035). The model simulates interactions between government spending, taxation, Federal Reserve policy, potential growth, interest rates, and national debt.</p>
+            <p class="about-lead"><strong>Who should use it:</strong></p>
+            <ul>
+              <li>Policy analysts studying tax and spending proposals</li>
+              <li>Researchers exploring fiscal-monetary interactions</li>
+              <li>Students learning macroeconomic policy dynamics</li>
+            </ul>
+            <p class="about-lead"><strong>What you can learn:</strong></p>
+            <ul>
+              <li>How policy changes affect growth, unemployment, inflation, and debt</li>
+              <li>Automatic economic responses (e.g., Fed reacts to inflation, interest costs rise with debt)</li>
+              <li>Trade-offs and side effects of policy choices</li>
+            </ul>
+          </div>
+
+          <h2>Getting started</h2>
+          <div class="about-card">
+            <ol>
+              <li>Build a custom scenario with <strong>Custom Scenario</strong> in the sidebar, or start with a preset (AI Adoption, Persistent Inflation, Higher Defense Spending).</li>
+              <li>Results update as soon as you change an input.</li>
+              <li>Use the <strong>Levels</strong> / <strong>Deviations from baseline</strong> views on the Results page to compare baseline and scenario.</li>
+              <li>Download the raw numbers with <strong>Download data</strong>, or share the scenario with <strong>Copy link to this scenario</strong>, in the sidebar.</li>
+            </ol>
+            <p class="about-tip">Tip: most scenarios only need one or two assumption categories. The preset buttons populate realistic multi-category shocks if you want a starting point.</p>
+          </div>
+
+          <h2>Reading the results</h2>
+          <div class="about-card">
+            <p class="about-lead"><strong>Chart conventions:</strong></p>
+            <ul>
+              <li>Baseline lines are <strong>dashed</strong>; scenario lines are <strong>solid</strong>. Both use the same color because they represent the same variable.</li>
+              <li>Rates and inflation are in percentage points. Debt and budget deficits are percent of GDP.</li>
+              <li>For budget-deficit charts, higher values = larger deficit.</li>
+            </ul>
+            <p class="about-lead"><strong>Key variables to watch:</strong></p>
+            <ul>
+              <li><strong>Output Gap:</strong> Positive = economy overheating. Negative = economic slack. The Fed tries to close this gap.</li>
+              <li><strong>Unemployment:</strong> Connected to the output gap through Okun&rsquo;s Law.</li>
+              <li><strong>Inflation:</strong> Above baseline means the scenario is inflationary.</li>
+              <li><strong>Debt / GDP:</strong> The key long-run fiscal indicator.</li>
+              <li><strong>Interest Rates:</strong> Fed response (Federal Funds) and market response (10-year yield, r*).</li>
+              <li><strong>Primary Balance:</strong> Deficit before interest costs. Compare to debt/GDP for sustainability.</li>
+            </ul>
+          </div>
+
+          <div class="about-card about-warning">
+            <p class="about-lead"><strong>Warning signs in your simulation:</strong></p>
+            <ul>
+              <li>Debt/GDP rising sharply without stabilizing</li>
+              <li>Inflation persistently far from the Fed&rsquo;s 2% target</li>
+              <li>Interest rates hitting zero (the model has limitations at the zero lower bound)</li>
+              <li>Unrealistic combinations (e.g., very large deficits with no interest-rate response)</li>
+            </ul>
+          </div>
+
+          <h2>Example use cases</h2>
+          <div class="about-card">
+            <ul>
+              <li><strong>Tax Reform Analysis:</strong> Model a corporate tax cut and see effects on growth, deficits, and interest rates</li>
+              <li><strong>Fiscal Consolidation:</strong> Test different paths to reduce debt-to-GDP (spending cuts vs. tax increases vs. growth)</li>
+              <li><strong>Fed Policy Changes:</strong> Explore higher inflation targets or unconventional monetary policy</li>
+              <li><strong>Growth Scenarios:</strong> Study effects of productivity slowdowns or labor force changes</li>
+              <li><strong>Policy Interactions:</strong> See how fiscal and monetary policies work together or in opposition</li>
+            </ul>
+          </div>
+
+          <details class="about-details">
+            <summary>Advanced: technical details</summary>
+            <h3>Model overview</h3>
+            <ul>
+              <li><strong>Type:</strong> Structural macroeconomic model</li>
+              <li><strong>Frequency:</strong> Annual (fiscal years, October 1 &ndash; September 30)</li>
+              <li><strong>Version:</strong> 1.0</li>
+              <li><strong>Structure:</strong> 9 simultaneous equations + pre-simulation block + fiscal block</li>
+              <li><strong>Parameters:</strong> 39 calibrated parameters</li>
+            </ul>
+            <h3>Model components</h3>
+            <ul>
+              <li><strong>Macro block:</strong> Output gap with 8-period distributed lags, unemployment (Okun&rsquo;s law), inflation (Phillips curve), inflation expectations</li>
+              <li><strong>Monetary block:</strong> Taylor rule, term structure of interest rates, endogenous real neutral rate (r*)</li>
+              <li><strong>Fiscal block:</strong> Debt dynamics, net interest payments, primary balance, fiscal feedback to outlays</li>
+              <li><strong>Neutral rate block:</strong> r* responds to potential growth and debt/GDP</li>
+            </ul>
+            <h3>Simple vs. year-by-year inputs</h3>
+            <p>Each assumption in the Custom Scenario Builder defaults to a simple shape + magnitude UI (permanent / one-time / linear ramp / three-year temporary). If you need the full 10-year path, expand the <strong>Edit year-by-year</strong> disclosure under any input to edit individual FY2026&ndash;FY2035 cells directly.</p>
+            <h3>Key features</h3>
+            <ul>
+              <li>Endogenous neutral rate that responds to growth and debt</li>
+              <li>Automatic fiscal feedback (spending adjusts to growth)</li>
+              <li>Rich dynamics through distributed lags</li>
+              <li>Year-by-year control over all inputs (FY2026&ndash;FY2035)</li>
+              <li>A warning in the sidebar if the model fails to converge for a scenario</li>
+            </ul>
+            <p>The model runs in your browser. It is a JavaScript port of the R model in <a href="https://github.com/Budget-Lab-Yale/Budget-Lab-Small-Macro-Model" target="_blank" rel="noopener">Budget-Lab-Small-Macro-Model</a>, which is tested to match the R results.</p>
+          </details>
+
+          <p class="about-contact">For questions or support, contact <a href="mailto:budgetlab@yale.edu">The Budget Lab</a>.</p>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <dialog id="builder" class="builder" aria-labelledby="builder-title">
+    <div class="builder-header">
+      <h2 id="builder-title">Custom Scenario Builder</h2>
+      <button type="button" class="builder-close" id="close-builder" aria-label="Close">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M3.7 2.3 8 6.6l4.3-4.3 1.4 1.4L9.4 8l4.3 4.3-1.4 1.4L8 9.4l-4.3 4.3-1.4-1.4L6.6 8 2.3 3.7z"/></svg>
+      </button>
+    </div>
+    <div class="builder-body" id="builder-body"></div>
+  </dialog>
+
+  <!-- Vendored chart engine 1.15.0 (IIFE): sets window.BudgetLabChart before app.js runs. -->
+  <script src="vendor/chart-engine/live.js?v=1.15.0"></script>
+  <script type="module" src="app.js?v=d2006366bb"></script>
+  <script src="../../embed/v1/iframeResizer.contentWindow.min.js"></script>
+</body>
+</html>
