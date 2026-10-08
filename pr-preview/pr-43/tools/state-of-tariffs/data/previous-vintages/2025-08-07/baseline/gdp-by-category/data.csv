@@ -1,0 +1,22 @@
+category,value,dimension,category_code,group
+Agriculture,-0.817559217023811,sector,agriculture,Sectors
+Mining & Extraction,-1.3768486895283027,sector,mining_and_extraction,Sectors
+Total Manufacturing,2.1424135297820484,sector,total_manufacturing,Sectors
+Durable Manufacturing,3.916126913189444,sector,durable_manufacturing,Manufacturing detail
+Advanced Manufacturing,-2.67,sector,advanced_manufacturing,Manufacturing detail
+Nondurable Manufacturing,1.3130849319567939,sector,nondurable_manufacturing,Manufacturing detail
+Utilities,0.4352169056281382,sector,utilities,Sectors
+Construction,-3.58,sector,construction,Sectors
+Services,-0.12593305446226832,sector,services,Sectors
+Overall Real GDP,-0.41,sector,overall_real_gdp,Sectors
+USA,-0.41,country,usa,Trading partners
+China,-0.22,country,china,Trading partners
+ROW,0.02,country,row,Trading partners
+Canada,-2.05,country,canada,Trading partners
+Mexico,0.09,country,mexico,Trading partners
+FTROW,0.06,country,ftrow,Trading partners
+Japan,0.02,country,japan,Trading partners
+EU,0.09,country,eu,Trading partners
+UK,0.2,country,uk,Trading partners
+World Total,-0.13891550428951627,country,world_total,Trading partners
+World ex USA,-0.054131096316789584,country,world_ex_usa,Trading partners
