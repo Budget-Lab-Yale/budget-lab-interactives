@@ -384,6 +384,31 @@ function rungKeyHtml() {
 
 function widthOf(el) { return Math.max(300, el.clientWidth || 660); }
 
+function barColumnWidth(el) {
+  var bar = el.querySelector('.mrow.axis .mbar');
+  return bar ? bar.clientWidth : 0;
+}
+
+// app.js re-mounts the stack on every state change, so each container gets one
+// observer that always redraws with the latest mount's arguments. Only a width
+// change redraws: the redraw itself changes the container's height.
+var RESIZE = typeof WeakMap === 'undefined' ? null : new WeakMap();
+function redrawOnResize(el, redraw) {
+  if (!RESIZE || typeof ResizeObserver === 'undefined') return;
+  var entry = RESIZE.get(el);
+  if (!entry) {
+    entry = { width: el.clientWidth, redraw: redraw };
+    new ResizeObserver(function () {
+      if (el.clientWidth === entry.width) return;
+      entry.width = el.clientWidth;
+      entry.redraw();
+    }).observe(el);
+    RESIZE.set(el, entry);
+  }
+  entry.width = el.clientWidth;
+  entry.redraw = redraw;
+}
+
 // ---- data export ------------------------------------------------------------
 // Tidy long CSV of the package score. `scope` separates the two things a reader
 // wants from one file: `total` rows are the score of each policy (and of the
@@ -690,8 +715,6 @@ export function mountStack(el, marginals, onReorder, opts) {
   var subtitles = o.dialSubtitles || {};
   var order = marginals.rows.map(function (r) { return r.key; });
   var layout = layoutStack(marginals, gdpDecade);
-  var bw = Math.max(140, widthOf(el) - 18 - 140 - 112 - 72 - 124 - 50);
-  var xz = layout.negMax * (bw / layout.scale), sc = bw / layout.scale;
 
   layout.rows.forEach(function (r) { r.subtitle = subtitles[r.key] || ''; });
   var totalRow = {
@@ -700,11 +723,14 @@ export function mountStack(el, marginals, onReorder, opts) {
   };
   var heads = usedHeads(layout.rows.concat([totalRow]));
 
-  var html = layout.rows.map(function (r) {
-    return rowHtml(r, bw, xz, sc, layout.ticks, heads, gdpDecade, decadeLabel, order.length);
-  }).join('')
-    + rowHtml(totalRow, bw, xz, sc, layout.ticks, heads, gdpDecade, decadeLabel, order.length)
-    + axisHtml(layout.ticks, bw, xz, sc, gdpDecade);
+  function rowsHtml(bw) {
+    var xz = layout.negMax * (bw / layout.scale), sc = bw / layout.scale;
+    return layout.rows.map(function (r) {
+      return rowHtml(r, bw, xz, sc, layout.ticks, heads, gdpDecade, decadeLabel, order.length);
+    }).join('')
+      + rowHtml(totalRow, bw, xz, sc, layout.ticks, heads, gdpDecade, decadeLabel, order.length)
+      + axisHtml(layout.ticks, bw, xz, sc, gdpDecade);
+  }
 
   // Engine order: legend above the plot, downloads below it (see the distribution
   // figure, which the engine lays out that way itself). Nothing else goes up here:
@@ -721,10 +747,30 @@ export function mountStack(el, marginals, onReorder, opts) {
   //
   // The legend keys tax bases, so an empty package has nothing to key and the row
   // is omitted rather than drawn empty.
-  el.innerHTML = (heads.length ? '<div class="mstack-head"><div class="legend mstack-legend">' + legendHtml(heads) + '</div></div>' : '')
-    + '<div class="mstack">' + html + '</div>'
-    + rungKeyHtml()
-    + '<div class="mstack-footer">' + downloadControlHtml() + '</div>';
+  function paint(bw) {
+    el.innerHTML = (heads.length ? '<div class="mstack-head"><div class="legend mstack-legend">' + legendHtml(heads) + '</div></div>' : '')
+      + '<div class="mstack">' + rowsHtml(bw) + '</div>'
+      + rungKeyHtml()
+      + '<div class="mstack-footer">' + downloadControlHtml() + '</div>';
+  }
+
+  // The bar SVGs stretch (preserveAspectRatio="none"), so they must be drawn at
+  // the bar column's real width or the tick labels and 1px gaps stretch with them.
+  // The estimate below is only a first pass; the column's width depends on which
+  // narrow-container rules in styles.css apply, so measure it once laid out.
+  var bw = Math.max(140, widthOf(el) - 18 - 140 - 112 - 72 - 124 - 50);
+  paint(bw);
+  var measured = barColumnWidth(el);
+  if (measured && Math.abs(measured - bw) > 0.5) paint(measured);
+  redrawOnResize(el, function () {
+    // The redraw replaces every grip, so carry keyboard focus across it.
+    var a = typeof document === 'undefined' ? null : document.activeElement;
+    var row = a && el.contains(a) && a.closest('.mrow[data-key]');
+    var key = row && row.getAttribute('data-key');
+    mountStack(el, marginals, onReorder, opts);
+    var g = key && el.querySelector('.mrow[data-key="' + key + '"] .mgrip');
+    if (g && g.focus) g.focus();
+  });
 
   wireTooltipDelegation();
   wireStackDrag(el, order, onReorder);
