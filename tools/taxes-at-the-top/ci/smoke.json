@@ -1,0 +1,5 @@
+{
+  "marker": "data-key=\"ord\"",
+  "budgetMs": 9000,
+  "note": "This tool has no tabs (both views mount as simultaneous stacked sections, not role=tab panels), so aria-selected never appears anywhere app.js renders. data-key=\"ord\" is the first lever control's dataset.key attribute, written by renderControls() in app.js — which only runs after fetch('./data/data.json') resolves and createModel() builds meta.LEVERS from it. #rateSw/#structSw/#decTog/#incDefTog all start empty in index.html, so this marker proves the JS actually booted and read real data, unlike aria-pressed, which is already present statically on the distViewTog buttons in index.html and would pass even if app.js never ran. The chart-engine bundle is vendored locally under vendor/chart-engine/ (no CDN), so there is no external dependency to wait on or fail against."
+}
