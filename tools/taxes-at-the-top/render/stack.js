@@ -46,11 +46,12 @@ function metaFor(key) { return LEVERS_META[key] || { label: key }; }
 // The three rungs, top to bottom within a row. `step` is the position on each
 // base hue's light-to-dark ladder (see shared.js's HUE_VAR); y/h are in ROW_H
 // units. One table drives the bars, their tags, their numbers and the export
-// image, so those four cannot drift apart.
+// image, so those four cannot drift apart. `short` is the tag on a narrow card,
+// where the tag column is 52px (see styles.css).
 export var RUNGS = [
-  { k: 'stat', tag: 'first-order tax change', label: 'First-order tax change', step: 1, y: 2, h: 14, opacity: 0.55 },
-  { k: 'mech', tag: '+ mechanical effects', label: '+ mechanical effects', step: 2, y: 20, h: 14, opacity: 0.75 },
-  { k: 'conv', tag: '+ behavioral effects', label: '+ behavioral effects', step: 3, y: 38, h: 28, opacity: 1 }
+  { k: 'stat', tag: 'first-order tax change', short: 'first-order', label: 'First-order tax change', step: 1, y: 2, h: 14, opacity: 0.55 },
+  { k: 'mech', tag: '+ mechanical effects', short: '+ mechanical', label: '+ mechanical effects', step: 2, y: 20, h: 14, opacity: 0.75 },
+  { k: 'conv', tag: '+ behavioral effects', short: '+ behavioral', label: '+ behavioral effects', step: 3, y: 38, h: 28, opacity: 1 }
 ];
 var ROW_H = 68;
 var RUNG_KEYS = RUNGS.map(function (u) { return u.k; });
@@ -328,7 +329,8 @@ function rowHtml(row, bw, xz, sc, ticks, heads, gdpDecade, decadeLabel, activeCo
   var levels = rungLevels(row, gdpDecade);
 
   var tags = RUNGS.map(function (u) {
-    return '<span class="t' + u.k + '" style="top:' + rungCenter(u) + '">' + u.tag + '</span>';
+    return '<span class="t' + u.k + '" style="top:' + rungCenter(u) + '">'
+      + '<span class="tf">' + u.tag + '</span><span class="ts">' + u.short + '</span></span>';
   }).join('');
   // Dollars and shares are absolutely positioned at their own rung's center. The
   // share column is a two-lane grid (step | level) so the steps align in a
@@ -386,15 +388,6 @@ function legendHtml(heads) {
   return heads.map(function (h) {
     return '<span class="it"><span class="sw2" style="background:' + headColor(h, SCORE_RUNG.step) + '"></span>' + headLabel(h) + '</span>';
   }).join('');
-}
-
-// The three rung names, for the narrow-container case where .mtag is dropped and
-// nothing else on screen names them. Built from RUNGS so it cannot drift from the
-// column it stands in for. Hidden by default — see styles.css.
-function rungKeyHtml() {
-  return '<div class="mstack-note">Bars per row, palest to thickest: '
-    + RUNGS.map(function (u) { return u.tag; }).join(' &middot; ')
-    + '</div>';
 }
 
 function widthOf(el) { return Math.max(300, el.clientWidth || 660); }
@@ -786,19 +779,11 @@ export function mountStack(el, marginals, onReorder, opts) {
   // which the .mtag column already names on every row — so the reader met the same
   // three names twice before reaching the bars.
   //
-  // .mstack-note carries those names for the ONE case where the column cannot:
-  // below a 700px container the row cannot fit .mtag and styles.css drops it, and
-  // with it the only on-screen thing naming the three stages (the legend keys tax
-  // BASES, not rungs). The element is always emitted and revealed by the container
-  // query, rather than being generated content, so it is translatable and reaches
-  // assistive technology. It is hidden at every width where .mtag is visible.
-  //
   // The legend keys tax bases, so an empty package has nothing to key and the row
   // is omitted rather than drawn empty.
   function paint(bw) {
     el.innerHTML = (heads.length ? '<div class="mstack-head"><div class="legend mstack-legend">' + legendHtml(heads) + '</div></div>' : '')
       + '<div class="mstack">' + rowsHtml(bw) + '</div>'
-      + rungKeyHtml()
       + '<div class="mstack-footer">' + downloadControlHtml() + '</div>';
   }
 

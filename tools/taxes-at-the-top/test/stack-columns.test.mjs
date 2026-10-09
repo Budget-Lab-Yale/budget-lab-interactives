@@ -114,7 +114,7 @@ test('export text weights match the screen rules for the same text', () => {
   // The settings line and the two lighter rung tags set `font:` without a weight.
   assert.equal(one((t) => t.body === 'top rate 45%', 'settings line')[0].weight, cssWeight(STYLES, '.msub'));
   for (const u of RUNGS.slice(0, 2)) {
-    assert.equal(one((t) => t.body === u.tag, u.tag + ' tag')[0].weight, cssWeight(STYLES, '.mtag span'), u.tag);
+    assert.equal(one((t) => t.body === u.tag, u.tag + ' tag')[0].weight, cssWeight(STYLES, '.mtag > span'), u.tag);
   }
 });
 
