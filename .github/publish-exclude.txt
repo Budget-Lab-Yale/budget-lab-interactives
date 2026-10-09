@@ -24,3 +24,7 @@ _site
 /tools/*/scripts
 /tools/*/update.py
 /tools/*/package.json
+/tools/*/test
+# Maintainer notes. Not all of /tools/*/docs: state-of-tariffs serves docs/key-takeaways.html.
+/tools/taxes-at-the-top/docs
+CLAUDE.md
