@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. Format: [Ke
 
 ## [Unreleased]
 
-- New tool: **Revenue from Higher Taxes at the Top** (`tools/taxes-at-the-top/`), migrated from the staging repo. Launch snapshot frozen at `versions/2026-10-08/`.
+- New tool: **Revenue from Higher Taxes at the Top** (`tools/taxes-at-the-top/`), migrated from the staging repo. Launch snapshot frozen at `versions/2026-10-08/`. Its test suite, data-sync script and maintainer docs followed; the tests run in CI through `ci/validate.sh`. Publishing now also excludes `tools/*/test/`, that tool's `docs/`, and any `CLAUDE.md`.
 - Embed loader (`embed/v1/embed.js` v1.1.0): tool iframes now load eagerly. `loading="lazy"` meant a non-scrolling renderer — a PDF builder, a social-card scraper — never brought a below-fold embed near the viewport, leaving it an empty 100px box. Measured under headless `page.pdf()` on a 16,000px article with three tools: 0 of 3 issued a request with `lazy`, 3 of 3 with `eager`. Affects every already-published embed on next deploy, with no snippet change.
 - New tool: **AI Labor Market Tracker** (`tools/ai-labor-market-tracker/`), migrated from the staging repo. Launch snapshot frozen at `versions/2026-06-15/`.
 - Per-tool CI validation convention: the `Validate site` check now auto-discovers `tools/<slug>/ci/validate.sh` (build/data gates) and `tools/<slug>/ci/smoke.json` (render marker), so new tools need no workflow edits. Existing tools backfilled with `ci/smoke.json`.
