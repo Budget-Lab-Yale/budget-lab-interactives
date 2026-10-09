@@ -40,6 +40,11 @@ section verbatim into every code-review prompt.** A violation of anything here i
   vendored stylesheet is the only thing styling them, so if the engine drops a class the card headers
   or the download buttons render unstyled with no error and a green suite. Anything else this repo
   leans on must be pinned the same way.
+- **The stack's PNG export takes its font from the vendored stylesheet.** An SVG rasterised through
+  `<img>` cannot see the page's fonts, so `render/stack.js` lifts the Figtree `@font-face` (a data
+  URI) out of `chart-engine.css` at download time and embeds it. If the engine stops shipping that
+  rule, the PNG silently falls back to the system face. Pinned by `test/stack-columns.test.mjs`, which
+  also holds each export text's weight to the `styles.css` rule for the same text on screen.
 - **Colours in a spec must be engine palette names or hex.** A `var(--tbl-*)` reference is refused
   at load since 1.11.0 — the palette resolver cannot read it.
 

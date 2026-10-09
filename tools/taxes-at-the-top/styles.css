@@ -509,7 +509,16 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 .mrow.axis { padding: 0 4px; }
 .mrow.axis .mtag, .mrow.axis .mnum, .mrow.axis .mdol { height: 16px; }
 .mrow:hover { background: var(--tbl-bg-subtle); }
-.mrow.axis:hover { background: none; }
+.mrow.axis:hover, .mrow.colhead:hover { background: none; }
+/* Column heads over the dollars and share-of-GDP columns. The step lane between
+ * them stays blank. Both heads ride the data rows' own column skeleton, so they
+ * stay over their columns under the narrow-container rules below. */
+.mrow.colhead { padding: 0 4px; }
+.mrow.colhead .mtag, .mrow.colhead .mdol, .mrow.colhead .mnum { height: 14px; }
+.mrow.colhead .mdol > div, .mrow.colhead .mnum .mn { top: 50%; }
+.mrow.colhead .mdol > div, .mrow.colhead .mnum .lv {
+  font-size: 10px; font-weight: var(--tw-medium); color: var(--tbl-text-muted);
+}
 .mrow.dragging { background: var(--tbl-bg-subtle); }
 /* The reorder handle. It is a real <button> (render/stack.js gripHtml) so the
  * order — which RECOMPUTES the attribution, not just the row positions — is
@@ -831,6 +840,15 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 .tt-card .tt-alt + .tbl-tooltip-value { margin-left: 0; }
 .tt-card .tbl-tooltip-label + .tbl-tooltip-value { margin-left: auto; }
 .tt-card .is-current .tt-alt { color: var(--tbl-text-body); }
+/* With column heads (tipCard `cols`), both lanes take a fixed width so a head and
+ * the numbers under it share a right edge. In px, not em: the head is set smaller
+ * than the numbers, so an em width would differ between the two rows. */
+.tt-card .tt-rows.has-cols .tt-alt { min-width: 64px; text-align: right; }
+.tt-card .tt-rows.has-cols .tbl-tooltip-value { min-width: 56px; text-align: right; }
+.tt-card .tbl-tooltip-row.is-colhead .tt-alt,
+.tt-card .tbl-tooltip-row.is-colhead .tbl-tooltip-value {
+  font-size: 10.5px; font-weight: var(--tw-medium); color: var(--tbl-text-muted);
+}
 
 /* The current row: the one the pointer is on. The head names the policy and the
  * base, so this is what identifies which of the three stages is being read. */
