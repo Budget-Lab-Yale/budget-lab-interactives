@@ -1,0 +1,881 @@
+/* ===========================================================================
+ * Revenue from higher taxes at the top — layout, navigation chrome, and the
+ * controls-rail (eight-lever switches + dials). All figure- and table-level
+ * styling (figure-card, legend, crosshair tooltip, tbl-table*) and the
+ * --tbl-* design tokens come from the vendored engine stylesheet,
+ * vendor/chart-engine/chart-engine.css. Do not duplicate figure/table rules
+ * here.
+ *
+ * Shell chrome adapted from state-of-tariffs' styles.css. The controls-rail
+ * rules (.sw/.swseg/.seg/.dials/.drow/.tile) are re-skinned to --tbl-*
+ * tokens from the netlify source's inline <style> (see scratchpad/index.html
+ * lines ~56-136): --surface-2 -> --tbl-bg-subtle, --accent -> --tbl-navy,
+ * --accent-2 -> --tbl-bg-highlight, --ink/--ink-2 -> --tbl-text-heading /
+ * --tbl-text-body, --muted -> --tbl-text-muted, --rule/--hair -> --tbl-border,
+ * --good/--warn -> --tbl-green-400 / --tbl-red-400.
+ * =========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --tbl-font-sans:         'Figtree', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --tbl-font-sans-compact: 'Figtree', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+
+  /* Figtree weight scale: body / medium / semibold / bold. */
+  --tw-body:   500;
+  --tw-medium: 600;
+  --tw-semi:   700;
+  --tw-bold:   800;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scrollbar-gutter: stable; }
+body {
+  font-family: var(--tbl-font-sans);
+  font-weight: var(--tw-body);
+  color: var(--tbl-text-body);
+  background: var(--tbl-bg);
+  line-height: 1.5;
+}
+
+/* Screen-reader-only text: read by assistive technology, zero visual footprint.
+ * The 1px clip-rect form, not display/visibility:hidden — those two remove the
+ * node from the accessibility tree, which would silence exactly the announcement
+ * this is for. Added because the stack figure's reorder live region needs it and
+ * render/stack.js was carrying the same declarations inline; a utility here is
+ * the one copy, so a future consumer cannot get a subtly different one. */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* --- Outer shell ---------------------------------------------------------- */
+.tracker-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 24px 32px;
+}
+html.iframed .tracker-shell { padding: 16px 16px 24px; }
+
+/* --- Header bar ----------------------------------------------------------- */
+.tracker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--tbl-border);
+}
+.tracker-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: var(--tw-bold);
+  color: var(--tbl-text-heading);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.tracker-logo-link { display: inline-block; line-height: 0; }
+.tracker-logo { height: 32px; width: auto; display: block; }
+
+/* --- Hero dek: the two intro paragraphs under the H1 (Task 19), ported
+ * verbatim from the netlify source's .hero .dek (scratchpad/handoff/
+ * simulator.html lines ~196-197). Two-column at full width, stacking on
+ * narrow viewports, same breakpoint as the source's .dekcols. */
+.tracker-dek {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 32px;
+}
+.tracker-dek p {
+  margin: 0;
+  font: var(--tw-body) 15px/1.5 var(--tbl-font-sans);
+  color: var(--tbl-text-body);
+}
+.tracker-dek .dek-wide { grid-column: 1 / -1; }
+.tracker-dek a { color: var(--tbl-blue); }
+@media (max-width: 760px) {
+  .tracker-dek { grid-template-columns: 1fr; gap: 10px; }
+}
+
+/* Card headers use the vendored engine's own header classes — .figure-supertitle
+ * (eyebrow), .figure-title, .figure-subtitle from chart-engine.css — so both
+ * figures are titled the way an engine-rendered chart is, rather than in a
+ * parallel style of our own. Neither figure is an engine chart end to end (one is
+ * an engine chart under a custom header, the other is hand-built SVG), but the
+ * reader shouldn't be able to tell from the heading.
+ *
+ * The engine renders its OWN titlebar and subtitle inside #distChart, which would
+ * then appear a second time under ours. Suppressed here rather than by blanking
+ * spec.title: the download image is built from the spec, so a blank title there
+ * would strip the caption from the exported PNG too. Hiding the logo with it —
+ * the page header already carries the wordmark, and the exported image still gets
+ * its own copy from the engine. */
+#distChart .figure-titlebar,
+#distChart .figure-subtitle { display: none; }
+
+/* The engine's own figure-card margin doesn't apply inside our card wrapper. */
+#distChart .figure-card { margin-bottom: 0; }
+
+/* --- No overrides on engine internals. The three distribution views author their hover
+ * card through the engine's own `hooks.tooltip` (render/distribution.js), so the engine
+ * keeps hit-testing, positioning and the band highlight and the card is its own element —
+ * nothing to suppress from a stylesheet, and nothing that a PNG export could disagree
+ * with. `chrome.valuePills: false` in the spec turns off the numbers the hover used to
+ * paint on the marks, and `barStack.hover: 'tooltip'` buys the card without a net dot.
+ *
+ * All four of the overrides this file used to carry are now spec keys or hooks:
+ * series_patterns and barStack.segmentGap (1.11.0), barStack.hover + chrome.valuePills +
+ * hooks.tooltip (1.12.0, engine#29/#30). The card's own styling lives on .tt-card, which
+ * is host-agnostic so the same markup styles inside the engine's card and inside the
+ * stack figure's #tt element. */
+
+/* Both cards' headers, tightened against the toggles/legend that follow. */
+#distCard .figure-subtitle,
+#stackCard .figure-subtitle { margin-bottom: 12px; }
+
+/* --- Two-column body: controls rail + results main ------------------------ */
+.tracker-body {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.tracker-sidebar {
+  background: var(--tbl-bg-subtle);
+  border: 1px solid var(--tbl-border);
+  border-radius: 8px;
+  padding: 20px;
+  position: sticky;
+  top: 12px;
+}
+.tracker-sidebar .sidebar-section { margin-bottom: 20px; }
+.tracker-sidebar .sidebar-section:last-child { margin-bottom: 0; }
+.tracker-sidebar h2 {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: var(--tw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tbl-text-muted);
+}
+
+/* --- Main results area ----------------------------------------------------- */
+.tracker-main { min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+
+.tracker-figure {
+  background: var(--tbl-bg);
+  border: 1px solid var(--tbl-border);
+  border-radius: 8px;
+  padding: 20px 24px 16px;
+}
+.tracker-figure:empty { display: none; }
+
+/* --- Controls rail: switch groups + per-lever dials ------------------------ */
+.lever-group { display: flex; flex-direction: column; gap: 0; }
+/* The lever wrapper carries a transparent border at all times so switching a lever
+ * on can colour it without moving anything. When on, the WRAPPER becomes the pill
+ * and the switch is its header, which is how the dials come to sit inside the same
+ * rounded box (they can't be nested in .sw itself — it's a <button>, and form
+ * controls inside a button are invalid and unclickable). */
+.lever { margin-bottom: 9px; border: 1px solid transparent; border-radius: 8px; }
+.lever:last-child { margin-bottom: 0; }
+.lever.on { background: var(--tbl-bg-highlight); border-color: var(--tbl-navy); }
+/* Inner box stands down: the wrapper draws the outline and the fill now. Its border
+ * goes transparent rather than to 0 so the header keeps its own metrics. */
+.lever.on .sw,
+.lever.on .swseg {
+  background: transparent;
+  border-color: transparent;
+  border-radius: 7px 7px 0 0;
+}
+
+/* Continuous/binary lever: a full-width switch button, dials revealed when on. */
+.sw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  background: var(--tbl-bg);
+  border: 1px solid var(--tbl-border);
+  color: var(--tbl-text-heading);
+  border-radius: 8px;
+  padding: 9px 11px;
+  cursor: pointer;
+  text-align: left;
+  font: var(--tw-medium) 13.5px var(--tbl-font-sans);
+  transition: background 0.12s, border-color 0.12s;
+}
+.sw:hover { border-color: var(--tbl-navy); }
+/* The toggle is a real <button> now (the pill around it is a div, so the "?" inside
+ * can be a button too) — so it has to shed the UA button chrome the old <span>
+ * never had, or it renders with a border and padding inside the pill.
+ *
+ * Scoped to .lever, NOT to .sw: gains at death carries the same toggle in its
+ * .swseg header, and a .sw-scoped rule left that one rendering as a bare button. */
+.lever .dot {
+  width: 30px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--tbl-border);
+  position: relative;
+  flex: none;
+  transition: background 0.14s;
+  appearance: none; -webkit-appearance: none;
+  border: 0; padding: 0; margin: 0;
+  cursor: pointer;
+}
+.lever .dot:focus-visible { outline: 2px solid var(--tbl-blue); outline-offset: 3px; }
+.lever .dot::after {
+  content: "";
+  position: absolute;
+  top: 2px; left: 2px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.14s;
+}
+/* aria-pressed lives on the TOGGLE now, not on the pill. Keyed off the pill, as it
+ * was, the switch silently never showed its on state. */
+.lever .dot[aria-pressed="true"] { background: var(--tbl-navy); }
+.lever .dot[aria-pressed="true"]::after { transform: translateX(12px); }
+
+/* Dials live inside the lever's pill, so they carry the pill's side padding and
+ * close out its bottom rather than sitting in a detached indented block. */
+.dials { padding: 2px 11px 9px; display: none; }
+/* The selector now heads the collapsible block, above any dials. */
+.dials .seg { margin: 6px 0 10px; }
+.lever.on .dials { display: block; }
+.drow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0;
+  font-size: 12px;
+  color: var(--tbl-text-body);
+}
+.drow .dlab { flex: 1; }
+.drow input {
+  width: 86px;
+  font: 600 12.5px/1.2 var(--tbl-font-sans);
+  font-variant-numeric: tabular-nums;
+  color: var(--tbl-text-heading);
+  background: var(--tbl-bg);
+  border: 1px solid var(--tbl-border);
+  border-radius: 6px;
+  padding: 5px 7px;
+  text-align: right;
+}
+.drow input:focus-visible { outline: 2px solid var(--tbl-blue); outline-offset: 1px; }
+.drow .dunit { width: 18px; color: var(--tbl-text-muted); font: 600 11px/1 var(--tbl-font-sans); }
+
+/* Ladder lever (deemed-at-death): same bubble as .sw, with a segmented control inside. */
+.swseg {
+  background: var(--tbl-bg);
+  border: 1px solid var(--tbl-border);
+  border-radius: 8px;
+  padding: 9px 11px;
+  transition: background 0.12s, border-color 0.12s;
+}
+.swseg:hover { border-color: var(--tbl-navy); }
+.swseg .slab { display: block; font: var(--tw-medium) 13.5px var(--tbl-font-sans); color: var(--tbl-text-heading); }
+
+/* --- Lever explainers -----------------------------------------------------
+ * A "?" beside each policy NAME, opening a floating tooltip. The name lives
+ * inside the pill, and a <button> may not contain another button — so .sw is a
+ * DIV carrying the click handler, and the toggle inside it is the real control.
+ * That keeps the whole pill clickable while giving the "?" a legitimate place
+ * next to the name and its own tab stop.
+ *
+ * The tooltip reuses #tt's frosted treatment (below) rather than inventing a
+ * second hover-card language: the reader meets one card style across the page,
+ * whether they are hovering a chart or asking what a policy is. */
+/* The name takes the free space so the "?" lands in the same place on every lever,
+ * hard against the toggle — rather than trailing each name at a different x. */
+.sw .lbl { min-width: 0; flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; }
+
+/* Gains at death has no toggle, so its name row is its own flex line. Without the
+ * display:flex here the row is not a row at all and justify-content does nothing —
+ * which is exactly how this looked when the rule went missing. */
+.lever-head { display: flex; align-items: center; gap: 6px; }
+/* The selector sits under the name row inside .swseg, so the row keeps the gap it
+ * always had between the two. */
+/* The header is all that remains inside .swseg — the selector moved into .dials —
+ * so the box closes up to the same height as a .sw pill. */
+.swseg .lever-head { justify-content: space-between; gap: 10px; }
+
+/* Gains at death now carries the same toggle as every other lever, above its
+ * three-way selector, so its name row spaces itself exactly as .sw does: name takes
+ * the slack, then "?", then the toggle. No inset needed — the missing toggle was
+ * what used to leave its "?" 40px out of line with the rest. */
+.swseg .lever-head .slab { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+
+.lever-info-btn {
+  flex: none;
+  width: 17px; height: 17px; margin: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  appearance: none; -webkit-appearance: none;
+  background: none;
+  /* Light when the lever is off; it darkens to the "?" gray when the lever is on,
+   * where --tbl-border would vanish against .lever.on's highlight. */
+  border: 1px solid var(--tbl-border);
+  border-radius: 50%;
+  padding: 0;
+  font: var(--tw-medium) 11px/1 var(--tbl-font-sans);
+  color: var(--tbl-text-muted);
+  cursor: help;
+  transition: color 0.12s, border-color 0.12s, background 0.12s;
+}
+.lever.on .lever-info-btn { border-color: var(--tbl-text-muted); }
+.lever-info-btn:hover,
+.lever-info-btn[aria-expanded="true"],
+.lever.on .lever-info-btn:hover,
+.lever.on .lever-info-btn[aria-expanded="true"] {
+  color: var(--tbl-navy); border-color: var(--tbl-navy); background: var(--tbl-bg);
+}
+.lever-info-btn:focus-visible { outline: 2px solid var(--tbl-blue); outline-offset: 2px; }
+
+/* Same frosted glass as the charts' hover cards. */
+.lever-tip {
+  position: fixed;
+  z-index: 9999;
+  max-width: 248px;
+  box-sizing: border-box;
+  padding: 9px 11px;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--tbl-text-heading);
+  font: var(--tw-body) 12px/1.45 var(--tbl-font-sans);
+  border-radius: 6px;
+  border: 1px solid rgba(200, 205, 215, 0.7);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+          backdrop-filter: blur(20px) saturate(160%);
+  opacity: 0;
+  transition: opacity 80ms linear;
+  pointer-events: none;
+}
+.lever-tip.show { opacity: 1; }
+.lever-tip[hidden] { display: none; }
+
+/* The arrow is positioned from --arrow, which app.js sets to the TRIGGER's centre
+ * measured from the tooltip's own left edge — not to a fixed offset. Near the
+ * viewport edge the tooltip is clamped and the two stop coinciding, which is
+ * exactly when a fixed arrow ends up pointing at nothing. Two stacked triangles
+ * fake a 1px border on the arrow, since a filled triangle cannot carry one. */
+.lever-tip::before,
+.lever-tip::after {
+  content: "";
+  position: absolute;
+  left: var(--arrow, 20px);
+  width: 0; height: 0;
+  border: 7px solid transparent;
+  border-top: 0;
+  transform: translateX(-7px);
+}
+.lever-tip::before { top: -7px; border-bottom-color: rgba(200, 205, 215, 0.7); }
+.lever-tip::after  { top: -6px; border-bottom-color: rgba(255, 255, 255, 0.72); }
+
+/* Flipped above the trigger when there is no room below — the arrow flips with it. */
+.lever-tip.above::before,
+.lever-tip.above::after { top: auto; border-bottom: 0; border-top: 7px solid transparent; }
+.lever-tip.above::before { bottom: -7px; border-top-color: rgba(200, 205, 215, 0.7); }
+.lever-tip.above::after  { bottom: -6px; border-top-color: rgba(255, 255, 255, 0.72); }
+/* The on-state fill/outline moved to .lever.on (controls rail, above), which draws
+ * the pill around the header AND its dials. A .lever.on .swseg rule here would sit
+ * later in the file at the same specificity and silently win. */
+.seg {
+  display: flex;
+  border: 1px solid var(--tbl-border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--tbl-bg);
+}
+.seg button {
+  flex: 1;
+  font: 600 11px/1.2 var(--tbl-font-sans);
+  padding: 7px 4px;
+  background: transparent;
+  color: var(--tbl-text-body);
+  border: 0;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+.seg button + button { border-left: 1px solid var(--tbl-border); }
+.seg button[aria-pressed="true"] { background: var(--tbl-navy); color: #fff; }
+
+/* Reset-to-current-law button (reuses the sidebar-download-btn look). */
+.sidebar-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  font: var(--tw-medium) 13px/1.2 var(--tbl-font-sans);
+  color: var(--tbl-text-muted);
+  background: transparent;
+  border: 1px solid var(--tbl-border);
+  border-radius: 6px;
+  padding: 9px 12px;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.sidebar-download-btn:hover,
+.sidebar-download-btn:focus-visible { border-color: var(--tbl-navy); color: #fff; background: var(--tbl-navy); outline: none; }
+
+.boot-error {
+  background: var(--tbl-red-400, #C13933);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+/* Row pairing a card's own view toggle with the income-definition toggle
+ * (both reuse .seg from the ladder lever) so they sit side by side above
+ * the chart, matching the source's inline flex wrapper (scratchpad/index.html
+ * line ~223). */
+.toggle-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-bottom: 14px; }
+.toggle-row .dist-view-tog,
+.toggle-row .incdef-tog { margin-bottom: 0; }
+
+/* Distribution card's measure toggle (reuses .seg from the ladder lever).
+ *
+ * These pills try hard to keep each label on one line. .seg's inherited `flex: 1`
+ * divides the group into equal shares, so the longest label ("Effective rate",
+ * "Accrual income") broke over two lines while its neighbours sat half empty, and
+ * the max-widths tightened the squeeze. Here the pills size to their own labels
+ * instead and refuse to break; .toggle-row's wrap then moves a whole group to the
+ * next line, which is the graceful failure. Below the sidebar breakpoint the card
+ * can get narrower than one group, and .seg clips (overflow: hidden), so wrapping
+ * inside the label is allowed back at that width — a two-line label beats a
+ * cut-off one. */
+.dist-view-tog { margin-bottom: 14px; }
+.dist-view-tog button,
+.incdef-tog button { flex: 0 0 auto; white-space: nowrap; padding: 7px 12px; }
+.dist-empty { color: var(--tbl-text-muted); font-size: 13px; padding: 24px 0; text-align: center; }
+
+
+
+/* Budget-window (decade) toggle, first section of the controls rail (reuses
+ * .seg). Stacked, not side by side: three labels of the form "First decade ·
+ * 2027–36" have nowhere to go in a 240px rail. */
+.tracker-sidebar .dec-tog { flex-direction: column; max-width: none; margin-bottom: 0; }
+.tracker-sidebar .dec-tog button { text-align: left; padding: 8px 11px; }
+.tracker-sidebar .dec-tog button + button { border-left: 0; border-top: 1px solid var(--tbl-border); }
+
+/* The stack figure is sized by its CARD, not by the viewport, and the two do not
+ * move together: at 881px the controls rail is still beside the card, so the card
+ * is ~483px wide, while at 880px the rail drops below and the same card jumps to
+ * ~783px. A viewport media query therefore cannot express "the row no longer
+ * fits" — it would have to fire at BOTH 620px and again across the 881-926px
+ * band, and would still be wrong for the iframed embed, which loses 16px of
+ * shell padding at every width. A container query asks the only question that
+ * matters. Measured card inner widths (Chromium, this page, three levers on):
+ * 390px viewport -> 293px, 500 -> 403, 640 -> 543, 880 -> 783, 900 -> 483,
+ * 1000 -> 583, 1200 -> 783. Note the 900 entry: it is narrower than the 640 one.
+ *
+ * Browsers without container query support drop both the `container` shorthand
+ * and the @container block, which leaves today's behaviour rather than a broken
+ * hybrid — an acceptable floor for a feature shipped everywhere since 2023. */
+#stackCard { container: stack-card / inline-size; }
+
+/* "How policies stack" view (render/stack.js): one draggable row per active
+ * lever, plus a total row and an axis row. Six columns —
+ * grip | label | rung tags | three-rung bar | dollars | share of GDP.
+ *
+ * The tags, dollars and shares are absolutely positioned at the vertical center
+ * of their own rung (render/stack.js's rungCenter, computed from RUNGS), so a
+ * change to the bar geometry moves all four together. Their containers must
+ * therefore be `position: relative` and carry the row's full bar height (--mrow-h).
+ *
+ * The collected rung is drawn at double thickness, so the row is 68 units tall,
+ * not 54: 14 + 14 + 28 plus the gaps between.
+ */
+.mstack { --mrow-h: 68px; display: flex; flex-direction: column; gap: 1px; margin-top: 2px; touch-action: pan-y; }
+/* Square corners on the row highlight, matching the bars it sits behind (see the
+ * no-rx invariant in render/stack.js barSvg). */
+.mrow { display: flex; align-items: center; gap: 10px; padding: 5px 4px; }
+.mrow.total { margin-top: 6px; padding-top: 11px; border-top: 1px solid var(--tbl-border); }
+.mrow.axis { padding: 0 4px; }
+.mrow.axis .mtag, .mrow.axis .mnum, .mrow.axis .mdol { height: 16px; }
+.mrow:hover { background: var(--tbl-bg-subtle); }
+.mrow.axis:hover { background: none; }
+.mrow.dragging { background: var(--tbl-bg-subtle); }
+/* The reorder handle. It is a real <button> (render/stack.js gripHtml) so the
+ * order — which RECOMPUTES the attribution, not just the row positions — is
+ * reachable by keyboard; the Total row's placeholder is still a <span>. One rule
+ * has to dress both, so everything a UA button brings of its own is reset here:
+ * appearance and border/background/padding (the row highlight is the only fill
+ * in this column), font-family (a button does NOT inherit it, so without this
+ * the braille-dot glyph drops to the UA default face while the size set below
+ * still applies), and margin. `touch-action: none` is what hands a touch that
+ * starts on the handle to the drag code rather than to the browser's panning —
+ * see the note on .mstack's own touch-action in the container block below. */
+.mgrip {
+  flex: none; width: 18px; text-align: center;
+  color: var(--tbl-text-muted); cursor: grab;
+  font-family: inherit; font-size: 14px; line-height: 1;
+  appearance: none; -webkit-appearance: none;
+  background: none; border: 0; margin: 0; padding: 0;
+  user-select: none; touch-action: none;
+}
+.mgrip:hover { color: var(--tbl-navy); }
+.mgrip.ghost { cursor: default; visibility: hidden; }
+.mrow.dragging .mgrip { cursor: grabbing; color: var(--tbl-navy); }
+/* The file's focus convention (see .sw and .drow input): a 2px --tbl-blue ring,
+ * drawn as an `outline`, so it costs no layout and cannot nudge the row's five
+ * other columns when it appears. Offset is 1px rather than the switches' 2px for
+ * one reason: the handle sits 4px from .mstack's content edge, and .mstack is a
+ * horizontal scroll container at narrow widths (below) — at 2px the ring's outer
+ * edge would land exactly on the clip boundary and lose its left side.
+ * --tbl-blue clears 3:1 against both grounds the ring can appear over, the card
+ * white and the --tbl-bg-subtle of .mrow:hover / .mrow.dragging. */
+.mgrip:focus-visible {
+  outline: 2px solid var(--tbl-blue);
+  outline-offset: 1px;
+  border-radius: 2px;
+  color: var(--tbl-navy);
+}
+.mlab { flex: 0 0 140px; min-width: 0; }
+.mname { font: var(--tw-medium) 12.5px/1.25 var(--tbl-font-sans); color: var(--tbl-text-heading); }
+.mrow.total .mname { font-weight: var(--tw-bold); }
+.msub { font: 10px/1.3 var(--tbl-font-sans); color: var(--tbl-text-muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Rung names. The three take the same visual weight as their bar's tint step,
+ * so the ladder reads top-to-bottom without a legend lookup. */
+.mtag { flex: 0 0 112px; position: relative; height: var(--mrow-h); }
+.mtag span {
+  position: absolute; right: 0; transform: translateY(-50%); white-space: nowrap;
+  font: 8px/1 var(--tbl-font-sans); letter-spacing: .01em; color: var(--tbl-text-muted);
+}
+.mtag .tmech { color: var(--tbl-text-body); }
+.mtag .tconv { color: var(--tbl-text-heading); font-weight: 600; }
+
+.mbar { flex: 1 1 auto; min-width: 0; }
+.mbar svg.mbarsvg { display: block; width: 100%; height: var(--mrow-h); overflow: visible; }
+.mbar svg.maxis { display: block; width: 100%; height: 16px; overflow: visible; }
+
+/* Dollars, at the same three heights as the shares beside them. */
+.mdol {
+  flex: 0 0 72px; position: relative; height: var(--mrow-h); text-align: right;
+  font-family: var(--tbl-font-sans); font-variant-numeric: tabular-nums; color: var(--tbl-text-muted);
+}
+.mdol > div { position: absolute; right: 0; transform: translateY(-50%); white-space: nowrap; font-size: 9.5px; }
+.mdol .d-conv { font-size: 11px; color: var(--tbl-text-body); }
+.mrow.total .mdol .d-conv { font-weight: var(--tw-bold); }
+
+/* Share of GDP: each rung's own level, the lower two prefixed with the step down
+ * from the rung above. Two fixed lanes (step | level) rather than inline spans —
+ * the levels are set at three different sizes, so an inline step would land at a
+ * different x on every line. */
+.mnum {
+  flex: 0 0 124px; position: relative; height: var(--mrow-h);
+  font-family: var(--tbl-font-sans); font-variant-numeric: tabular-nums; line-height: 1.25;
+}
+.mnum .mn {
+  position: absolute; right: 0; transform: translateY(-50%);
+  display: grid; grid-template-columns: 62px 56px; align-items: baseline;
+}
+.mnum .md { font-size: 9px; text-align: right; padding-right: 6px; white-space: nowrap; }
+.mnum .lv { text-align: right; white-space: nowrap; }
+.mnum .is-stat .lv { font-size: 9.5px; color: var(--tbl-text-muted); }
+.mnum .is-mech .lv { font-size: 10.5px; color: var(--tbl-text-body); }
+/* The score line is the engine's shared callout style (theme.ts TBL_VALUE_LABEL:
+ * 12px/700), the same spec its per-bar value labels use. The two smaller rungs
+ * keep their own sizes — that ladder is the hierarchy, not a token mismatch. */
+.mnum .is-conv .lv { font-size: 12px; font-weight: 700; color: var(--tbl-text-heading); }
+.mrow.total .mnum .is-conv .lv { font-weight: var(--tw-bold); }
+
+/* --- Narrow card: scroll the stack, do not reflow it ------------------------
+ * Every .mrow child except .mbar is a fixed basis, so the row costs
+ * 18 (grip) + 140 (label) + 112 (tags) + 72 (dollars) + 124 (shares) = 466,
+ * plus five 10px gaps and 8px of row padding = 524px BEFORE the bar is allotted
+ * a single pixel. Below that the bar collapsed to zero and the two number
+ * columns punched through the card border into page-level horizontal scroll.
+ *
+ * The rows are NOT reflowed into stacked cards at narrow widths. Every bar is
+ * drawn against one shared x-scale, and that shared scale is the entire claim
+ * the figure makes — a per-row card layout would leave eight bars that cannot be
+ * compared to each other, which is worse than a bar you have to scroll to.
+ *
+ * So: tighten the chrome, then let what is left scroll. 700px is where the
+ * UNTIGHTENED row stops working — 524px of chrome plus the ~180px the bar needs
+ * for its five axis tick labels ("0.05%" and friends at 9px) to stand apart.
+ * Below 700px the chrome is cut to 358px:
+ *   18 (grip) + 120 (label) + 72 (dollars) + 108 (shares) = 318
+ *   + four 8px gaps (32) + 8px row padding = 358
+ * so the same 180px bar now fits in 540px, and .mrow's min-width is set there.
+ * Between 540 and 700 the tightening alone buys the bar back and nothing
+ * scrolls; below 540 the row holds its 540px and .mstack scrolls it.
+ *
+ * .mtag is the one column dropped, and only because .mstack-note picks its
+ * content up: it holds the three rung names, and the note below the rows is
+ * revealed at exactly the width the column is hidden. That pairing is the whole
+ * justification — it was briefly broken when the card's caption (which had named
+ * the rungs) was deleted and this rule was left behind, leaving a narrow reader
+ * with three bars and no word for any of them. .mdol and .mnum carry numbers that
+ * appear nowhere else on the page, so they shrink and are never dropped.
+ *
+ * Scrolling .mstack rather than each .mrow is deliberate: the axis (.mrow.axis)
+ * is a sibling of the data rows inside .mstack, so one scroll container carries
+ * the ticks and the bars together and the shared scale cannot desynchronise. */
+@container stack-card (max-width: 700px) {
+  /* touch-action here, not on the rows: the effective value for a touch is the
+   * intersection down the chain from whatever it lands on, so .mstack has to
+   * ALLOW pan-x or the browser will refuse to scroll the container by finger no
+   * matter what the rows say. The drag surface keeps its own `touch-action:
+   * none` on .mgrip (above), and none beats pan-x on the way up, so a touch that
+   * starts on the handle still goes to wireStackDrag while a touch anywhere else
+   * in a row pans the stack sideways or the page vertically. pan-y is kept
+   * alongside pan-x so the page still scrolls through the figure; the pair also
+   * preserves the original rule's other effect of withholding pinch-zoom.
+   *
+   * overflow-y is pinned to hidden rather than left to compute from visible:
+   * once one axis scrolls the other resolves to `auto`, which would let a
+   * sub-pixel rounding difference raise a vertical scrollbar on a box whose
+   * height is exactly its content. Nothing is drawn outside the rows'
+   * vertical extent, so clipping there costs nothing.
+   *
+   * overscroll-behavior-x keeps a swipe that reaches the end of the scale from
+   * being handed to the browser as a back-navigation gesture. */
+  .mstack {
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x pan-y;
+    /* Room for the horizontal scrollbar. A scroll container with auto height
+     * does not grow for its own scrollbar — the bar is laid inside the padding
+     * box and would cover the axis row's tick labels. 10px clears the 8px the
+     * two rules below ask for. */
+    padding-bottom: 10px;
+    /* The affordance. `auto` means the bar is present exactly when there is
+     * something to reach, which is the honest signal; a visible track (not just
+     * a thumb) is what makes it evident before the reader touches it, so the
+     * track takes --tbl-bg-subtle and the thumb --tbl-border, the same pair the
+     * rest of the file uses for a resting control. Where the platform draws
+     * overlay scrollbars (iOS, macOS trackpad) neither rule can force a resting
+     * bar; there the cut-off axis row at the card edge is the cue. */
+    scrollbar-width: thin;
+    scrollbar-color: var(--tbl-border) var(--tbl-bg-subtle);
+  }
+  .mstack::-webkit-scrollbar { height: 8px; }
+  .mstack::-webkit-scrollbar-track { background: var(--tbl-bg-subtle); border-radius: 999px; }
+  .mstack::-webkit-scrollbar-thumb { background: var(--tbl-border); border-radius: 999px; }
+  .mstack::-webkit-scrollbar-thumb:hover { background: var(--tbl-text-muted); }
+
+  /* The floor the shared scale needs. Rows and the axis row all take it, so they
+   * stay one grid however far the container has shrunk. */
+  .mrow { min-width: 540px; gap: 8px; }
+
+  /* Rung names drop from the row and are picked up by .mstack-note below it. The
+   * two rules are a pair: never hide this column without revealing that note. */
+  .mtag { display: none; }
+  .mstack-note { display: block; }
+
+  .mlab { flex-basis: 120px; }
+  /* The shares column loses width from the step lane only. A step reads as a
+   * caret plus five characters at 9px, about 35px, so 52px is still slack; the
+   * level lane keeps its full 56px because it holds the 12px score line at the
+   * engine-matched size. .mnum keeps 2px over the grid's 108 so the right-
+   * aligned lanes do not sit flush against the card padding. */
+  .mnum { flex-basis: 108px; }
+  .mnum .mn { grid-template-columns: 52px 56px; }
+}
+
+/* The second cue, for the platforms where the first one cannot work. A scrollbar
+ * only advertises itself where the OS draws a resting one; iOS and macOS overlay
+ * theirs and show nothing until a finger or a trackpad is already moving, which
+ * is precisely the reader who does not yet know there is more to reach.
+ *
+ * 540px is .mrow's own min-width from the block above, so this fires exactly
+ * when the row cannot fit its container and never when it can — no CSS test for
+ * "is this box actually scrolling" is needed, because below its floor the row
+ * always overflows and at or above it never does.
+ *
+ * The phrase lands on .mstack-footer, the row that already sits directly under
+ * the scroll container holding the download buttons. The footer is a SIBLING of
+ * .mstack, so unlike a fade or a shadow drawn over the scroll container it
+ * cannot wash out the score column at the end of the scroll, and the footer's
+ * flex-end justification parks the hint at the left with the buttons still
+ * right. It previously rode on the reading key above the rows; that key is gone
+ * (the caption explains the same marks), so the hint moved down to the nearest
+ * stable sibling rather than keeping an element alive just to host it.
+ *
+ * Generated content is the compromise here, not the preference: it is not
+ * translatable and some assistive technology skips it. The phrase belongs in
+ * markup, guarded on the same width — which needs a ResizeObserver, since the
+ * trigger is a CONTAINER width no media query can see. */
+@container stack-card (max-width: 540px) {
+  /* Its own full-width line ABOVE the download buttons, not beside them. Sharing
+   * the row put a muted sentence hard against two controls at the width where
+   * there is least room for either. */
+  .mstack-footer { flex-wrap: wrap; }
+  .mstack-footer::before {
+    content: 'Scroll sideways for the rest of the scale';
+    flex: 1 0 100%;
+    margin-bottom: 8px;
+    font: 12px var(--tbl-font-sans);
+    color: var(--tbl-text-muted);
+  }
+}
+
+/* Stack view legend (own inline markup, not the chart engine's — the
+ * distribution card's legend comes from the engine instead). */
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--tbl-text-body); font-family: var(--tbl-font-sans); }
+.legend .it { display: flex; align-items: center; gap: 6px; }
+/* Geometry and radius are the engine's own rect swatch (.tbl-legend-swatch.is-rect:
+ * 14x12, 1px), so this legend and the distribution card's engine legend match. */
+.legend .sw2 { width: 14px; height: 12px; border-radius: 1px; flex: none; }
+
+/* Stack view header: the by-tax-base legend sits ABOVE the rows, where the
+ * engine puts a chart's legend, with the download control below the plot —
+ * again matching the engine's own figure layout. Nothing else goes up here. */
+/* The narrow-width rung key (render/stack.js rungKeyHtml). Emitted always so it is
+ * real, translatable markup rather than generated content, and shown only by the
+ * @container rule above, at the one width where .mtag is not there to name the
+ * rungs. */
+.mstack-note {
+  display: none;
+  margin-top: 8px;
+  font: 12px var(--tbl-font-sans);
+  color: var(--tbl-text-muted);
+}
+
+.mstack-head { margin-bottom: 10px; }
+.mstack-head .mstack-legend { margin: 0; }
+
+/* Downloads below the plot (reuses the engine's own .figure-meta /
+ * .figure-downloads / .figure-download-btn markup from chart-engine.css). */
+.mstack-footer { margin-top: 10px; display: flex; justify-content: flex-end; }
+.mstack-footer .figure-meta { flex: none; margin: 0; }
+.mstack-footer .figure-meta-text { display: none; }
+
+/* Hover tooltip host (render/shared.js: tipCard/tipShow/tipMove/tipHide).
+ * Styled to match the vendored engine's own .tbl-tooltip (chart-engine.css) so
+ * the hand-built stack figure and the engine-rendered distribution figure raise
+ * the same-looking card. The engine's own rules can't simply be reused: they
+ * target .tbl-tooltip, which the engine creates and owns, while this host is a
+ * static #tt element in index.html that our delegated listener drives. */
+#tt {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 80ms linear;
+  box-sizing: border-box;
+  max-width: 320px;
+  /* Backstop: nothing in this card may push past its own box. The engine's rows
+   * are nowrap one-liners, which is safe only while every row stays short — see
+   * tipCard, where the long strings are kept out of the rows entirely. */
+  overflow-wrap: anywhere;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--tbl-text-heading);
+  font: var(--tw-body) 12px/1.35 var(--tbl-font-sans);
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(200, 205, 215, 0.7);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+          backdrop-filter: blur(20px) saturate(160%);
+}
+#tt.show { opacity: 1; }
+#tt[hidden] { display: none; }
+/* The head names the slice (stage, base, budget window) and is long enough to
+ * need two lines; the engine's own heads are short, so it doesn't set this. */
+.tt-card .tbl-tooltip-head { white-space: normal; }
+
+/* The settings and the period they apply to, under the title: smaller and
+ * muted, and allowed to wrap ("rate 2% · $50M · FY2027–36"). */
+.tt-card .tt-meta {
+  margin: -2px 0 7px;
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: var(--tbl-text-muted);
+  white-space: normal;
+}
+
+/* Hero line: the hovered figure, with its dollar equivalent alongside. Keeping
+ * the unit and the dollars here rather than in a row is what stops a long
+ * readout running off the card. */
+.tt-card .tt-hero { display: flex; align-items: baseline; gap: 5px; flex-wrap: wrap; margin-bottom: 7px; }
+/* Scaled to the figure it qualifies, not to the body text — an 11px caret beside
+ * an 18px number read as a speck. */
+.tt-card .tt-glyph { font-size: 15px; line-height: 1; position: relative; top: -1px; }
+.tt-card .tt-amount {
+  font-size: 18px; font-weight: var(--tw-bold); line-height: 1.1;
+  font-variant-numeric: tabular-nums; color: var(--tbl-text-heading);
+}
+.tt-card .tt-sub { font-size: 11.5px; color: var(--tbl-text-body); }
+
+.tt-card .tt-rows { display: flex; flex-direction: column; gap: 2px; }
+.tt-card .tbl-tooltip-row { white-space: nowrap; min-width: 0; }
+.tt-card .tbl-tooltip-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+/* Dollars, in their own lane left of the share. Both numeric lanes are
+ * right-aligned and tabular so the three stages read down as columns. */
+.tt-card .tt-alt {
+  margin-left: auto; padding-left: 10px;
+  font-variant-numeric: tabular-nums; color: var(--tbl-text-muted);
+}
+.tt-card .tbl-tooltip-value { padding-left: 10px; font-variant-numeric: tabular-nums; }
+/* Without an `alt` the share still pushes right on its own. */
+.tt-card .tt-alt + .tbl-tooltip-value { margin-left: 0; }
+.tt-card .tbl-tooltip-label + .tbl-tooltip-value { margin-left: auto; }
+.tt-card .is-current .tt-alt { color: var(--tbl-text-body); }
+
+/* The current row: the one the pointer is on. The head names the policy and the
+ * base, so this is what identifies which of the three stages is being read. */
+.tt-card .tbl-tooltip-row.is-current .tbl-tooltip-label { font-weight: var(--tw-medium); color: var(--tbl-text-heading); }
+.tt-card .tbl-tooltip-row.is-current .tbl-tooltip-value { font-weight: var(--tw-bold); }
+
+/* A DERIVED row: a difference between the rows above it, not a mark on the
+ * chart. Ruled off and set muted so it reads as arithmetic on the list rather
+ * than a fourth series, and its swatch slot is held empty rather than filled —
+ * a coloured box here would key a mark the reader could not go and find. The
+ * slot still has to occupy its width, or the label and value fall out of the
+ * column the rows above them set. */
+.tt-card .tbl-tooltip-row.is-summary {
+  margin-top: 4px; padding-top: 4px;
+  border-top: 1px solid var(--tbl-border);
+}
+.tt-card .tbl-tooltip-row.is-summary .tbl-tooltip-label { color: var(--tbl-text-muted); }
+.tt-card .tbl-tooltip-swatch.is-blank { background: none; box-shadow: none; }
+
+/* The mechanism sentence, which exists nowhere else on the page. */
+.tt-card .tt-note {
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 1px solid var(--tbl-border);
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: var(--tbl-text-body);
+  white-space: normal;
+}
+
+/* --- Narrow viewport ------------------------------------------------------ */
+@media (max-width: 880px) {
+  .tracker-body { grid-template-columns: 1fr; }
+  .tracker-sidebar { position: static; }
+  .tracker-header { flex-wrap: wrap; }
+  .tracker-title { font-size: 20px; }
+  .tracker-logo { height: 26px; }
+  .tracker-figure { padding: 16px; }
+}
+
+@media (max-width: 390px) {
+  .tracker-header { flex-direction: column-reverse; align-items: stretch; gap: 8px; }
+  .tracker-logo-link { align-self: flex-end; }
+  /* Narrower than a single pill group: let labels break again rather than be
+     clipped by .seg's overflow. */
+  .dist-view-tog button,
+  .incdef-tog button { flex: 1; white-space: normal; padding: 7px 6px; }
+}
