@@ -2,6 +2,12 @@
 
 Tool-specific change history. Embed-loader and shared-asset changes are tracked in the [root CHANGELOG](../../CHANGELOG.md).
 
+## Unreleased
+
+- Stack chart: the dollar and share columns are headed "Dollars" and "% GDP", on screen, in the hover card and in the downloaded image.
+- Stack chart image download: text now renders in Figtree, at the same weights as on screen. It had been falling back to the system font, with policy names, the rung tags and the score figures lighter than on the page.
+- Stack chart, narrow cards (under 700px): each bar keeps its stage label, shortened to "first-order", "+ mechanical", "+ behavioral". The labels used to drop and be replaced by a note under the chart, which a CSS ordering bug had hidden since launch, so narrow readers saw unlabelled bars. Rows now scroll sideways below a 598px card (was 540px).
+
 ## 2026-10-08
 
 - Initial release, migrated from the staging repo. Data: Tax-Simulator top-tax surrogate fit for run vintage `toptax_v11_2026-09-28`. Chart engine 1.12.0, vendored at `vendor/chart-engine/`.

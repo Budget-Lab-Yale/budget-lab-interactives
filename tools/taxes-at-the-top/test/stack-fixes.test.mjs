@@ -325,23 +325,22 @@ test('mountStack redraws when its container changes width', () => {
   }
 });
 
-// The narrow-width rule that hides .mtag and the rule that reveals .mstack-note
-// are a PAIR. They came apart once: the column was dropped on the justification
-// that the card's caption named the three rungs, then the caption was deleted in
-// a later pass and the rule stayed, leaving a narrow reader three bars per row
-// with nothing naming any of them (the legend keys tax BASES, not rungs). Nothing
-// else in the suite can catch that — no browser, and the two rules live in a
-// different file from the caption that used to justify them.
-test('hiding the rung column always reveals the rung key', () => {
+// Nothing but the .mtag column names the three bars in a row (the legend keys tax
+// BASES, not rungs). The narrow card once dropped the column and moved the names
+// into a note under the rows, which a later rule then hid at every width; the
+// card now keeps the column and swaps each tag to its short form instead.
+test('a narrow card keeps the rung tags, in their short forms', () => {
   const css = readFileSync(new URL('../styles.css', import.meta.url), 'utf8');
   const block = css.slice(css.indexOf('@container stack-card (max-width: 700px)'));
   const scoped = block.slice(0, block.indexOf('\n}'));
-  assert.match(scoped, /\.mtag\s*\{[^}]*display:\s*none/,
-    'fixture assumes this block is where .mtag is dropped');
-  assert.match(scoped, /\.mstack-note\s*\{[^}]*display:\s*block/,
-    '.mtag is hidden without revealing .mstack-note: the rungs go unnamed');
-  // And the key names all three, built from RUNGS rather than retyped.
-  const src = readFileSync(new URL('../render/stack.js', import.meta.url), 'utf8');
-  assert.match(src, /function rungKeyHtml\(\)[\s\S]{0,200}RUNGS\.map/,
-    'the key must be derived from RUNGS, not a hand-copied list that can drift');
+  assert.ok(scoped.length > 0, 'fixture assumes the 700px narrow-card block');
+  assert.doesNotMatch(scoped, /\.mtag\s*\{[^}]*display:\s*none/, 'the narrow card drops the rung tags');
+  assert.match(scoped, /\.mtag \.tf\s*\{\s*display:\s*none/);
+  assert.match(scoped, /\.mtag \.ts\s*\{\s*display:\s*inline/);
+  // The base rule hiding the short form must precede the block: a container query
+  // adds no specificity, so a later base rule would win at every width.
+  const base = css.search(/\n\.mtag \.ts\s*\{\s*display:\s*none/);
+  assert.ok(base >= 0 && base < css.indexOf('@container stack-card (max-width: 700px)'),
+    'the base .mtag .ts rule must come before the narrow-card block');
+  for (const u of RUNGS) assert.ok(u.short && u.short.length < u.tag.length, u.k + ' has no short tag');
 });
