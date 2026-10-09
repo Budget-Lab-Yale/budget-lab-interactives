@@ -98,7 +98,7 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   font: var(--tw-body) 15px/1.5 var(--tbl-font-sans);
   color: var(--tbl-text-body);
 }
-.tracker-dek .dek-wide { grid-column: 1 / -1; }
+.tracker-dek .dek-col { display: flex; flex-direction: column; gap: 10px; }
 .tracker-dek a { color: var(--tbl-blue); }
 @media (max-width: 760px) {
   .tracker-dek { grid-template-columns: 1fr; gap: 10px; }
