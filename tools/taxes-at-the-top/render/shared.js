@@ -253,7 +253,14 @@ export function tipCard(c) {
   if (c.rows && c.rows.length) {
     // `current` marks the row the pointer is actually on — the head names the
     // policy and the base, so this is what says which of the three you're reading.
-    h += '<div class="tt-rows">' + c.rows.map(function (r) {
+    // `cols` heads the two number lanes ({alt, value}). It takes the row grid, with
+    // an empty swatch slot and label, so each head sits over its own lane.
+    var cols = c.cols
+      ? '<div class="tbl-tooltip-row is-colhead"><span class="tbl-tooltip-swatch is-blank"></span>'
+        + '<span class="tbl-tooltip-label"></span><span class="tt-alt">' + c.cols.alt + '</span>'
+        + '<span class="tbl-tooltip-value">' + c.cols.value + '</span></div>'
+      : '';
+    h += '<div class="tt-rows' + (c.cols ? ' has-cols' : '') + '">' + cols + c.rows.map(function (r) {
       // `summary` is a derived row — a difference between rows above it, not a
       // mark on the chart. It keeps the row grid so its number aligns with the
       // rest, but takes an empty swatch slot rather than a coloured box, because

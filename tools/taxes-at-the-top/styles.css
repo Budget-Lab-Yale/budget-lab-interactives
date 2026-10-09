@@ -509,7 +509,16 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 .mrow.axis { padding: 0 4px; }
 .mrow.axis .mtag, .mrow.axis .mnum, .mrow.axis .mdol { height: 16px; }
 .mrow:hover { background: var(--tbl-bg-subtle); }
-.mrow.axis:hover { background: none; }
+.mrow.axis:hover, .mrow.colhead:hover { background: none; }
+/* Column heads over the dollars and share-of-GDP columns. The step lane between
+ * them stays blank. Both heads ride the data rows' own column skeleton, so they
+ * stay over their columns under the narrow-container rules below. */
+.mrow.colhead { padding: 0 4px; }
+.mrow.colhead .mtag, .mrow.colhead .mdol, .mrow.colhead .mnum { height: 14px; }
+.mrow.colhead .mdol > div, .mrow.colhead .mnum .mn { top: 50%; }
+.mrow.colhead .mdol > div, .mrow.colhead .mnum .lv {
+  font-size: 10px; font-weight: var(--tw-medium); color: var(--tbl-text-muted);
+}
 .mrow.dragging { background: var(--tbl-bg-subtle); }
 /* The reorder handle. It is a real <button> (render/stack.js gripHtml) so the
  * order — which RECOMPUTES the attribution, not just the row positions — is
@@ -554,12 +563,14 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 /* Rung names. The three take the same visual weight as their bar's tint step,
  * so the ladder reads top-to-bottom without a legend lookup. */
 .mtag { flex: 0 0 112px; position: relative; height: var(--mrow-h); }
-.mtag span {
+.mtag > span {
   position: absolute; right: 0; transform: translateY(-50%); white-space: nowrap;
   font: 8px/1 var(--tbl-font-sans); letter-spacing: .01em; color: var(--tbl-text-muted);
 }
 .mtag .tmech { color: var(--tbl-text-body); }
 .mtag .tconv { color: var(--tbl-text-heading); font-weight: 600; }
+/* Each tag carries a full and a short form; the narrow-card block swaps them. */
+.mtag .ts { display: none; }
 
 .mbar { flex: 1 1 auto; min-width: 0; }
 .mbar svg.mbarsvg { display: block; width: 100%; height: var(--mrow-h); overflow: visible; }
@@ -611,20 +622,17 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
  * So: tighten the chrome, then let what is left scroll. 700px is where the
  * UNTIGHTENED row stops working — 524px of chrome plus the ~180px the bar needs
  * for its five axis tick labels ("0.05%" and friends at 9px) to stand apart.
- * Below 700px the chrome is cut to 358px:
- *   18 (grip) + 120 (label) + 72 (dollars) + 108 (shares) = 318
- *   + four 8px gaps (32) + 8px row padding = 358
- * so the same 180px bar now fits in 540px, and .mrow's min-width is set there.
- * Between 540 and 700 the tightening alone buys the bar back and nothing
- * scrolls; below 540 the row holds its 540px and .mstack scrolls it.
+ * Below 700px the chrome is cut to 418px:
+ *   18 (grip) + 120 (label) + 52 (tags) + 72 (dollars) + 108 (shares) = 370
+ *   + five 8px gaps (40) + 8px row padding = 418
+ * so the same 180px bar now fits in 598px, and .mrow's min-width is set there.
+ * Between 598 and 700 the tightening alone buys the bar back and nothing
+ * scrolls; below 598 the row holds its 598px and .mstack scrolls it.
  *
- * .mtag is the one column dropped, and only because .mstack-note picks its
- * content up: it holds the three rung names, and the note below the rows is
- * revealed at exactly the width the column is hidden. That pairing is the whole
- * justification — it was briefly broken when the card's caption (which had named
- * the rungs) was deleted and this rule was left behind, leaving a narrow reader
- * with three bars and no word for any of them. .mdol and .mnum carry numbers that
- * appear nowhere else on the page, so they shrink and are never dropped.
+ * No column is dropped. The rung tags switch to their short forms ("first-order",
+ * "+ mechanical", "+ behavioral"), which fit 52px at 8px; nothing else on screen
+ * names the three bars, since the legend keys tax BASES, not rungs. .mdol and
+ * .mnum carry numbers that appear nowhere else on the page, so they shrink too.
  *
  * Scrolling .mstack rather than each .mrow is deliberate: the axis (.mrow.axis)
  * is a sibling of the data rows inside .mstack, so one scroll container carries
@@ -675,12 +683,11 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 
   /* The floor the shared scale needs. Rows and the axis row all take it, so they
    * stay one grid however far the container has shrunk. */
-  .mrow { min-width: 540px; gap: 8px; }
+  .mrow { min-width: 598px; gap: 8px; }
 
-  /* Rung names drop from the row and are picked up by .mstack-note below it. The
-   * two rules are a pair: never hide this column without revealing that note. */
-  .mtag { display: none; }
-  .mstack-note { display: block; }
+  .mtag { flex-basis: 52px; }
+  .mtag .tf { display: none; }
+  .mtag .ts { display: inline; }
 
   .mlab { flex-basis: 120px; }
   /* The shares column loses width from the step lane only. A step reads as a
@@ -697,7 +704,7 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
  * theirs and show nothing until a finger or a trackpad is already moving, which
  * is precisely the reader who does not yet know there is more to reach.
  *
- * 540px is .mrow's own min-width from the block above, so this fires exactly
+ * 598px is .mrow's own min-width from the block above, so this fires exactly
  * when the row cannot fit its container and never when it can — no CSS test for
  * "is this box actually scrolling" is needed, because below its floor the row
  * always overflows and at or above it never does.
@@ -715,7 +722,7 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
  * translatable and some assistive technology skips it. The phrase belongs in
  * markup, guarded on the same width — which needs a ResizeObserver, since the
  * trigger is a CONTAINER width no media query can see. */
-@container stack-card (max-width: 540px) {
+@container stack-card (max-width: 598px) {
   /* Its own full-width line ABOVE the download buttons, not beside them. Sharing
    * the row put a muted sentence hard against two controls at the width where
    * there is least room for either. */
@@ -740,17 +747,6 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 /* Stack view header: the by-tax-base legend sits ABOVE the rows, where the
  * engine puts a chart's legend, with the download control below the plot —
  * again matching the engine's own figure layout. Nothing else goes up here. */
-/* The narrow-width rung key (render/stack.js rungKeyHtml). Emitted always so it is
- * real, translatable markup rather than generated content, and shown only by the
- * @container rule above, at the one width where .mtag is not there to name the
- * rungs. */
-.mstack-note {
-  display: none;
-  margin-top: 8px;
-  font: 12px var(--tbl-font-sans);
-  color: var(--tbl-text-muted);
-}
-
 .mstack-head { margin-bottom: 10px; }
 .mstack-head .mstack-legend { margin: 0; }
 
@@ -831,6 +827,15 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 .tt-card .tt-alt + .tbl-tooltip-value { margin-left: 0; }
 .tt-card .tbl-tooltip-label + .tbl-tooltip-value { margin-left: auto; }
 .tt-card .is-current .tt-alt { color: var(--tbl-text-body); }
+/* With column heads (tipCard `cols`), both lanes take a fixed width so a head and
+ * the numbers under it share a right edge. In px, not em: the head is set smaller
+ * than the numbers, so an em width would differ between the two rows. */
+.tt-card .tt-rows.has-cols .tt-alt { min-width: 64px; text-align: right; }
+.tt-card .tt-rows.has-cols .tbl-tooltip-value { min-width: 56px; text-align: right; }
+.tt-card .tbl-tooltip-row.is-colhead .tt-alt,
+.tt-card .tbl-tooltip-row.is-colhead .tbl-tooltip-value {
+  font-size: 10.5px; font-weight: var(--tw-medium); color: var(--tbl-text-muted);
+}
 
 /* The current row: the one the pointer is on. The head names the policy and the
  * base, so this is what identifies which of the three stages is being read. */

@@ -46,16 +46,21 @@ function metaFor(key) { return LEVERS_META[key] || { label: key }; }
 // The three rungs, top to bottom within a row. `step` is the position on each
 // base hue's light-to-dark ladder (see shared.js's HUE_VAR); y/h are in ROW_H
 // units. One table drives the bars, their tags, their numbers and the export
-// image, so those four cannot drift apart.
+// image, so those four cannot drift apart. `short` is the tag on a narrow card,
+// where the tag column is 52px (see styles.css).
 export var RUNGS = [
-  { k: 'stat', tag: 'first-order tax change', label: 'First-order tax change', step: 1, y: 2, h: 14, opacity: 0.55 },
-  { k: 'mech', tag: '+ mechanical effects', label: '+ mechanical effects', step: 2, y: 20, h: 14, opacity: 0.75 },
-  { k: 'conv', tag: '+ behavioral effects', label: '+ behavioral effects', step: 3, y: 38, h: 28, opacity: 1 }
+  { k: 'stat', tag: 'first-order tax change', short: 'first-order', label: 'First-order tax change', step: 1, y: 2, h: 14, opacity: 0.55 },
+  { k: 'mech', tag: '+ mechanical effects', short: '+ mechanical', label: '+ mechanical effects', step: 2, y: 20, h: 14, opacity: 0.75 },
+  { k: 'conv', tag: '+ behavioral effects', short: '+ behavioral', label: '+ behavioral effects', step: 3, y: 38, h: 28, opacity: 1 }
 ];
 var ROW_H = 68;
 var RUNG_KEYS = RUNGS.map(function (u) { return u.k; });
 // The rung the chart is ultimately about: the collected score.
 export var SCORE_RUNG = RUNGS[RUNGS.length - 1];
+
+// Heads for the two number columns, shared by the rows, the hover card and the
+// export image. The step lane between them has no head: its arrows say what it is.
+export var COL_HEADS = { dollars: 'Dollars', share: '% GDP' };
 
 // Per-lever dial subtitle, e.g. "top rate 44.8%" or "rate 2% · $50M". A usd
 // param at zero is current law and prints nothing — which is what keeps the
@@ -216,6 +221,7 @@ export function segTipCfg(head, value, rung, row, gdpDecade, decadeLabel) {
     glyphColor: dir < 0 ? 'var(--tbl-red-400)' : 'var(--tbl-green-400)',
     amount: pgs(value, gdpDecade),
     sub: usd(value) + ' over the decade',
+    cols: { alt: COL_HEADS.dollars, value: COL_HEADS.share },
     rows: RUNGS.map(function (u) {
       var v = (row[u.k] || {})[head] || 0;
       return {
@@ -323,7 +329,8 @@ function rowHtml(row, bw, xz, sc, ticks, heads, gdpDecade, decadeLabel, activeCo
   var levels = rungLevels(row, gdpDecade);
 
   var tags = RUNGS.map(function (u) {
-    return '<span class="t' + u.k + '" style="top:' + rungCenter(u) + '">' + u.tag + '</span>';
+    return '<span class="t' + u.k + '" style="top:' + rungCenter(u) + '">'
+      + '<span class="tf">' + u.tag + '</span><span class="ts">' + u.short + '</span></span>';
   }).join('');
   // Dollars and shares are absolutely positioned at their own rung's center. The
   // share column is a two-lane grid (step | level) so the steps align in a
@@ -353,6 +360,16 @@ function rowHtml(row, bw, xz, sc, ticks, heads, gdpDecade, decadeLabel, activeCo
     + '<div class="mnum">' + shares + '</div></div>';
 }
 
+// The column-head row, built on the same skeleton as the data rows so each head
+// sits over its own column at every width the narrow-container rules produce. It
+// lives inside .mstack, so at narrow widths it scrolls with the rows it heads.
+function colHeadHtml() {
+  return '<div class="mrow colhead">' + gripHtml(true, '') + '<div class="mlab"></div>'
+    + '<div class="mtag"></div><div class="mbar"></div>'
+    + '<div class="mdol"><div>' + COL_HEADS.dollars + '</div></div>'
+    + '<div class="mnum"><div class="mn"><span class="md"></span><span class="lv">' + COL_HEADS.share + '</span></div></div></div>';
+}
+
 function axisHtml(ticks, bw, xz, sc, gdpDecade) {
   return '<div class="mrow axis">' + gripHtml(true, '') + '<div class="mlab"></div>'
     + '<div class="mtag"></div>'
@@ -371,15 +388,6 @@ function legendHtml(heads) {
   return heads.map(function (h) {
     return '<span class="it"><span class="sw2" style="background:' + headColor(h, SCORE_RUNG.step) + '"></span>' + headLabel(h) + '</span>';
   }).join('');
-}
-
-// The three rung names, for the narrow-container case where .mtag is dropped and
-// nothing else on screen names them. Built from RUNGS so it cannot drift from the
-// column it stands in for. Hidden by default — see styles.css.
-function rungKeyHtml() {
-  return '<div class="mstack-note">Bars per row, palest to thickest: '
-    + RUNGS.map(function (u) { return u.tag; }).join(' &middot; ')
-    + '</div>';
 }
 
 function widthOf(el) { return Math.max(300, el.clientWidth || 660); }
@@ -459,6 +467,32 @@ var EX = {
   gap: 12, rowH: ROW_H, legendLineH: 18, stepLane: 58,
   logoW: 150, titleSize: 22, titleLead: 27
 };
+
+// styles.css's --tw-* weight scale. Every export text names its weight from
+// here, matching the rule that sets the same text on screen; an SVG text with no
+// weight renders at 400, below the page's 500 body weight. `normal` is for the
+// screen rules whose `font:` shorthand names no weight, which resets it to 400.
+var TW = { normal: 400, body: 500, medium: 600, semi: 700, bold: 800 };
+
+// A rasterized SVG is loaded as an <img>, which sees none of the page's fonts, so
+// without a @font-face of its own the PNG falls back to the system face, whose
+// weights are not Figtree's. The vendored engine stylesheet carries Figtree as a
+// data URI (the engine embeds the same font in its own exports), so the rule is
+// lifted from the live page's CSSOM rather than duplicated here.
+function embeddedFontCss() {
+  if (typeof document === 'undefined' || typeof CSSFontFaceRule === 'undefined') return '';
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    var rules = null;
+    try { rules = sheets[i].cssRules; } catch (_err) { continue; }   // cross-origin sheet
+    for (var j = 0; rules && j < rules.length; j++) {
+      var r = rules[j];
+      if (r instanceof CSSFontFaceRule && /Figtree/.test(r.style.getPropertyValue('font-family'))
+        && r.cssText.indexOf('data:') >= 0) return r.cssText;
+    }
+  }
+  return '';
+}
 
 function resolveHeadHex(head, step) { var hue = headHue(head); return cssVar(hueVar(hue, step), hueHex(hue, step)); }
 
@@ -544,10 +578,11 @@ export function buildStackExportSvg(layout, gdpDecade, opts) {
   // typeface stack. No monospace counterpart: the engine never uses one.
   var font = cssVar('--tbl-font-sans', 'Figtree, system-ui, -apple-system, Segoe UI, Arial, sans-serif');
 
-  var text = function (x, y, str, size, fill, extra) {
+  var text = function (x, y, str, size, fill, weight, extra) {
     return '<text x="' + x + '" y="' + y + '" font-size="' + size + '" font-family="' + font
-      + '" fill="' + fill + '"' + (extra || '') + '>' + esc(str) + '</text>';
+      + '" font-weight="' + weight + '" fill="' + fill + '"' + (extra || '') + '>' + esc(str) + '</text>';
   };
+  var END = ' text-anchor="end"';
 
   var M = EX.margin, W = EX.W, innerW = W - M * 2;
   var barX = M + EX.labelW + EX.tagsW + EX.gap;
@@ -568,7 +603,7 @@ export function buildStackExportSvg(layout, gdpDecade, opts) {
   var titleLines = wrapText(title, innerW - EX.logoW - 24, EX.titleSize * 0.5);
   var firstBaseline = M + EX.titleSize;
   var head = titleLines.map(function (ln, i) {
-    return text(M, firstBaseline + i * EX.titleLead, ln, EX.titleSize, navy, ' font-weight="800"');
+    return text(M, firstBaseline + i * EX.titleLead, ln, EX.titleSize, navy, TW.bold);
   }).join('');
 
   var logoH = EX.logoW / LOGO_ASPECT;
@@ -577,13 +612,16 @@ export function buildStackExportSvg(layout, gdpDecade, opts) {
     + '" xlink:href="' + LOGO_DATA_URI + '"/>';
 
   var y = firstBaseline + (titleLines.length - 1) * EX.titleLead + 22;
-  head += text(M, y, 'Total revenue over ' + decadeLabel + '.', 13, muted);
+  head += text(M, y, 'Total revenue over ' + decadeLabel + '.', 13, muted, TW.semi);
   y += 26;
 
   var legend = exportLegendLine(heads, function (h) { return resolveHeadHex(h, SCORE_RUNG.step); },
     headLabel, y, ink, font, W - M);
   y = legend.endY + 15;
   head += legend.svg;
+  head += text(dolRight, y + 10, COL_HEADS.dollars, 10, muted, TW.medium, END)
+    + text(numRight, y + 10, COL_HEADS.share, 10, muted, TW.medium, END);
+  y += 16;
   // No reading key here. One used to be hardcoded on this line, and it drifted
   // twice over: the page's own key had grown two clauses the export never picked
   // up, and then the key was removed from the page altogether -- leaving the
@@ -603,9 +641,9 @@ export function buildStackExportSvg(layout, gdpDecade, opts) {
     var settings = isTotal ? '' : (subtitles[entry.key] || '');
     var lines = wrapText(label, EX.labelW - 8, 6);
     lines.forEach(function (ln, li) {
-      rowsSvg += text(M, y + 14 + li * 14, ln, 12, ink, isTotal ? ' font-weight="800"' : '');
+      rowsSvg += text(M, y + 14 + li * 14, ln, 12, ink, isTotal ? TW.bold : TW.medium);
     });
-    if (settings) rowsSvg += text(M, y + 16 + lines.length * 14, settings, 10, muted);
+    if (settings) rowsSvg += text(M, y + 16 + lines.length * 14, settings, 10, muted, TW.normal);
 
     rowsSvg += exportGridSvg(layout.ticks, y, xzAbs, sc, EX.rowH, axisStroke, gridline);
     rowsSvg += RUNGS.map(function (u) { return exportBarSvg(row[u.k] || {}, u, y, xzAbs, sc, heads); }).join('');
@@ -613,14 +651,15 @@ export function buildStackExportSvg(layout, gdpDecade, opts) {
     rungLevels(row, gdpDecade).forEach(function (l) {
       var cy = y + l.rung.y + l.rung.h / 2 + 3.5;
       var isScore = l.rung.k === SCORE_RUNG.k;
-      rowsSvg += text(tagsRight, cy, l.rung.tag, 8.5, isScore ? body : muted, ' text-anchor="end"');
-      rowsSvg += text(dolRight, cy, usd(l.value), isScore ? 11.5 : 10, isScore ? body : muted, ' text-anchor="end"');
+      rowsSvg += text(tagsRight, cy, l.rung.tag, 8.5, isScore ? body : muted, isScore ? TW.medium : TW.normal, END);
+      rowsSvg += text(dolRight, cy, usd(l.value), isScore ? 11.5 : 10, isScore ? body : muted,
+        isScore && isTotal ? TW.bold : TW.body, END);
       rowsSvg += text(numRight, cy, pgs(l.value, gdpDecade), isScore ? 13.5 : 10.5, ink,
-        ' text-anchor="end"' + (isScore ? ' font-weight="' + (isTotal ? '800' : '600') + '"' : ''));
+        isScore ? (isTotal ? TW.bold : TW.semi) : TW.body, END);
       var st = stepText(l.step);
       if (st.text) {
         rowsSvg += text(numLeft + EX.stepLane, cy, st.text, 9.5,
-          st.dir === 0 ? muted : (st.dir < 0 ? red : green), ' text-anchor="end"');
+          st.dir === 0 ? muted : (st.dir < 0 ? red : green), TW.body, END);
       }
     });
     y += EX.rowH;
@@ -628,12 +667,13 @@ export function buildStackExportSvg(layout, gdpDecade, opts) {
 
   var axisY = y + 6;
   var axisSvg = layout.ticks.map(function (t) {
-    return text(xzAbs + t * sc, axisY + 10, Math.abs(t) < 1e-6 ? '0' : pgs(t, gdpDecade), 10, muted, ' text-anchor="middle"');
+    return text(xzAbs + t * sc, axisY + 10, Math.abs(t) < 1e-6 ? '0' : pgs(t, gdpDecade), 10, muted, TW.body, ' text-anchor="middle"');
   }).join('');
   var chartH = Math.round(axisY + 16 + M);
 
   return '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"'
     + ' viewBox="0 0 ' + W + ' ' + chartH + '" width="' + W + '" height="' + chartH + '">'
+    + (o.fontCss ? '<defs><style><![CDATA[' + o.fontCss + ']]></style></defs>' : '')
     + '<rect x="0" y="0" width="' + W + '" height="' + chartH + '" fill="' + bg + '"/>'
     + head + rowsSvg + axisSvg
     + '</svg>';
@@ -648,7 +688,7 @@ function exportLegendLine(keys, colorHexFn, labelFn, startY, ink, font, rightEdg
     var label = labelFn(k), width = swW + 18 + label.length * 6.6;
     if (legendX + width > rightEdge) { legendY += EX.legendLineH; legendX = EX.margin; }
     svg += '<rect x="' + legendX + '" y="' + (legendY - swH + 2) + '" width="' + swW + '" height="' + swH + '" rx="1" fill="' + colorHexFn(k) + '"/>'
-      + '<text x="' + (legendX + swW + 6) + '" y="' + legendY + '" font-size="12" font-family="' + font + '" fill="' + ink + '">' + esc(label) + '</text>';
+      + '<text x="' + (legendX + swW + 6) + '" y="' + legendY + '" font-size="12" font-family="' + font + '" font-weight="' + TW.body + '" fill="' + ink + '">' + esc(label) + '</text>';
     legendX += width;
   });
   return { svg: svg, endY: legendY };
@@ -683,7 +723,8 @@ function wireDownloads(el, layout, gdpDecade, opts) {
     var original = label ? label.textContent : '';
     btn.disabled = true;
     if (label) label.textContent = '…';
-    downloadPNG(buildExportSvgElement(layout, gdpDecade, opts), 'taxes-at-the-top-package.png')
+    var withFont = Object.assign({}, opts, { fontCss: embeddedFontCss() });
+    downloadPNG(buildExportSvgElement(layout, gdpDecade, withFont), 'taxes-at-the-top-package.png')
       .catch(function (err) { console.error('Stack chart PNG export failed:', err); })
       .then(function () {
         btn.disabled = false;
@@ -725,7 +766,7 @@ export function mountStack(el, marginals, onReorder, opts) {
 
   function rowsHtml(bw) {
     var xz = layout.negMax * (bw / layout.scale), sc = bw / layout.scale;
-    return layout.rows.map(function (r) {
+    return colHeadHtml() + layout.rows.map(function (r) {
       return rowHtml(r, bw, xz, sc, layout.ticks, heads, gdpDecade, decadeLabel, order.length);
     }).join('')
       + rowHtml(totalRow, bw, xz, sc, layout.ticks, heads, gdpDecade, decadeLabel, order.length)
@@ -738,19 +779,11 @@ export function mountStack(el, marginals, onReorder, opts) {
   // which the .mtag column already names on every row — so the reader met the same
   // three names twice before reaching the bars.
   //
-  // .mstack-note carries those names for the ONE case where the column cannot:
-  // below a 700px container the row cannot fit .mtag and styles.css drops it, and
-  // with it the only on-screen thing naming the three stages (the legend keys tax
-  // BASES, not rungs). The element is always emitted and revealed by the container
-  // query, rather than being generated content, so it is translatable and reaches
-  // assistive technology. It is hidden at every width where .mtag is visible.
-  //
   // The legend keys tax bases, so an empty package has nothing to key and the row
   // is omitted rather than drawn empty.
   function paint(bw) {
     el.innerHTML = (heads.length ? '<div class="mstack-head"><div class="legend mstack-legend">' + legendHtml(heads) + '</div></div>' : '')
       + '<div class="mstack">' + rowsHtml(bw) + '</div>'
-      + rungKeyHtml()
       + '<div class="mstack-footer">' + downloadControlHtml() + '</div>';
   }
 
