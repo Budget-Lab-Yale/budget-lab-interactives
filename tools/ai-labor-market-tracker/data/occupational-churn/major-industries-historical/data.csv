@@ -272,6 +272,7 @@ time,series,variant,value
 270,Natural Resources and Mining,indexed,13.743037
 271,Natural Resources and Mining,indexed,13.684247
 272,Natural Resources and Mining,indexed,13.610454
+273,Natural Resources and Mining,indexed,13.826968
 0,Construction,indexed,0.0
 1,Construction,indexed,0.750607
 2,Construction,indexed,1.30741
@@ -545,6 +546,7 @@ time,series,variant,value
 270,Construction,indexed,22.29652
 271,Construction,indexed,22.226875
 272,Construction,indexed,22.331123
+273,Construction,indexed,22.550739
 0,Manufacturing,indexed,0.0
 1,Manufacturing,indexed,0.781942
 2,Manufacturing,indexed,1.432247
@@ -818,6 +820,7 @@ time,series,variant,value
 270,Manufacturing,indexed,17.820469
 271,Manufacturing,indexed,17.527657
 272,Manufacturing,indexed,17.280125
+273,Manufacturing,indexed,17.129969
 0,"Trade, Transportation, and Utilities",indexed,0.0
 1,"Trade, Transportation, and Utilities",indexed,0.522051
 2,"Trade, Transportation, and Utilities",indexed,0.948906
@@ -1091,6 +1094,7 @@ time,series,variant,value
 270,"Trade, Transportation, and Utilities",indexed,17.991332
 271,"Trade, Transportation, and Utilities",indexed,18.099657
 272,"Trade, Transportation, and Utilities",indexed,18.152265
+273,"Trade, Transportation, and Utilities",indexed,18.178298
 0,Information,indexed,0.0
 1,Information,indexed,1.319812
 2,Information,indexed,2.291899
@@ -1364,6 +1368,7 @@ time,series,variant,value
 270,Information,indexed,25.515633
 271,Information,indexed,25.625993
 272,Information,indexed,25.798642
+273,Information,indexed,25.829838
 0,Financial Activities,indexed,0.0
 1,Financial Activities,indexed,0.799883
 2,Financial Activities,indexed,1.468897
@@ -1637,6 +1642,7 @@ time,series,variant,value
 270,Financial Activities,indexed,20.887076
 271,Financial Activities,indexed,20.781227
 272,Financial Activities,indexed,20.863926
+273,Financial Activities,indexed,20.993088
 0,Professional and Business Services,indexed,0.0
 1,Professional and Business Services,indexed,0.791479
 2,Professional and Business Services,indexed,1.417578
@@ -1910,6 +1916,7 @@ time,series,variant,value
 270,Professional and Business Services,indexed,19.380026
 271,Professional and Business Services,indexed,19.339331
 272,Professional and Business Services,indexed,19.405554
+273,Professional and Business Services,indexed,19.698328
 0,Education and Health Services,indexed,0.0
 1,Education and Health Services,indexed,0.453364
 2,Education and Health Services,indexed,0.814486
@@ -2183,6 +2190,7 @@ time,series,variant,value
 270,Education and Health Services,indexed,15.293278
 271,Education and Health Services,indexed,15.320176
 272,Education and Health Services,indexed,15.442322
+273,Education and Health Services,indexed,15.631365
 0,Leisure and Hospitality,indexed,0.0
 1,Leisure and Hospitality,indexed,0.757402
 2,Leisure and Hospitality,indexed,1.27177
@@ -2456,6 +2464,7 @@ time,series,variant,value
 270,Leisure and Hospitality,indexed,16.53564
 271,Leisure and Hospitality,indexed,16.568685
 272,Leisure and Hospitality,indexed,16.601441
+273,Leisure and Hospitality,indexed,16.699545
 0,Other Services,indexed,0.0
 1,Other Services,indexed,0.982816
 2,Other Services,indexed,1.727744
@@ -2729,6 +2738,7 @@ time,series,variant,value
 270,Other Services,indexed,20.019765
 271,Other Services,indexed,20.114267
 272,Other Services,indexed,19.981473
+273,Other Services,indexed,20.206093
 2005-01-02,Natural Resources and Mining,rolling,7.600651
 2005-02-02,Natural Resources and Mining,rolling,7.729987
 2005-03-02,Natural Resources and Mining,rolling,7.914551
@@ -2989,6 +2999,7 @@ time,series,variant,value
 2026-06-02,Natural Resources and Mining,rolling,7.952066
 2026-07-02,Natural Resources and Mining,rolling,8.935787
 2026-08-02,Natural Resources and Mining,rolling,9.333107
+2026-09-02,Natural Resources and Mining,rolling,9.138693
 2005-01-02,Construction,rolling,4.484788
 2005-02-02,Construction,rolling,4.629308
 2005-03-02,Construction,rolling,4.569692
@@ -3249,6 +3260,7 @@ time,series,variant,value
 2026-06-02,Construction,rolling,5.302562
 2026-07-02,Construction,rolling,5.326637
 2026-08-02,Construction,rolling,5.314542
+2026-09-02,Construction,rolling,5.419599
 2005-01-02,Manufacturing,rolling,4.856452
 2005-02-02,Manufacturing,rolling,4.88012
 2005-03-02,Manufacturing,rolling,4.77403
@@ -3509,6 +3521,7 @@ time,series,variant,value
 2026-06-02,Manufacturing,rolling,7.171979
 2026-07-02,Manufacturing,rolling,7.04703
 2026-08-02,Manufacturing,rolling,6.809244
+2026-09-02,Manufacturing,rolling,6.711586
 2005-01-02,"Trade, Transportation, and Utilities",rolling,3.234416
 2005-02-02,"Trade, Transportation, and Utilities",rolling,3.241617
 2005-03-02,"Trade, Transportation, and Utilities",rolling,3.221833
@@ -3769,6 +3782,7 @@ time,series,variant,value
 2026-06-02,"Trade, Transportation, and Utilities",rolling,5.310383
 2026-07-02,"Trade, Transportation, and Utilities",rolling,5.134021
 2026-08-02,"Trade, Transportation, and Utilities",rolling,5.177652
+2026-09-02,"Trade, Transportation, and Utilities",rolling,5.357155
 2005-01-02,Information,rolling,7.441434
 2005-02-02,Information,rolling,7.573826
 2005-03-02,Information,rolling,7.942625
@@ -4029,6 +4043,7 @@ time,series,variant,value
 2026-06-02,Information,rolling,12.834495
 2026-07-02,Information,rolling,12.936696
 2026-08-02,Information,rolling,12.737167
+2026-09-02,Information,rolling,12.689909
 2005-01-02,Financial Activities,rolling,5.455656
 2005-02-02,Financial Activities,rolling,5.677012
 2005-03-02,Financial Activities,rolling,5.674815
@@ -4289,6 +4304,7 @@ time,series,variant,value
 2026-06-02,Financial Activities,rolling,6.559588
 2026-07-02,Financial Activities,rolling,6.364493
 2026-08-02,Financial Activities,rolling,6.214748
+2026-09-02,Financial Activities,rolling,6.383897
 2005-01-02,Professional and Business Services,rolling,5.68619
 2005-02-02,Professional and Business Services,rolling,5.692033
 2005-03-02,Professional and Business Services,rolling,5.455187
@@ -4549,6 +4565,7 @@ time,series,variant,value
 2026-06-02,Professional and Business Services,rolling,5.609343
 2026-07-02,Professional and Business Services,rolling,5.719452
 2026-08-02,Professional and Business Services,rolling,5.745637
+2026-09-02,Professional and Business Services,rolling,5.688177
 2005-01-02,Education and Health Services,rolling,2.816075
 2005-02-02,Education and Health Services,rolling,2.999356
 2005-03-02,Education and Health Services,rolling,3.079084
@@ -4809,6 +4826,7 @@ time,series,variant,value
 2026-06-02,Education and Health Services,rolling,3.77425
 2026-07-02,Education and Health Services,rolling,3.927489
 2026-08-02,Education and Health Services,rolling,4.077172
+2026-09-02,Education and Health Services,rolling,4.02567
 2005-01-02,Leisure and Hospitality,rolling,3.731923
 2005-02-02,Leisure and Hospitality,rolling,3.860075
 2005-03-02,Leisure and Hospitality,rolling,4.059626
@@ -5069,6 +5087,7 @@ time,series,variant,value
 2026-06-02,Leisure and Hospitality,rolling,4.811995
 2026-07-02,Leisure and Hospitality,rolling,4.612977
 2026-08-02,Leisure and Hospitality,rolling,4.816046
+2026-09-02,Leisure and Hospitality,rolling,5.156918
 2005-01-02,Other Services,rolling,6.366314
 2005-02-02,Other Services,rolling,6.05241
 2005-03-02,Other Services,rolling,5.855774
@@ -5329,3 +5348,4 @@ time,series,variant,value
 2026-06-02,Other Services,rolling,8.620619
 2026-07-02,Other Services,rolling,8.759891
 2026-08-02,Other Services,rolling,8.830124
+2026-09-02,Other Services,rolling,9.039979
