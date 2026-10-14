@@ -1,0 +1,10 @@
+category,item,column,value
+Broad Tariffs under Section 122 Authority,Rate,description,10% flat rate
+Broad Tariffs under Section 122 Authority,Exemptions,description,"Certain critical minerals, energy products, agricultural goods, pharmaceuticals, electronics, etc."
+Product-Specific Tariffs under Section 232 Authority,Steel,description,50%
+Product-Specific Tariffs under Section 232 Authority,Aluminum,description,50%
+Product-Specific Tariffs under Section 232 Authority,Copper,description,50%
+Product-Specific Tariffs under Section 232 Authority,Automobiles,description,25%
+Product-Specific Tariffs under Section 232 Authority,Auto parts,description,25%
+Product-Specific Tariffs under Section 232 Authority,Medium/heavy trucks & buses,description,25% on trucks/parts; 10% buses
+Product-Specific Tariffs under Section 232 Authority,Lumber/wood products,description,10-25%
