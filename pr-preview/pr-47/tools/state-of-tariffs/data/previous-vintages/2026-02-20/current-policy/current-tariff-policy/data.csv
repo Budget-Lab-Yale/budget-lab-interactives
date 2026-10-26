@@ -1,0 +1,16 @@
+category,item,column,value
+Broad Tariffs under IEEPA Authority (REPEALED),Brazil,description,"40% reciprocal, subject to exemptions for agricultural goods."
+Broad Tariffs under IEEPA Authority (REPEALED),Canada,description,0% reciprocal (exempt); 0% on USMCA-duty-free; 10% energy/potash; 35% other non-USMCA; USMCA goods duty-free
+Broad Tariffs under IEEPA Authority (REPEALED),Mexico,description,0% reciprocal (exempt); 0% on USMCA-duty-free; 10% potash; 25% other non-USMCA; USMCA goods duty-free
+Broad Tariffs under IEEPA Authority (REPEALED),China,description,"10% reciprocal baseline; higher China rate delayed; addition ""fentanyl"" 10% (stacks regardless of other tariffs)"
+Broad Tariffs under IEEPA Authority (REPEALED),European Union,description,"Formula reciprocal rate, typically 0-15%"
+Broad Tariffs under IEEPA Authority (REPEALED),United Kingdom,description,10% reciprocal
+Broad Tariffs under IEEPA Authority (REPEALED),"Trade-deal partners (Japan, Korea, Vietnam, etc.)",description,Reciprocal rates mostly in 15-25% range
+Broad Tariffs under IEEPA Authority (REPEALED),Other,description,Mostly 10% reciprocal; some countries 15-40%
+Product-Specific Tariffs under Section 232 Authority,Steel,rate,50%; 25% UK; USMCA goods duty-free
+Product-Specific Tariffs under Section 232 Authority,Aluminum,rate,50%; 25% UK; USMCA goods duty-free
+Product-Specific Tariffs under Section 232 Authority,Copper,rate,50% on semi-finished/derivative copper; USMCA goods duty-free
+Product-Specific Tariffs under Section 232 Authority,Automobiles,rate,25% headline; often 0-15% for EU/Japan via formula; USMCA goods duty-free
+Product-Specific Tariffs under Section 232 Authority,Auto parts,rate,25% most; 10% for some UK parts; 0-15% EU/Japan formula; USMCA import adjustment can reduce rates
+Product-Specific Tariffs under Section 232 Authority,Medium/heavy trucks & buses,rate,25% on trucks/parts; 10% buses; some USMCA relief
+Product-Specific Tariffs under Section 232 Authority,Lumber / wood products,rate,10% softwood; 25-30% upholstered furniture; 25-50% cabinets/vanities; USMCA goods duty-free

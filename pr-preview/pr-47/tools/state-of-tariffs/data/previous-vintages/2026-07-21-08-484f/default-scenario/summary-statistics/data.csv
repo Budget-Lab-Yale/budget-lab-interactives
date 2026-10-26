@@ -1,0 +1,13 @@
+category,series,value,unit,metric
+Tariff rate,Average statutory rate,9.76945647906406,pct,etr_statutory_level
+Tariff rate,"Effective rate, pre-substitution",8.213476401334235,pct,etr_presub_level
+Tariff rate,"Effective rate, post-substitution",6.838908559866538,pct,etr_postsub_level
+Consumer price increase,Pre-substitution,0.4053566079682058,pct,price_presub
+Consumer price increase,Post-substitution,0.34636935710901967,pct,price_postsub
+Household cost,Pre-substitution,549.0031371269765,usd,hh_cost_presub
+Household cost,Post-substitution,469.1125293618524,usd,hh_cost_postsub
+Real GDP,2025 Q4/Q4,-0.3239165613555195,pp,gdp_2025_q4q4
+Real GDP,2026 Q4/Q4,0.370634128609848,pp,gdp_2026_q4q4
+Real GDP,Long-run,-0.07359795272350311,pct,gdp_long_run
+Revenue (10-year),Conventional,1277.6083976036855,usd_bn,revenue_conventional
+Revenue (10-year),Dynamic,1218.6963976036857,usd_bn,revenue_dynamic

@@ -1,0 +1,321 @@
+country,series,value
+Albania,tariffs_charged,10
+Albania,discounted_reciprocal,10
+Algeria,tariffs_charged,59
+Algeria,discounted_reciprocal,30
+Andorra,tariffs_charged,10
+Andorra,discounted_reciprocal,10
+Angola,tariffs_charged,63
+Angola,discounted_reciprocal,32
+Anguilla,tariffs_charged,10
+Anguilla,discounted_reciprocal,10
+Argentina,tariffs_charged,10
+Argentina,discounted_reciprocal,10
+Armenia,tariffs_charged,10
+Armenia,discounted_reciprocal,10
+Aruba,tariffs_charged,10
+Aruba,discounted_reciprocal,10
+Australia,tariffs_charged,10
+Australia,discounted_reciprocal,10
+Azerbaijan,tariffs_charged,10
+Azerbaijan,discounted_reciprocal,10
+Bahamas,tariffs_charged,10
+Bahamas,discounted_reciprocal,10
+Bahrain,tariffs_charged,10
+Bahrain,discounted_reciprocal,10
+Bangladesh,tariffs_charged,74
+Bangladesh,discounted_reciprocal,37
+Belize,tariffs_charged,10
+Belize,discounted_reciprocal,10
+Bhutan,tariffs_charged,10
+Bhutan,discounted_reciprocal,10
+Bolivia,tariffs_charged,20
+Bolivia,discounted_reciprocal,10
+Bosnia and Herzegovina,tariffs_charged,70
+Bosnia and Herzegovina,discounted_reciprocal,35
+Botswana,tariffs_charged,74
+Botswana,discounted_reciprocal,37
+Brazil,tariffs_charged,10
+Brazil,discounted_reciprocal,10
+British Indian Ocean Territory,tariffs_charged,10
+British Indian Ocean Territory,discounted_reciprocal,10
+Brunei,tariffs_charged,47
+Brunei,discounted_reciprocal,24
+Burundi,tariffs_charged,10
+Burundi,discounted_reciprocal,10
+Cabo Verde,tariffs_charged,10
+Cabo Verde,discounted_reciprocal,10
+Cambodia,tariffs_charged,97
+Cambodia,discounted_reciprocal,49
+Cameroon,tariffs_charged,22
+Cameroon,discounted_reciprocal,11
+Central African Republic,tariffs_charged,10
+Central African Republic,discounted_reciprocal,10
+Chad,tariffs_charged,26
+Chad,discounted_reciprocal,13
+Chile,tariffs_charged,10
+Chile,discounted_reciprocal,10
+China,tariffs_charged,67
+China,discounted_reciprocal,34
+Christmas Island,tariffs_charged,10
+Christmas Island,discounted_reciprocal,10
+Cocos (Keeling) Islands,tariffs_charged,10
+Cocos (Keeling) Islands,discounted_reciprocal,10
+Colombia,tariffs_charged,10
+Colombia,discounted_reciprocal,10
+Comoros,tariffs_charged,10
+Comoros,discounted_reciprocal,10
+Cook Islands,tariffs_charged,10
+Cook Islands,discounted_reciprocal,10
+Costa Rica,tariffs_charged,17
+Costa Rica,discounted_reciprocal,10
+Côte d'Ivoire,tariffs_charged,41
+Côte d'Ivoire,discounted_reciprocal,21
+Democratic Republic of the Congo,tariffs_charged,22
+Democratic Republic of the Congo,discounted_reciprocal,11
+Dominica,tariffs_charged,10
+Dominica,discounted_reciprocal,10
+Dominican Republic,tariffs_charged,10
+Dominican Republic,discounted_reciprocal,10
+Ecuador,tariffs_charged,12
+Ecuador,discounted_reciprocal,10
+Egypt,tariffs_charged,10
+Egypt,discounted_reciprocal,10
+El Salvador,tariffs_charged,10
+El Salvador,discounted_reciprocal,10
+Equatorial Guinea,tariffs_charged,25
+Equatorial Guinea,discounted_reciprocal,13
+Eritrea,tariffs_charged,10
+Eritrea,discounted_reciprocal,10
+Ethiopia,tariffs_charged,10
+Ethiopia,discounted_reciprocal,10
+European Union,tariffs_charged,39
+European Union,discounted_reciprocal,20
+Falkland Islands,tariffs_charged,82
+Falkland Islands,discounted_reciprocal,41
+Fiji,tariffs_charged,63
+Fiji,discounted_reciprocal,32
+French Guiana,tariffs_charged,10
+French Guiana,discounted_reciprocal,10
+Gabon,tariffs_charged,10
+Gabon,discounted_reciprocal,10
+Gambia,tariffs_charged,10
+Gambia,discounted_reciprocal,10
+Georgia,tariffs_charged,10
+Georgia,discounted_reciprocal,10
+Ghana,tariffs_charged,17
+Ghana,discounted_reciprocal,10
+Gibraltar,tariffs_charged,10
+Gibraltar,discounted_reciprocal,10
+Grenada,tariffs_charged,10
+Grenada,discounted_reciprocal,10
+Guadeloupe,tariffs_charged,10
+Guadeloupe,discounted_reciprocal,10
+Guatemala,tariffs_charged,10
+Guatemala,discounted_reciprocal,10
+Guinea,tariffs_charged,10
+Guinea,discounted_reciprocal,10
+Guinea-Bissau,tariffs_charged,10
+Guinea-Bissau,discounted_reciprocal,10
+Guyana,tariffs_charged,76
+Guyana,discounted_reciprocal,38
+Haiti,tariffs_charged,10
+Haiti,discounted_reciprocal,10
+Heard and McDonald Islands,tariffs_charged,10
+Heard and McDonald Islands,discounted_reciprocal,10
+Honduras,tariffs_charged,10
+Honduras,discounted_reciprocal,10
+Iceland,tariffs_charged,10
+Iceland,discounted_reciprocal,10
+India,tariffs_charged,52
+India,discounted_reciprocal,26
+Indonesia,tariffs_charged,64
+Indonesia,discounted_reciprocal,32
+Iran,tariffs_charged,10
+Iran,discounted_reciprocal,10
+Iraq,tariffs_charged,78
+Iraq,discounted_reciprocal,39
+Israel,tariffs_charged,33
+Israel,discounted_reciprocal,17
+Jamaica,tariffs_charged,10
+Jamaica,discounted_reciprocal,10
+Japan,tariffs_charged,46
+Japan,discounted_reciprocal,24
+Jordan,tariffs_charged,40
+Jordan,discounted_reciprocal,20
+Kazakhstan,tariffs_charged,54
+Kazakhstan,discounted_reciprocal,27
+Kenya,tariffs_charged,10
+Kenya,discounted_reciprocal,10
+Kiribati,tariffs_charged,10
+Kiribati,discounted_reciprocal,10
+Kuwait,tariffs_charged,10
+Kuwait,discounted_reciprocal,10
+Kyrgyzstan,tariffs_charged,10
+Kyrgyzstan,discounted_reciprocal,10
+Laos,tariffs_charged,95
+Laos,discounted_reciprocal,48
+Lebanon,tariffs_charged,10
+Lebanon,discounted_reciprocal,10
+Lesotho,tariffs_charged,99
+Lesotho,discounted_reciprocal,50
+Libya,tariffs_charged,61
+Libya,discounted_reciprocal,31
+Liechtenstein,tariffs_charged,73
+Liechtenstein,discounted_reciprocal,37
+Madagascar,tariffs_charged,93
+Madagascar,discounted_reciprocal,47
+Malaysia,tariffs_charged,47
+Malaysia,discounted_reciprocal,24
+Maldives,tariffs_charged,10
+Maldives,discounted_reciprocal,10
+Mali,tariffs_charged,10
+Mali,discounted_reciprocal,10
+Marshall Islands,tariffs_charged,10
+Marshall Islands,discounted_reciprocal,10
+Martinique,tariffs_charged,10
+Martinique,discounted_reciprocal,10
+Mauritania,tariffs_charged,10
+Mauritania,discounted_reciprocal,10
+Mauritius,tariffs_charged,80
+Mauritius,discounted_reciprocal,40
+Mayotte,tariffs_charged,10
+Mayotte,discounted_reciprocal,10
+Micronesia,tariffs_charged,10
+Micronesia,discounted_reciprocal,10
+Moldova,tariffs_charged,61
+Moldova,discounted_reciprocal,31
+Montenegro,tariffs_charged,15
+Montenegro,discounted_reciprocal,10
+Montserrat,tariffs_charged,10
+Montserrat,discounted_reciprocal,10
+Morocco,tariffs_charged,10
+Morocco,discounted_reciprocal,10
+Mozambique,tariffs_charged,31
+Mozambique,discounted_reciprocal,16
+Myanmar (Burma),tariffs_charged,88
+Myanmar (Burma),discounted_reciprocal,44
+Namibia,tariffs_charged,42
+Namibia,discounted_reciprocal,21
+Nauru,tariffs_charged,59
+Nauru,discounted_reciprocal,30
+Nepal,tariffs_charged,10
+Nepal,discounted_reciprocal,10
+New Zealand,tariffs_charged,20
+New Zealand,discounted_reciprocal,10
+Nicaragua,tariffs_charged,36
+Nicaragua,discounted_reciprocal,18
+Niger,tariffs_charged,10
+Niger,discounted_reciprocal,10
+Nigeria,tariffs_charged,27
+Nigeria,discounted_reciprocal,14
+Norfolk Island,tariffs_charged,58
+Norfolk Island,discounted_reciprocal,29
+North Macedonia,tariffs_charged,65
+North Macedonia,discounted_reciprocal,33
+Norway,tariffs_charged,30
+Norway,discounted_reciprocal,15
+Oman,tariffs_charged,10
+Oman,discounted_reciprocal,10
+Pakistan,tariffs_charged,58
+Pakistan,discounted_reciprocal,29
+Panama,tariffs_charged,10
+Panama,discounted_reciprocal,10
+Paraguay,tariffs_charged,10
+Paraguay,discounted_reciprocal,10
+Peru,tariffs_charged,10
+Peru,discounted_reciprocal,10
+Philippines,tariffs_charged,34
+Philippines,discounted_reciprocal,17
+Qatar,tariffs_charged,10
+Qatar,discounted_reciprocal,10
+Reunion,tariffs_charged,73
+Reunion,discounted_reciprocal,37
+Saint Helena,tariffs_charged,10
+Saint Helena,discounted_reciprocal,10
+Saint Kitts and Nevis,tariffs_charged,10
+Saint Kitts and Nevis,discounted_reciprocal,10
+Saint Lucia,tariffs_charged,10
+Saint Lucia,discounted_reciprocal,10
+Saint Pierre and Miquelon,tariffs_charged,99
+Saint Pierre and Miquelon,discounted_reciprocal,50
+Saint Vincent and the Grenadines,tariffs_charged,10
+Saint Vincent and the Grenadines,discounted_reciprocal,10
+Samoa,tariffs_charged,10
+Samoa,discounted_reciprocal,10
+São Tomé and Príncipe,tariffs_charged,10
+São Tomé and Príncipe,discounted_reciprocal,10
+Saudi Arabia,tariffs_charged,10
+Saudi Arabia,discounted_reciprocal,10
+Senegal,tariffs_charged,10
+Senegal,discounted_reciprocal,10
+Serbia,tariffs_charged,74
+Serbia,discounted_reciprocal,37
+Singapore,tariffs_charged,10
+Singapore,discounted_reciprocal,10
+Sint Maarten,tariffs_charged,10
+Sint Maarten,discounted_reciprocal,10
+Solomon Islands,tariffs_charged,10
+Solomon Islands,discounted_reciprocal,10
+South Africa,tariffs_charged,60
+South Africa,discounted_reciprocal,30
+South Korea,tariffs_charged,50
+South Korea,discounted_reciprocal,25
+South Sudan,tariffs_charged,10
+South Sudan,discounted_reciprocal,10
+Sri Lanka,tariffs_charged,88
+Sri Lanka,discounted_reciprocal,44
+Sudan,tariffs_charged,10
+Sudan,discounted_reciprocal,10
+Suriname,tariffs_charged,10
+Suriname,discounted_reciprocal,10
+Svalbard and Jan Mayen,tariffs_charged,10
+Svalbard and Jan Mayen,discounted_reciprocal,10
+Switzerland,tariffs_charged,61
+Switzerland,discounted_reciprocal,31
+Taiwan,tariffs_charged,64
+Taiwan,discounted_reciprocal,32
+Tajikistan,tariffs_charged,10
+Tajikistan,discounted_reciprocal,10
+Tanzania,tariffs_charged,10
+Tanzania,discounted_reciprocal,10
+Thailand,tariffs_charged,72
+Thailand,discounted_reciprocal,36
+Timor-Leste,tariffs_charged,10
+Timor-Leste,discounted_reciprocal,10
+Togo,tariffs_charged,10
+Togo,discounted_reciprocal,10
+Tokelau,tariffs_charged,10
+Tokelau,discounted_reciprocal,10
+Tonga,tariffs_charged,10
+Tonga,discounted_reciprocal,10
+Trinidad and Tobago,tariffs_charged,12
+Trinidad and Tobago,discounted_reciprocal,10
+Tunisia,tariffs_charged,55
+Tunisia,discounted_reciprocal,28
+Turkey,tariffs_charged,10
+Turkey,discounted_reciprocal,10
+Turkmenistan,tariffs_charged,10
+Turkmenistan,discounted_reciprocal,10
+Turks and Caicos Islands,tariffs_charged,10
+Turks and Caicos Islands,discounted_reciprocal,10
+Tuvalu,tariffs_charged,10
+Tuvalu,discounted_reciprocal,10
+Uganda,tariffs_charged,20
+Uganda,discounted_reciprocal,10
+Ukraine,tariffs_charged,10
+Ukraine,discounted_reciprocal,10
+United Arab Emirates,tariffs_charged,10
+United Arab Emirates,discounted_reciprocal,10
+United Kingdom,tariffs_charged,10
+United Kingdom,discounted_reciprocal,10
+Uruguay,tariffs_charged,10
+Uruguay,discounted_reciprocal,10
+Venezuela,tariffs_charged,29
+Venezuela,discounted_reciprocal,15
+Vietnam,tariffs_charged,90
+Vietnam,discounted_reciprocal,46
+Yemen,tariffs_charged,10
+Yemen,discounted_reciprocal,10
+Zambia,tariffs_charged,33
+Zambia,discounted_reciprocal,17

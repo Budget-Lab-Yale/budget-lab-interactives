@@ -1,0 +1,31 @@
+category,value,country_code,substitution,metric
+China,24,chn,presub,rate
+China,22.8,chn,postsub,rate
+China,13.0,chn,presub,import_share
+China,9.0,chn,postsub,import_share
+China,3.2,chn,presub,contribution
+China,2,chn,postsub,contribution
+Canada,8.1,ca,presub,rate
+Canada,5.3,ca,postsub,rate
+Canada,13.0,ca,presub,import_share
+Canada,16.0,ca,postsub,import_share
+Canada,1,ca,presub,contribution
+Canada,0.8,ca,postsub,contribution
+Mexico,12.8,mx,presub,rate
+Mexico,11.2,mx,postsub,rate
+Mexico,16.0,mx,presub,import_share
+Mexico,19.0,mx,postsub,import_share
+Mexico,2,mx,presub,contribution
+Mexico,2.1,mx,postsub,contribution
+Rest of World,14,row,presub,rate
+Rest of World,12.4,row,postsub,rate
+Rest of World,57.99999999999999,row,presub,import_share
+Rest of World,56.99999999999999,row,postsub,import_share
+Rest of World,8.1,row,presub,contribution
+Rest of World,7,row,postsub,contribution
+Total,14.4,total,presub,rate
+Total,11.9,total,postsub,rate
+Total,100,total,presub,import_share
+Total,100,total,postsub,import_share
+Total,14.4,total,presub,contribution
+Total,11.9,total,postsub,contribution

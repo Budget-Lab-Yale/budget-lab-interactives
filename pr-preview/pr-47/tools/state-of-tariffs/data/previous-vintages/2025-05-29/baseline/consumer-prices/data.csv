@@ -1,0 +1,131 @@
+category,group,substitution,value
+Metals nec,Commodities,presub,12.574540756481989
+Metals nec,Commodities,postsub,7.876471081778021
+Motor vehicles and parts,Commodities,presub,8.44836558931423
+Motor vehicles and parts,Commodities,postsub,5.122729273005664
+Ferrous metals,Commodities,presub,5.6562614142782515
+Ferrous metals,Commodities,postsub,3.710131179483716
+Crops nec,Commodities,presub,0.0
+Crops nec,Commodities,postsub,-0.010992981272544344
+Textiles,Commodities,presub,0.0
+Textiles,Commodities,postsub,-0.1319157752705321
+Natural gas,Commodities,presub,0.0
+Natural gas,Commodities,postsub,-0.04946841572644954
+Basic pharmaceutical products,Commodities,presub,0.0
+Basic pharmaceutical products,Commodities,postsub,-0.25833505990479205
+"Computer, electronic and optical",Commodities,presub,0.0
+"Computer, electronic and optical",Commodities,postsub,0.14290875654307647
+Rubber and plastic products,Commodities,presub,0.0
+Rubber and plastic products,Commodities,postsub,-0.2803210224498808
+Leather products,Commodities,presub,0.0
+Leather products,Commodities,postsub,0.2638315505410642
+Wearing apparel,Commodities,presub,0.0
+Wearing apparel,Commodities,postsub,0.24184558799597555
+Electrical equipment,Commodities,presub,0.0
+Electrical equipment,Commodities,postsub,0.20337015354207036
+Chemical products,Commodities,presub,0.0
+Chemical products,Commodities,postsub,-0.5276631010821284
+Manufactures nec,Commodities,presub,0.0
+Manufactures nec,Commodities,postsub,-0.28581751308615294
+Metal products,Commodities,presub,0.0
+Metal products,Commodities,postsub,0.06595788763526605
+Machinery and equipment nec,Commodities,presub,0.0
+Machinery and equipment nec,Commodities,postsub,-0.016489471908816514
+Wood products,Commodities,presub,0.0
+Wood products,Commodities,postsub,-0.6925578201702935
+Fishing,Commodities,presub,0.0
+Fishing,Commodities,postsub,-0.9673823519839022
+"Vegetables, fruit, nuts",Commodities,presub,0.0
+"Vegetables, fruit, nuts",Commodities,postsub,-0.8024876328957371
+Transport equipment nec,Commodities,presub,0.0
+Transport equipment nec,Commodities,postsub,-0.3132999662675138
+Cereal grains nec,Commodities,presub,0.0
+Cereal grains nec,Commodities,postsub,-0.9728788426201743
+Oil,Commodities,presub,0.0
+Oil,Commodities,postsub,-0.12092279399798778
+Mineral products nec,Commodities,presub,0.0
+Mineral products nec,Commodities,postsub,-0.4067403070841407
+Beverages and tobacco products,Commodities,presub,0.0
+Beverages and tobacco products,Commodities,postsub,-0.39025083517532416
+Food products nec,Commodities,presub,0.0
+Food products nec,Commodities,postsub,-0.6925578201702935
+"Paper products, publishing",Commodities,presub,0.0
+"Paper products, publishing",Commodities,postsub,-0.6870613295340214
+Processed rice,Commodities,presub,0.0
+Processed rice,Commodities,postsub,-0.3737613632665077
+Paddy rice,Commodities,presub,0.0
+Paddy rice,Commodities,postsub,-0.8299700860770979
+Vegetable oils and fats,Commodities,presub,0.0
+Vegetable oils and fats,Commodities,postsub,-1.022347258346624
+Sugar,Commodities,presub,0.0
+Sugar,Commodities,postsub,-0.703550801442838
+Bovine meat products,Commodities,presub,0.0
+Bovine meat products,Commodities,postsub,-0.8409630673496422
+Animal products nec,Commodities,presub,0.0
+Animal products nec,Commodities,postsub,-0.9948648051652631
+Forestry,Commodities,presub,0.0
+Forestry,Commodities,postsub,-1.0113542770740795
+Minerals nec,Commodities,presub,0.0
+Minerals nec,Commodities,postsub,-0.604613969989939
+Meat products nec,Commodities,presub,0.0
+Meat products nec,Commodities,postsub,-0.8794385018035474
+"Petroleum, coal products",Commodities,presub,0.0
+"Petroleum, coal products",Commodities,postsub,-0.2143631348146147
+Dairy products,Commodities,presub,0.0
+Dairy products,Commodities,postsub,-0.6870613295340214
+Oil seeds,Commodities,presub,0.0
+Oil seeds,Commodities,postsub,-1.3081647714327769
+"Wool, silk-worm cocoons",Commodities,presub,0.0
+"Wool, silk-worm cocoons",Commodities,postsub,-0.4617052134468624
+Electricity,Commodities,presub,0.0
+Electricity,Commodities,postsub,-0.6925578201702935
+Wheat,Commodities,presub,0.0
+Wheat,Commodities,postsub,-0.9179139362574525
+"Bovine cattle, sheep and goats",Commodities,presub,0.0
+"Bovine cattle, sheep and goats",Commodities,postsub,-0.9728788426201743
+Construction,Commodities,presub,0.0
+Construction,Commodities,postsub,-0.6760683482614771
+Plant-based fibers,Commodities,presub,0.0
+Plant-based fibers,Commodities,postsub,-0.8519560486221867
+Coal,Commodities,presub,0.0
+Coal,Commodities,postsub,-0.4562087228105902
+Raw milk,Commodities,presub,0.0
+Raw milk,Commodities,postsub,-0.7969911422594649
+"Sugar cane, sugar beet",Commodities,presub,0.0
+"Sugar cane, sugar beet",Commodities,postsub,-1.2971717901602324
+Water,Commodities,presub,0.0
+Water,Commodities,postsub,-0.6540823857163884
+"Gas manufacture, distribution",Commodities,presub,0.0
+"Gas manufacture, distribution",Commodities,postsub,-0.7255367639879267
+Recreational and other services,Commodities,presub,0.0
+Recreational and other services,Commodities,postsub,-0.7530192171692875
+Trade,Commodities,presub,0.0
+Trade,Commodities,postsub,-0.7255367639879267
+Dwellings,Commodities,presub,0.0
+Dwellings,Commodities,postsub,-0.7969911422594649
+Transport nec,Commodities,presub,0.0
+Transport nec,Commodities,postsub,-0.5936209887173945
+Education,Commodities,presub,0.0
+Education,Commodities,postsub,-0.7585157078055597
+Communication,Commodities,presub,0.0
+Communication,Commodities,postsub,-0.703550801442838
+Insurance,Commodities,presub,0.0
+Insurance,Commodities,postsub,-0.7255367639879267
+Financial services nec,Commodities,presub,0.0
+Financial services nec,Commodities,postsub,-0.7640121984418318
+Warehousing and support,Commodities,presub,0.0
+Warehousing and support,Commodities,postsub,-0.5826280074448502
+Water transport,Commodities,presub,0.0
+Water transport,Commodities,postsub,-0.5551455542634893
+Human health and social work,Commodities,presub,0.0
+Human health and social work,Commodities,postsub,-0.736529745260471
+Public Administration,Commodities,presub,0.0
+Public Administration,Commodities,postsub,-0.7145437827153823
+Air transport,Commodities,presub,0.0
+Air transport,Commodities,postsub,-0.47819468535567894
+Accommodation & food services,Commodities,presub,0.0
+Accommodation & food services,Commodities,postsub,-0.6815648388977492
+Business services nec,Commodities,presub,0.0
+Business services nec,Commodities,postsub,-0.7255367639879267
+Real estate activities,Commodities,presub,0.0
+Real estate activities,Commodities,postsub,-0.7640121984418318
