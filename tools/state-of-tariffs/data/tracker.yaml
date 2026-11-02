@@ -2,8 +2,8 @@
 # build-manifest.py). Keyed by the scenario id from model-meta.json — these are vintage-dated, so
 # re-check/update them each release. Any scenario omitted here falls back to the palette by order.
 scenario_colors:
-  tracker_actual_2026-08-24: blue                 # Current law
-  tracker_no_s338_2026-08-24: amber               # Current law excluding the Section 338 actions
+  tracker_actual_2026-11-01-19: blue                # Current law
+  tracker_no_s338_2026-11-01-19: amber              # Current law excluding the Section 338 actions
 
 tabs:
 - id: introduction

@@ -1,0 +1,61 @@
+category,value,dimension,category_code,scenario,measure,group
+Agriculture,-0.2896446837030137,sector,agriculture,tracker_actual_2026-08-24,level,Sectors
+Mining & Extraction,-1.022643732295837,sector,mining,tracker_actual_2026-08-24,level,Sectors
+Total Manufacturing,1.31900557798407,sector,manufacturing,tracker_actual_2026-08-24,level,Sectors
+Durable Manufacturing,2.499263110345864,sector,durable,tracker_actual_2026-08-24,level,Manufacturing detail
+Nondurable Manufacturing,0.7724504318676921,sector,nondurable,tracker_actual_2026-08-24,level,Manufacturing detail
+Advanced Manufacturing,-1.98,sector,advanced,tracker_actual_2026-08-24,level,Manufacturing detail
+Utilities,0.45191722041302507,sector,utilities,tracker_actual_2026-08-24,level,Sectors
+Construction,-2.21,sector,construction,tracker_actual_2026-08-24,level,Sectors
+Services,-0.08055490855589054,sector,services,tracker_actual_2026-08-24,level,Sectors
+Total,-0.14329010248184204,sector,overall_gdp,tracker_actual_2026-08-24,level,Sectors
+USA,-0.14,country,usa,tracker_actual_2026-08-24,level,Trading partners
+China,-0.11,country,china,tracker_actual_2026-08-24,level,Trading partners
+Canada,-0.19,country,canada,tracker_actual_2026-08-24,level,Trading partners
+Mexico,0.09,country,mexico,tracker_actual_2026-08-24,level,Trading partners
+EU,0.03,country,eu,tracker_actual_2026-08-24,level,Trading partners
+UK,0.08,country,uk,tracker_actual_2026-08-24,level,Trading partners
+Japan,-0.01,country,japan,tracker_actual_2026-08-24,level,Trading partners
+Free-trade partners,0.02,country,fta,tracker_actual_2026-08-24,level,Trading partners
+Rest of World,0.01,country,row,tracker_actual_2026-08-24,level,Trading partners
+Total,-0.04209460697182088,country,world,tracker_actual_2026-08-24,level,Trading partners
+Agriculture,-0.15567643891151126,sector,agriculture,tracker_no_s338_2026-08-24,level,Sectors
+Mining & Extraction,-1.0258510997081725,sector,mining,tracker_no_s338_2026-08-24,level,Sectors
+Total Manufacturing,1.3352560939717235,sector,manufacturing,tracker_no_s338_2026-08-24,level,Sectors
+Durable Manufacturing,2.563383427803147,sector,durable,tracker_no_s338_2026-08-24,level,Manufacturing detail
+Nondurable Manufacturing,0.7663995040462925,sector,nondurable,tracker_no_s338_2026-08-24,level,Manufacturing detail
+Advanced Manufacturing,-2.09,sector,advanced,tracker_no_s338_2026-08-24,level,Manufacturing detail
+Utilities,0.4949017189835137,sector,utilities,tracker_no_s338_2026-08-24,level,Sectors
+Construction,-2.25,sector,construction,tracker_no_s338_2026-08-24,level,Sectors
+Services,-0.08376913255319955,sector,services,tracker_no_s338_2026-08-24,level,Sectors
+Total,-0.1451762318611145,sector,overall_gdp,tracker_no_s338_2026-08-24,level,Sectors
+USA,-0.15,country,usa,tracker_no_s338_2026-08-24,level,Trading partners
+China,-0.12,country,china,tracker_no_s338_2026-08-24,level,Trading partners
+Canada,-0.01,country,canada,tracker_no_s338_2026-08-24,level,Trading partners
+Mexico,0.09,country,mexico,tracker_no_s338_2026-08-24,level,Trading partners
+EU,0.03,country,eu,tracker_no_s338_2026-08-24,level,Trading partners
+UK,0.07,country,uk,tracker_no_s338_2026-08-24,level,Trading partners
+Japan,-0.01,country,japan,tracker_no_s338_2026-08-24,level,Trading partners
+Free-trade partners,0.01,country,fta,tracker_no_s338_2026-08-24,level,Trading partners
+Rest of World,0,country,row,tracker_no_s338_2026-08-24,level,Trading partners
+Total,-0.04567664375516589,country,world,tracker_no_s338_2026-08-24,level,Trading partners
+Agriculture,0.13396824479150246,sector,agriculture,tracker_no_s338_2026-08-24,delta_vs_default,Sectors
+Mining & Extraction,-0.0032073674123354046,sector,mining,tracker_no_s338_2026-08-24,delta_vs_default,Sectors
+Total Manufacturing,0.01625051598765359,sector,manufacturing,tracker_no_s338_2026-08-24,delta_vs_default,Sectors
+Durable Manufacturing,0.06412031745728308,sector,durable,tracker_no_s338_2026-08-24,delta_vs_default,Manufacturing detail
+Nondurable Manufacturing,-0.006050927821399599,sector,nondurable,tracker_no_s338_2026-08-24,delta_vs_default,Manufacturing detail
+Advanced Manufacturing,-0.10999999999999988,sector,advanced,tracker_no_s338_2026-08-24,delta_vs_default,Manufacturing detail
+Utilities,0.04298449857048864,sector,utilities,tracker_no_s338_2026-08-24,delta_vs_default,Sectors
+Construction,-0.040000000000000036,sector,construction,tracker_no_s338_2026-08-24,delta_vs_default,Sectors
+Services,-0.0032142239973090153,sector,services,tracker_no_s338_2026-08-24,delta_vs_default,Sectors
+Total,-0.001886129379272461,sector,overall_gdp,tracker_no_s338_2026-08-24,delta_vs_default,Sectors
+USA,-0.009999999999999981,country,usa,tracker_no_s338_2026-08-24,delta_vs_default,Trading partners
+China,-0.009999999999999995,country,china,tracker_no_s338_2026-08-24,delta_vs_default,Trading partners
+Canada,0.18,country,canada,tracker_no_s338_2026-08-24,delta_vs_default,Trading partners
+Mexico,0,country,mexico,tracker_no_s338_2026-08-24,delta_vs_default,Trading partners
+EU,0,country,eu,tracker_no_s338_2026-08-24,delta_vs_default,Trading partners
+UK,-0.009999999999999995,country,uk,tracker_no_s338_2026-08-24,delta_vs_default,Trading partners
+Japan,0,country,japan,tracker_no_s338_2026-08-24,delta_vs_default,Trading partners
+Free-trade partners,-0.01,country,fta,tracker_no_s338_2026-08-24,delta_vs_default,Trading partners
+Rest of World,-0.01,country,row,tracker_no_s338_2026-08-24,delta_vs_default,Trading partners
+Total,-0.0035820367833450106,country,world,tracker_no_s338_2026-08-24,delta_vs_default,Trading partners
