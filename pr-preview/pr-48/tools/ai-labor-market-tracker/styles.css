@@ -1,0 +1,865 @@
+/* ===========================================================================
+ * AI Labor Market Tracker — layout & navigation chrome
+ * Borrows BLSMM's sidebar + tab pattern; Style Guide tokens via colors.css.
+ * =========================================================================== */
+
+/* ===========================================================================
+ * Typography — Figtree (the tracker's brand typeface).
+ *
+ * Loaded from Google Fonts; --tbl-font-sans puts Figtree at the head of the
+ * stack with system fonts as a load-failure fallback. The --tw-* variables
+ * are the tracker's weight scale, tuned for how Figtree renders — reference
+ * them rather than raw weight literals so the scale stays centralized.
+ * =========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --tbl-font-sans:         'Figtree', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --tbl-font-sans-compact: 'Figtree', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+
+  /* Figtree weight scale: body / medium / semibold / bold. */
+  --tw-body:   500;
+  --tw-medium: 600;
+  --tw-semi:   700;
+  --tw-bold:   800;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+/* Reserve scrollbar gutter so the shell doesn't shift horizontally when a
+   tab's content fits without scrolling (Current Update) vs. requires it
+   (Dissimilarity/AI Metrics/SDID). */
+html { scrollbar-gutter: stable; }
+body {
+  font-family: var(--tbl-font-sans);
+  font-weight: var(--tw-body);
+  color: var(--tbl-text-body);
+  background: var(--tbl-bg);
+  line-height: 1.5;
+}
+
+/* --- Outer shell ---------------------------------------------------------- */
+.tracker-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 24px 32px;
+}
+html.iframed .tracker-shell { padding: 16px 16px 24px; }
+
+/* --- Header bar ----------------------------------------------------------- */
+.tracker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--tbl-border);
+  margin-bottom: 0;
+}
+.tracker-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: var(--tw-bold);
+  color: var(--tbl-text-heading);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.tracker-logo-link { display: inline-block; line-height: 0; }
+.tracker-logo { height: 32px; width: auto; display: block; }
+
+/* --- Tab bar -------------------------------------------------------------- */
+.tracker-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--tbl-border);
+  margin-bottom: 20px;
+}
+.tracker-tab {
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 14px 20px 12px;
+  margin: 0;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: var(--tw-semi);
+  color: var(--tbl-text-muted);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s;
+}
+.tracker-tab:hover { color: var(--tbl-text-heading); }
+.tracker-tab[aria-selected="true"] {
+  color: var(--tbl-navy);
+  border-bottom-color: var(--tbl-navy);
+}
+.tracker-tab:focus-visible {
+  outline: 2px solid var(--tbl-blue);
+  outline-offset: -3px;
+}
+
+/* Mobile tab dropdown — hidden on desktop; shown ≤768px (see media query),
+   where the horizontal tab row collapses into it. */
+.tracker-tabs-menu { display: none; position: relative; }
+.tracker-tabs-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  text-align: left;                 /* keep a wrapped 2-line label left-aligned */
+  background: #fff;
+  border: 1px solid var(--tbl-border);
+  border-radius: 8px;
+  padding: 11px 14px;
+  font: var(--tw-semi) 15px var(--tbl-font-sans);
+  color: var(--tbl-navy);
+  cursor: pointer;
+}
+.tracker-tabs-trigger > span:first-child { flex: 1; min-width: 0; }
+.tracker-tabs-caret { flex-shrink: 0; color: var(--tbl-text-muted); font-size: 0.8em; transition: transform 0.15s; }
+.tracker-tabs-trigger[aria-expanded="true"] .tracker-tabs-caret { transform: rotate(180deg); }
+.tracker-tabs-trigger:focus-visible { outline: none; border-color: var(--tbl-navy); }
+.tracker-tabs-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 4px);
+  background: #fff;
+  border: 1px solid var(--tbl-border);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  z-index: 30;
+  overflow: hidden;
+}
+.tracker-tabs-list[hidden] { display: none; }
+.tracker-tabs-list button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--tbl-border);
+  padding: 11px 14px;
+  font: var(--tw-medium) 14px var(--tbl-font-sans);
+  color: var(--tbl-text-muted);
+  cursor: pointer;
+}
+.tracker-tabs-list button:last-child { border-bottom: none; }
+.tracker-tabs-list button:hover,
+.tracker-tabs-list button:focus-visible { background: var(--tbl-bg-subtle); color: var(--tbl-text-heading); outline: none; }
+.tracker-tabs-list button.is-active { color: var(--tbl-navy); background: var(--tbl-bg-subtle); font-weight: var(--tw-semi); }
+
+/* --- Two-column body ------------------------------------------------------ */
+.tracker-body {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.tracker-sidebar {
+  background: var(--tbl-bg-subtle);
+  border: 1px solid var(--tbl-border);
+  border-radius: 8px;
+  padding: 20px;
+  position: sticky;
+  top: 12px;
+}
+.tracker-sidebar .sidebar-section {
+  margin-bottom: 20px;
+}
+.tracker-sidebar .sidebar-section:last-child { margin-bottom: 0; }
+.tracker-sidebar h2 {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: var(--tw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tbl-text-muted);
+}
+.tracker-sidebar label {
+  display: block;
+  font-size: 13px;
+  color: var(--tbl-text-body);
+  margin-bottom: 4px;
+  font-weight: var(--tw-semi);
+}
+/* Vertical figure picker (replaces the old dropdown) */
+.figure-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--tbl-border);
+  border-radius: 6px;
+  background: var(--tbl-bg);
+  overflow: hidden;
+}
+.figure-list-section-heading {
+  font: var(--tw-semi) 10px/1 var(--tbl-font-sans-compact, var(--tbl-font-sans));
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tbl-text-muted);
+  padding: 10px 10px 4px;
+  background: var(--tbl-bg-subtle);
+  border-bottom: 1px solid var(--tbl-border);
+}
+.figure-list-section-heading:first-child {
+  border-top: none;
+}
+.figure-list-section-heading + .figure-list-section-heading {
+  margin-top: 0;
+}
+/* Section heading other than the first one gets a top divider */
+.figure-list > .figure-list-section-heading:not(:first-child) {
+  border-top: 1px solid var(--tbl-border);
+}
+.figure-list-item {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--tbl-border);
+  padding: 0;
+  margin: 0;
+  font: var(--tw-body) 13px/1.3 var(--tbl-font-sans-compact, var(--tbl-font-sans));
+  color: var(--tbl-text-body);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: stretch;
+  transition: background 0.1s, color 0.1s;
+}
+.figure-list-item:focus-visible {
+  outline: 2px solid var(--tbl-blue);
+  outline-offset: -2px;
+}
+.figure-list-item:last-child {
+  border-bottom: none;
+}
+
+/* Number "tab" at the left of each item */
+.figure-list-num {
+  flex-shrink: 0;
+  min-width: 26px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tbl-bg-subtle);
+  color: var(--tbl-text-muted);
+  border-right: 1px solid var(--tbl-border);
+  font: var(--tw-semi) 11px/1 var(--tbl-font-sans-compact, var(--tbl-font-sans));
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  transition: background 0.1s, color 0.1s, border-color 0.1s;
+}
+.figure-list-label {
+  flex: 1 1 auto;
+  padding: 7px 10px;
+  min-width: 0;
+}
+
+/* Hover */
+.figure-list-item:hover {
+  background: var(--tbl-bg-subtle);
+  color: var(--tbl-text-heading);
+}
+.figure-list-item:hover .figure-list-num {
+  background: #ECEFF4;
+  color: var(--tbl-text-heading);
+}
+
+/* Active state — number tab fills with navy, label area gets subtle tint */
+.figure-list-item.is-active {
+  background: var(--tbl-bg-subtle);
+  color: var(--tbl-navy);
+  font-weight: var(--tw-semi);
+}
+.figure-list-item.is-active .figure-list-num {
+  background: var(--tbl-navy);
+  color: #fff;
+  border-right-color: var(--tbl-navy);
+}
+
+/* Toggle group (radio segmented control) */
+.toggle-group {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--tbl-border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--tbl-bg);
+}
+.toggle-group label {
+  flex: 1;
+  margin: 0;
+  padding: 8px 10px;
+  font-size: 13px;
+  line-height: 1.2;            /* tighter spacing when a label wraps to 2 lines */
+  font-weight: var(--tw-semi);
+  color: var(--tbl-text-muted);
+  text-align: center;
+  cursor: pointer;
+  border-right: 1px solid var(--tbl-border);
+  transition: background 0.12s, color 0.12s;
+  /* Center the label text vertically so a 1-line option lines up with a
+     2-line neighbor (toggle-group stretches all labels to equal height). */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toggle-group label:last-child { border-right: none; }
+.toggle-group input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.toggle-group label.is-active {
+  background: var(--tbl-navy);
+  color: #fff;
+}
+
+.sidebar-explainer {
+  font-size: 13px;
+  color: var(--tbl-text-muted);
+  line-height: 1.45;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--tbl-border);
+}
+.sidebar-explainer.is-standalone {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.sidebar-explainer p { margin: 0 0 6px; }
+.sidebar-explainer p:last-child { margin-bottom: 0; }
+
+/* Download-all-data button (Current Update sidebar). Full-width ghost button
+   matching the per-chart download buttons. */
+.sidebar-download { margin-top: 18px; }
+.sidebar-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  font: var(--tw-medium) 13px/1.2 var(--tbl-font-sans);
+  color: var(--tbl-text-muted);
+  background: transparent;
+  border: 1px solid var(--tbl-border);
+  border-radius: 6px;
+  padding: 9px 12px;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.sidebar-download-btn:hover,
+.sidebar-download-btn:focus-visible {
+  border-color: var(--tbl-navy);
+  color: #fff;
+  background: var(--tbl-navy);
+  outline: none;
+}
+.sidebar-download-btn:disabled { opacity: 0.6; cursor: default; }
+.sidebar-download-btn svg { display: block; flex-shrink: 0; }
+
+/* --- Main figure area ----------------------------------------------------- */
+.tracker-main { min-width: 0; }
+
+.tracker-figure {
+  background: var(--tbl-bg);
+  border: 1px solid var(--tbl-border);
+  border-radius: 8px;
+  padding: 20px 24px 16px;
+}
+
+/* Figure supertitle (per-tab figure number above the chart title) —
+   uppercase kicker, light weight at compact tracking. */
+.figure-supertitle {
+  font: var(--tw-body) 11px/1.2 var(--tbl-font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--tbl-text-muted);
+  margin: 0 0 8px;
+}
+
+.figure-card {
+  margin-bottom: 28px;
+}
+.figure-card:last-child { margin-bottom: 0; }
+.figure-title {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: var(--tw-bold);
+  color: var(--tbl-navy);
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+}
+
+/* Inline-title dropdown (F4) — the industry name inside the figure title
+   is itself a clickable selector. Looks like the surrounding title text
+   (same font, weight, color, size) with a thin outline + caret to signal
+   interactivity. */
+.inline-select-wrap {
+  position: relative;
+  display: inline-block;
+}
+.inline-select {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--tbl-border);
+  border-radius: 4px;
+  /* Inherit type from the surrounding .figure-title so the only visible
+     difference is the outline. */
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  padding: 0 6px 0 8px;
+  margin: 0 1px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  line-height: 1.15;
+  transition: border-color 0.12s, background 0.12s;
+}
+.inline-select:hover,
+.inline-select:focus-visible {
+  border-color: var(--tbl-navy);
+  background: var(--tbl-bg-subtle);
+  outline: none;
+}
+.inline-select[aria-expanded="true"] {
+  border-color: var(--tbl-navy);
+  background: var(--tbl-bg-subtle);
+}
+.inline-select-caret {
+  font-size: 0.7em;
+  color: var(--tbl-text-muted);
+  margin-left: 2px;
+}
+
+/* Popover listbox under the inline-select button. */
+.inline-select-popover {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  background: var(--tbl-bg);
+  border: 1px solid var(--tbl-border);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+  min-width: 100%;
+  max-width: 360px;
+  font-family: var(--tbl-font-sans);
+  font-size: 14px;
+  font-weight: var(--tw-body);
+  letter-spacing: normal;
+  color: var(--tbl-text-body);
+  white-space: nowrap;
+}
+.inline-select-popover li {
+  padding: 6px 14px;
+  cursor: pointer;
+  outline: none;
+}
+.inline-select-popover li:hover,
+.inline-select-popover li:focus {
+  background: var(--tbl-bg-subtle);
+  color: var(--tbl-text-heading);
+}
+.inline-select-popover li.is-active {
+  color: var(--tbl-navy);
+  font-weight: var(--tw-semi);
+}
+
+/* Subtitle — weight 600 against the light supertitle above; color matched
+   to the source/note line and other secondary text (text_muted). */
+.figure-subtitle {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: var(--tw-semi);
+  color: var(--tbl-text-muted);
+}
+/* Per-figure description — last item on the card, sits below the source
+   line. Spans the same horizontal extent as the chart canvas above it
+   (no max-width cap; same full-card-width as .figure-meta). Rendered
+   from each config.md body via Python markdown at build time. */
+.figure-description {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--tbl-text-heading);
+}
+.figure-description p { margin: 0 0 8px; }
+.figure-description p:last-child { margin-bottom: 0; }
+.figure-description ul, .figure-description ol { margin: 0 0 8px; padding-left: 20px; }
+.figure-description li { margin: 0 0 4px; }
+.figure-description li:last-child { margin-bottom: 0; }
+/* Scroll wrapper: when the viewport is narrower than the canvas's
+   min-width (below), the chart region scrolls horizontally instead of
+   forcing the page to scroll or shrinking text below readability.
+   position: relative so the y-axis overlay (absolute, sticky-via-JS)
+   anchors to it. */
+.figure-canvas-scroll {
+  width: 100%;
+  position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Y-axis overlay: a transparent container holding floating tick-label
+   pills. translateX'd by JS to track scrollLeft so labels stay anchored
+   at the left while the chart scrolls underneath. The SVG's own
+   gridlines + zero baseline remain visible across the full chart;
+   each pill has a 50%-white background so its label reads cleanly over
+   whatever data scrolls behind it. */
+.figure-y-axis-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.figure-y-axis-overlay span {
+  position: absolute;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1px 4px;
+  border-radius: 6px;
+  font: var(--tw-body) 10.5px/1 var(--tbl-font-sans);
+  color: var(--tbl-text-axis);
+  white-space: nowrap;
+}
+.figure-canvas {
+  width: 100%;
+  position: relative;
+}
+/* The SVG is rendered at an explicit pixel width by createChartController,
+   so it must NOT be CSS-shrunk: when it's wider than the container (below
+   the JS width floor) it should overflow into the scroll wrapper rather than
+   scale down. Observable Plot injects its own `max-width:100%` on the root
+   (scoped to its generated class); max-width:none overrides that so the SVG
+   keeps its intrinsic pixel width. The width floor lives in charts.js
+   (MIN_CHART_WIDTH), not as a CSS min-width here. */
+.figure-canvas svg { display: block; max-width: none; }
+
+/* X-axis title — sibling of the scrollable canvas inside .figure-canvas-
+   scroll. position: sticky + left:0 + viewport-width box + text-align
+   center keep the title text centered in the visible area regardless
+   of horizontal scroll. */
+.figure-x-axis-title {
+  position: sticky;
+  left: 0;
+  margin: 6px 0 0;
+  font: var(--tw-body) 11.5px/1.3 var(--tbl-font-sans);
+  color: var(--tbl-text-axis);
+  text-align: center;
+}
+
+.figure-meta {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--tbl-text-muted);
+  line-height: 1.45;
+  /* Note + source flow in a left text column that wraps before the download
+     buttons; the buttons sit as a fixed column at the top-right beside it. */
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.figure-meta-text { flex: 1 1 auto; min-width: 0; }
+.figure-meta .figure-note { margin: 0 0 4px; }
+.figure-meta .figure-source { margin: 0; }
+.figure-meta .figure-source-prefix { font-weight: var(--tw-semi); }
+
+/* --- Download buttons (per chart) ----------------------------------------- */
+/* Ghost/outline buttons matching the inline-select aesthetic. The Image
+   button is a placeholder until the PNG export pipeline lands. */
+.figure-downloads {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;     /* fixed right column; the text wraps before it */
+}
+.figure-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font: var(--tw-medium) 12px/1 var(--tbl-font-sans);
+  color: var(--tbl-text-muted);
+  background: transparent;
+  border: 1px solid var(--tbl-border);
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.figure-download-btn:hover,
+.figure-download-btn:focus-visible {
+  border-color: var(--tbl-navy);
+  color: #fff;
+  background: var(--tbl-navy);
+  outline: none;
+}
+.figure-download-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.figure-download-btn svg { display: block; flex-shrink: 0; }
+
+/* --- Legend (top of chart) ------------------------------------------------ */
+.figure-legend-slot { width: 100%; }
+.tbl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 4px;
+  margin: 0 0 8px;
+  padding: 0;
+}
+.tbl-legend-item {
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 4px 8px 3px 6px;
+  margin: 0;
+  font: var(--tw-body) 12px/1.2 var(--tbl-font-sans-compact, var(--tbl-font-sans));
+  color: var(--tbl-text-body);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: inset 0 -2px 0 transparent;
+  transition: background 0.12s, color 0.12s, box-shadow 0.12s;
+}
+.tbl-legend-item:hover,
+.tbl-legend-item:focus-visible {
+  background: var(--tbl-bg-subtle);
+  color: var(--tbl-text-heading);
+  outline: none;
+}
+.tbl-legend-item.is-pinned {
+  color: var(--tbl-text-heading);
+  background: var(--tbl-bg-subtle);
+  box-shadow: inset 0 -1px 0 var(--legend-color, var(--tbl-navy));
+}
+.tbl-legend-swatch {
+  width: 18px;
+  height: 3px;
+  border-radius: 1px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+/* Always exactly three dashes, regardless of swatch width — five
+   percentage-based stops (dash / gap / dash / gap / dash). Dash:gap
+   ratio is 2:1, so dashes are 25% each and gaps 12.5% each. */
+.tbl-legend-swatch.is-dashed {
+  background: linear-gradient(
+    to right,
+    var(--swatch-color, currentColor) 0 25%,
+    transparent          25% 37.5%,
+    var(--swatch-color, currentColor) 37.5% 62.5%,
+    transparent          62.5% 75%,
+    var(--swatch-color, currentColor) 75% 100%
+  );
+  border: 0;
+  height: 2px;
+}
+
+/* Crosshair tooltip — frosted glass over the chart. Backdrop-filter
+   blurs whatever data lines are behind the tooltip so it reads as a
+   floating panel rather than an opaque card pasted on top. */
+.tbl-tooltip {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--tbl-text-heading, #1A1A2E);
+  font: var(--tw-body) 12px/1.35 var(--tbl-font-sans);
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(200, 205, 215, 0.7);
+  white-space: nowrap;
+  z-index: 9999;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+          backdrop-filter: blur(20px) saturate(160%);
+  transition: opacity 80ms linear;
+  max-width: 320px;
+}
+/* Tooltip swatch — matches legend visual so the preview shows the same
+   solid-vs-dashed cue (critical for SDID's same-color comparison). */
+.tbl-tooltip-head { margin-bottom: 4px; font-weight: var(--tw-bold); }
+/* Three weights at play: head 700 (date), value 700 (number — pops),
+   label 400 (series name — stays quiet so the number reads first). */
+.tbl-tooltip-label { font-weight: var(--tw-body); }
+.tbl-tooltip-value { font-weight: var(--tw-bold); }
+.tbl-tooltip-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.tbl-tooltip-row:last-child { margin-bottom: 0; }
+.tbl-tooltip-swatch {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 18px;
+  height: 3px;
+  border-radius: 1px;
+}
+.tbl-tooltip-swatch.is-dashed {
+  background: linear-gradient(
+    to right,
+    var(--swatch-color, currentColor) 0 25%,
+    transparent          25% 37.5%,
+    var(--swatch-color, currentColor) 37.5% 62.5%,
+    transparent          62.5% 75%,
+    var(--swatch-color, currentColor) 75% 100%
+  );
+  height: 2px;
+}
+
+.tbl-legend-reset {
+  appearance: none;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--tbl-border);
+  background: var(--tbl-bg);
+  color: var(--tbl-text-muted);
+  margin: 0 6px 0 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+  font-family: 'Segoe UI Symbol', 'Apple Symbols', 'Noto Sans Symbols', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+}
+.tbl-legend-reset-icon {
+  display: block;
+  /* Unicode arrows sit below the geometric line-box midline; nudge up. */
+  transform: translateY(-2px);
+  line-height: 1;
+}
+.tbl-legend-reset:hover .tbl-legend-reset-icon,
+.tbl-legend-reset:focus-visible .tbl-legend-reset-icon { color: inherit; }
+.tbl-legend-reset[hidden] { display: none; }
+.tbl-legend-reset:hover,
+.tbl-legend-reset:focus-visible {
+  background: var(--tbl-navy);
+  color: #fff;
+  border-color: var(--tbl-navy);
+  outline: none;
+}
+.tbl-legend-reset[hidden] { display: none; }
+
+/* Hover-to-dim mechanism: SVG paths get [data-series]; legend items add
+ * the .tbl-dimmed class to non-matching paths on hover. */
+.figure-canvas svg path[data-series] {
+  transition: opacity 120ms linear;
+}
+.figure-canvas svg path.tbl-dimmed {
+  opacity: 0.15;
+}
+
+.figure-loading,
+.figure-error {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--tbl-text-muted);
+  font-size: 14px;
+}
+.figure-error { color: var(--tbl-red-400, #C13933); }
+
+/* Current Update tab content */
+.current-update {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--tbl-text-body);
+}
+.current-update h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: var(--tw-bold);
+  color: var(--tbl-navy);
+  letter-spacing: -0.005em;
+}
+.current-update .current-update-date {
+  margin: 0 0 18px;
+  font-size: 13px;
+  font-weight: var(--tw-semi);
+  color: var(--tbl-text-muted);
+}
+.current-update p { margin: 0 0 14px; }
+.current-update p:last-child { margin-bottom: 0; }
+
+/* Each ## section in current-update.md becomes its own visible card,
+   matching .tracker-figure's chrome. The outer .tracker-figure box is
+   suppressed below when it contains a .current-update so we don't end up
+   with nested boxes. */
+.current-update-card {
+  background: var(--tbl-bg);
+  border: 1px solid var(--tbl-border);
+  border-radius: 8px;
+  padding: 20px 24px 16px;
+  margin-bottom: 16px;
+}
+.current-update-card:last-child { margin-bottom: 0; }
+
+.tracker-figure:has(.current-update) {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+/* --- Footer --------------------------------------------------------------- */
+/* --- Narrow viewport ------------------------------------------------------
+   No drawer / collapse: the sidebar stays visible and stacks above the
+   main column via the existing 1fr grid when the viewport narrows.
+   Sidebar is in-flow (position: static) so it doesn't float over the
+   card when the user scrolls. */
+/* Main breakpoint (880px): just below the width where the tab row stops
+   fitting. The tab collapse, the one-column body, and the stacked download
+   buttons all switch here together. */
+@media (max-width: 880px) {
+  .tracker-body {
+    grid-template-columns: 1fr;
+  }
+  .tracker-sidebar {
+    position: static;
+  }
+  .tracker-header { flex-wrap: wrap; }
+  .tracker-title { font-size: 20px; }
+  .tracker-logo { height: 26px; }
+  .tracker-figure { padding: 16px; }
+  /* Collapse the tab row into the dropdown. */
+  .tracker-tabs { display: block; border-bottom: none; }
+  .tracker-tab { display: none; }
+  .tracker-tabs-menu { display: block; }
+  /* Stack the per-chart Data / Image buttons. */
+  .figure-downloads { flex-direction: column; }
+}
+
+/* Very narrow (≤390px): the title + logo no longer fit on one row. Stack them
+   with the logo on top (right-aligned) and the title below, rather than
+   letting the logo wrap below-left. */
+@media (max-width: 390px) {
+  .tracker-header {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .tracker-logo-link { align-self: flex-end; }
+}
