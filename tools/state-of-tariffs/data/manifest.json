@@ -17,11 +17,11 @@
           "blocks": [
             {
               "type": "text",
-              "html": "<h2>The State of Tariffs</h2>\n<p>This tool presents the Budget Lab's latest analysis of tariff policy. Introduced in July of 2026,\nthis webpage consolidates several of our tariff-related workstreams that were previously organized\nas separate reports. The tool has five tabs:</p>\n<ul>\n<li><strong>Introduction.</strong> This overview, along with a summary of what has changed since our last update.</li>\n<li><strong>Daily Statutory Rates.</strong> Our estimates of weighted-average statutory tariff rates (sometimes\n  called the \"applied\" tariff rates) calculated for each day starting in January 2025, both overall\n  and broken out by legal authority, trading partner, and product.</li>\n<li><strong>Projected Effects: Default Scenario.</strong> Our estimates of the economic and fiscal effects of\n  tariff policy as specified by current law.</li>\n<li><strong>Projected Effects: Alternative Scenarios.</strong> The same estimated effects, compared across\n  different assumptions for how tariff policy evolves going forward.</li>\n<li><strong>Methodology.</strong> Technical details on how estimates are produced.</li>\n</ul>"
+              "html": "<h2>The State of Tariffs</h2>\n<p>This tool presents the Budget Lab's latest analysis of tariff policy. Introduced in July of 2026,\nthis webpage consolidates several of our tariff-related workstreams that were previously organized\nas separate reports. The tool has five tabs:</p>\n<ul>\n<li><strong>Introduction.</strong> This overview, along with a summary of what has changed since our last update.</li>\n<li><strong>Effective Tariff Rates.</strong> Our estimates of weighted-average statutory tariff rates (sometimes\n  called the \"applied\" tariff rates) calculated for each day starting in January 2025, both overall\n  and broken out by legal authority, trading partner, and product, along with effective tariff\n  rates derived from Treasury customs receipts, annually since 1790 and monthly since 2015.</li>\n<li><strong>Projected Effects: Default Scenario.</strong> Our estimates of the economic and fiscal effects of\n  tariff policy as specified by current law.</li>\n<li><strong>Projected Effects: Alternative Scenarios.</strong> The same estimated effects, compared across\n  different assumptions for how tariff policy evolves going forward.</li>\n<li><strong>Methodology.</strong> Technical details on how estimates are produced.</li>\n</ul>"
             },
             {
               "type": "text",
-              "html": "<h2>Changes since the last update</h2>\n<p class=\"current-update-date\">November 2, 2026</p>\n<p>This update reflects a change in the effective date of the Section 338 tariffs on Canadian products,\nwhich took effect on August 22 rather than August 19 as previously scheduled. No other official\ntariff policy changes have occurred since our last post on August 11.</p>\n<p>The Alternative Scenarios tab now shows a single alternative: current law excluding the Section 338\nactions, which isolates the effect of those tariffs.</p>"
+              "html": "<h2>Changes since the last update</h2>\n<p class=\"current-update-date\">November 2, 2026</p>\n<p>This update reflects two changes: revisions to the scope of the Section 338 tariffs on Canadian\nproducts, and the inclusion of foreign retaliation in our modeling of trade flows.</p>\n<p>First, two rounds of proclamations changed which products the Section 338 tariffs cover.\nProclamations 11064 and 11065, effective September 15, replaced the alcohol and motor-vehicle\nproduct lists and made tariffs on those lists additive with Section 232 tariffs; dairy remains exempt\nfrom that stacking. Proclamation 11076, effective October 30, revised the motor-vehicle list again,\nadding 100 product codes and dropping 22. The net effect, almost entirely from the September change,\nis a small increase in the size of the Section 338 tariffs.</p>\n<p>Second, our projections now include foreign retaliation against U.S. exports that was in effect as\nof September 2026. Retaliation shrinks the U.S. economy and its imports in the model, which lowers\nprojected 10-year conventional revenue by about $63 billion. It also slightly lowers the\npost-substitution effective tariff rate and 2026 GDP growth. Because our August estimates did not\ninclude retaliation, projected revenue is lower than in the last update even though statutory\ntariff rates rose. Excluding retaliation, revenue would have risen slightly, consistent with the\nhigher rates.</p>\n<p>The Alternative Scenarios tab now shows a single alternative: current law excluding the Section 338\nactions, which isolates the effect of those tariffs.</p>\n<p>This update also added information on Treasury-derived effective tariff rates. We show monthly\nETRs from 2015 through 2026 derived from U.S. Treasury and Census Bureau data, and annual ETRs from\nthe 1790s through 2025 using the Historical Statistics of the United States, Treasury, and Bureau of\nEconomic Analysis data.</p>"
             }
           ],
           "tables": {}
@@ -30,9 +30,112 @@
     },
     {
       "id": "statutory-rates",
-      "label": "Daily Statutory Rates",
-      "description": "Daily statutory U.S. tariff rates — overall, by authority, by trading partner, and by product. Rates are shown for one policy scenario at a time; the grey band marks dates that are future projections under current policy.",
+      "label": "Effective Tariff Rates",
+      "description": "U.S. tariff rates two ways — daily statutory rates (overall, by authority, by trading partner, and by product, for one policy scenario at a time; the grey band marks future projections under current policy), and effective rates derived from Treasury customs receipts.",
+      "sections": [
+        {
+          "id": "daily-statutory",
+          "label": "Daily Statutory Rates"
+        },
+        {
+          "id": "treasury-derived",
+          "label": "Treasury-Derived Rates"
+        }
+      ],
       "toggles": [
+        {
+          "id": "annual_start",
+          "label": "Starting year",
+          "default": "1790",
+          "applies_to_figures": [
+            "treasury-etr-annual"
+          ],
+          "options": [
+            {
+              "id": "1790",
+              "label": "1790"
+            },
+            {
+              "id": "1822",
+              "label": "1822",
+              "spec": {
+                "note": "Through 1981, duties calculated as a percent of imports for consumption (HSUS series Ee429). From 1982, calendar-year net customs receipts as a percent of goods imports (NIPA Table 4.1). The dashed line continues the HSUS series through 2000 to show the difference between the two measures. Years end September 30 through 1842 and June 30 from 1843 to 1915."
+              }
+            },
+            {
+              "id": "1930",
+              "label": "1930",
+              "spec": {
+                "note": "Through 1981, duties calculated as a percent of imports for consumption (HSUS series Ee429). From 1982, calendar-year net customs receipts as a percent of goods imports (NIPA Table 4.1). The dashed line continues the HSUS series through 2000 to show the difference between the two measures.",
+                "yAxisPolicy": {
+                  "min": 0,
+                  "max": 25,
+                  "tickCount": 6
+                }
+              }
+            },
+            {
+              "id": "1982",
+              "label": "1982",
+              "spec": {
+                "note": "Calendar-year net customs receipts as a percent of goods imports (NIPA Table 4.1). The dashed line is the HSUS measure (duties calculated as a percent of imports for consumption, series Ee429), which the series uses through 1981.",
+                "yAxisPolicy": {
+                  "min": 0,
+                  "max": 10,
+                  "tickCount": 6
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "monthly_start",
+          "label": "Starting month",
+          "default": "2024",
+          "applies_to_figures": [
+            "treasury-etr-monthly"
+          ],
+          "options": [
+            {
+              "id": "2015",
+              "label": "Mar 2015"
+            },
+            {
+              "id": "2024",
+              "label": "Jan 2024"
+            },
+            {
+              "id": "2025",
+              "label": "Jan 2025"
+            }
+          ]
+        },
+        {
+          "id": "measure",
+          "label": "Customs receipts",
+          "default": "gross",
+          "applies_to_figures": [
+            "treasury-etr-monthly"
+          ],
+          "options": [
+            {
+              "id": "gross",
+              "label": "Gross"
+            },
+            {
+              "id": "net",
+              "label": "Net of refunds",
+              "spec": {
+                "yAxisPolicy": {
+                  "min": -10,
+                  "max": 15,
+                  "tickCount": 6
+                },
+                "note": "Customs receipts net of refunds, divided by the same month's imports for consumption. Refunds of IEEPA tariffs push net receipts below zero in May through July 2026. Duties are generally paid about a month after goods enter, so monthly ratios blur timing. The Treasury series begins in March 2015."
+              }
+            }
+          ]
+        },
         {
           "id": "china",
           "label": "China",
@@ -143,6 +246,7 @@
             }
           },
           "body_html": "<p>The overall statutory tariff rate over time, for the selected scenario. Dashed vertical lines\nmark major tariff policy changes. The grey band marks the projected period.</p>",
+          "section": "daily-statutory",
           "selectors": [
             {
               "id": "scenario",
@@ -249,6 +353,7 @@
             }
           },
           "body_html": "<p>The daily statutory rate broken out by legal authority, stacked on the base (MFN) rate. The\npieces add up to the overall rate in the previous figure.</p>",
+          "section": "daily-statutory",
           "selectors": [
             {
               "id": "scenario",
@@ -353,6 +458,7 @@
             }
           },
           "body_html": "<p>The daily statutory rate by trading partner, for the selected scenario.</p>",
+          "section": "daily-statutory",
           "selectors": [
             {
               "id": "scenario",
@@ -447,6 +553,7 @@
             }
           },
           "body_html": "<p>The daily statutory rate for selected product groups, for the selected scenario.</p>",
+          "section": "daily-statutory",
           "selectors": [
             {
               "id": "scenario",
@@ -465,6 +572,75 @@
             }
           ],
           "figureNum": 4
+        },
+        {
+          "id": "treasury-etr-annual",
+          "short_label": "Annual",
+          "figureType": "chart",
+          "data": "statutory-rates/treasury-etr-annual/data.csv",
+          "spec": {
+            "chartType": "line",
+            "data": "data.csv",
+            "title": "Average Effective Tariff Rate, Annual",
+            "subtitle": "Customs duties as a percent of goods imports. Percent.",
+            "value_suffix": "%",
+            "source": "Douglas A. Irwin, \"Merchandise imports and duties, 1790–2000,\" Table Ee424-430 in Historical Statistics of the United States, Earliest Times to the Present, Millennial Edition, ed. Susan B. Carter et al. (Cambridge University Press, 2006), hsus.cambridge.org; Monthly Treasury Statement; Bureau of Economic Analysis, NIPA Table 4.1; The Budget Lab analysis.",
+            "note": "Through 1981, duties calculated as a percent of imports for consumption (HSUS series Ee429). From 1982, calendar-year net customs receipts as a percent of goods imports (NIPA Table 4.1). The dashed line continues the HSUS series through 2000 to show the difference between the two measures. 1790–1821 use total imports and duties collected and are not directly comparable to later years. Years end September 30 through 1842 and June 30 from 1843 to 1915.",
+            "xAxisType": "numeric",
+            "series_order": [
+              "effective_rate",
+              "hsus_overlap"
+            ],
+            "series_labels": {
+              "effective_rate": "Effective tariff rate",
+              "hsus_overlap": "HSUS measure (duties calculated), 1982–2000"
+            },
+            "series_colors": {
+              "effective_rate": "blue",
+              "hsus_overlap": "blue"
+            },
+            "series_styles": {
+              "hsus_overlap": {
+                "dashed": true
+              }
+            }
+          },
+          "body_html": "<p>Customs duties as a share of the value of goods imports, from 1790 to the most recent full year.\nUse the starting-year toggle to change the period shown. The series joins two sources in 1982:\nthe <a href=\"https://hsus.cambridge.org/HSUSWeb/toc/hsusHome.do.html\"><em>Historical Statistics of the United States</em></a>\nratio of duties calculated to imports, and\nTreasury's customs receipts divided by the Bureau of Economic Analysis's goods imports. The\ntwo measures differ by up to a quarter of a percentage point where they overlap. Each starting\nyear's note explains what changes in the data before that point.</p>",
+          "section": "treasury-derived",
+          "figureNum": 5
+        },
+        {
+          "id": "treasury-etr-monthly",
+          "short_label": "Monthly",
+          "figureType": "chart",
+          "data": "statutory-rates/treasury-etr-monthly/data.csv",
+          "spec": {
+            "chartType": "line",
+            "data": "data.csv",
+            "title": "Effective Tariff Rate from Monthly Treasury Data",
+            "subtitle": "Customs duties as a percent of imports for consumption, by month. Percent.",
+            "value_suffix": "%",
+            "source": "Monthly Treasury Statement, Table 4; U.S. Census Bureau; The Budget Lab analysis.",
+            "note": "Gross customs receipts before refunds, divided by the same month's imports for consumption. Duties are generally paid about a month after goods enter, so monthly ratios blur timing. The Treasury series begins in March 2015.",
+            "xAxisType": "temporal",
+            "yAxisPolicy": {
+              "min": 0,
+              "max": 14,
+              "tickCount": 8
+            },
+            "series_order": [
+              "treasury_etr"
+            ],
+            "series_labels": {
+              "treasury_etr": "Effective tariff rate"
+            },
+            "series_colors": {
+              "treasury_etr": "blue"
+            }
+          },
+          "body_html": "<p>Customs duties collected each month as a share of that month's goods imports. Use the toggles\nto change the starting month and to switch between gross receipts and receipts net of refunds.\nNet receipts fall below zero in May through July 2026, when refunds of tariffs imposed under\nthe International Emergency Economic Powers Act exceeded new collections.</p>",
+          "section": "treasury-derived",
+          "figureNum": 6
         }
       ]
     },
