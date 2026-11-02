@@ -1,6 +1,6 @@
 {
   "release": {
-    "updated": "November 1, 2026",
+    "updated": "November 2, 2026",
     "vintage": "202611011341"
   },
   "data_base_url": "./data/",
@@ -21,7 +21,7 @@
             },
             {
               "type": "text",
-              "html": "<h2>Changes since the last update</h2>\n<p class=\"current-update-date\">November 1, 2026</p>\n<p>This update reflects a change in the effective date of the Section 338 tariffs on Canadian products,\nwhich took effect on August 22 rather than August 19 as previously scheduled. No other official\ntariff policy changes have occurred since our last post on August 11.</p>\n<p>The Alternative Scenarios tab now shows a single alternative: current law excluding the Section 338\nactions, which isolates the effect of those tariffs.</p>"
+              "html": "<h2>Changes since the last update</h2>\n<p class=\"current-update-date\">November 2, 2026</p>\n<p>This update reflects a change in the effective date of the Section 338 tariffs on Canadian products,\nwhich took effect on August 22 rather than August 19 as previously scheduled. No other official\ntariff policy changes have occurred since our last post on August 11.</p>\n<p>The Alternative Scenarios tab now shows a single alternative: current law excluding the Section 338\nactions, which isolates the effect of those tariffs.</p>"
             }
           ],
           "tables": {}
@@ -136,7 +136,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-11-01",
+                  "start": "2026-11-02",
                   "end": "2026-12-31"
                 }
               ]
@@ -242,7 +242,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-11-01",
+                  "start": "2026-11-02",
                   "end": "2026-12-31"
                 }
               ]
@@ -346,7 +346,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-11-01",
+                  "start": "2026-11-02",
                   "end": "2026-12-31"
                 }
               ]
@@ -440,7 +440,7 @@
               ],
               "bands": [
                 {
-                  "start": "2026-11-01",
+                  "start": "2026-11-02",
                   "end": "2026-12-31"
                 }
               ]
