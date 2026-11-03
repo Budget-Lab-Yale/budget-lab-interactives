@@ -22,16 +22,16 @@ as separate reports. The tool has five tabs:
 
 ## Key takeaways
 
-- The average statutory tariff rate now stands at {stat: etr_statutory_current}. Under current law,
-  which includes the scheduled December increase, it will reach {stat: etr_statutory_level} by the
-  end of this year.
-- We estimate the ultimate consumer price impact of current-law tariff policy to be about
-  {stat: price_postsub}.
-- Estimated household costs due to tariffs total about {stat: hh_cost_postsub} annually under
-  current law.
-- Over the next ten years, we estimate that current-law tariffs will raise about
-  {stat: revenue_conventional}, or {stat: revenue_dynamic} after accounting for the effect of
-  tariffs on GDP.
+1. The average statutory tariff rate now stands at {stat: etr_statutory_current}. Under current law,
+   which includes the scheduled December increase, it will reach {stat: etr_statutory_level} by the
+   end of this year.
+2. We estimate the ultimate consumer price impact of current-law tariff policy to be about
+   {stat: price_postsub}.
+3. Estimated household costs due to tariffs total about {stat: hh_cost_postsub} annually under
+   current law.
+4. Over the next ten years, we estimate that current-law tariffs will raise about
+   {stat: revenue_conventional}, or {stat: revenue_dynamic} after accounting for the effect of
+   tariffs on GDP.
 
 ## Changes since the last update
 

@@ -21,7 +21,7 @@
             },
             {
               "type": "text",
-              "html": "<h2>Key takeaways</h2>\n<ul>\n<li>The average statutory tariff rate now stands at 11.8%. Under current law,\n  which includes the scheduled December increase, it will reach 11.9% by the\n  end of this year.</li>\n<li>We estimate the ultimate consumer price impact of current-law tariff policy to be about\n  0.7%.</li>\n<li>Estimated household costs due to tariffs total about $900 annually under\n  current law.</li>\n<li>Over the next ten years, we estimate that current-law tariffs will raise about\n  $1.8 trillion, or $1.7 trillion after accounting for the effect of\n  tariffs on GDP.</li>\n</ul>"
+              "html": "<h2>Key takeaways</h2>\n<ol>\n<li>The average statutory tariff rate now stands at 11.8%. Under current law,\n   which includes the scheduled December increase, it will reach 11.9% by the\n   end of this year.</li>\n<li>We estimate the ultimate consumer price impact of current-law tariff policy to be about\n   0.7%.</li>\n<li>Estimated household costs due to tariffs total about $900 annually under\n   current law.</li>\n<li>Over the next ten years, we estimate that current-law tariffs will raise about\n   $1.8 trillion, or $1.7 trillion after accounting for the effect of\n   tariffs on GDP.</li>\n</ol>"
             },
             {
               "type": "text",
