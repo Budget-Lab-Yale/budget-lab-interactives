@@ -2,8 +2,8 @@
 # build-manifest.py). Keyed by the scenario id from model-meta.json — these are vintage-dated, so
 # re-check/update them each release. Any scenario omitted here falls back to the palette by order.
 scenario_colors:
-  tracker_actual_2026-08-24: blue                 # Current law
-  tracker_no_s338_2026-08-24: amber               # Current law excluding the Section 338 actions
+  tracker_actual_2026-11-01-19: blue                # Current law
+  tracker_no_s338_2026-11-01-19: amber              # Current law excluding the Section 338 actions
 
 tabs:
 - id: introduction
@@ -13,9 +13,64 @@ tabs:
   - overview
 
 - id: statutory-rates
-  label: Daily Statutory Rates
-  description: Daily statutory U.S. tariff rates — overall, by authority, by trading partner, and by product. Rates are shown for one policy scenario at a time; the grey band marks dates that are future projections under current policy.
+  label: Effective Tariff Rates
+  description: U.S. tariff rates two ways — daily statutory rates (overall, by authority, by trading partner, and by product, for one policy scenario at a time; the grey band marks future projections under current policy), and effective rates derived from Treasury customs receipts.
   toggles:
+  - id: annual_start
+    label: Starting year
+    default: '1790'
+    applies_to_figures:
+    - treasury-etr-annual
+    options:
+    - id: '1790'
+      label: '1790'
+    - id: '1822'
+      label: '1822'
+      spec:
+        note: Through 1981, duties calculated as a percent of imports for consumption (HSUS series
+          Ee429). From 1982, calendar-year net customs receipts as a percent of goods imports (NIPA
+          Table 4.1). The dashed line continues the HSUS series through 2000 to show the difference
+          between the two measures. Years end September 30 through 1842 and June 30 from 1843 to
+          1915.
+    - id: '1930'
+      label: '1930'
+      spec:
+        note: Through 1981, duties calculated as a percent of imports for consumption (HSUS series
+          Ee429). From 1982, calendar-year net customs receipts as a percent of goods imports (NIPA
+          Table 4.1). The dashed line continues the HSUS series through 2000 to show the difference
+          between the two measures.
+        yAxisPolicy: {min: 0, max: 25, tickCount: 6}
+    - id: '1982'
+      label: '1982'
+      spec:
+        note: Calendar-year net customs receipts as a percent of goods imports (NIPA Table 4.1). The
+          dashed line is the HSUS measure (duties calculated as a percent of imports for
+          consumption, series Ee429), which the series uses through 1981.
+        yAxisPolicy: {min: 0, max: 10, tickCount: 6}
+  - id: monthly_start
+    label: Starting month
+    default: '2024'
+    applies_to_figures:
+    - treasury-etr-monthly
+    options:
+    - {id: '2015', label: Mar 2015}
+    - {id: '2024', label: Jan 2024}
+    - {id: '2025', label: Jan 2025}
+  - id: measure
+    label: Customs receipts
+    default: gross
+    applies_to_figures:
+    - treasury-etr-monthly
+    options:
+    - {id: gross, label: Gross}
+    - id: net
+      label: Net of refunds
+      spec:
+        yAxisPolicy: {min: -10, max: 15, tickCount: 6}
+        note: Customs receipts net of refunds, divided by the same month's imports for consumption.
+          Refunds of IEEPA tariffs push net receipts below zero in May through July 2026. Duties
+          are generally paid about a month after goods enter, so monthly ratios blur timing. The
+          Treasury series begins in March 2015.
   - id: china
     label: China
     default: with
@@ -31,11 +86,19 @@ tabs:
       spec:
         series_order: [Canada, Mexico, EU, Japan, UK, Free-trade partners, Rest of World]
         yAxisPolicy: {min: 0, max: 25, tickCount: 6}
-  figures:
-  - daily-rate-overall
-  - daily-rate-by-authority
-  - daily-rate-by-country
-  - daily-rate-by-hs
+  sections:
+  - id: daily-statutory
+    label: Daily Statutory Rates
+    figures:
+    - daily-rate-overall
+    - daily-rate-by-authority
+    - daily-rate-by-country
+    - daily-rate-by-hs
+  - id: treasury-derived
+    label: Treasury-Derived Rates
+    figures:
+    - treasury-etr-annual
+    - treasury-etr-monthly
 
 - id: default-scenario
   label: "Projected Effects:\nDefault Scenario"

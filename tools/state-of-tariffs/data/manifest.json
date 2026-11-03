@@ -1,7 +1,7 @@
 {
   "release": {
-    "updated": "August 24, 2026",
-    "vintage": "2026082411"
+    "updated": "November 2, 2026",
+    "vintage": "202611011341"
   },
   "data_base_url": "./data/",
   "tabs": [
@@ -17,11 +17,15 @@
           "blocks": [
             {
               "type": "text",
-              "html": "<h2>The State of Tariffs</h2>\n<p>This tool presents the Budget Lab's latest analysis of tariff policy. Introduced in July of 2026,\nthis webpage consolidates several of our tariff-related workstreams that were previously organized\nas separate reports. The tool has five tabs:</p>\n<ul>\n<li><strong>Introduction.</strong> This overview, along with a summary of what has changed since our last update.</li>\n<li><strong>Daily Statutory Rates.</strong> Our estimates of weighted-average statutory tariff rates (sometimes\n  called the \"applied\" tariff rates) calculated for each day starting in January 2025, both overall\n  and broken out by legal authority, trading partner, and product.</li>\n<li><strong>Projected Effects: Default Scenario.</strong> Our estimates of the economic and fiscal effects of\n  tariff policy as specified by current law.</li>\n<li><strong>Projected Effects: Alternative Scenarios.</strong> The same estimated effects, compared across\n  different assumptions for how tariff policy evolves going forward.</li>\n<li><strong>Methodology.</strong> Technical details on how estimates are produced.</li>\n</ul>"
+              "html": "<h2>The State of Tariffs</h2>\n<p>This tool presents the Budget Lab's latest analysis of tariff policy. Introduced in July of 2026,\nthis webpage consolidates several of our tariff-related workstreams that were previously organized\nas separate reports. The tool has five tabs:</p>\n<ul>\n<li><strong>Introduction.</strong> This overview, along with a summary of what has changed since our last update.</li>\n<li><strong>Effective Tariff Rates.</strong> Our estimates of weighted-average statutory tariff rates (sometimes\n  called the \"applied\" tariff rates) calculated for each day starting in January 2025, both overall\n  and broken out by legal authority, trading partner, and product, along with effective tariff\n  rates derived from Treasury customs receipts, annually since 1790 and monthly since 2015.</li>\n<li><strong>Projected Effects: Default Scenario.</strong> Our estimates of the economic and fiscal effects of\n  tariff policy as specified by current law.</li>\n<li><strong>Projected Effects: Alternative Scenarios.</strong> The same estimated effects, compared across\n  different assumptions for how tariff policy evolves going forward.</li>\n<li><strong>Methodology.</strong> Technical details on how estimates are produced.</li>\n</ul>"
             },
             {
               "type": "text",
-              "html": "<h2>Changes since the last update</h2>\n<p class=\"current-update-date\">August 24, 2026</p>\n<p>This update reflects a change in the effective date of the Section 338 tariffs on Canadian products,\nwhich took effect on August 22 rather than August 19 as previously scheduled. No other official\ntariff policy changes have occurred since our last post on August 11.</p>\n<p>The Alternative Scenarios tab now shows a single alternative: current law excluding the Section 338\nactions, which isolates the effect of those tariffs.</p>"
+              "html": "<h2>Key takeaways</h2>\n<ol>\n<li>The average statutory tariff rate now stands at 11.8%. Under current law,\n   which includes the scheduled December increase, it will reach 11.9% by the\n   end of this year.</li>\n<li>We estimate the ultimate consumer price impact of current-law tariff policy to be about\n   0.7%.</li>\n<li>Estimated household costs due to tariffs total about $900 annually under\n   current law.</li>\n<li>Over the next ten years, we estimate that current-law tariffs will raise about\n   $1.8 trillion, or $1.7 trillion after accounting for the effect of\n   tariffs on GDP.</li>\n</ol>"
+            },
+            {
+              "type": "text",
+              "html": "<h2>Changes since the last update</h2>\n<p class=\"current-update-date\">November 2, 2026</p>\n<p>This update reflects two changes: revisions to the scope of the Section 338 tariffs on Canadian\nproducts, and the inclusion of foreign retaliation in our modeling of trade flows.</p>\n<p>First, two rounds of proclamations changed which products the Section 338 tariffs cover.\nProclamations 11064 and 11065, effective September 15, replaced the alcohol and motor-vehicle\nproduct lists and made tariffs on those lists additive with Section 232 tariffs; dairy remains exempt\nfrom that stacking. Proclamation 11076, effective October 30, revised the motor-vehicle list again,\nadding 100 product codes and dropping 22. The net effect, almost entirely from the September change,\nis a small increase in the size of the Section 338 tariffs.</p>\n<p>Second, our projections now include foreign retaliation against U.S. exports that was in effect as\nof September 2026. Retaliation shrinks the U.S. economy and its imports in the model, which lowers\nprojected 10-year conventional revenue by about $63 billion. It also slightly lowers the\npost-substitution effective tariff rate and 2026 GDP growth. Because our August estimates did not\ninclude retaliation, projected revenue is lower than in the last update even though statutory\ntariff rates rose. Excluding retaliation, revenue would have risen slightly, consistent with the\nhigher rates.</p>\n<p>The Alternative Scenarios tab now shows a single alternative: current law excluding the Section 338\nactions, which isolates the effect of those tariffs.</p>\n<p>This update also added information on Treasury-derived effective tariff rates. We show monthly\nETRs from 2015 through 2026 derived from U.S. Treasury and Census Bureau data, and annual ETRs from\nthe 1790s through 2025 using the Historical Statistics of the United States, Treasury, and Bureau of\nEconomic Analysis data.</p>"
             }
           ],
           "tables": {}
@@ -30,9 +34,112 @@
     },
     {
       "id": "statutory-rates",
-      "label": "Daily Statutory Rates",
-      "description": "Daily statutory U.S. tariff rates — overall, by authority, by trading partner, and by product. Rates are shown for one policy scenario at a time; the grey band marks dates that are future projections under current policy.",
+      "label": "Effective Tariff Rates",
+      "description": "U.S. tariff rates two ways — daily statutory rates (overall, by authority, by trading partner, and by product, for one policy scenario at a time; the grey band marks future projections under current policy), and effective rates derived from Treasury customs receipts.",
+      "sections": [
+        {
+          "id": "daily-statutory",
+          "label": "Daily Statutory Rates"
+        },
+        {
+          "id": "treasury-derived",
+          "label": "Treasury-Derived Rates"
+        }
+      ],
       "toggles": [
+        {
+          "id": "annual_start",
+          "label": "Starting year",
+          "default": "1790",
+          "applies_to_figures": [
+            "treasury-etr-annual"
+          ],
+          "options": [
+            {
+              "id": "1790",
+              "label": "1790"
+            },
+            {
+              "id": "1822",
+              "label": "1822",
+              "spec": {
+                "note": "Through 1981, duties calculated as a percent of imports for consumption (HSUS series Ee429). From 1982, calendar-year net customs receipts as a percent of goods imports (NIPA Table 4.1). The dashed line continues the HSUS series through 2000 to show the difference between the two measures. Years end September 30 through 1842 and June 30 from 1843 to 1915."
+              }
+            },
+            {
+              "id": "1930",
+              "label": "1930",
+              "spec": {
+                "note": "Through 1981, duties calculated as a percent of imports for consumption (HSUS series Ee429). From 1982, calendar-year net customs receipts as a percent of goods imports (NIPA Table 4.1). The dashed line continues the HSUS series through 2000 to show the difference between the two measures.",
+                "yAxisPolicy": {
+                  "min": 0,
+                  "max": 25,
+                  "tickCount": 6
+                }
+              }
+            },
+            {
+              "id": "1982",
+              "label": "1982",
+              "spec": {
+                "note": "Calendar-year net customs receipts as a percent of goods imports (NIPA Table 4.1). The dashed line is the HSUS measure (duties calculated as a percent of imports for consumption, series Ee429), which the series uses through 1981.",
+                "yAxisPolicy": {
+                  "min": 0,
+                  "max": 10,
+                  "tickCount": 6
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "monthly_start",
+          "label": "Starting month",
+          "default": "2024",
+          "applies_to_figures": [
+            "treasury-etr-monthly"
+          ],
+          "options": [
+            {
+              "id": "2015",
+              "label": "Mar 2015"
+            },
+            {
+              "id": "2024",
+              "label": "Jan 2024"
+            },
+            {
+              "id": "2025",
+              "label": "Jan 2025"
+            }
+          ]
+        },
+        {
+          "id": "measure",
+          "label": "Customs receipts",
+          "default": "gross",
+          "applies_to_figures": [
+            "treasury-etr-monthly"
+          ],
+          "options": [
+            {
+              "id": "gross",
+              "label": "Gross"
+            },
+            {
+              "id": "net",
+              "label": "Net of refunds",
+              "spec": {
+                "yAxisPolicy": {
+                  "min": -10,
+                  "max": 15,
+                  "tickCount": 6
+                },
+                "note": "Customs receipts net of refunds, divided by the same month's imports for consumption. Refunds of IEEPA tariffs push net receipts below zero in May through July 2026. Duties are generally paid about a month after goods enter, so monthly ratios blur timing. The Treasury series begins in March 2015."
+              }
+            }
+          ]
+        },
         {
           "id": "china",
           "label": "China",
@@ -136,25 +243,26 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-24",
+                  "start": "2026-11-02",
                   "end": "2026-12-31"
                 }
               ]
             }
           },
           "body_html": "<p>The overall statutory tariff rate over time, for the selected scenario. Dashed vertical lines\nmark major tariff policy changes. The grey band marks the projected period.</p>",
+          "section": "daily-statutory",
           "selectors": [
             {
               "id": "scenario",
               "label": "Scenario",
-              "default": "tracker_actual_2026-08-24",
+              "default": "tracker_actual_2026-11-01-19",
               "options": [
                 {
-                  "id": "tracker_actual_2026-08-24",
+                  "id": "tracker_actual_2026-11-01-19",
                   "label": "Current law"
                 },
                 {
-                  "id": "tracker_no_s338_2026-08-24",
+                  "id": "tracker_no_s338_2026-11-01-19",
                   "label": "Ex Section 338"
                 }
               ]
@@ -242,25 +350,26 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-24",
+                  "start": "2026-11-02",
                   "end": "2026-12-31"
                 }
               ]
             }
           },
           "body_html": "<p>The daily statutory rate broken out by legal authority, stacked on the base (MFN) rate. The\npieces add up to the overall rate in the previous figure.</p>",
+          "section": "daily-statutory",
           "selectors": [
             {
               "id": "scenario",
               "label": "Scenario",
-              "default": "tracker_actual_2026-08-24",
+              "default": "tracker_actual_2026-11-01-19",
               "options": [
                 {
-                  "id": "tracker_actual_2026-08-24",
+                  "id": "tracker_actual_2026-11-01-19",
                   "label": "Current law"
                 },
                 {
-                  "id": "tracker_no_s338_2026-08-24",
+                  "id": "tracker_no_s338_2026-11-01-19",
                   "label": "Ex Section 338"
                 }
               ]
@@ -346,25 +455,26 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-24",
+                  "start": "2026-11-02",
                   "end": "2026-12-31"
                 }
               ]
             }
           },
           "body_html": "<p>The daily statutory rate by trading partner, for the selected scenario.</p>",
+          "section": "daily-statutory",
           "selectors": [
             {
               "id": "scenario",
               "label": "Scenario",
-              "default": "tracker_actual_2026-08-24",
+              "default": "tracker_actual_2026-11-01-19",
               "options": [
                 {
-                  "id": "tracker_actual_2026-08-24",
+                  "id": "tracker_actual_2026-11-01-19",
                   "label": "Current law"
                 },
                 {
-                  "id": "tracker_no_s338_2026-08-24",
+                  "id": "tracker_no_s338_2026-11-01-19",
                   "label": "Ex Section 338"
                 }
               ]
@@ -440,31 +550,101 @@
               ],
               "bands": [
                 {
-                  "start": "2026-08-24",
+                  "start": "2026-11-02",
                   "end": "2026-12-31"
                 }
               ]
             }
           },
           "body_html": "<p>The daily statutory rate for selected product groups, for the selected scenario.</p>",
+          "section": "daily-statutory",
           "selectors": [
             {
               "id": "scenario",
               "label": "Scenario",
-              "default": "tracker_actual_2026-08-24",
+              "default": "tracker_actual_2026-11-01-19",
               "options": [
                 {
-                  "id": "tracker_actual_2026-08-24",
+                  "id": "tracker_actual_2026-11-01-19",
                   "label": "Current law"
                 },
                 {
-                  "id": "tracker_no_s338_2026-08-24",
+                  "id": "tracker_no_s338_2026-11-01-19",
                   "label": "Ex Section 338"
                 }
               ]
             }
           ],
           "figureNum": 4
+        },
+        {
+          "id": "treasury-etr-annual",
+          "short_label": "Annual",
+          "figureType": "chart",
+          "data": "statutory-rates/treasury-etr-annual/data.csv",
+          "spec": {
+            "chartType": "line",
+            "data": "data.csv",
+            "title": "Average Effective Tariff Rate, Annual",
+            "subtitle": "Customs duties as a percent of goods imports. Percent.",
+            "value_suffix": "%",
+            "source": "Douglas A. Irwin, \"Merchandise imports and duties, 1790–2000,\" Table Ee424-430 in Historical Statistics of the United States, Earliest Times to the Present, Millennial Edition, ed. Susan B. Carter et al. (Cambridge University Press, 2006), hsus.cambridge.org; Monthly Treasury Statement; Bureau of Economic Analysis, NIPA Table 4.1; The Budget Lab analysis.",
+            "note": "Through 1981, duties calculated as a percent of imports for consumption (HSUS series Ee429). From 1982, calendar-year net customs receipts as a percent of goods imports (NIPA Table 4.1). The dashed line continues the HSUS series through 2000 to show the difference between the two measures. 1790–1821 use total imports and duties collected and are not directly comparable to later years. Years end September 30 through 1842 and June 30 from 1843 to 1915.",
+            "xAxisType": "numeric",
+            "series_order": [
+              "effective_rate",
+              "hsus_overlap"
+            ],
+            "series_labels": {
+              "effective_rate": "Effective tariff rate",
+              "hsus_overlap": "HSUS measure (duties calculated), 1982–2000"
+            },
+            "series_colors": {
+              "effective_rate": "blue",
+              "hsus_overlap": "blue"
+            },
+            "series_styles": {
+              "hsus_overlap": {
+                "dashed": true
+              }
+            }
+          },
+          "body_html": "<p>Customs duties as a share of the value of goods imports, from 1790 to the most recent full year.\nUse the starting-year toggle to change the period shown. The series joins two sources in 1982:\nthe <a href=\"https://hsus.cambridge.org/HSUSWeb/toc/hsusHome.do.html\"><em>Historical Statistics of the United States</em></a>\nratio of duties calculated to imports, and\nTreasury's customs receipts divided by the Bureau of Economic Analysis's goods imports. The\ntwo measures differ by up to a quarter of a percentage point where they overlap. Each starting\nyear's note explains what changes in the data before that point.</p>",
+          "section": "treasury-derived",
+          "figureNum": 5
+        },
+        {
+          "id": "treasury-etr-monthly",
+          "short_label": "Monthly",
+          "figureType": "chart",
+          "data": "statutory-rates/treasury-etr-monthly/data.csv",
+          "spec": {
+            "chartType": "line",
+            "data": "data.csv",
+            "title": "Effective Tariff Rate from Monthly Treasury Data",
+            "subtitle": "Customs duties as a percent of imports for consumption, by month. Percent.",
+            "value_suffix": "%",
+            "source": "Monthly Treasury Statement, Table 4; U.S. Census Bureau; The Budget Lab analysis.",
+            "note": "Gross customs receipts before refunds, divided by the same month's imports for consumption. Duties are generally paid about a month after goods enter, so monthly ratios blur timing. The Treasury series begins in March 2015.",
+            "xAxisType": "temporal",
+            "yAxisPolicy": {
+              "min": 0,
+              "max": 14,
+              "tickCount": 8
+            },
+            "series_order": [
+              "treasury_etr"
+            ],
+            "series_labels": {
+              "treasury_etr": "Effective tariff rate"
+            },
+            "series_colors": {
+              "treasury_etr": "blue"
+            }
+          },
+          "body_html": "<p>Customs duties collected each month as a share of that month's goods imports. Use the toggles\nto change the starting month and to switch between gross receipts and receipts net of refunds.\nNet receipts fall below zero in May through July 2026, when refunds of tariffs imposed under\nthe International Emergency Economic Powers Act exceeded new collections.</p>",
+          "section": "treasury-derived",
+          "figureNum": 6
         }
       ]
     },
@@ -1007,8 +1187,8 @@
             ],
             "value": "value",
             "header_labels": {
-              "tracker_actual_2026-08-24": "Current law",
-              "tracker_no_s338_2026-08-24": "Ex Section 338",
+              "tracker_actual_2026-11-01-19": "Current law",
+              "tracker_no_s338_2026-11-01-19": "Ex Section 338",
               "level": "Levels",
               "delta_vs_default": "Change vs. default"
             },
@@ -1059,8 +1239,8 @@
               }
             },
             "column_order": [
-              "tracker_actual_2026-08-24",
-              "tracker_no_s338_2026-08-24"
+              "tracker_actual_2026-11-01-19",
+              "tracker_no_s338_2026-11-01-19"
             ]
           },
           "body_html": "<h2>Alternative Scenarios</h2>\n<p>These figures show the same projected effects as the Default Scenario tab, but across <strong>all</strong>\nmodeled policy scenarios. Use the <strong>View</strong> toggle to switch between each scenario's own effects\n(levels) and its effect relative to our default scenario (change vs. default).</p>\n<p>Alternatives are a variation on current law. We show one alternative scenario:</p>\n<ul>\n<li><strong>Excluding the Section 338 tariffs.</strong> This scenario is identical to current law except that it\n  omits the Section 338 tariff actions on Canadian products, which took effect on August 22.\n  Comparing the default against it isolates the effect of those actions.</li>\n</ul>",
@@ -1116,12 +1296,12 @@
             },
             "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
             "row_labels": {
-              "tracker_actual_2026-08-24": "Current law",
-              "tracker_no_s338_2026-08-24": "Ex Section 338"
+              "tracker_actual_2026-11-01-19": "Current law",
+              "tracker_no_s338_2026-11-01-19": "Ex Section 338"
             },
             "group_labels": {
-              "tracker_actual_2026-08-24": "Current law",
-              "tracker_no_s338_2026-08-24": "Ex Section 338"
+              "tracker_actual_2026-11-01-19": "Current law",
+              "tracker_no_s338_2026-11-01-19": "Ex Section 338"
             }
           },
           "body_html": "<p>The average effective U.S. tariff rate by trading partner and scenario, as both levels and change\nvs. our default scenario. Click a partner to expand or collapse its scenarios.</p>",
@@ -1183,16 +1363,16 @@
               }
             },
             "series_order": [
-              "tracker_actual_2026-08-24",
-              "tracker_no_s338_2026-08-24"
+              "tracker_actual_2026-11-01-19",
+              "tracker_no_s338_2026-11-01-19"
             ],
             "series_labels": {
-              "tracker_actual_2026-08-24": "Current law",
-              "tracker_no_s338_2026-08-24": "Ex Section 338"
+              "tracker_actual_2026-11-01-19": "Current law",
+              "tracker_no_s338_2026-11-01-19": "Ex Section 338"
             },
             "series_colors": {
-              "tracker_actual_2026-08-24": "blue",
-              "tracker_no_s338_2026-08-24": "amber"
+              "tracker_actual_2026-11-01-19": "blue",
+              "tracker_no_s338_2026-11-01-19": "amber"
             }
           },
           "body_html": "<p>Consumer-price effects by PCE spending category, split into pre- and post-substitution panes,\ncompared across scenarios. Use the <strong>View</strong> toggle for levels or change vs. default.</p>",
@@ -1240,16 +1420,16 @@
               ]
             },
             "series_order": [
-              "tracker_actual_2026-08-24",
-              "tracker_no_s338_2026-08-24"
+              "tracker_actual_2026-11-01-19",
+              "tracker_no_s338_2026-11-01-19"
             ],
             "series_labels": {
-              "tracker_actual_2026-08-24": "Current law",
-              "tracker_no_s338_2026-08-24": "Ex Section 338"
+              "tracker_actual_2026-11-01-19": "Current law",
+              "tracker_no_s338_2026-11-01-19": "Ex Section 338"
             },
             "series_colors": {
-              "tracker_actual_2026-08-24": "blue",
-              "tracker_no_s338_2026-08-24": "amber"
+              "tracker_actual_2026-11-01-19": "blue",
+              "tracker_no_s338_2026-11-01-19": "amber"
             }
           },
           "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2025 dollars,\ncompared across scenarios. Use the sidebar to switch between pre- and post-substitution, and the\n<strong>View</strong> toggle for levels or change vs. default.</p>",
@@ -1314,16 +1494,16 @@
               "value": "value"
             },
             "series_order": [
-              "tracker_actual_2026-08-24",
-              "tracker_no_s338_2026-08-24"
+              "tracker_actual_2026-11-01-19",
+              "tracker_no_s338_2026-11-01-19"
             ],
             "series_labels": {
-              "tracker_actual_2026-08-24": "Current law",
-              "tracker_no_s338_2026-08-24": "Ex Section 338"
+              "tracker_actual_2026-11-01-19": "Current law",
+              "tracker_no_s338_2026-11-01-19": "Ex Section 338"
             },
             "series_colors": {
-              "tracker_actual_2026-08-24": "blue",
-              "tracker_no_s338_2026-08-24": "amber"
+              "tracker_actual_2026-11-01-19": "blue",
+              "tracker_no_s338_2026-11-01-19": "amber"
             }
           },
           "body_html": "<p>The projected path of real GDP relative to baseline, compared across scenarios. Use the <strong>View</strong>\ntoggle for levels or change vs. default.</p>",
@@ -1383,16 +1563,16 @@
               "Advanced Manufacturing"
             ],
             "series_order": [
-              "tracker_actual_2026-08-24",
-              "tracker_no_s338_2026-08-24"
+              "tracker_actual_2026-11-01-19",
+              "tracker_no_s338_2026-11-01-19"
             ],
             "series_labels": {
-              "tracker_actual_2026-08-24": "Current law",
-              "tracker_no_s338_2026-08-24": "Ex Section 338"
+              "tracker_actual_2026-11-01-19": "Current law",
+              "tracker_no_s338_2026-11-01-19": "Ex Section 338"
             },
             "series_colors": {
-              "tracker_actual_2026-08-24": "blue",
-              "tracker_no_s338_2026-08-24": "amber"
+              "tracker_actual_2026-11-01-19": "blue",
+              "tracker_no_s338_2026-11-01-19": "amber"
             }
           },
           "body_html": "<p>The long-run change in real GDP by sector or trading partner, compared across scenarios. In the sector\nview, manufacturing sub-sectors appear in a separate \"Manufacturing detail\" pane. The total is the\nleft-most bar.</p>",
@@ -1445,12 +1625,12 @@
                   }
                 },
                 "row_labels": {
-                  "tracker_actual_2026-08-24": "Current law",
-                  "tracker_no_s338_2026-08-24": "Ex Section 338"
+                  "tracker_actual_2026-11-01-19": "Current law",
+                  "tracker_no_s338_2026-11-01-19": "Ex Section 338"
                 },
                 "group_labels": {
-                  "tracker_actual_2026-08-24": "Current law",
-                  "tracker_no_s338_2026-08-24": "Ex Section 338"
+                  "tracker_actual_2026-11-01-19": "Current law",
+                  "tracker_no_s338_2026-11-01-19": "Ex Section 338"
                 }
               }
             },
@@ -1483,16 +1663,16 @@
                   "2035"
                 ],
                 "series_order": [
-                  "tracker_actual_2026-08-24",
-                  "tracker_no_s338_2026-08-24"
+                  "tracker_actual_2026-11-01-19",
+                  "tracker_no_s338_2026-11-01-19"
                 ],
                 "series_labels": {
-                  "tracker_actual_2026-08-24": "Current law",
-                  "tracker_no_s338_2026-08-24": "Ex Section 338"
+                  "tracker_actual_2026-11-01-19": "Current law",
+                  "tracker_no_s338_2026-11-01-19": "Ex Section 338"
                 },
                 "series_colors": {
-                  "tracker_actual_2026-08-24": "blue",
-                  "tracker_no_s338_2026-08-24": "amber"
+                  "tracker_actual_2026-11-01-19": "blue",
+                  "tracker_no_s338_2026-11-01-19": "amber"
                 }
               },
               "total": {
@@ -1560,6 +1740,1082 @@
     }
   ],
   "vintages": [
+    {
+      "id": "2026082411",
+      "date": "2026-08-24",
+      "label": "August 24, 2026",
+      "published_at": "2026-08-24T13:13:25-0400",
+      "version": null,
+      "changes_html": "<h2>Changes for the August 24, 2026 Update</h2>\n<p class=\"current-update-date\">August 24, 2026</p>\n<p>This update reflects a change in the effective date of the Section 338 tariffs on Canadian products,\nwhich took effect on August 22 rather than August 19 as previously scheduled. No other official\ntariff policy changes have occurred since our last post on August 11.</p>\n<p>The Alternative Scenarios tab now shows a single alternative: current law excluding the Section 338\nactions, which isolates the effect of those tariffs.</p>",
+      "scenarios": [
+        {
+          "id": "default-scenario",
+          "label": "Default Scenario",
+          "tab": {
+            "id": "default-scenario",
+            "label": "Projected Effects:\nDefault Scenario",
+            "description": "Projected effects of our default tariff policy scenario.",
+            "sections": [
+              {
+                "id": "overview",
+                "label": ""
+              },
+              {
+                "id": "rates",
+                "label": "Tariff Rates"
+              },
+              {
+                "id": "prices-households",
+                "label": "Prices & Households"
+              },
+              {
+                "id": "economy",
+                "label": "Macroeconomy"
+              },
+              {
+                "id": "fiscal",
+                "label": "Fiscal"
+              }
+            ],
+            "figures": [
+              {
+                "id": "summary-statistics",
+                "short_label": "Summary of Results",
+                "figureType": "table",
+                "data": "previous-vintages/2026082411/default-scenario/summary-statistics/data.csv",
+                "spec": {
+                  "title": "Summary of Results",
+                  "subtitle": "Projected effects of our default tariff policy scenario.",
+                  "data": "data.csv",
+                  "stub": [
+                    "category",
+                    "series"
+                  ],
+                  "header": [],
+                  "value": "value",
+                  "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
+                  "notes": "Pre-substitution numbers reflect tariff policy applied to 2024 trade weights and account for noncompliance only; post-substitution numbers account for both noncompliance and tariff-induced shifts in trade weights.",
+                  "group_labels": {
+                    "Tariff rate": "Tariff rates, end of 2026",
+                    "Consumer price increase": "Consumer price increase, medium run",
+                    "Household cost": "Average household cost, medium run"
+                  },
+                  "format": {
+                    "groups": {
+                      "Revenue (10-year)": {
+                        "type": "currency",
+                        "decimals": 0,
+                        "prefix": "$",
+                        "suffix": "B",
+                        "thousands": true
+                      },
+                      "Consumer price increase": {
+                        "type": "number",
+                        "decimals": 2,
+                        "suffix": "%"
+                      },
+                      "Tariff rate": {
+                        "type": "number",
+                        "decimals": 1,
+                        "suffix": "%"
+                      },
+                      "Household cost": {
+                        "type": "currency",
+                        "decimals": 0,
+                        "prefix": "$",
+                        "thousands": true
+                      },
+                      "Real GDP": {
+                        "type": "number",
+                        "decimals": 2,
+                        "suffix": " pp"
+                      }
+                    },
+                    "rows": {
+                      "Long-run": {
+                        "type": "number",
+                        "decimals": 1,
+                        "suffix": "%"
+                      }
+                    }
+                  }
+                },
+                "body_html": "<h2>Default Scenario</h2>\n<p>This section presents projected effects under our default tariff policy scenario. This scenario can\nbe thought of as a \"current law\" concept, where official policy, including changes officially\nscheduled to come into effect later this year, is taken as given. In addition to the tariffs\ncurrently in place as of late August 2026 (including the Section 338 tariffs on Canadian products that\ntook effect on August 22), this scenario includes scheduled tariff increases in October\n(pharmaceutical tariffs under Section 232) and December (polysilicon tariffs under Section 232.)</p>\n<p>This is not a forecast of where tariff policy will end up, but rather a useful scorekeeping\nbenchmark. Alternative policy scenarios are explored in the next tab.</p>\n<p>Estimated impacts are measured against a January 2025 tariff-policy baseline. That is, these\nnumbers answer the question: going forward, what will the impacts of tariffs be <em>relative to a\nworld where the Trump administration never changed tariff policy</em>?</p>",
+                "section": "overview",
+                "lead": true,
+                "figureNum": 1
+              },
+              {
+                "id": "etr-by-country",
+                "short_label": "Effective Rate by Trading Partner",
+                "figureType": "table",
+                "data": "previous-vintages/2026082411/default-scenario/etr-by-country/data.csv",
+                "spec": {
+                  "title": "Average Effective Tariff Rate by Trading Partner",
+                  "subtitle": "Change from baseline at the end of 2026, pre- and post-substitution. Percent.",
+                  "data": "data.csv",
+                  "stub": [
+                    "category"
+                  ],
+                  "header": [
+                    "substitution"
+                  ],
+                  "value": "value",
+                  "column_order": [
+                    "presub",
+                    "postsub"
+                  ],
+                  "header_labels": {
+                    "presub": "Pre-substitution",
+                    "postsub": "Post-substitution"
+                  },
+                  "format": {
+                    "default": {
+                      "type": "number",
+                      "decimals": 1,
+                      "suffix": "%"
+                    }
+                  },
+                  "emphasis_rows": [
+                    "Total"
+                  ],
+                  "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis."
+                },
+                "body_html": "<p>The average effective U.S. tariff rate by trading partner, before and after trade substitution.</p>",
+                "section": "rates",
+                "figureNum": 2
+              },
+              {
+                "id": "consumer-prices",
+                "short_label": "Consumer Prices",
+                "figureType": "chart",
+                "data": "previous-vintages/2026082411/default-scenario/consumer-prices/data.csv",
+                "spec": {
+                  "chartType": "bar",
+                  "data": "data.csv",
+                  "title": "Consumer Price Effects by Spending Category",
+                  "subtitle": "Percent change in consumer prices, pre- and post-substitution.",
+                  "value_suffix": "%",
+                  "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
+                  "orientation": "horizontal",
+                  "xAxisType": "categorical",
+                  "yAxisPolicy": {
+                    "max": 4
+                  },
+                  "columns": {
+                    "x": "category",
+                    "facet": "substitution",
+                    "series": "substitution",
+                    "value": "value"
+                  },
+                  "series_labels": {
+                    "presub": "Pre-substitution",
+                    "postsub": "Post-substitution"
+                  },
+                  "series_colors": {
+                    "presub": "blue",
+                    "postsub": "amber"
+                  },
+                  "x_order": [
+                    "Total",
+                    "Motor vehicles and parts",
+                    "Furnishings and durable household equipment",
+                    "Recreational goods and vehicles",
+                    "Other durable goods",
+                    "Other nondurable goods",
+                    "Food and beverages purchased for off-premises consumption",
+                    "Gasoline and other energy goods",
+                    "Clothing and footwear",
+                    "Net foreign travel",
+                    "Transportation services",
+                    "Communication",
+                    "Household utilities",
+                    "Recreation services",
+                    "Other services",
+                    "Final consumption expenditures of NPISH",
+                    "Food services and accommodations",
+                    "Health care",
+                    "Education",
+                    "Financial services and insurance",
+                    "Housing"
+                  ],
+                  "small_multiples": {
+                    "mode": "shared",
+                    "columns": 2,
+                    "pane_order": [
+                      "presub",
+                      "postsub"
+                    ],
+                    "pane_titles": {
+                      "presub": "Pre-substitution",
+                      "postsub": "Post-substitution"
+                    }
+                  }
+                },
+                "body_html": "<p>The consumer-price effect by PCE spending category, grouped as durable goods, nondurable goods,\nand services, with the total at the top.</p>",
+                "section": "prices-households",
+                "figureNum": 3
+              },
+              {
+                "id": "distribution",
+                "short_label": "Household Costs by Income",
+                "figureType": "chart",
+                "data": "previous-vintages/2026082411/default-scenario/distribution/data.csv",
+                "spec": {
+                  "chartType": "bar",
+                  "data": "data.csv",
+                  "title": "Household Cost of Tariffs by Income Decile",
+                  "subtitle": "Tariff burden by household income decile.",
+                  "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
+                  "orientation": "vertical",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "category",
+                    "facet": "basis",
+                    "series": "basis",
+                    "value": "value"
+                  },
+                  "series_colors": {
+                    "% of after-tax income": "blue",
+                    "2025 dollars": "amber"
+                  },
+                  "x_order": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                  ],
+                  "x_axis_title": "Income decile",
+                  "small_multiples": {
+                    "mode": "per-pane",
+                    "columns": 2,
+                    "pane_order": [
+                      "% of after-tax income",
+                      "2025 dollars"
+                    ]
+                  }
+                },
+                "body_html": "<p>The tariff burden by household income decile, as a share of after-tax-and-transfer income and in\n2025 dollars per household. Values are negative by convention. Use the sidebar to switch between\npre- and post-substitution.</p>",
+                "section": "prices-households",
+                "selectors": [
+                  {
+                    "id": "substitution",
+                    "label": "Substitution",
+                    "kind": "single",
+                    "default": "postsub",
+                    "options": [
+                      {
+                        "id": "presub",
+                        "label": "Pre-substitution"
+                      },
+                      {
+                        "id": "postsub",
+                        "label": "Post-substitution"
+                      }
+                    ]
+                  }
+                ],
+                "total": {
+                  "column": "category",
+                  "value": "Total",
+                  "annotation": {
+                    "label": "All households ({value})",
+                    "style": "dashed",
+                    "color": "#6b7280",
+                    "labelSide": "bottom"
+                  }
+                },
+                "figureNum": 4
+              },
+              {
+                "id": "real-gdp",
+                "short_label": "GDP over Time",
+                "figureType": "chart",
+                "data": "previous-vintages/2026082411/default-scenario/real-gdp/data.csv",
+                "spec": {
+                  "chartType": "line",
+                  "data": "data.csv",
+                  "title": "Effect on Real GDP over Time",
+                  "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
+                  "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
+                  "xAxisType": "temporal",
+                  "yAxisPolicy": {
+                    "includeZero": true,
+                    "tickCount": 6
+                  },
+                  "series_labels": {
+                    "gdp_level": "Real GDP"
+                  }
+                },
+                "body_html": "<p>The projected path of real GDP relative to a no-new-tariffs baseline, by quarter.</p>",
+                "section": "economy",
+                "figureNum": 5
+              },
+              {
+                "id": "gdp-by-category",
+                "short_label": "Long-Run GDP Breakdown",
+                "figureType": "chart",
+                "data": "previous-vintages/2026082411/default-scenario/gdp-by-category/data.csv",
+                "spec": {
+                  "chartType": "bar",
+                  "data": "data.csv",
+                  "title": "Long-Run Change in Real GDP by {dimension}",
+                  "title_selectors": {
+                    "dimension": {
+                      "default": "sector",
+                      "options": [
+                        {
+                          "id": "sector",
+                          "label": "Sector",
+                          "color": "blue"
+                        },
+                        {
+                          "id": "country",
+                          "label": "Trading Partner",
+                          "color": "amber"
+                        }
+                      ]
+                    }
+                  },
+                  "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
+                  "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
+                  "orientation": "vertical",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "category",
+                    "facet": "group",
+                    "value": "value"
+                  },
+                  "category_colors": {
+                    "Total": "#6b7280"
+                  },
+                  "small_multiples": {
+                    "mode": "shared",
+                    "columns": 2,
+                    "pane_widths": "equal-bar"
+                  },
+                  "x_order": [
+                    "Total",
+                    "Agriculture",
+                    "Mining & Extraction",
+                    "Total Manufacturing",
+                    "Utilities",
+                    "Construction",
+                    "Services",
+                    "Durable Manufacturing",
+                    "Nondurable Manufacturing",
+                    "Advanced Manufacturing"
+                  ]
+                },
+                "body_html": "<p>The long-run change in real GDP, by sector or by trading partner. In the sector view, manufacturing\nsub-sectors appear in a separate \"Manufacturing detail\" pane. The total is the left-most bar.</p>",
+                "section": "economy",
+                "figureNum": 6
+              },
+              {
+                "id": "revenue-by-year",
+                "short_label": "Revenue by Year",
+                "figureType": "composite",
+                "parts": [
+                  {
+                    "figureType": "table",
+                    "data": "previous-vintages/2026082411/default-scenario/revenue-by-year/data.csv",
+                    "spec": {
+                      "data": "data.csv",
+                      "title": "Net Revenue Impact by Fiscal Year",
+                      "subtitle": "Billions of dollars.",
+                      "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
+                      "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
+                      "stub": [
+                        "series"
+                      ],
+                      "header": [
+                        "category"
+                      ],
+                      "value": "value",
+                      "row_labels": {
+                        "conventional": "Conventional",
+                        "dynamic": "Dynamic"
+                      },
+                      "column_order": [
+                        "2026",
+                        "2027",
+                        "2028",
+                        "2029",
+                        "2030",
+                        "2031",
+                        "2032",
+                        "2033",
+                        "2034",
+                        "2035",
+                        "Total"
+                      ],
+                      "column_labels": {
+                        "Total": "10-yr total"
+                      },
+                      "format": {
+                        "default": {
+                          "type": "number",
+                          "decimals": 1,
+                          "thousands": true,
+                          "prefix": "$"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "figureType": "chart",
+                    "data": "previous-vintages/2026082411/default-scenario/revenue-by-year/data.csv",
+                    "spec": {
+                      "chartType": "bar",
+                      "data": "data.csv",
+                      "title": "Net Revenue Impact by Fiscal Year",
+                      "subtitle": "Conventional and dynamic estimates. Billions of dollars.",
+                      "note": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
+                      "orientation": "vertical",
+                      "xAxisType": "categorical",
+                      "columns": {
+                        "x": "category",
+                        "series": "series",
+                        "value": "value"
+                      },
+                      "x_order": [
+                        "2026",
+                        "2027",
+                        "2028",
+                        "2029",
+                        "2030",
+                        "2031",
+                        "2032",
+                        "2033",
+                        "2034",
+                        "2035"
+                      ],
+                      "series_order": [
+                        "conventional",
+                        "dynamic"
+                      ],
+                      "series_labels": {
+                        "conventional": "Conventional",
+                        "dynamic": "Dynamic"
+                      }
+                    },
+                    "total": {
+                      "column": "category",
+                      "value": "Total",
+                      "hide": true
+                    }
+                  }
+                ],
+                "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, on a conventional and a dynamic basis. The\ntable gives the annual figures and the 10-year total. The chart shows the year-by-year path.</p>",
+                "section": "fiscal",
+                "figureNum": 7
+              }
+            ]
+          }
+        },
+        {
+          "id": "alternative-scenarios",
+          "label": "Alternative Scenarios",
+          "tab": {
+            "id": "alternative-scenarios",
+            "label": "Projected Effects:\nAlternative Scenarios",
+            "description": "The same projected effects across all modeled policy scenarios. Use the toggle to view each scenario's own effects (levels) or its effect relative to our default scenario (change vs. default).",
+            "sections": [
+              {
+                "id": "overview",
+                "label": ""
+              },
+              {
+                "id": "rates",
+                "label": "Tariff Rates"
+              },
+              {
+                "id": "prices-households",
+                "label": "Prices & Households"
+              },
+              {
+                "id": "economy",
+                "label": "Macroeconomy"
+              },
+              {
+                "id": "fiscal",
+                "label": "Fiscal"
+              }
+            ],
+            "toggles": [
+              {
+                "id": "measure",
+                "label": "View",
+                "default": "level",
+                "options": [
+                  {
+                    "id": "level",
+                    "label": "Levels"
+                  },
+                  {
+                    "id": "delta_vs_default",
+                    "label": "Change vs. default"
+                  }
+                ],
+                "applies_to_figures": [
+                  "consumer-prices",
+                  "distribution",
+                  "real-gdp",
+                  "gdp-by-category",
+                  "revenue-by-year"
+                ]
+              }
+            ],
+            "figures": [
+              {
+                "id": "summary-statistics",
+                "short_label": "Summary of Results",
+                "figureType": "table",
+                "data": "previous-vintages/2026082411/alternative-scenarios/summary-statistics/data.csv",
+                "spec": {
+                  "title": "Summary of Results by Scenario",
+                  "subtitle": "Projected effects across policy scenarios.",
+                  "data": "data.csv",
+                  "stub": [
+                    "category",
+                    "series"
+                  ],
+                  "header": [
+                    "measure",
+                    "scenario"
+                  ],
+                  "value": "value",
+                  "header_labels": {
+                    "tracker_actual_2026-08-24": "Current law",
+                    "tracker_no_s338_2026-08-24": "Ex Section 338",
+                    "level": "Levels",
+                    "delta_vs_default": "Change vs. default"
+                  },
+                  "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
+                  "notes": "Pre-substitution numbers reflect tariff policy applied to 2024 trade weights and account for noncompliance only; post-substitution numbers account for both noncompliance and tariff-induced shifts in trade weights.",
+                  "group_labels": {
+                    "Tariff rate": "Tariff rates, end of 2026",
+                    "Consumer price increase": "Consumer price increase, medium run",
+                    "Household cost": "Average household cost, medium run"
+                  },
+                  "format": {
+                    "groups": {
+                      "Tariff rate": {
+                        "type": "number",
+                        "decimals": 1,
+                        "suffix": "%"
+                      },
+                      "Consumer price increase": {
+                        "type": "number",
+                        "decimals": 1,
+                        "suffix": "%"
+                      },
+                      "Household cost": {
+                        "type": "currency",
+                        "decimals": 0,
+                        "prefix": "$",
+                        "thousands": true
+                      },
+                      "Real GDP": {
+                        "type": "number",
+                        "decimals": 2,
+                        "suffix": " pp"
+                      },
+                      "Revenue (10-year)": {
+                        "type": "currency",
+                        "decimals": 1,
+                        "prefix": "$",
+                        "suffix": "B",
+                        "thousands": true
+                      }
+                    },
+                    "rows": {
+                      "Long-run": {
+                        "type": "number",
+                        "decimals": 1,
+                        "suffix": "%"
+                      }
+                    }
+                  },
+                  "column_order": [
+                    "tracker_actual_2026-08-24",
+                    "tracker_no_s338_2026-08-24"
+                  ]
+                },
+                "body_html": "<h2>Alternative Scenarios</h2>\n<p>These figures show the same projected effects as the Default Scenario tab, but across <strong>all</strong>\nmodeled policy scenarios. Use the <strong>View</strong> toggle to switch between each scenario's own effects\n(levels) and its effect relative to our default scenario (change vs. default).</p>\n<p>Alternatives are a variation on current law. We show one alternative scenario:</p>\n<ul>\n<li><strong>Excluding the Section 338 tariffs.</strong> This scenario is identical to current law except that it\n  omits the Section 338 tariff actions on Canadian products, which took effect on August 22.\n  Comparing the default against it isolates the effect of those actions.</li>\n</ul>",
+                "section": "overview",
+                "lead": true,
+                "figureNum": 1
+              },
+              {
+                "id": "etr-by-country",
+                "short_label": "Effective Rate by Trading Partner",
+                "figureType": "table",
+                "data": "previous-vintages/2026082411/alternative-scenarios/etr-by-country/data.csv",
+                "spec": {
+                  "title": "Average Effective Tariff Rate by Trading Partner",
+                  "subtitle": "Change from baseline at the end of 2026, by scenario. Percent.",
+                  "data": "data.csv",
+                  "collapsible": {
+                    "default": "collapsed",
+                    "expanded": [
+                      "China",
+                      "Total"
+                    ]
+                  },
+                  "stub": [
+                    "category",
+                    "scenario"
+                  ],
+                  "header": [
+                    "measure",
+                    "substitution"
+                  ],
+                  "value": "value",
+                  "column_group_order": [
+                    "level",
+                    "delta_vs_default"
+                  ],
+                  "column_order": [
+                    "presub",
+                    "postsub"
+                  ],
+                  "header_labels": {
+                    "level": "Levels",
+                    "delta_vs_default": "Change vs. default",
+                    "presub": "Pre-substitution",
+                    "postsub": "Post-substitution"
+                  },
+                  "format": {
+                    "default": {
+                      "type": "number",
+                      "decimals": 1,
+                      "suffix": "%"
+                    }
+                  },
+                  "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
+                  "row_labels": {
+                    "tracker_actual_2026-08-24": "Current law",
+                    "tracker_no_s338_2026-08-24": "Ex Section 338"
+                  },
+                  "group_labels": {
+                    "tracker_actual_2026-08-24": "Current law",
+                    "tracker_no_s338_2026-08-24": "Ex Section 338"
+                  }
+                },
+                "body_html": "<p>The average effective U.S. tariff rate by trading partner and scenario, as both levels and change\nvs. our default scenario. Click a partner to expand or collapse its scenarios.</p>",
+                "section": "rates",
+                "figureNum": 2
+              },
+              {
+                "id": "consumer-prices",
+                "short_label": "Consumer Prices",
+                "figureType": "chart",
+                "data": "previous-vintages/2026082411/alternative-scenarios/consumer-prices/data.csv",
+                "spec": {
+                  "chartType": "bar",
+                  "data": "data.csv",
+                  "title": "Consumer Price Effects by Spending Category",
+                  "subtitle": "Percent change in consumer prices, by scenario.",
+                  "value_suffix": "%",
+                  "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
+                  "orientation": "horizontal",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "category",
+                    "facet": "substitution",
+                    "series": "scenario",
+                    "value": "value"
+                  },
+                  "x_order": [
+                    "Motor vehicles and parts",
+                    "Furnishings and durable household equipment",
+                    "Recreational goods and vehicles",
+                    "Other durable goods",
+                    "Other nondurable goods",
+                    "Food and beverages purchased for off-premises consumption",
+                    "Gasoline and other energy goods",
+                    "Clothing and footwear",
+                    "Net foreign travel",
+                    "Transportation services",
+                    "Communication",
+                    "Household utilities",
+                    "Recreation services",
+                    "Other services",
+                    "Final consumption expenditures of NPISH",
+                    "Food services and accommodations",
+                    "Health care",
+                    "Education",
+                    "Financial services and insurance",
+                    "Housing"
+                  ],
+                  "small_multiples": {
+                    "mode": "shared",
+                    "columns": 2,
+                    "pane_order": [
+                      "presub",
+                      "postsub"
+                    ],
+                    "pane_titles": {
+                      "presub": "Pre-substitution",
+                      "postsub": "Post-substitution"
+                    }
+                  },
+                  "series_order": [
+                    "tracker_actual_2026-08-24",
+                    "tracker_no_s338_2026-08-24"
+                  ],
+                  "series_labels": {
+                    "tracker_actual_2026-08-24": "Current law",
+                    "tracker_no_s338_2026-08-24": "Ex Section 338"
+                  },
+                  "series_colors": {
+                    "tracker_actual_2026-08-24": "blue",
+                    "tracker_no_s338_2026-08-24": "amber"
+                  }
+                },
+                "body_html": "<p>Consumer-price effects by PCE spending category, split into pre- and post-substitution panes,\ncompared across scenarios. Use the <strong>View</strong> toggle for levels or change vs. default.</p>",
+                "section": "prices-households",
+                "figureNum": 3
+              },
+              {
+                "id": "distribution",
+                "short_label": "Household Costs by Income",
+                "figureType": "chart",
+                "data": "previous-vintages/2026082411/alternative-scenarios/distribution/data.csv",
+                "spec": {
+                  "chartType": "bar",
+                  "data": "data.csv",
+                  "title": "Household Cost of Tariffs by Income Decile",
+                  "subtitle": "Tariff burden by household income decile, by scenario.",
+                  "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
+                  "orientation": "vertical",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "category",
+                    "facet": "basis",
+                    "series": "scenario",
+                    "value": "value"
+                  },
+                  "x_order": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                  ],
+                  "x_axis_title": "Income decile",
+                  "small_multiples": {
+                    "mode": "per-pane",
+                    "columns": 2,
+                    "pane_order": [
+                      "% of after-tax income",
+                      "2025 dollars"
+                    ]
+                  },
+                  "series_order": [
+                    "tracker_actual_2026-08-24",
+                    "tracker_no_s338_2026-08-24"
+                  ],
+                  "series_labels": {
+                    "tracker_actual_2026-08-24": "Current law",
+                    "tracker_no_s338_2026-08-24": "Ex Section 338"
+                  },
+                  "series_colors": {
+                    "tracker_actual_2026-08-24": "blue",
+                    "tracker_no_s338_2026-08-24": "amber"
+                  }
+                },
+                "body_html": "<p>The tariff burden by household income decile, as a share of after-tax income and in 2025 dollars,\ncompared across scenarios. Use the sidebar to switch between pre- and post-substitution, and the\n<strong>View</strong> toggle for levels or change vs. default.</p>",
+                "section": "prices-households",
+                "selectors": [
+                  {
+                    "id": "substitution",
+                    "label": "Substitution",
+                    "kind": "single",
+                    "default": "postsub",
+                    "options": [
+                      {
+                        "id": "presub",
+                        "label": "Pre-substitution"
+                      },
+                      {
+                        "id": "postsub",
+                        "label": "Post-substitution"
+                      }
+                    ]
+                  }
+                ],
+                "total": {
+                  "column": "category",
+                  "value": "Total",
+                  "annotation": {
+                    "label": "All households ({value})",
+                    "value_format": {
+                      "decimals": 2
+                    },
+                    "style": "dashed",
+                    "labelSide": "bottom",
+                    "series_overrides": {
+                      "Ex Section 338": {
+                        "labelSide": "top"
+                      }
+                    }
+                  }
+                },
+                "figureNum": 4
+              },
+              {
+                "id": "real-gdp",
+                "short_label": "GDP over Time",
+                "figureType": "chart",
+                "data": "previous-vintages/2026082411/alternative-scenarios/real-gdp/data.csv",
+                "spec": {
+                  "chartType": "line",
+                  "data": "data.csv",
+                  "title": "Effect on Real GDP over Time",
+                  "subtitle": "Percent change in the level of real GDP versus baseline.",
+                  "value_suffix": "%",
+                  "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
+                  "xAxisType": "temporal",
+                  "yAxisPolicy": {
+                    "includeZero": true,
+                    "tickCount": 6
+                  },
+                  "columns": {
+                    "x": "time",
+                    "series": "scenario",
+                    "value": "value"
+                  },
+                  "series_order": [
+                    "tracker_actual_2026-08-24",
+                    "tracker_no_s338_2026-08-24"
+                  ],
+                  "series_labels": {
+                    "tracker_actual_2026-08-24": "Current law",
+                    "tracker_no_s338_2026-08-24": "Ex Section 338"
+                  },
+                  "series_colors": {
+                    "tracker_actual_2026-08-24": "blue",
+                    "tracker_no_s338_2026-08-24": "amber"
+                  }
+                },
+                "body_html": "<p>The projected path of real GDP relative to baseline, compared across scenarios. Use the <strong>View</strong>\ntoggle for levels or change vs. default.</p>",
+                "section": "economy",
+                "figureNum": 5
+              },
+              {
+                "id": "gdp-by-category",
+                "short_label": "Long-Run GDP Breakdown",
+                "figureType": "chart",
+                "data": "previous-vintages/2026082411/alternative-scenarios/gdp-by-category/data.csv",
+                "spec": {
+                  "chartType": "bar",
+                  "data": "data.csv",
+                  "title": "Long-Run Change in Real GDP by {dimension}",
+                  "title_selectors": {
+                    "dimension": {
+                      "default": "sector",
+                      "options": [
+                        {
+                          "id": "sector",
+                          "label": "Sector"
+                        },
+                        {
+                          "id": "country",
+                          "label": "Trading Partner"
+                        }
+                      ]
+                    }
+                  },
+                  "subtitle": "Percent change in the level of real GDP versus baseline, by scenario.",
+                  "value_suffix": "%",
+                  "source": "GTAP v7 [Corong et al. (2017)], The Budget Lab analysis.",
+                  "orientation": "vertical",
+                  "xAxisType": "categorical",
+                  "columns": {
+                    "x": "category",
+                    "facet": "group",
+                    "series": "scenario",
+                    "value": "value"
+                  },
+                  "small_multiples": {
+                    "mode": "shared",
+                    "columns": 2,
+                    "pane_widths": "equal-bar"
+                  },
+                  "x_order": [
+                    "Total",
+                    "Agriculture",
+                    "Mining & Extraction",
+                    "Total Manufacturing",
+                    "Utilities",
+                    "Construction",
+                    "Services",
+                    "Durable Manufacturing",
+                    "Nondurable Manufacturing",
+                    "Advanced Manufacturing"
+                  ],
+                  "series_order": [
+                    "tracker_actual_2026-08-24",
+                    "tracker_no_s338_2026-08-24"
+                  ],
+                  "series_labels": {
+                    "tracker_actual_2026-08-24": "Current law",
+                    "tracker_no_s338_2026-08-24": "Ex Section 338"
+                  },
+                  "series_colors": {
+                    "tracker_actual_2026-08-24": "blue",
+                    "tracker_no_s338_2026-08-24": "amber"
+                  }
+                },
+                "body_html": "<p>The long-run change in real GDP by sector or trading partner, compared across scenarios. In the sector\nview, manufacturing sub-sectors appear in a separate \"Manufacturing detail\" pane. The total is the\nleft-most bar.</p>",
+                "section": "economy",
+                "figureNum": 6
+              },
+              {
+                "id": "revenue-by-year",
+                "short_label": "Revenue by Year",
+                "figureType": "composite",
+                "parts": [
+                  {
+                    "figureType": "table",
+                    "data": "previous-vintages/2026082411/alternative-scenarios/revenue-by-year/data.csv",
+                    "spec": {
+                      "data": "data.csv",
+                      "title": "Net Revenue Impact by Fiscal Year",
+                      "subtitle": "Billions of dollars, by scenario.",
+                      "source": "GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.",
+                      "notes": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
+                      "stub": [
+                        "scenario"
+                      ],
+                      "header": [
+                        "category"
+                      ],
+                      "value": "value",
+                      "column_order": [
+                        "2026",
+                        "2027",
+                        "2028",
+                        "2029",
+                        "2030",
+                        "2031",
+                        "2032",
+                        "2033",
+                        "2034",
+                        "2035",
+                        "Total"
+                      ],
+                      "column_labels": {
+                        "Total": "10-yr total"
+                      },
+                      "format": {
+                        "default": {
+                          "type": "number",
+                          "decimals": 1,
+                          "thousands": true,
+                          "prefix": "$"
+                        }
+                      },
+                      "row_labels": {
+                        "tracker_actual_2026-08-24": "Current law",
+                        "tracker_no_s338_2026-08-24": "Ex Section 338"
+                      },
+                      "group_labels": {
+                        "tracker_actual_2026-08-24": "Current law",
+                        "tracker_no_s338_2026-08-24": "Ex Section 338"
+                      }
+                    }
+                  },
+                  {
+                    "figureType": "chart",
+                    "data": "previous-vintages/2026082411/alternative-scenarios/revenue-by-year/data.csv",
+                    "spec": {
+                      "chartType": "bar",
+                      "data": "data.csv",
+                      "title": "Net Revenue Impact by Fiscal Year",
+                      "subtitle": "Billions of dollars, by scenario.",
+                      "note": "Estimates are net of the offsetting reduction in income and payroll tax revenue and IEEPA tariff refunds.",
+                      "orientation": "vertical",
+                      "xAxisType": "categorical",
+                      "columns": {
+                        "x": "category",
+                        "series": "scenario",
+                        "value": "value"
+                      },
+                      "x_order": [
+                        "2026",
+                        "2027",
+                        "2028",
+                        "2029",
+                        "2030",
+                        "2031",
+                        "2032",
+                        "2033",
+                        "2034",
+                        "2035"
+                      ],
+                      "series_order": [
+                        "tracker_actual_2026-08-24",
+                        "tracker_no_s338_2026-08-24"
+                      ],
+                      "series_labels": {
+                        "tracker_actual_2026-08-24": "Current law",
+                        "tracker_no_s338_2026-08-24": "Ex Section 338"
+                      },
+                      "series_colors": {
+                        "tracker_actual_2026-08-24": "blue",
+                        "tracker_no_s338_2026-08-24": "amber"
+                      }
+                    },
+                    "total": {
+                      "column": "category",
+                      "value": "Total",
+                      "hide": true
+                    }
+                  }
+                ],
+                "body_html": "<p>The net federal revenue impact of the tariffs by fiscal year, compared across scenarios. The table gives the\nannual figures and the 10-year total. The chart shows the year-by-year path. Use the sidebar to\nswitch between conventional and dynamic, and the <strong>View</strong> toggle for levels or change vs. default.</p>",
+                "section": "fiscal",
+                "selectors": [
+                  {
+                    "id": "series",
+                    "label": "Estimate",
+                    "kind": "single",
+                    "default": "conventional",
+                    "options": [
+                      {
+                        "id": "conventional",
+                        "label": "Conventional"
+                      },
+                      {
+                        "id": "dynamic",
+                        "label": "Dynamic"
+                      }
+                    ]
+                  }
+                ],
+                "figureNum": 7
+              }
+            ]
+          }
+        }
+      ]
+    },
     {
       "id": "2026081111",
       "date": "2026-08-11",
