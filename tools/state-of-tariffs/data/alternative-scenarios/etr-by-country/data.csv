@@ -1,55 +1,127 @@
 category,value,country_code,substitution,scenario,measure
-China,27.2442160550634,chn,presub,tracker_actual_2026-11-01-19,level
-China,24.695300431508315,chn,postsub,tracker_actual_2026-11-01-19,level
-Canada,8.390502997298622,ca,presub,tracker_actual_2026-11-01-19,level
-Canada,4.884133771563888,ca,postsub,tracker_actual_2026-11-01-19,level
-Mexico,6.706900709330167,mx,presub,tracker_actual_2026-11-01-19,level
-Mexico,4.576823496737872,mx,postsub,tracker_actual_2026-11-01-19,level
-UK,7.068920856080427,uk,presub,tracker_actual_2026-11-01-19,level
-UK,6.2068737817815816,uk,postsub,tracker_actual_2026-11-01-19,level
-Japan,13.15500763119878,jp,presub,tracker_actual_2026-11-01-19,level
-Japan,12.741061319653994,jp,postsub,tracker_actual_2026-11-01-19,level
-EU,8.250690257418922,eu,presub,tracker_actual_2026-11-01-19,level
-EU,7.0634174785838075,eu,postsub,tracker_actual_2026-11-01-19,level
-Rest of World,11.450447220618678,row,presub,tracker_actual_2026-11-01-19,level
-Rest of World,9.98491175095406,row,postsub,tracker_actual_2026-11-01-19,level
-Free-trade partners,12.465859329358322,fta,presub,tracker_actual_2026-11-01-19,level
-Free-trade partners,8.750755677419912,fta,postsub,tracker_actual_2026-11-01-19,level
-Total,10.971830295526962,total,presub,tracker_actual_2026-11-01-19,level
-Total,8.994908131037848,total,postsub,tracker_actual_2026-11-01-19,level
-China,27.2442160550634,chn,presub,tracker_no_s338_2026-11-01-19,level
-China,24.716357600078773,chn,postsub,tracker_no_s338_2026-11-01-19,level
-Canada,5.715824766408295,ca,presub,tracker_no_s338_2026-11-01-19,level
-Canada,3.090477690894162,ca,postsub,tracker_no_s338_2026-11-01-19,level
-Mexico,6.706900709330167,mx,presub,tracker_no_s338_2026-11-01-19,level
-Mexico,4.605585477528504,mx,postsub,tracker_no_s338_2026-11-01-19,level
-UK,7.068920856080427,uk,presub,tracker_no_s338_2026-11-01-19,level
-UK,6.200724079992205,uk,postsub,tracker_no_s338_2026-11-01-19,level
-Japan,13.15500763119878,jp,presub,tracker_no_s338_2026-11-01-19,level
-Japan,12.751777066907268,jp,postsub,tracker_no_s338_2026-11-01-19,level
-EU,8.250690257418922,eu,presub,tracker_no_s338_2026-11-01-19,level
-EU,7.057793562985201,eu,postsub,tracker_no_s338_2026-11-01-19,level
-Rest of World,11.450447220618678,row,presub,tracker_no_s338_2026-11-01-19,level
-Rest of World,9.97316905813062,row,postsub,tracker_no_s338_2026-11-01-19,level
-Free-trade partners,12.465859329358322,fta,presub,tracker_no_s338_2026-11-01-19,level
-Free-trade partners,8.76240170514827,fta,postsub,tracker_no_s338_2026-11-01-19,level
-Total,10.75557896790119,total,presub,tracker_no_s338_2026-11-01-19,level
-Total,8.687383026039637,total,postsub,tracker_no_s338_2026-11-01-19,level
-China,0,chn,presub,tracker_no_s338_2026-11-01-19,delta_vs_default
-China,0.021057168570457918,chn,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default
-Canada,-2.6746782308903274,ca,presub,tracker_no_s338_2026-11-01-19,delta_vs_default
-Canada,-1.793656080669726,ca,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default
-Mexico,0,mx,presub,tracker_no_s338_2026-11-01-19,delta_vs_default
-Mexico,0.02876198079063208,mx,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default
-UK,0,uk,presub,tracker_no_s338_2026-11-01-19,delta_vs_default
-UK,-0.0061497017893765715,uk,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default
-Japan,0,jp,presub,tracker_no_s338_2026-11-01-19,delta_vs_default
-Japan,0.010715747253273733,jp,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default
-EU,0,eu,presub,tracker_no_s338_2026-11-01-19,delta_vs_default
-EU,-0.005623915598606644,eu,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default
-Rest of World,0,row,presub,tracker_no_s338_2026-11-01-19,delta_vs_default
-Rest of World,-0.011742692823439427,row,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default
-Free-trade partners,0,fta,presub,tracker_no_s338_2026-11-01-19,delta_vs_default
-Free-trade partners,0.011646027728357211,fta,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default
-Total,-0.2162513276257716,total,presub,tracker_no_s338_2026-11-01-19,delta_vs_default
-Total,-0.30752510499821106,total,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default
+China,27.2442160550634,chn,presub,tracker_actual_2026-11-07-14,level
+China,24.695301509410868,chn,postsub,tracker_actual_2026-11-07-14,level
+Canada,8.390502997298622,ca,presub,tracker_actual_2026-11-07-14,level
+Canada,4.884133305248543,ca,postsub,tracker_actual_2026-11-07-14,level
+Mexico,6.706900709330167,mx,presub,tracker_actual_2026-11-07-14,level
+Mexico,4.576823200483231,mx,postsub,tracker_actual_2026-11-07-14,level
+UK,7.068920856080427,uk,presub,tracker_actual_2026-11-07-14,level
+UK,6.206873703227364,uk,postsub,tracker_actual_2026-11-07-14,level
+Japan,13.15500763119878,jp,presub,tracker_actual_2026-11-07-14,level
+Japan,12.741061234127796,jp,postsub,tracker_actual_2026-11-07-14,level
+EU,8.250690257418922,eu,presub,tracker_actual_2026-11-07-14,level
+EU,7.063416909861065,eu,postsub,tracker_actual_2026-11-07-14,level
+Rest of World,11.450447220618678,row,presub,tracker_actual_2026-11-07-14,level
+Rest of World,9.984911451776115,row,postsub,tracker_actual_2026-11-07-14,level
+Free-trade partners,12.465859329358322,fta,presub,tracker_actual_2026-11-07-14,level
+Free-trade partners,8.7507555027618391,fta,postsub,tracker_actual_2026-11-07-14,level
+Total,10.971830295526962,total,presub,tracker_actual_2026-11-07-14,level
+Total,8.994907889267411,total,postsub,tracker_actual_2026-11-07-14,level
+China,27.2442160550634,chn,presub,tracker_no_s338_2026-11-07-14,level
+China,24.71635807098097,chn,postsub,tracker_no_s338_2026-11-07-14,level
+Canada,5.715824766408295,ca,presub,tracker_no_s338_2026-11-07-14,level
+Canada,3.090477489424979,ca,postsub,tracker_no_s338_2026-11-07-14,level
+Mexico,6.706900709330167,mx,presub,tracker_no_s338_2026-11-07-14,level
+Mexico,4.605585263793344,mx,postsub,tracker_no_s338_2026-11-07-14,level
+UK,7.068920856080427,uk,presub,tracker_no_s338_2026-11-07-14,level
+UK,6.200723654617903,uk,postsub,tracker_no_s338_2026-11-07-14,level
+Japan,13.15500763119878,jp,presub,tracker_no_s338_2026-11-07-14,level
+Japan,12.75177732058714,jp,postsub,tracker_no_s338_2026-11-07-14,level
+EU,8.250690257418922,eu,presub,tracker_no_s338_2026-11-07-14,level
+EU,7.057793517386512,eu,postsub,tracker_no_s338_2026-11-07-14,level
+Rest of World,11.450447220618678,row,presub,tracker_no_s338_2026-11-07-14,level
+Rest of World,9.97316870731136,row,postsub,tracker_no_s338_2026-11-07-14,level
+Free-trade partners,12.465859329358322,fta,presub,tracker_no_s338_2026-11-07-14,level
+Free-trade partners,8.762401851257382,fta,postsub,tracker_no_s338_2026-11-07-14,level
+Total,10.75557896790119,total,presub,tracker_no_s338_2026-11-07-14,level
+Total,8.687382785664134,total,postsub,tracker_no_s338_2026-11-07-14,level
+China,21.5530868752908,chn,presub,tracker_no_s301_2026-11-07-14,level
+China,18.648681217401677,chn,postsub,tracker_no_s301_2026-11-07-14,level
+Canada,8.225888081239578,ca,presub,tracker_no_s301_2026-11-07-14,level
+Canada,4.762450082091663,ca,postsub,tracker_no_s301_2026-11-07-14,level
+Mexico,6.427349231097059,mx,presub,tracker_no_s301_2026-11-07-14,level
+Mexico,4.525403418245818,mx,postsub,tracker_no_s301_2026-11-07-14,level
+UK,4.77914898015782,uk,presub,tracker_no_s301_2026-11-07-14,level
+UK,4.392789615316141,uk,postsub,tracker_no_s301_2026-11-07-14,level
+Japan,10.413467729143928,jp,presub,tracker_no_s301_2026-11-07-14,level
+Japan,9.533484745371767,jp,postsub,tracker_no_s301_2026-11-07-14,level
+EU,5.694094598014493,eu,presub,tracker_no_s301_2026-11-07-14,level
+EU,4.611201701095681,eu,postsub,tracker_no_s301_2026-11-07-14,level
+Rest of World,7.226154986972981,row,presub,tracker_no_s301_2026-11-07-14,level
+Rest of World,6.345607125184573,row,postsub,tracker_no_s301_2026-11-07-14,level
+Free-trade partners,8.979729313335788,fta,presub,tracker_no_s301_2026-11-07-14,level
+Free-trade partners,5.414951097521759,fta,postsub,tracker_no_s301_2026-11-07-14,level
+Total,8.333185771033948,total,presub,tracker_no_s301_2026-11-07-14,level
+Total,6.809097953506694,total,postsub,tracker_no_s301_2026-11-07-14,level
+China,21.358014805898083,chn,presub,tracker_no_s232_2026-11-07-14,level
+China,19.22741897070926,chn,postsub,tracker_no_s232_2026-11-07-14,level
+Canada,3.1306434612597456,ca,presub,tracker_no_s232_2026-11-07-14,level
+Canada,1.8651729111381696,ca,postsub,tracker_no_s232_2026-11-07-14,level
+Mexico,0.9072269495316648,mx,presub,tracker_no_s232_2026-11-07-14,level
+Mexico,0.7672687978424221,mx,postsub,tracker_no_s232_2026-11-07-14,level
+UK,6.124067450532092,uk,presub,tracker_no_s232_2026-11-07-14,level
+UK,5.291143331921812,uk,postsub,tracker_no_s232_2026-11-07-14,level
+Japan,9.386585350406074,jp,presub,tracker_no_s232_2026-11-07-14,level
+Japan,9.272297897191525,jp,postsub,tracker_no_s232_2026-11-07-14,level
+EU,5.528877325966502,eu,presub,tracker_no_s232_2026-11-07-14,level
+EU,5.273425758069897,eu,postsub,tracker_no_s232_2026-11-07-14,level
+Rest of World,7.814557050954912,row,presub,tracker_no_s232_2026-11-07-14,level
+Rest of World,6.873447777618524,row,postsub,tracker_no_s232_2026-11-07-14,level
+Free-trade partners,6.845068403430628,fta,presub,tracker_no_s232_2026-11-07-14,level
+Free-trade partners,5.707560580339103,fta,postsub,tracker_no_s232_2026-11-07-14,level
+Total,7.157791340844248,total,presub,tracker_no_s232_2026-11-07-14,level
+Total,6.092442471863302,total,postsub,tracker_no_s232_2026-11-07-14,level
+China,0,chn,presub,tracker_no_s338_2026-11-07-14,delta_vs_default
+China,0.02105656157010216,chn,postsub,tracker_no_s338_2026-11-07-14,delta_vs_default
+Canada,-2.6746782308903274,ca,presub,tracker_no_s338_2026-11-07-14,delta_vs_default
+Canada,-1.793655815823564,ca,postsub,tracker_no_s338_2026-11-07-14,delta_vs_default
+Mexico,0,mx,presub,tracker_no_s338_2026-11-07-14,delta_vs_default
+Mexico,0.028762063310113106,mx,postsub,tracker_no_s338_2026-11-07-14,delta_vs_default
+UK,0,uk,presub,tracker_no_s338_2026-11-07-14,delta_vs_default
+UK,-0.006150048609461223,uk,postsub,tracker_no_s338_2026-11-07-14,delta_vs_default
+Japan,0,jp,presub,tracker_no_s338_2026-11-07-14,delta_vs_default
+Japan,0.010716086459343188,jp,postsub,tracker_no_s338_2026-11-07-14,delta_vs_default
+EU,0,eu,presub,tracker_no_s338_2026-11-07-14,delta_vs_default
+EU,-0.005623392474553235,eu,postsub,tracker_no_s338_2026-11-07-14,delta_vs_default
+Rest of World,0,row,presub,tracker_no_s338_2026-11-07-14,delta_vs_default
+Rest of World,-0.01174274446475465,row,postsub,tracker_no_s338_2026-11-07-14,delta_vs_default
+Free-trade partners,0,fta,presub,tracker_no_s338_2026-11-07-14,delta_vs_default
+Free-trade partners,0.011646348495542469,fta,postsub,tracker_no_s338_2026-11-07-14,delta_vs_default
+Total,-0.2162513276257716,total,presub,tracker_no_s338_2026-11-07-14,delta_vs_default
+Total,-0.3075251036032771,total,postsub,tracker_no_s338_2026-11-07-14,delta_vs_default
+China,-5.691129179772602,chn,presub,tracker_no_s301_2026-11-07-14,delta_vs_default
+China,-6.046620292009191,chn,postsub,tracker_no_s301_2026-11-07-14,delta_vs_default
+Canada,-0.164614916059044,ca,presub,tracker_no_s301_2026-11-07-14,delta_vs_default
+Canada,-0.12168322315688052,ca,postsub,tracker_no_s301_2026-11-07-14,delta_vs_default
+Mexico,-0.2795514782331079,mx,presub,tracker_no_s301_2026-11-07-14,delta_vs_default
+Mexico,-0.051419782237412726,mx,postsub,tracker_no_s301_2026-11-07-14,delta_vs_default
+UK,-2.2897718759226073,uk,presub,tracker_no_s301_2026-11-07-14,delta_vs_default
+UK,-1.8140840879112234,uk,postsub,tracker_no_s301_2026-11-07-14,delta_vs_default
+Japan,-2.7415399020548517,jp,presub,tracker_no_s301_2026-11-07-14,delta_vs_default
+Japan,-3.207576488756029,jp,postsub,tracker_no_s301_2026-11-07-14,delta_vs_default
+EU,-2.5565956594044295,eu,presub,tracker_no_s301_2026-11-07-14,delta_vs_default
+EU,-2.4522152087653835,eu,postsub,tracker_no_s301_2026-11-07-14,delta_vs_default
+Rest of World,-4.224292233645697,row,presub,tracker_no_s301_2026-11-07-14,delta_vs_default
+Rest of World,-3.6393043265915423,row,postsub,tracker_no_s301_2026-11-07-14,delta_vs_default
+Free-trade partners,-3.4861300160225337,fta,presub,tracker_no_s301_2026-11-07-14,delta_vs_default
+Free-trade partners,-3.33580440524008,fta,postsub,tracker_no_s301_2026-11-07-14,delta_vs_default
+Total,-2.6386445244930137,total,presub,tracker_no_s301_2026-11-07-14,delta_vs_default
+Total,-2.1858099357607177,total,postsub,tracker_no_s301_2026-11-07-14,delta_vs_default
+China,-5.8862012491653175,chn,presub,tracker_no_s232_2026-11-07-14,delta_vs_default
+China,-5.467882538701609,chn,postsub,tracker_no_s232_2026-11-07-14,delta_vs_default
+Canada,-5.259859536038876,ca,presub,tracker_no_s232_2026-11-07-14,delta_vs_default
+Canada,-3.0189603941103735,ca,postsub,tracker_no_s232_2026-11-07-14,delta_vs_default
+Mexico,-5.799673759798503,mx,presub,tracker_no_s232_2026-11-07-14,delta_vs_default
+Mexico,-3.809554402640809,mx,postsub,tracker_no_s232_2026-11-07-14,delta_vs_default
+UK,-0.9448534055483355,uk,presub,tracker_no_s232_2026-11-07-14,delta_vs_default
+UK,-0.9157303713055525,uk,postsub,tracker_no_s232_2026-11-07-14,delta_vs_default
+Japan,-3.7684222807927057,jp,presub,tracker_no_s232_2026-11-07-14,delta_vs_default
+Japan,-3.468763336936272,jp,postsub,tracker_no_s232_2026-11-07-14,delta_vs_default
+EU,-2.72181293145242,eu,presub,tracker_no_s232_2026-11-07-14,delta_vs_default
+EU,-1.7899911517911677,eu,postsub,tracker_no_s232_2026-11-07-14,delta_vs_default
+Rest of World,-3.6358901696637655,row,presub,tracker_no_s232_2026-11-07-14,delta_vs_default
+Rest of World,-3.1114636741575916,row,postsub,tracker_no_s232_2026-11-07-14,delta_vs_default
+Free-trade partners,-5.620790925927694,fta,presub,tracker_no_s232_2026-11-07-14,delta_vs_default
+Free-trade partners,-3.043194922422736,fta,postsub,tracker_no_s232_2026-11-07-14,delta_vs_default
+Total,-3.8140389546827134,total,presub,tracker_no_s232_2026-11-07-14,delta_vs_default
+Total,-2.902465417404109,total,postsub,tracker_no_s232_2026-11-07-14,delta_vs_default
