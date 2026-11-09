@@ -37,28 +37,27 @@ as separate reports. The tool has five tabs:
 
 {date: updated}
 
-This update reflects two changes: revisions to the scope of the Section 338 tariffs on Canadian
-products, and the inclusion of foreign retaliation in our modeling of trade flows.
+This update corrects how we read the product lists attached to the April 2026 Section 232
+proclamation on steel, aluminum, and copper, and it expands the Alternative Scenarios tab from one
+alternative to three.
 
-First, two rounds of proclamations changed which products the Section 338 tariffs cover.
-Proclamations 11064 and 11065, effective September 15, replaced the alcohol and motor-vehicle
-product lists and made tariffs on those lists additive with Section 232 tariffs; dairy remains exempt
-from that stacking. Proclamation 11076, effective October 30, revised the motor-vehicle list again,
-adding 100 product codes and dropping 22. The net effect, almost entirely from the September change,
-is a small increase in the size of the Section 338 tariffs.
+First, the correction. The proclamation's annexes list the metal products and derivative products
+subject to the tariffs that took effect on April 6, 2026. Our parser for those annex tables treated
+product codes that appear inside product descriptions, such as "parts of the machines of heading
+8471," as if they were listed products. The largest consequence was that computers and computer
+parts (heading 8471) were charged the 25 percent derivative rate from April 6 even though the
+proclamation never lists them; about 70 other product groupings were affected in smaller ways.
+Correcting the lists lowers the average statutory tariff rate by 0.6 percentage points from April 6
+onward, so the current rate is 11.2 percent rather than the 11.8 percent we reported in November.
+Nothing before April 6 changes. The entire reduction comes through Section 232. A small part of it
+is offset because the affected products now pay the Section 122 tariff (through its expiration on
+July 23) and, from July 24, the Section 301 forced-labor tariff: both exempt goods covered by
+Section 232, and these goods are no longer covered. The lower statutory rate reduces projected
+10-year conventional revenue by about $140 billion, to $1.7 trillion, and trims the estimated
+consumer price effect and annual household cost slightly, by about 0.03 percentage points and $40.
 
-Second, our projections now include foreign retaliation against U.S. exports that was in effect as
-of September 2026. Retaliation shrinks the U.S. economy and its imports in the model, which lowers
-projected 10-year conventional revenue by about $63 billion. It also slightly lowers the
-post-substitution effective tariff rate and 2026 GDP growth. Because our August estimates did not
-include retaliation, projected revenue is lower than in the last update even though statutory
-tariff rates rose. Excluding retaliation, revenue would have risen slightly, consistent with the
-higher rates.
-
-The Alternative Scenarios tab now shows a single alternative: current law excluding the Section 338
-actions, which isolates the effect of those tariffs.
-
-This update also added information on Treasury-derived effective tariff rates. We show monthly
-ETRs from 2015 through 2026 derived from U.S. Treasury and Census Bureau data, and annual ETRs from
-the 1790s through 2025 using the Historical Statistics of the United States, Treasury, and Bureau of
-Economic Analysis data.
+Second, the Alternative Scenarios tab now shows three alternatives alongside current law: excluding
+the Section 338 actions on Canadian products; excluding the Section 301 actions taken since January
+2025, namely the Brazil and forced-labor tariffs (the Section 301 tariffs on China that predate 2025
+remain in every scenario); and excluding all Section 232 tariffs. Each isolates the contribution of
+that authority to the projected effects.
