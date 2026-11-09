@@ -37,27 +37,22 @@ as separate reports. The tool has five tabs:
 
 {date: updated}
 
-This update corrects how we read the product lists attached to the April 2026 Section 232
-proclamation on steel, aluminum, and copper, and it expands the Alternative Scenarios tab from one
-alternative to three.
+This update includes two changes. The first is a correction to how we read the product lists
+attached to the April 2026 Section 232 proclamation on steel, aluminum, and copper, and the second
+is an expansion of the Alternative Scenarios tab to show the effect of removing tariffs imposed
+under three authorities: Sections 301, 232, and 338.
 
-First, the correction. The proclamation's annexes list the metal products and derivative products
-subject to the tariffs that took effect on April 6, 2026. Our parser for those annex tables treated
-product codes that appear inside product descriptions, such as "parts of the machines of heading
-8471," as if they were listed products. The largest consequence was that computers and computer
-parts (heading 8471) were charged the 25 percent derivative rate from April 6 even though the
-proclamation never lists them; about 70 other product groupings were affected in smaller ways.
-Correcting the lists lowers the average statutory tariff rate by 0.6 percentage points from April 6
-onward, so the current rate is 11.2 percent rather than the 11.8 percent we reported in November.
-Nothing before April 6 changes. The entire reduction comes through Section 232. A small part of it
-is offset because the affected products now pay the Section 122 tariff (through its expiration on
-July 23) and, from July 24, the Section 301 forced-labor tariff: both exempt goods covered by
-Section 232, and these goods are no longer covered. The lower statutory rate reduces projected
-10-year conventional revenue by about $140 billion, to $1.7 trillion, and trims the estimated
-consumer price effect and annual household cost slightly, by about 0.03 percentage points and $40.
+The correction involves the April 2026 proclamation that changed how Section 232 tariffs are
+applied to steel, aluminum, and copper products. The proclamation included several annexes that
+listed the metal products and derivative products subject to these tariffs, and our effort to parse
+those lists mistakenly applied the 25 percent derivative tariff rate to computers and computer parts
+(as well as about 70 other, smaller product groups). Correcting the parser lowers the average
+statutory tariff rate by 0.6 percentage points from April 6 onward, so the current rate is 11.2
+percent rather than the 11.8 percent we reported in early November.
 
-Second, the Alternative Scenarios tab now shows three alternatives alongside current law: excluding
-the Section 338 actions on Canadian products; excluding the Section 301 actions taken since January
-2025, namely the Brazil and forced-labor tariffs (the Section 301 tariffs on China that predate 2025
-remain in every scenario); and excluding all Section 232 tariffs. Each isolates the contribution of
-that authority to the projected effects.
+Second, we have expanded the set of scenarios in the Alternative Scenarios tab to show the effect
+of removing tariffs under three authorities: excluding the Section 338 actions on Canadian
+products; excluding the Section 301 actions taken since January 2025, namely the Brazil and
+forced-labor tariffs (the Section 301 tariffs on China that predate 2025 remain in every scenario);
+and excluding all Section 232 tariffs. Each scenario isolates the contribution of those actions to
+the projected effects.
