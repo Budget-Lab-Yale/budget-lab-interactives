@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Labor Market Tracker &mdash; The Budget Lab at Yale</title>
+  <meta name="description" content="Track how artificial intelligence is reshaping the U.S. labor market. An interactive tool from The Budget Lab at Yale." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../assets/style-guide/fonts.css">
+  <link rel="stylesheet" href="../../assets/style-guide/colors.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    if (window.self !== window.top) document.documentElement.classList.add('iframed');
+  </script>
+</head>
+<body>
+  <div class="tracker-shell">
+    <header class="tracker-header">
+      <h1 class="tracker-title">AI Labor Market Tracker</h1>
+      <a class="tracker-logo-link" href="https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market" target="_blank" rel="noopener" aria-label="The Budget Lab at Yale">
+        <img class="tracker-logo" src="../../assets/logo.svg" alt="The Budget Lab at Yale" />
+      </a>
+    </header>
+
+    <nav class="tracker-tabs" role="tablist" aria-label="Tracker sections"></nav>
+
+    <div class="tracker-body">
+      <aside id="tracker-sidebar" class="tracker-sidebar" aria-label="Figure controls"></aside>
+      <main class="tracker-main">
+        <div class="tracker-figure" id="tracker-figure"></div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+  <script src="../../embed/v1/iframeResizer.contentWindow.min.js"></script>
+</body>
+</html>
