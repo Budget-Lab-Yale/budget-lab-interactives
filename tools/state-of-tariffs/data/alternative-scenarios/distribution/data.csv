@@ -1,133 +1,309 @@
 category,value,substitution,scenario,measure,basis
-1,-1.5975756056962047,presub,tracker_actual_2026-11-01-19,level,% of after-tax income
-2,-0.986008161689318,presub,tracker_actual_2026-11-01-19,level,% of after-tax income
-3,-0.9516171768485532,presub,tracker_actual_2026-11-01-19,level,% of after-tax income
-4,-0.8449929364838676,presub,tracker_actual_2026-11-01-19,level,% of after-tax income
-5,-0.8657127425563309,presub,tracker_actual_2026-11-01-19,level,% of after-tax income
-6,-0.8532688495791385,presub,tracker_actual_2026-11-01-19,level,% of after-tax income
-7,-0.8130692455226056,presub,tracker_actual_2026-11-01-19,level,% of after-tax income
-8,-0.783717910192008,presub,tracker_actual_2026-11-01-19,level,% of after-tax income
-9,-0.7188260866477177,presub,tracker_actual_2026-11-01-19,level,% of after-tax income
-10,-0.5055849427196618,presub,tracker_actual_2026-11-01-19,level,% of after-tax income
-Total,-0.7349407238517739,presub,tracker_actual_2026-11-01-19,level,% of after-tax income
-1,-1.3263459712160504,postsub,tracker_actual_2026-11-01-19,level,% of after-tax income
-2,-0.8186078631770624,postsub,tracker_actual_2026-11-01-19,level,% of after-tax income
-3,-0.7900556343954876,postsub,tracker_actual_2026-11-01-19,level,% of after-tax income
-4,-0.7015336069324788,postsub,tracker_actual_2026-11-01-19,level,% of after-tax income
-5,-0.7187356918983501,postsub,tracker_actual_2026-11-01-19,level,% of after-tax income
-6,-0.7084044704790357,postsub,tracker_actual_2026-11-01-19,level,% of after-tax income
-7,-0.6750297853031018,postsub,tracker_actual_2026-11-01-19,level,% of after-tax income
-8,-0.6506615956369955,postsub,tracker_actual_2026-11-01-19,level,% of after-tax income
-9,-0.5967868316408815,postsub,tracker_actual_2026-11-01-19,level,% of after-tax income
-10,-0.4197488679050591,postsub,tracker_actual_2026-11-01-19,level,% of after-tax income
-Total,-0.6101655938459375,postsub,tracker_actual_2026-11-01-19,level,% of after-tax income
-1,-1.551131144937555,presub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-2,-0.9573430911849832,presub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-3,-0.9239519155176888,presub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-4,-0.8204274378996814,presub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-5,-0.8405448811064196,presub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-6,-0.8284627549820782,presub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-7,-0.7894318273415221,presub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-8,-0.7609337893053468,presub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-9,-0.6979284904059085,presub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-10,-0.49088665867690173,presub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-Total,-0.713574645472033,presub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-1,-1.2627130703506118,postsub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-2,-0.7793342542276147,postsub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-3,-0.7521518498983127,postsub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-4,-0.6678767636710035,postsub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-5,-0.6842535597672529,postsub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-6,-0.6744179900124824,postsub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-7,-0.6426444919169211,postsub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-8,-0.619445392843273,postsub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-9,-0.5681553296649784,postsub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-10,-0.3996109561690329,postsub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-Total,-0.5808922310979796,postsub,tracker_no_s338_2026-11-01-19,level,% of after-tax income
-1,0.04644446075864961,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-2,0.028665070504334866,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-3,0.027665261330864332,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-4,0.02456549858418622,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-5,0.025167861449911344,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-6,0.02480609459706029,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-7,0.023637418181083558,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-8,0.022784120886661152,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-9,0.020897596241809202,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-10,0.01469828404276008,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-Total,0.021366078379740916,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-1,0.0636329008654386,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-2,0.03927360894944765,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-3,0.03790378449717491,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-4,0.03365684326147533,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-5,0.03448213213109719,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-6,0.03398648046655328,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-7,0.03238529338618068,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-8,0.031216202793722503,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-9,0.02863150197590314,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-10,0.020137911736026193,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-Total,0.029273362747957887,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,% of after-tax income
-1,-592.0774952270705,presub,tracker_actual_2026-11-01-19,level,2025 dollars
-2,-591.9697200334159,presub,tracker_actual_2026-11-01-19,level,2025 dollars
-3,-695.2990902643954,presub,tracker_actual_2026-11-01-19,level,2025 dollars
-4,-725.603884488062,presub,tracker_actual_2026-11-01-19,level,2025 dollars
-5,-877.8327209521195,presub,tracker_actual_2026-11-01-19,level,2025 dollars
-6,-998.5549365969785,presub,tracker_actual_2026-11-01-19,level,2025 dollars
-7,-1117.1977968103365,presub,tracker_actual_2026-11-01-19,level,2025 dollars
-8,-1289.6234955791529,presub,tracker_actual_2026-11-01-19,level,2025 dollars
-9,-1496.9265724004065,presub,tracker_actual_2026-11-01-19,level,2025 dollars
-10,-2531.473919896201,presub,tracker_actual_2026-11-01-19,level,2025 dollars
-Total,-1091.6559632248138,presub,tracker_actual_2026-11-01-19,level,2025 dollars
-1,-491.5570803923805,postsub,tracker_actual_2026-11-01-19,level,2025 dollars
-2,-491.4676028156129,postsub,tracker_actual_2026-11-01-19,level,2025 dollars
-3,-577.254149271063,postsub,tracker_actual_2026-11-01-19,level,2025 dollars
-4,-602.4139236089889,postsub,tracker_actual_2026-11-01-19,level,2025 dollars
-5,-728.797991584927,postsub,tracker_actual_2026-11-01-19,level,2025 dollars
-6,-829.024499667501,postsub,tracker_actual_2026-11-01-19,level,2025 dollars
-7,-927.524676495727,postsub,tracker_actual_2026-11-01-19,level,2025 dollars
-8,-1070.676668852589,postsub,tracker_actual_2026-11-01-19,level,2025 dollars
-9,-1242.78470541887,postsub,tracker_actual_2026-11-01-19,level,2025 dollars
-10,-2101.690976577989,postsub,tracker_actual_2026-11-01-19,level,2025 dollars
-Total,-906.3192274685649,postsub,tracker_actual_2026-11-01-19,level,2025 dollars
-1,-574.8647136253074,presub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-2,-574.7600716547283,presub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-3,-675.0854670729993,presub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-4,-704.5092451988354,presub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-5,-852.3125094419095,presub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-6,-969.5251082728768,presub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-7,-1084.7188023586184,presub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-8,-1252.1317689777345,presub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-9,-1453.4081641306882,presub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-10,-2457.8793177284206,presub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-Total,-1059.9195168462118,presub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-1,-467.97409100264025,postsub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-2,-467.888906210633,postsub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-3,-549.5597491282022,postsub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-4,-573.5124557319274,postsub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-5,-693.8331096039944,postsub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-6,-789.2511411719078,postsub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-7,-883.0256641184454,postsub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-8,-1019.3097828314628,postsub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-9,-1183.160747814131,postsub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-10,-2000.8600497574712,postsub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-Total,-862.8375697370816,postsub,tracker_no_s338_2026-11-01-19,level,2025 dollars
-1,17.212781601763027,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-2,17.209648378687575,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-3,20.213623191396096,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-4,21.09463928922662,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-5,25.52021151021006,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-6,29.029828324101686,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-7,32.47899445171811,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-8,37.49172660141835,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-9,43.51840826971829,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-10,73.59460216778052,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-Total,31.736446378602068,presub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-1,23.58298938974025,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-2,23.578696604979882,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-3,27.6944001428609,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-4,28.901467877061464,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-5,34.964881980932546,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-6,39.77335849559324,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-7,44.49901237728159,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-8,51.36688602112622,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-9,59.62395760473919,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-10,100.83092682051802,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
-Total,43.481657731483324,postsub,tracker_no_s338_2026-11-01-19,delta_vs_default,2025 dollars
+1,-1.5337952025333503,presub,tracker_actual_2026-11-09-09,level,% of after-tax income
+2,-0.9466435157532004,presub,tracker_actual_2026-11-09-09,level,% of after-tax income
+3,-0.9136255306443362,presub,tracker_actual_2026-11-09-09,level,% of after-tax income
+4,-0.8112580760074404,presub,tracker_actual_2026-11-09-09,level,% of after-tax income
+5,-0.8311506801746881,presub,tracker_actual_2026-11-09-09,level,% of after-tax income
+6,-0.8192035877922037,presub,tracker_actual_2026-11-09-09,level,% of after-tax income
+7,-0.7806088823987268,presub,tracker_actual_2026-11-09-09,level,% of after-tax income
+8,-0.7524293476352376,presub,tracker_actual_2026-11-09-09,level,% of after-tax income
+9,-0.6901282162953544,presub,tracker_actual_2026-11-09-09,level,% of after-tax income
+10,-0.4854003509139575,presub,tracker_actual_2026-11-09-09,level,% of after-tax income
+Total,-0.7055995048816466,presub,tracker_actual_2026-11-09-09,level,% of after-tax income
+1,-1.2682370912326,postsub,tracker_actual_2026-11-09-09,level,% of after-tax income
+2,-0.7827436263133938,postsub,tracker_actual_2026-11-09-09,level,% of after-tax income
+3,-0.7554423064737805,postsub,tracker_actual_2026-11-09-09,level,% of after-tax income
+4,-0.6707985400236381,postsub,tracker_actual_2026-11-09-09,level,% of after-tax income
+5,-0.6872469800790262,postsub,tracker_actual_2026-11-09-09,level,% of after-tax income
+6,-0.6773683824234701,postsub,tracker_actual_2026-11-09-09,level,% of after-tax income
+7,-0.6454558840505733,postsub,tracker_actual_2026-11-09-09,level,% of after-tax income
+8,-0.6221552953267941,postsub,tracker_actual_2026-11-09-09,level,% of after-tax income
+9,-0.5706408522900122,postsub,tracker_actual_2026-11-09-09,level,% of after-tax income
+10,-0.40135914371724296,postsub,tracker_actual_2026-11-09-09,level,% of after-tax income
+Total,-0.5834334741484526,postsub,tracker_actual_2026-11-09-09,level,% of after-tax income
+1,-1.4873507417747012,presub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+2,-0.9179784452488656,presub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+3,-0.8859602693134719,presub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+4,-0.7866925774232542,presub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+5,-0.8059828187247767,presub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+6,-0.7943974931951432,presub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+7,-0.7569714642176432,presub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+8,-0.7296452267485765,presub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+9,-0.66923062005354494,presub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+10,-0.4707020668711975,presub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+Total,-0.6842334265019057,presub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+1,-1.2057970131056903,postsub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+2,-0.7442062159835574,postsub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+3,-0.7182490427199573,postsub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+4,-0.6377726069894726,postsub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+5,-0.6534112285265218,postsub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+6,-0.644018991358024,postsub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+7,-0.6136776652094722,postsub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+8,-0.5915242520338404,postsub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+9,-0.5425460586227138,postsub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+10,-0.3815987247357278,postsub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+Total,-0.554708851631477,postsub,tracker_no_s338_2026-11-09-09,level,% of after-tax income
+1,-0.7706676067233768,presub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+2,-0.47564856866205985,presub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+3,-0.4590584192596833,presub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+4,-0.4076230769525249,presub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+5,-0.4176182742381513,presub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+6,-0.411615362585732,presub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+7,-0.3922231456922005,presub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+8,-0.3780641141742465,presub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+9,-0.3467604148886031,presub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+10,-0.24389326953408105,presub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+Total,-0.3545340869720931,presub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+1,-0.6508911850116906,postsub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+2,-0.40172372343747514,postsub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+3,-0.3877119991742159,postsub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+4,-0.34427068853170806,postsub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+5,-0.35271244182315287,postsub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+6,-0.34764249695343663,postsub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+7,-0.3312641998462053,postsub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+8,-0.3193057514529709,postsub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+9,-0.29286724314468593,postsub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+10,-0.20598761105109567,postsub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+Total,-0.2994327385543448,postsub,tracker_no_s301_2026-11-09-09,level,% of after-tax income
+1,-1.0511280212803462,presub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+2,-0.6487460150664384,presub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+3,-0.6261183987478969,presub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+4,-0.5559647694639729,presub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+5,-0.5695974067429889,presub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+6,-0.5614099228107712,presub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+7,-0.5349605140206423,presub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+8,-0.5156487450389532,presub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+9,-0.4729530417268973,presub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+10,-0.3326506104219476,presub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+Total,-0.4835556990643999,presub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+1,-0.8849758718552305,postsub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+2,-0.5461985207060742,postsub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+3,-0.5271476590849412,postsub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+4,-0.4680832368809491,postsub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+5,-0.4795609587354077,postsub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+6,-0.47266767306085294,postsub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+7,-0.45039913095159745,postsub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+8,-0.4341399795964468,postsub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+9,-0.3981932000433392,postsub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+10,-0.2800684198512311,postsub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+Total,-0.4071198918746628,postsub,tracker_no_s232_2026-11-09-09,level,% of after-tax income
+1,0.046444460758649164,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+2,0.028665070504334755,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+3,0.02766526133086422,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+4,0.02456549858418622,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+5,0.025167861449911344,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+6,0.024806094597060513,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+7,0.02363741818108367,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+8,0.022784120886661152,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+9,0.020897596241809424,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+10,0.014698284042760024,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+Total,0.021366078379740916,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+1,0.06244007812690966,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+2,0.038537410329836375,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+3,0.03719326375382326,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+4,0.03302593303416557,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+5,0.0338357515525044,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+6,0.0333493910654461,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+7,0.0317782188411011,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+8,0.03063104329295374,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+9,0.02809479366729839,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+10,0.01976041898151515,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+Total,0.028724622516975606,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,% of after-tax income
+1,0.7631275958099736,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+2,0.47099494709114054,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+3,0.45456711138465283,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+4,0.40363499905491546,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+5,0.4135324059365368,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+6,0.4075882252064717,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+7,0.3883857367065263,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+8,0.3743652334609911,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+9,0.34336780140675127,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+10,0.24150708137987645,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+Total,0.3510654179095535,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+1,0.6173459062209093,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+2,0.38101990287591864,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+3,0.36773030729956463,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+4,0.3265278514919301,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+5,0.3345345382558733,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+6,0.32972588547003345,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+7,0.314191684204368,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+8,0.30284954387382323,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+9,0.27777360914532623,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+10,0.1953715326661473,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+Total,0.28400073559410777,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,% of after-tax income
+1,0.4826671812530041,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+2,0.297897500686762,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+3,0.2875071318964393,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+4,0.2552933065434675,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+5,0.2615532734316992,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+6,0.2577936649814325,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+7,0.24564836837808457,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+8,0.23678060259628442,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+9,0.21717517456845709,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+10,0.1527497404920099,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+Total,0.2220438058172467,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+1,0.38326121937736946,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+2,0.23654510560731956,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+3,0.2282946473888393,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+4,0.20271530314268904,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+5,0.20768602134361847,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+6,0.20470070936261714,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+7,0.19505675309897585,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+8,0.18801531573034735,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+9,0.17244765224667297,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+10,0.12129072386601186,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+Total,0.1763135822737898,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,% of after-tax income
+1,-568.439840010885,presub,tracker_actual_2026-11-09-09,level,2025 dollars
+2,-568.336367552749,presub,tracker_actual_2026-11-09-09,level,2025 dollars
+3,-667.5404939652842,presub,tracker_actual_2026-11-09-09,level,2025 dollars
+4,-696.6354224483491,presub,tracker_actual_2026-11-09-09,level,2025 dollars
+5,-842.7867896971337,presub,tracker_actual_2026-11-09-09,level,2025 dollars
+6,-958.6893826855822,presub,tracker_actual_2026-11-09-09,level,2025 dollars
+7,-1072.5956348599707,presub,tracker_actual_2026-11-09-09,level,2025 dollars
+8,-1238.1375401207365,presub,tracker_actual_2026-11-09-09,level,2025 dollars
+9,-1437.1644053064238,presub,tracker_actual_2026-11-09-09,level,2025 dollars
+10,-2430.4092650332036,presub,tracker_actual_2026-11-09-09,level,2025 dollars
+Total,-1048.0735141680318,presub,tracker_actual_2026-11-09-09,level,2025 dollars
+1,-470.0213483817139,postsub,tracker_actual_2026-11-09-09,level,2025 dollars
+2,-469.9357909297723,postsub,tracker_actual_2026-11-09-09,level,2025 dollars
+3,-551.9639212250678,postsub,tracker_actual_2026-11-09-09,level,2025 dollars
+4,-576.0214143036983,postsub,tracker_actual_2026-11-09-09,level,2025 dollars
+5,-696.8684378001326,postsub,tracker_actual_2026-11-09-09,level,2025 dollars
+6,-792.7038968987143,postsub,tracker_actual_2026-11-09-09,level,2025 dollars
+7,-886.8886574796902,postsub,tracker_actual_2026-11-09-09,level,2025 dollars
+8,-1023.7689815661464,postsub,tracker_actual_2026-11-09-09,level,2025 dollars
+9,-1188.3367492598586,postsub,tracker_actual_2026-11-09-09,level,2025 dollars
+10,-2009.61325977511,postsub,tracker_actual_2026-11-09-09,level,2025 dollars
+Total,-866.6122457619905,postsub,tracker_actual_2026-11-09-09,level,2025 dollars
+1,-551.227058409122,presub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+2,-551.1267191740615,presub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+3,-647.3268707738882,presub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+4,-675.5407831591225,presub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+5,-817.2665781869237,presub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+6,-929.6595543614802,presub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+7,-1040.1166404082526,presub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+8,-1200.6458135193177,presub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+9,-1393.6459970367052,presub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+10,-2356.814662865423,presub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+Total,-1016.3370677894296,presub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+1,-446.8804310271,postsub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+2,-446.79908589004833,postsub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+3,-524.7886630633368,postsub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+4,-547.66171534793,postsub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+5,-662.5589857258931,postsub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+6,-753.6761050165547,postsub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+7,-843.2237958810753,postsub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+8,-973.364987206725,postsub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+9,-1129.8304652394563,postsub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+10,-1910.672446726284,postsub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+Total,-823.9456681124403,postsub,tracker_no_s338_2026-11-09-09,level,2025 dollars
+1,-285.61712172775066,presub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+2,-285.56513116764086,presub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+3,-335.4110340320876,presub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+4,-350.03001240990267,presub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+5,-423.4649300774854,presub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+6,-481.7011103732046,presub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+7,-538.9342133383682,presub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+8,-622.1120611560061,presub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+9,-722.1146935889204,presub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+10,-1221.1784784225345,presub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+Total,-526.6128786293901,presub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+1,-241.22678207718263,postsub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+2,-241.1828718401569,postsub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+3,-283.2817721966408,postsub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+4,-295.62868294906303,postsub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+5,-357.65041600867704,postsub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+6,-406.8355849096983,postsub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+7,-455.1735737986784,postsub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+8,-525.4240001308928,postsub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+9,-609.8843191590827,postsub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+10,-1031.384088285057,postsub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+Total,-444.767209135513,postsub,tracker_no_s301_2026-11-09-09,level,2025 dollars
+1,-389.5585559667091,presub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+2,-389.4876450654376,presub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+3,-457.4734080451509,presub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+4,-477.4125071864081,presub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+5,-577.5717704373907,presub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+6,-657.0011903677612,presub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+7,-735.0624942900635,presub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+8,-848.5103229364983,presub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+9,-984.9057912745944,presub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+10,-1665.5882593949,presub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+Total,-718.2571944964914,presub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+1,-327.98090786826697,postsub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+2,-327.9212058763058,postsub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+3,-385.16043711041226,postsub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+4,-401.9477563420398,postsub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+5,-486.2748121577034,postsub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+6,-553.1487977529243,postsub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+7,-618.8709258840424,postsub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+8,-714.3860192255452,postsub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+9,-829.2214113622521,postsub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+10,-1402.3081795635112,postsub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+Total,-604.7220453143003,postsub,tracker_no_s232_2026-11-09-09,level,2025 dollars
+1,17.212781601762913,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+2,17.209648378687575,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+3,20.213623191395982,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+4,21.09463928922662,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+5,25.52021151021006,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+6,29.029828324102027,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+7,32.47899445171811,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+8,37.491726601418804,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+9,43.51840826971852,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+10,73.59460216778052,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+Total,31.73644637860218,presub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+1,23.14091735461392,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+2,23.13670503972395,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+3,27.175258161730994,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+4,28.359698955768295,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+5,34.309452074239516,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+6,39.02779188215959,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+7,43.66486159861495,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+8,50.403994359421404,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+9,58.50628402040229,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+10,98.94081304882593,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+Total,42.66657764955016,postsub,tracker_no_s338_2026-11-09-09,delta_vs_default,2025 dollars
+1,282.8227182831343,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+2,282.7712363851082,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+3,332.1294599331966,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+4,346.60541003844645,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+5,419.3218596196483,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+6,476.98827231237766,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+7,533.6614215216025,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+8,616.0254789647304,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+9,715.0497117175033,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+10,1209.2307866106692,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+Total,521.4606355386417,presub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+1,228.79456630453126,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+2,228.75291908961538,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+3,268.682149028427,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+4,280.39273135463526,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+5,339.21802179145556,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+6,385.86831198901604,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+7,431.71508368101183,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+8,498.34498143525366,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+9,578.4524301007759,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+10,978.229171490053,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+Total,421.8450366264775,postsub,tracker_no_s301_2026-11-09-09,delta_vs_default,2025 dollars
+1,178.88128404417586,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+2,178.84872248731142,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+3,210.0670859201333,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+4,219.222915261941,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+5,265.21501925974303,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+6,301.68819231782106,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+7,337.53314056990723,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+8,389.62721718423825,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+9,452.2586140318293,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+10,764.8210056383036,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+Total,329.81631967154044,presub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+1,142.04044051344692,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+2,142.01458505346648,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+3,166.80348411465553,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+4,174.0736579616585,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+5,210.59362564242917,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+6,239.55509914579,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+7,268.0177315956478,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+8,309.38296234060124,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+9,359.11533789760654,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+10,607.3050802115988,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
+Total,261.8902004476902,postsub,tracker_no_s232_2026-11-09-09,delta_vs_default,2025 dollars
