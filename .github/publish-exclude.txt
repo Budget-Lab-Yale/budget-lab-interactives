@@ -24,3 +24,7 @@ _site
 /tools/*/scripts
 /tools/*/update.py
 /tools/*/package.json
+/tools/*/test
+# Maintainer notes.
+/tools/taxes-at-the-top/docs
+CLAUDE.md

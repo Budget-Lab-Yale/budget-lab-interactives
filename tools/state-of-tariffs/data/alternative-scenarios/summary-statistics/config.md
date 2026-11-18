@@ -28,12 +28,16 @@ spec:
 
 ## Alternative Scenarios
 
-These figures show the same projected effects as the Default Scenario tab, but across **all**
-modeled policy scenarios. Use the **View** toggle to switch between each scenario's own effects
-(levels) and its effect relative to our default scenario (change vs. default).
+These figures show the same projected effects as the Default Scenario tab, but across both current
+law and several modeled policy scenarios. Use the **View** toggle to switch between each scenario's
+own effects (levels) and its effect relative to our default scenario (change vs. default).
 
-Alternatives are a variation on current law. We show one alternative scenario:
+We include three alternative scenarios in this release:
 
 - **Excluding the Section 338 tariffs.** This scenario is identical to current law except that it
   omits the Section 338 tariff actions on Canadian products, which took effect on August 22.
-  Comparing the default against it isolates the effect of those actions.
+- **Excluding the Section 301 tariff actions taken since January 2025.** This scenario is
+  identical to current law except that it omits the Section 301 tariff actions on Brazil and the
+  forced-labor tariffs. It keeps in place the Section 301 tariffs on China imposed before 2025.
+- **Excluding the Section 232 tariffs.** This scenario is identical to current law except that it
+  omits all Section 232 tariffs on steel, aluminum, and other products.

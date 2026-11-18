@@ -118,10 +118,53 @@ def substitute_date_tokens(rendered_html: str) -> str:
     return _DATE_TOKEN_INLINE.sub(lambda m: html.escape(_resolve_date_token(m.group(1))), out)
 
 
+# `{stat: <metric>}` in a prose body → a headline number from the synced model data, so the
+# Key Takeaways can't drift from the figures. Metrics are the `metric` ids in the default
+# scenario's Summary of Results, plus `etr_statutory_current`: the default scenario's overall
+# daily statutory rate on its last non-projected date.
+SUMMARY_STATS = DATA_DIR / "default-scenario" / "summary-statistics" / "data.csv"
+DAILY_OVERALL = DATA_DIR / "statutory-rates" / "daily-rate-overall" / "data.csv"
+_STAT_TOKEN = re.compile(r"\{stat:\s*([^}]+?)\s*\}")
+_STATS: dict = {}  # metric -> (value, unit); loaded on first use
+
+
+def _load_stats() -> dict:
+    if _STATS:
+        return _STATS
+    for r in read_csv_rows(SUMMARY_STATS):
+        _STATS[r["metric"]] = (float(r["value"]), r["unit"])
+    actual = [r for r in read_csv_rows(DAILY_OVERALL)
+              if r["series"] == "total" and r["projected"] == "0"
+              and r["scenario"] == DEFAULT_SCENARIO]
+    if not actual:
+        fail(f"{DAILY_OVERALL}: no non-projected 'total' rows for default scenario {DEFAULT_SCENARIO!r}")
+    _STATS["etr_statutory_current"] = (float(max(actual, key=lambda r: r["time"])["value"]), "pct")
+    return _STATS
+
+
+def _format_stat(metric: str) -> str:
+    stats = _load_stats()
+    if metric not in stats:
+        fail(f"unknown stat {metric!r} in a {{stat: ...}} token. Recognized: {', '.join(sorted(stats))}.")
+    value, unit = stats[metric]
+    if unit == "pct":
+        return f"{value:.1f}%"
+    if unit == "usd":
+        return f"${round(value, -2):,.0f}"
+    if unit == "usd_bn":
+        return f"${value / 1000:.1f} trillion"
+    fail(f"stat {metric!r} has unit {unit!r}, which {{stat: ...}} has no format for (pct, usd, usd_bn).")
+
+
+def substitute_stat_tokens(rendered_html: str) -> str:
+    return _STAT_TOKEN.sub(lambda m: html.escape(_format_stat(m.group(1))), rendered_html)
+
+
 def render_markdown(body: str) -> str:
     if not body.strip():
         return ""
-    return substitute_date_tokens(markdown.markdown(body.strip(), extensions=["extra"]))
+    rendered = markdown.markdown(body.strip(), extensions=["extra"])
+    return substitute_stat_tokens(substitute_date_tokens(rendered))
 
 
 def parse_config_md(path: Path) -> tuple[dict, str]:

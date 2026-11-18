@@ -45,6 +45,7 @@ time,series,variant,value
 2026-06-02,Automation,observed,69.5705
 2026-07-02,Automation,observed,69.6702
 2026-08-02,Automation,observed,69.7412
+2026-09-02,Automation,observed,69.6891
 2022-11-02,Augmentation,observed,30.4017
 2022-12-02,Augmentation,observed,30.401
 2023-01-02,Augmentation,observed,30.4341
@@ -91,6 +92,7 @@ time,series,variant,value
 2026-06-02,Augmentation,observed,30.4295
 2026-07-02,Augmentation,observed,30.3298
 2026-08-02,Augmentation,observed,30.2588
+2026-09-02,Augmentation,observed,30.3109
 2022-11-02,Automation,missing-as-zero,17.6925
 2022-12-02,Automation,missing-as-zero,17.7497
 2023-01-02,Automation,missing-as-zero,17.8047
@@ -137,6 +139,7 @@ time,series,variant,value
 2026-06-02,Automation,missing-as-zero,17.6844
 2026-07-02,Automation,missing-as-zero,17.6957
 2026-08-02,Automation,missing-as-zero,17.7198
+2026-09-02,Automation,missing-as-zero,17.7554
 2022-11-02,Augmentation,missing-as-zero,7.7603
 2022-12-02,Augmentation,missing-as-zero,7.7845
 2023-01-02,Augmentation,missing-as-zero,7.8207
@@ -183,3 +186,4 @@ time,series,variant,value
 2026-06-02,Augmentation,missing-as-zero,7.7656
 2026-07-02,Augmentation,missing-as-zero,7.733
 2026-08-02,Augmentation,missing-as-zero,7.7179
+2026-09-02,Augmentation,missing-as-zero,7.7533

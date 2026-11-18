@@ -45,6 +45,7 @@ time,series,variant,value
 43,All Sectors,indexed,5.444533
 44,All Sectors,indexed,5.480818
 45,All Sectors,indexed,5.501739
+46,All Sectors,indexed,5.561685
 0,Information,indexed,0.0
 1,Information,indexed,1.913316
 2,Information,indexed,3.452663
@@ -91,6 +92,7 @@ time,series,variant,value
 43,Information,indexed,14.060832
 44,Information,indexed,14.039469
 45,Information,indexed,13.774214
+46,Information,indexed,14.092374
 0,Financial Activities,indexed,0.0
 1,Financial Activities,indexed,0.924442
 2,Financial Activities,indexed,1.740085
@@ -137,6 +139,7 @@ time,series,variant,value
 43,Financial Activities,indexed,8.522311
 44,Financial Activities,indexed,8.425371
 45,Financial Activities,indexed,8.563979
+46,Financial Activities,indexed,8.781759
 0,Professional and Business Services,indexed,0.0
 1,Professional and Business Services,indexed,0.899573
 2,Professional and Business Services,indexed,1.645671
@@ -183,6 +186,7 @@ time,series,variant,value
 43,Professional and Business Services,indexed,8.259744
 44,Professional and Business Services,indexed,8.385325
 45,Professional and Business Services,indexed,8.472097
+46,Professional and Business Services,indexed,8.494763
 2022-11-02,All Sectors,rolling,2.833375
 2022-12-02,All Sectors,rolling,2.90909
 2023-01-02,All Sectors,rolling,3.075741
@@ -229,6 +233,7 @@ time,series,variant,value
 2026-06-02,All Sectors,rolling,3.50035
 2026-07-02,All Sectors,rolling,3.415841
 2026-08-02,All Sectors,rolling,3.340021
+2026-09-02,All Sectors,rolling,3.332249
 2022-11-02,Information,rolling,9.768929
 2022-12-02,Information,rolling,10.084666
 2023-01-02,Information,rolling,10.01992
@@ -275,6 +280,7 @@ time,series,variant,value
 2026-06-02,Information,rolling,12.819543
 2026-07-02,Information,rolling,12.892498
 2026-08-02,Information,rolling,12.682268
+2026-09-02,Information,rolling,12.863713
 2022-11-02,Financial Activities,rolling,5.864302
 2022-12-02,Financial Activities,rolling,6.017756
 2023-01-02,Financial Activities,rolling,5.934308
@@ -321,6 +327,7 @@ time,series,variant,value
 2026-06-02,Financial Activities,rolling,6.657549
 2026-07-02,Financial Activities,rolling,6.475058
 2026-08-02,Financial Activities,rolling,6.455111
+2026-09-02,Financial Activities,rolling,6.670755
 2022-11-02,Professional and Business Services,rolling,5.801342
 2022-12-02,Professional and Business Services,rolling,5.792355
 2023-01-02,Professional and Business Services,rolling,6.050361
@@ -367,3 +374,4 @@ time,series,variant,value
 2026-06-02,Professional and Business Services,rolling,6.104025
 2026-07-02,Professional and Business Services,rolling,6.165349
 2026-08-02,Professional and Business Services,rolling,6.148844
+2026-09-02,Professional and Business Services,rolling,6.012579
