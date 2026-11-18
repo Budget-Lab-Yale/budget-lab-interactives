@@ -30,7 +30,7 @@ CONTRIBUTING.md (snapshots, testing).
   chart point copies FY2026 baseline values for RG, r* and other columns the Shiny app never
   overwrote (see the note in `tools/blsmm/results.js`). Changing that is a model-owner decision.
   Deliberate departures: inputs run at full precision (the Shiny app rounded every delta to
-  0.01), so presets match the R scenario files and the article figures; and chart styling (Levels
+  0.01), so presets match the R scenario files (`scenarios/results/` in the model repo); and chart styling (Levels
   baselines are always dashed and the legend always keys the scenario, where Shiny drew a solid
   baseline and no legend at zero shock; the real 10-year yield is amber; Fed Funds is listed
   before r*).

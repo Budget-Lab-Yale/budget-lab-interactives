@@ -6,18 +6,18 @@
  * commit of Budget-Lab-Small-Macro-Model, where CI holds it to the R model).
  * =========================================================================== */
 
-import { simulate, OUTPUT_COLUMNS } from './vendor/blsmm-model/blsmm-model.js?v=9afdf27d27';
+import { simulate, OUTPUT_COLUMNS } from './vendor/blsmm-model/blsmm-model.js?v=2031d440cf';
 import {
   INPUTS, PRESETS, SHAPES, buildShapeDelta, zeroInputDeltas, toModelDeltas, presetDeltas, hasNonZero,
-} from './inputs.js?v=9afdf27d27';
+} from './inputs.js?v=2031d440cf';
 import {
   deriveResults, kpis, multiplierText, deviationSummaryText, deviationTable, summaryTable,
   outlaysIndirectText, primaryBalanceDerivedText, rfstarIndirectText,
-} from './results.js?v=9afdf27d27';
-import { LEVEL_CHARTS, DEV_CHARTS, createChartGrid } from './charts.js?v=9afdf27d27';
-import { createBuilder } from './builder.js?v=9afdf27d27';
-import { downloadZip } from './export.js?v=9afdf27d27';
-import { encodeState, decodeState } from './share.js?v=9afdf27d27';
+} from './results.js?v=2031d440cf';
+import { LEVEL_CHARTS, DEV_CHARTS, createChartGrid } from './charts.js?v=2031d440cf';
+import { createBuilder } from './builder.js?v=2031d440cf';
+import { downloadZip } from './export.js?v=2031d440cf';
+import { encodeState, decodeState } from './share.js?v=2031d440cf';
 
 const ASSET_V = new URL(import.meta.url).searchParams.get('v') || '';
 const $ = (id) => document.getElementById(id);

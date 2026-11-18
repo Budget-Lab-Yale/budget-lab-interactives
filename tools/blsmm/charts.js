@@ -15,7 +15,7 @@
  * engine (window.BudgetLabChart).
  * =========================================================================== */
 
-import { srLevelDesc, srDevDesc, isNA } from './results.js?v=9afdf27d27';
+import { srLevelDesc, srDevDesc, isNA } from './results.js?v=2031d440cf';
 
 const pctOfGdp = (num, den) => (c, i) => (c[num][i] / c[den][i]) * 100;
 const potentialToActual = (col) => (c, i) => c[col][i] * (c.GDPstar[i] / c.GDP[i]);

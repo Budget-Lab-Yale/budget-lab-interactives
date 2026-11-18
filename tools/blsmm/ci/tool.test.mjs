@@ -71,11 +71,12 @@ test('baseline: zero deviations, scenario keyed but not drawn, baseline texts', 
   assert.ok(moved.filter((row) => row.series === 'Scenario').every((row) => row.value !== ''));
 });
 
-// Full precision, matching the R scenario files and the article figures. (The
-// Shiny app rounded inputs to 0.01 and showed -4.89 / +8.04.)
+// Full precision, matching scenarios/results/ in the model repo. The AI preset
+// moved from -4.92 to -5.61 with the model's psi/RG_base corrections (model PR #10).
+// (The Shiny app rounded inputs to 0.01 and showed -4.89 / +8.04.)
 test('presets match the R scenario runs', () => {
   const r = run(preset('rapid_ai'));
-  assert.deepEqual(kpis(r), { finalDebt: '-4.92 pp', maxUnemployment: '+0.03 pp' });
+  assert.deepEqual(kpis(r), { finalDebt: '-5.61 pp', maxUnemployment: '+0.04 pp' });
   assert.deepEqual(kpis(run(preset('military_conflict'))), { finalDebt: '+8.06 pp', maxUnemployment: '-0.36 pp' });
   assert.match(multiplierText(r), /^Growth Shock {2}LF Growth \+ Productivity/);
 });
