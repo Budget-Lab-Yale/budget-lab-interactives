@@ -27,6 +27,7 @@ function load({ attrs, hash = '' }) {
   const created = [];
   const listeners = [];
   let resizerOpts = null;
+  let resizerTarget = null;
   const script = {
     src: LOADER,
     getAttribute: (n) => (n in attrs ? attrs[n] : null),
@@ -42,14 +43,21 @@ function load({ attrs, hash = '' }) {
   const window = {
     location: { href: `https://budgetlab.yale.edu/research/article${hash}`, hash },
     addEventListener(type, fn) { listeners.push({ type, fn }); },
-    iFrameResize(opts) { resizerOpts = opts; },
+    iFrameResize(opts, target) { resizerOpts = opts; resizerTarget = target; },
   };
   vm.runInNewContext(SOURCE, { window, document, URL, console, setTimeout, clearTimeout });
   const iframe = created.find((e) => e.tagName === 'iframe');
   const wrapper = created.find((e) => e.tagName === 'div');
   const messageListeners = listeners.filter((l) => l.type === 'message').map((l) => l.fn);
-  return { iframe, wrapper, messageListeners, resizerOpts };
+  return { iframe, wrapper, messageListeners, resizerOpts, resizerTarget };
 }
+
+test('iframe-resizer gets the iframe itself, so snapshot embeds (slash in the id) are sized', () => {
+  for (const tool of ['blsmm', 'blsmm/versions/2026-10-06']) {
+    const { iframe, resizerTarget } = load({ attrs: { 'data-tool': tool } });
+    assert.equal(resizerTarget, iframe, tool);
+  }
+});
 
 test('without data-deep-link: src, listeners and scrolling are as before', () => {
   const { iframe, wrapper, messageListeners, resizerOpts } = load({ attrs: { 'data-tool': 'blsmm' }, hash: '#blsmm:preset=rapid_ai' });

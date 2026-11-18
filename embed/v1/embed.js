@@ -1,6 +1,6 @@
 /**
  * Budget Lab Interactives — embed loader
- * @version 1.2.0
+ * @version 1.2.1
  * Snippet: <script src=".../embed/v1/embed.js" data-tool="..."></script>
  * Docs: https://github.com/Budget-Lab-Yale/budget-lab-interactives#embedding
  * MIT licensed.
@@ -114,7 +114,9 @@
           wrapper.scrollIntoView({ block: 'start' });
         }
       },
-    }, '#' + iframe.id);
+    // The element, not '#' + id: a snapshot's id contains '/' (data-tool="<slug>/versions/<date>"),
+    // which is not a valid selector, so a selector left snapshot embeds unsized at 100px.
+    }, iframe);
 
     // iframe-resizer's content script doesn't listen for window resize.
     // When the host page reflows, content inside the iframe may also reflow

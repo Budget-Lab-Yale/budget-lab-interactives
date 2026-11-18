@@ -44,7 +44,7 @@ Optional `data-*` attributes:
 
 With `data-deep-link`, a host-page URL ending `#<slug>:<state>` (e.g. `…/research/article#blsmm:preset=rapid_ai`) opens the embedded tool at `#<state>` and scrolls the page to it. `<slug>` is the tool's slug, also for a snapshot embed (`data-tool="blsmm/versions/<date>"`). Other hashes, including another tool's, are ignored.
 
-A tool that keeps its state in its URL hash can produce these links: when embedded, it posts `{type: 'TBL_EMBED_HOST_REQUEST'}` to `window.parent`, and the loader replies `{type: 'TBL_EMBED_HOST', url, key}` — the host page's URL without its hash, and the slug — to the tool's origin. The link is then `url + '#' + key + ':' + state`. With no reply (no attribute, or not embedded), the tool falls back to its own URL. Used by: **blsmm**. Without the attribute the loader behaves exactly as v1.1.0 (`.github/scripts/embed-loader.test.mjs`).
+A tool that keeps its state in its URL hash can produce these links: when embedded, it posts `{type: 'TBL_EMBED_HOST_REQUEST'}` to `window.parent`, and the loader replies `{type: 'TBL_EMBED_HOST', url, key}` — the host page's URL without its hash, and the slug — to the tool's origin. The link is then `url + '#' + key + ':' + state`. With no reply (no attribute, or not embedded), the tool falls back to its own URL. Used by: **blsmm**. Without the attribute the loader behaves as v1.1.0 did, apart from the v1.2.1 snapshot sizing fix (`.github/scripts/embed-loader.test.mjs`).
 
 ### Fallback (advanced)
 
