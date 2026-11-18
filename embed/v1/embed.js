@@ -1,6 +1,6 @@
 /**
  * Budget Lab Interactives — embed loader
- * @version 1.1.0
+ * @version 1.2.0
  * Snippet: <script src=".../embed/v1/embed.js" data-tool="..."></script>
  * Docs: https://github.com/Budget-Lab-Yale/budget-lab-interactives#embedding
  * MIT licensed.
@@ -33,9 +33,20 @@
   wrapper.className     = 'tbl-embed-wrapper';
   wrapper.style.cssText = 'position:relative !important;display:block !important;width:100% !important;max-width:100% !important;height:' + initialHeight + ';';
 
+  // Deep links, opt-in with data-deep-link. A host URL ending "#<key>:<state>" opens the tool
+  // at "#<state>", and the tool may ask for the host page's URL to build such links (see the
+  // listener below). <key> is the tool slug, so a snapshot embed (data-tool="<slug>/versions/
+  // <date>") answers to its tool's links. Without the attribute nothing here changes.
+  var deepLink  = me.hasAttribute('data-deep-link');
+  var linkKey   = tool.split('/')[0];
+  var linkState = '';
+  if (deepLink && window.location.hash.indexOf('#' + linkKey + ':') === 0) {
+    linkState = window.location.hash.slice(linkKey.length + 2);
+  }
+
   var iframe = document.createElement('iframe');
   iframe.id        = 'tbl-embed-' + tool + '-' + Math.random().toString(36).slice(2, 8);
-  iframe.src       = toolsBase + tool + '/';
+  iframe.src       = toolsBase + tool + '/' + (linkState ? '#' + linkState : '');
   iframe.title     = me.getAttribute('data-title') || tool;
   iframe.scrolling = 'no';
   // MUST stay 'eager'. A non-scrolling renderer — a PDF builder, a card scraper — never brings a
@@ -70,6 +81,22 @@
     p = p.parentElement;
   }
 
+  if (deepLink) {
+    window.addEventListener('message', function (e) {
+      if (e.source !== iframe.contentWindow) return;
+      var m = e.data;
+      if (!m || m.type !== 'TBL_EMBED_HOST_REQUEST') return;
+      iframe.contentWindow.postMessage({
+        type: 'TBL_EMBED_HOST',
+        url:  window.location.href.split('#')[0],
+        key:  linkKey,
+      }, srcUrl.origin);
+    });
+  }
+
+  // A reader arriving on a deep link is taken to the embed once it has a height.
+  var scrollToEmbed = !!linkState;
+
   function init() {
     window.iFrameResize({
       log: me.hasAttribute('data-log'),
@@ -80,7 +107,13 @@
       heightCalculationMethod: 'bodyOffset',
       tolerance: 4,
       scrolling: false,
-      onResized: function (data) { wrapper.style.height = data.height + 'px'; },
+      onResized: function (data) {
+        wrapper.style.height = data.height + 'px';
+        if (scrollToEmbed) {
+          scrollToEmbed = false;
+          wrapper.scrollIntoView({ block: 'start' });
+        }
+      },
     }, '#' + iframe.id);
 
     // iframe-resizer's content script doesn't listen for window resize.

@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file. Format: [Ke
 
 ## [Unreleased]
 
+- Embed loader (`embed/v1/embed.js` v1.2.0): opt-in deep links (`data-deep-link`). A host URL ending `#<slug>:<state>` opens the embedded tool at that state, and tools can ask for the host page's URL to build such links. Embeds without the attribute are unchanged; `.github/scripts/embed-loader.test.mjs` (run in CI) pins that.
 - New tool: **Budget Lab Small Macro Model** (`tools/blsmm/`), replacing the Shiny app on Posit Connect. The model runs in the browser from a JavaScript port vendored from `Budget-Lab-Small-Macro-Model` (whose CI holds it to the R model). Launch snapshot at `versions/<launch date>/`.
 - Embed loader (`embed/v1/embed.js` v1.1.0): tool iframes now load eagerly. `loading="lazy"` meant a non-scrolling renderer — a PDF builder, a social-card scraper — never brought a below-fold embed near the viewport, leaving it an empty 100px box. Measured under headless `page.pdf()` on a 16,000px article with three tools: 0 of 3 issued a request with `lazy`, 3 of 3 with `eager`. Affects every already-published embed on next deploy, with no snippet change.
 - New tool: **AI Labor Market Tracker** (`tools/ai-labor-market-tracker/`), migrated from the staging repo. Launch snapshot frozen at `versions/2026-06-15/`.

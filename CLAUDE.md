@@ -10,7 +10,8 @@ CONTRIBUTING.md (snapshots, testing).
   Not TypeScript. A tool whose `.js` uses ES modules needs a `package.json` with
   `{"type": "module"}` so CI's `node --check` parses it.
 - **Published URLs are permanent.** `/embed/v1/` is frozen: breaking loader changes ship as
-  `/embed/v2/`. Each `tools/<slug>/` URL and every `tools/<slug>/versions/<date>/` snapshot stays
+  `/embed/v2/`. Additions to v1 must be opt-in by snippet attribute, so existing embeds run
+  unchanged code (`data-deep-link`; gated by `.github/scripts/embed-loader.test.mjs`). Each `tools/<slug>/` URL and every `tools/<slug>/versions/<date>/` snapshot stays
   working indefinitely, and a snapshot is never edited after it is published: articles cite it.
 - **`gh-pages` is machine-managed** by CI with `keep_files: true`, so a file removed from `main`
   stays published until pruned by hand. `CNAME` must stay committed or the custom domain drops and

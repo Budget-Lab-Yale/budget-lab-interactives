@@ -37,6 +37,13 @@ Optional `data-*` attributes:
 | `data-height` | `100` | Initial pixel height before iframe-resizer measures the tool's actual height (~100ms after load). Set to the tool's natural height to eliminate the brief flash. |
 | `data-log` | _(off)_ | Any non-empty value enables iframe-resizer's verbose console logging — useful for diagnosing unexpected sizing. |
 | `data-strip-host-classes` | `paragraph-embed-code` | Comma-separated list of host-wrapper class names whose width-proportional height (`padding-bottom: NN%` etc.) should be overridden. Override if your host uses a different wrapper class. |
+| `data-deep-link` | _(off)_ | Present = links copied inside the tool open **this page** with the tool's state, instead of the standalone tool. See [Deep links](#deep-links). |
+
+### Deep links
+
+With `data-deep-link`, a host-page URL ending `#<slug>:<state>` (e.g. `…/research/article#blsmm:preset=rapid_ai`) opens the embedded tool at `#<state>` and scrolls the page to it. `<slug>` is the tool's slug, also for a snapshot embed (`data-tool="blsmm/versions/<date>"`). Other hashes, including another tool's, are ignored.
+
+A tool that keeps its state in its URL hash can produce these links: when embedded, it posts `{type: 'TBL_EMBED_HOST_REQUEST'}` to `window.parent`, and the loader replies `{type: 'TBL_EMBED_HOST', url, key}` — the host page's URL without its hash, and the slug — to the tool's origin. The link is then `url + '#' + key + ':' + state`. With no reply (no attribute, or not embedded), the tool falls back to its own URL. Used by: **blsmm**. Without the attribute the loader behaves exactly as v1.1.0 (`.github/scripts/embed-loader.test.mjs`).
 
 ### Fallback (advanced)
 
