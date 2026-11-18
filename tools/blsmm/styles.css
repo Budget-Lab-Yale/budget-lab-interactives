@@ -61,8 +61,10 @@ body {
 
 /* --- Outer shell ---------------------------------------------------------- */
 .tracker-shell {
-  max-width: 1280px;
+  /* Wide enough for three chart columns beside the sidebar on a wide standalone screen. */
+  max-width: 1580px;
   margin: 0 auto;
+  container: shell / inline-size;
   padding: 24px 24px 32px;
 }
 html.iframed .tracker-shell { padding: 16px 16px 24px; }
@@ -116,8 +118,8 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 /* --- Two-column body ------------------------------------------------------ */
 .tracker-body {
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
-  gap: 24px;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 16px;
   align-items: start;
 }
 .tracker-main { min-width: 0; }
@@ -297,20 +299,17 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 .section-heading-row .info-pop,
 .checkbox-row .info-pop { left: 0; right: auto; }
 
-/* --- KPI cards ------------------------------------------------------------ */
+/* --- KPI stats: open, no boxes, so the charts are the only cards ------------ */
 .kpi-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
-  margin-bottom: 20px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--tbl-border);
 }
-.kpi-card {
-  border: 1px solid var(--tbl-border);
-  border-left: 4px solid var(--tbl-navy);
-  border-radius: 8px;
-  padding: 14px 18px;
-  background: var(--tbl-bg);
-}
+.kpi-card { padding: 2px 24px; }
+.kpi-card:first-child { padding-left: 0; }
+.kpi-card + .kpi-card { border-left: 1px solid var(--tbl-border); }
 .kpi-card p { margin: 0; }
 .kpi-title {
   font-size: 13px;
@@ -321,7 +320,7 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 }
 .kpi-value {
   margin: 4px 0 2px !important;
-  font-size: 30px;
+  font-size: 34px;
   font-weight: var(--tw-bold);
   color: var(--tbl-navy);
   font-variant-numeric: tabular-nums;
@@ -359,8 +358,9 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 /* --- Chart grid ----------------------------------------------------------- */
 .chart-grid {
   display: grid;
-  /* 412px = the engine's 390px minimum plot width (narrower scrolls sideways) plus padding and border. */
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 412px), 1fr));
+  /* 404px = the engine's 390px minimum plot width (narrower scrolls sideways) plus padding and
+     border. Two columns fit the website embed at laptop widths (1127px frame at a 1280px screen). */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 404px), 1fr));
   gap: 10px;
 }
 .chart-cell {
@@ -368,19 +368,21 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   min-width: 0;
   border: 1px solid var(--tbl-border);
   border-radius: 8px;
-  padding: 10px 10px 8px;
+  padding: 8px 6px 6px;
   background: var(--tbl-bg);
 }
 /* The page header carries the logo; hide the engine's per-figure copy on screen (PNG export keeps it). */
 .chart-cell .figure-logo { display: none; }
-/* Compact figure chrome so more charts fit on screen. These charts carry no source or note, so the
-   Data/Image buttons sit in one row instead of stacking under the engine's narrow-card rule. */
+/* Compact figure chrome so more charts fit on screen. The source and note are hidden on screen, so
+   the Data/Image buttons sit in one row instead of stacking under the engine's narrow-card rule. */
 .chart-cell .figure-title { font-size: 16px; }
 .chart-cell .figure-subtitle { margin-bottom: 4px; font-size: 12px; }
 .chart-cell .figure-meta { margin-top: 4px; justify-content: flex-end; }
 .chart-cell .figure-downloads { flex-direction: row; }
-/* The source line is for the PNG download (the export redraws from the spec, not the page). */
-.chart-cell .figure-source { display: none; }
+/* The source line and scenario note are for the PNG download (the export redraws from the spec,
+   not the page); the sidebar shows the scenario on screen. */
+.chart-cell .figure-source,
+.chart-cell .figure-note { display: none; }
 /* Two-variable charts key one variable per legend row (blue over amber). */
 .chart-cell-paired .tbl-legend { display: grid; grid-template-columns: repeat(2, max-content); }
 .chart-cell-paired .tbl-legend-reset { grid-area: 1 / 3; }
@@ -618,10 +620,11 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 .builder-summary h3 { margin: 0 0 4px; font-size: 16px; font-weight: var(--tw-bold); color: var(--tbl-navy); }
 
 /* --- Narrow viewport ------------------------------------------------------ */
-/* Below 1000px the sidebar moves above the results and lays its sections out
-   side by side, so the charts keep two columns at typical article widths
-   instead of one long column. */
-@media (max-width: 1000px) {
+/* Below the width where two chart columns fit beside the sidebar (2 x 404 + 10 gap + 240 sidebar
+   + 16 gap = 1074px of shell content), the sidebar moves above the results and lays its sections out
+   side by side, so the charts keep two columns instead of one long column. A container query, not a
+   media query, so the page scrollbar and the standalone/embedded padding difference don't matter. */
+@container shell (max-width: 1073px) {
   .tracker-body { grid-template-columns: 1fr; }
   .tracker-sidebar {
     position: static;
@@ -646,4 +649,5 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   .tracker-tab { padding: 12px 12px 10px; font-size: 14px; }
   .builder-body { padding: 14px 14px 24px; }
   .kpi-value { font-size: 26px; }
+  .kpi-card { padding: 2px 12px; }
 }

@@ -9,8 +9,8 @@
  * sync() redraws from the app's state after every recompute.
  * =========================================================================== */
 
-import { INPUTS, SECTIONS, SHAPES, YEARS, N_YEARS, baselinePath } from './inputs.js?v=2031d440cf';
-import { fixed, signedDelta, parseDelta } from './format.js?v=2031d440cf';
+import { INPUTS, SECTIONS, SHAPES, YEARS, N_YEARS, baselinePath } from './inputs.js?v=337ba4dc3b';
+import { fixed, signedDelta, parseDelta } from './format.js?v=337ba4dc3b';
 
 function el(tag, attrs = {}, ...children) {
   const node = document.createElement(tag);

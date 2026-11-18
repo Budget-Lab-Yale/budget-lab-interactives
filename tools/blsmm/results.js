@@ -13,8 +13,8 @@
  * owner has been told. Do not "fix" it here without them.
  * =========================================================================== */
 
-import { fixed, signed } from './format.js?v=2031d440cf';
-import { INPUT_BY_KEY, SUMMARY_ORDER, EXPORT_ORDER, FY_LABELS } from './inputs.js?v=2031d440cf';
+import { fixed, signed } from './format.js?v=337ba4dc3b';
+import { INPUTS, INPUT_BY_KEY, PRESETS, SUMMARY_ORDER, EXPORT_ORDER, FY_LABELS } from './inputs.js?v=337ba4dc3b';
 
 const NA = null;
 const isNA = (v) => v === null || v === undefined || Number.isNaN(v);
@@ -139,6 +139,34 @@ export function deriveResults(modelData, baseSim, scenSim, outputColumns, shock)
 // --------------------------------------------------------------------------
 // KPIs
 // --------------------------------------------------------------------------
+
+/**
+ * The scenario line on every PNG download, so an exported chart says what it shows:
+ * the preset, or each changed input with its size and years, plus fast expectations.
+ */
+export function scenarioNote(deltas, fast, activePreset) {
+  const preset = PRESETS.find((p) => p.id === activePreset);
+  const parts = [];
+  if (preset) {
+    parts.push(`Scenario: ${preset.label} preset. ${preset.description}`);
+  } else {
+    const changes = INPUTS.filter((i) => deltas[i.key].some((v) => v !== 0)).map((i) => {
+      const path = deltas[i.key];
+      const on = path.map((v, k) => (v !== 0 ? k : -1)).filter((k) => k >= 0);
+      const first = on[0];
+      const last = on[on.length - 1];
+      const years = first === last ? FY_LABELS[first] : `${FY_LABELS[first]}–${FY_LABELS[last]}`;
+      const vals = path.slice(first, last + 1);
+      const lo = Math.min(...vals);
+      const hi = Math.max(...vals);
+      const size = lo === hi ? `${signed(lo, 2)} ${i.units}` : `${signed(lo, 2)} to ${signed(hi, 2)} ${i.units}, varying by year`;
+      return `${i.summaryLabel.replace(/ \([^()]*\)$/, '')} ${size}, ${years}`;
+    });
+    parts.push(changes.length ? `Scenario: custom. ${changes.join('; ')}.` : 'Scenario: baseline (no changes).');
+  }
+  if (fast) parts.push('Fast expectations.');
+  return parts.join(' ');
+}
 
 export function kpis(r) {
   const dU = r.deviations.cols.d_U;

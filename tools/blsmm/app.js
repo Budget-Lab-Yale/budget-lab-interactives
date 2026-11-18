@@ -6,18 +6,18 @@
  * commit of Budget-Lab-Small-Macro-Model, where CI holds it to the R model).
  * =========================================================================== */
 
-import { simulate, OUTPUT_COLUMNS } from './vendor/blsmm-model/blsmm-model.js?v=2031d440cf';
+import { simulate, OUTPUT_COLUMNS } from './vendor/blsmm-model/blsmm-model.js?v=337ba4dc3b';
 import {
   INPUTS, PRESETS, SHAPES, buildShapeDelta, zeroInputDeltas, toModelDeltas, presetDeltas, hasNonZero,
-} from './inputs.js?v=2031d440cf';
+} from './inputs.js?v=337ba4dc3b';
 import {
   deriveResults, kpis, multiplierText, deviationSummaryText, deviationTable, summaryTable,
-  outlaysIndirectText, primaryBalanceDerivedText, rfstarIndirectText,
-} from './results.js?v=2031d440cf';
-import { LEVEL_CHARTS, DEV_CHARTS, createChartGrid } from './charts.js?v=2031d440cf';
-import { createBuilder } from './builder.js?v=2031d440cf';
-import { downloadZip } from './export.js?v=2031d440cf';
-import { encodeState, decodeState } from './share.js?v=2031d440cf';
+  outlaysIndirectText, primaryBalanceDerivedText, rfstarIndirectText, scenarioNote,
+} from './results.js?v=337ba4dc3b';
+import { LEVEL_CHARTS, DEV_CHARTS, createChartGrid } from './charts.js?v=337ba4dc3b';
+import { createBuilder } from './builder.js?v=337ba4dc3b';
+import { downloadZip } from './export.js?v=337ba4dc3b';
+import { encodeState, decodeState } from './share.js?v=337ba4dc3b';
 
 const ASSET_V = new URL(import.meta.url).searchParams.get('v') || '';
 const $ = (id) => document.getElementById(id);
@@ -62,6 +62,7 @@ function recompute({ announce = true } = {}) {
     ? null
     : Object.fromEntries(INPUTS.map((i) => [i.key, state.deltas[i.key].slice()]));
   results = deriveResults(data, baseSim.columns, scen.columns, OUTPUT_COLUMNS, shock);
+  results.scenarioNote = scenarioNote(state.deltas, state.fast, state.activePreset);
 
   showWarning(scen.summary.overall_converged ? '' :
     `The model did not converge for this scenario (SSE: ${scen.summary.final_sse.toExponential(2)}). Treat these results with caution.`);
@@ -375,40 +376,73 @@ function setupFigurePickers() {
   $('figures-none').addEventListener('click', () => setShown(state.view, pickers[state.view], () => false));
 }
 
-// One "?" popover open at a time; outside click or Escape closes it.
+// One "?" popover open at a time. A mouse opens it on hover; a click (or tap, or Enter) toggles it
+// and pins a hovered one open. Outside click or Escape closes it.
 function setupInfoPopovers() {
+  let seq = 0;
+  let hoverTimer = null;
+  const isOpen = (t) => t.getAttribute('aria-expanded') === 'true';
+  const close = (t) => {
+    t.setAttribute('aria-expanded', 'false');
+    delete t.dataset.hover;
+    t.parentElement.querySelector('.info-pop')?.remove();
+  };
   const closeAll = (except) => {
     for (const b of document.querySelectorAll('.info-trigger[aria-expanded="true"]')) {
-      if (b === except) continue;
-      b.setAttribute('aria-expanded', 'false');
-      b.parentElement.querySelector('.info-pop')?.remove();
+      if (b !== except) close(b);
     }
   };
-  let seq = 0;
+  const open = (trigger) => {
+    closeAll(trigger);
+    if (isOpen(trigger)) return;
+    // Toggletip: insert an empty live region, then fill it, so screen
+    // readers announce the text.
+    const pop = document.createElement('span');
+    pop.className = 'info-pop';
+    pop.id = `info-pop-${++seq}`;
+    pop.setAttribute('role', 'status');
+    trigger.after(pop);
+    trigger.setAttribute('aria-expanded', 'true');
+    trigger.setAttribute('aria-controls', pop.id);
+    setTimeout(() => { pop.textContent = trigger.dataset.info; }, 50);
+  };
+
   document.addEventListener('click', (e) => {
     const trigger = e.target.closest('.info-trigger');
     if (trigger) {
-      closeAll(trigger);
-      if (trigger.getAttribute('aria-expanded') === 'true') {
-        trigger.setAttribute('aria-expanded', 'false');
-        trigger.parentElement.querySelector('.info-pop')?.remove();
-        return;
-      }
-      // Toggletip: insert an empty live region, then fill it, so screen
-      // readers announce the text.
-      const pop = document.createElement('span');
-      pop.className = 'info-pop';
-      pop.id = `info-pop-${++seq}`;
-      pop.setAttribute('role', 'status');
-      trigger.after(pop);
-      trigger.setAttribute('aria-expanded', 'true');
-      trigger.setAttribute('aria-controls', pop.id);
-      setTimeout(() => { pop.textContent = trigger.dataset.info; }, 50);
+      if (isOpen(trigger) && trigger.dataset.hover) delete trigger.dataset.hover;
+      else if (isOpen(trigger)) close(trigger);
+      else open(trigger);
       return;
     }
     if (!e.target.closest('.info-pop')) closeAll(null);
   });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(null); });
+
+  // Hover: the trigger and its popover count as one area, so the pointer can move onto the text.
+  const area = (node) => node?.closest?.('.info-trigger, .info-pop');
+  document.addEventListener('pointerover', (e) => {
+    if (e.pointerType !== 'mouse') return;
+    const hit = area(e.target);
+    if (!hit) return;
+    clearTimeout(hoverTimer);
+    const trigger = hit.classList.contains('info-trigger') ? hit : hit.previousElementSibling;
+    if (trigger?.classList.contains('info-trigger') && !isOpen(trigger)) {
+      open(trigger);
+      trigger.dataset.hover = '1';
+    }
+  });
+  document.addEventListener('pointerout', (e) => {
+    if (e.pointerType !== 'mouse') return;
+    const from = area(e.target);
+    if (!from) return;
+    const to = area(e.relatedTarget);
+    if (to && to.parentElement === from.parentElement) return;
+    clearTimeout(hoverTimer);
+    hoverTimer = setTimeout(() => {
+      for (const b of document.querySelectorAll('.info-trigger[data-hover]')) close(b);
+    }, 150);
+  });
 }
 
 function setupBuilder() {

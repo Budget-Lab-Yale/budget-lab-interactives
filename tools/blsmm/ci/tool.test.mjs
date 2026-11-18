@@ -7,7 +7,7 @@ import { simulate, OUTPUT_COLUMNS } from '../vendor/blsmm-model/blsmm-model.js';
 import { INPUTS, PRESETS, buildShapeDelta, zeroInputDeltas, toModelDeltas, presetDeltas } from '../inputs.js';
 import {
   deriveResults, kpis, multiplierText, deviationSummaryText, deviationTable, summaryTable,
-  keyVariablesCsv, frameCsv, userDeltasCsv, srLevelDesc,
+  keyVariablesCsv, frameCsv, userDeltasCsv, srLevelDesc, scenarioNote,
 } from '../results.js';
 import { LEVEL_CHARTS, DEV_CHARTS, levelChartData, devChartData } from '../charts.js';
 import { encodeState, decodeState } from '../share.js';
@@ -182,4 +182,19 @@ test('screen-reader descriptions follow sr_level_desc()', () => {
 test('every input maps to a model delta path', () => {
   const keys = new Set(INPUTS.map((i) => i.delta));
   assert.equal(keys.size, 9);
+});
+
+test('PNG scenario note: preset, custom inputs with size and years, baseline, fast expectations', () => {
+  assert.equal(scenarioNote(preset('rapid_ai'), false, 'rapid_ai'),
+    'Scenario: AI Adoption preset. Productivity boost + labor-force participation decline (Karger et al.).');
+  const d = zeroInputDeltas();
+  d.productivity = buildShapeDelta('permanent', 0.5);
+  d.receipts[0] = 1;
+  d.inflation_target = [0, 0.1, 0.2, 0.3, 0, 0, 0, 0, 0, 0];
+  assert.equal(scenarioNote(d, true, null),
+    'Scenario: custom. Productivity Growth +0.50 pp, FY2026–FY2035; Receipts +1.00 pp of GDP, FY2026; '
+    + 'Inflation Target +0.10 to +0.30 pp, varying by year, FY2027–FY2029. Fast expectations.');
+  assert.equal(scenarioNote(zeroInputDeltas(), false, null), 'Scenario: baseline (no changes).');
+  const { spec } = levelChartData(LEVEL_CHARTS[0], { ...run(d), scenarioNote: 'x' });
+  assert.equal(spec.note, 'x');
 });

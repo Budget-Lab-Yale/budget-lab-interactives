@@ -15,7 +15,7 @@
  * engine (window.BudgetLabChart).
  * =========================================================================== */
 
-import { srLevelDesc, srDevDesc, isNA } from './results.js?v=2031d440cf';
+import { srLevelDesc, srDevDesc, isNA } from './results.js?v=337ba4dc3b';
 
 const pctOfGdp = (num, den) => (c, i) => (c[num][i] / c[den][i]) * 100;
 const potentialToActual = (col) => (c, i) => c[col][i] * (c.GDPstar[i] / c.GDP[i]);
@@ -233,6 +233,7 @@ export function levelChartData(def, r) {
     series_styles: styles,
     value_suffix: def.suffix,
     tooltip_decimals: def.decimals,
+    note: r.scenarioNote,
     source: SOURCE,
   };
   return { spec, rows };
@@ -259,6 +260,7 @@ export function devChartData(def, r) {
     value_suffix: ' pp',
     tooltip_decimals: def.decimals,
     yAxisPolicy: { includeZero: true },
+    note: r.scenarioNote,
     source: SOURCE,
   };
   return { spec, rows };
