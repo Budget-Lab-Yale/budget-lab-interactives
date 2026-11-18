@@ -25,6 +25,8 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 html { scrollbar-gutter: stable; }
+/* Embedded, the frame is as tall as the tool and never scrolls: a reserved gutter would only cost chart width. */
+html.iframed { scrollbar-gutter: auto; }
 body {
   font-family: var(--tbl-font-sans);
   font-weight: var(--tw-body);
@@ -128,35 +130,13 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   background: var(--tbl-bg-subtle);
   border: 1px solid var(--tbl-border);
   border-radius: 8px;
-  padding: 20px;
+  padding: 0;
   position: sticky;
   top: 12px;
   /* Keep every section reachable when the sidebar is taller than the window (standalone page). */
   max-height: calc(100vh - 24px);
   overflow-y: auto;
   overscroll-behavior: contain;
-}
-.tracker-sidebar .sidebar-section { margin-bottom: 22px; }
-.tracker-sidebar h2 {
-  margin: 0 0 10px;
-  font-size: 11px;
-  font-weight: var(--tw-bold);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--tbl-text-muted);
-}
-.sidebar-hint, .sidebar-note {
-  margin: 10px 0 8px;
-  font-size: 13px;
-  line-height: 1.4;
-  color: var(--tbl-text-muted);
-}
-.sidebar-note:empty { display: none; }
-.sidebar-version {
-  margin: 8px 0 0;
-  text-align: center;
-  font-size: 12px;
-  color: var(--tbl-text-muted);
 }
 
 /* --- Buttons -------------------------------------------------------------- */
@@ -172,19 +152,7 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   cursor: pointer;
   transition: background 0.12s, color 0.12s, border-color 0.12s;
 }
-.btn-block { width: 100%; }
 .btn-small { padding: 6px 10px; font-size: 13px; }
-.btn-primary-outline,
-.btn-preset {
-  background: var(--tbl-bg);
-  color: var(--tbl-navy);
-  border: 1px solid var(--tbl-navy);
-}
-.btn-primary-outline:hover,
-.btn-preset:hover { background: var(--tbl-bg-highlight); }
-.btn-primary-outline.is-active,
-.btn-preset.is-active { background: var(--tbl-navy); color: #fff; }
-.scenario-custom { padding: 11px 12px; font-size: 15px; }
 .btn-quiet {
   background: transparent;
   color: var(--tbl-text-muted);
@@ -192,30 +160,80 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   font-weight: var(--tw-medium);
 }
 .btn-quiet:hover { color: var(--tbl-text-heading); border-color: var(--tbl-text-muted); }
-#reset { margin-top: 10px; font-size: 13px; }
-
-.preset-list { display: flex; flex-direction: column; gap: 8px; }
-.preset-row { display: flex; align-items: stretch; gap: 6px; position: relative; }
-.btn-preset { flex: 1; font-size: 13px; padding: 8px 10px; }
-
-.sidebar-download-btn {
+/* --- Controls ---------------------------------------------------------------
+ * One set of controls (index.html) in three layouts, by the shell's width:
+ *   sidebar (default)    stacked beside the charts, the figure checklist always open;
+ *   toolbar (< 1074px)   two rows above the charts, the checklist in a Figures menu;
+ *   phone   (< 569px)    the toolbar with the presets full width.
+ * The toolbar and phone layouts are the container queries under "Narrow viewport". Custom
+ * scenario and the preset pill are the same height in every layout, so they read as equals; on
+ * phones that height comes from the pill (--pill-h, set in app.js). */
+.ctl-row { padding: 14px 16px; }
+.ctl-row ~ .ctl-row { border-top: 1px solid var(--tbl-border); }
+.ctl-group + .ctl-group { margin-top: 18px; }
+.ctl-label {
+  margin: 0 0 8px;
+  font-size: 11px;
+  font-weight: var(--tw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--tbl-text-muted);
+}
+.ctl-ctrls { display: flex; flex-direction: column; gap: 8px; }
+.ctl-btn {
+  appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  width: 100%;
-  font: var(--tw-medium) 13px/1.2 var(--tbl-font-sans);
-  color: var(--tbl-text-muted);
-  background: transparent;
-  border: 1px solid var(--tbl-border);
+  height: 36px;
+  padding: 0 12px;
+  font: var(--tw-semi) 13px/1.2 var(--tbl-font-sans);
   border-radius: 6px;
-  padding: 9px 12px;
+  white-space: nowrap;
   cursor: pointer;
   transition: background 0.12s, color 0.12s, border-color 0.12s;
 }
-.sidebar-download-btn:hover,
-.sidebar-download-btn:focus-visible { border-color: var(--tbl-navy); color: #fff; background: var(--tbl-navy); }
-.sidebar-actions { display: flex; flex-direction: column; gap: 8px; }
+.ctl-btn svg { flex: none; }
+.ctl-custom { border: 1px solid var(--tbl-navy); background: var(--tbl-bg); color: var(--tbl-navy); }
+.ctl-custom:hover { background: var(--tbl-bg-highlight); }
+.ctl-custom.is-active { background: var(--tbl-navy); color: #fff; }
+.ctl-pill {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--tbl-navy);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--tbl-bg);
+}
+.ctl-pill .ctl-btn {
+  border: 0;
+  border-bottom: 1px solid var(--tbl-border);
+  border-radius: 0;
+  background: none;
+  color: var(--tbl-navy);
+  justify-content: flex-start;
+}
+.ctl-pill .ctl-btn:last-child { border-bottom: 0; }
+.ctl-pill .ctl-btn:hover { background: var(--tbl-bg-highlight); }
+.ctl-pill .ctl-btn.is-active { background: var(--tbl-navy); color: #fff; }
+.ctl-pill .ctl-btn:focus-visible { outline-offset: -3px; }
+.ctl-reset { border: 1px solid transparent; background: none; color: var(--tbl-blue); font-weight: var(--tw-medium); }
+.ctl-reset:hover { background: var(--tbl-bg-highlight); }
+.ctl-reset:disabled { color: var(--tbl-text-muted); opacity: 0.6; background: none; cursor: default; }
+.ctl-desc { margin: 10px 0 0; font-size: 13px; line-height: 1.4; color: var(--tbl-text-body); }
+.ctl-desc strong { color: var(--tbl-navy); }
+.ctl-note { margin: 8px 0 0; font-size: 13px; line-height: 1.4; color: var(--tbl-text-muted); }
+.ctl-note:empty { display: none; }
+.ctl-dl { border: 1px solid var(--tbl-border); background: var(--tbl-bg); color: var(--tbl-text-body); font-weight: var(--tw-medium); }
+.ctl-dl:hover, .fig-button:hover { border-color: var(--tbl-navy); color: var(--tbl-navy); }
+.ctl-ctrls .toggle-group { height: 36px; box-sizing: border-box; }
+.ctl-ctrls .toggle-group label { display: flex; align-items: center; justify-content: center; padding: 0 14px; font-size: 13px; }
+.tracker-sidebar > .solver-warning { margin: 0 16px 14px; }
+/* Sidebar: the checklist is always open. The Figures button and the panel's header belong to the menu. */
+.fig-button, .fig-head { display: none; }
+.fig-panel .figure-picker { margin-top: 2px; }
+
 
 .figure-picker { margin: 0; padding: 0; border: none; min-width: 0; }
 .figure-picker label {
@@ -336,7 +354,6 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   overflow: hidden;
   background: var(--tbl-bg);
 }
-.view-toggle { margin-bottom: 10px; }
 .toggle-group label {
   flex: 1;
   margin: 0;
@@ -620,25 +637,92 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 .builder-summary h3 { margin: 0 0 4px; font-size: 16px; font-weight: var(--tw-bold); color: var(--tbl-navy); }
 
 /* --- Narrow viewport ------------------------------------------------------ */
-/* Below the width where two chart columns fit beside the sidebar (2 x 404 + 10 gap + 240 sidebar
-   + 16 gap = 1074px of shell content), the sidebar moves above the results and lays its sections out
-   side by side, so the charts keep two columns instead of one long column. A container query, not a
-   media query, so the page scrollbar and the standalone/embedded padding difference don't matter. */
+/* Toolbar: below the width where two chart columns fit beside the sidebar (2 x 404 + 10 gap +
+   240 sidebar + 16 gap = 1074px of shell content), the controls become two rows above the
+   results. A container query, not a media query, so the page scrollbar and the standalone/
+   embedded padding difference don't matter. */
 @container shell (max-width: 1073px) {
   .tracker-body { grid-template-columns: 1fr; }
-  .tracker-sidebar {
-    position: static;
-    max-height: none;
-    overflow: visible;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    column-gap: 24px;
-    align-items: start;
+  .tracker-sidebar { position: static; max-height: none; overflow: visible; }
+  .ctl-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 16px; padding: 10px 14px 12px; }
+  .ctl-group + .ctl-group { margin-top: 0; }
+  .ctl-label { margin-bottom: 6px; }
+  .ctl-ctrls { flex-direction: row; flex-wrap: wrap; align-items: stretch; }
+  .ctl-btn, .ctl-ctrls .toggle-group { height: 34px; }
+  .ctl-pill { flex-direction: row; }
+  /* 32px inside the pill's 1px border, so the pill is 34px like the buttons beside it. */
+  .ctl-pill .ctl-btn { height: 32px; border-bottom: 0; border-right: 1px solid var(--tbl-border); justify-content: center; }
+  .ctl-pill .ctl-btn:last-child { border-right: 0; }
+  .ctl-reset { padding: 0 8px; }
+  .ctl-desc { margin-top: 8px; }
+  .ctl-download { margin-left: auto; padding-left: 16px; border-left: 1px solid var(--tbl-border); }
+  .fig-menu { position: relative; }
+  .fig-button { display: inline-flex; border: 1px solid var(--tbl-border); background: var(--tbl-bg); color: var(--tbl-text-body); }
+  .fig-button::after {
+    content: '';
+    margin-left: 2px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
   }
-  .tracker-sidebar .sidebar-section { margin-bottom: 12px; }
-  .tracker-sidebar > .solver-warning,
-  .tracker-sidebar > .sidebar-version { grid-column: 1 / -1; }
+  .fig-panel {
+    display: none;
+    position: absolute;
+    z-index: 50;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 460px;
+    padding: 12px 14px;
+    background: var(--tbl-bg);
+    border: 1px solid var(--tbl-border);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+  }
+  .fig-menu.is-open .fig-panel { display: block; }
+  .fig-panel .figure-picker:not([hidden]) { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; margin: 0; }
+  .tracker-sidebar > .solver-warning { margin: 0 14px 12px; }
 }
+/* Phone: Custom scenario and Reset share a line, the presets get the full width (labels wrap), and
+   the Figures panel spans the toolbar, with rows tall enough to tap. */
+@container shell (max-width: 568px) {
+  .ctl-row { position: relative; padding: 10px 12px 12px; }
+  .ctl-group { width: 100%; }
+  .ctl-custom { order: 1; flex: 1; height: var(--pill-h, 58px); }
+  .ctl-reset { order: 2; height: var(--pill-h, 58px); padding: 0 14px; }
+  .ctl-pill { order: 3; flex-basis: 100%; display: grid; grid-template-columns: repeat(3, 1fr); }
+  .ctl-pill .ctl-btn { height: auto; min-height: 56px; padding: 6px; white-space: normal; text-align: center; line-height: 1.2; }
+  .ctl-download { margin-left: 0; padding-left: 0; border-left: 0; }
+  .ctl-show .ctl-ctrls { flex-wrap: nowrap; }
+  .ctl-ctrls .toggle-group label { padding: 0 10px; }
+  .fig-menu { position: static; }
+  .fig-panel { left: 6px; right: 6px; top: calc(100% - 6px); width: auto; padding: 0; border-radius: 10px; }
+  .fig-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--tbl-border);
+    font-size: 14px;
+    font-weight: var(--tw-bold);
+    color: var(--tbl-navy);
+  }
+  .fig-done {
+    appearance: none;
+    padding: 7px 14px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--tbl-navy);
+    color: #fff;
+    font: var(--tw-semi) 13px/1.2 var(--tbl-font-sans);
+    cursor: pointer;
+  }
+  .fig-panel .figure-picker:not([hidden]) { display: block; max-height: 360px; overflow-y: auto; padding: 4px 0; }
+  .fig-panel .figure-picker label { align-items: center; gap: 10px; min-height: 42px; padding: 0 14px; font-size: 15px; border-bottom: 1px solid var(--tbl-bg-subtle); }
+  .fig-panel .figure-picker input { width: 20px; height: 20px; margin: 0; }
+  .fig-panel .figure-picker-actions { gap: 8px; margin: 0; padding: 10px 14px; border-top: 1px solid var(--tbl-border); }
+  .fig-panel .figure-picker-actions .btn-text { flex: 1; height: 38px; border: 1px solid var(--tbl-border); border-radius: 6px; font-size: 14px; }
+}
+
 @media (max-width: 880px) {
   .tracker-header { flex-wrap: wrap; }
   .tracker-title { font-size: 20px; }

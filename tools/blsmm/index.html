@@ -13,7 +13,7 @@
   <!-- Vendored chart engine 1.15.0 (see vendor/chart-engine/). Bump ?v= with VERSION. -->
   <link rel="stylesheet" href="vendor/chart-engine/chart-engine.css?v=1.15.0">
   <!-- ?v= on styles.css and app.js is a content hash written by scripts/stamp-assets.mjs. -->
-  <link rel="stylesheet" href="styles.css?v=337ba4dc3b">
+  <link rel="stylesheet" href="styles.css?v=457c92f797">
 
   <script>
     if (window.self !== window.top) document.documentElement.classList.add('iframed');
@@ -38,55 +38,72 @@
     <div class="tracker-body">
       <aside class="tracker-sidebar" aria-labelledby="controls-heading">
         <h2 id="controls-heading" class="sr-only">Controls</h2>
-
-        <section class="sidebar-section" aria-labelledby="scenario-heading">
-          <h2 id="scenario-heading">Scenario</h2>
-          <button type="button" id="open-builder" class="btn btn-primary-outline btn-block scenario-custom" aria-haspopup="dialog" aria-controls="builder">
-            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path fill="currentColor" d="M2 3h7v2H2zm9 0h3v2h-3zM9 1h2v6H9zM2 11h3v2H2zm5 0h7v2H7zM5 9h2v6H5z"/></svg>
-            <span>Custom Scenario</span>
-          </button>
-          <p class="sidebar-hint">Or start from a preset:</p>
-          <div id="preset-list" class="preset-list"></div>
-          <button type="button" id="reset" class="btn btn-quiet btn-block">Reset to Defaults</button>
-        </section>
+        <!-- One set of controls, laid out by container width (styles.css "Controls"): a sidebar beside
+             the charts, a two-row toolbar above them, and a phone toolbar. -->
+        <div class="ctl-row">
+          <section class="ctl-group ctl-scenario" aria-labelledby="scenario-heading">
+            <h2 id="scenario-heading" class="ctl-label">Scenario</h2>
+            <div class="ctl-ctrls">
+              <button type="button" id="open-builder" class="ctl-btn ctl-custom" aria-haspopup="dialog" aria-controls="builder">
+                <svg aria-hidden="true" width="13" height="13" viewBox="0 0 16 16"><path fill="currentColor" d="M2 3h7v2H2zm9 0h3v2h-3zM9 1h2v6H9zM2 11h3v2H2zm5 0h7v2H7zM5 9h2v6H5z"/></svg>
+                <span>Custom scenario</span>
+              </button>
+              <div id="preset-list" class="ctl-pill" role="group" aria-label="Preset scenarios"></div>
+              <button type="button" id="reset" class="ctl-btn ctl-reset">
+                <svg aria-hidden="true" width="13" height="13" viewBox="0 0 16 16"><path fill="currentColor" d="M8 2a6 6 0 1 1-5.66 8h2.16A4 4 0 1 0 5.2 5.2L7 7H2V2l1.8 1.8A6 6 0 0 1 8 2z"/></svg>
+                <span>Reset</span>
+              </button>
+            </div>
+            <p id="scenario-desc" class="ctl-desc" aria-live="polite"></p>
+          </section>
+        </div>
 
         <div id="solver-warning" class="solver-warning" role="alert" hidden></div>
 
-        <section id="figures-section" class="sidebar-section" aria-labelledby="figures-heading">
-          <h2 id="figures-heading">Figures</h2>
-          <div class="view-toggle toggle-group" role="radiogroup" aria-label="Results view">
-            <label class="is-active"><input type="radio" name="view" value="levels" checked> Levels</label>
-            <label><input type="radio" name="view" value="deviations"> Deviations</label>
-          </div>
-          <fieldset id="figure-picker-levels" class="figure-picker">
-            <legend class="sr-only">Levels figures shown</legend>
-          </fieldset>
-          <fieldset id="figure-picker-deviations" class="figure-picker" hidden>
-            <legend class="sr-only">Deviations figures shown</legend>
-          </fieldset>
-          <div class="figure-picker-actions">
-            <button type="button" id="figures-all" class="btn-text">Show all</button>
-            <button type="button" id="figures-none" class="btn-text">Hide all</button>
-          </div>
-        </section>
+        <div class="ctl-row">
+          <section id="figures-section" class="ctl-group ctl-show" aria-labelledby="figures-heading">
+            <h2 id="figures-heading" class="ctl-label">Show</h2>
+            <div class="ctl-ctrls">
+              <div class="view-toggle toggle-group" role="radiogroup" aria-label="Results view">
+                <label class="is-active"><input type="radio" name="view" value="levels" checked> Levels</label>
+                <label><input type="radio" name="view" value="deviations"> Deviations</label>
+              </div>
+              <div class="fig-menu">
+                <button type="button" id="figures-button" class="ctl-btn fig-button" aria-expanded="false" aria-controls="figures-panel">Figures</button>
+                <div id="figures-panel" class="fig-panel">
+                  <div class="fig-head"><span>Figures</span><button type="button" id="figures-done" class="fig-done">Done</button></div>
+                  <fieldset id="figure-picker-levels" class="figure-picker">
+                    <legend class="sr-only">Levels figures shown</legend>
+                  </fieldset>
+                  <fieldset id="figure-picker-deviations" class="figure-picker" hidden>
+                    <legend class="sr-only">Deviations figures shown</legend>
+                  </fieldset>
+                  <div class="figure-picker-actions">
+                    <button type="button" id="figures-all" class="btn-text">Show all</button>
+                    <button type="button" id="figures-none" class="btn-text">Hide all</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-        <section class="sidebar-section" aria-labelledby="export-heading">
-          <h2 id="export-heading">Export and Share</h2>
-          <div class="sidebar-actions">
-            <button type="button" id="download-zip" class="sidebar-download-btn">
-              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path fill="currentColor" d="M7 1h2v7.6l2.3-2.3 1.4 1.4L8 12.4 3.3 7.7l1.4-1.4L7 8.6zM2 13h12v2H2z"/></svg>
-              <span>Download data (CSV)</span>
-            </button>
-            <button type="button" id="copy-link" class="sidebar-download-btn">
-              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path fill="currentColor" d="M6.5 9.5 5.1 8.1l4.2-4.2a2.5 2.5 0 1 1 3.5 3.5L11 9.2 9.6 7.8l1.8-1.8a.5.5 0 0 0-.7-.7zM9.5 6.5l1.4 1.4-4.2 4.2a2.5 2.5 0 1 1-3.5-3.5L5 6.8l1.4 1.4-1.8 1.8a.5.5 0 0 0 .7.7z"/></svg>
-              <span>Copy link to this scenario</span>
-            </button>
-          </div>
-          <p id="copy-status" class="sidebar-note" role="status"></p>
-          <input id="share-url" class="share-url" type="text" readonly aria-label="Link to this scenario" hidden>
-        </section>
+          <section class="ctl-group ctl-download" aria-labelledby="export-heading">
+            <h2 id="export-heading" class="ctl-label">Download</h2>
+            <div class="ctl-ctrls">
+              <button type="button" id="download-zip" class="ctl-btn ctl-dl">
+                <svg aria-hidden="true" width="13" height="13" viewBox="0 0 16 16"><path fill="currentColor" d="M7 1h2v7.6l2.3-2.3 1.4 1.4L8 12.4 3.3 7.7l1.4-1.4L7 8.6zM2 13h12v2H2z"/></svg>
+                <span>CSV data</span>
+              </button>
+              <button type="button" id="copy-link" class="ctl-btn ctl-dl">
+                <svg aria-hidden="true" width="13" height="13" viewBox="0 0 16 16"><path fill="currentColor" d="M6.5 9.5 5.1 8.1l4.2-4.2a2.5 2.5 0 1 1 3.5 3.5L11 9.2 9.6 7.8l1.8-1.8a.5.5 0 0 0-.7-.7zM9.5 6.5l1.4 1.4-4.2 4.2a2.5 2.5 0 1 1-3.5-3.5L5 6.8l1.4 1.4-1.8 1.8a.5.5 0 0 0 .7.7z"/></svg>
+                <span>Copy link</span>
+              </button>
+            </div>
+            <p id="copy-status" class="ctl-note" role="status"></p>
+            <input id="share-url" class="share-url" type="text" readonly aria-label="Link to this scenario" hidden>
+          </section>
+        </div>
 
-        <p class="sidebar-version">Version 2.0</p>
         <p id="results-status" class="sr-only" role="status" aria-live="polite"></p>
       </aside>
 
@@ -257,7 +274,7 @@
 
   <!-- Vendored chart engine 1.15.0 (IIFE): sets window.BudgetLabChart before app.js runs. -->
   <script src="vendor/chart-engine/live.js?v=1.15.0"></script>
-  <script type="module" src="app.js?v=337ba4dc3b"></script>
+  <script type="module" src="app.js?v=457c92f797"></script>
   <script src="../../embed/v1/iframeResizer.contentWindow.min.js"></script>
 </body>
 </html>

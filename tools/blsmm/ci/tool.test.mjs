@@ -7,7 +7,7 @@ import { simulate, OUTPUT_COLUMNS } from '../vendor/blsmm-model/blsmm-model.js';
 import { INPUTS, PRESETS, buildShapeDelta, zeroInputDeltas, toModelDeltas, presetDeltas } from '../inputs.js';
 import {
   deriveResults, kpis, multiplierText, deviationSummaryText, deviationTable, summaryTable,
-  keyVariablesCsv, frameCsv, userDeltasCsv, srLevelDesc, scenarioNote,
+  keyVariablesCsv, frameCsv, userDeltasCsv, srLevelDesc, scenarioNote, scenarioStatus,
 } from '../results.js';
 import { LEVEL_CHARTS, DEV_CHARTS, levelChartData, devChartData } from '../charts.js';
 import { encodeState, decodeState } from '../share.js';
@@ -197,4 +197,18 @@ test('PNG scenario note: preset, custom inputs with size and years, baseline, fa
   assert.equal(scenarioNote(zeroInputDeltas(), false, null), 'Scenario: baseline (no changes).');
   const { spec } = levelChartData(LEVEL_CHARTS[0], { ...run(d), scenarioNote: 'x' });
   assert.equal(spec.note, 'x');
+});
+
+test('scenario controls: preset, baseline, and custom once inputs or fast expectations change', () => {
+  assert.deepEqual(scenarioStatus(preset('rapid_ai'), false, 'rapid_ai'), {
+    kind: 'preset', preset: 'rapid_ai', label: 'AI Adoption',
+    text: 'Productivity boost + labor-force participation decline (Karger et al.).',
+  });
+  // A preset with fast expectations is still that preset.
+  assert.equal(scenarioStatus(preset('rapid_ai'), true, 'rapid_ai').kind, 'preset');
+  assert.equal(scenarioStatus(zeroInputDeltas(), false, null).kind, 'baseline');
+  assert.equal(scenarioStatus(zeroInputDeltas(), true, null).kind, 'custom');
+  const d = zeroInputDeltas();
+  d.receipts[0] = 1;
+  assert.equal(scenarioStatus(d, false, null).kind, 'custom');
 });

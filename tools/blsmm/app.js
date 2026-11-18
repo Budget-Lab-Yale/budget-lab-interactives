@@ -6,18 +6,18 @@
  * commit of Budget-Lab-Small-Macro-Model, where CI holds it to the R model).
  * =========================================================================== */
 
-import { simulate, OUTPUT_COLUMNS } from './vendor/blsmm-model/blsmm-model.js?v=337ba4dc3b';
+import { simulate, OUTPUT_COLUMNS } from './vendor/blsmm-model/blsmm-model.js?v=457c92f797';
 import {
   INPUTS, PRESETS, SHAPES, buildShapeDelta, zeroInputDeltas, toModelDeltas, presetDeltas, hasNonZero,
-} from './inputs.js?v=337ba4dc3b';
+} from './inputs.js?v=457c92f797';
 import {
   deriveResults, kpis, multiplierText, deviationSummaryText, deviationTable, summaryTable,
-  outlaysIndirectText, primaryBalanceDerivedText, rfstarIndirectText, scenarioNote,
-} from './results.js?v=337ba4dc3b';
-import { LEVEL_CHARTS, DEV_CHARTS, createChartGrid } from './charts.js?v=337ba4dc3b';
-import { createBuilder } from './builder.js?v=337ba4dc3b';
-import { downloadZip } from './export.js?v=337ba4dc3b';
-import { encodeState, decodeState } from './share.js?v=337ba4dc3b';
+  outlaysIndirectText, primaryBalanceDerivedText, rfstarIndirectText, scenarioNote, scenarioStatus,
+} from './results.js?v=457c92f797';
+import { LEVEL_CHARTS, DEV_CHARTS, createChartGrid } from './charts.js?v=457c92f797';
+import { createBuilder } from './builder.js?v=457c92f797';
+import { downloadZip } from './export.js?v=457c92f797';
+import { encodeState, decodeState } from './share.js?v=457c92f797';
 
 const ASSET_V = new URL(import.meta.url).searchParams.get('v') || '';
 const $ = (id) => document.getElementById(id);
@@ -43,6 +43,8 @@ let chartTimer = null;
 let announceTimer = null;
 let lastHash = null;
 let hostLink = null;
+// Re-places an open Figures menu after the page changes height under it (set by setupFiguresMenu).
+let refreshFiguresMenu = () => {};
 
 // --------------------------------------------------------------------------
 // Recompute + render
@@ -100,12 +102,26 @@ function renderPanels() {
     rfstarIndirect: rfstarIndirectText(results),
   });
 
-  for (const btn of document.querySelectorAll('.btn-preset')) {
+  renderScenarioControls();
+}
+
+// The line under the scenario controls says what is running: a preset, the baseline, or the
+// reader's own inputs.
+function renderScenarioControls() {
+  for (const btn of $('preset-list').children) {
     const on = btn.dataset.preset === state.activePreset;
     btn.classList.toggle('is-active', on);
     btn.setAttribute('aria-pressed', String(on));
   }
-  $('open-builder').classList.toggle('is-active', !state.activePreset && hasNonZero(state.deltas));
+  const status = scenarioStatus(state.deltas, state.fast, state.activePreset);
+  const custom = status.kind === 'custom';
+  const builderBtn = $('open-builder');
+  builderBtn.classList.toggle('is-active', custom);
+  builderBtn.querySelector('span').textContent = custom ? 'Custom scenario (edit)' : 'Custom scenario';
+  $('reset').disabled = status.kind === 'baseline';
+  const strong = document.createElement('strong');
+  strong.textContent = `${status.label}:`;
+  $('scenario-desc').replaceChildren(strong, ` ${status.text}`);
 }
 
 function renderTable(table, model, cellClass) {
@@ -276,28 +292,20 @@ async function copyLink() {
 function buildPresets() {
   const list = $('preset-list');
   for (const p of PRESETS) {
-    const row = document.createElement('div');
-    row.className = 'preset-row';
     const btn = document.createElement('button');
     btn.type = 'button';
-    btn.className = 'btn btn-preset';
+    btn.className = 'ctl-btn';
     btn.dataset.preset = p.id;
     btn.setAttribute('aria-pressed', 'false');
     btn.textContent = p.label;
     btn.addEventListener('click', () => applyPreset(p));
-    const wrap = document.createElement('span');
-    wrap.className = 'info-wrap';
-    const info = document.createElement('button');
-    info.type = 'button';
-    info.className = 'info-trigger';
-    info.setAttribute('aria-label', `About ${p.label}`);
-    info.setAttribute('aria-expanded', 'false');
-    info.dataset.info = p.description;
-    info.textContent = '?';
-    wrap.append(info);
-    row.append(btn, wrap);
-    list.append(row);
+    list.append(btn);
   }
+  // On phones Custom scenario and Reset take the pill's height, which depends on how its labels
+  // wrap, so the two read as equals (styles.css "Controls").
+  new ResizeObserver(() => {
+    document.documentElement.style.setProperty('--pill-h', `${list.getBoundingClientRect().height}px`);
+  }).observe(list);
 }
 
 function setupTabs() {
@@ -337,8 +345,10 @@ function setupViewToggle() {
         $(`view-${view}`).hidden = state.view !== view;
         $(`figure-picker-${view}`).hidden = state.view !== view;
       }
+      updateFiguresButton();
       renderVisibleCharts();
       if (window.parentIFrame?.size) window.parentIFrame.size();
+      refreshFiguresMenu();
     });
   }
 }
@@ -354,7 +364,9 @@ function setupFigurePickers() {
     $(`view-${view}`).querySelector('.figures-empty').hidden = cells.some(({ cell }) => !cell.fig.hidden);
     stale[view] = true;
     renderVisibleCharts();
+    updateFiguresButton();
     if (window.parentIFrame?.size) window.parentIFrame.size();
+    refreshFiguresMenu();
   };
   const pickers = {};
   for (const view of ['levels', 'deviations']) {
@@ -374,6 +386,61 @@ function setupFigurePickers() {
   }
   $('figures-all').addEventListener('click', () => setShown(state.view, pickers[state.view], () => true));
   $('figures-none').addEventListener('click', () => setShown(state.view, pickers[state.view], () => false));
+  updateFiguresButton();
+}
+
+function updateFiguresButton() {
+  const boxes = [...$(`figure-picker-${state.view}`).querySelectorAll('input')];
+  $('figures-button').textContent = `Figures (${boxes.filter((b) => b.checked).length} of ${boxes.length})`;
+}
+
+// The Figures menu (toolbar and phone layouts; in the sidebar the checklist is always open).
+// Placement matters in the embed: the frame is only as tall as the page, so a panel that runs
+// past the end of the page would be cut off.
+function setupFiguresMenu() {
+  const menu = document.querySelector('.fig-menu');
+  const button = $('figures-button');
+  const panel = $('figures-panel');
+  const shell = document.querySelector('.tracker-shell');
+  const isOpen = () => menu.classList.contains('is-open');
+
+  const place = () => {
+    panel.style.marginLeft = '';
+    shell.style.paddingBottom = '';
+    if (isOpen()) {
+      // Keep the panel inside the controls horizontally.
+      const bar = document.querySelector('.tracker-sidebar').getBoundingClientRect();
+      const r = panel.getBoundingClientRect();
+      const over = r.right - (bar.right - 6);
+      if (over > 0) panel.style.marginLeft = `${-Math.min(over, r.left - (bar.left + 6))}px`;
+      // Make the page tall enough to hold it. Measure the body, as the embed's resizer does:
+      // scrollHeight already counts the open panel (absolutely positioned overflow).
+      const bs = getComputedStyle(document.body);
+      const contentBottom = document.body.offsetHeight + parseFloat(bs.marginTop) + parseFloat(bs.marginBottom);
+      const extra = panel.getBoundingClientRect().bottom + window.scrollY + 16 - contentBottom;
+      if (extra > 0) shell.style.paddingBottom = `${parseFloat(getComputedStyle(shell).paddingBottom) + extra}px`;
+    }
+    if (window.parentIFrame?.size) window.parentIFrame.size();
+    if (isOpen()) panel.scrollIntoView({ block: 'nearest' });
+  };
+  const setOpen = (open) => {
+    if (open === isOpen()) return;
+    menu.classList.toggle('is-open', open);
+    button.setAttribute('aria-expanded', String(open));
+    place();
+  };
+
+  button.addEventListener('click', () => setOpen(!isOpen()));
+  $('figures-done').addEventListener('click', () => { setOpen(false); button.focus(); });
+  document.addEventListener('click', (e) => { if (isOpen() && !menu.contains(e.target)) setOpen(false); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen()) { setOpen(false); button.focus(); }
+  });
+  window.addEventListener('resize', () => { if (isOpen()) place(); });
+  // Hiding or showing figures, or switching view, changes the page's height under an open panel.
+  refreshFiguresMenu = () => { if (isOpen()) requestAnimationFrame(place); };
+  // Widening into the sidebar layout hides the button: close the menu so no padding is left behind.
+  new ResizeObserver(() => { if (isOpen() && !button.offsetParent) setOpen(false); }).observe(shell);
 }
 
 // One "?" popover open at a time. A mouse opens it on hover; a click (or tap, or Enter) toggles it
@@ -474,6 +541,7 @@ async function boot() {
   grids.levels = createChartGrid($('grid-levels'), LEVEL_CHARTS, 'level');
   grids.deviations = createChartGrid($('grid-deviations'), DEV_CHARTS, 'dev');
   setupFigurePickers();
+  setupFiguresMenu();
 
   document.querySelector('.skip-link').addEventListener('click', (e) => {
     e.preventDefault();

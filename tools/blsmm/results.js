@@ -13,8 +13,8 @@
  * owner has been told. Do not "fix" it here without them.
  * =========================================================================== */
 
-import { fixed, signed } from './format.js?v=337ba4dc3b';
-import { INPUTS, INPUT_BY_KEY, PRESETS, SUMMARY_ORDER, EXPORT_ORDER, FY_LABELS } from './inputs.js?v=337ba4dc3b';
+import { fixed, signed } from './format.js?v=457c92f797';
+import { INPUTS, INPUT_BY_KEY, PRESETS, SUMMARY_ORDER, EXPORT_ORDER, FY_LABELS, hasNonZero } from './inputs.js?v=457c92f797';
 
 const NA = null;
 const isNA = (v) => v === null || v === undefined || Number.isNaN(v);
@@ -139,6 +139,19 @@ export function deriveResults(modelData, baseSim, scenSim, outputColumns, shock)
 // --------------------------------------------------------------------------
 // KPIs
 // --------------------------------------------------------------------------
+
+/**
+ * What the scenario controls show: which starting point is active ('preset', 'baseline', or
+ * 'custom' once inputs are the reader's own) and the line under them.
+ */
+export function scenarioStatus(deltas, fast, activePreset) {
+  const preset = PRESETS.find((p) => p.id === activePreset);
+  if (preset) return { kind: 'preset', preset: preset.id, label: preset.label, text: preset.description };
+  if (!hasNonZero(deltas) && !fast) {
+    return { kind: 'baseline', preset: null, label: 'Baseline', text: 'no inputs changed. Pick a preset or build a custom scenario.' };
+  }
+  return { kind: 'custom', preset: null, label: 'Custom', text: 'your own inputs. The Scenario Summary tab lists them.' };
+}
 
 /**
  * The scenario line on every PNG download, so an exported chart says what it shows:

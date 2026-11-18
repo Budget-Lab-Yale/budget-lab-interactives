@@ -17,4 +17,8 @@ Entries are added at release. Snapshots: `node tools/blsmm/scripts/make-snapshot
   the same year on the others; PNG downloads carry the source line and a scenario note (preset, or
   each changed input with its size and years). Version 2.0. Headline numbers drawn as open stats;
   "?" notes open on hover. Two chart columns at every laptop embed width (the Shiny app showed one),
-  three on a wide standalone screen. Launch snapshot at `versions/<launch date>/`.
+  three on a wide standalone screen. Controls: Custom scenario, the presets as one divided pill
+  (a line under them describes the active scenario, replacing the presets' "?" notes) and Reset;
+  then Show and Download. They sit in a sidebar beside the charts, become a two-row toolbar above
+  them below about 1100px, and a phone toolbar with a full-width Figures panel.
+  Launch snapshot at `versions/<launch date>/`.
