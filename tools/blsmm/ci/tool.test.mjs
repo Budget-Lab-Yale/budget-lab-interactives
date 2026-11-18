@@ -55,16 +55,20 @@ test('presets load from the model data at full precision, unlisted inputs zero',
   assert.equal(preset('persistent_infl').inflation_shock[2], 0.3);
 });
 
-test('baseline: zero deviations, baseline-only charts, baseline texts', () => {
+test('baseline: zero deviations, scenario keyed but not drawn, baseline texts', () => {
   const r = run(zeroInputDeltas(), false, true);
-  assert.ok(r.baselineOnly);
   assert.deepEqual(kpis(r), { finalDebt: '+0.00 pp', maxUnemployment: '+0.00 pp' });
   assert.match(multiplierText(r), /^No shock specified/);
   assert.match(deviationSummaryText(r), /^Baseline scenario - no shocks applied/);
   const { spec, rows } = levelChartData(LEVEL_CHARTS.find((c) => c.id === 'plot_unemployment'), r);
-  assert.deepEqual(spec.series_order, ['Baseline']);
-  assert.equal(spec.series_styles, undefined);
-  assert.equal(rows.length, 11);
+  assert.deepEqual(spec.series_order, ['Baseline', 'Scenario']);
+  assert.deepEqual(spec.series_styles, { Baseline: { dashed: true } });
+  assert.equal(spec.source, 'The Budget Lab Small Macro Model');
+  assert.equal(rows.length, 22);
+  assert.ok(rows.filter((row) => row.series === 'Baseline').every((row) => row.value !== ''));
+  assert.ok(rows.filter((row) => row.series === 'Scenario').every((row) => row.value === ''));
+  const moved = levelChartData(LEVEL_CHARTS.find((c) => c.id === 'plot_unemployment'), run(preset('rapid_ai'))).rows;
+  assert.ok(moved.filter((row) => row.series === 'Scenario').every((row) => row.value !== ''));
 });
 
 // Full precision, matching the R scenario files and the article figures. (The
@@ -73,7 +77,6 @@ test('presets match the R scenario runs', () => {
   const r = run(preset('rapid_ai'));
   assert.deepEqual(kpis(r), { finalDebt: '-4.92 pp', maxUnemployment: '+0.03 pp' });
   assert.deepEqual(kpis(run(preset('military_conflict'))), { finalDebt: '+8.06 pp', maxUnemployment: '-0.36 pp' });
-  assert.equal(r.baselineOnly, false);
   assert.match(multiplierText(r), /^Growth Shock {2}LF Growth \+ Productivity/);
 });
 

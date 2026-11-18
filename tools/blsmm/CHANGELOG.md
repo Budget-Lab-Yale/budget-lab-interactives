@@ -9,4 +9,8 @@ Entries are added at release. Snapshots: `node tools/blsmm/scripts/make-snapshot
   and there is no Run button. Inputs run at full precision, so presets match the R scenario files
   and article figures (the Shiny app rounded every input to 0.01). Same inputs, presets, charts, tables and texts as the Shiny app;
   export is one zip of CSV files (the old CSV file plus the old Excel workbook's sheets); new
-  shareable scenario links. Launch snapshot at `versions/<launch date>/`.
+  shareable scenario links (embedded with `data-deep-link`, they open the article rather than the
+  standalone tool). Figures: Levels/Deviations and a per-figure checklist in the sidebar; baseline always
+  dashed, and the legend always shown, including at baseline (where only the baseline is drawn);
+  two-variable legends one variable per row; chart cards the same height; hovering a chart marks
+  the same year on the others; PNG downloads carry the source line. Launch snapshot at `versions/<launch date>/`.

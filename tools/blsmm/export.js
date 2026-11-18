@@ -1,12 +1,12 @@
 /* ===========================================================================
- * "Download data (.zip)": the Shiny app's two exports in one archive.
+ * "Download data (CSV)": the Shiny app's two exports in one archive.
  *   key_variables.csv  — the old "Export to CSV" file
  *   baseline.csv, scenario.csv, deviations.csv, parameters.csv,
  *   user_deltas.csv    — the old Excel workbook's five sheets
  * =========================================================================== */
 
-import { zipStore } from './zip-store.js?v=782a1bb3ec';
-import { keyVariablesCsv, frameCsv, parametersCsv, userDeltasCsv } from './results.js?v=782a1bb3ec';
+import { zipStore } from './zip-store.js?v=9afdf27d27';
+import { keyVariablesCsv, frameCsv, parametersCsv, userDeltasCsv } from './results.js?v=9afdf27d27';
 
 export function exportFiles(r, deltas) {
   return [

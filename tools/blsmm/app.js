@@ -6,18 +6,18 @@
  * commit of Budget-Lab-Small-Macro-Model, where CI holds it to the R model).
  * =========================================================================== */
 
-import { simulate, OUTPUT_COLUMNS } from './vendor/blsmm-model/blsmm-model.js?v=782a1bb3ec';
+import { simulate, OUTPUT_COLUMNS } from './vendor/blsmm-model/blsmm-model.js?v=9afdf27d27';
 import {
   INPUTS, PRESETS, SHAPES, buildShapeDelta, zeroInputDeltas, toModelDeltas, presetDeltas, hasNonZero,
-} from './inputs.js?v=782a1bb3ec';
+} from './inputs.js?v=9afdf27d27';
 import {
   deriveResults, kpis, multiplierText, deviationSummaryText, deviationTable, summaryTable,
   outlaysIndirectText, primaryBalanceDerivedText, rfstarIndirectText,
-} from './results.js?v=782a1bb3ec';
-import { LEVEL_CHARTS, DEV_CHARTS, createChartGrid } from './charts.js?v=782a1bb3ec';
-import { createBuilder } from './builder.js?v=782a1bb3ec';
-import { downloadZip } from './export.js?v=782a1bb3ec';
-import { encodeState, decodeState } from './share.js?v=782a1bb3ec';
+} from './results.js?v=9afdf27d27';
+import { LEVEL_CHARTS, DEV_CHARTS, createChartGrid } from './charts.js?v=9afdf27d27';
+import { createBuilder } from './builder.js?v=9afdf27d27';
+import { downloadZip } from './export.js?v=9afdf27d27';
+import { encodeState, decodeState } from './share.js?v=9afdf27d27';
 
 const ASSET_V = new URL(import.meta.url).searchParams.get('v') || '';
 const $ = (id) => document.getElementById(id);
@@ -42,6 +42,7 @@ const stale = { levels: true, deviations: true };
 let chartTimer = null;
 let announceTimer = null;
 let lastHash = null;
+let hostLink = null;
 
 // --------------------------------------------------------------------------
 // Recompute + render
@@ -141,7 +142,7 @@ function renderVisibleCharts() {
   if (state.tab !== 'results' || !results) return 0;
   const view = state.view;
   if (!stale[view]) return 0;
-  const failed = grids[view](results);
+  const failed = grids[view].render(results);
   stale[view] = false;
   if (window.parentIFrame?.size) window.parentIFrame.size();
   return failed;
@@ -212,8 +213,31 @@ function readHash() {
   applyScenario(decoded ?? { deltas: zeroInputDeltas(), fast: false, activePreset: null });
 }
 
+// Embedded with the loader's data-deep-link, the host page sends its URL, and
+// a copied link opens the article at "#<key>:<state>" instead of this page.
+function requestHostLink() {
+  if (window.parent === window) return;
+  window.addEventListener('message', (e) => {
+    if (e.source !== window.parent) return;
+    const m = e.data;
+    if (!m || m.type !== 'TBL_EMBED_HOST' || typeof m.url !== 'string' || !/^[a-z0-9-]+$/.test(m.key)) return;
+    let u;
+    try { u = new URL(m.url); } catch { return; }
+    if (u.protocol !== 'https:' && u.protocol !== 'http:') return;
+    u.hash = '';
+    hostLink = { url: u.href, key: m.key };
+  });
+  window.parent.postMessage({ type: 'TBL_EMBED_HOST_REQUEST' }, '*');
+}
+
+function shareUrl() {
+  if (!hostLink) return location.href;
+  const h = location.hash.replace(/^#/, '');
+  return h ? `${hostLink.url}#${hostLink.key}:${h}` : hostLink.url;
+}
+
 async function copyLink() {
-  const url = location.href;
+  const url = shareUrl();
   const status = $('copy-status');
   const field = $('share-url');
   let ok = false;
@@ -285,6 +309,7 @@ function setupTabs() {
       $(t.getAttribute('aria-controls')).hidden = !on;
     }
     state.tab = tab.id.replace('tab-', '');
+    $('figures-section').hidden = state.tab !== 'results';
     if (focus) tab.focus();
     renderVisibleCharts();
     if (window.parentIFrame?.size) window.parentIFrame.size();
@@ -307,12 +332,47 @@ function setupViewToggle() {
       for (const r of document.querySelectorAll('input[name="view"]')) {
         r.closest('label').classList.toggle('is-active', r.checked);
       }
-      $('view-levels').hidden = state.view !== 'levels';
-      $('view-deviations').hidden = state.view !== 'deviations';
+      for (const view of ['levels', 'deviations']) {
+        $(`view-${view}`).hidden = state.view !== view;
+        $(`figure-picker-${view}`).hidden = state.view !== view;
+      }
       renderVisibleCharts();
       if (window.parentIFrame?.size) window.parentIFrame.size();
     });
   }
+}
+
+// Figures: one checkbox per chart in each view. Hidden charts are not drawn;
+// showing one redraws its view.
+function setupFigurePickers() {
+  const setShown = (view, cells, shown) => {
+    for (const { cell, box } of cells) {
+      cell.fig.hidden = !shown(cell);
+      box.checked = !cell.fig.hidden;
+    }
+    $(`view-${view}`).querySelector('.figures-empty').hidden = cells.some(({ cell }) => !cell.fig.hidden);
+    stale[view] = true;
+    renderVisibleCharts();
+    if (window.parentIFrame?.size) window.parentIFrame.size();
+  };
+  const pickers = {};
+  for (const view of ['levels', 'deviations']) {
+    const fieldset = $(`figure-picker-${view}`);
+    pickers[view] = grids[view].cells.map((cell) => {
+      const label = document.createElement('label');
+      const box = document.createElement('input');
+      box.type = 'checkbox';
+      box.checked = true;
+      label.append(box, ` ${cell.def.title.replace(/ deviation from baseline$/, '')}`);
+      fieldset.append(label);
+      return { cell, box };
+    });
+    for (const { cell, box } of pickers[view]) {
+      box.addEventListener('change', () => setShown(view, pickers[view], (c) => (c === cell ? box.checked : !c.fig.hidden)));
+    }
+  }
+  $('figures-all').addEventListener('click', () => setShown(state.view, pickers[state.view], () => true));
+  $('figures-none').addEventListener('click', () => setShown(state.view, pickers[state.view], () => false));
 }
 
 // One "?" popover open at a time; outside click or Escape closes it.
@@ -379,6 +439,7 @@ async function boot() {
   setupInfoPopovers();
   grids.levels = createChartGrid($('grid-levels'), LEVEL_CHARTS, 'level');
   grids.deviations = createChartGrid($('grid-deviations'), DEV_CHARTS, 'dev');
+  setupFigurePickers();
 
   document.querySelector('.skip-link').addEventListener('click', (e) => {
     e.preventDefault();
@@ -387,6 +448,7 @@ async function boot() {
   $('reset').addEventListener('click', reset);
   $('download-zip').addEventListener('click', () => downloadZip(results, state.deltas));
   $('copy-link').addEventListener('click', copyLink);
+  requestHostLink();
   // Same-page links (the skip link) also change the hash: only a hash that
   // holds a scenario, or an emptied one, replaces the current scenario.
   window.addEventListener('hashchange', () => {

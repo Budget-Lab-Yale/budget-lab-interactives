@@ -3,15 +3,19 @@
  * app/R/blsmm_plots_v1_8.R and the dev_plot_* outputs in blsmm_server.R.
  *
  * Levels charts plot FY2025 (history) to FY2035, baseline dashed and scenario
- * solid in the same colour. When the scenario equals the baseline only the
- * baseline is drawn, solid. Two-variable charts use blue for the first
- * variable and amber for the second. Deviations charts plot FY2026-FY2035.
+ * solid in the same colour. Scenario is always keyed, so the legend shows at
+ * baseline too, but not drawn where it equals the baseline (the Shiny app drew
+ * only the baseline there, solid). Two-variable charts use blue for the first
+ * variable and amber for the second.
+ * Deviations charts plot FY2026-FY2035.
+ *
+ * Every chart's PNG download carries SOURCE; it is hidden on screen.
  *
  * chartData() and the definitions are pure; mountCharts() needs the vendored
  * engine (window.BudgetLabChart).
  * =========================================================================== */
 
-import { srLevelDesc, srDevDesc, isNA } from './results.js?v=782a1bb3ec';
+import { srLevelDesc, srDevDesc, isNA } from './results.js?v=9afdf27d27';
 
 const pctOfGdp = (num, den) => (c, i) => (c[num][i] / c[den][i]) * 100;
 const potentialToActual = (col) => (c, i) => c[col][i] * (c.GDPstar[i] / c.GDP[i]);
@@ -73,7 +77,7 @@ export const LEVEL_CHARTS = [
     suffix: '%', decimals: 2,
     vars: [
       { name: 'Nominal 10Y', value: (c, i) => c.R10[i] },
-      { name: 'Real 10Y', value: (c, i) => c.R10[i] - c.PI[i] },
+      { name: 'Real 10Y', value: (c, i) => c.R10[i] - c.PI[i], secondary: true },
     ],
     caption: `Chart: 10-year Treasury yield (nominal and real), ${FIG}`,
     sr: { decimals: 2, unit: ' percent', label: 'Nominal 10-year Treasury yield', value: (c, i) => c.R10[i] },
@@ -81,10 +85,9 @@ export const LEVEL_CHARTS = [
   {
     id: 'plot_federal_funds', title: 'Federal Funds rate', subtitle: 'Percent',
     suffix: '%', decimals: 2,
-    // r* is the second (amber) variable but is listed first, as in the Shiny legend.
     vars: [
-      { name: 'r*', value: (c, i) => c.rfstar[i], secondary: true },
       { name: 'Fed Funds', value: (c, i) => c.RF[i] },
+      { name: 'r*', value: (c, i) => c.rfstar[i], secondary: true },
     ],
     caption: `Chart: Federal Funds rate and neutral rate (r-star), ${FIG}`,
     sr: { decimals: 2, unit: ' percent', label: 'Federal Funds rate', value: (c, i) => c.RF[i] },
@@ -183,6 +186,7 @@ export const DEV_CHARTS = [
 const shortFy = (label) => `FY${label.slice(-2)}`;
 const fullFyLabels = (labels) => Object.fromEntries(labels.map((l) => [shortFy(l), l]));
 
+const SOURCE = 'The Budget Lab Small Macro Model';
 const PRIMARY = 'blue';
 const SECONDARY = 'amber';
 
@@ -199,17 +203,20 @@ export function levelChartData(def, r) {
   for (const v of def.vars) {
     const color = v.secondary ? SECONDARY : PRIMARY;
     const named = (suffix) => (single ? suffix : `${v.name} (${suffix})`);
-    const lines = r.baselineOnly
-      ? [[single ? 'Baseline' : v.name, b, false]]
-      : [[named('Baseline'), b, true], [named('Scenario'), s, false]];
-    for (const [name, cols, dashed] of lines) {
+    const base = idx.map((i) => v.value(b, i));
+    const scen = idx.map((i) => v.value(s, i));
+    // A scenario that leaves this variable unchanged draws no solid line over the dashed
+    // baseline; its legend entry stays.
+    const unchanged = scen.every((y, k) => y === base[k] || (isNA(y) && isNA(base[k])));
+    const lines = [[named('Baseline'), base, true], [named('Scenario'), unchanged ? null : scen, false]];
+    for (const [name, vals, dashed] of lines) {
       order.push(name);
       colors[name] = color;
       if (dashed) styles[name] = { dashed: true };
-      for (const i of idx) {
-        const y = v.value(cols, i);
-        rows.push({ year: shortFy(cols.fy_label[i]), series: name, value: isNA(y) ? '' : String(y) });
-      }
+      idx.forEach((i, k) => {
+        const y = vals ? vals[k] : NaN;
+        rows.push({ year: shortFy(b.fy_label[i]), series: name, value: isNA(y) ? '' : String(y) });
+      });
     }
   }
   const spec = {
@@ -223,10 +230,11 @@ export function levelChartData(def, r) {
     x_labels: fullFyLabels(idx.map((i) => b.fy_label[i])),
     series_order: order,
     series_colors: colors,
+    series_styles: styles,
     value_suffix: def.suffix,
     tooltip_decimals: def.decimals,
+    source: SOURCE,
   };
-  if (Object.keys(styles).length) spec.series_styles = styles;
   return { spec, rows };
 }
 
@@ -251,6 +259,7 @@ export function devChartData(def, r) {
     value_suffix: ' pp',
     tooltip_decimals: def.decimals,
     yAxisPolicy: { includeZero: true },
+    source: SOURCE,
   };
   return { spec, rows };
 }
@@ -271,7 +280,11 @@ export function devDescription(def, r) {
 // DOM
 // --------------------------------------------------------------------------
 
-/** Build one <figure> per chart in `grid`; returns a render(r) function. */
+// On-screen plot height (axes included, legend and title above it); the engine default is 400.
+// The Image download sizes itself, so this does not change the PNG.
+const CHART_HEIGHT = 280;
+
+/** Build one <figure> per chart in `grid`. Returns {cells, render(r)}; render skips hidden figures. */
 export function createChartGrid(grid, defs, kind) {
   const engine = () => {
     const e = window.BudgetLabChart;
@@ -280,7 +293,7 @@ export function createChartGrid(grid, defs, kind) {
   };
   const cells = defs.map((def) => {
     const fig = document.createElement('figure');
-    fig.className = 'chart-cell';
+    fig.className = def.vars?.length > 1 ? 'chart-cell chart-cell-paired' : 'chart-cell';
     fig.setAttribute('aria-labelledby', `fig_${def.id}_label`);
     const cap = document.createElement('figcaption');
     cap.id = `fig_${def.id}_label`;
@@ -292,30 +305,141 @@ export function createChartGrid(grid, defs, kind) {
     mount.className = 'chart-mount';
     fig.append(cap, desc, mount);
     grid.appendChild(fig);
-    return { def, desc, mount, teardown: null };
+    return { def, fig, desc, mount, teardown: null, chart: null, height: CHART_HEIGHT };
   });
 
+  function mount(cell) {
+    if (cell.teardown) { try { cell.teardown(); } catch { /* engine teardown is best-effort */ } }
+    cell.teardown = null;
+    cell.mount.replaceChildren();
+    try {
+      cell.teardown = engine().mountChart(cell.mount, { ...cell.chart, height: cell.height });
+      return true;
+    } catch (e) {
+      console.error(e);
+      cell.chart = null;
+      const err = document.createElement('div');
+      err.className = 'figure-error';
+      err.textContent = `Could not render: ${e.message}`;
+      cell.mount.replaceChildren(err);
+      return false;
+    }
+  }
+
   // Returns the number of charts that failed to render.
-  return function render(r) {
+  function render(r) {
     let failed = 0;
     for (const cell of cells) {
       const { def } = cell;
-      if (cell.teardown) { try { cell.teardown(); } catch { /* engine teardown is best-effort */ } }
-      cell.mount.replaceChildren();
+      // A hidden figure has no width to size the chart from; it is drawn when shown again.
+      if (cell.fig.hidden) continue;
       const { spec, rows } = kind === 'level' ? levelChartData(def, r) : devChartData(def, r);
       cell.desc.textContent = kind === 'level' ? levelDescription(def, r) : devDescription(def, r);
-      try {
-        cell.teardown = engine().mountChart(cell.mount, { spec, rows, downloadName: `blsmm-${def.id.replace(/^(dev_)?plot_/, '$1')}` });
-      } catch (e) {
-        console.error(e);
-        cell.teardown = null;
-        failed++;
-        const err = document.createElement('div');
-        err.className = 'figure-error';
-        err.textContent = `Could not render: ${e.message}`;
-        cell.mount.replaceChildren(err);
+      cell.chart = { spec, rows, downloadName: `blsmm-${def.id.replace(/^(dev_)?plot_/, '$1')}` };
+      if (!mount(cell)) failed++;
+    }
+    fitHeights();
+    return failed;
+  }
+
+  // Cards are the same height across the grid. A chart whose title wraps, or whose legend takes
+  // two rows, gives that height up from its plot rather than growing its card.
+  function fitHeights() {
+    const live = cells.filter((c) => !c.fig.hidden && c.chart);
+    const extra = new Map();
+    for (const cell of live) {
+      const card = cell.mount.querySelector('.figure-card');
+      const svg = cell.mount.querySelector('svg.tblchart');
+      if (!card || !svg || !card.offsetHeight) return;
+      extra.set(cell, card.getBoundingClientRect().height - svg.getBoundingClientRect().height);
+    }
+    const least = Math.min(...extra.values());
+    for (const [cell, e] of extra) {
+      const height = CHART_HEIGHT - Math.round(e - least);
+      if (height !== cell.height) {
+        cell.height = height;
+        mount(cell);
       }
     }
-    return failed;
+  }
+  let gridWidth = 0;
+  let fitTimer;
+  new ResizeObserver(([entry]) => {
+    const w = entry.contentRect.width;
+    if (w && w !== gridWidth) {
+      gridWidth = w;
+      clearTimeout(fitTimer);
+      fitTimer = setTimeout(fitHeights, 150);
+    }
+  }).observe(grid);
+
+  attachCursor(grid, cells);
+  return { cells, render };
+}
+
+// --------------------------------------------------------------------------
+// Coordinated cursor: hovering one chart shows a guide at the same fiscal year on every other
+// visible chart in the grid. The engine draws the hovered chart's own guide and hover card; the
+// echoes are drawn here, matched by the x-axis label, in the engine's guide style.
+// --------------------------------------------------------------------------
+
+const ECHO = 'blsmm-cursor-echo';
+
+/** x position (SVG units) of each x-axis label in a chart, keyed by its text (FY26). */
+function categoryXs(svg) {
+  const xs = new Map();
+  for (const t of svg.querySelectorAll('text')) {
+    const label = t.textContent.trim();
+    if (!/^FY\d\d$/.test(label)) continue;
+    const m = t.getCTM();
+    if (m) xs.set(label, m.e);
+  }
+  return xs;
+}
+
+function attachCursor(grid, cells) {
+  // Keyed by the hovered SVG as well as the year: moving straight to another chart at the same
+  // year moves the echoes, and a re-rendered chart is a new SVG.
+  let active = null;
+
+  const clear = () => {
+    for (const line of grid.querySelectorAll(`.${ECHO}`)) line.remove();
+    active = null;
   };
+
+  const show = (source, label) => {
+    if (active && active.source === source && active.label === label) return;
+    clear();
+    active = { source, label };
+    for (const cell of cells) {
+      if (cell.fig.hidden) continue;
+      const svg = cell.mount.querySelector('svg.tblchart');
+      const guide = svg?.querySelector('.tbl-catline-guide');
+      if (!svg || svg === source || !guide) continue;
+      const x = categoryXs(svg).get(label);
+      if (x === undefined) continue;
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('class', ECHO);
+      for (const a of ['stroke', 'stroke-dasharray', 'y1', 'y2']) line.setAttribute(a, guide.getAttribute(a));
+      line.setAttribute('x1', x);
+      line.setAttribute('x2', x);
+      line.style.pointerEvents = 'none';
+      guide.before(line);
+    }
+  };
+
+  grid.addEventListener('pointermove', (e) => {
+    const svg = e.target.closest?.('svg.tblchart');
+    const ctm = svg?.getScreenCTM();
+    if (!svg || !ctm) { clear(); return; }
+    const px = new DOMPoint(e.clientX, e.clientY).matrixTransform(ctm.inverse()).x;
+    let best = null;
+    let dist = Infinity;
+    for (const [label, x] of categoryXs(svg)) {
+      if (Math.abs(x - px) < dist) { dist = Math.abs(x - px); best = label; }
+    }
+    if (best) show(svg, best); else clear();
+  });
+  grid.addEventListener('pointerleave', clear);
+  grid.addEventListener('pointercancel', clear);
 }

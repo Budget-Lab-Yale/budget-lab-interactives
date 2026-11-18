@@ -129,6 +129,10 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   padding: 20px;
   position: sticky;
   top: 12px;
+  /* Keep every section reachable when the sidebar is taller than the window (standalone page). */
+  max-height: calc(100vh - 24px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .tracker-sidebar .sidebar-section { margin-bottom: 22px; }
 .tracker-sidebar h2 {
@@ -209,6 +213,32 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 }
 .sidebar-download-btn:hover,
 .sidebar-download-btn:focus-visible { border-color: var(--tbl-navy); color: #fff; background: var(--tbl-navy); }
+.sidebar-actions { display: flex; flex-direction: column; gap: 8px; }
+
+.figure-picker { margin: 0; padding: 0; border: none; min-width: 0; }
+.figure-picker label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 3px 0;
+  font-size: 13px;
+  line-height: 1.3;
+  color: var(--tbl-text-heading);
+  cursor: pointer;
+}
+.figure-picker input { flex-shrink: 0; width: 15px; height: 15px; margin: 1px 0 0; accent-color: var(--tbl-navy); }
+.figure-picker-actions { display: flex; gap: 14px; margin-top: 6px; }
+.btn-text {
+  appearance: none;
+  padding: 0;
+  border: none;
+  background: none;
+  font: var(--tw-semi) 12px/1.4 var(--tbl-font-sans);
+  color: var(--tbl-blue);
+  cursor: pointer;
+}
+.btn-text:hover { text-decoration: underline; }
+.figures-empty { margin: 0; padding: 24px 12px; text-align: center; font-size: 14px; color: var(--tbl-text-muted); border: 1px dashed var(--tbl-border); border-radius: 8px; }
 .share-url {
   width: 100%;
   font: 12px var(--tbl-font-mono);
@@ -307,7 +337,7 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   overflow: hidden;
   background: var(--tbl-bg);
 }
-.view-toggle { max-width: 420px; margin-bottom: 20px; }
+.view-toggle { margin-bottom: 10px; }
 .toggle-group label {
   flex: 1;
   margin: 0;
@@ -329,19 +359,31 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
 /* --- Chart grid ----------------------------------------------------------- */
 .chart-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
-  gap: 16px;
+  /* 412px = the engine's 390px minimum plot width (narrower scrolls sideways) plus padding and border. */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 412px), 1fr));
+  gap: 10px;
 }
 .chart-cell {
   margin: 0;
   min-width: 0;
   border: 1px solid var(--tbl-border);
   border-radius: 8px;
-  padding: 14px 16px 10px;
+  padding: 10px 10px 8px;
   background: var(--tbl-bg);
 }
 /* The page header carries the logo; hide the engine's per-figure copy on screen (PNG export keeps it). */
 .chart-cell .figure-logo { display: none; }
+/* Compact figure chrome so more charts fit on screen. These charts carry no source or note, so the
+   Data/Image buttons sit in one row instead of stacking under the engine's narrow-card rule. */
+.chart-cell .figure-title { font-size: 16px; }
+.chart-cell .figure-subtitle { margin-bottom: 4px; font-size: 12px; }
+.chart-cell .figure-meta { margin-top: 4px; justify-content: flex-end; }
+.chart-cell .figure-downloads { flex-direction: row; }
+/* The source line is for the PNG download (the export redraws from the spec, not the page). */
+.chart-cell .figure-source { display: none; }
+/* Two-variable charts key one variable per legend row (blue over amber). */
+.chart-cell-paired .tbl-legend { display: grid; grid-template-columns: repeat(2, max-content); }
+.chart-cell-paired .tbl-legend-reset { grid-area: 1 / 3; }
 .figure-error {
   padding: 40px 12px;
   text-align: center;
@@ -583,6 +625,8 @@ html.iframed .tracker-shell { padding: 16px 16px 24px; }
   .tracker-body { grid-template-columns: 1fr; }
   .tracker-sidebar {
     position: static;
+    max-height: none;
+    overflow: visible;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     column-gap: 24px;

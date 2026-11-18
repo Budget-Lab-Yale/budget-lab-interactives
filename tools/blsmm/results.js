@@ -13,8 +13,8 @@
  * owner has been told. Do not "fix" it here without them.
  * =========================================================================== */
 
-import { fixed, signed } from './format.js?v=782a1bb3ec';
-import { INPUT_BY_KEY, SUMMARY_ORDER, EXPORT_ORDER, FY_LABELS } from './inputs.js?v=782a1bb3ec';
+import { fixed, signed } from './format.js?v=9afdf27d27';
+import { INPUT_BY_KEY, SUMMARY_ORDER, EXPORT_ORDER, FY_LABELS } from './inputs.js?v=9afdf27d27';
 
 const NA = null;
 const isNA = (v) => v === null || v === undefined || Number.isNaN(v);
@@ -32,23 +32,6 @@ const mean = (xs) => {
   return v.reduce((s, x) => s + x, 0) / v.length;
 };
 const last = (xs) => xs[xs.length - 1];
-
-// R's all.equal() for numeric vectors, as in the model port.
-export function rAllEqual(target, current, tolerance = 1.5e-8) {
-  const t = [];
-  const c = [];
-  for (let i = 0; i < target.length; i++) {
-    if (target[i] !== current[i]) { t.push(target[i]); c.push(current[i]); }
-  }
-  if (t.length === 0) return true;
-  let xy = 0;
-  let xn = 0;
-  for (let i = 0; i < t.length; i++) { xy += Math.abs(t[i] - c[i]); xn += Math.abs(t[i]); }
-  xy /= t.length;
-  xn /= t.length;
-  if (Number.isFinite(xn) && xn > tolerance) xy /= xn;
-  return !(Number.isNaN(xy) || xy > tolerance);
-}
 
 // A frame is column arrays plus an explicit column order: the export writes
 // columns in the order R's data frames had them.
@@ -150,8 +133,6 @@ export function deriveResults(modelData, baseSim, scenSim, outputColumns, shock)
     baselineHist: hist.baseline, scenarioHist: hist.scenario,
     shock,
     params: modelData.params,
-    // is_baseline_only(): compares unemployment, history row included.
-    baselineOnly: rAllEqual(hist.baseline.cols.U, hist.scenario.cols.U, 1e-10),
   };
 }
 

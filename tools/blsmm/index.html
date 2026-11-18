@@ -13,7 +13,7 @@
   <!-- Vendored chart engine 1.15.0 (see vendor/chart-engine/). Bump ?v= with VERSION. -->
   <link rel="stylesheet" href="vendor/chart-engine/chart-engine.css?v=1.15.0">
   <!-- ?v= on styles.css and app.js is a content hash written by scripts/stamp-assets.mjs. -->
-  <link rel="stylesheet" href="styles.css?v=782a1bb3ec">
+  <link rel="stylesheet" href="styles.css?v=9afdf27d27">
 
   <script>
     if (window.self !== window.top) document.documentElement.classList.add('iframed');
@@ -52,21 +52,36 @@
 
         <div id="solver-warning" class="solver-warning" role="alert" hidden></div>
 
-        <section class="sidebar-section" aria-labelledby="export-heading">
-          <h2 id="export-heading">Export Results</h2>
-          <button type="button" id="download-zip" class="sidebar-download-btn" aria-describedby="export-note">
-            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path fill="currentColor" d="M7 1h2v7.6l2.3-2.3 1.4 1.4L8 12.4 3.3 7.7l1.4-1.4L7 8.6zM2 13h12v2H2z"/></svg>
-            <span>Download data (.zip)</span>
-          </button>
-          <p id="export-note" class="sidebar-note">CSV files with every model variable for the baseline, the scenario and the deviations, plus the parameters and your inputs.</p>
+        <section id="figures-section" class="sidebar-section" aria-labelledby="figures-heading">
+          <h2 id="figures-heading">Figures</h2>
+          <div class="view-toggle toggle-group" role="radiogroup" aria-label="Results view">
+            <label class="is-active"><input type="radio" name="view" value="levels" checked> Levels</label>
+            <label><input type="radio" name="view" value="deviations"> Deviations</label>
+          </div>
+          <fieldset id="figure-picker-levels" class="figure-picker">
+            <legend class="sr-only">Levels figures shown</legend>
+          </fieldset>
+          <fieldset id="figure-picker-deviations" class="figure-picker" hidden>
+            <legend class="sr-only">Deviations figures shown</legend>
+          </fieldset>
+          <div class="figure-picker-actions">
+            <button type="button" id="figures-all" class="btn-text">Show all</button>
+            <button type="button" id="figures-none" class="btn-text">Hide all</button>
+          </div>
         </section>
 
-        <section class="sidebar-section" aria-labelledby="share-heading">
-          <h2 id="share-heading">Share</h2>
-          <button type="button" id="copy-link" class="sidebar-download-btn">
-            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path fill="currentColor" d="M6.5 9.5 5.1 8.1l4.2-4.2a2.5 2.5 0 1 1 3.5 3.5L11 9.2 9.6 7.8l1.8-1.8a.5.5 0 0 0-.7-.7zM9.5 6.5l1.4 1.4-4.2 4.2a2.5 2.5 0 1 1-3.5-3.5L5 6.8l1.4 1.4-1.8 1.8a.5.5 0 0 0 .7.7z"/></svg>
-            <span>Copy link to this scenario</span>
-          </button>
+        <section class="sidebar-section" aria-labelledby="export-heading">
+          <h2 id="export-heading">Export and Share</h2>
+          <div class="sidebar-actions">
+            <button type="button" id="download-zip" class="sidebar-download-btn">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path fill="currentColor" d="M7 1h2v7.6l2.3-2.3 1.4 1.4L8 12.4 3.3 7.7l1.4-1.4L7 8.6zM2 13h12v2H2z"/></svg>
+              <span>Download data (CSV)</span>
+            </button>
+            <button type="button" id="copy-link" class="sidebar-download-btn">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16"><path fill="currentColor" d="M6.5 9.5 5.1 8.1l4.2-4.2a2.5 2.5 0 1 1 3.5 3.5L11 9.2 9.6 7.8l1.8-1.8a.5.5 0 0 0-.7-.7zM9.5 6.5l1.4 1.4-4.2 4.2a2.5 2.5 0 1 1-3.5-3.5L5 6.8l1.4 1.4-1.8 1.8a.5.5 0 0 0 .7.7z"/></svg>
+              <span>Copy link to this scenario</span>
+            </button>
+          </div>
           <p id="copy-status" class="sidebar-note" role="status"></p>
           <input id="share-url" class="share-url" type="text" readonly aria-label="Link to this scenario" hidden>
         </section>
@@ -90,13 +105,9 @@
             </div>
           </div>
 
-          <div class="view-toggle toggle-group" role="radiogroup" aria-label="Results view">
-            <label class="is-active"><input type="radio" name="view" value="levels" checked> Levels</label>
-            <label><input type="radio" name="view" value="deviations"> Deviations from baseline</label>
-          </div>
-
           <div id="view-levels" class="results-view">
             <div id="grid-levels" class="chart-grid"></div>
+            <p class="figures-empty" hidden>No figures selected. Choose figures under Figures in the sidebar.</p>
           </div>
 
           <div id="view-deviations" class="results-view" hidden>
@@ -110,6 +121,7 @@
 
             <h2 class="section-heading section-heading-spaced">Impact Analysis</h2>
             <div id="grid-deviations" class="chart-grid"></div>
+            <p class="figures-empty" hidden>No figures selected. Choose figures under Figures in the sidebar.</p>
 
             <div class="text-panels">
               <div>
@@ -151,8 +163,8 @@
             <ol>
               <li>Build a custom scenario with <strong>Custom Scenario</strong> in the sidebar, or start with a preset (AI Adoption, Persistent Inflation, Higher Defense Spending).</li>
               <li>Results update as soon as you change an input.</li>
-              <li>Use the <strong>Levels</strong> / <strong>Deviations from baseline</strong> views on the Results page to compare baseline and scenario.</li>
-              <li>Download the raw numbers with <strong>Download data</strong>, or share the scenario with <strong>Copy link to this scenario</strong>, in the sidebar.</li>
+              <li>Under <strong>Figures</strong> in the sidebar, switch between <strong>Levels</strong> and <strong>Deviations</strong> from baseline, and choose which figures to show.</li>
+              <li>Download the raw numbers as CSV files with <strong>Download data</strong>, or share the scenario with <strong>Copy link to this scenario</strong>, in the sidebar.</li>
             </ol>
             <p class="about-tip">Tip: most scenarios only need one or two assumption categories. The preset buttons populate realistic multi-category shocks if you want a starting point.</p>
           </div>
@@ -245,7 +257,7 @@
 
   <!-- Vendored chart engine 1.15.0 (IIFE): sets window.BudgetLabChart before app.js runs. -->
   <script src="vendor/chart-engine/live.js?v=1.15.0"></script>
-  <script type="module" src="app.js?v=782a1bb3ec"></script>
+  <script type="module" src="app.js?v=9afdf27d27"></script>
   <script src="../../embed/v1/iframeResizer.contentWindow.min.js"></script>
 </body>
 </html>
