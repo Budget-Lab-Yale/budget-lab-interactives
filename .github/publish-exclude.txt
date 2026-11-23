@@ -25,6 +25,8 @@ _site
 /tools/*/update.py
 /tools/*/package.json
 /tools/*/test
+# BLSMM vendored reference-table script (also in versions/ snapshots): CI-only.
+/tools/blsmm/**/reference-values.mjs
 # Maintainer notes.
 /tools/taxes-at-the-top/docs
 CLAUDE.md

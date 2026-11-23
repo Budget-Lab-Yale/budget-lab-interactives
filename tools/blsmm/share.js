@@ -6,7 +6,7 @@
  * An empty hash is the baseline. Pure, so ci/ tests can exercise it.
  * =========================================================================== */
 
-import { INPUTS, INPUT_BY_KEY, PRESETS, N_YEARS, zeroInputDeltas, presetDeltas } from './inputs.js?v=f7fbb716ea';
+import { INPUTS, INPUT_BY_KEY, PRESETS, N_YEARS, zeroInputDeltas, presetDeltas } from './inputs.js?v=7f7d9103ae';
 
 export function encodeState(state) {
   const p = new URLSearchParams();

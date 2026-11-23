@@ -7,8 +7,12 @@ Entries are added at release. Snapshots: `node tools/blsmm/scripts/make-snapshot
 - Launch. Replaces the Shiny app on Posit Connect with a static tool: the model (BLSMM v1.8) runs in
   the browser from the JavaScript port in `vendor/blsmm-model/`, so results update as inputs change
   and there is no Run button. Inputs run at full precision, so presets match the R scenario files
-  (the Shiny app rounded every input to 0.01). The model includes the psi/RG_base corrections
-  (model PR #10), which move the AI preset's final-year debt from -4.92 to -5.61 pp of GDP. Same inputs, presets, charts, tables and texts as the Shiny app;
+  (the Shiny app rounded every input to 0.01). Baseline: the 2026 Q4 Survey of Professional Forecasters
+  calibration (model v1.8.1), FY2027–FY2036 with history through FY2026; the Shiny app ran CBO's
+  February 2026 baseline, FY2026–FY2035. FY2036 debt effects: AI −3.26, persistent inflation −0.37,
+  higher defense spending +8.36 pp of GDP. The history-year point takes receipts, outlays and real
+  GDP growth from the fiscal-year actuals, uses the historical average rate on debt, and has no r*
+  (the Shiny app carried the last two over from the first forecast year). Same inputs, presets, charts, tables and texts as the Shiny app;
   export is one zip of CSV files (the old CSV file plus the old Excel workbook's sheets); new
   shareable scenario links (embedded with `data-deep-link`, they open the article rather than the
   standalone tool). Figures: Levels/Deviations and a per-figure checklist in the sidebar; baseline always

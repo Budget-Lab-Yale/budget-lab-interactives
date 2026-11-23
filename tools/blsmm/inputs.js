@@ -9,7 +9,7 @@
 // a rebaseline changes it here (and the FY span in index.html); ci/ fails if it
 // disagrees with the vendored model data.
 export const N_YEARS = 10;
-export const FIRST_YEAR = 2026;
+export const FIRST_YEAR = 2027;
 export const YEARS = Array.from({ length: N_YEARS }, (_, i) => FIRST_YEAR + i);
 export const FY_LABELS = YEARS.map((y) => `FY${y}`);
 export const FY_SPAN = `${FY_LABELS[0]}–${FY_LABELS[N_YEARS - 1]}`;

@@ -5,7 +5,8 @@
 #      the ref pinned in vendor/blsmm-model/VERSION. That repo's CI holds the JS
 #      model to the R model, so a hand edit here would publish numbers no one
 #      has checked against R.
-#   3. Node tests for the tool's own logic.
+#   3. Node tests for the tool's own logic, including a check of every Levels
+#      chart value against the model repo's reference-values.mjs.
 set -euo pipefail
 cd "$(dirname "$0")/.."   # tool root: tools/blsmm/
 
@@ -17,7 +18,7 @@ if [ -z "$ref" ]; then
   exit 1
 fi
 base="https://raw.githubusercontent.com/Budget-Lab-Yale/Budget-Lab-Small-Macro-Model/${ref}/js"
-for f in blsmm-model.js model-data.json; do
+for f in blsmm-model.js model-data.json reference-values.mjs; do
   if ! upstream=$(curl -fsSL --retry 3 "$base/$f"); then
     echo "::error::Could not fetch $f at Budget-Lab-Small-Macro-Model@$ref. Is that ref pushed?" >&2
     exit 1

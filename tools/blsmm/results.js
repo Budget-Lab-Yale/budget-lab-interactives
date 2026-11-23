@@ -6,15 +6,17 @@
  *
  * Pure module (no DOM) so ci/results.test.mjs can exercise it in Node.
  *
- * Faithful-port note: add_fy2025_to_results() starts the history row (the
- * year before FIRST_YEAR) from a copy of the first forecast year's baseline
- * row and overwrites only some columns, so its values of RG, rfstar, xgap and
- * other un-overwritten columns are first-forecast-year baseline values. withHistory() reproduces that on purpose; the model
- * owner has been told. Do not "fix" it here without them.
+ * History row: add_fy2025_to_results() starts the history row (the year
+ * before FIRST_YEAR) from a copy of the first forecast year's baseline row and
+ * overwrites only some columns. Deliberate departure: the Shiny app leaves RG
+ * and rfstar as first-forecast-year values; this tool follows the model repo's
+ * reference table (js/reference-values.mjs) instead, so RG is the historical
+ * value and rfstar is NA (there is no history r*), and the r* line starts in
+ * FIRST_YEAR. Other columns still carry the copy, but no chart reads them.
  * =========================================================================== */
 
-import { fixed, signed } from './format.js?v=f7fbb716ea';
-import { INPUTS, INPUT_BY_KEY, PRESETS, SUMMARY_ORDER, EXPORT_ORDER, FIRST_YEAR, FY_LABELS, hasNonZero } from './inputs.js?v=f7fbb716ea';
+import { fixed, signed } from './format.js?v=7f7d9103ae';
+import { INPUTS, INPUT_BY_KEY, PRESETS, SUMMARY_ORDER, EXPORT_ORDER, FIRST_YEAR, FY_LABELS, hasNonZero } from './inputs.js?v=7f7d9103ae';
 
 const NA = null;
 const isNA = (v) => v === null || v === undefined || Number.isNaN(v);
@@ -70,21 +72,22 @@ function histRow(hist, year) {
   return Object.fromEntries(Object.entries(hist).map(([k, v]) => [k, v[i]]));
 }
 
-// CBO's published total receipts (% of GDP) for the history year, hard-coded in
-// the Shiny server. Keyed by year so a rebaseline without the new figure throws.
-const HISTORY_RECEIPTS_PCT_GDP = { 2025: 17.3 };
+// The model data's values for the history year, checked against FIRST_YEAR.
+function historyYearValue(modelData, key, histYear) {
+  const v = modelData[key];
+  if (!v || v.year !== histYear) throw new Error(`model data ${key} is not for FY${histYear}`);
+  return v;
+}
 
 // add_fy2025_to_results(): prepend a row for the year before FIRST_YEAR, built
 // from history, to both frames. See the header note about the copied columns.
-// fy24/fy25 keep the Shiny code's names for the two years before FIRST_YEAR.
-function withHistory(base, scen, hist) {
+// fy25 keeps the Shiny code's name for the history year.
+function withHistory(base, scen, modelData) {
   const histYear = FIRST_YEAR - 1;
-  const receiptsPct = HISTORY_RECEIPTS_PCT_GDP[histYear];
-  if (receiptsPct === undefined) throw new Error(`No FY${histYear} receipts figure in HISTORY_RECEIPTS_PCT_GDP`);
-  const fy24 = histRow(hist, histYear - 1);
-  const fy25 = histRow(hist, histYear);
-  fy24.GDP = fy24.GDPstar * (1 + fy24.xgap / 100);
-  fy25.GDP = fy25.GDPstar * (1 + fy25.xgap / 100);
+  if (modelData.history_year !== histYear) throw new Error(`model data history_year is not FY${histYear}`);
+  const receiptsOutlays = historyYearValue(modelData, 'history_receipts_outlays', histYear);
+  const growth = historyYearValue(modelData, 'history_growth', histYear);
+  const fy25 = histRow(modelData.historical, histYear);
 
   const row = {};
   for (const c of base.order) row[c] = base.cols[c][0];
@@ -105,12 +108,14 @@ function withHistory(base, scen, hist) {
   row['GDP$'] = fy25['GDP$'];
   row['GDP$star'] = fy25['GDP$star'];
   row['GDP$star2'] = fy25['GDP$star2'];
-  // Receipts: CBO's published figure; primary outlays backed out of the primary balance.
-  row.rgfr_star = receiptsPct;
-  const receiptsNominal = (receiptsPct * fy25.GDPstar) / 100;
-  row.rgfop_star = ((receiptsNominal - fy25.BUDP) / fy25.GDPstar) * 100;
+  row.RG = fy25.RG;
+  row.rfstar = NA;
+  // Receipts and primary outlays (% of potential GDP) and real GDP growth from
+  // the fiscal-year actuals (history_year_display() in the model repo).
+  row.rgfr_star = receiptsOutlays.rgfr_star;
+  row.rgfop_star = receiptsOutlays.rgfop_star;
   row.rbudp_star = isNA(fy25.rbudp_star) ? (fy25.BUDP / fy25.GDPstar) * 100 : fy25.rbudp_star;
-  row.real_gdp_growth = ((fy25.GDP - fy24.GDP) / fy24.GDP) * 100;
+  row.real_gdp_growth = growth.real_gdp_growth;
 
   const prepend = (f) => {
     const cols = {};
@@ -134,7 +139,7 @@ export function deriveResults(modelData, baseSim, scenSim, outputColumns, shock)
   const baseline = displayFrame(baseSim, outputColumns);
   const scenario = displayFrame(scenSim, outputColumns);
   const deviations = deviationsFrame(scenario, baseline);
-  const hist = withHistory(baseline, scenario, modelData.historical);
+  const hist = withHistory(baseline, scenario, modelData);
   return {
     baseline, scenario, deviations,
     baselineHist: hist.baseline, scenarioHist: hist.scenario,

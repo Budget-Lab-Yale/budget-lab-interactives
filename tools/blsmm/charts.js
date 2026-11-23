@@ -2,7 +2,8 @@
  * The 12 Levels charts and 8 Deviations charts, ported from
  * app/R/blsmm_plots_v1_8.R and the dev_plot_* outputs in blsmm_server.R.
  *
- * Levels charts plot the last history year to the end of the window, baseline dashed and scenario
+ * Levels charts plot the last history year to the end of the window (r* from
+ * the first forecast year: there is no history r*), baseline dashed and scenario
  * solid in the same colour. Scenario is always keyed, so the legend shows at
  * baseline too, but not drawn where it equals the baseline (the Shiny app drew
  * only the baseline there, solid). Two-variable charts use blue for the first
@@ -15,8 +16,8 @@
  * engine (window.BudgetLabChart).
  * =========================================================================== */
 
-import { srLevelDesc, srDevDesc, isNA } from './results.js?v=f7fbb716ea';
-import { FY_SPAN } from './inputs.js?v=f7fbb716ea';
+import { srLevelDesc, srDevDesc, isNA } from './results.js?v=7f7d9103ae';
+import { FY_SPAN } from './inputs.js?v=7f7d9103ae';
 
 const pctOfGdp = (num, den) => (c, i) => (c[num][i] / c[den][i]) * 100;
 const potentialToActual = (col) => (c, i) => c[col][i] * (c.GDPstar[i] / c.GDP[i]);

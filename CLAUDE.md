@@ -26,11 +26,12 @@ CONTRIBUTING.md (snapshots, testing).
   downloads the files at that ref and fails on any difference, so the ref must be pushed.
 - **`tools/blsmm` asset stamps are generated** by `scripts/stamp-assets.mjs`; any change to its
   runtime JS/CSS or vendored model needs a re-stamp (gated by `validate.sh`).
-- **`tools/blsmm` ports the Shiny app's display logic faithfully**, quirks included: the history
-  chart point (the year before the window) copies the first forecast year's baseline values for
-  RG, r* and other columns the Shiny app never overwrote (see the note in
-  `tools/blsmm/results.js`). Changing that is a model-owner decision.
-  Deliberate departures: inputs run at full precision (the Shiny app rounded every delta to
+- **`tools/blsmm` ports the Shiny app's display logic faithfully**, and every Levels chart value
+  must match the model repo's `js/reference-values.mjs` (vendored; gated in `ci/tool.test.mjs`;
+  r*, absent from that table, is checked against the simulation).
+  Deliberate departures: the history chart point (the year before the window) uses the historical
+  average rate on debt and has no r* (the Shiny app carries both over from the first forecast
+  year; the reference table uses history, decided 2026-11-23); inputs run at full precision (the Shiny app rounded every delta to
   0.01), so presets match the R scenario files (`scenarios/results/` in the model repo); and chart styling (Levels
   baselines are always dashed and the legend always keys the scenario, where Shiny drew a solid
   baseline and no legend at zero shock; the real 10-year yield is amber; Fed Funds is listed
