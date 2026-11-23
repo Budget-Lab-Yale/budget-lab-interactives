@@ -2,12 +2,12 @@
  * The 12 Levels charts and 8 Deviations charts, ported from
  * app/R/blsmm_plots_v1_8.R and the dev_plot_* outputs in blsmm_server.R.
  *
- * Levels charts plot FY2025 (history) to FY2035, baseline dashed and scenario
+ * Levels charts plot the last history year to the end of the window, baseline dashed and scenario
  * solid in the same colour. Scenario is always keyed, so the legend shows at
  * baseline too, but not drawn where it equals the baseline (the Shiny app drew
  * only the baseline there, solid). Two-variable charts use blue for the first
  * variable and amber for the second.
- * Deviations charts plot FY2026-FY2035.
+ * Deviations charts plot the forecast window (FY_SPAN).
  *
  * Every chart's PNG download carries SOURCE; it is hidden on screen.
  *
@@ -15,12 +15,13 @@
  * engine (window.BudgetLabChart).
  * =========================================================================== */
 
-import { srLevelDesc, srDevDesc, isNA } from './results.js?v=457c92f797';
+import { srLevelDesc, srDevDesc, isNA } from './results.js?v=f7fbb716ea';
+import { FY_SPAN } from './inputs.js?v=f7fbb716ea';
 
 const pctOfGdp = (num, den) => (c, i) => (c[num][i] / c[den][i]) * 100;
 const potentialToActual = (col) => (c, i) => c[col][i] * (c.GDPstar[i] / c.GDP[i]);
 
-const FIG = 'baseline versus scenario, FY2026–FY2035.';
+const FIG = `baseline versus scenario, ${FY_SPAN}.`;
 
 export const LEVEL_CHARTS = [
   {
@@ -115,8 +116,8 @@ export const LEVEL_CHARTS = [
   },
 ];
 
-const DEV = '(percentage points), FY2026–FY2035.';
-const DEV_GDP = '(percentage points of GDP), FY2026–FY2035.';
+const DEV = `(percentage points), ${FY_SPAN}.`;
+const DEV_GDP = `(percentage points of GDP), ${FY_SPAN}.`;
 
 export const DEV_CHARTS = [
   {
@@ -245,7 +246,7 @@ export function devChartData(def, r) {
   const vals = def.value(r);
   const rows = [];
   fy.forEach((label, i) => {
-    // The real-GDP-growth deviation is undefined in FY2026 (no prior simulated year).
+    // The real-GDP-growth deviation is undefined in the first year (no prior simulated year).
     if (!isNA(vals[i])) rows.push({ year: shortFy(label), value: String(vals[i]) });
   });
   const spec = {

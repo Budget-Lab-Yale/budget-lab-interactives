@@ -2,13 +2,17 @@
  * The nine scenario inputs, their shapes, and the presets — ported from the
  * Shiny app (app/R/blsmm_ui.R, blsmm_helpers.R, blsmm_server.R in
  * Budget-Lab-Small-Macro-Model). Every input is a 10-year path of deltas from
- * baseline, FY2026-FY2035.
+ * baseline over the forecast window, FIRST_YEAR to FIRST_YEAR + 9.
  * =========================================================================== */
 
+// The forecast window. Every year label in the tool derives from FIRST_YEAR, so
+// a rebaseline changes it here (and the FY span in index.html); ci/ fails if it
+// disagrees with the vendored model data.
 export const N_YEARS = 10;
 export const FIRST_YEAR = 2026;
 export const YEARS = Array.from({ length: N_YEARS }, (_, i) => FIRST_YEAR + i);
 export const FY_LABELS = YEARS.map((y) => `FY${y}`);
+export const FY_SPAN = `${FY_LABELS[0]}–${FY_LABELS[N_YEARS - 1]}`;
 
 export const SHAPES = [
   { id: 'onetime', label: 'One-time (year 1)' },

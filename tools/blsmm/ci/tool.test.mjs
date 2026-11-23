@@ -4,7 +4,9 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { simulate, OUTPUT_COLUMNS } from '../vendor/blsmm-model/blsmm-model.js';
-import { INPUTS, PRESETS, buildShapeDelta, zeroInputDeltas, toModelDeltas, presetDeltas } from '../inputs.js';
+import {
+  INPUTS, PRESETS, FIRST_YEAR, FY_LABELS, FY_SPAN, buildShapeDelta, zeroInputDeltas, toModelDeltas, presetDeltas,
+} from '../inputs.js';
 import {
   deriveResults, kpis, multiplierText, deviationSummaryText, deviationTable, summaryTable,
   keyVariablesCsv, frameCsv, userDeltasCsv, srLevelDesc, scenarioNote, scenarioStatus,
@@ -21,6 +23,25 @@ function run(deltas, fast = false, shockNull = false) {
   return deriveResults(data, base, scen, OUTPUT_COLUMNS, shockNull ? null : deltas);
 }
 const preset = (id) => presetDeltas(data, PRESETS.find((p) => p.id === id));
+
+// The forecast window is a constant in inputs.js, not read from the model data, so a
+// re-vendored model-data.json with a new window must fail here rather than relabel
+// every chart a year off.
+test('FIRST_YEAR matches the vendored model data window', () => {
+  assert.equal(data.forecast_exog.year[0], FIRST_YEAR);
+  assert.equal(data.forecast_exog.year.length, FY_LABELS.length);
+  assert.equal(data.forecast_resid.year[0], FIRST_YEAR);
+  assert.ok(data.historical.year.includes(FIRST_YEAR - 1), `historical has FY${FIRST_YEAR - 1}`);
+  assert.ok(data.historical.year.includes(FIRST_YEAR - 2), `historical has FY${FIRST_YEAR - 2}`);
+});
+
+test('every window mention in index.html and the chart captions is the current window', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8').replace(/&ndash;/g, '–');
+  const spans = html.match(/FY\d{4}–FY\d{4}/g) ?? [];
+  assert.ok(spans.length >= 4, 'index.html states the window');
+  for (const s of spans) assert.equal(s, FY_SPAN);
+  for (const c of [...LEVEL_CHARTS, ...DEV_CHARTS]) assert.ok(c.caption.endsWith(`${FY_SPAN}.`), c.id);
+});
 
 test('number formats match R sprintf', () => {
   assert.equal(signed(0, 2), '+0.00');
@@ -86,6 +107,7 @@ test('fiscal preset takes the fiscal-multiplier branch', () => {
   const t = multiplierText(r);
   assert.match(t, /^Fiscal Shock {2}Receipts - Outlays \(max: \+1\.46 pp of GDP\)/);
   assert.match(t, /Peak \(FY2027\)/);
+  assert.ok(new RegExp(`\\n {2}Impact \\(${FY_LABELS[0]}\\): -?\\d+\\.\\d{2}\\n`).test(t), 'Impact label');
   assert.match(deviationSummaryText(r), /Outlays Delta: max \+1\.46 pp of GDP/);
 });
 
@@ -95,12 +117,13 @@ test('other shocks list three-space indented items', () => {
   assert.match(multiplierText(run(d)), /Applied:\n {3}Inflation Shock: \+1\.00 pp\n/);
 });
 
-test('FY2025 history row reproduces the Shiny app, including its FY2026 carry-overs', () => {
+test('history row reproduces the Shiny app, including its first-forecast-year carry-overs', () => {
   const r = run(preset('rapid_ai'));
   const hist = data.historical;
-  const i25 = hist.year.indexOf(2025);
+  const i25 = hist.year.indexOf(FIRST_YEAR - 1);
   const b = r.baselineHist.cols;
-  assert.equal(b.fy_label[0], 'FY2025');
+  assert.equal(b.fy_label[0], `FY${FIRST_YEAR - 1}`);
+  assert.equal(b.year[0], FIRST_YEAR - 1);
   assert.equal(b.U[0], hist.U[i25]);
   assert.equal(b.rgfr_star[0], 17.3);
   // Known quirk, kept for fidelity: RG and rfstar are not overwritten.

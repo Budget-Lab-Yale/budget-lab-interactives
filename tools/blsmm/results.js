@@ -1,20 +1,20 @@
 /* ===========================================================================
  * Everything the Shiny server computed from a simulation, ported faithfully
  * from app/R/blsmm_server.R (Budget-Lab-Small-Macro-Model): display frames,
- * the FY2025 history row, deviations, KPIs, the text panels, the tables, the
+ * the history row, deviations, KPIs, the text panels, the tables, the
  * screen-reader chart descriptions and the export files.
  *
  * Pure module (no DOM) so ci/results.test.mjs can exercise it in Node.
  *
- * Faithful-port note: add_fy2025_to_results() starts the FY2025 row from a
- * copy of the FY2026 baseline row and overwrites only some columns, so
- * FY2025 values of RG, rfstar, xgap and other un-overwritten columns are
- * FY2026 baseline values. withHistory() reproduces that on purpose; the model
+ * Faithful-port note: add_fy2025_to_results() starts the history row (the
+ * year before FIRST_YEAR) from a copy of the first forecast year's baseline
+ * row and overwrites only some columns, so its values of RG, rfstar, xgap and
+ * other un-overwritten columns are first-forecast-year baseline values. withHistory() reproduces that on purpose; the model
  * owner has been told. Do not "fix" it here without them.
  * =========================================================================== */
 
-import { fixed, signed } from './format.js?v=457c92f797';
-import { INPUTS, INPUT_BY_KEY, PRESETS, SUMMARY_ORDER, EXPORT_ORDER, FY_LABELS, hasNonZero } from './inputs.js?v=457c92f797';
+import { fixed, signed } from './format.js?v=f7fbb716ea';
+import { INPUTS, INPUT_BY_KEY, PRESETS, SUMMARY_ORDER, EXPORT_ORDER, FIRST_YEAR, FY_LABELS, hasNonZero } from './inputs.js?v=f7fbb716ea';
 
 const NA = null;
 const isNA = (v) => v === null || v === undefined || Number.isNaN(v);
@@ -70,18 +70,26 @@ function histRow(hist, year) {
   return Object.fromEntries(Object.entries(hist).map(([k, v]) => [k, v[i]]));
 }
 
-// add_fy2025_to_results(): prepend an FY2025 row built from history to both
-// frames. See the header note about the copied FY2026 columns.
+// CBO's published total receipts (% of GDP) for the history year, hard-coded in
+// the Shiny server. Keyed by year so a rebaseline without the new figure throws.
+const HISTORY_RECEIPTS_PCT_GDP = { 2025: 17.3 };
+
+// add_fy2025_to_results(): prepend a row for the year before FIRST_YEAR, built
+// from history, to both frames. See the header note about the copied columns.
+// fy24/fy25 keep the Shiny code's names for the two years before FIRST_YEAR.
 function withHistory(base, scen, hist) {
-  const fy24 = histRow(hist, 2024);
-  const fy25 = histRow(hist, 2025);
+  const histYear = FIRST_YEAR - 1;
+  const receiptsPct = HISTORY_RECEIPTS_PCT_GDP[histYear];
+  if (receiptsPct === undefined) throw new Error(`No FY${histYear} receipts figure in HISTORY_RECEIPTS_PCT_GDP`);
+  const fy24 = histRow(hist, histYear - 1);
+  const fy25 = histRow(hist, histYear);
   fy24.GDP = fy24.GDPstar * (1 + fy24.xgap / 100);
   fy25.GDP = fy25.GDPstar * (1 + fy25.xgap / 100);
 
   const row = {};
   for (const c of base.order) row[c] = base.cols[c][0];
-  row.fy_label = 'FY2025';
-  row.year = 2025;
+  row.fy_label = `FY${histYear}`;
+  row.year = histYear;
   row.U = fy25.U;
   row.PI = fy25.PI;
   row.PIE = fy25.PIE;
@@ -97,10 +105,9 @@ function withHistory(base, scen, hist) {
   row['GDP$'] = fy25['GDP$'];
   row['GDP$star'] = fy25['GDP$star'];
   row['GDP$star2'] = fy25['GDP$star2'];
-  // FY2025 receipts: CBO's published 17.3% (hard-coded in the Shiny server);
-  // primary outlays backed out of the primary balance.
-  row.rgfr_star = 17.3;
-  const receiptsNominal = (17.3 * fy25.GDPstar) / 100;
+  // Receipts: CBO's published figure; primary outlays backed out of the primary balance.
+  row.rgfr_star = receiptsPct;
+  const receiptsNominal = (receiptsPct * fy25.GDPstar) / 100;
   row.rgfop_star = ((receiptsNominal - fy25.BUDP) / fy25.GDPstar) * 100;
   row.rbudp_star = isNA(fy25.rbudp_star) ? (fy25.BUDP / fy25.GDPstar) * 100 : fy25.rbudp_star;
   row.real_gdp_growth = ((fy25.GDP - fy24.GDP) / fy24.GDP) * 100;
@@ -250,7 +257,7 @@ export function multiplierText(r) {
       + `  Receipts delta max: ${signed(safeMax(shock.receipts), 2)} pp\n`
       + `  Outlays delta max: ${signed(safeMax(shock.outlays), 2)} pp\n\n`
       + 'Output Gap Multipliers:\n'
-      + `  Impact (FY2026): ${fixed(impact, 2)}\n`
+      + `  Impact (${FY_LABELS[0]}): ${fixed(impact, 2)}\n`
       + `  Peak (${dev.fy_label[peakPeriod]}): ${fixed(peakMultiplier, 2)}\n\n`
       + 'Debt Impact:\n'
       + `  Final Period Debt Change: ${signed(finalDebt, 2)} pp of GDP\n`
