@@ -244,6 +244,7 @@
                   "x": "2027-04-01",
                   "label": "Proposed Section 301 tariffs (assumed start)",
                   "labelSide": "left",
+                  "labelPosition": "middle",
                   "color": "red",
                   "style": "dashed"
                 }
@@ -358,6 +359,7 @@
                   "x": "2027-04-01",
                   "label": "Proposed Section 301 tariffs (assumed start)",
                   "labelSide": "left",
+                  "labelPosition": "middle",
                   "color": "red",
                   "style": "dashed"
                 }
@@ -470,6 +472,7 @@
                   "x": "2027-04-01",
                   "label": "Proposed Section 301 tariffs (assumed start)",
                   "labelSide": "left",
+                  "labelPosition": "middle",
                   "color": "red",
                   "style": "dashed"
                 }
@@ -572,6 +575,7 @@
                   "x": "2027-04-01",
                   "label": "Proposed Section 301 tariffs (assumed start)",
                   "labelSide": "left",
+                  "labelPosition": "middle",
                   "color": "red",
                   "style": "dashed"
                 }
