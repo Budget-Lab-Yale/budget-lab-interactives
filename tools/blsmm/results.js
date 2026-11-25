@@ -13,10 +13,13 @@
  * reference table (js/reference-values.mjs) instead, so RG is the historical
  * value and rfstar is NA (there is no history r*), and the r* line starts in
  * FIRST_YEAR. Other columns still carry the copy, but no chart reads them.
+ * The model owner confirmed (2026-11-25): wherever the app and the reference
+ * table disagree for the history year, the table is right; the app is being
+ * retired and will not be fixed.
  * =========================================================================== */
 
-import { fixed, signed } from './format.js?v=7f7d9103ae';
-import { INPUTS, INPUT_BY_KEY, PRESETS, SUMMARY_ORDER, EXPORT_ORDER, FIRST_YEAR, FY_LABELS, hasNonZero } from './inputs.js?v=7f7d9103ae';
+import { fixed, signed } from './format.js?v=32b8b8eb61';
+import { INPUTS, INPUT_BY_KEY, PRESETS, SUMMARY_ORDER, EXPORT_ORDER, FIRST_YEAR, FY_LABELS, hasNonZero } from './inputs.js?v=32b8b8eb61';
 
 const NA = null;
 const isNA = (v) => v === null || v === undefined || Number.isNaN(v);

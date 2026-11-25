@@ -5,8 +5,8 @@
  *   user_deltas.csv    — the old Excel workbook's five sheets
  * =========================================================================== */
 
-import { zipStore } from './zip-store.js?v=7f7d9103ae';
-import { keyVariablesCsv, frameCsv, parametersCsv, userDeltasCsv } from './results.js?v=7f7d9103ae';
+import { zipStore } from './zip-store.js?v=32b8b8eb61';
+import { keyVariablesCsv, frameCsv, parametersCsv, userDeltasCsv } from './results.js?v=32b8b8eb61';
 
 export function exportFiles(r, deltas) {
   return [

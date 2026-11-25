@@ -31,7 +31,7 @@ CONTRIBUTING.md (snapshots, testing).
   r*, absent from that table, is checked against the simulation).
   Deliberate departures: the history chart point (the year before the window) uses the historical
   average rate on debt and has no r* (the Shiny app carries both over from the first forecast
-  year; the reference table uses history, decided 2026-11-23); inputs run at full precision (the Shiny app rounded every delta to
+  year; the reference table uses history; the model owner confirmed 2026-11-25 that the table governs every history-year value and the app will not be fixed); inputs run at full precision (the Shiny app rounded every delta to
   0.01), so presets match the R scenario files (`scenarios/results/` in the model repo); and chart styling (Levels
   baselines are always dashed and the legend always keys the scenario, where Shiny drew a solid
   baseline and no legend at zero shock; the real 10-year yield is amber; Fed Funds is listed
