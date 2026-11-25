@@ -24,6 +24,10 @@ CONTRIBUTING.md (snapshots, testing).
 - **`tools/blsmm/vendor/blsmm-model/` must equal `Budget-Lab-Small-Macro-Model` at the ref in
   its `VERSION`.** That repo's CI holds the JS model to the R model; `tools/blsmm/ci/validate.sh`
   downloads the files at that ref and fails on any difference, so the ref must be pushed.
+- **`tools/blsmm` custom share links are positional and carry no window**, and every one made
+  since launch is on FY2027–FY2036. A change to `FIRST_YEAR` must add a window field and read
+  untagged links as FY2027 (see the header of `tools/blsmm/share.js`), or published links
+  silently shift by a year.
 - **`tools/blsmm` asset stamps are generated** by `scripts/stamp-assets.mjs`; any change to its
   runtime JS/CSS or vendored model needs a re-stamp (gated by `validate.sh`).
 - **`tools/blsmm` ports the Shiny app's display logic faithfully**, and every Levels chart value

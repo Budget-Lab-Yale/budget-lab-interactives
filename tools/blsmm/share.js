@@ -4,9 +4,15 @@
  *   #receipts=1,1,1&outlays=0,0.5&fast=1 any other scenario; each input's
  *                                        path, trailing zeros dropped
  * An empty hash is the baseline. Pure, so ci/ tests can exercise it.
+ *
+ * Paths are positional: value k applies to FY_LABELS[k]. Every link made since
+ * launch is on the FY2027-FY2036 window, and the hash records no window. When
+ * FIRST_YEAR next changes, add a window field (e.g. y0=<first year>) to new
+ * links, read a hash without one as y0=2027, and shift its values to their
+ * original fiscal years (as presets keep theirs). Decided 2026-11-25.
  * =========================================================================== */
 
-import { INPUTS, INPUT_BY_KEY, PRESETS, N_YEARS, zeroInputDeltas, presetDeltas } from './inputs.js?v=32b8b8eb61';
+import { INPUTS, INPUT_BY_KEY, PRESETS, N_YEARS, zeroInputDeltas, presetDeltas } from './inputs.js?v=cee141ead0';
 
 export function encodeState(state) {
   const p = new URLSearchParams();
