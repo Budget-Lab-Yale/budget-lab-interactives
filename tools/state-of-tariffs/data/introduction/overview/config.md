@@ -20,14 +20,12 @@ as separate reports. The tool has five tabs:
   different assumptions for how tariff policy evolves going forward.
 - **Methodology.** Technical details on how estimates are produced.
 
-<!-- TODO-TEXT: takeaway 1 says the statutory-rate statistic is reached "by the end of 2026";
-that statistic is now the 2027-04-01 policy state. -->
-
 ## Key takeaways
 
 1. The average statutory tariff rate now stands at {stat: etr_statutory_current}. Under current law,
-   which includes the scheduled December increase, it will reach {stat: etr_statutory_level} by the
-   end of this year.
+   which includes scheduled Section 232 tariffs on polysilicon and drones, it will reach
+   {stat: etr_statutory_level} in early 2027. The "excess capacity" Section 301 tariffs proposed on
+   November 25 would raise the rate to 13.9%, close to its pre-SCOTUS ruling level from February 2026.
 2. We estimate the ultimate consumer price impact of current-law tariff policy to be about
    {stat: price_postsub}.
 3. Estimated household costs due to tariffs total about {stat: hh_cost_postsub} annually under
@@ -38,29 +36,12 @@ that statistic is now the 2027-04-01 policy state. -->
 
 ## Changes since the last update
 
-<!-- TODO-TEXT: new changes note for the excess-capacity release (new alternative scenario:
-the excess-capacity Section 301 tariffs as proposed; series extended to 2027-06-30; GTAP solved
-at 2027-04-01; the quarterly real-GDP chart and the dated GDP and unemployment rows in the
-Summary of Results are no longer shown). -->
-
 {date: updated}
 
-This update includes two changes. The first is a correction to how we read the product lists
-attached to the April 2026 Section 232 proclamation on steel, aluminum, and copper, and the second
-is an expansion of the Alternative Scenarios tab to show the effect of removing tariffs imposed
-under three authorities: Sections 301, 232, and 338.
-
-The correction involves the April 2026 proclamation that changed how Section 232 tariffs are
-applied to steel, aluminum, and copper products. The proclamation included several annexes that
-listed the metal products and derivative products subject to these tariffs, and our effort to parse
-those lists mistakenly applied the 25 percent derivative tariff rate to computers and computer parts
-(as well as about 70 other, smaller product groups). Correcting the parser lowers the average
-statutory tariff rate by 0.6 percentage points from April 6 onward, so the current rate is 11.2
-percent rather than the 11.8 percent we reported in early November.
-
-Second, we have expanded the set of scenarios in the Alternative Scenarios tab to show the effect
-of removing tariffs under three authorities: excluding the Section 338 actions on Canadian
-products; excluding the Section 301 actions taken since January 2025, namely the Brazil and
-forced-labor tariffs (the Section 301 tariffs on China that predate 2025 remain in every scenario);
-and excluding all Section 232 tariffs. Each scenario isolates the contribution of those actions to
-the projected effects.
+This update includes a new alternative scenario for the Section 301 tariffs that the U.S. Trade
+Representative (USTR) proposed on November 25 for 14 economies, following its investigation of
+"structural excess capacity." The USTR's proposed rates are contingent on the maintenance of certain
+trade deals, and the proposal mentions that higher or lower rates might apply if those deals change;
+we use the proposal's default rates. The proposal is not final and will be subject to a review
+period in early 2027; we assume the tariffs would start on April 1, 2027. We also include a smaller
+Section 301 proposed tariff on aircraft from Brazil in this scenario.

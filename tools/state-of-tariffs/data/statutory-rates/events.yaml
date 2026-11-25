@@ -21,8 +21,6 @@ projection:
   # The proposed excess-capacity Section 301 tariffs start 2027-04-01 in the as-proposed
   # scenario only. Markers are shared by every scenario in the selector, so this line also
   # shows on current law, where nothing changes that day.
-  # TODO-TEXT: the label below was drafted during the build, not written by an editor; confirm
-  # or rewrite it.
   - x: '2027-04-01'
     label: Proposed Section 301 excess-capacity tariffs (assumed start)
     color: red

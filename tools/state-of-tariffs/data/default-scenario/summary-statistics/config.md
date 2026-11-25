@@ -14,7 +14,6 @@ spec:
   value: value
   source: GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.
   notes: "Pre-substitution numbers reflect tariff policy applied to 2024 trade weights and account for noncompliance only; post-substitution numbers account for both noncompliance and tariff-induced shifts in trade weights."
-  # TODO-TEXT: "Tariff rates, April 2027" drafted during the build, not by an editor; confirm.
   group_labels:
     Tariff rate: Tariff rates, April 2027
     Consumer price increase: Consumer price increase, medium run
@@ -29,15 +28,13 @@ spec:
 
 ## Default Scenario
 
-<!-- TODO-TEXT: the default (current law) is now solved at the 2027-04-01 policy state, and the
-series runs to 2027-06-30; the description below still refers to late August 2026. -->
-
 This section presents projected effects under our default tariff policy scenario. This scenario can
 be thought of as a "current law" concept, where official policy, including changes officially
-scheduled to come into effect later this year, is taken as given. In addition to the tariffs
-currently in place as of late August 2026 (including the Section 338 tariffs on Canadian products that
-took effect on August 22), this scenario includes scheduled tariff increases in October
-(pharmaceutical tariffs under Section 232) and December (polysilicon tariffs under Section 232.)
+scheduled to come into effect, is taken as given. In addition to the tariffs in place as of late
+November 2026, this scenario includes scheduled Section 232 tariff increases on polysilicon
+(December 4) and drones (February 9, 2027). It does not include the Section 301 tariffs proposed on
+November 25, which are not final and are still subject to a period of review; those tariffs appear
+in the Alternative Scenarios tab.
 
 This is not a forecast of where tariff policy will end up, but rather a useful scorekeeping
 benchmark. Alternative policy scenarios are explored in the next tab.
