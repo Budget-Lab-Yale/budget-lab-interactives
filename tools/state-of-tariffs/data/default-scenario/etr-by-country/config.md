@@ -3,7 +3,8 @@ short_label: Effective Rate by Trading Partner
 figureType: table
 spec:
   title: Average Effective Tariff Rate by Trading Partner
-  subtitle: Change from baseline at the end of 2026, pre- and post-substitution. Percent.
+  # TODO-TEXT: subtitle date drafted during the build, not by an editor; confirm or rewrite.
+  subtitle: Change from baseline as of April 1, 2027, pre- and post-substitution. Percent.
   data: data.csv
   stub:
   - category

@@ -68,6 +68,11 @@ The near-term macroeconomic estimates use impulse-response functions estimated w
 
 For each scenario, the Model takes the noncompliance-adjusted tariff-rate path and separates it into a final tariff level, temporary deviations from that final level, and any refund. Permanent changes use the permanent-shock responses. A policy explicitly treated as temporary uses the temporary-shock response, which includes the effect of an expected reversal. Other changes that later expire are represented by the difference between a permanent shock when the tariff begins and an offsetting permanent shock when it ends. The Model interpolates between the 2-, 5-, and 10-percentage-point responses, shifts each response to the quarter in which the policy changes, and adds the components together.
 
+<!-- TODO-TEXT: this paragraph describes the reported quarterly GDP path and the 2025 and 2026
+fourth-quarter figures (GDP growth, unemployment rate); the page no longer shows the GDP path chart
+or those dated rows, only GTAP's long-run change in real GDP. Revise to match. The dynamic-revenue
+paragraph below still uses the quarterly GDP path internally. -->
+
 The U.S. macro model is most useful for the first few years, while GTAP provides a long-run change in the level of GDP after trade and production have adjusted. The reported GDP path starts with the quarterly U.S. macro-model result and moves linearly toward the GTAP long-run result over 16 quarters beginning in the first quarter of 2025. We report the effects for 2025 and 2026 as fourth-quarter-over-fourth-quarter changes in real GDP growth relative to baseline, along with fourth-quarter changes in the unemployment rate, payroll employment, consumer prices, and the federal funds rate. The dashboard also reports GTAP's long-run percentage change in the level of real GDP.
 
 ### Revenue

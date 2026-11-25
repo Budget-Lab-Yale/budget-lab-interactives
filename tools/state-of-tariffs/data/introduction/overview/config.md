@@ -20,6 +20,9 @@ as separate reports. The tool has five tabs:
   different assumptions for how tariff policy evolves going forward.
 - **Methodology.** Technical details on how estimates are produced.
 
+<!-- TODO-TEXT: takeaway 1 says the statutory-rate statistic is reached "by the end of 2026";
+that statistic is now the 2027-04-01 policy state. -->
+
 ## Key takeaways
 
 1. The average statutory tariff rate now stands at {stat: etr_statutory_current}. Under current law,
@@ -34,6 +37,11 @@ as separate reports. The tool has five tabs:
    tariffs on GDP.
 
 ## Changes since the last update
+
+<!-- TODO-TEXT: new changes note for the excess-capacity release (new alternative scenario:
+the excess-capacity Section 301 tariffs as proposed; series extended to 2027-06-30; GTAP solved
+at 2027-04-01; the quarterly real-GDP chart and the dated GDP and unemployment rows in the
+Summary of Results are no longer shown). -->
 
 {date: updated}
 

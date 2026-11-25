@@ -37,5 +37,8 @@ spec:
     other: Other
 ---
 
+<!-- TODO-TEXT: in the as-proposed excess-capacity scenario the Section 301 band includes the
+proposed excess-capacity tariffs from 2027-04-01; say so if wanted. -->
+
 The daily statutory rate broken out by legal authority, stacked on the base (MFN) rate. The
 pieces add up to the overall rate in the previous figure.

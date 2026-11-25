@@ -20,8 +20,9 @@ spec:
     delta_vs_default: Change vs. default
   source: GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.
   notes: "Pre-substitution numbers reflect tariff policy applied to 2024 trade weights and account for noncompliance only; post-substitution numbers account for both noncompliance and tariff-induced shifts in trade weights."
+  # TODO-TEXT: "Tariff rates, April 2027" drafted during the build, not by an editor; confirm.
   group_labels:
-    Tariff rate: Tariff rates, end of 2026
+    Tariff rate: Tariff rates, April 2027
     Consumer price increase: Consumer price increase, medium run
     Household cost: Average household cost, medium run
 ---
@@ -31,6 +32,10 @@ spec:
 These figures show the same projected effects as the Default Scenario tab, but across both current
 law and several modeled policy scenarios. Use the **View** toggle to switch between each scenario's
 own effects (levels) and its effect relative to our default scenario (change vs. default).
+
+<!-- TODO-TEXT: replace this scenario list (and "several modeled policy scenarios" above) with
+the one alternative in this release: the excess-capacity Section 301 tariffs as proposed,
+assumed effective 2027-04-01 and solved at that date. -->
 
 We include three alternative scenarios in this release:
 

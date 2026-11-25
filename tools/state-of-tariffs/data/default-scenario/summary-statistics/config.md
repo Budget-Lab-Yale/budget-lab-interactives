@@ -14,8 +14,9 @@ spec:
   value: value
   source: GTAP v7 [Corong et al. (2017)], GTAP-RD, The Budget Lab analysis.
   notes: "Pre-substitution numbers reflect tariff policy applied to 2024 trade weights and account for noncompliance only; post-substitution numbers account for both noncompliance and tariff-induced shifts in trade weights."
+  # TODO-TEXT: "Tariff rates, April 2027" drafted during the build, not by an editor; confirm.
   group_labels:
-    Tariff rate: Tariff rates, end of 2026
+    Tariff rate: Tariff rates, April 2027
     Consumer price increase: Consumer price increase, medium run
     Household cost: Average household cost, medium run
   # Explicit per-group formats override auto_format: units (which fills groups via setdefault,
@@ -27,6 +28,9 @@ spec:
 ---
 
 ## Default Scenario
+
+<!-- TODO-TEXT: the default (current law) is now solved at the 2027-04-01 policy state, and the
+series runs to 2027-06-30; the description below still refers to late August 2026. -->
 
 This section presents projected effects under our default tariff policy scenario. This scenario can
 be thought of as a "current law" concept, where official policy, including changes officially

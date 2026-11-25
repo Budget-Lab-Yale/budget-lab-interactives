@@ -20,10 +20,12 @@ total:
     value_format: {decimals: 2}
     style: dashed
     labelSide: bottom
-    # Flip the Ex Section 338 total label above its line (default is below). Per-vintage visual
-    # tweak — keyed by display label, so re-check (scenario names/values change each release).
-    series_overrides:
-      Ex Section 338: {labelSide: top}
+    # Per-vintage visual tweak, keyed by scenario short_label: flip a total label above its line
+    # when near-coincident totals' labels collide, e.g.
+    #   series_overrides:
+    #     <short_label>: {labelSide: top}
+    # The "Ex Section 338" entry was dropped with that scenario; re-check once the excess-capacity
+    # data are synced.
 spec:
   chartType: bar
   data: data.csv

@@ -1,9 +1,11 @@
 # Fixed color per scenario, applied to every figure (overrides the default-first palette in
 # build-manifest.py). Keyed by the scenario id from model-meta.json — these are vintage-dated, so
 # re-check/update them each release. Any scenario omitted here falls back to the palette by order.
+# Tracker vintage 2026-11-25-12, Tariff-Model vintage 202611251330; the ids match
+# config/dashboard.yaml in Tariff-Model (branch feat/s301ec-scenarios).
 scenario_colors:
-  tracker_actual_2026-11-01-19: blue                # Current law
-  tracker_no_s338_2026-11-01-19: amber              # Current law excluding the Section 338 actions
+  tracker_actual_2026-11-25-12: blue                # Current law
+  tracker_ec301_proposed_2026-11-25-12: amber       # Excess-capacity Section 301, as proposed
 
 tabs:
 - id: introduction
@@ -120,7 +122,6 @@ tabs:
   - id: economy
     label: Macroeconomy
     figures:
-    - real-gdp
     - gdp-by-category
   - id: fiscal
     label: Fiscal
@@ -140,7 +141,6 @@ tabs:
     applies_to_figures:
     - consumer-prices
     - distribution
-    - real-gdp
     - gdp-by-category
     - revenue-by-year
   sections:
@@ -160,7 +160,6 @@ tabs:
   - id: economy
     label: Macroeconomy
     figures:
-    - real-gdp
     - gdp-by-category
   - id: fiscal
     label: Fiscal
