@@ -1,0 +1,22 @@
+# Download-only data: crosswalk CSVs bundled in the "Download All Data" ZIP
+# but NOT used to build any chart. This folder is invisible to figure
+# discovery (it has no config.md) and its CSVs are never validated.
+#
+# To add a file: drop the .csv in this folder, list it below with a one-line
+# description, then rebuild the manifest:
+#     python scripts/build-manifest.py
+#
+# This index is authoritative — the build fails if a CSV here is not listed,
+# or if a listed file is missing. `label` is the README section heading.
+#
+# Format (one entry per file):
+#     files:
+#       - path: example-data.csv
+#         description: Brief description of what the data are.
+
+label: Crosswalks
+files:
+  - path: cps_2020_data.csv
+    description: Metrics in 2020 CPS occ codes
+  - path: soc_data.csv
+    description: Metrics in SOC 2018 codes

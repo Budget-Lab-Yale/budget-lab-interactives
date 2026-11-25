@@ -1,0 +1,12 @@
+category,value,dimension,category_code,group
+USA,-0.57,country,usa,Trading partners
+China,-0.42,country,china,Trading partners
+ROW,0.04,country,row,Trading partners
+Canada,-2.03,country,canada,Trading partners
+Mexico,0.06,country,mexico,Trading partners
+FTROW,0.09,country,ftrow,Trading partners
+Japan,0.02,country,japan,Trading partners
+EU,0.1,country,eu,Trading partners
+UK,0.24,country,uk,Trading partners
+World Total,-0.1997078598922064,country,world_total,World aggregates
+World ex USA,-0.08264360752361366,country,world_ex_usa,World aggregates

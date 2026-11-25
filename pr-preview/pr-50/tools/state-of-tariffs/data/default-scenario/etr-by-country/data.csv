@@ -1,0 +1,19 @@
+category,value,country_code,substitution
+China,25.025877474782114,chn,presub
+China,20.401739011485148,chn,postsub
+Canada,8.345970941738074,ca,presub
+Canada,4.839759674584572,ca,postsub
+Mexico,6.449728808890936,mx,presub
+Mexico,4.474014095259214,mx,postsub
+UK,6.978750033573561,uk,presub
+UK,6.160585022811372,uk,postsub
+Japan,12.952254963833768,jp,presub
+Japan,12.644574596502572,jp,postsub
+EU,8.178438453325843,eu,presub
+EU,7.029367395552833,eu,postsub
+Rest of World,10.56911557773046,row,presub
+Rest of World,9.130386680427808,row,postsub
+Free-trade partners,12.415514745119228,fta,presub
+Free-trade partners,8.88680429063148,fta,postsub
+Total,10.420344854714962,total,presub
+Total,8.517977693919052,total,postsub
