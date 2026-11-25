@@ -4,6 +4,15 @@ Entries are added at release.
 
 ## Unreleased
 
+- **State of Tariffs: November 25, 2026 vintage (data only; page text still to be written).**
+  Synced Tariff-Model vintage `202611251330`, built on tracker vintage `2026-11-25-12`. Two
+  scenarios: current law (default) and the proposed Section 301 excess-capacity tariffs as
+  proposed (assumed start 2027-04-01). Removed the quarterly real-GDP chart (`real-gdp`) from both scenario tabs; the model
+  no longer exports it, nor the dated real-GDP (2025 and 2026 Q4/Q4) and 2026 Q4 unemployment
+  rows of the Summary of Results. Long-run GDP stays. `tracker.yaml` scenario colors re-pointed;
+  the November 9 release archived to previous-vintages. Text that must be rewritten is marked
+  `TODO-TEXT` in the config files.
+
 - **State of Tariffs: August 24, 2026 vintage.** Refreshed all figures to the published
   `2026082411` Tariff-Model artifact. The only policy change is the effective date of the Section
   338 tariffs on Canadian products, which took effect August 22 rather than August 19; projected
