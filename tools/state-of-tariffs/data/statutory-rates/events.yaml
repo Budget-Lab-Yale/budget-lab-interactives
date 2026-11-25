@@ -22,7 +22,7 @@ projection:
   # scenario only. Markers are shared by every scenario in the selector, so this line also
   # shows on current law, where nothing changes that day.
   - x: '2027-04-01'
-    label: Proposed Section 301 tariffs (assumed start)
+    label: "Proposed Section 301 tariffs\n(assumed start)"
     labelSide: left
     # Mid-height, out of the top stagger: up there it overlapped or crossed the two July 2026
     # labels, which share a date and fill the top rows.
