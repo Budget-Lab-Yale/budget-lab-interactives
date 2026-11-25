@@ -4,7 +4,7 @@ figureType: table
 scenario_role: stub
 spec:
   title: Average Effective Tariff Rate by Trading Partner
-  subtitle: Change from baseline at the end of 2026, by scenario. Percent.
+  subtitle: Change from baseline as of April 1, 2027, by scenario. Percent.
   data: data.csv
   collapsible:
     default: collapsed

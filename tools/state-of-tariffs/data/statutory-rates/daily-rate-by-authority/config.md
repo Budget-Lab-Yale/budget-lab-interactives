@@ -37,5 +37,5 @@ spec:
     other: Other
 ---
 
-The daily statutory rate broken out by legal authority, stacked on the base (MFN) rate. The
-pieces add up to the overall rate in the previous figure.
+The daily statutory rate by source of legal authority. The pieces add up to the overall rate in the
+previous figure.

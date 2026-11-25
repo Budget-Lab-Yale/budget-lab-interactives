@@ -18,9 +18,21 @@ projection:
     label: 'Section 301 "forced labor" enacted'
     color: red
     style: dashed
+  # The proposed excess-capacity Section 301 tariffs start 2027-04-01 in the as-proposed
+  # scenario only. Markers are shared by every scenario in the selector, so this line also
+  # shows on current law, where nothing changes that day.
+  - x: '2027-04-01'
+    label: "Proposed Section 301 tariffs\n(assumed start)"
+    labelSide: left
+    # Mid-height, out of the top stagger: up there it overlapped or crossed the two July 2026
+    # labels, which share a date and fill the top rows.
+    labelPosition: middle
+    color: red
+    style: dashed
   bands:
+  # The tracker series now ends 2027-06-30 (previously 2026-12-31).
   - start: today
-    end: '2026-12-31'
+    end: '2027-06-30'
 
 major:
 - x: '2025-02-04'
